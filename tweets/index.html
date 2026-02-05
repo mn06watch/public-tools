@@ -505,7 +505,12 @@
         }
         
         .tweet-card.retweet {
-            border-left: 3px solid var(--text-secondary);
+            border-left: 3px solid #f59e0b;
+            background: rgba(245, 158, 11, 0.08);
+        }
+        
+        .tweet-card.retweet:hover {
+            background: rgba(245, 158, 11, 0.12);
         }
         
         .tweet-card.original {
@@ -575,8 +580,8 @@
         }
         
         .badge-retweet {
-            background: rgba(139, 148, 158, 0.2);
-            color: var(--text-secondary);
+            background: rgba(245, 158, 11, 0.25);
+            color: #fbbf24;
         }
         
         .badge-quote {
@@ -771,6 +776,7 @@
             <a href="https://mn06watch.com/" class="nav-link">Vote Tracker</a>
             <a href="./" class="nav-link active">Tweet Archive</a>
             <a href="https://mn06watch.com/transcripts/" class="nav-link">Transcripts</a>
+            <a href="https://mn06watch.com/transcripts/analytics/" class="nav-link">Analytics</a>
             <a href="https://mn06watch.substack.com/subscribe" class="nav-link">Subscribe</a>
         </div>
     </nav>

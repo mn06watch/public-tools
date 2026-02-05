@@ -684,6 +684,7 @@
             <a href="./" class="nav-link active">Vote Tracker</a>
             <a href="https://mn06watch.com/tweets/" class="nav-link">Tweet Archive</a>
             <a href="https://mn06watch.com/transcripts/" class="nav-link">Transcripts</a>
+            <a href="https://mn06watch.com/transcripts/analytics/" class="nav-link">Analytics</a>
             <a href="https://mn06watch.substack.com/subscribe" class="nav-link">Subscribe</a>
         </div>
     </nav>
@@ -759,7 +760,7 @@
                 <span class="filter-label">Tags:</span>
                 <button class="filter-btn toggle-btn" data-filter="against">Against Party</button>
                 <button class="filter-btn toggle-btn" data-filter="mn">MN Relevant</button>
-                <button class="filter-btn toggle-btn active" data-filter="passage">Passage Votes Only</button>
+                <button class="filter-btn toggle-btn" data-filter="passage">Passage Votes Only</button>
             </div>
         </div>
         
@@ -803,7 +804,7 @@
         let displayedCount = 0;
         const BATCH_SIZE = 25;
         let currentVoteFilter = 'all';
-        let activeToggles = new Set(['passage']); // Default to passage votes only
+        let activeToggles = new Set(); // No default filters - show all votes
         
         // Procedural vote types to filter out
         const PROCEDURAL_QUESTIONS = [
