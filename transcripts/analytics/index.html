@@ -560,7 +560,7 @@
         // Load data
         async function loadData() {
             try {
-                const response = await fetch('../transcripts_data.json');
+                const response = await fetch('https://pub-19f43b48149546699964c5a800800a2f.r2.dev/transcripts/analytics/transcripts_data.json');
                 allTranscripts = await response.json();
                 
                 // Set date range inputs
