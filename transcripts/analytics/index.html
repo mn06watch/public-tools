@@ -247,6 +247,90 @@
             height: 450px;
         }
         
+        /* Reset button overlaid inside chart */
+        .chart-reset-btn {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 10;
+            padding: 5px 14px;
+            background: rgba(21, 28, 37, 0.9);
+            color: var(--gold);
+            border: 1px solid var(--gold-dark);
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        
+        .chart-reset-btn.visible {
+            display: inline-block;
+        }
+        
+        .chart-reset-btn:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
+        /* Scrollable timeline wrapper */
+        .timeline-scroll-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+            position: relative;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+            border-radius: 3px;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar-thumb {
+            background: var(--gold-dark);
+            border-radius: 3px;
+        }
+        
+        .timeline-inner {
+            min-width: 100%;
+            height: 450px;
+            position: relative;
+        }
+        
+        .timeline-reset-btn {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 10;
+            padding: 5px 14px;
+            background: rgba(21, 28, 37, 0.9);
+            color: var(--gold);
+            border: 1px solid var(--gold-dark);
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        
+        .timeline-reset-btn.visible {
+            display: inline-block;
+        }
+        
+        .timeline-reset-btn:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
         /* Key Finding Box */
         .key-finding {
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
@@ -564,6 +648,7 @@
                 <div class="chart-title">Media Friendliness Breakdown</div>
                 <div class="chart-container">
                     <canvas id="media-pie-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-mediaType" onclick="activeFilters.mediaType = null; applyAllFilters();">✕ Reset Media Filter</button>
                 </div>
             </div>
             
@@ -571,6 +656,7 @@
                 <div class="chart-title">Top Networks</div>
                 <div class="chart-container">
                     <canvas id="network-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-network" onclick="activeFilters.network = null; applyAllFilters();">✕ Reset Network Filter</button>
                 </div>
             </div>
             
@@ -578,6 +664,7 @@
                 <div class="chart-title">Top Topics Discussed</div>
                 <div class="chart-container">
                     <canvas id="topics-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-topic" onclick="activeFilters.topic = null; applyAllFilters();">✕ Reset Topic Filter</button>
                 </div>
             </div>
             
@@ -585,19 +672,24 @@
                 <div class="chart-title">Policy Categories</div>
                 <div class="chart-container">
                     <canvas id="categories-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-category" onclick="activeFilters.category = null; applyAllFilters();">✕ Reset Category Filter</button>
                 </div>
             </div>
             
             <div class="chart-card full-width">
                 <div class="chart-title">Interview Timeline</div>
-                <div class="chart-container tall">
-                    <canvas id="timeline-chart"></canvas>
+                <div class="timeline-scroll-wrapper">
+                    <div class="timeline-inner" id="timeline-inner">
+                        <canvas id="timeline-chart"></canvas>
+                        <button class="timeline-reset-btn" id="reset-date" onclick="activeFilters.startDate = null; activeFilters.endDate = null; document.getElementById('start-date').value=''; document.getElementById('end-date').value=''; applyAllFilters();">✕ Reset Date Filter</button>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="chart-card">
+        <div class="chart-card" style="position: relative;">
             <div class="chart-title">Network Breakdown by Media Type</div>
+            <button class="chart-reset-btn" id="reset-network2" onclick="activeFilters.network = null; applyAllFilters();" style="position: absolute; top: 20px; right: 20px; bottom: auto; left: auto;">✕ Reset Network Filter</button>
             <div class="network-list" id="network-list">
                 <!-- Populated by JavaScript -->
             </div>
@@ -1180,10 +1272,34 @@
             
             const sorted = Object.entries(dateCounts).sort((a, b) => new Date(a[0]) - new Date(b[0]));
             
+            // Dynamically size the inner container based on data points
+            // Min 100% width, but grow to ~50px per data point for readability
+            const innerEl = document.getElementById('timeline-inner');
+            const wrapperWidth = innerEl.parentElement.clientWidth;
+            const dynamicWidth = Math.max(wrapperWidth, sorted.length * 50);
+            innerEl.style.width = dynamicWidth + 'px';
+            
+            // Size the canvas explicitly so it fills the inner container
+            ctx.style.width = dynamicWidth + 'px';
+            ctx.style.height = '440px';
+            ctx.width = dynamicWidth;
+            ctx.height = 440;
+            
+            // Also include year in labels when data spans multiple years
+            const dates = sorted.map(([d]) => new Date(d));
+            const years = new Set(dates.map(d => d.getFullYear()));
+            const showYear = years.size > 1;
+            
+            // Use responsive:false so Chart.js respects our explicit canvas size
             charts.timeline = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: sorted.map(([date]) => new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
+                    labels: sorted.map(([date]) => {
+                        const d = new Date(date);
+                        const fmt = { month: 'short', day: 'numeric' };
+                        if (showYear) fmt.year = '2-digit';
+                        return d.toLocaleDateString('en-US', fmt);
+                    }),
                     datasets: [{
                         label: 'Interviews',
                         data: sorted.map(([_, count]) => count),
@@ -1200,7 +1316,7 @@
                     }]
                 },
                 options: {
-                    responsive: true,
+                    responsive: false,
                     maintainAspectRatio: false,
                     onClick: (event, elements) => {
                         if (elements.length > 0) {
@@ -1346,6 +1462,18 @@
                 filterBar.classList.remove('visible');
                 filterTags.innerHTML = '';
             }
+            
+            // Show/hide per-chart reset buttons
+            const toggleBtn = (id, active) => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.toggle('visible', !!active);
+            };
+            toggleBtn('reset-mediaType', activeFilters.mediaType);
+            toggleBtn('reset-network', activeFilters.network);
+            toggleBtn('reset-network2', activeFilters.network);
+            toggleBtn('reset-topic', activeFilters.topic);
+            toggleBtn('reset-category', activeFilters.category);
+            toggleBtn('reset-date', activeFilters.startDate || activeFilters.endDate);
         }
         
         function filterByNetwork(network) {
