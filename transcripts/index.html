@@ -366,6 +366,52 @@
             border-radius: 12px;
         }
         
+        .category-tag {
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            background: rgba(139, 92, 246, 0.15);
+            color: #c4b5fd;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .category-tag:hover {
+            background: rgba(139, 92, 246, 0.3);
+            color: #ddd6fe;
+        }
+        
+        .category-filters {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        
+        .category-filter-btn {
+            padding: 4px 12px;
+            font-size: 0.78rem;
+            background: rgba(139, 92, 246, 0.1);
+            color: #a78bfa;
+            border: 1px solid rgba(139, 92, 246, 0.25);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .category-filter-btn:hover {
+            background: rgba(139, 92, 246, 0.25);
+            color: #c4b5fd;
+        }
+        
+        .category-filter-btn.active {
+            background: rgba(139, 92, 246, 0.4);
+            color: #ede9fe;
+            border-color: #8b5cf6;
+            font-weight: 600;
+        }
+        
         .transcript-actions {
             display: flex;
             gap: 10px;
@@ -724,6 +770,9 @@
                 <button class="filter-btn" data-filter="fox-business">Fox Business</button>
                 <button class="filter-btn" data-filter="radio">Radio</button>
             </div>
+            <div class="category-filters" id="category-filters">
+                <!-- Populated dynamically -->
+            </div>
         </div>
         
         <div class="results-header">
@@ -759,6 +808,7 @@
         let allTranscripts = [];
         let filteredTranscripts = [];
         let currentFilter = 'all';
+        let currentCategory = null;
         
         async function loadData() {
             try {
@@ -776,6 +826,9 @@
                 const maxDate = new Date(Math.max(...dates));
                 const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
                 document.getElementById('date-range').textContent = daysDiff;
+                
+                // Build category filter buttons
+                buildCategoryFilters();
                 
                 performSearch();
             } catch (error) {
@@ -796,6 +849,38 @@
             return 'other';
         }
         
+        function buildCategoryFilters() {
+            const categoryCounts = {};
+            allTranscripts.forEach(t => {
+                (t.topic_categories || []).forEach(cat => {
+                    categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                });
+            });
+            
+            const sorted = Object.entries(categoryCounts)
+                .sort((a, b) => b[1] - a[1])
+                .filter(([_, count]) => count >= 2);  // Only show categories with 2+ transcripts
+            
+            const container = document.getElementById('category-filters');
+            container.innerHTML = sorted.map(([cat, count]) => 
+                `<button class="category-filter-btn" data-category="${cat}" onclick="toggleCategory('${cat}', this)">${cat} (${count})</button>`
+            ).join('');
+        }
+        
+        function toggleCategory(category, btn) {
+            if (currentCategory === category) {
+                // Deselect
+                currentCategory = null;
+                btn.classList.remove('active');
+            } else {
+                // Select new category
+                currentCategory = category;
+                document.querySelectorAll('.category-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            performSearch();
+        }
+        
         function performSearch() {
             const query = document.getElementById('search-input').value.toLowerCase().trim();
             const sortOrder = document.getElementById('sort-select').value;
@@ -807,6 +892,13 @@
                     if (networkType !== currentFilter) return false;
                 }
                 
+                // Apply category filter
+                if (currentCategory) {
+                    if (!transcript.topic_categories || !transcript.topic_categories.includes(currentCategory)) {
+                        return false;
+                    }
+                }
+                
                 // Apply search query
                 if (query) {
                     const searchText = [
@@ -815,6 +907,7 @@
                         transcript.network,
                         transcript.summary,
                         ...transcript.topics,
+                        ...(transcript.topic_categories || []),
                         ...(transcript.key_quotes || [])
                     ].filter(Boolean).join(' ').toLowerCase();
                     
@@ -875,6 +968,10 @@
                 `<span class="topic-tag">${t}</span>`
             ).join('');
             
+            const categories = (transcript.topic_categories || []).map(cat =>
+                `<span class="category-tag" onclick="event.stopPropagation(); event.preventDefault(); toggleCategoryFromCard('${cat}')">${cat}</span>`
+            ).join('');
+            
             const hasPdf = transcript.filename !== null;
             const pendingBadge = !hasPdf ? '<span class="pending-badge">PDF Pending</span>' : '';
             
@@ -913,6 +1010,7 @@
                     </div>
                     ` : ''}
                     
+                    ${categories ? `<div class="transcript-topics">${categories}</div>` : ''}
                     ${topics ? `<div class="transcript-topics">${topics}</div>` : ''}
                     
                     <div class="transcript-actions">
@@ -932,6 +1030,15 @@
                 performSearch();
             });
         });
+        
+        function toggleCategoryFromCard(category) {
+            currentCategory = category;
+            document.querySelectorAll('.category-filter-btn').forEach(b => {
+                b.classList.toggle('active', b.dataset.category === category);
+            });
+            performSearch();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
         
         // Search on enter
         document.getElementById('search-input').addEventListener('keypress', (e) => {
