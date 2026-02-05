@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmer Transcript Archive | MN-06 Watch</title>
+    <meta name="description" content="Full transcripts of Rep. Tom Emmer's media appearances. Every interview, every quote, documented and searchable.">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --navy: #1e3a5f;
+            --navy-dark: #152a45;
+            --navy-light: #2a4a73;
+            --gold: #d4a84b;
+            --gold-light: #e4bc6b;
+            --gold-dark: #b8923f;
+            --bg-dark: #0d1117;
+            --bg-card: #151c25;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --border: #2a3441;
+            --fox-red: #c41e3a;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Top Navigation */
+        .top-nav {
+            background: var(--navy-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(21, 42, 69, 0.95);
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .nav-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: var(--navy);
+        }
+        
+        .nav-link.active {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+        
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .logo-text span {
+            color: var(--gold);
+        }
+        
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Search Section */
+        .search-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-dark);
+            color: #fff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .search-box input:focus {
+            border-color: var(--gold);
+        }
+        
+        .search-box input::placeholder {
+            color: var(--text-secondary);
+        }
+        
+        .search-box button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--navy-dark);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .search-box button:hover {
+            background: var(--gold-light);
+        }
+        
+        .filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            background: var(--navy-dark);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+        
+        .filter-btn.active {
+            background: var(--gold);
+            color: var(--navy-dark);
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .results-count {
+            font-size: 0.9rem;
+        }
+        
+        .sort-select {
+            padding: 6px 10px;
+            background: var(--bg-card);
+            color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        
+        /* Transcript Cards */
+        .transcript-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .transcript-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .transcript-card.fox {
+            border-left: 3px solid var(--fox-red);
+        }
+        
+        .transcript-card.radio {
+            border-left: 3px solid var(--gold);
+        }
+        
+        .transcript-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        
+        .transcript-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .transcript-meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .transcript-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .transcript-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        
+        .transcript-summary {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .transcript-quotes {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .transcript-quotes h4 {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: var(--text-primary);
+            padding-left: 15px;
+            border-left: 2px solid var(--gold);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .quote:last-child {
+            margin-bottom: 0;
+        }
+        
+        .transcript-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+        
+        .topic-tag {
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            background: var(--navy-dark);
+            color: var(--text-secondary);
+            border-radius: 12px;
+        }
+        
+        .transcript-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .action-btn {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .action-btn.primary {
+            background: var(--gold);
+            color: var(--navy-dark);
+            border: none;
+            font-weight: 600;
+        }
+        
+        .action-btn.primary:hover {
+            background: var(--gold-light);
+        }
+        
+        .action-btn.secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+        
+        .action-btn.secondary:hover {
+            background: rgba(212, 168, 75, 0.1);
+        }
+        
+        .action-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .network-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        
+        .network-badge.fox {
+            background: var(--fox-red);
+            color: #fff;
+        }
+        
+        .network-badge.fox-business {
+            background: #1a472a;
+            color: #fff;
+        }
+        
+        .network-badge.radio {
+            background: var(--navy);
+            color: var(--gold);
+        }
+
+        .media-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-left: 5px;
+        }
+        
+        .media-badge.friendly {
+            background: #2d5016;
+            color: #86efac;
+        }
+        
+        .media-badge.hostile {
+            background: #7f1d1d;
+            color: #fca5a5;
+        }
+        
+        .media-badge.neutral {
+            background: #374151;
+            color: #d1d5db;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .no-results h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+            border: 1px solid var(--gold-dark);
+        }
+        
+        .cta-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+        
+        .cta-box p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--navy-dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: var(--gold-light);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .spinner {
+            width: 35px;
+            height: 35px;
+            border: 3px solid var(--border);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .pending-badge {
+            background: var(--navy);
+            color: var(--gold);
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .stats-bar {
+                gap: 20px;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box button {
+                width: 100%;
+            }
+            
+            .transcript-header {
+                flex-direction: column;
+            }
+            
+            .transcript-actions {
+                width: 100%;
+            }
+            
+            .action-btn {
+                flex: 1;
+                text-align: center;
+            }
+        }
+        
+        /* Transcript Viewer Overlay */
+        .transcript-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-dark);
+            z-index: 2000;
+            flex-direction: column;
+        }
+        
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            background: var(--navy-dark);
+            border-bottom: 1px solid var(--border);
+            gap: 20px;
+        }
+        
+        .back-btn {
+            background: var(--navy);
+            color: var(--gold);
+            border: 1px solid var(--gold-dark);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        
+        .back-btn:hover {
+            background: var(--navy-light);
+        }
+        
+        .viewer-info {
+            flex: 1;
+            text-align: center;
+            min-width: 0;
+        }
+        
+        .viewer-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .viewer-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .download-btn {
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        
+        .download-btn:hover {
+            background: var(--gold-light);
+        }
+        
+        .pdf-frame {
+            flex: 1;
+            border: none;
+            background: #fff;
+        }
+        
+        @media (max-width: 600px) {
+            .viewer-header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .viewer-info {
+                order: -1;
+                width: 100%;
+                text-align: left;
+            }
+            
+            .back-btn, .download-btn {
+                flex: 1;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="https://mn06watch.substack.com" class="nav-brand">
+            <img src="MN06Watch_Logo.png" alt="MN-06 Watch" class="nav-logo">
+            <span>MN-06 Watch</span>
+        </a>
+        <div class="nav-links">
+            <a href="https://mn06watch.github.io/emmer-vote-tracker/" class="nav-link">Vote Tracker</a>
+            <a href="https://mn06watch.github.io/emmer-vote-tracker/tweets/" class="nav-link">Tweet Archive</a>
+            <a href="./" class="nav-link active">Transcripts</a>
+            <a href="https://mn06watch.substack.com/subscribe" class="nav-link">Subscribe</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <img src="MN06Watch_Logo.png" alt="MN-06 Watch" class="logo-img">
+            <div class="logo-text">Emmer <span>Transcript Archive</span></div>
+            <div class="tagline">Every interview. Every quote. Documented.</div>
+        </header>
+        
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-number" id="total-transcripts">--</div>
+                <div class="stat-label">Transcripts</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="total-networks">--</div>
+                <div class="stat-label">Networks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="date-range">--</div>
+                <div class="stat-label">Days Covered</div>
+            </div>
+        </div>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search transcripts... (immigration, Omar, SCAM Act, etc.)">
+                <button onclick="performSearch()">Search</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Networks</button>
+                <button class="filter-btn" data-filter="fox">Fox News</button>
+                <button class="filter-btn" data-filter="fox-business">Fox Business</button>
+                <button class="filter-btn" data-filter="radio">Radio</button>
+            </div>
+        </div>
+        
+        <div class="results-header">
+            <div class="results-count" id="results-count">Loading...</div>
+            <select class="sort-select" id="sort-select" onchange="performSearch()">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </div>
+        
+        <div id="results">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading transcripts...</p>
+            </div>
+        </div>
+        
+        <div class="cta-box">
+            <h3>Get Notified of New Transcripts</h3>
+            <p>Subscribe to receive analysis of Emmer's media appearances as they happen.</p>
+            <a href="https://mn06watch.substack.com/subscribe" class="cta-btn">Subscribe to MN-06 Watch</a>
+        </div>
+        
+        <footer>
+            <p>Transcripts independently produced by MN-06 Watch for accountability and archival purposes.</p>
+            <p style="margin-top: 8px;"><a href="https://mn06watch.github.io/emmer-vote-tracker/">Vote Tracker</a> · <a href="https://mn06watch.github.io/emmer-vote-tracker/tweets/">Tweet Archive</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
+            <p style="margin-top: 10px;">© 2025 MN-06 Watch. Independent accountability journalism.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; color: #666;">Last updated: <span id="last-updated">February 4, 2026</span></p>
+        </footer>
+    </div>
+    
+    <script>
+        let allTranscripts = [];
+        let filteredTranscripts = [];
+        let currentFilter = 'all';
+        
+        async function loadData() {
+            try {
+                const response = await fetch('transcripts_data.json');
+                allTranscripts = await response.json();
+                
+                // Update stats
+                document.getElementById('total-transcripts').textContent = allTranscripts.length;
+                
+                const networks = [...new Set(allTranscripts.map(t => t.network))];
+                document.getElementById('total-networks').textContent = networks.length;
+                
+                const dates = allTranscripts.map(t => new Date(t.date));
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                const daysDiff = Math.ceil((maxDate - minDate) / (1000 * 60 * 60 * 24)) + 1;
+                document.getElementById('date-range').textContent = daysDiff;
+                
+                performSearch();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('results').innerHTML = `
+                    <div class="no-results">
+                        <h3>Error Loading Data</h3>
+                        <p>Please try refreshing the page.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function getNetworkType(network) {
+            if (network.includes('Fox News')) return 'fox';
+            if (network.includes('Fox Business')) return 'fox-business';
+            if (network.includes('Radio') || network.includes('WABC')) return 'radio';
+            return 'other';
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const sortOrder = document.getElementById('sort-select').value;
+            
+            filteredTranscripts = allTranscripts.filter(transcript => {
+                // Apply network filter
+                if (currentFilter !== 'all') {
+                    const networkType = getNetworkType(transcript.network);
+                    if (networkType !== currentFilter) return false;
+                }
+                
+                // Apply search query
+                if (query) {
+                    const searchText = [
+                        transcript.title,
+                        transcript.show,
+                        transcript.network,
+                        transcript.summary,
+                        ...transcript.topics,
+                        ...(transcript.key_quotes || [])
+                    ].filter(Boolean).join(' ').toLowerCase();
+                    
+                    return searchText.includes(query);
+                }
+                
+                return true;
+            });
+            
+            // Sort
+            filteredTranscripts.sort((a, b) => {
+                if (sortOrder === 'oldest') {
+                    return new Date(a.date) - new Date(b.date);
+                } else {
+                    return new Date(b.date) - new Date(a.date);
+                }
+            });
+            
+            displayResults();
+        }
+        
+        function displayResults() {
+            const container = document.getElementById('results');
+            
+            if (filteredTranscripts.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>No transcripts found</h3>
+                        <p>Try a different search term or filter.</p>
+                    </div>
+                `;
+                document.getElementById('results-count').textContent = '0 transcripts found';
+                return;
+            }
+            
+            document.getElementById('results-count').textContent = 
+                `${filteredTranscripts.length} transcript${filteredTranscripts.length !== 1 ? 's' : ''} found`;
+            
+            container.innerHTML = filteredTranscripts.map(t => createTranscriptCard(t)).join('');
+        }
+        
+        function createTranscriptCard(transcript) {
+            const networkType = getNetworkType(transcript.network);
+            const formattedDate = new Date(transcript.date + 'T12:00:00').toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            
+            const networkBadgeClass = networkType === 'fox' ? 'fox' : 
+                                      networkType === 'fox-business' ? 'fox-business' : 'radio';
+            
+            const quotes = (transcript.key_quotes || []).slice(0, 2).map(q => 
+                `<div class="quote">"${q}"</div>`
+            ).join('');
+            
+            const topics = (transcript.topics || []).map(t => 
+                `<span class="topic-tag">${t}</span>`
+            ).join('');
+            
+            const hasPdf = transcript.filename !== null;
+            const pendingBadge = !hasPdf ? '<span class="pending-badge">PDF Pending</span>' : '';
+            
+            const viewBtn = hasPdf 
+                ? `<a href="javascript:void(0)" onclick="viewTranscript('${transcript.filename}', '${transcript.title.replace(/'/g, "\\'")}', '${transcript.show.replace(/'/g, "\\'")}', '${formattedDate}')" class="action-btn primary">View Transcript</a>`
+                : `<button class="action-btn primary" disabled>PDF Coming Soon</button>`;
+            
+            const videoBtn = transcript.video_url 
+                ? `<a href="${transcript.video_url}" target="_blank" class="action-btn secondary">Watch Video →</a>`
+                : '';
+            
+            return `
+                <div class="transcript-card ${networkType}">
+                    <div class="transcript-header">
+                        <div>
+                            <div class="transcript-title">
+                                ${transcript.title}
+                                ${pendingBadge}
+                            </div>
+                            <div class="transcript-meta">
+                                <span class="network-badge ${networkBadgeClass}">${transcript.network}</span>
+                ${transcript.media_type ? `<span class="media-badge ${transcript.media_type.toLowerCase()}">${transcript.media_type === 'Conservative' ? '🟢' : transcript.media_type === 'Liberal' ? '🔴' : '⚪'} ${transcript.media_type}</span>` : ''}
+                                <span>${transcript.show}</span>
+                                <span>${transcript.duration}</span>
+                            </div>
+                        </div>
+                        <div class="transcript-date">${formattedDate}</div>
+                    </div>
+                    
+                    <div class="transcript-summary">${transcript.summary}</div>
+                    
+                    ${quotes ? `
+                    <div class="transcript-quotes">
+                        <h4>Key Quotes</h4>
+                        ${quotes}
+                    </div>
+                    ` : ''}
+                    
+                    ${topics ? `<div class="transcript-topics">${topics}</div>` : ''}
+                    
+                    <div class="transcript-actions">
+                        ${viewBtn}
+                        ${videoBtn}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                performSearch();
+            });
+        });
+        
+        // Search on enter
+        document.getElementById('search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+        
+        // Transcript viewer functions
+        function viewTranscript(filename, title, show, date) {
+            // Always open PDFs in new tab for best experience on all devices
+            window.open(filename, '_blank');
+        }
+        
+        function closeViewer() {
+            document.getElementById('transcript-viewer').style.display = 'none';
+            document.getElementById('pdf-frame').src = '';
+            document.body.style.overflow = '';
+        }
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeViewer();
+        });
+        
+        // Load data on page load
+        loadData();
+    </script>
+    
+    <!-- Transcript Viewer Overlay -->
+    <div id="transcript-viewer" class="transcript-viewer">
+        <div class="viewer-header">
+            <button onclick="closeViewer()" class="back-btn">← Back to Transcripts</button>
+            <div class="viewer-info">
+                <div id="viewer-title" class="viewer-title"></div>
+                <div id="viewer-meta" class="viewer-meta"></div>
+            </div>
+            <a id="viewer-download" href="#" class="download-btn" onclick="this.href=document.getElementById('pdf-frame').src" download>Download PDF</a>
+        </div>
+        <iframe id="pdf-frame" class="pdf-frame"></iframe>
+    </div>
+</body>
+</html>

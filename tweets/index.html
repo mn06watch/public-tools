@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmer Tweet Archive | MN-06 Watch</title>
+    <meta name="description" content="Search Rep. Tom Emmer's complete tweet history. 14,000+ tweets from 2017-2026. Every statement, every position, with direct links.">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --navy: #1e3a5f;
+            --navy-dark: #152a45;
+            --navy-light: #2a4a73;
+            --gold: #d4a84b;
+            --gold-light: #e4bc6b;
+            --gold-dark: #b8923f;
+            --bg-dark: #0d1117;
+            --bg-card: #151c25;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --border: #2a3441;
+            --twitter-blue: #1d9bf0;
+            --red: #ef4444;
+            --green: #22c55e;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Top Navigation */
+        .top-nav {
+            background: var(--navy-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(21, 42, 69, 0.95);
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .nav-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: var(--navy);
+        }
+        
+        .nav-link.active {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+        }
+        
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .logo-text span {
+            color: var(--gold);
+        }
+        
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Analysis Dashboard */
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .dashboard-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border);
+        }
+        
+        .dashboard-card h3 {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .big-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .big-number-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .topic-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .topic-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 4px 6px;
+            margin: -4px -6px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .topic-bar:hover {
+            background: rgba(212, 168, 75, 0.1);
+        }
+        
+        .topic-bar:hover .topic-bar-label {
+            color: var(--gold);
+        }
+        
+        .topic-bar-label {
+            width: 90px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: capitalize;
+        }
+        
+        .topic-bar-track {
+            flex: 1;
+            height: 20px;
+            background: var(--bg-dark);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .topic-bar-fill {
+            height: 100%;
+            background: var(--gold);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            min-width: 30px;
+        }
+        
+        .escalation-meter {
+            margin-top: 10px;
+        }
+        
+        .meter-track {
+            height: 30px;
+            background: linear-gradient(to right, var(--green), var(--gold), var(--red));
+            border-radius: 6px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        
+        .meter-marker {
+            position: absolute;
+            top: -5px;
+            width: 4px;
+            height: 40px;
+            background: #fff;
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+        
+        .meter-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .escalation-words {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .escalation-word {
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--red);
+            border-radius: 4px;
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            flex: 1;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Search Section */
+        .search-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--border);
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            font-size: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-dark);
+            color: #fff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .search-box input:focus {
+            border-color: var(--gold);
+        }
+        
+        .search-box input::placeholder {
+            color: var(--text-secondary);
+        }
+        
+        .search-box button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--navy-dark);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .search-box button:hover {
+            background: var(--gold-light);
+        }
+        
+        .search-mode-toggle {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .search-mode-toggle label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        
+        .search-mode-toggle input[type="radio"] {
+            accent-color: var(--gold);
+        }
+        
+        .filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        
+        .filter-btn {
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            background: var(--navy-dark);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .filter-btn:hover {
+            background: var(--navy);
+            color: #fff;
+        }
+        
+        .filter-btn.active {
+            background: var(--gold);
+            color: var(--navy-dark);
+            border-color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .filter-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .account-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .account-btn {
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            background: var(--bg-dark);
+            color: var(--twitter-blue);
+            border: 1px solid var(--twitter-blue);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .account-btn:hover {
+            background: rgba(29, 155, 240, 0.1);
+        }
+        
+        .account-btn.active {
+            background: var(--twitter-blue);
+            color: #fff;
+        }
+        
+        .date-filters {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .date-filters label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .date-filters input {
+            padding: 6px 10px;
+            background: var(--bg-dark);
+            color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+        
+        .topic-filters {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .topic-btn {
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            background: var(--bg-dark);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .topic-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        .topic-btn.active {
+            background: var(--gold);
+            color: var(--navy-dark);
+            border-color: var(--gold);
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .results-count {
+            font-size: 0.9rem;
+        }
+        
+        .sort-select {
+            padding: 6px 10px;
+            background: var(--bg-card);
+            color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        
+        .tweet-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .tweet-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .tweet-card.retweet {
+            border-left: 3px solid var(--text-secondary);
+        }
+        
+        .tweet-card.original {
+            border-left: 3px solid var(--twitter-blue);
+        }
+        
+        .tweet-card.escalation {
+            border-left: 3px solid var(--red);
+        }
+        
+        .tweet-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+        
+        .tweet-account {
+            font-weight: 600;
+            color: var(--twitter-blue);
+            font-size: 0.9rem;
+        }
+        
+        .tweet-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+        
+        .tweet-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+        
+        .tweet-text a {
+            color: var(--twitter-blue);
+            text-decoration: none;
+        }
+        
+        .tweet-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .tweet-text .escalation-highlight {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--red);
+            padding: 1px 4px;
+            border-radius: 3px;
+        }
+        
+        .tweet-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+        
+        .tweet-badge {
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+        
+        .badge-retweet {
+            background: rgba(139, 148, 158, 0.2);
+            color: var(--text-secondary);
+        }
+        
+        .badge-quote {
+            background: rgba(29, 155, 240, 0.2);
+            color: var(--twitter-blue);
+        }
+        
+        .badge-escalation {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--red);
+        }
+        
+        .topic-tag {
+            padding: 3px 8px;
+            font-size: 0.7rem;
+            background: var(--navy-dark);
+            color: var(--text-secondary);
+            border-radius: 10px;
+        }
+        
+        .tweet-link {
+            margin-left: auto;
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            background: transparent;
+            color: var(--twitter-blue);
+            border: 1px solid var(--twitter-blue);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .tweet-link:hover {
+            background: var(--twitter-blue);
+            color: #fff;
+        }
+        
+        .tweet-metrics {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-secondary);
+        }
+        
+        .no-results h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        
+        .load-more {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: var(--navy);
+            color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .load-more:hover {
+            background: var(--navy-light);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+            border: 1px solid var(--gold-dark);
+        }
+        
+        .cta-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+        
+        .cta-box p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--navy-dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: var(--gold-light);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        .spinner {
+            width: 35px;
+            height: 35px;
+            border: 3px solid var(--border);
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box button {
+                width: 100%;
+            }
+            
+            .filter-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .date-filters {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .tweet-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .tweet-link {
+                margin-left: 0;
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="https://mn06watch.substack.com" class="nav-brand">
+            <img src="MN06Watch_Logo.png" alt="MN-06 Watch" class="nav-logo">
+            <span>MN-06 Watch</span>
+        </a>
+        <div class="nav-links">
+            <a href="https://mn06watch.github.io/emmer-vote-tracker/" class="nav-link">Vote Tracker</a>
+            <a href="./" class="nav-link active">Tweet Archive</a>
+            <a href="https://mn06watch.github.io/emmer-vote-tracker/transcripts/" class="nav-link">Transcripts</a>
+            <a href="https://mn06watch.substack.com/subscribe" class="nav-link">Subscribe</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <img src="MN06Watch_Logo.png" alt="MN-06 Watch" class="logo-img">
+            <div class="logo-text">Emmer <span>Tweet Archive</span></div>
+            <div class="tagline">Every statement. Every position. Searchable & analyzed.</div>
+            <div class="last-updated">Last updated: February 4, 2026</div>
+        </header>
+        
+        <!-- Analysis Dashboard -->
+        <div class="dashboard">
+            <div class="dashboard-card">
+                <h3>Archive Overview</h3>
+                <div class="big-number" id="total-tweets">--</div>
+                <div class="big-number-label">Total Tweets Archived</div>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value" id="original-count">--</div>
+                        <div class="stat-label">Original</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="retweet-count">--</div>
+                        <div class="stat-label">Retweets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="years-count">--</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3>Top Topics</h3>
+                <div class="topic-bars" id="topic-bars">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3>Rhetoric Intensity</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 10px;">
+                    <span id="escalation-pct">--% charged</span> · compared to overall average
+                </p>
+                <div class="escalation-meter">
+                    <div class="meter-track">
+                        <div class="meter-marker" id="escalation-marker" style="left: 50%;"></div>
+                    </div>
+                    <div class="meter-labels">
+                        <span>Less than avg</span>
+                        <span>Average</span>
+                        <span>More charged</span>
+                    </div>
+                </div>
+                <div class="escalation-words" id="escalation-words">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search tweets... (use &quot;quotes&quot; for exact phrases)">
+                <div class="search-mode-toggle">
+                    <label title="Match ALL words"><input type="radio" name="search-mode" value="and" checked> All words</label>
+                    <label title="Match ANY word"><input type="radio" name="search-mode" value="or"> Any word</label>
+                </div>
+                <button onclick="performSearch()">Search</button>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Tweets</button>
+                <button class="filter-btn" data-filter="original">Original Only</button>
+                <button class="filter-btn" data-filter="retweets">Retweets</button>
+                <button class="filter-btn" data-filter="escalation">Charged Language</button>
+            </div>
+            
+            <div class="filter-row">
+                <div class="account-filters">
+                    <button class="account-btn active" data-account="all">All Accounts</button>
+                    <button class="account-btn" data-account="GOPMajorityWhip">@GOPMajorityWhip</button>
+                    <button class="account-btn" data-account="tomemmer">@tomemmer</button>
+                    <button class="account-btn" data-account="RepTomEmmer">@RepTomEmmer</button>
+                </div>
+                
+                <div class="date-filters">
+                    <label>From:</label>
+                    <input type="date" id="date-from" value="2017-01-01">
+                    <label>To:</label>
+                    <input type="date" id="date-to">
+                </div>
+            </div>
+            
+            <div class="topic-filters" id="topic-filter-buttons">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+        
+        <div class="results-header">
+            <div class="results-count" id="results-count">Loading...</div>
+            <select class="sort-select" id="sort-select" onchange="performSearch()">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+        </div>
+        
+        <div id="results">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading tweet archive...</p>
+            </div>
+        </div>
+        
+        <button class="load-more" id="load-more" style="display: none;" onclick="loadMore()">
+            Load More Results
+        </button>
+        
+        <div class="cta-box">
+            <h3>Want Analysis, Not Just Data?</h3>
+            <p>Get daily summaries, #RhetoricVsReality deep dives, and contradiction alerts.</p>
+            <a href="https://mn06watch.substack.com/subscribe" class="cta-btn">Subscribe to MN-06 Watch</a>
+        </div>
+        
+        <footer>
+            <p>Archive spans 2017-2026 across @GOPMajorityWhip, @tomemmer, and @RepTomEmmer</p>
+            <p style="margin-top: 8px;"><a href="https://mn06watch.github.io/emmer-vote-tracker/">Vote Tracker</a> · <a href="https://mn06watch.github.io/emmer-vote-tracker/transcripts/">Transcripts</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
+            <p style="margin-top: 10px;">© 2025 MN-06 Watch. Independent accountability journalism.</p>
+            <p style="margin-top: 8px; font-size: 0.8rem; color: #666;">Tweet archive last updated: January 30, 2026</p>
+        </footer>
+    </div>
+    
+    <script>
+        let allTweets = [];
+        let filteredTweets = [];
+        let displayedCount = 0;
+        const BATCH_SIZE = 25;
+        let currentFilter = 'all';
+        let currentAccount = 'all';
+        let currentTopic = 'all';
+        
+        // Escalation/charged language words
+        const ESCALATION_WORDS = [
+            'invasion', 'invading', 'invaders',
+            'radical', 'radicals', 'radicalism',
+            'extreme', 'extremist', 'extremists',
+            'crisis', 'catastrophe', 'catastrophic',
+            'destroy', 'destroying', 'destruction',
+            'dangerous', 'threat', 'threatening',
+            'illegal alien', 'illegals',
+            'mob', 'mobs',
+            'socialist', 'socialism', 'marxist',
+            'tyranny', 'tyrant', 'dictator',
+            'corrupt', 'corruption',
+            'hoax', 'fraud', 'fraudulent',
+            'attack', 'attacking', 'attacks on',
+            'war on', 'assault on',
+            'nightmare', 'disaster', 'disastrous',
+            'shameful', 'disgrace', 'disgraceful',
+            'outrage', 'outrageous',
+            // Additional inflammatory terms
+            'thug', 'thugs',
+            'punk', 'punks',
+            'lawless', 'lawlessness',
+            'riot', 'rioter', 'rioters', 'rioting',
+            'agitator', 'agitators',
+            'antifa',
+            'anarchist', 'anarchists', 'anarchy',
+            'defund',
+            'open borders',
+            'criminal', 'criminals',
+            'rapist', 'murderer', 'pedophile',
+            'traitor', 'treason', 'treasonous',
+            'enemy', 'enemies',
+            'hate', 'hatred', 'hateful',
+            'sick', 'sickness',
+            'insane', 'insanity', 'crazy',
+            'unhinged',
+            'coup',
+            'weaponize', 'weaponized', 'weaponization'
+        ];
+        
+        // Set default end date to today
+        document.getElementById('date-to').valueAsDate = new Date();
+        
+        // Common suffixes to strip for stemmed search
+        const SUFFIXES = ['ing', 'tion', 'sion', 'ment', 'ness', 'ity', 'ous', 'ive', 'ians', 'ian', 'ans', 'ers', 'ies', 'ia', 'es', 'ed', 'ly', 'an', 's'];
+        
+        // Get search stems from a query
+        function getSearchStems(query) {
+            const terms = new Set([query]); // Use Set to avoid duplicates
+            const lower = query.toLowerCase();
+            
+            // Try removing common suffixes to get root
+            for (const suffix of SUFFIXES) {
+                if (lower.endsWith(suffix) && lower.length > suffix.length + 2) {
+                    const stem = lower.slice(0, -suffix.length);
+                    if (stem.length >= 3) {
+                        terms.add(stem);
+                    }
+                }
+            }
+            
+            // For each term we have, also add common variations
+            const baseTerms = [...terms];
+            for (const term of baseTerms) {
+                // Add 's' plural
+                terms.add(term + 's');
+                
+                // If ends in 'i', try 'ia', 'ian', 'ians' (Somali -> Somalia, Somalian)
+                if (term.endsWith('i')) {
+                    terms.add(term + 'a');
+                    terms.add(term + 'an');
+                    terms.add(term + 'ans');
+                }
+                
+                // If ends in 'a', try 'an', 'ans', stripping 'a' for 'i' form
+                if (term.endsWith('a')) {
+                    terms.add(term + 'n');
+                    terms.add(term + 'ns');
+                    terms.add(term.slice(0, -1) + 'i');
+                    terms.add(term.slice(0, -1) + 'ian');
+                    terms.add(term.slice(0, -1) + 'ians');
+                }
+                
+                // If ends in 'y', try 'ies'
+                if (term.endsWith('y')) {
+                    terms.add(term.slice(0, -1) + 'ies');
+                }
+                
+                // Common verb forms
+                terms.add(term + 'ing');
+                terms.add(term + 'ed');
+            }
+            
+            return [...terms];
+        }
+        
+        // Check if tweet contains escalation language
+        function hasEscalation(text) {
+            if (!text) return false;
+            const lower = text.toLowerCase();
+            return ESCALATION_WORDS.some(word => {
+                // Handle multi-word phrases and single words with word boundaries
+                const regex = new RegExp('\\b' + word.replace(/\s+/g, '\\s+') + '\\b', 'i');
+                return regex.test(lower);
+            });
+        }
+        
+        // Get escalation words in a tweet
+        function getEscalationWords(text) {
+            if (!text) return [];
+            const lower = text.toLowerCase();
+            return ESCALATION_WORDS.filter(word => {
+                // Handle multi-word phrases and single words with word boundaries
+                const regex = new RegExp('\\b' + word.replace(/\s+/g, '\\s+') + '\\b', 'i');
+                return regex.test(lower);
+            });
+        }
+        
+        // Highlight escalation words in text
+        function highlightEscalation(text) {
+            if (!text) return '';
+            let result = text;
+            ESCALATION_WORDS.forEach(word => {
+                // Add word boundaries to prevent matching substrings
+                const escapedWord = word.replace(/\s+/g, '\\s+');
+                const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
+                result = result.replace(regex, '<span class="escalation-highlight">$1</span>');
+            });
+            return result;
+        }
+        
+        // Load data
+        async function loadData() {
+            try {
+                const response = await fetch('tweets_data.json');
+                const data = await response.json();
+                allTweets = data.tweets || data;
+                
+                // Add escalation flag to each tweet
+                allTweets.forEach(t => {
+                    t.has_escalation = hasEscalation(t.text);
+                });
+                
+                initializeDashboard();
+                performSearch();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('results').innerHTML = `
+                    <div class="no-results">
+                        <h3>Error Loading Data</h3>
+                        <p>Please try refreshing the page.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Store baseline escalation % for comparison
+        let baselineEscalationPct = 0;
+        
+        function initializeDashboard() {
+            // One-time setup: topic filter buttons based on all tweets
+            const topicCounts = {};
+            allTweets.forEach(t => {
+                (t.topics || []).forEach(topic => {
+                    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+                });
+            });
+            
+            const sortedTopics = Object.entries(topicCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+            
+            // Topic filter buttons
+            const topicButtons = document.getElementById('topic-filter-buttons');
+            topicButtons.innerHTML = '<button class="topic-btn active" data-topic="all">All Topics</button>' +
+                sortedTopics.map(([topic]) => 
+                    `<button class="topic-btn" data-topic="${topic}">${topic}</button>`
+                ).join('');
+            
+            // Add click handlers
+            document.querySelectorAll('.topic-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentTopic = btn.dataset.topic;
+                    performSearch();
+                });
+            });
+            
+            // Calculate baseline escalation for all tweets
+            const allEscalation = allTweets.filter(t => t.has_escalation);
+            baselineEscalationPct = (allEscalation.length / allTweets.length) * 100;
+        }
+        
+        function filterByTopic(topic) {
+            // Update the topic filter buttons to show this topic as active
+            document.querySelectorAll('.topic-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.topic === topic) {
+                    btn.classList.add('active');
+                }
+            });
+            currentTopic = topic;
+            performSearch();
+        }
+        
+        function updateDashboard(tweets) {
+            // Use filtered tweets for all calculations
+            const tweetSet = tweets || filteredTweets;
+            
+            // Basic stats
+            document.getElementById('total-tweets').textContent = tweetSet.length.toLocaleString();
+            
+            const originalCount = tweetSet.filter(t => !t.is_retweet).length;
+            const retweetCount = tweetSet.filter(t => t.is_retweet).length;
+            document.getElementById('original-count').textContent = originalCount.toLocaleString();
+            document.getElementById('retweet-count').textContent = retweetCount.toLocaleString();
+            
+            const years = [...new Set(tweetSet.map(t => {
+                const date = t.created_at || t.date;
+                return date ? date.substring(0, 4) : null;
+            }).filter(Boolean))];
+            document.getElementById('years-count').textContent = years.length;
+            
+            // Topic breakdown - based on filtered results
+            const topicCounts = {};
+            tweetSet.forEach(t => {
+                (t.topics || []).forEach(topic => {
+                    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+                });
+            });
+            
+            const sortedTopics = Object.entries(topicCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 6);
+            
+            const maxCount = sortedTopics[0] ? sortedTopics[0][1] : 1;
+            
+            const topicBars = document.getElementById('topic-bars');
+            if (sortedTopics.length === 0) {
+                topicBars.innerHTML = '<p style="color: var(--text-secondary); font-size: 0.85rem;">No topics in current results</p>';
+            } else {
+                topicBars.innerHTML = sortedTopics.map(([topic, count]) => {
+                    const pct = (count / maxCount) * 100;
+                    return `
+                        <div class="topic-bar" onclick="filterByTopic('${topic}')" style="cursor: pointer;" title="Click to filter by ${topic}">
+                            <span class="topic-bar-label">${topic}</span>
+                            <div class="topic-bar-track">
+                                <div class="topic-bar-fill" style="width: ${pct}%">${count.toLocaleString()}</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            // Escalation analysis - based on filtered results
+            const escalationTweets = tweetSet.filter(t => t.has_escalation);
+            const escalationPct = tweetSet.length > 0 ? (escalationTweets.length / tweetSet.length) * 100 : 0;
+            
+            // Position marker relative to baseline
+            // If current % is higher than baseline, marker moves right (more charged)
+            // Scale: 0% = far left, baseline = middle, 2x baseline = far right
+            let markerPos;
+            if (baselineEscalationPct === 0) {
+                markerPos = escalationPct > 0 ? 75 : 50;
+            } else {
+                // Ratio compared to baseline: 1.0 = same, 2.0 = twice as charged
+                const ratio = escalationPct / baselineEscalationPct;
+                // Map ratio to position: 0.5x = 25%, 1x = 50%, 2x = 75%, 3x+ = 95%
+                markerPos = Math.min(95, Math.max(5, ratio * 50));
+            }
+            document.getElementById('escalation-marker').style.left = `${markerPos}%`;
+            
+            // Show escalation stats
+            const escalationLabel = document.getElementById('escalation-pct');
+            if (escalationLabel) {
+                escalationLabel.textContent = `${escalationPct.toFixed(1)}% charged`;
+            }
+            
+            // Show top escalation words used in filtered results
+            const wordCounts = {};
+            escalationTweets.forEach(t => {
+                getEscalationWords(t.text).forEach(word => {
+                    wordCounts[word] = (wordCounts[word] || 0) + 1;
+                });
+            });
+            
+            const topWords = Object.entries(wordCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+            
+            const escalationWordsEl = document.getElementById('escalation-words');
+            if (topWords.length === 0) {
+                escalationWordsEl.innerHTML = '<span style="color: var(--text-secondary); font-size: 0.8rem;">No charged language in current results</span>';
+            } else {
+                escalationWordsEl.innerHTML = topWords.map(([word, count]) =>
+                    `<span class="escalation-word">${word} (${count})</span>`
+                ).join('');
+            }
+        }
+        
+        function performSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const sortOrder = document.getElementById('sort-select').value;
+            const dateFrom = document.getElementById('date-from').value;
+            const dateTo = document.getElementById('date-to').value;
+            
+            // Filter tweets
+            filteredTweets = allTweets.filter(tweet => {
+                // Apply type filter
+                if (currentFilter === 'original' && tweet.is_retweet) return false;
+                if (currentFilter === 'retweets' && !tweet.is_retweet) return false;
+                if (currentFilter === 'escalation' && !tweet.has_escalation) return false;
+                
+                // Apply account filter
+                if (currentAccount !== 'all') {
+                    const handle = tweet.source_handle || '';
+                    if (handle.toLowerCase() !== currentAccount.toLowerCase()) return false;
+                }
+                
+                // Apply topic filter
+                if (currentTopic !== 'all') {
+                    if (!(tweet.topics || []).includes(currentTopic)) return false;
+                }
+                
+                // Apply date filter
+                const tweetDate = (tweet.created_at || tweet.date || '').substring(0, 10);
+                if (dateFrom && tweetDate < dateFrom) return false;
+                if (dateTo && tweetDate > dateTo) return false;
+                
+                // Apply search query with stemming and AND/OR logic
+                if (query) {
+                    const searchText = [
+                        tweet.text,
+                        tweet.source_handle,
+                        ...(tweet.topics || [])
+                    ].filter(Boolean).join(' ').toLowerCase();
+                    
+                    // Check for exact phrase matching (quoted phrases)
+                    const exactPhrases = [];
+                    const remainingQuery = query.replace(/"([^"]+)"/g, (match, phrase) => {
+                        exactPhrases.push(phrase.toLowerCase());
+                        return '';
+                    }).trim();
+                    
+                    // First check all exact phrases must match
+                    for (const phrase of exactPhrases) {
+                        if (!searchText.includes(phrase)) {
+                            return false;
+                        }
+                    }
+                    
+                    // If there's remaining query text, apply AND/OR logic
+                    if (remainingQuery) {
+                        // Get search mode (AND or OR)
+                        const searchMode = document.querySelector('input[name="search-mode"]:checked')?.value || 'and';
+                        
+                        // Split remaining query into words and search
+                        const queryWords = remainingQuery.split(/\s+/).filter(w => w.length > 0);
+                        
+                        if (searchMode === 'or') {
+                            // OR: match ANY word
+                            return queryWords.some(word => {
+                                const stems = getSearchStems(word);
+                                return stems.some(stem => searchText.includes(stem));
+                            });
+                        } else {
+                            // AND: match ALL words
+                            return queryWords.every(word => {
+                                const stems = getSearchStems(word);
+                                return stems.some(stem => searchText.includes(stem));
+                            });
+                        }
+                    }
+                    
+                    // If only exact phrases and they all matched, return true
+                    return true;
+                }
+                
+                return true;
+            });
+            
+            // Sort
+            filteredTweets.sort((a, b) => {
+                const dateA = a.created_at || a.date || '';
+                const dateB = b.created_at || b.date || '';
+                if (sortOrder === 'oldest') {
+                    return dateA.localeCompare(dateB);
+                } else {
+                    return dateB.localeCompare(dateA);
+                }
+            });
+            
+            // Reset and display
+            displayedCount = 0;
+            document.getElementById('results').innerHTML = '';
+            
+            // Update dashboard with filtered results
+            updateDashboard(filteredTweets);
+            
+            loadMore();
+            
+            // Update count
+            document.getElementById('results-count').textContent = 
+                `${filteredTweets.length.toLocaleString()} tweets found`;
+        }
+        
+        function loadMore() {
+            const container = document.getElementById('results');
+            const end = Math.min(displayedCount + BATCH_SIZE, filteredTweets.length);
+            
+            for (let i = displayedCount; i < end; i++) {
+                container.appendChild(createTweetCard(filteredTweets[i]));
+            }
+            
+            displayedCount = end;
+            
+            // Toggle load more button
+            const loadMoreBtn = document.getElementById('load-more');
+            if (displayedCount >= filteredTweets.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+                loadMoreBtn.textContent = `Load More (${filteredTweets.length - displayedCount} remaining)`;
+            }
+            
+            // Show no results message
+            if (filteredTweets.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>No tweets found</h3>
+                        <p>Try a different search term or filter.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        function createTweetCard(tweet) {
+            const card = document.createElement('div');
+            
+            let cardClass = tweet.is_retweet ? 'retweet' : 'original';
+            if (tweet.has_escalation && !tweet.is_retweet) cardClass = 'escalation';
+            card.className = `tweet-card ${cardClass}`;
+            
+            // Format date
+            const dateStr = tweet.created_at || tweet.date || '';
+            const formattedDate = dateStr ? new Date(dateStr).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }) : 'Unknown date';
+            
+            // Build badges
+            let badges = '';
+            if (tweet.is_retweet) {
+                badges += `<span class="tweet-badge badge-retweet">RT</span>`;
+            }
+            if (tweet.is_quote) {
+                badges += `<span class="tweet-badge badge-quote">Quote</span>`;
+            }
+            if (tweet.has_escalation && !tweet.is_retweet) {
+                badges += `<span class="tweet-badge badge-escalation">Charged</span>`;
+            }
+            
+            // Build topic tags
+            let topics = (tweet.topics || []).slice(0, 3).map(t => 
+                `<span class="topic-tag">${t}</span>`
+            ).join('');
+            
+            // Format text with links and escalation highlighting
+            let text = tweet.text || '';
+            text = highlightEscalation(text);
+            text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
+            text = text.replace(/@(\w+)/g, '<a href="https://x.com/$1" target="_blank">@$1</a>');
+            
+            // Build metrics if available
+            let metrics = '';
+            if (tweet.metrics && Object.keys(tweet.metrics).length > 0) {
+                const m = tweet.metrics;
+                metrics = `
+                    <div class="tweet-metrics">
+                        ${m.retweet_count ? `<span>🔁 ${m.retweet_count.toLocaleString()}</span>` : ''}
+                        ${m.like_count ? `<span>❤️ ${m.like_count.toLocaleString()}</span>` : ''}
+                        ${m.reply_count ? `<span>💬 ${m.reply_count.toLocaleString()}</span>` : ''}
+                    </div>
+                `;
+            }
+            
+            // Tweet URL
+            const tweetUrl = tweet.url || `https://x.com/${tweet.source_handle}/status/${tweet.id}`;
+            
+            card.innerHTML = `
+                <div class="tweet-header">
+                    <span class="tweet-account">@${tweet.source_handle || 'unknown'}</span>
+                    <span class="tweet-date">${formattedDate}</span>
+                </div>
+                <div class="tweet-text">${text}</div>
+                <div class="tweet-meta">
+                    ${badges}
+                    ${topics}
+                    <a href="${tweetUrl}" target="_blank" class="tweet-link">View on X →</a>
+                </div>
+                ${metrics}
+            `;
+            
+            return card;
+        }
+        
+        // Filter buttons
+        document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                performSearch();
+            });
+        });
+        
+        // Account buttons
+        document.querySelectorAll('.account-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.account-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentAccount = btn.dataset.account;
+                performSearch();
+            });
+        });
+        
+        // Search on enter
+        document.getElementById('search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+        
+        // Date change
+        document.getElementById('date-from').addEventListener('change', performSearch);
+        document.getElementById('date-to').addEventListener('change', performSearch);
+        
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+</html>
