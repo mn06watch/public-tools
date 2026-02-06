@@ -473,12 +473,12 @@
             </div>
         </div>
         
-        <!-- Highlight -->
+        <!-- Dynamic Highlight -->
         <div class="highlight-box">
-            <h3>📊 The Bottom Line</h3>
-            <p>In <strong>10 years</strong> in Congress, Rep. Emmer has sponsored <strong id="highlight-total">--</strong> bills.</p>
-            <p>Of those, <span class="big-stat" id="highlight-died">--</span> died in committee without ever receiving a vote.</p>
-            <p style="margin-top: 15px; font-size: 0.9rem;">His <strong id="highlight-laws">--</strong> bills that became law include <span id="law-summary">post office namings</span>.</p>
+            <h3 id="insight-title">📊 The Bottom Line</h3>
+            <div id="insight-content">
+                <p>Loading...</p>
+            </div>
         </div>
         
         <!-- Charts -->
@@ -592,22 +592,151 @@
             document.getElementById('success-rate').textContent = 
                 sponsored.length > 0 ? (laws.length / sponsored.length * 100).toFixed(1) + '%' : '0%';
             
-            document.getElementById('highlight-total').textContent = sponsored.length;
-            document.getElementById('highlight-died').textContent = died.length;
-            document.getElementById('highlight-laws').textContent = laws.length;
+            }
+        
+        function updateInsights() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const congressFilter = document.getElementById('congress-filter').value;
+            const policyFilter = document.getElementById('policy-filter').value;
             
-            // Summarize laws
-            if (laws.length > 0) {
-                const postOffice = laws.filter(b => b.title && b.title.toLowerCase().includes('postal'));
-                if (postOffice.length === laws.length) {
-                    document.getElementById('law-summary').textContent = 'post office namings';
-                } else if (postOffice.length > 0) {
-                    document.getElementById('law-summary').textContent = 
-                        `${postOffice.length} post office naming${postOffice.length > 1 ? 's' : ''} and ${laws.length - postOffice.length} other${laws.length - postOffice.length > 1 ? 's' : ''}`;
+            const titleEl = document.getElementById('insight-title');
+            const contentEl = document.getElementById('insight-content');
+            
+            // Get current filtered data
+            let bills = filteredBills;
+            const sponsored = bills.filter(b => b.role === 'sponsor');
+            const cosponsored = bills.filter(b => b.role === 'cosponsor');
+            const laws = bills.filter(b => b.status === 'Became Law');
+            const died = bills.filter(b => b.died_in_committee);
+            const total = bills.length;
+            
+            // Calculate rates
+            const diedRate = sponsored.length > 0 ? Math.round((died.length / sponsored.length) * 100) : 0;
+            const successRate = sponsored.length > 0 ? ((laws.length / sponsored.length) * 100).toFixed(1) : 0;
+            
+            // Context-specific insights
+            let title = '📊 The Bottom Line';
+            let html = '';
+            
+            // Search term active
+            if (searchTerm) {
+                title = `🔍 "${searchTerm}" Bills`;
+                const allMatching = allBills.filter(b => 
+                    (b.title && b.title.toLowerCase().includes(searchTerm)) ||
+                    (b.policy_area && b.policy_area.toLowerCase().includes(searchTerm))
+                );
+                const matchSponsored = allMatching.filter(b => b.role === 'sponsor');
+                const matchLaws = matchSponsored.filter(b => b.status === 'Became Law');
+                const matchDied = matchSponsored.filter(b => b.died_in_committee);
+                
+                if (matchSponsored.length === 0) {
+                    html = `<p>Emmer hasn't sponsored any bills matching "${searchTerm}".</p>`;
+                    if (allMatching.length > 0) {
+                        html += `<p style="margin-top: 10px;">He has <strong>cosponsored ${allMatching.length}</strong> bills on this topic.</p>`;
+                    }
+                } else if (matchLaws.length > 0) {
+                    html = `<p>Emmer sponsored <strong>${matchSponsored.length}</strong> bills on "${searchTerm}".</p>`;
+                    html += `<p><span class="big-stat" style="color: var(--green-light);">${matchLaws.length}</span> became law! 🎉</p>`;
                 } else {
-                    document.getElementById('law-summary').textContent = 'various legislation';
+                    html = `<p>Emmer sponsored <strong>${matchSponsored.length}</strong> bills on "${searchTerm}".</p>`;
+                    html += `<p><span class="big-stat">${matchDied.length}</span> died in committee.</p>`;
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">Success rate: <strong>0%</strong></p>`;
                 }
             }
+            // Policy area filter
+            else if (policyFilter) {
+                title = `📂 ${policyFilter}`;
+                const policySponsored = allBills.filter(b => b.role === 'sponsor' && (b.policy_area || 'Uncategorized') === policyFilter);
+                const policyLaws = policySponsored.filter(b => b.status === 'Became Law');
+                const policyDied = policySponsored.filter(b => b.died_in_committee);
+                const policyRate = policySponsored.length > 0 ? ((policyLaws.length / policySponsored.length) * 100).toFixed(0) : 0;
+                
+                html = `<p>Emmer's #1 focus area by bill count.</p>`;
+                html += `<p>Sponsored <strong>${policySponsored.length}</strong> ${policyFilter} bills.</p>`;
+                html += `<p><span class="big-stat">${policyDied.length}</span> died in committee.</p>`;
+                html += `<p style="margin-top: 10px; font-size: 0.9rem;">Success rate: <strong>${policyRate}%</strong>`;
+                if (policyLaws.length === 0 && policySponsored.length > 5) {
+                    html += ` — Despite ${policySponsored.length} attempts, zero became law.`;
+                }
+                html += `</p>`;
+            }
+            // Congress filter
+            else if (congressFilter) {
+                const congressNum = parseInt(congressFilter);
+                const yearStart = 2015 + (congressNum - 114) * 2;
+                const yearEnd = yearStart + 2;
+                title = `🏛️ ${congressNum}th Congress (${yearStart}-${yearEnd})`;
+                
+                const cSponsored = allBills.filter(b => b.role === 'sponsor' && b.congress == congressFilter);
+                const cLaws = cSponsored.filter(b => b.status === 'Became Law');
+                const cDied = cSponsored.filter(b => b.died_in_committee);
+                
+                // Compare to other congresses
+                const avgPerCongress = allBills.filter(b => b.role === 'sponsor').length / 6;
+                const comparison = cSponsored.length > avgPerCongress ? 'above' : 'below';
+                
+                html = `<p>Sponsored <strong>${cSponsored.length}</strong> bills (${comparison} his average of ${avgPerCongress.toFixed(0)}).</p>`;
+                html += `<p><span class="big-stat">${cDied.length}</span> died in committee.</p>`;
+                if (cLaws.length > 0) {
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;"><strong>${cLaws.length}</strong> became law! 🎉</p>`;
+                } else {
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">None became law.</p>`;
+                }
+            }
+            // Card filters
+            else if (activeCard === 'cosponsored') {
+                title = '🤝 Cosponsored Bills';
+                const coTotal = allBills.filter(b => b.role === 'cosponsor').length;
+                const coLaws = allBills.filter(b => b.role === 'cosponsor' && b.status === 'Became Law').length;
+                html = `<p>Emmer put his name on <strong>${coTotal.toLocaleString()}</strong> other members' bills.</p>`;
+                html += `<p style="margin-top: 10px; font-size: 0.9rem;">Cosponsoring is easy — just a signature showing support. It's the sponsored bills that show what he actually prioritizes.</p>`;
+            }
+            else if (activeCard === 'law') {
+                title = '✅ Bills That Became Law';
+                const lawBills = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
+                const postOffice = lawBills.filter(b => b.title && b.title.toLowerCase().includes('postal'));
+                
+                html = `<p>In 10 years, <strong>${lawBills.length}</strong> of Emmer's bills became law.</p>`;
+                if (postOffice.length > 0) {
+                    html += `<p style="margin-top: 10px;"><span class="big-stat" style="color: var(--gold);">${postOffice.length}</span> were post office namings.</p>`;
+                    const other = lawBills.length - postOffice.length;
+                    if (other > 0) {
+                        html += `<p style="font-size: 0.9rem;">${other} other bill${other > 1 ? 's' : ''} passed.</p>`;
+                    }
+                }
+            }
+            else if (activeCard === 'died') {
+                title = '⚰️ Died in Committee';
+                const diedBills = allBills.filter(b => b.role === 'sponsor' && b.died_in_committee);
+                const totalSponsored = allBills.filter(b => b.role === 'sponsor').length;
+                const diedPct = Math.round((diedBills.length / totalSponsored) * 100);
+                
+                html = `<p><span class="big-stat">${diedPct}%</span> of Emmer's sponsored bills died in committee.</p>`;
+                html += `<p style="margin-top: 10px;">That's <strong>${diedBills.length}</strong> bills that never got a floor vote.</p>`;
+                html += `<p style="margin-top: 10px; font-size: 0.9rem;">Even with Republicans controlling the House, his bills don't advance.</p>`;
+            }
+            // Default view
+            else {
+                title = '📊 The Bottom Line';
+                const totalSponsored = allBills.filter(b => b.role === 'sponsor').length;
+                const totalLaws = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law').length;
+                const totalDied = allBills.filter(b => b.role === 'sponsor' && b.died_in_committee).length;
+                const postOffice = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law' && b.title && b.title.toLowerCase().includes('postal')).length;
+                
+                html = `<p>In <strong>10 years</strong> in Congress, Rep. Emmer has sponsored <strong>${totalSponsored}</strong> bills.</p>`;
+                html += `<p>Of those, <span class="big-stat">${totalDied}</span> died in committee without ever receiving a vote.</p>`;
+                html += `<p style="margin-top: 15px; font-size: 0.9rem;">His <strong>${totalLaws}</strong> bills that became law include `;
+                if (postOffice === totalLaws) {
+                    html += `post office namings.</p>`;
+                } else if (postOffice > 0) {
+                    html += `${postOffice} post office naming${postOffice > 1 ? 's' : ''} and ${totalLaws - postOffice} other${totalLaws - postOffice > 1 ? 's' : ''}.</p>`;
+                } else {
+                    html += `various legislation.</p>`;
+                }
+            }
+            
+            titleEl.textContent = title;
+            contentEl.innerHTML = html;
         }
         
         function populatePolicyFilter() {
@@ -933,6 +1062,7 @@
             
             document.getElementById('results-count').textContent = `${bills.length} bills`;
             renderBills();
+            updateInsights();
         }
         
         function clearFilters() {
