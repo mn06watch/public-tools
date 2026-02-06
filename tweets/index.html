@@ -665,19 +665,19 @@
             
             rising.slice(0, 5).forEach(({ topic, recent, recentShare, displayChange }) => {
                 const changeText = displayChange > 200 ? '🔥 Surging' : `↑ ${Math.round(displayChange)}%`;
-                html += \`<div class="hot-topic-item" onclick="filterByTopic('\${topic.replace(/'/g, "\\'")}')">
-                    <span class="hot-topic-name">\${topic}</span>
-                    <span class="hot-topic-trend up">\${changeText} (\${recent} recent, \${recentShare}% of tweets)</span>
-                </div>\`;
+                html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
+                    <span class="hot-topic-name">${topic}</span>
+                    <span class="hot-topic-trend up">${changeText} (${recent} recent, ${recentShare}% of tweets)</span>
+                </div>`;
             });
             
             if (falling.length > 0) {
                 html += '<div style="margin: 15px 0; color: var(--text-secondary); font-size: 0.85rem;">Topics declining:</div>';
                 falling.slice(0, 3).forEach(({ topic, recent, older, shareChange }) => {
-                    html += \`<div class="hot-topic-item" onclick="filterByTopic('\${topic.replace(/'/g, "\\'")}')">
-                        <span class="hot-topic-name">\${topic}</span>
-                        <span class="hot-topic-trend down">↓ \${Math.abs(shareChange).toFixed(1)}pp (was \${older}, now \${recent})</span>
-                    </div>\`;
+                    html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
+                        <span class="hot-topic-name">${topic}</span>
+                        <span class="hot-topic-trend down">↓ ${Math.abs(shareChange).toFixed(1)}pp (was ${older}, now ${recent})</span>
+                    </div>`;
                 });
             }
             
