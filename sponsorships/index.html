@@ -1005,6 +1005,7 @@
                 document.getElementById(`card-${type}`).classList.add('active');
             }
             
+            updateDynamicStats();
             applyFilters();
         }
         
@@ -1071,6 +1072,7 @@
             document.getElementById('policy-filter').value = '';
             document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
             activeCard = null;
+            updateDynamicStats();
             applyFilters();
         }
         
