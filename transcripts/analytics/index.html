@@ -603,6 +603,13 @@
             <input type="date" id="end-date" class="filter-input">
             <button onclick="applyFilter()" class="filter-btn">Apply Filter</button>
             <button onclick="resetFilter()" class="filter-btn" style="background: var(--navy); color: var(--gold);">Reset</button>
+            
+            <span class="filter-label" style="margin-left: 20px;">Content:</span>
+            <select id="content-type-filter" class="filter-input" onchange="filterByContentType(this.value)">
+                <option value="">All Content</option>
+                <option value="cspan">C-SPAN Only (Floor/Press)</option>
+                <option value="interviews">Interviews Only</option>
+            </select>
         </div>
         
         <div class="active-filter-bar" id="active-filter-bar">
@@ -721,6 +728,7 @@
             topic: null,
             category: null,
             mediaType: null,
+            contentType: null,  // 'cspan' or 'interviews'
             startDate: null,
             endDate: null
         };
@@ -1417,6 +1425,16 @@
                 results = results.filter(t => t.media_type === activeFilters.mediaType);
             }
             
+            // Apply content type filter (C-SPAN vs Interviews)
+            if (activeFilters.contentType) {
+                const cspanNetworks = ['C-SPAN', 'Press Conference / Speech', 'Committee Hearing'];
+                if (activeFilters.contentType === 'cspan') {
+                    results = results.filter(t => cspanNetworks.includes(t.network));
+                } else if (activeFilters.contentType === 'interviews') {
+                    results = results.filter(t => !cspanNetworks.includes(t.network));
+                }
+            }
+            
             // Apply date range filter
             if (activeFilters.startDate || activeFilters.endDate) {
                 results = results.filter(t => {
@@ -1438,6 +1456,7 @@
             if (activeFilters.topic) parts.push(`Topic: ${activeFilters.topic}`);
             if (activeFilters.category) parts.push(`Category: ${activeFilters.category}`);
             if (activeFilters.mediaType) parts.push(`Media: ${activeFilters.mediaType}`);
+            if (activeFilters.contentType) parts.push(`Content: ${activeFilters.contentType === 'cspan' ? 'C-SPAN' : 'Interviews'}`);
             if (activeFilters.startDate || activeFilters.endDate) {
                 if (activeFilters.startDate === activeFilters.endDate && activeFilters.startDate) {
                     const dateStr = new Date(activeFilters.startDate + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -1474,6 +1493,13 @@
             toggleBtn('reset-topic', activeFilters.topic);
             toggleBtn('reset-category', activeFilters.category);
             toggleBtn('reset-date', activeFilters.startDate || activeFilters.endDate);
+            toggleBtn('reset-contentType', activeFilters.contentType);
+        }
+        
+        function filterByContentType(contentType) {
+            activeFilters.contentType = contentType || null;
+            document.getElementById('content-type-filter').value = contentType || '';
+            applyAllFilters();
         }
         
         function filterByNetwork(network) {
@@ -1502,9 +1528,11 @@
                 topic: null,
                 category: null,
                 mediaType: null,
+                contentType: null,
                 startDate: null,
                 endDate: null
             };
+            document.getElementById('content-type-filter').value = '';
             document.getElementById('start-date').value = '';
             document.getElementById('end-date').value = '';
             applyAllFilters();
