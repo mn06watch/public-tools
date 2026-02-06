@@ -108,6 +108,25 @@
         .chart-container { position: relative; height: 350px; }
         .chart-container.tall { height: 450px; }
         
+        .chart-reset {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: var(--navy);
+            color: var(--gold);
+            border: 1px solid var(--navy-light);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 10;
+        }
+        
+        .chart-card:hover .chart-reset { opacity: 1; }
+        .chart-reset:hover { background: var(--navy-light); }
+        
         /* Hot Topics */
         .hot-topics-section {
             background: var(--bg-card);
@@ -346,11 +365,17 @@
         <div class="charts-grid">
             <div class="chart-card">
                 <div class="chart-title">📂 Top Topics</div>
-                <div class="chart-container tall"><canvas id="topics-chart"></canvas></div>
+                <div class="chart-container tall">
+                    <canvas id="topics-chart"></canvas>
+                    <button class="chart-reset" onclick="document.getElementById('topic-filter').value=''; applyFilters();">Reset Filter</button>
+                </div>
             </div>
             <div class="chart-card">
                 <div class="chart-title">📈 Tweets Over Time</div>
-                <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
+                <div class="chart-container">
+                    <canvas id="timeline-chart"></canvas>
+                    <button class="chart-reset" onclick="document.getElementById('year-filter').value=''; applyFilters();">Reset Filter</button>
+                </div>
             </div>
         </div>
         
@@ -572,68 +597,91 @@
         
         function findHotTopics() {
             const now = new Date();
-            const cutoff = new Date(now.setDate(now.getDate() - 90));
+            const cutoff90 = new Date(new Date().setDate(now.getDate() - 90));
             
-            // Recent counts
+            // Count tweets in recent 90 days vs previous period
             const recentCounts = {};
             const olderCounts = {};
+            let totalRecent = 0;
+            let totalOlder = 0;
             
             allTweets.forEach(t => {
                 const date = new Date(t.created_at);
                 const topics = t.topics_canonical || t.topics || [];
                 
                 topics.forEach(topic => {
-                    if (date >= cutoff) {
+                    if (date >= cutoff90) {
                         recentCounts[topic] = (recentCounts[topic] || 0) + 1;
+                        totalRecent++;
                     } else {
                         olderCounts[topic] = (olderCounts[topic] || 0) + 1;
+                        totalOlder++;
                     }
                 });
             });
             
-            // Calculate trends
+            // Calculate trends using share of voice (% of tweets) rather than raw counts
             const trends = [];
-            Object.keys(recentCounts).forEach(topic => {
+            Object.keys({...recentCounts, ...olderCounts}).forEach(topic => {
                 const recent = recentCounts[topic] || 0;
-                const older = olderCounts[topic] || 1;
-                const olderMonths = 90; // rough approximation
-                const recentRate = recent / 3; // per month
-                const olderRate = older / olderMonths;
+                const older = olderCounts[topic] || 0;
                 
-                if (recent >= 5) { // minimum threshold
-                    const change = ((recentRate - olderRate) / Math.max(olderRate, 0.1)) * 100;
-                    trends.push({ topic, recent, change });
+                // Require minimum baseline: at least 20 historical mentions OR 10 recent
+                if (older < 20 && recent < 10) return;
+                
+                // Calculate share of voice
+                const recentShare = totalRecent > 0 ? (recent / totalRecent) * 100 : 0;
+                const olderShare = totalOlder > 0 ? (older / totalOlder) * 100 : 0;
+                
+                // Change in share of voice (percentage points)
+                const shareChange = recentShare - olderShare;
+                
+                // For display, show relative change but cap it
+                let displayChange;
+                if (olderShare > 0.1) {
+                    displayChange = Math.min(((recentShare - olderShare) / olderShare) * 100, 500);
+                } else if (recent >= 10) {
+                    displayChange = 100; // New-ish topic with traction
+                } else {
+                    return;
                 }
+                
+                trends.push({ 
+                    topic, 
+                    recent, 
+                    older,
+                    recentShare: recentShare.toFixed(1),
+                    shareChange,
+                    displayChange 
+                });
             });
             
-            trends.sort((a, b) => b.change - a.change);
+            // Sort by share change (actual shift in focus)
+            const rising = trends.filter(t => t.shareChange > 0.5).sort((a, b) => b.shareChange - a.shareChange);
+            const falling = trends.filter(t => t.shareChange < -0.5 && t.older >= 50).sort((a, b) => a.shareChange - b.shareChange);
             
             const container = document.getElementById('hot-topics-list');
-            const hotTopics = trends.slice(0, 5);
-            const coldTopics = trends.slice(-3).reverse();
-            
             let html = '';
             
-            hotTopics.forEach(({ topic, recent, change }) => {
-                html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
-                    <span class="hot-topic-name">${topic}</span>
-                    <span class="hot-topic-trend up">↑ ${Math.round(change)}% (${recent} recent)</span>
-                </div>`;
+            rising.slice(0, 5).forEach(({ topic, recent, recentShare, displayChange }) => {
+                const changeText = displayChange > 200 ? '🔥 Surging' : `↑ ${Math.round(displayChange)}%`;
+                html += \`<div class="hot-topic-item" onclick="filterByTopic('\${topic.replace(/'/g, "\\'")}')">
+                    <span class="hot-topic-name">\${topic}</span>
+                    <span class="hot-topic-trend up">\${changeText} (\${recent} recent, \${recentShare}% of tweets)</span>
+                </div>\`;
             });
             
-            if (coldTopics.length > 0 && coldTopics[0].change < -20) {
+            if (falling.length > 0) {
                 html += '<div style="margin: 15px 0; color: var(--text-secondary); font-size: 0.85rem;">Topics declining:</div>';
-                coldTopics.forEach(({ topic, recent, change }) => {
-                    if (change < -20) {
-                        html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
-                            <span class="hot-topic-name">${topic}</span>
-                            <span class="hot-topic-trend down">↓ ${Math.round(Math.abs(change))}%</span>
-                        </div>`;
-                    }
+                falling.slice(0, 3).forEach(({ topic, recent, older, shareChange }) => {
+                    html += \`<div class="hot-topic-item" onclick="filterByTopic('\${topic.replace(/'/g, "\\'")}')">
+                        <span class="hot-topic-name">\${topic}</span>
+                        <span class="hot-topic-trend down">↓ \${Math.abs(shareChange).toFixed(1)}pp (was \${older}, now \${recent})</span>
+                    </div>\`;
                 });
             }
             
-            container.innerHTML = html || '<p style="color: var(--text-secondary);">Not enough recent data for trends.</p>';
+            container.innerHTML = html || '<p style="color: var(--text-secondary);">Not enough data for trends.</p>';
         }
         
         function filterByTopic(topic) {
