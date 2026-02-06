@@ -35,7 +35,7 @@
     // CSS for the nav (in case page doesn't have it)
     const navCSS = `
     <style id="mn06-nav-styles">
-        #mn06-nav .top-nav {
+        #mn06-nav #mn06-nav .top-nav {
             background: rgba(21, 42, 69, 0.95);
             border-bottom: 1px solid #2a3441;
             padding: 10px 20px;
@@ -48,7 +48,7 @@
             backdrop-filter: blur(10px);
         }
         
-        #mn06-nav .nav-brand {
+        #mn06-nav #mn06-nav .nav-brand {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -58,19 +58,19 @@
             font-size: 1rem;
         }
         
-        #mn06-nav .nav-logo {
+        #mn06-nav #mn06-nav .nav-logo {
             width: 32px;
             height: 32px;
             border-radius: 50%;
         }
         
-        #mn06-nav .nav-links {
+        #mn06-nav #mn06-nav .nav-links {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
         
-        #mn06-nav .nav-link {
+        #mn06-nav #mn06-nav .nav-link {
             color: #8b949e;
             text-decoration: none;
             font-size: 0.9rem;
@@ -79,27 +79,27 @@
             transition: all 0.2s;
         }
         
-        #mn06-nav .nav-link:hover {
+        #mn06-nav #mn06-nav .nav-link:hover {
             color: #e6edf3;
             background: #1e3a5f;
         }
         
-        #mn06-nav .nav-link.active {
+        #mn06-nav #mn06-nav .nav-link.active {
             color: #d4a84b;
             font-weight: 600;
         }
         
         @media (max-width: 768px) {
-            #mn06-nav .top-nav {
+            #mn06-nav #mn06-nav .top-nav {
                 flex-direction: column;
                 gap: 10px;
                 padding: 10px;
             }
-            #mn06-nav .nav-links {
+            #mn06-nav #mn06-nav .nav-links {
                 gap: 10px;
                 justify-content: center;
             }
-            #mn06-nav .nav-link {
+            #mn06-nav #mn06-nav .nav-link {
                 font-size: 0.8rem;
                 padding: 4px 8px;
             }
