@@ -425,7 +425,7 @@
         function updateStats() {
             const byAccount = {};
             allTweets.forEach(t => {
-                const acct = t.account || 'unknown';
+                const acct = t.source_handle || 'unknown';
                 byAccount[acct] = (byAccount[acct] || 0) + 1;
             });
             
@@ -733,7 +733,7 @@
                 };
                 title = `🐦 ${accountNames[activeCard] || activeCard}`;
                 
-                const accountTweets = allTweets.filter(t => t.account === activeCard);
+                const accountTweets = allTweets.filter(t => t.source_handle === activeCard);
                 html = `<p><span class="big-stat">${accountTweets.length.toLocaleString()}</span> tweets from this account.</p>`;
                 
                 // Date range for this account
@@ -768,7 +768,7 @@
             
             // Account filter
             if (activeCard && activeCard !== 'all') {
-                tweets = tweets.filter(t => t.account === activeCard);
+                tweets = tweets.filter(t => t.source_handle === activeCard);
             }
             
             // Search
@@ -817,15 +817,15 @@
                 const date = new Date(tweet.created_at);
                 const dateStr = !isNaN(date) ? date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Unknown';
                 
-                const accountClass = tweet.account === 'RepTomEmmer' ? 'rep' : tweet.account === 'GOPMajorityWhip' ? 'whip' : 'personal';
-                const accountLabel = tweet.account === 'RepTomEmmer' ? '@RepTomEmmer' : tweet.account === 'GOPMajorityWhip' ? '@GOPMajorityWhip' : '@tomemmer';
+                const accountClass = tweet.source_handle === 'RepTomEmmer' ? 'rep' : tweet.source_handle === 'GOPMajorityWhip' ? 'whip' : 'personal';
+                const accountLabel = tweet.source_handle === 'RepTomEmmer' ? '@RepTomEmmer' : tweet.source_handle === 'GOPMajorityWhip' ? '@GOPMajorityWhip' : '@tomemmer';
                 
                 const topics = tweet.topics_canonical || tweet.topics || [];
                 const topicsHtml = topics.slice(0, 5).map(t => 
                     `<span class="topic-tag" onclick="event.stopPropagation(); filterByTopic('${t.replace(/'/g, "\\'")}')">${t}</span>`
                 ).join('');
                 
-                const tweetUrl = tweet.url || `https://x.com/${tweet.account}/status/${tweet.id}`;
+                const tweetUrl = tweet.url || `https://x.com/${tweet.source_handle}/status/${tweet.id}`;
                 
                 return `<div class="tweet-card">
                     <div class="tweet-header">
