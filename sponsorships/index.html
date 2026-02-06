@@ -165,7 +165,8 @@
         
         .repeat-bills-section h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.1rem; }
         
-        .repeat-bill-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .repeat-bill-item { padding: 12px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s; border-radius: 6px; padding-left: 10px; margin-left: -10px; padding-right: 10px; }
+        .repeat-bill-item:hover { background: rgba(212, 168, 75, 0.1); }
         .repeat-bill-item:last-child { border-bottom: none; }
         .repeat-bill-title { color: var(--text-primary); font-weight: 500; margin-bottom: 5px; }
         .repeat-bill-meta { font-size: 0.85rem; color: var(--text-secondary); }
@@ -629,6 +630,8 @@
             });
         }
         
+        let repeatBillsData = [];
+        
         function findRepeatBills() {
             const sponsored = allBills.filter(b => b.role === 'sponsor');
             const titleGroups = {};
@@ -640,25 +643,59 @@
                 titleGroups[key].push(b);
             });
             
-            const repeats = Object.entries(titleGroups)
+            repeatBillsData = Object.entries(titleGroups)
                 .filter(([_, bills]) => bills.length > 1 && !bills.some(b => b.status === 'Became Law'))
                 .sort((a, b) => b[1].length - a[1].length)
                 .slice(0, 5);
             
             const container = document.getElementById('repeat-bills-list');
-            if (repeats.length === 0) {
+            if (repeatBillsData.length === 0) {
                 container.innerHTML = '<p style="color: var(--text-secondary);">No repeat failed bills found.</p>';
                 return;
             }
             
-            container.innerHTML = repeats.map(([_, bills]) => {
+            container.innerHTML = repeatBillsData.map(([key, bills], idx) => {
                 const congresses = bills.map(b => b.congress).sort().join(', ');
                 const title = bills[0].title || 'Untitled';
-                return `<div class="repeat-bill-item">
+                return `<div class="repeat-bill-item" onclick="filterByRepeatBill(${idx})">
                     <div class="repeat-bill-title">${title.length > 80 ? title.substring(0, 80) + '...' : title}<span class="repeat-count">${bills.length}x introduced</span></div>
-                    <div class="repeat-bill-meta">Congresses: ${congresses}th · All died in committee</div>
+                    <div class="repeat-bill-meta">Congresses: ${congresses}th · All died in committee · Click to view all versions</div>
                 </div>`;
             }).join('');
+        }
+        
+        function filterByRepeatBill(idx) {
+            const [key, bills] = repeatBillsData[idx];
+            const billIds = new Set(bills.map(b => b.id));
+            
+            // Clear other filters
+            document.getElementById('search-input').value = '';
+            document.getElementById('congress-filter').value = '';
+            document.getElementById('policy-filter').value = '';
+            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
+            activeCard = null;
+            
+            // Filter to just these bills
+            filteredBills = allBills.filter(b => billIds.has(b.id));
+            filteredBills.sort((a, b) => (b.congress || 0) - (a.congress || 0));
+            
+            displayCount = 25;
+            document.getElementById('results-count').textContent = `${filteredBills.length} bills`;
+            renderBills();
+            
+            // Update insight box
+            const titleEl = document.getElementById('insight-title');
+            const contentEl = document.getElementById('insight-content');
+            titleEl.textContent = '🔄 Repeat Bill';
+            const title = bills[0].title || 'Untitled';
+            contentEl.innerHTML = `
+                <p><strong>${title.length > 60 ? title.substring(0, 60) + '...' : title}</strong></p>
+                <p style="margin-top: 10px;">Introduced <span class="big-stat" style="font-size: 2rem;">${bills.length}x</span> across ${bills.length} Congresses.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Every single version died in committee. Zero floor votes.</p>
+            `;
+            
+            // Scroll to bills list
+            document.getElementById('bills-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
         function filterByCard(type) {
