@@ -197,6 +197,30 @@
         .bill-link:hover { text-decoration: underline; }
         .policy-tag { display: inline-block; padding: 3px 10px; background: var(--navy-dark); color: var(--text-secondary); border-radius: 10px; font-size: 0.75rem; margin-top: 8px; }
         
+        .bill-summary { 
+            margin-top: 12px; 
+            padding-top: 12px; 
+            border-top: 1px solid var(--border); 
+            font-size: 0.9rem; 
+            color: var(--text-secondary); 
+            line-height: 1.5;
+            display: none;
+        }
+        
+        .bill-card.expanded .bill-summary { display: block; }
+        
+        .expand-btn {
+            background: none;
+            border: none;
+            color: var(--gold);
+            cursor: pointer;
+            font-size: 0.85rem;
+            padding: 0;
+            margin-top: 10px;
+        }
+        
+        .expand-btn:hover { text-decoration: underline; }
+        
         .load-more {
             display: block;
             width: 100%;
@@ -718,11 +742,12 @@
                 return;
             }
             
-            container.innerHTML = toShow.map(bill => {
+            container.innerHTML = toShow.map((bill, idx) => {
                 const statusClass = bill.status === 'Became Law' ? 'law' : bill.died_in_committee ? 'died' : bill.status && bill.status.includes('Passed') ? 'passed' : 'committee';
                 const statusText = bill.died_in_committee ? '⚰️ Died' : bill.status || 'Unknown';
+                const hasSummary = bill.summary && bill.summary.length > 0;
                 
-                return `<div class="bill-card">
+                return `<div class="bill-card" id="bill-${idx}">
                     <div class="bill-header">
                         <span class="bill-number">${bill.bill_type || ''}${bill.bill_number || ''}</span>
                         <span class="bill-status ${statusClass}">${statusText}</span>
@@ -735,6 +760,10 @@
                         <a href="${bill.url || '#'}" target="_blank" class="bill-link">Congress.gov →</a>
                     </div>
                     ${bill.policy_area ? `<span class="policy-tag">${bill.policy_area}</span>` : ''}
+                    ${hasSummary ? `
+                        <button class="expand-btn" onclick="toggleSummary(${idx})">▼ Show Summary</button>
+                        <div class="bill-summary">${bill.summary.replace(/&nbsp;/g, ' ')}</div>
+                    ` : ''}
                 </div>`;
             }).join('');
             
@@ -744,6 +773,13 @@
         function loadMore() {
             displayCount += 25;
             renderBills();
+        }
+        
+        function toggleSummary(idx) {
+            const card = document.getElementById(`bill-${idx}`);
+            const btn = card.querySelector('.expand-btn');
+            card.classList.toggle('expanded');
+            btn.textContent = card.classList.contains('expanded') ? '▲ Hide Summary' : '▼ Show Summary';
         }
         
         loadData();
