@@ -16,92 +16,92 @@
     const isSponsorship = path.includes('/sponsorship') || path.includes('/bills');
     
     const navHTML = `
-    <nav class="top-nav">
-        <a href="https://mn06watch.com" class="nav-brand">
-            <img src="https://mn06watch.com/MN06Watch_Logo.png" alt="MN-06 Watch" class="nav-logo">
+    <nav class="mn06-nav-bar">
+        <a href="https://mn06watch.com" class="mn06-nav-brand">
+            <img src="https://mn06watch.com/MN06Watch_Logo.png" alt="MN-06 Watch" class="mn06-nav-logo">
             MN-06 Watch
         </a>
-        <div class="nav-links">
-            <a href="https://mn06watch.com/" class="nav-link ${isVotes ? 'active' : ''}">Vote Tracker</a>
-            <a href="https://mn06watch.com/sponsorships/" class="nav-link ${isSponsorship ? 'active' : ''}">Bills</a>
-            <a href="https://mn06watch.com/transcripts/" class="nav-link ${isTranscripts ? 'active' : ''}">Transcripts</a>
-            <a href="https://mn06watch.com/transcripts/analytics/" class="nav-link ${isAnalytics ? 'active' : ''}">Analytics</a>
-            <a href="https://mn06watch.com/tweets/" class="nav-link ${isTweets ? 'active' : ''}">Tweets</a>
-            <a href="https://mn06watch.substack.com" class="nav-link" target="_blank">Newsletter</a>
+        <div class="mn06-nav-links">
+            <a href="https://mn06watch.com/" class="mn06-nav-link ${isVotes ? 'active' : ''}">Vote Tracker</a>
+            <a href="https://mn06watch.com/sponsorships/" class="mn06-nav-link ${isSponsorship ? 'active' : ''}">Bills</a>
+            <a href="https://mn06watch.com/transcripts/" class="mn06-nav-link ${isTranscripts ? 'active' : ''}">Transcripts</a>
+            <a href="https://mn06watch.com/transcripts/analytics/" class="mn06-nav-link ${isAnalytics ? 'active' : ''}">Analytics</a>
+            <a href="https://mn06watch.com/tweets/" class="mn06-nav-link ${isTweets ? 'active' : ''}">Tweets</a>
+            <a href="https://mn06watch.substack.com" class="mn06-nav-link" target="_blank">Newsletter</a>
         </div>
     </nav>
     `;
     
-    // CSS for the nav (in case page doesn't have it)
+    // CSS for the nav with unique class names to avoid conflicts
     const navCSS = `
     <style id="mn06-nav-styles">
-        #mn06-nav #mn06-nav .top-nav {
-            background: rgba(21, 42, 69, 0.95);
-            border-bottom: 1px solid #2a3441;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
+        .mn06-nav-bar {
+            background: rgba(21, 42, 69, 0.95) !important;
+            border-bottom: 1px solid #2a3441 !important;
+            padding: 10px 20px !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 9999 !important;
+            backdrop-filter: blur(10px) !important;
         }
         
-        #mn06-nav #mn06-nav .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #d4a84b;
-            font-weight: 700;
-            font-size: 1rem;
+        .mn06-nav-brand {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            text-decoration: none !important;
+            color: #d4a84b !important;
+            font-weight: 700 !important;
+            font-size: 1rem !important;
         }
         
-        #mn06-nav #mn06-nav .nav-logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+        .mn06-nav-logo {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50% !important;
         }
         
-        #mn06-nav #mn06-nav .nav-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+        .mn06-nav-links {
+            display: flex !important;
+            gap: 20px !important;
+            flex-wrap: wrap !important;
         }
         
-        #mn06-nav #mn06-nav .nav-link {
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.2s;
+        .mn06-nav-link {
+            color: #8b949e !important;
+            text-decoration: none !important;
+            font-size: 0.9rem !important;
+            padding: 6px 12px !important;
+            border-radius: 6px !important;
+            transition: all 0.2s !important;
         }
         
-        #mn06-nav #mn06-nav .nav-link:hover {
-            color: #e6edf3;
-            background: #1e3a5f;
+        .mn06-nav-link:hover {
+            color: #e6edf3 !important;
+            background: #1e3a5f !important;
         }
         
-        #mn06-nav #mn06-nav .nav-link.active {
-            color: #d4a84b;
-            font-weight: 600;
+        .mn06-nav-link.active {
+            color: #d4a84b !important;
+            font-weight: 600 !important;
         }
         
         @media (max-width: 768px) {
-            #mn06-nav #mn06-nav .top-nav {
-                flex-direction: column;
-                gap: 10px;
-                padding: 10px;
+            .mn06-nav-bar {
+                flex-direction: column !important;
+                gap: 10px !important;
+                padding: 10px !important;
             }
-            #mn06-nav #mn06-nav .nav-links {
-                gap: 10px;
-                justify-content: center;
+            .mn06-nav-links {
+                gap: 10px !important;
+                justify-content: center !important;
             }
-            #mn06-nav #mn06-nav .nav-link {
-                font-size: 0.8rem;
-                padding: 4px 8px;
+            .mn06-nav-link {
+                font-size: 0.8rem !important;
+                padding: 4px 8px !important;
             }
         }
     </style>
