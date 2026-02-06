@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmer Tweet Archive | MN-06 Watch</title>
-    <meta name="description" content="Search Rep. Tom Emmer's complete tweet history. 14,000+ tweets from 2017-2026. Every statement, every position, with direct links.">
+    <meta name="description" content="Search Rep. Tom Emmer's complete tweet history. 14,000+ tweets from 2017-2026.">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
         :root {
             --navy: #1e3a5f;
@@ -26,1430 +24,837 @@
             --text-secondary: #8b949e;
             --border: #2a3441;
             --twitter-blue: #1d9bf0;
-            --red: #ef4444;
-            --green: #22c55e;
+            --red: #da3633;
+            --red-light: #f85149;
+            --green: #238636;
+            --green-light: #2ea043;
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-dark);
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
         }
         
-        /* Top Navigation */
-        .top-nav {
-            background: var(--navy-dark);
-            border-bottom: 1px solid var(--border);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            background: rgba(21, 42, 69, 0.95);
-        }
-        
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        
-        .nav-logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        
-        .nav-link:hover {
-            color: var(--text-primary);
-            background: var(--navy);
-        }
-        
-        .nav-link.active {
-            color: var(--gold);
-            font-weight: 600;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 0 30px;
             border-bottom: 1px solid var(--border);
             margin-bottom: 30px;
         }
         
-        .logo-img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-        }
+        .page-title { font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+        .page-title span { color: var(--gold); }
+        .page-subtitle { color: var(--text-secondary); font-size: 1.1rem; }
         
-        .logo-text {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-        
-        .logo-text span {
-            color: var(--gold);
-        }
-        
-        .tagline {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        /* Analysis Dashboard */
-        .dashboard {
+        /* Stats Grid */
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid var(--border);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .stat-card:hover { border-color: var(--navy-light); transform: translateY(-2px); }
+        .stat-card.active { border-color: var(--gold); background: rgba(212, 168, 75, 0.1); }
+        
+        .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+        .stat-value.twitter { color: var(--twitter-blue); }
+        .stat-label { font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px; }
+        
+        /* Insight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--navy-light);
+        }
+        
+        .highlight-box h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
+        .highlight-box p { color: var(--text-secondary); margin-bottom: 10px; }
+        .highlight-box .big-stat { font-size: 2.5rem; font-weight: 700; color: var(--twitter-blue); }
+        
+        /* Charts */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
         
-        .dashboard-card {
+        .chart-card {
             background: var(--bg-card);
             border-radius: 12px;
             padding: 20px;
             border: 1px solid var(--border);
         }
         
-        .dashboard-card h3 {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-        }
+        .chart-title { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 15px; }
+        .chart-container { position: relative; height: 350px; }
+        .chart-container.tall { height: 450px; }
         
-        .big-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--gold);
-        }
-        
-        .big-number-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .topic-bars {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .topic-bar {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 4px 6px;
-            margin: -4px -6px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-        
-        .topic-bar:hover {
-            background: rgba(212, 168, 75, 0.1);
-        }
-        
-        .topic-bar:hover .topic-bar-label {
-            color: var(--gold);
-        }
-        
-        .topic-bar-label {
-            width: 90px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            text-transform: capitalize;
-        }
-        
-        .topic-bar-track {
-            flex: 1;
-            height: 20px;
-            background: var(--bg-dark);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .topic-bar-fill {
-            height: 100%;
-            background: var(--gold);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 8px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--navy-dark);
-            min-width: 30px;
-        }
-        
-        .escalation-meter {
-            margin-top: 10px;
-        }
-        
-        .meter-track {
-            height: 30px;
-            background: linear-gradient(to right, var(--green), var(--gold), var(--red));
-            border-radius: 6px;
-            position: relative;
-            margin-bottom: 5px;
-        }
-        
-        .meter-marker {
-            position: absolute;
-            top: -5px;
-            width: 4px;
-            height: 40px;
-            background: #fff;
-            border-radius: 2px;
-            transform: translateX(-50%);
-        }
-        
-        .meter-labels {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-        }
-        
-        .escalation-words {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-        
-        .escalation-word {
-            padding: 4px 8px;
-            font-size: 0.75rem;
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--red);
-            border-radius: 4px;
-        }
-        
-        .stats-row {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin-top: 15px;
-        }
-        
-        .stat-item {
-            flex: 1;
-        }
-        
-        .stat-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-        
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-        }
-        
-        /* Search Section */
-        .search-section {
+        /* Hot Topics */
+        .hot-topics-section {
             background: var(--bg-card);
             border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
+            padding: 20px;
+            margin-bottom: 30px;
             border: 1px solid var(--border);
         }
         
-        .search-box {
+        .hot-topics-section h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.1rem; }
+        
+        .hot-topic-item {
             display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: background 0.2s;
+            margin: 0 -10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 6px;
         }
         
-        .search-box input {
+        .hot-topic-item:hover { background: rgba(212, 168, 75, 0.1); }
+        .hot-topic-item:last-child { border-bottom: none; }
+        
+        .hot-topic-name { color: var(--text-primary); font-weight: 500; }
+        .hot-topic-trend { font-size: 0.85rem; padding: 2px 8px; border-radius: 10px; }
+        .hot-topic-trend.up { background: rgba(34, 197, 94, 0.2); color: var(--green-light); }
+        .hot-topic-trend.down { background: rgba(248, 81, 73, 0.2); color: var(--red-light); }
+        
+        /* Filter Bar */
+        .filter-bar {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .search-input {
             flex: 1;
-            padding: 12px 16px;
-            font-size: 1rem;
-            border: 2px solid var(--border);
-            border-radius: 8px;
+            min-width: 200px;
+            padding: 10px 15px;
             background: var(--bg-dark);
-            color: #fff;
-            outline: none;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .search-input::placeholder { color: var(--text-secondary); }
+        .search-input:focus { outline: none; border-color: var(--gold); }
+        
+        .filter-select {
+            padding: 10px 12px;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .filter-label { color: var(--text-secondary); font-size: 0.9rem; }
+        
+        .clear-filters-btn {
+            padding: 10px 15px;
+            background: var(--navy);
+            color: var(--gold);
+            border: 1px solid var(--navy-light);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .clear-filters-btn:hover { background: var(--navy-light); }
+        .results-count { color: var(--text-secondary); font-size: 0.9rem; margin-left: auto; }
+        
+        /* Tweet Cards */
+        .tweet-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
             transition: border-color 0.2s;
         }
         
-        .search-box input:focus {
-            border-color: var(--gold);
-        }
-        
-        .search-box input::placeholder {
-            color: var(--text-secondary);
-        }
-        
-        .search-box button {
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            background: var(--gold);
-            color: var(--navy-dark);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .search-box button:hover {
-            background: var(--gold-light);
-        }
-        
-        .search-mode-toggle {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .search-mode-toggle label {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-        }
-        
-        .search-mode-toggle input[type="radio"] {
-            accent-color: var(--gold);
-        }
-        
-        .filters {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-        
-        .filter-btn {
-            padding: 6px 14px;
-            font-size: 0.85rem;
-            background: var(--navy-dark);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .filter-btn:hover {
-            background: var(--navy);
-            color: #fff;
-        }
-        
-        .filter-btn.active {
-            background: var(--gold);
-            color: var(--navy-dark);
-            border-color: var(--gold);
-            font-weight: 600;
-        }
-        
-        .filter-row {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        
-        .account-filters {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        
-        .account-btn {
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            background: var(--bg-dark);
-            color: var(--twitter-blue);
-            border: 1px solid var(--twitter-blue);
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .account-btn:hover {
-            background: rgba(29, 155, 240, 0.1);
-        }
-        
-        .account-btn.active {
-            background: var(--twitter-blue);
-            color: #fff;
-        }
-        
-        .date-filters {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            margin-left: auto;
-        }
-        
-        .date-filters label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .date-filters input {
-            padding: 6px 10px;
-            background: var(--bg-dark);
-            color: #fff;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.85rem;
-        }
-        
-        .topic-filters {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border);
-        }
-        
-        .topic-btn {
-            padding: 4px 10px;
-            font-size: 0.8rem;
-            background: var(--bg-dark);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .topic-btn:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        .topic-btn.active {
-            background: var(--gold);
-            color: var(--navy-dark);
-            border-color: var(--gold);
-        }
-        
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-        }
-        
-        .results-count {
-            font-size: 0.9rem;
-        }
-        
-        .sort-select {
-            padding: 6px 10px;
-            background: var(--bg-card);
-            color: #fff;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85rem;
-        }
-        
-        .tweet-card {
-            background: var(--bg-card);
-            border-radius: 10px;
-            padding: 18px;
-            margin-bottom: 12px;
-            border: 1px solid var(--border);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .tweet-card:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-        
-        .tweet-card.retweet {
-            border-left: 3px solid #f59e0b;
-            background: rgba(245, 158, 11, 0.08);
-        }
-        
-        .tweet-card.retweet:hover {
-            background: rgba(245, 158, 11, 0.12);
-        }
-        
-        .tweet-card.original {
-            border-left: 3px solid var(--twitter-blue);
-        }
-        
-        .tweet-card.escalation {
-            border-left: 3px solid var(--red);
-        }
+        .tweet-card:hover { border-color: var(--navy-light); }
         
         .tweet-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
-            gap: 10px;
+            margin-bottom: 12px;
         }
         
         .tweet-account {
-            font-weight: 600;
-            color: var(--twitter-blue);
-            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .tweet-date {
+        .account-badge {
+            padding: 3px 10px;
+            border-radius: 12px;
             font-size: 0.8rem;
-            color: var(--text-secondary);
-            white-space: nowrap;
+            font-weight: 600;
         }
+        
+        .account-badge.rep { background: rgba(29, 155, 240, 0.2); color: var(--twitter-blue); }
+        .account-badge.whip { background: rgba(212, 168, 75, 0.2); color: var(--gold); }
+        .account-badge.personal { background: rgba(139, 148, 158, 0.2); color: var(--text-secondary); }
+        
+        .tweet-date { color: var(--text-secondary); font-size: 0.85rem; }
         
         .tweet-text {
+            color: var(--text-primary);
             font-size: 0.95rem;
             line-height: 1.5;
-            margin-bottom: 10px;
-            word-wrap: break-word;
+            margin-bottom: 12px;
+            white-space: pre-wrap;
         }
         
-        .tweet-text a {
-            color: var(--twitter-blue);
-            text-decoration: none;
-        }
-        
-        .tweet-text a:hover {
-            text-decoration: underline;
-        }
-        
-        .tweet-text .escalation-highlight {
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--red);
-            padding: 1px 4px;
-            border-radius: 3px;
-        }
-        
-        .tweet-meta {
+        .tweet-topics {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            align-items: center;
-        }
-        
-        .tweet-badge {
-            padding: 3px 8px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            border-radius: 10px;
-            text-transform: uppercase;
-        }
-        
-        .badge-retweet {
-            background: rgba(245, 158, 11, 0.25);
-            color: #fbbf24;
-        }
-        
-        .badge-quote {
-            background: rgba(29, 155, 240, 0.2);
-            color: var(--twitter-blue);
-        }
-        
-        .badge-escalation {
-            background: rgba(239, 68, 68, 0.2);
-            color: var(--red);
+            margin-bottom: 10px;
         }
         
         .topic-tag {
-            padding: 3px 8px;
-            font-size: 0.7rem;
+            padding: 3px 10px;
             background: var(--navy-dark);
             color: var(--text-secondary);
             border-radius: 10px;
-        }
-        
-        .tweet-link {
-            margin-left: auto;
-            padding: 5px 10px;
             font-size: 0.75rem;
-            background: transparent;
-            color: var(--twitter-blue);
-            border: 1px solid var(--twitter-blue);
-            border-radius: 12px;
-            text-decoration: none;
+            cursor: pointer;
             transition: all 0.2s;
         }
         
-        .tweet-link:hover {
-            background: var(--twitter-blue);
-            color: #fff;
+        .topic-tag:hover { background: var(--navy-light); color: var(--gold); }
+        
+        .tweet-link {
+            color: var(--twitter-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
         }
         
-        .tweet-metrics {
-            display: flex;
-            gap: 12px;
-            margin-top: 8px;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 50px 20px;
-            color: var(--text-secondary);
-        }
-        
-        .no-results h3 {
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-        }
+        .tweet-link:hover { text-decoration: underline; }
         
         .load-more {
             display: block;
             width: 100%;
-            padding: 12px;
-            margin: 15px 0;
-            font-size: 0.95rem;
-            font-weight: 600;
+            padding: 15px;
             background: var(--navy);
             color: #fff;
-            border: 1px solid var(--border);
+            border: 1px solid var(--navy-light);
             border-radius: 8px;
             cursor: pointer;
+            font-size: 1rem;
             transition: background 0.2s;
+            margin-top: 20px;
         }
         
-        .load-more:hover {
-            background: var(--navy-light);
-        }
-        
-        .cta-box {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            margin: 30px 0;
-            border: 1px solid var(--gold-dark);
-        }
-        
-        .cta-box h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-            color: var(--gold);
-        }
-        
-        .cta-box p {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-        
-        .cta-btn {
-            display: inline-block;
-            padding: 10px 25px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            background: var(--gold);
-            color: var(--navy-dark);
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.2s;
-        }
-        
-        .cta-btn:hover {
-            background: var(--gold-light);
-        }
+        .load-more:hover { background: var(--navy-light); }
+        .no-results { text-align: center; padding: 40px; color: var(--text-secondary); }
         
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 20px;
             border-top: 1px solid var(--border);
+            margin-top: 40px;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
         
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
+        footer a { color: var(--gold); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
         
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        
-        .spinner {
-            width: 35px;
-            height: 35px;
-            border: 3px solid var(--border);
-            border-top-color: var(--gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 15px;
-        }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-        
-        @media (max-width: 600px) {
-            .dashboard {
-                grid-template-columns: 1fr;
-            }
-            
-            .search-box {
-                flex-direction: column;
-            }
-            
-            .search-box button {
-                width: 100%;
-            }
-            
-            .filter-row {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .date-filters {
-                margin-left: 0;
-                margin-top: 10px;
-            }
-            
-            .tweet-header {
-                flex-direction: column;
-                gap: 4px;
-            }
-            
-            .tweet-link {
-                margin-left: 0;
-                margin-top: 8px;
-            }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .charts-grid { grid-template-columns: 1fr; }
+            .filter-bar { flex-direction: column; align-items: stretch; }
+            .results-count { margin-left: 0; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <!-- Nav injected by nav.js -->
     <div id="mn06-nav"></div>
-
+    
     <div class="container">
         <header>
-            <img src="MN06Watch_Logo.png" alt="MN-06 Watch" class="logo-img">
-            <div class="logo-text">Emmer <span>Tweet Archive</span></div>
-            <div class="tagline">Every statement. Every position. Searchable & analyzed.</div>
-            <div class="last-updated">Last updated: February 4, 2026</div>
+            <h1 class="page-title">Tweet <span>Archive</span></h1>
+            <p class="page-subtitle">14,000+ tweets from Rep. Tom Emmer (2017-2026)</p>
         </header>
         
-        <!-- Analysis Dashboard -->
-        <div class="dashboard">
-            <div class="dashboard-card">
-                <h3>Archive Overview</h3>
-                <div class="big-number" id="total-tweets">--</div>
-                <div class="big-number-label">Total Tweets Archived</div>
-                <div class="stats-row">
-                    <div class="stat-item">
-                        <div class="stat-value" id="original-count">--</div>
-                        <div class="stat-label">Original</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="retweet-count">--</div>
-                        <div class="stat-label">Retweets</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="years-count">--</div>
-                        <div class="stat-label">Years</div>
-                    </div>
-                </div>
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card" onclick="filterByCard('all')" id="card-all">
+                <div class="stat-value" id="total-tweets">--</div>
+                <div class="stat-label">Total Tweets</div>
             </div>
-            
-            <div class="dashboard-card">
-                <h3>Top Topics</h3>
-                <div class="topic-bars" id="topic-bars">
-                    <!-- Filled by JS -->
-                </div>
+            <div class="stat-card" onclick="filterByCard('RepTomEmmer')" id="card-RepTomEmmer">
+                <div class="stat-value twitter" id="count-rep">--</div>
+                <div class="stat-label">@RepTomEmmer</div>
             </div>
-            
-            <div class="dashboard-card">
-                <h3>Rhetoric Intensity</h3>
-                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 10px;">
-                    <span id="escalation-pct">--% charged</span> · compared to overall average
-                </p>
-                <div class="escalation-meter">
-                    <div class="meter-track">
-                        <div class="meter-marker" id="escalation-marker" style="left: 50%;"></div>
-                    </div>
-                    <div class="meter-labels">
-                        <span>Less than avg</span>
-                        <span>Average</span>
-                        <span>More charged</span>
-                    </div>
-                </div>
-                <div class="escalation-words" id="escalation-words">
-                    <!-- Filled by JS -->
-                </div>
+            <div class="stat-card" onclick="filterByCard('GOPMajorityWhip')" id="card-GOPMajorityWhip">
+                <div class="stat-value" id="count-whip">--</div>
+                <div class="stat-label">@GOPMajorityWhip</div>
+            </div>
+            <div class="stat-card" onclick="filterByCard('tomemmer')" id="card-tomemmer">
+                <div class="stat-value" id="count-personal">--</div>
+                <div class="stat-label">@tomemmer</div>
+            </div>
+            <div class="stat-card" id="card-daterange">
+                <div class="stat-value" style="font-size: 1.3rem;" id="date-range">--</div>
+                <div class="stat-label">Date Range</div>
             </div>
         </div>
         
-        <!-- Search Section -->
-        <div class="search-section">
-            <div class="search-box">
-                <input type="text" id="search-input" placeholder="Search tweets... (use &quot;quotes&quot; for exact phrases)">
-                <div class="search-mode-toggle">
-                    <label title="Match ALL words"><input type="radio" name="search-mode" value="and" checked> All words</label>
-                    <label title="Match ANY word"><input type="radio" name="search-mode" value="or"> Any word</label>
-                </div>
-                <button onclick="performSearch()">Search</button>
+        <!-- Dynamic Insight Box -->
+        <div class="highlight-box">
+            <h3 id="insight-title">📊 The Archive</h3>
+            <div id="insight-content"><p>Loading...</p></div>
+        </div>
+        
+        <!-- Charts -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <div class="chart-title">📂 Top Topics</div>
+                <div class="chart-container tall"><canvas id="topics-chart"></canvas></div>
             </div>
-            
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">All Tweets</button>
-                <button class="filter-btn" data-filter="original">Original Only</button>
-                <button class="filter-btn" data-filter="retweets">Retweets</button>
-                <button class="filter-btn" data-filter="escalation">Charged Language</button>
-            </div>
-            
-            <div class="filter-row">
-                <div class="account-filters">
-                    <button class="account-btn active" data-account="all">All Accounts</button>
-                    <button class="account-btn" data-account="GOPMajorityWhip">@GOPMajorityWhip</button>
-                    <button class="account-btn" data-account="tomemmer">@tomemmer</button>
-                    <button class="account-btn" data-account="RepTomEmmer">@RepTomEmmer</button>
-                </div>
-                
-                <div class="date-filters">
-                    <label>From:</label>
-                    <input type="date" id="date-from" value="2017-01-01">
-                    <label>To:</label>
-                    <input type="date" id="date-to">
-                </div>
-            </div>
-            
-            <div class="topic-filters" id="topic-filter-buttons">
-                <!-- Filled by JS -->
+            <div class="chart-card">
+                <div class="chart-title">📈 Tweets Over Time</div>
+                <div class="chart-container"><canvas id="timeline-chart"></canvas></div>
             </div>
         </div>
         
-        <div class="results-header">
-            <div class="results-count" id="results-count">Loading...</div>
-            <select class="sort-select" id="sort-select" onchange="performSearch()">
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
+        <!-- Hot Topics -->
+        <div class="hot-topics-section">
+            <h3>🔥 Trending Topics (Last 90 Days vs Historical)</h3>
+            <div id="hot-topics-list">Loading...</div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filter-bar">
+            <input type="text" class="search-input" id="search-input" placeholder="Search tweets..." oninput="applyFilters()">
+            <span class="filter-label">Topic:</span>
+            <select class="filter-select" id="topic-filter" onchange="applyFilters()">
+                <option value="">All Topics</option>
             </select>
+            <span class="filter-label">Year:</span>
+            <select class="filter-select" id="year-filter" onchange="applyFilters()">
+                <option value="">All Years</option>
+            </select>
+            <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
+            <span class="results-count" id="results-count">-- tweets</span>
         </div>
         
-        <div id="results">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Loading tweet archive...</p>
-            </div>
-        </div>
-        
-        <button class="load-more" id="load-more" style="display: none;" onclick="loadMore()">
-            Load More Results
-        </button>
-        
-        <div class="cta-box">
-            <h3>Want Analysis, Not Just Data?</h3>
-            <p>Get daily summaries, #RhetoricVsReality deep dives, and contradiction alerts.</p>
-            <a href="https://mn06watch.substack.com/subscribe" class="cta-btn">Subscribe to MN-06 Watch</a>
-        </div>
+        <!-- Tweets List -->
+        <div id="tweets-container"><p class="no-results">Loading...</p></div>
+        <button class="load-more" id="load-more-btn" onclick="loadMore()" style="display: none;">Load More Tweets</button>
         
         <footer>
-            <p>Archive spans 2017-2026 across @GOPMajorityWhip, @tomemmer, and @RepTomEmmer</p>
-            <p style="margin-top: 8px;"><a href="https://mn06watch.com/">Vote Tracker</a> · <a href="https://mn06watch.com/transcripts/">Transcripts</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
+            <p>Archive updated <span id="last-updated">--</span>. Direct links to original tweets.</p>
+            <p style="margin-top: 8px;"><a href="/">Vote Tracker</a> · <a href="/sponsorships/">Bills</a> · <a href="/transcripts/">Transcripts</a></p>
             <p style="margin-top: 10px;">© 2025 MN-06 Watch. Independent accountability journalism.</p>
-            <p style="margin-top: 8px; font-size: 0.8rem; color: #666;">Tweet archive last updated: January 30, 2026</p>
         </footer>
     </div>
     
+    <script src="/nav.js"></script>
     <script>
         let allTweets = [];
         let filteredTweets = [];
-        let displayedCount = 0;
-        const BATCH_SIZE = 25;
-        let currentFilter = 'all';
-        let currentAccount = 'all';
-        let currentTopic = 'all';
+        let activeCard = null;
+        let displayCount = 25;
+        let charts = {};
+        let topicCounts = {};
         
-        // Escalation/charged language words
-        const ESCALATION_WORDS = [
-            'invasion', 'invading', 'invaders',
-            'radical', 'radicals', 'radicalism',
-            'extreme', 'extremist', 'extremists',
-            'crisis', 'catastrophe', 'catastrophic',
-            'destroy', 'destroying', 'destruction',
-            'dangerous', 'threat', 'threatening',
-            'illegal alien', 'illegals',
-            'mob', 'mobs',
-            'socialist', 'socialism', 'marxist',
-            'tyranny', 'tyrant', 'dictator',
-            'corrupt', 'corruption',
-            'hoax', 'fraud', 'fraudulent',
-            'attack', 'attacking', 'attacks on',
-            'war on', 'assault on',
-            'nightmare', 'disaster', 'disastrous',
-            'shameful', 'disgrace', 'disgraceful',
-            'outrage', 'outrageous',
-            // Additional inflammatory terms
-            'thug', 'thugs',
-            'punk', 'punks',
-            'lawless', 'lawlessness',
-            'riot', 'rioter', 'rioters', 'rioting',
-            'agitator', 'agitators',
-            'antifa',
-            'anarchist', 'anarchists', 'anarchy',
-            'defund',
-            'open borders',
-            'criminal', 'criminals',
-            'rapist', 'murderer', 'pedophile',
-            'traitor', 'treason', 'treasonous',
-            'enemy', 'enemies',
-            'hate', 'hatred', 'hateful',
-            'sick', 'sickness',
-            'insane', 'insanity', 'crazy',
-            'unhinged',
-            'coup',
-            'weaponize', 'weaponized', 'weaponization'
-        ];
-        
-        // Set default end date to today
-        document.getElementById('date-to').valueAsDate = new Date();
-        
-        // Common suffixes to strip for stemmed search
-        const SUFFIXES = ['ing', 'tion', 'sion', 'ment', 'ness', 'ity', 'ous', 'ive', 'ians', 'ian', 'ans', 'ers', 'ies', 'ia', 'es', 'ed', 'ly', 'an', 's'];
-        
-        // Get search stems from a query
-        function getSearchStems(query) {
-            const terms = new Set([query]); // Use Set to avoid duplicates
-            const lower = query.toLowerCase();
-            
-            // Try removing common suffixes to get root
-            for (const suffix of SUFFIXES) {
-                if (lower.endsWith(suffix) && lower.length > suffix.length + 2) {
-                    const stem = lower.slice(0, -suffix.length);
-                    if (stem.length >= 3) {
-                        terms.add(stem);
-                    }
-                }
-            }
-            
-            // For each term we have, also add common variations
-            const baseTerms = [...terms];
-            for (const term of baseTerms) {
-                // Add 's' plural
-                terms.add(term + 's');
-                
-                // If ends in 'i', try 'ia', 'ian', 'ians' (Somali -> Somalia, Somalian)
-                if (term.endsWith('i')) {
-                    terms.add(term + 'a');
-                    terms.add(term + 'an');
-                    terms.add(term + 'ans');
-                }
-                
-                // If ends in 'a', try 'an', 'ans', stripping 'a' for 'i' form
-                if (term.endsWith('a')) {
-                    terms.add(term + 'n');
-                    terms.add(term + 'ns');
-                    terms.add(term.slice(0, -1) + 'i');
-                    terms.add(term.slice(0, -1) + 'ian');
-                    terms.add(term.slice(0, -1) + 'ians');
-                }
-                
-                // If ends in 'y', try 'ies'
-                if (term.endsWith('y')) {
-                    terms.add(term.slice(0, -1) + 'ies');
-                }
-                
-                // Common verb forms
-                terms.add(term + 'ing');
-                terms.add(term + 'ed');
-            }
-            
-            return [...terms];
-        }
-        
-        // Check if tweet contains escalation language
-        function hasEscalation(text) {
-            if (!text) return false;
-            const lower = text.toLowerCase();
-            return ESCALATION_WORDS.some(word => {
-                // Handle multi-word phrases and single words with word boundaries
-                const regex = new RegExp('\\b' + word.replace(/\s+/g, '\\s+') + '\\b', 'i');
-                return regex.test(lower);
-            });
-        }
-        
-        // Get escalation words in a tweet
-        function getEscalationWords(text) {
-            if (!text) return [];
-            const lower = text.toLowerCase();
-            return ESCALATION_WORDS.filter(word => {
-                // Handle multi-word phrases and single words with word boundaries
-                const regex = new RegExp('\\b' + word.replace(/\s+/g, '\\s+') + '\\b', 'i');
-                return regex.test(lower);
-            });
-        }
-        
-        // Highlight escalation words in text
-        function highlightEscalation(text) {
-            if (!text) return '';
-            let result = text;
-            ESCALATION_WORDS.forEach(word => {
-                // Add word boundaries to prevent matching substrings
-                const escapedWord = word.replace(/\s+/g, '\\s+');
-                const regex = new RegExp(`\\b(${escapedWord})\\b`, 'gi');
-                result = result.replace(regex, '<span class="escalation-highlight">$1</span>');
-            });
-            return result;
-        }
-        
-        // Load data
         async function loadData() {
             try {
                 const response = await fetch('https://pub-19f43b48149546699964c5a800800a2f.r2.dev/tweets_data.json');
                 const data = await response.json();
-                allTweets = data.tweets || data;
+                allTweets = data.tweets || data || [];
                 
-                // Add escalation flag to each tweet
-                allTweets.forEach(t => {
-                    t.has_escalation = hasEscalation(t.text);
-                });
+                // Sort by date descending
+                allTweets.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
                 
-                initializeDashboard();
-                performSearch();
+                updateStats();
+                buildTopicCounts();
+                populateFilters();
+                createCharts();
+                findHotTopics();
+                applyFilters();
+                
+                // Last updated
+                if (allTweets.length > 0) {
+                    const latest = new Date(allTweets[0].created_at);
+                    document.getElementById('last-updated').textContent = latest.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                }
             } catch (error) {
-                console.error('Error loading data:', error);
-                document.getElementById('results').innerHTML = `
-                    <div class="no-results">
-                        <h3>Error Loading Data</h3>
-                        <p>Please try refreshing the page.</p>
-                    </div>
-                `;
+                console.error('Error:', error);
+                document.getElementById('tweets-container').innerHTML = '<p class="no-results">Error loading data.</p>';
             }
         }
         
-        // Store baseline escalation % for comparison
-        let baselineEscalationPct = 0;
-        
-        function initializeDashboard() {
-            // One-time setup: topic filter buttons based on all tweets
-            const topicCounts = {};
+        function updateStats() {
+            const byAccount = {};
             allTweets.forEach(t => {
-                (t.topics || []).forEach(topic => {
+                const acct = t.account || 'unknown';
+                byAccount[acct] = (byAccount[acct] || 0) + 1;
+            });
+            
+            document.getElementById('total-tweets').textContent = allTweets.length.toLocaleString();
+            document.getElementById('count-rep').textContent = (byAccount['RepTomEmmer'] || 0).toLocaleString();
+            document.getElementById('count-whip').textContent = (byAccount['GOPMajorityWhip'] || 0).toLocaleString();
+            document.getElementById('count-personal').textContent = (byAccount['tomemmer'] || 0).toLocaleString();
+            
+            // Date range
+            if (allTweets.length > 0) {
+                const dates = allTweets.map(t => new Date(t.created_at)).filter(d => !isNaN(d));
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                document.getElementById('date-range').textContent = `${minDate.getFullYear()} - ${maxDate.getFullYear()}`;
+            }
+        }
+        
+        function buildTopicCounts() {
+            topicCounts = {};
+            allTweets.forEach(t => {
+                const topics = t.topics_canonical || t.topics || [];
+                topics.forEach(topic => {
                     topicCounts[topic] = (topicCounts[topic] || 0) + 1;
                 });
             });
-            
-            const sortedTopics = Object.entries(topicCounts)
+        }
+        
+        function populateFilters() {
+            // Topics
+            const topicSelect = document.getElementById('topic-filter');
+            Object.entries(topicCounts)
                 .sort((a, b) => b[1] - a[1])
-                .slice(0, 10);
+                .slice(0, 50)
+                .forEach(([topic, count]) => {
+                    const option = document.createElement('option');
+                    option.value = topic;
+                    option.textContent = `${topic} (${count})`;
+                    topicSelect.appendChild(option);
+                });
             
-            // Topic filter buttons
-            const topicButtons = document.getElementById('topic-filter-buttons');
-            topicButtons.innerHTML = '<button class="topic-btn active" data-topic="all">All Topics</button>' +
-                sortedTopics.map(([topic]) => 
-                    `<button class="topic-btn" data-topic="${topic}">${topic}</button>`
-                ).join('');
+            // Years
+            const years = new Set();
+            allTweets.forEach(t => {
+                const year = new Date(t.created_at).getFullYear();
+                if (!isNaN(year)) years.add(year);
+            });
             
-            // Add click handlers
-            document.querySelectorAll('.topic-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentTopic = btn.dataset.topic;
-                    performSearch();
+            const yearSelect = document.getElementById('year-filter');
+            [...years].sort((a, b) => b - a).forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            });
+        }
+        
+        function createCharts() {
+            createTopicsChart();
+            createTimelineChart();
+        }
+        
+        function createTopicsChart() {
+            const ctx = document.getElementById('topics-chart');
+            const sorted = Object.entries(topicCounts).sort((a, b) => b[1] - a[1]).slice(0, 20);
+            
+            charts.topics = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(([t]) => t.length > 25 ? t.substring(0, 25) + '...' : t),
+                    datasets: [{
+                        label: 'Tweets',
+                        data: sorted.map(([_, c]) => c),
+                        backgroundColor: 'rgba(29, 155, 240, 0.7)',
+                        borderColor: '#1d9bf0',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { ticks: { color: '#8b949e' }, grid: { color: '#2a3441' } },
+                        y: { ticks: { color: '#e6edf3', font: { size: 11 } }, grid: { display: false } }
+                    },
+                    plugins: { legend: { display: false } },
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const topic = sorted[elements[0].index][0];
+                            document.getElementById('topic-filter').value = topic;
+                            applyFilters();
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createTimelineChart() {
+            const ctx = document.getElementById('timeline-chart');
+            
+            // Group by month
+            const monthly = {};
+            allTweets.forEach(t => {
+                const date = new Date(t.created_at);
+                if (isNaN(date)) return;
+                const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+                monthly[key] = (monthly[key] || 0) + 1;
+            });
+            
+            const sorted = Object.entries(monthly).sort((a, b) => a[0].localeCompare(b[0]));
+            
+            charts.timeline = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sorted.map(([m]) => m),
+                    datasets: [{
+                        label: 'Tweets',
+                        data: sorted.map(([_, c]) => c),
+                        borderColor: '#d4a84b',
+                        backgroundColor: 'rgba(212, 168, 75, 0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { ticks: { color: '#8b949e', maxTicksLimit: 12 }, grid: { color: '#2a3441' } },
+                        y: { ticks: { color: '#8b949e' }, grid: { color: '#2a3441' } }
+                    },
+                    plugins: { legend: { display: false } },
+                    onClick: (e, elements) => {
+                        if (elements.length > 0) {
+                            const month = sorted[elements[0].index][0];
+                            const year = month.split('-')[0];
+                            document.getElementById('year-filter').value = year;
+                            applyFilters();
+                        }
+                    }
+                }
+            });
+        }
+        
+        function findHotTopics() {
+            const now = new Date();
+            const cutoff = new Date(now.setDate(now.getDate() - 90));
+            
+            // Recent counts
+            const recentCounts = {};
+            const olderCounts = {};
+            
+            allTweets.forEach(t => {
+                const date = new Date(t.created_at);
+                const topics = t.topics_canonical || t.topics || [];
+                
+                topics.forEach(topic => {
+                    if (date >= cutoff) {
+                        recentCounts[topic] = (recentCounts[topic] || 0) + 1;
+                    } else {
+                        olderCounts[topic] = (olderCounts[topic] || 0) + 1;
+                    }
                 });
             });
             
-            // Calculate baseline escalation for all tweets
-            const allEscalation = allTweets.filter(t => t.has_escalation);
-            baselineEscalationPct = (allEscalation.length / allTweets.length) * 100;
+            // Calculate trends
+            const trends = [];
+            Object.keys(recentCounts).forEach(topic => {
+                const recent = recentCounts[topic] || 0;
+                const older = olderCounts[topic] || 1;
+                const olderMonths = 90; // rough approximation
+                const recentRate = recent / 3; // per month
+                const olderRate = older / olderMonths;
+                
+                if (recent >= 5) { // minimum threshold
+                    const change = ((recentRate - olderRate) / Math.max(olderRate, 0.1)) * 100;
+                    trends.push({ topic, recent, change });
+                }
+            });
+            
+            trends.sort((a, b) => b.change - a.change);
+            
+            const container = document.getElementById('hot-topics-list');
+            const hotTopics = trends.slice(0, 5);
+            const coldTopics = trends.slice(-3).reverse();
+            
+            let html = '';
+            
+            hotTopics.forEach(({ topic, recent, change }) => {
+                html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
+                    <span class="hot-topic-name">${topic}</span>
+                    <span class="hot-topic-trend up">↑ ${Math.round(change)}% (${recent} recent)</span>
+                </div>`;
+            });
+            
+            if (coldTopics.length > 0 && coldTopics[0].change < -20) {
+                html += '<div style="margin: 15px 0; color: var(--text-secondary); font-size: 0.85rem;">Topics declining:</div>';
+                coldTopics.forEach(({ topic, recent, change }) => {
+                    if (change < -20) {
+                        html += `<div class="hot-topic-item" onclick="filterByTopic('${topic.replace(/'/g, "\\'")}')">
+                            <span class="hot-topic-name">${topic}</span>
+                            <span class="hot-topic-trend down">↓ ${Math.round(Math.abs(change))}%</span>
+                        </div>`;
+                    }
+                });
+            }
+            
+            container.innerHTML = html || '<p style="color: var(--text-secondary);">Not enough recent data for trends.</p>';
         }
         
         function filterByTopic(topic) {
-            // Update the topic filter buttons to show this topic as active
-            document.querySelectorAll('.topic-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.topic === topic) {
-                    btn.classList.add('active');
-                }
-            });
-            currentTopic = topic;
-            performSearch();
+            document.getElementById('topic-filter').value = topic;
+            applyFilters();
+            document.getElementById('tweets-container').scrollIntoView({ behavior: 'smooth' });
         }
         
-        function updateDashboard(tweets) {
-            // Use filtered tweets for all calculations
-            const tweetSet = tweets || filteredTweets;
+        function filterByCard(type) {
+            document.getElementById('search-input').value = '';
+            document.getElementById('topic-filter').value = '';
+            document.getElementById('year-filter').value = '';
+            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
             
-            // Basic stats
-            document.getElementById('total-tweets').textContent = tweetSet.length.toLocaleString();
+            if (activeCard === type) {
+                activeCard = null;
+            } else {
+                activeCard = type;
+                if (type !== 'all') {
+                    document.getElementById(`card-${type}`).classList.add('active');
+                }
+            }
             
-            const originalCount = tweetSet.filter(t => !t.is_retweet).length;
-            const retweetCount = tweetSet.filter(t => t.is_retweet).length;
-            document.getElementById('original-count').textContent = originalCount.toLocaleString();
-            document.getElementById('retweet-count').textContent = retweetCount.toLocaleString();
+            applyFilters();
+        }
+        
+        function updateInsights() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const topicFilter = document.getElementById('topic-filter').value;
+            const yearFilter = document.getElementById('year-filter').value;
             
-            const years = [...new Set(tweetSet.map(t => {
-                const date = t.created_at || t.date;
-                return date ? date.substring(0, 4) : null;
-            }).filter(Boolean))];
-            document.getElementById('years-count').textContent = years.length;
+            const titleEl = document.getElementById('insight-title');
+            const contentEl = document.getElementById('insight-content');
             
-            // Topic breakdown - based on filtered results
-            const topicCounts = {};
-            tweetSet.forEach(t => {
-                (t.topics || []).forEach(topic => {
-                    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+            let title = '📊 The Archive';
+            let html = '';
+            
+            if (searchTerm) {
+                title = `🔍 "${searchTerm}"`;
+                const matches = allTweets.filter(t => t.text && t.text.toLowerCase().includes(searchTerm));
+                html = `<p>Found <span class="big-stat">${matches.length.toLocaleString()}</span> tweets mentioning "${searchTerm}".</p>`;
+                
+                if (matches.length > 0) {
+                    const years = {};
+                    matches.forEach(t => {
+                        const y = new Date(t.created_at).getFullYear();
+                        if (!isNaN(y)) years[y] = (years[y] || 0) + 1;
+                    });
+                    const topYear = Object.entries(years).sort((a, b) => b[1] - a[1])[0];
+                    if (topYear) {
+                        html += `<p style="margin-top: 10px; font-size: 0.9rem;">Most active year: <strong>${topYear[0]}</strong> (${topYear[1]} tweets)</p>`;
+                    }
+                }
+            }
+            else if (topicFilter) {
+                title = `📂 ${topicFilter}`;
+                const topicTweets = allTweets.filter(t => (t.topics_canonical || t.topics || []).includes(topicFilter));
+                const pct = ((topicTweets.length / allTweets.length) * 100).toFixed(1);
+                
+                html = `<p><span class="big-stat">${topicTweets.length.toLocaleString()}</span> tweets on this topic.</p>`;
+                html += `<p style="margin-top: 10px;">${pct}% of Emmer's total Twitter output.</p>`;
+                
+                // Find peak year
+                const years = {};
+                topicTweets.forEach(t => {
+                    const y = new Date(t.created_at).getFullYear();
+                    if (!isNaN(y)) years[y] = (years[y] || 0) + 1;
                 });
-            });
-            
-            const sortedTopics = Object.entries(topicCounts)
-                .sort((a, b) => b[1] - a[1])
-                .slice(0, 6);
-            
-            const maxCount = sortedTopics[0] ? sortedTopics[0][1] : 1;
-            
-            const topicBars = document.getElementById('topic-bars');
-            if (sortedTopics.length === 0) {
-                topicBars.innerHTML = '<p style="color: var(--text-secondary); font-size: 0.85rem;">No topics in current results</p>';
-            } else {
-                topicBars.innerHTML = sortedTopics.map(([topic, count]) => {
-                    const pct = (count / maxCount) * 100;
-                    return `
-                        <div class="topic-bar" onclick="filterByTopic('${topic}')" style="cursor: pointer;" title="Click to filter by ${topic}">
-                            <span class="topic-bar-label">${topic}</span>
-                            <div class="topic-bar-track">
-                                <div class="topic-bar-fill" style="width: ${pct}%">${count.toLocaleString()}</div>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
+                const topYear = Object.entries(years).sort((a, b) => b[1] - a[1])[0];
+                if (topYear) {
+                    html += `<p style="font-size: 0.9rem;">Peak year: <strong>${topYear[0]}</strong> (${topYear[1]} tweets)</p>`;
+                }
             }
-            
-            // Escalation analysis - based on filtered results
-            const escalationTweets = tweetSet.filter(t => t.has_escalation);
-            const escalationPct = tweetSet.length > 0 ? (escalationTweets.length / tweetSet.length) * 100 : 0;
-            
-            // Position marker relative to baseline
-            // If current % is higher than baseline, marker moves right (more charged)
-            // Scale: 0% = far left, baseline = middle, 2x baseline = far right
-            let markerPos;
-            if (baselineEscalationPct === 0) {
-                markerPos = escalationPct > 0 ? 75 : 50;
-            } else {
-                // Ratio compared to baseline: 1.0 = same, 2.0 = twice as charged
-                const ratio = escalationPct / baselineEscalationPct;
-                // Map ratio to position: 0.5x = 25%, 1x = 50%, 2x = 75%, 3x+ = 95%
-                markerPos = Math.min(95, Math.max(5, ratio * 50));
-            }
-            document.getElementById('escalation-marker').style.left = `${markerPos}%`;
-            
-            // Show escalation stats
-            const escalationLabel = document.getElementById('escalation-pct');
-            if (escalationLabel) {
-                escalationLabel.textContent = `${escalationPct.toFixed(1)}% charged`;
-            }
-            
-            // Show top escalation words used in filtered results
-            const wordCounts = {};
-            escalationTweets.forEach(t => {
-                getEscalationWords(t.text).forEach(word => {
-                    wordCounts[word] = (wordCounts[word] || 0) + 1;
+            else if (yearFilter) {
+                title = `📅 ${yearFilter}`;
+                const yearTweets = allTweets.filter(t => new Date(t.created_at).getFullYear() == yearFilter);
+                
+                html = `<p>Emmer posted <span class="big-stat">${yearTweets.length.toLocaleString()}</span> tweets in ${yearFilter}.</p>`;
+                
+                // Top topics that year
+                const yearTopics = {};
+                yearTweets.forEach(t => {
+                    (t.topics_canonical || t.topics || []).forEach(topic => {
+                        yearTopics[topic] = (yearTopics[topic] || 0) + 1;
+                    });
                 });
-            });
+                const topTopics = Object.entries(yearTopics).sort((a, b) => b[1] - a[1]).slice(0, 3);
+                if (topTopics.length > 0) {
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">Top topics: ${topTopics.map(([t, c]) => `<strong>${t}</strong> (${c})`).join(', ')}</p>`;
+                }
+            }
+            else if (activeCard && activeCard !== 'all') {
+                const accountNames = {
+                    'RepTomEmmer': '@RepTomEmmer (Official)',
+                    'GOPMajorityWhip': '@GOPMajorityWhip (Leadership)',
+                    'tomemmer': '@tomemmer (Personal)'
+                };
+                title = `🐦 ${accountNames[activeCard] || activeCard}`;
+                
+                const accountTweets = allTweets.filter(t => t.account === activeCard);
+                html = `<p><span class="big-stat">${accountTweets.length.toLocaleString()}</span> tweets from this account.</p>`;
+                
+                // Date range for this account
+                const dates = accountTweets.map(t => new Date(t.created_at)).filter(d => !isNaN(d));
+                if (dates.length > 0) {
+                    const min = new Date(Math.min(...dates));
+                    const max = new Date(Math.max(...dates));
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">Active: ${min.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} – ${max.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</p>`;
+                }
+                
+                if (activeCard === 'GOPMajorityWhip') {
+                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">This account is for his role as House Majority Whip (Jan 2023–present).</p>`;
+                }
+            }
+            else {
+                const avgPerDay = (allTweets.length / (365 * 9)).toFixed(1);
+                html = `<p>Complete archive of Rep. Tom Emmer's tweets since 2017.</p>`;
+                html += `<p style="margin-top: 10px;"><span class="big-stat">${allTweets.length.toLocaleString()}</span> total tweets across 3 accounts.</p>`;
+                html += `<p style="margin-top: 10px; font-size: 0.9rem;">That's ~${avgPerDay} tweets per day for 9 years. Every statement searchable.</p>`;
+            }
             
-            const topWords = Object.entries(wordCounts)
-                .sort((a, b) => b[1] - a[1])
-                .slice(0, 8);
+            titleEl.textContent = title;
+            contentEl.innerHTML = html;
+        }
+        
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const topicFilter = document.getElementById('topic-filter').value;
+            const yearFilter = document.getElementById('year-filter').value;
             
-            const escalationWordsEl = document.getElementById('escalation-words');
-            if (topWords.length === 0) {
-                escalationWordsEl.innerHTML = '<span style="color: var(--text-secondary); font-size: 0.8rem;">No charged language in current results</span>';
-            } else {
-                escalationWordsEl.innerHTML = topWords.map(([word, count]) =>
-                    `<span class="escalation-word">${word} (${count})</span>`
+            let tweets = allTweets;
+            
+            // Account filter
+            if (activeCard && activeCard !== 'all') {
+                tweets = tweets.filter(t => t.account === activeCard);
+            }
+            
+            // Search
+            if (searchTerm) {
+                tweets = tweets.filter(t => t.text && t.text.toLowerCase().includes(searchTerm));
+            }
+            
+            // Topic
+            if (topicFilter) {
+                tweets = tweets.filter(t => (t.topics_canonical || t.topics || []).includes(topicFilter));
+            }
+            
+            // Year
+            if (yearFilter) {
+                tweets = tweets.filter(t => new Date(t.created_at).getFullYear() == yearFilter);
+            }
+            
+            filteredTweets = tweets;
+            displayCount = 25;
+            
+            document.getElementById('results-count').textContent = `${tweets.length.toLocaleString()} tweets`;
+            renderTweets();
+            updateInsights();
+        }
+        
+        function clearFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('topic-filter').value = '';
+            document.getElementById('year-filter').value = '';
+            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
+            activeCard = null;
+            applyFilters();
+        }
+        
+        function renderTweets() {
+            const container = document.getElementById('tweets-container');
+            const toShow = filteredTweets.slice(0, displayCount);
+            
+            if (toShow.length === 0) {
+                container.innerHTML = '<p class="no-results">No tweets found matching your filters.</p>';
+                document.getElementById('load-more-btn').style.display = 'none';
+                return;
+            }
+            
+            container.innerHTML = toShow.map(tweet => {
+                const date = new Date(tweet.created_at);
+                const dateStr = !isNaN(date) ? date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Unknown';
+                
+                const accountClass = tweet.account === 'RepTomEmmer' ? 'rep' : tweet.account === 'GOPMajorityWhip' ? 'whip' : 'personal';
+                const accountLabel = tweet.account === 'RepTomEmmer' ? '@RepTomEmmer' : tweet.account === 'GOPMajorityWhip' ? '@GOPMajorityWhip' : '@tomemmer';
+                
+                const topics = tweet.topics_canonical || tweet.topics || [];
+                const topicsHtml = topics.slice(0, 5).map(t => 
+                    `<span class="topic-tag" onclick="event.stopPropagation(); filterByTopic('${t.replace(/'/g, "\\'")}')">${t}</span>`
                 ).join('');
-            }
+                
+                const tweetUrl = tweet.url || `https://x.com/${tweet.account}/status/${tweet.id}`;
+                
+                return `<div class="tweet-card">
+                    <div class="tweet-header">
+                        <div class="tweet-account">
+                            <span class="account-badge ${accountClass}">${accountLabel}</span>
+                        </div>
+                        <span class="tweet-date">${dateStr}</span>
+                    </div>
+                    <div class="tweet-text">${escapeHtml(tweet.text || '')}</div>
+                    ${topicsHtml ? `<div class="tweet-topics">${topicsHtml}</div>` : ''}
+                    <a href="${tweetUrl}" target="_blank" class="tweet-link">View on X →</a>
+                </div>`;
+            }).join('');
+            
+            document.getElementById('load-more-btn').style.display = displayCount < filteredTweets.length ? 'block' : 'none';
         }
         
-        function performSearch() {
-            const query = document.getElementById('search-input').value.toLowerCase().trim();
-            const sortOrder = document.getElementById('sort-select').value;
-            const dateFrom = document.getElementById('date-from').value;
-            const dateTo = document.getElementById('date-to').value;
-            
-            // Filter tweets
-            filteredTweets = allTweets.filter(tweet => {
-                // Apply type filter
-                if (currentFilter === 'original' && tweet.is_retweet) return false;
-                if (currentFilter === 'retweets' && !tweet.is_retweet) return false;
-                if (currentFilter === 'escalation' && !tweet.has_escalation) return false;
-                
-                // Apply account filter
-                if (currentAccount !== 'all') {
-                    const handle = tweet.source_handle || '';
-                    if (handle.toLowerCase() !== currentAccount.toLowerCase()) return false;
-                }
-                
-                // Apply topic filter
-                if (currentTopic !== 'all') {
-                    if (!(tweet.topics || []).includes(currentTopic)) return false;
-                }
-                
-                // Apply date filter
-                const tweetDate = (tweet.created_at || tweet.date || '').substring(0, 10);
-                if (dateFrom && tweetDate < dateFrom) return false;
-                if (dateTo && tweetDate > dateTo) return false;
-                
-                // Apply search query with stemming and AND/OR logic
-                if (query) {
-                    const searchText = [
-                        tweet.text,
-                        tweet.source_handle,
-                        ...(tweet.topics || [])
-                    ].filter(Boolean).join(' ').toLowerCase();
-                    
-                    // Check for exact phrase matching (quoted phrases)
-                    const exactPhrases = [];
-                    const remainingQuery = query.replace(/"([^"]+)"/g, (match, phrase) => {
-                        exactPhrases.push(phrase.toLowerCase());
-                        return '';
-                    }).trim();
-                    
-                    // First check all exact phrases must match
-                    for (const phrase of exactPhrases) {
-                        if (!searchText.includes(phrase)) {
-                            return false;
-                        }
-                    }
-                    
-                    // If there's remaining query text, apply AND/OR logic
-                    if (remainingQuery) {
-                        // Get search mode (AND or OR)
-                        const searchMode = document.querySelector('input[name="search-mode"]:checked')?.value || 'and';
-                        
-                        // Split remaining query into words and search
-                        const queryWords = remainingQuery.split(/\s+/).filter(w => w.length > 0);
-                        
-                        if (searchMode === 'or') {
-                            // OR: match ANY word
-                            return queryWords.some(word => {
-                                const stems = getSearchStems(word);
-                                return stems.some(stem => searchText.includes(stem));
-                            });
-                        } else {
-                            // AND: match ALL words
-                            return queryWords.every(word => {
-                                const stems = getSearchStems(word);
-                                return stems.some(stem => searchText.includes(stem));
-                            });
-                        }
-                    }
-                    
-                    // If only exact phrases and they all matched, return true
-                    return true;
-                }
-                
-                return true;
-            });
-            
-            // Sort
-            filteredTweets.sort((a, b) => {
-                const dateA = a.created_at || a.date || '';
-                const dateB = b.created_at || b.date || '';
-                if (sortOrder === 'oldest') {
-                    return dateA.localeCompare(dateB);
-                } else {
-                    return dateB.localeCompare(dateA);
-                }
-            });
-            
-            // Reset and display
-            displayedCount = 0;
-            document.getElementById('results').innerHTML = '';
-            
-            // Update dashboard with filtered results
-            updateDashboard(filteredTweets);
-            
-            loadMore();
-            
-            // Update count
-            document.getElementById('results-count').textContent = 
-                `${filteredTweets.length.toLocaleString()} tweets found`;
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
         }
         
         function loadMore() {
-            const container = document.getElementById('results');
-            const end = Math.min(displayedCount + BATCH_SIZE, filteredTweets.length);
-            
-            for (let i = displayedCount; i < end; i++) {
-                container.appendChild(createTweetCard(filteredTweets[i]));
-            }
-            
-            displayedCount = end;
-            
-            // Toggle load more button
-            const loadMoreBtn = document.getElementById('load-more');
-            if (displayedCount >= filteredTweets.length) {
-                loadMoreBtn.style.display = 'none';
-            } else {
-                loadMoreBtn.style.display = 'block';
-                loadMoreBtn.textContent = `Load More (${filteredTweets.length - displayedCount} remaining)`;
-            }
-            
-            // Show no results message
-            if (filteredTweets.length === 0) {
-                container.innerHTML = `
-                    <div class="no-results">
-                        <h3>No tweets found</h3>
-                        <p>Try a different search term or filter.</p>
-                    </div>
-                `;
-            }
+            displayCount += 25;
+            renderTweets();
         }
         
-        function createTweetCard(tweet) {
-            const card = document.createElement('div');
-            
-            let cardClass = tweet.is_retweet ? 'retweet' : 'original';
-            if (tweet.has_escalation && !tweet.is_retweet) cardClass = 'escalation';
-            card.className = `tweet-card ${cardClass}`;
-            
-            // Format date
-            const dateStr = tweet.created_at || tweet.date || '';
-            const formattedDate = dateStr ? new Date(dateStr).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-            }) : 'Unknown date';
-            
-            // Build badges
-            let badges = '';
-            if (tweet.is_retweet) {
-                badges += `<span class="tweet-badge badge-retweet">RT</span>`;
-            }
-            if (tweet.is_quote) {
-                badges += `<span class="tweet-badge badge-quote">Quote</span>`;
-            }
-            if (tweet.has_escalation && !tweet.is_retweet) {
-                badges += `<span class="tweet-badge badge-escalation">Charged</span>`;
-            }
-            
-            // Build topic tags
-            let topics = (tweet.topics || []).slice(0, 3).map(t => 
-                `<span class="topic-tag">${t}</span>`
-            ).join('');
-            
-            // Format text with links and escalation highlighting
-            let text = tweet.text || '';
-            text = highlightEscalation(text);
-            text = text.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank">$1</a>');
-            text = text.replace(/@(\w+)/g, '<a href="https://x.com/$1" target="_blank">@$1</a>');
-            
-            // Build metrics if available
-            let metrics = '';
-            if (tweet.metrics && Object.keys(tweet.metrics).length > 0) {
-                const m = tweet.metrics;
-                metrics = `
-                    <div class="tweet-metrics">
-                        ${m.retweet_count ? `<span>🔁 ${m.retweet_count.toLocaleString()}</span>` : ''}
-                        ${m.like_count ? `<span>❤️ ${m.like_count.toLocaleString()}</span>` : ''}
-                        ${m.reply_count ? `<span>💬 ${m.reply_count.toLocaleString()}</span>` : ''}
-                    </div>
-                `;
-            }
-            
-            // Tweet URL
-            const tweetUrl = tweet.url || `https://x.com/${tweet.source_handle}/status/${tweet.id}`;
-            
-            card.innerHTML = `
-                <div class="tweet-header">
-                    <span class="tweet-account">@${tweet.source_handle || 'unknown'}</span>
-                    <span class="tweet-date">${formattedDate}</span>
-                </div>
-                <div class="tweet-text">${text}</div>
-                <div class="tweet-meta">
-                    ${badges}
-                    ${topics}
-                    <a href="${tweetUrl}" target="_blank" class="tweet-link">View on X →</a>
-                </div>
-                ${metrics}
-            `;
-            
-            return card;
-        }
-        
-        // Filter buttons
-        document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFilter = btn.dataset.filter;
-                performSearch();
-            });
-        });
-        
-        // Account buttons
-        document.querySelectorAll('.account-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.account-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentAccount = btn.dataset.account;
-                performSearch();
-            });
-        });
-        
-        // Search on enter
-        document.getElementById('search-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
-        
-        // Date change
-        document.getElementById('date-from').addEventListener('change', performSearch);
-        document.getElementById('date-to').addEventListener('change', performSearch);
-        
-        // Load data on page load
         loadData();
     </script>
-    <script src="/nav.js"></script>
 </body>
 </html>
