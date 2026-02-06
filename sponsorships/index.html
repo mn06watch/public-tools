@@ -9,11 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
         :root {
             --navy: #1e3a5f;
@@ -41,11 +37,7 @@
             line-height: 1.6;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
         
         header {
             text-align: center;
@@ -54,23 +46,10 @@
             margin-bottom: 30px;
         }
         
-        .page-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 8px;
-        }
+        .page-title { font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 8px; }
+        .page-title span { color: var(--gold); }
+        .page-subtitle { color: var(--text-secondary); font-size: 1.1rem; }
         
-        .page-title span {
-            color: var(--gold);
-        }
-        
-        .page-subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        /* Stats Grid - Clickable Cards */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -88,38 +67,14 @@
             transition: all 0.2s;
         }
         
-        .stat-card:hover {
-            border-color: var(--navy-light);
-            transform: translateY(-2px);
-        }
+        .stat-card:hover { border-color: var(--navy-light); transform: translateY(-2px); }
+        .stat-card.active { border-color: var(--gold); background: rgba(212, 168, 75, 0.1); }
         
-        .stat-card.active {
-            border-color: var(--gold);
-            background: rgba(212, 168, 75, 0.1);
-        }
+        .stat-value { font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; }
+        .stat-value.success { color: var(--green-light); }
+        .stat-value.failure { color: var(--red-light); }
+        .stat-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px; }
         
-        .stat-value {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--gold);
-            line-height: 1;
-        }
-        
-        .stat-value.success {
-            color: var(--green-light);
-        }
-        
-        .stat-value.failure {
-            color: var(--red-light);
-        }
-        
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 8px;
-        }
-        
-        /* Highlight box */
         .highlight-box {
             background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
             border-radius: 12px;
@@ -128,24 +83,10 @@
             border: 1px solid var(--navy-light);
         }
         
-        .highlight-box h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
+        .highlight-box h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.2rem; }
+        .highlight-box p { color: var(--text-secondary); margin-bottom: 10px; }
+        .highlight-box .big-stat { font-size: 3rem; font-weight: 700; color: var(--red-light); }
         
-        .highlight-box p {
-            color: var(--text-secondary);
-            margin-bottom: 10px;
-        }
-        
-        .highlight-box .big-stat {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--red-light);
-        }
-        
-        /* Search and Filter Bar */
         .filter-bar {
             background: var(--bg-card);
             border-radius: 12px;
@@ -169,14 +110,8 @@
             font-size: 0.95rem;
         }
         
-        .search-input::placeholder {
-            color: var(--text-secondary);
-        }
-        
-        .search-input:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
+        .search-input::placeholder { color: var(--text-secondary); }
+        .search-input:focus { outline: none; border-color: var(--gold); }
         
         .filter-select {
             padding: 10px 12px;
@@ -187,10 +122,7 @@
             font-size: 0.9rem;
         }
         
-        .filter-label {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
+        .filter-label { color: var(--text-secondary); font-size: 0.9rem; }
         
         .clear-filters-btn {
             padding: 10px 15px;
@@ -203,17 +135,9 @@
             transition: all 0.2s;
         }
         
-        .clear-filters-btn:hover {
-            background: var(--navy-light);
-        }
+        .clear-filters-btn:hover { background: var(--navy-light); }
+        .results-count { color: var(--text-secondary); font-size: 0.9rem; margin-left: auto; }
         
-        .results-count {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-left: auto;
-        }
-        
-        /* Charts Section */
         .charts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -228,19 +152,9 @@
             border: 1px solid var(--border);
         }
         
-        .chart-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 15px;
-        }
+        .chart-title { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 15px; }
+        .chart-container { position: relative; height: 300px; }
         
-        .chart-container {
-            position: relative;
-            height: 300px;
-        }
-        
-        /* Repeat Bills Section */
         .repeat-bills-section {
             background: var(--bg-card);
             border-radius: 12px;
@@ -249,42 +163,14 @@
             border: 1px solid var(--border);
         }
         
-        .repeat-bills-section h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
+        .repeat-bills-section h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.1rem; }
         
-        .repeat-bill-item {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--border);
-        }
+        .repeat-bill-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+        .repeat-bill-item:last-child { border-bottom: none; }
+        .repeat-bill-title { color: var(--text-primary); font-weight: 500; margin-bottom: 5px; }
+        .repeat-bill-meta { font-size: 0.85rem; color: var(--text-secondary); }
+        .repeat-count { background: var(--red); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; margin-left: 8px; }
         
-        .repeat-bill-item:last-child {
-            border-bottom: none;
-        }
-        
-        .repeat-bill-title {
-            color: var(--text-primary);
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-        
-        .repeat-bill-meta {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .repeat-count {
-            background: var(--red);
-            color: #fff;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            margin-left: 8px;
-        }
-        
-        /* Bill cards */
         .bill-card {
             background: var(--bg-card);
             border-radius: 10px;
@@ -294,92 +180,23 @@
             transition: border-color 0.2s;
         }
         
-        .bill-card:hover {
-            border-color: var(--navy-light);
-        }
+        .bill-card:hover { border-color: var(--navy-light); }
         
-        .bill-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 10px;
-        }
+        .bill-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; margin-bottom: 10px; }
+        .bill-number { font-weight: 700; color: var(--gold); font-size: 1rem; }
         
-        .bill-number {
-            font-weight: 700;
-            color: var(--gold);
-            font-size: 1rem;
-        }
+        .bill-status { padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; }
+        .bill-status.law { background: rgba(46, 160, 67, 0.2); color: var(--green-light); border: 1px solid var(--green); }
+        .bill-status.died { background: rgba(248, 81, 73, 0.2); color: var(--red-light); border: 1px solid var(--red); }
+        .bill-status.committee { background: rgba(139, 148, 158, 0.2); color: var(--text-secondary); border: 1px solid var(--border); }
+        .bill-status.passed { background: rgba(212, 168, 75, 0.2); color: var(--gold); border: 1px solid var(--gold-dark); }
         
-        .bill-status {
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
+        .bill-title { color: var(--text-primary); font-size: 0.95rem; line-height: 1.4; margin-bottom: 10px; }
+        .bill-meta { display: flex; gap: 15px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-secondary); }
+        .bill-link { color: var(--gold); text-decoration: none; font-size: 0.85rem; }
+        .bill-link:hover { text-decoration: underline; }
+        .policy-tag { display: inline-block; padding: 3px 10px; background: var(--navy-dark); color: var(--text-secondary); border-radius: 10px; font-size: 0.75rem; margin-top: 8px; }
         
-        .bill-status.law {
-            background: rgba(46, 160, 67, 0.2);
-            color: var(--green-light);
-            border: 1px solid var(--green);
-        }
-        
-        .bill-status.died {
-            background: rgba(248, 81, 73, 0.2);
-            color: var(--red-light);
-            border: 1px solid var(--red);
-        }
-        
-        .bill-status.committee {
-            background: rgba(139, 148, 158, 0.2);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
-        }
-        
-        .bill-status.passed {
-            background: rgba(212, 168, 75, 0.2);
-            color: var(--gold);
-            border: 1px solid var(--gold-dark);
-        }
-        
-        .bill-title {
-            color: var(--text-primary);
-            font-size: 0.95rem;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        
-        .bill-meta {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        .bill-link {
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
-        
-        .bill-link:hover {
-            text-decoration: underline;
-        }
-        
-        .policy-tag {
-            display: inline-block;
-            padding: 3px 10px;
-            background: var(--navy-dark);
-            color: var(--text-secondary);
-            border-radius: 10px;
-            font-size: 0.75rem;
-            margin-top: 8px;
-        }
-        
-        /* Load more */
         .load-more {
             display: block;
             width: 100%;
@@ -394,15 +211,8 @@
             margin-top: 20px;
         }
         
-        .load-more:hover {
-            background: var(--navy-light);
-        }
-        
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-secondary);
-        }
+        .load-more:hover { background: var(--navy-light); }
+        .no-results { text-align: center; padding: 40px; color: var(--text-secondary); }
         
         footer {
             text-align: center;
@@ -413,30 +223,14 @@
             font-size: 0.9rem;
         }
         
-        footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
+        footer a { color: var(--gold); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
         
         @media (max-width: 768px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .charts-grid {
-                grid-template-columns: 1fr;
-            }
-            .filter-bar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .results-count {
-                margin-left: 0;
-                text-align: center;
-            }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .charts-grid { grid-template-columns: 1fr; }
+            .filter-bar { flex-direction: column; align-items: stretch; }
+            .results-count { margin-left: 0; text-align: center; }
         }
     </style>
 </head>
@@ -473,31 +267,25 @@
             </div>
         </div>
         
-        <!-- Dynamic Highlight -->
+        <!-- Dynamic Insight Box -->
         <div class="highlight-box">
             <h3 id="insight-title">📊 The Bottom Line</h3>
-            <div id="insight-content">
-                <p>Loading...</p>
-            </div>
+            <div id="insight-content"><p>Loading...</p></div>
         </div>
         
         <!-- Charts -->
         <div class="charts-grid">
             <div class="chart-card">
                 <div class="chart-title">📂 Policy Areas (Sponsored Bills)</div>
-                <div class="chart-container">
-                    <canvas id="policy-chart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="policy-chart"></canvas></div>
             </div>
             <div class="chart-card">
                 <div class="chart-title">📈 Bills by Congress</div>
-                <div class="chart-container">
-                    <canvas id="congress-chart"></canvas>
-                </div>
+                <div class="chart-container"><canvas id="congress-chart"></canvas></div>
             </div>
         </div>
         
-        <!-- Repeat Bills Section -->
+        <!-- Repeat Bills -->
         <div class="repeat-bills-section" id="repeat-bills-section">
             <h3>🔄 Repeat Bills (Introduced Multiple Times, Never Passed)</h3>
             <div id="repeat-bills-list">Loading...</div>
@@ -506,7 +294,6 @@
         <!-- Search and Filters -->
         <div class="filter-bar">
             <input type="text" class="search-input" id="search-input" placeholder="Search bills by title or keyword..." oninput="applyFilters()">
-            
             <span class="filter-label">Congress:</span>
             <select class="filter-select" id="congress-filter" onchange="applyFilters()">
                 <option value="">All</option>
@@ -517,25 +304,17 @@
                 <option value="115">115th (2017-19)</option>
                 <option value="114">114th (2015-17)</option>
             </select>
-            
             <span class="filter-label">Policy:</span>
             <select class="filter-select" id="policy-filter" onchange="applyFilters()">
                 <option value="">All Areas</option>
             </select>
-            
             <button class="clear-filters-btn" onclick="clearFilters()">Clear Filters</button>
-            
             <span class="results-count" id="results-count">-- bills</span>
         </div>
         
         <!-- Bills List -->
-        <div id="bills-container">
-            <p class="no-results">Loading...</p>
-        </div>
-        
-        <button class="load-more" id="load-more-btn" onclick="loadMore()" style="display: none;">
-            Load More Bills
-        </button>
+        <div id="bills-container"><p class="no-results">Loading...</p></div>
+        <button class="load-more" id="load-more-btn" onclick="loadMore()" style="display: none;">Load More Bills</button>
         
         <footer>
             <p>Data from <a href="https://congress.gov" target="_blank">Congress.gov</a>. Updated <span id="last-updated">--</span>.</p>
@@ -556,7 +335,6 @@
             try {
                 const response = await fetch('https://pub-19f43b48149546699964c5a800800a2f.r2.dev/sponsorships_data.json');
                 const data = await response.json();
-                
                 allBills = data.bills || [];
                 
                 updateStats();
@@ -567,32 +345,42 @@
                 
                 if (data.last_updated) {
                     const date = new Date(data.last_updated);
-                    document.getElementById('last-updated').textContent = date.toLocaleDateString('en-US', { 
-                        month: 'short', day: 'numeric', year: 'numeric' 
-                    });
+                    document.getElementById('last-updated').textContent = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                 }
-                
             } catch (error) {
                 console.error('Error loading data:', error);
-                document.getElementById('bills-container').innerHTML = 
-                    '<p class="no-results">Error loading data. Please try again.</p>';
+                document.getElementById('bills-container').innerHTML = '<p class="no-results">Error loading data.</p>';
             }
         }
         
         function updateStats() {
-            const sponsored = allBills.filter(b => b.role === 'sponsor');
-            const cosponsored = allBills.filter(b => b.role === 'cosponsor');
-            const laws = sponsored.filter(b => b.status === 'Became Law');
-            const died = sponsored.filter(b => b.died_in_committee);
+            const allSponsored = allBills.filter(b => b.role === 'sponsor');
+            const allCosponsored = allBills.filter(b => b.role === 'cosponsor');
             
-            document.getElementById('total-sponsored').textContent = sponsored.length;
-            document.getElementById('total-cosponsored').textContent = cosponsored.length.toLocaleString();
+            // Always show totals for sponsored and cosponsored
+            document.getElementById('total-sponsored').textContent = allSponsored.length;
+            document.getElementById('total-cosponsored').textContent = allCosponsored.length.toLocaleString();
+            
+            // Dynamic stats based on active card
+            updateDynamicStats();
+        }
+        
+        function updateDynamicStats() {
+            let baseBills;
+            if (activeCard === 'cosponsored') {
+                baseBills = allBills.filter(b => b.role === 'cosponsor');
+            } else {
+                baseBills = allBills.filter(b => b.role === 'sponsor');
+            }
+            
+            const laws = baseBills.filter(b => b.status === 'Became Law');
+            const died = baseBills.filter(b => b.died_in_committee);
+            const rate = baseBills.length > 0 ? (laws.length / baseBills.length * 100).toFixed(1) + '%' : '0%';
+            
             document.getElementById('became-law').textContent = laws.length;
             document.getElementById('died-committee').textContent = died.length;
-            document.getElementById('success-rate').textContent = 
-                sponsored.length > 0 ? (laws.length / sponsored.length * 100).toFixed(1) + '%' : '0%';
-            
-            }
+            document.getElementById('success-rate').textContent = rate;
+        }
         
         function updateInsights() {
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
@@ -602,37 +390,21 @@
             const titleEl = document.getElementById('insight-title');
             const contentEl = document.getElementById('insight-content');
             
-            // Get current filtered data
-            let bills = filteredBills;
-            const sponsored = bills.filter(b => b.role === 'sponsor');
-            const cosponsored = bills.filter(b => b.role === 'cosponsor');
-            const laws = bills.filter(b => b.status === 'Became Law');
-            const died = bills.filter(b => b.died_in_committee);
-            const total = bills.length;
-            
-            // Calculate rates
-            const diedRate = sponsored.length > 0 ? Math.round((died.length / sponsored.length) * 100) : 0;
-            const successRate = sponsored.length > 0 ? ((laws.length / sponsored.length) * 100).toFixed(1) : 0;
-            
-            // Context-specific insights
             let title = '📊 The Bottom Line';
             let html = '';
             
-            // Search term active
+            // Search active
             if (searchTerm) {
                 title = `🔍 "${searchTerm}" Bills`;
-                const allMatching = allBills.filter(b => 
-                    (b.title && b.title.toLowerCase().includes(searchTerm)) ||
-                    (b.policy_area && b.policy_area.toLowerCase().includes(searchTerm))
-                );
-                const matchSponsored = allMatching.filter(b => b.role === 'sponsor');
+                const matchSponsored = allBills.filter(b => b.role === 'sponsor' && ((b.title && b.title.toLowerCase().includes(searchTerm)) || (b.policy_area && b.policy_area.toLowerCase().includes(searchTerm))));
+                const matchCosponsored = allBills.filter(b => b.role === 'cosponsor' && ((b.title && b.title.toLowerCase().includes(searchTerm)) || (b.policy_area && b.policy_area.toLowerCase().includes(searchTerm))));
                 const matchLaws = matchSponsored.filter(b => b.status === 'Became Law');
                 const matchDied = matchSponsored.filter(b => b.died_in_committee);
                 
                 if (matchSponsored.length === 0) {
                     html = `<p>Emmer hasn't sponsored any bills matching "${searchTerm}".</p>`;
-                    if (allMatching.length > 0) {
-                        html += `<p style="margin-top: 10px;">He has <strong>cosponsored ${allMatching.length}</strong> bills on this topic.</p>`;
+                    if (matchCosponsored.length > 0) {
+                        html += `<p style="margin-top: 10px;">He has <strong>cosponsored ${matchCosponsored.length}</strong> bills on this topic.</p>`;
                     }
                 } else if (matchLaws.length > 0) {
                     html = `<p>Emmer sponsored <strong>${matchSponsored.length}</strong> bills on "${searchTerm}".</p>`;
@@ -643,7 +415,7 @@
                     html += `<p style="margin-top: 10px; font-size: 0.9rem;">Success rate: <strong>0%</strong></p>`;
                 }
             }
-            // Policy area filter
+            // Policy filter
             else if (policyFilter) {
                 title = `📂 ${policyFilter}`;
                 const policySponsored = allBills.filter(b => b.role === 'sponsor' && (b.policy_area || 'Uncategorized') === policyFilter);
@@ -651,8 +423,7 @@
                 const policyDied = policySponsored.filter(b => b.died_in_committee);
                 const policyRate = policySponsored.length > 0 ? ((policyLaws.length / policySponsored.length) * 100).toFixed(0) : 0;
                 
-                html = `<p>Emmer's #1 focus area by bill count.</p>`;
-                html += `<p>Sponsored <strong>${policySponsored.length}</strong> ${policyFilter} bills.</p>`;
+                html = `<p>Emmer sponsored <strong>${policySponsored.length}</strong> ${policyFilter} bills.</p>`;
                 html += `<p><span class="big-stat">${policyDied.length}</span> died in committee.</p>`;
                 html += `<p style="margin-top: 10px; font-size: 0.9rem;">Success rate: <strong>${policyRate}%</strong>`;
                 if (policyLaws.length === 0 && policySponsored.length > 5) {
@@ -664,33 +435,30 @@
             else if (congressFilter) {
                 const congressNum = parseInt(congressFilter);
                 const yearStart = 2015 + (congressNum - 114) * 2;
-                const yearEnd = yearStart + 2;
-                title = `🏛️ ${congressNum}th Congress (${yearStart}-${yearEnd})`;
+                title = `🏛️ ${congressNum}th Congress (${yearStart}-${yearStart + 2})`;
                 
                 const cSponsored = allBills.filter(b => b.role === 'sponsor' && b.congress == congressFilter);
                 const cLaws = cSponsored.filter(b => b.status === 'Became Law');
                 const cDied = cSponsored.filter(b => b.died_in_committee);
-                
-                // Compare to other congresses
                 const avgPerCongress = allBills.filter(b => b.role === 'sponsor').length / 6;
-                const comparison = cSponsored.length > avgPerCongress ? 'above' : 'below';
                 
-                html = `<p>Sponsored <strong>${cSponsored.length}</strong> bills (${comparison} his average of ${avgPerCongress.toFixed(0)}).</p>`;
+                html = `<p>Sponsored <strong>${cSponsored.length}</strong> bills (${cSponsored.length > avgPerCongress ? 'above' : 'below'} his average of ${avgPerCongress.toFixed(0)}).</p>`;
                 html += `<p><span class="big-stat">${cDied.length}</span> died in committee.</p>`;
-                if (cLaws.length > 0) {
-                    html += `<p style="margin-top: 10px; font-size: 0.9rem;"><strong>${cLaws.length}</strong> became law! 🎉</p>`;
-                } else {
-                    html += `<p style="margin-top: 10px; font-size: 0.9rem;">None became law.</p>`;
-                }
+                html += cLaws.length > 0 
+                    ? `<p style="margin-top: 10px; font-size: 0.9rem;"><strong>${cLaws.length}</strong> became law! 🎉</p>`
+                    : `<p style="margin-top: 10px; font-size: 0.9rem;">None became law.</p>`;
             }
-            // Card filters
+            // Cosponsored card
             else if (activeCard === 'cosponsored') {
                 title = '🤝 Cosponsored Bills';
                 const coTotal = allBills.filter(b => b.role === 'cosponsor').length;
                 const coLaws = allBills.filter(b => b.role === 'cosponsor' && b.status === 'Became Law').length;
+                const coDied = allBills.filter(b => b.role === 'cosponsor' && b.died_in_committee).length;
                 html = `<p>Emmer put his name on <strong>${coTotal.toLocaleString()}</strong> other members' bills.</p>`;
-                html += `<p style="margin-top: 10px; font-size: 0.9rem;">Cosponsoring is easy — just a signature showing support. It's the sponsored bills that show what he actually prioritizes.</p>`;
+                html += `<p style="margin-top: 10px;"><strong>${coLaws}</strong> became law, <strong>${coDied}</strong> died in committee.</p>`;
+                html += `<p style="margin-top: 10px; font-size: 0.9rem;">Cosponsoring is easy — just a signature showing support. Sponsored bills show what he actually prioritizes.</p>`;
             }
+            // Law card
             else if (activeCard === 'law') {
                 title = '✅ Bills That Became Law';
                 const lawBills = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
@@ -699,12 +467,12 @@
                 html = `<p>In 10 years, <strong>${lawBills.length}</strong> of Emmer's bills became law.</p>`;
                 if (postOffice.length > 0) {
                     html += `<p style="margin-top: 10px;"><span class="big-stat" style="color: var(--gold);">${postOffice.length}</span> were post office namings.</p>`;
-                    const other = lawBills.length - postOffice.length;
-                    if (other > 0) {
-                        html += `<p style="font-size: 0.9rem;">${other} other bill${other > 1 ? 's' : ''} passed.</p>`;
+                    if (lawBills.length - postOffice.length > 0) {
+                        html += `<p style="font-size: 0.9rem;">${lawBills.length - postOffice.length} other bill${lawBills.length - postOffice.length > 1 ? 's' : ''} passed.</p>`;
                     }
                 }
             }
+            // Died card
             else if (activeCard === 'died') {
                 title = '⚰️ Died in Committee';
                 const diedBills = allBills.filter(b => b.role === 'sponsor' && b.died_in_committee);
@@ -715,9 +483,8 @@
                 html += `<p style="margin-top: 10px;">That's <strong>${diedBills.length}</strong> bills that never got a floor vote.</p>`;
                 html += `<p style="margin-top: 10px; font-size: 0.9rem;">Even with Republicans controlling the House, his bills don't advance.</p>`;
             }
-            // Default view
+            // Default
             else {
-                title = '📊 The Bottom Line';
                 const totalSponsored = allBills.filter(b => b.role === 'sponsor').length;
                 const totalLaws = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law').length;
                 const totalDied = allBills.filter(b => b.role === 'sponsor' && b.died_in_committee).length;
@@ -726,13 +493,7 @@
                 html = `<p>In <strong>10 years</strong> in Congress, Rep. Emmer has sponsored <strong>${totalSponsored}</strong> bills.</p>`;
                 html += `<p>Of those, <span class="big-stat">${totalDied}</span> died in committee without ever receiving a vote.</p>`;
                 html += `<p style="margin-top: 15px; font-size: 0.9rem;">His <strong>${totalLaws}</strong> bills that became law include `;
-                if (postOffice === totalLaws) {
-                    html += `post office namings.</p>`;
-                } else if (postOffice > 0) {
-                    html += `${postOffice} post office naming${postOffice > 1 ? 's' : ''} and ${totalLaws - postOffice} other${totalLaws - postOffice > 1 ? 's' : ''}.</p>`;
-                } else {
-                    html += `various legislation.</p>`;
-                }
+                html += postOffice === totalLaws ? `post office namings.</p>` : postOffice > 0 ? `${postOffice} post office naming${postOffice > 1 ? 's' : ''} and ${totalLaws - postOffice} other.</p>` : `various legislation.</p>`;
             }
             
             titleEl.textContent = title;
@@ -747,14 +508,12 @@
             });
             
             const select = document.getElementById('policy-filter');
-            Object.entries(policies)
-                .sort((a, b) => b[1] - a[1])
-                .forEach(([area, count]) => {
-                    const option = document.createElement('option');
-                    option.value = area;
-                    option.textContent = `${area} (${count})`;
-                    select.appendChild(option);
-                });
+            Object.entries(policies).sort((a, b) => b[1] - a[1]).forEach(([area, count]) => {
+                const option = document.createElement('option');
+                option.value = area;
+                option.textContent = `${area} (${count})`;
+                select.appendChild(option);
+            });
         }
         
         function createCharts() {
@@ -766,88 +525,37 @@
             const ctx = document.getElementById('policy-chart');
             const sponsored = allBills.filter(b => b.role === 'sponsor');
             
-            // Count by policy area with success info
             const policyData = {};
             sponsored.forEach(b => {
                 const area = b.policy_area || 'Uncategorized';
-                if (!policyData[area]) {
-                    policyData[area] = { total: 0, laws: 0, died: 0 };
-                }
+                if (!policyData[area]) policyData[area] = { total: 0, laws: 0, died: 0 };
                 policyData[area].total++;
                 if (b.status === 'Became Law') policyData[area].laws++;
                 if (b.died_in_committee) policyData[area].died++;
             });
             
-            const sorted = Object.entries(policyData)
-                .sort((a, b) => b[1].total - a[1].total)
-                .slice(0, 10);
+            const sorted = Object.entries(policyData).sort((a, b) => b[1].total - a[1].total).slice(0, 10);
             
             charts.policy = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: sorted.map(([area]) => area.length > 20 ? area.substring(0, 20) + '...' : area),
                     datasets: [
-                        {
-                            label: 'Died in Committee',
-                            data: sorted.map(([_, d]) => d.died),
-                            backgroundColor: 'rgba(248, 81, 73, 0.7)',
-                            borderColor: '#da3633',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Other Status',
-                            data: sorted.map(([_, d]) => d.total - d.died - d.laws),
-                            backgroundColor: 'rgba(139, 148, 158, 0.7)',
-                            borderColor: '#8b949e',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Became Law',
-                            data: sorted.map(([_, d]) => d.laws),
-                            backgroundColor: 'rgba(46, 160, 67, 0.7)',
-                            borderColor: '#238636',
-                            borderWidth: 1
-                        }
+                        { label: 'Died', data: sorted.map(([_, d]) => d.died), backgroundColor: 'rgba(248, 81, 73, 0.7)', borderColor: '#da3633', borderWidth: 1 },
+                        { label: 'Other', data: sorted.map(([_, d]) => d.total - d.died - d.laws), backgroundColor: 'rgba(139, 148, 158, 0.7)', borderColor: '#8b949e', borderWidth: 1 },
+                        { label: 'Law', data: sorted.map(([_, d]) => d.laws), backgroundColor: 'rgba(46, 160, 67, 0.7)', borderColor: '#238636', borderWidth: 1 }
                     ]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
+                    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
                     scales: {
-                        x: {
-                            stacked: true,
-                            ticks: { color: '#8b949e' },
-                            grid: { color: '#2a3441' }
-                        },
-                        y: {
-                            stacked: true,
-                            ticks: { color: '#e6edf3', font: { size: 11 } },
-                            grid: { display: false }
-                        }
+                        x: { stacked: true, ticks: { color: '#8b949e' }, grid: { color: '#2a3441' } },
+                        y: { stacked: true, ticks: { color: '#e6edf3', font: { size: 11 } }, grid: { display: false } }
                     },
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: { color: '#e6edf3', boxWidth: 12 }
-                        },
-                        tooltip: {
-                            callbacks: {
-                                afterBody: (items) => {
-                                    const idx = items[0].dataIndex;
-                                    const area = sorted[idx][0];
-                                    const data = policyData[area];
-                                    const rate = data.total > 0 ? ((data.laws / data.total) * 100).toFixed(0) : 0;
-                                    return `Success rate: ${rate}%`;
-                                }
-                            }
-                        }
-                    },
-                    onClick: (event, elements) => {
+                    plugins: { legend: { position: 'bottom', labels: { color: '#e6edf3', boxWidth: 12 } } },
+                    onClick: (e, elements) => {
                         if (elements.length > 0) {
-                            const idx = elements[0].index;
-                            const area = sorted[idx][0];
-                            document.getElementById('policy-filter').value = area;
+                            document.getElementById('policy-filter').value = sorted[elements[0].index][0];
                             applyFilters();
                         }
                     }
@@ -862,74 +570,34 @@
             const congressData = {};
             sponsored.forEach(b => {
                 const c = b.congress || 'Unknown';
-                if (!congressData[c]) {
-                    congressData[c] = { total: 0, laws: 0, died: 0 };
-                }
+                if (!congressData[c]) congressData[c] = { total: 0, laws: 0, died: 0 };
                 congressData[c].total++;
                 if (b.status === 'Became Law') congressData[c].laws++;
                 if (b.died_in_committee) congressData[c].died++;
             });
             
             const congresses = [114, 115, 116, 117, 118, 119].filter(c => congressData[c]);
-            const labels = congresses.map(c => `${c}th`);
             
             charts.congress = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: labels,
+                    labels: congresses.map(c => `${c}th`),
                     datasets: [
-                        {
-                            label: 'Died',
-                            data: congresses.map(c => congressData[c]?.died || 0),
-                            backgroundColor: 'rgba(248, 81, 73, 0.7)',
-                            borderColor: '#da3633',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Other',
-                            data: congresses.map(c => {
-                                const d = congressData[c] || { total: 0, died: 0, laws: 0 };
-                                return d.total - d.died - d.laws;
-                            }),
-                            backgroundColor: 'rgba(139, 148, 158, 0.7)',
-                            borderColor: '#8b949e',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Law',
-                            data: congresses.map(c => congressData[c]?.laws || 0),
-                            backgroundColor: 'rgba(46, 160, 67, 0.7)',
-                            borderColor: '#238636',
-                            borderWidth: 1
-                        }
+                        { label: 'Died', data: congresses.map(c => congressData[c]?.died || 0), backgroundColor: 'rgba(248, 81, 73, 0.7)', borderColor: '#da3633', borderWidth: 1 },
+                        { label: 'Other', data: congresses.map(c => (congressData[c]?.total || 0) - (congressData[c]?.died || 0) - (congressData[c]?.laws || 0)), backgroundColor: 'rgba(139, 148, 158, 0.7)', borderColor: '#8b949e', borderWidth: 1 },
+                        { label: 'Law', data: congresses.map(c => congressData[c]?.laws || 0), backgroundColor: 'rgba(46, 160, 67, 0.7)', borderColor: '#238636', borderWidth: 1 }
                     ]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    responsive: true, maintainAspectRatio: false,
                     scales: {
-                        x: {
-                            stacked: true,
-                            ticks: { color: '#e6edf3' },
-                            grid: { color: '#2a3441' }
-                        },
-                        y: {
-                            stacked: true,
-                            ticks: { color: '#8b949e' },
-                            grid: { color: '#2a3441' }
-                        }
+                        x: { stacked: true, ticks: { color: '#e6edf3' }, grid: { color: '#2a3441' } },
+                        y: { stacked: true, ticks: { color: '#8b949e' }, grid: { color: '#2a3441' } }
                     },
-                    plugins: {
-                        legend: {
-                            position: 'bottom',
-                            labels: { color: '#e6edf3', boxWidth: 12 }
-                        }
-                    },
-                    onClick: (event, elements) => {
+                    plugins: { legend: { position: 'bottom', labels: { color: '#e6edf3', boxWidth: 12 } } },
+                    onClick: (e, elements) => {
                         if (elements.length > 0) {
-                            const idx = elements[0].index;
-                            const congress = congresses[idx];
-                            document.getElementById('congress-filter').value = congress;
+                            document.getElementById('congress-filter').value = congresses[elements[0].index];
                             applyFilters();
                         }
                     }
@@ -939,34 +607,21 @@
         
         function findRepeatBills() {
             const sponsored = allBills.filter(b => b.role === 'sponsor');
-            
-            // Group by similar titles (normalize for comparison)
             const titleGroups = {};
+            
             sponsored.forEach(b => {
-                // Create a normalized key from title
-                let key = (b.title || '').toLowerCase()
-                    .replace(/of \d{4}/, '')  // Remove year
-                    .replace(/\s+/g, ' ')
-                    .trim()
-                    .substring(0, 80);
-                
-                if (key.length < 10) return; // Skip very short titles
-                
-                if (!titleGroups[key]) {
-                    titleGroups[key] = [];
-                }
+                let key = (b.title || '').toLowerCase().replace(/of \d{4}/, '').replace(/\s+/g, ' ').trim().substring(0, 80);
+                if (key.length < 10) return;
+                if (!titleGroups[key]) titleGroups[key] = [];
                 titleGroups[key].push(b);
             });
             
-            // Find groups with multiple bills (all failed)
             const repeats = Object.entries(titleGroups)
-                .filter(([_, bills]) => bills.length > 1)
-                .filter(([_, bills]) => !bills.some(b => b.status === 'Became Law'))
+                .filter(([_, bills]) => bills.length > 1 && !bills.some(b => b.status === 'Became Law'))
                 .sort((a, b) => b[1].length - a[1].length)
                 .slice(0, 5);
             
             const container = document.getElementById('repeat-bills-list');
-            
             if (repeats.length === 0) {
                 container.innerHTML = '<p style="color: var(--text-secondary);">No repeat failed bills found.</p>';
                 return;
@@ -975,27 +630,17 @@
             container.innerHTML = repeats.map(([_, bills]) => {
                 const congresses = bills.map(b => b.congress).sort().join(', ');
                 const title = bills[0].title || 'Untitled';
-                return `
-                    <div class="repeat-bill-item">
-                        <div class="repeat-bill-title">
-                            ${title.length > 80 ? title.substring(0, 80) + '...' : title}
-                            <span class="repeat-count">${bills.length}x introduced</span>
-                        </div>
-                        <div class="repeat-bill-meta">
-                            Congresses: ${congresses}th · All died in committee
-                        </div>
-                    </div>
-                `;
+                return `<div class="repeat-bill-item">
+                    <div class="repeat-bill-title">${title.length > 80 ? title.substring(0, 80) + '...' : title}<span class="repeat-count">${bills.length}x introduced</span></div>
+                    <div class="repeat-bill-meta">Congresses: ${congresses}th · All died in committee</div>
+                </div>`;
             }).join('');
         }
         
         function filterByCard(type) {
-            // Clear other filters first
             document.getElementById('search-input').value = '';
             document.getElementById('congress-filter').value = '';
             document.getElementById('policy-filter').value = '';
-            
-            // Toggle active card
             document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
             
             if (activeCard === type) {
@@ -1016,24 +661,15 @@
             
             let bills = allBills;
             
-            // Apply card filter
-            if (activeCard === 'sponsored') {
-                bills = bills.filter(b => b.role === 'sponsor');
-            } else if (activeCard === 'cosponsored') {
-                bills = bills.filter(b => b.role === 'cosponsor');
-            } else if (activeCard === 'law') {
-                bills = bills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
-            } else if (activeCard === 'died') {
-                bills = bills.filter(b => b.role === 'sponsor' && b.died_in_committee);
-            } else if (activeCard === 'rate') {
-                // Show all sponsored when clicking rate
-                bills = bills.filter(b => b.role === 'sponsor');
-            } else {
-                // Default: show sponsored
-                bills = bills.filter(b => b.role === 'sponsor');
-            }
+            // Card filter
+            if (activeCard === 'sponsored') bills = bills.filter(b => b.role === 'sponsor');
+            else if (activeCard === 'cosponsored') bills = bills.filter(b => b.role === 'cosponsor');
+            else if (activeCard === 'law') bills = bills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
+            else if (activeCard === 'died') bills = bills.filter(b => b.role === 'sponsor' && b.died_in_committee);
+            else if (activeCard === 'rate') bills = bills.filter(b => b.role === 'sponsor');
+            else bills = bills.filter(b => b.role === 'sponsor');
             
-            // Apply search
+            // Search
             if (searchTerm) {
                 bills = bills.filter(b => 
                     (b.title && b.title.toLowerCase().includes(searchTerm)) ||
@@ -1042,19 +678,15 @@
                 );
             }
             
-            // Apply congress filter
-            if (congressFilter) {
-                bills = bills.filter(b => b.congress == congressFilter);
-            }
+            // Congress
+            if (congressFilter) bills = bills.filter(b => b.congress == congressFilter);
             
-            // Apply policy filter
-            if (policyFilter) {
-                bills = bills.filter(b => (b.policy_area || 'Uncategorized') === policyFilter);
-            }
+            // Policy
+            if (policyFilter) bills = bills.filter(b => (b.policy_area || 'Uncategorized') === policyFilter);
             
             // Sort
             bills.sort((a, b) => {
-                if (b.congress !== a.congress) return (b.congress || 0) - (a.congress || 0);
+                if ((b.congress || 0) !== (a.congress || 0)) return (b.congress || 0) - (a.congress || 0);
                 return (b.introduced_date || '').localeCompare(a.introduced_date || '');
             });
             
@@ -1087,32 +719,26 @@
             }
             
             container.innerHTML = toShow.map(bill => {
-                const statusClass = bill.status === 'Became Law' ? 'law' : 
-                                   bill.died_in_committee ? 'died' :
-                                   bill.status && bill.status.includes('Passed') ? 'passed' : 'committee';
-                
+                const statusClass = bill.status === 'Became Law' ? 'law' : bill.died_in_committee ? 'died' : bill.status && bill.status.includes('Passed') ? 'passed' : 'committee';
                 const statusText = bill.died_in_committee ? '⚰️ Died' : bill.status || 'Unknown';
                 
-                return `
-                    <div class="bill-card">
-                        <div class="bill-header">
-                            <span class="bill-number">${bill.bill_type || ''}${bill.bill_number || ''}</span>
-                            <span class="bill-status ${statusClass}">${statusText}</span>
-                        </div>
-                        <div class="bill-title">${bill.title || 'Untitled'}</div>
-                        <div class="bill-meta">
-                            <span>📅 ${bill.introduced_date || 'Unknown'}</span>
-                            <span>🏛️ ${bill.congress || '?'}th Congress</span>
-                            ${bill.role === 'cosponsor' ? '<span>🤝 Cosponsor</span>' : ''}
-                            <a href="${bill.url || '#'}" target="_blank" class="bill-link">Congress.gov →</a>
-                        </div>
-                        ${bill.policy_area ? `<span class="policy-tag">${bill.policy_area}</span>` : ''}
+                return `<div class="bill-card">
+                    <div class="bill-header">
+                        <span class="bill-number">${bill.bill_type || ''}${bill.bill_number || ''}</span>
+                        <span class="bill-status ${statusClass}">${statusText}</span>
                     </div>
-                `;
+                    <div class="bill-title">${bill.title || 'Untitled'}</div>
+                    <div class="bill-meta">
+                        <span>📅 ${bill.introduced_date || 'Unknown'}</span>
+                        <span>🏛️ ${bill.congress || '?'}th Congress</span>
+                        ${bill.role === 'cosponsor' ? '<span>🤝 Cosponsor</span>' : ''}
+                        <a href="${bill.url || '#'}" target="_blank" class="bill-link">Congress.gov →</a>
+                    </div>
+                    ${bill.policy_area ? `<span class="policy-tag">${bill.policy_area}</span>` : ''}
+                </div>`;
             }).join('');
             
-            document.getElementById('load-more-btn').style.display = 
-                displayCount < filteredBills.length ? 'block' : 'none';
+            document.getElementById('load-more-btn').style.display = displayCount < filteredBills.length ? 'block' : 'none';
         }
         
         function loadMore() {
@@ -1120,7 +746,6 @@
             renderBills();
         }
         
-        // Load on page ready
         loadData();
     </script>
 </body>
