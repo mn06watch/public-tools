@@ -352,7 +352,7 @@
     <script>
         let allBills = [];
         let filteredBills = [];
-        let activeCard = null;
+        // Role and status filters defined in filterByCard
         let displayCount = 25;
         let charts = {};
         
@@ -392,7 +392,7 @@
         
         function updateDynamicStats() {
             let baseBills;
-            if (activeCard === 'cosponsored') {
+            if (activeRole === 'cosponsored') {
                 baseBills = allBills.filter(b => b.role === 'cosponsor');
             } else {
                 baseBills = allBills.filter(b => b.role === 'sponsor');
@@ -474,7 +474,7 @@
                     : `<p style="margin-top: 10px; font-size: 0.9rem;">None became law.</p>`;
             }
             // Cosponsored card
-            else if (activeCard === 'cosponsored') {
+            else if (activeRole === 'cosponsored' && !activeStatus) {
                 title = '🤝 Cosponsored Bills';
                 const coTotal = allBills.filter(b => b.role === 'cosponsor').length;
                 const coLaws = allBills.filter(b => b.role === 'cosponsor' && b.status === 'Became Law').length;
@@ -484,7 +484,7 @@
                 html += `<p style="margin-top: 10px; font-size: 0.9rem;">Cosponsoring is easy — just a signature showing support. Sponsored bills show what he actually prioritizes.</p>`;
             }
             // Law card
-            else if (activeCard === 'law') {
+            else if (activeStatus === 'law') {
                 title = '✅ Bills That Became Law';
                 const lawBills = allBills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
                 const postOffice = lawBills.filter(b => b.title && b.title.toLowerCase().includes('postal'));
@@ -498,7 +498,7 @@
                 }
             }
             // Died card
-            else if (activeCard === 'died') {
+            else if (activeStatus === 'died') {
                 title = '⚰️ Died in Committee';
                 const diedBills = allBills.filter(b => b.role === 'sponsor' && b.died_in_committee);
                 const totalSponsored = allBills.filter(b => b.role === 'sponsor').length;
@@ -698,17 +698,40 @@
             document.getElementById('bills-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
+        let activeRole = null;  // 'sponsored' or 'cosponsored'
+        let activeStatus = null; // 'law', 'died', or null
+        
         function filterByCard(type) {
-            document.getElementById('search-input').value = '';
-            document.getElementById('congress-filter').value = '';
-            document.getElementById('policy-filter').value = '';
-            document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
+            // Don't clear other filters
+            const card = document.getElementById(`card-${type}`);
             
-            if (activeCard === type) {
-                activeCard = null;
-            } else {
-                activeCard = type;
-                document.getElementById(`card-${type}`).classList.add('active');
+            if (type === 'sponsored' || type === 'cosponsored') {
+                // Toggle role filter
+                if (activeRole === type) {
+                    activeRole = null;
+                    card.classList.remove('active');
+                } else {
+                    // Clear other role
+                    document.getElementById('card-sponsored').classList.remove('active');
+                    document.getElementById('card-cosponsored').classList.remove('active');
+                    activeRole = type;
+                    card.classList.add('active');
+                }
+            } else if (type === 'law' || type === 'died') {
+                // Toggle status filter
+                if (activeStatus === type) {
+                    activeStatus = null;
+                    card.classList.remove('active');
+                } else {
+                    // Clear other status
+                    document.getElementById('card-law').classList.remove('active');
+                    document.getElementById('card-died').classList.remove('active');
+                    activeStatus = type;
+                    card.classList.add('active');
+                }
+            } else if (type === 'rate') {
+                // Rate card just shows stats, doesn't filter
+                return;
             }
             
             updateDynamicStats();
@@ -722,13 +745,22 @@
             
             let bills = allBills;
             
-            // Card filter
-            if (activeCard === 'sponsored') bills = bills.filter(b => b.role === 'sponsor');
-            else if (activeCard === 'cosponsored') bills = bills.filter(b => b.role === 'cosponsor');
-            else if (activeCard === 'law') bills = bills.filter(b => b.role === 'sponsor' && b.status === 'Became Law');
-            else if (activeCard === 'died') bills = bills.filter(b => b.role === 'sponsor' && b.died_in_committee);
-            else if (activeCard === 'rate') bills = bills.filter(b => b.role === 'sponsor');
-            else bills = bills.filter(b => b.role === 'sponsor');
+            // Role filter (sponsored vs cosponsored)
+            if (activeRole === 'sponsored') {
+                bills = bills.filter(b => b.role === 'sponsor');
+            } else if (activeRole === 'cosponsored') {
+                bills = bills.filter(b => b.role === 'cosponsor');
+            } else {
+                // Default to sponsored if no role selected
+                bills = bills.filter(b => b.role === 'sponsor');
+            }
+            
+            // Status filter (law vs died) - works with either role
+            if (activeStatus === 'law') {
+                bills = bills.filter(b => b.status === 'Became Law');
+            } else if (activeStatus === 'died') {
+                bills = bills.filter(b => b.died_in_committee);
+            }
             
             // Search
             if (searchTerm) {
@@ -764,7 +796,8 @@
             document.getElementById('congress-filter').value = '';
             document.getElementById('policy-filter').value = '';
             document.querySelectorAll('.stat-card').forEach(c => c.classList.remove('active'));
-            activeCard = null;
+            activeRole = null;
+            activeStatus = null;
             updateDynamicStats();
             applyFilters();
         }
