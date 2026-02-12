@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Analytics | MN-06 Watch</title>
+    <meta name="description" content="In-depth analysis of Rep. Tom Emmer's media appearances. Media friendliness, topic trends, and interview patterns.">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --navy: #1e3a5f;
+            --navy-dark: #152a45;
+            --navy-light: #2a4a73;
+            --gold: #d4a84b;
+            --gold-light: #e4bc6b;
+            --gold-dark: #b8923f;
+            --bg-dark: #0d1117;
+            --bg-card: #151c25;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --border: #2a3441;
+            --green: #2d5016;
+            --green-light: #86efac;
+            --red: #7f1d1d;
+            --red-light: #fca5a5;
+            --gray: #374151;
+            --gray-light: #d1d5db;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Top Navigation */
+        .top-nav {
+            background: var(--navy-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(21, 42, 69, 0.95);
+        }
+        
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .nav-logo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: var(--text-primary);
+            background: var(--navy);
+        }
+        
+        .nav-link.active {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        
+        .page-title span {
+            color: var(--gold);
+        }
+        
+        .page-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* Date Filter */
+        .filter-bar {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filter-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        .filter-input {
+            padding: 8px 12px;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: var(--gold);
+            color: var(--navy-dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        
+        .filter-btn:hover {
+            background: var(--gold-light);
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        
+        .stat-sublabel {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+        
+        /* Charts */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border);
+        }
+        
+        .chart-card.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 350px;
+        }
+        
+        .chart-container.tall {
+            height: 450px;
+        }
+        
+        /* Reset button overlaid inside chart */
+        .chart-reset-btn {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 10;
+            padding: 5px 14px;
+            background: rgba(21, 28, 37, 0.9);
+            color: var(--gold);
+            border: 1px solid var(--gold-dark);
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        
+        .chart-reset-btn.visible {
+            display: inline-block;
+        }
+        
+        .chart-reset-btn:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
+        /* Scrollable timeline wrapper */
+        .timeline-scroll-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+            position: relative;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+            border-radius: 3px;
+        }
+        
+        .timeline-scroll-wrapper::-webkit-scrollbar-thumb {
+            background: var(--gold-dark);
+            border-radius: 3px;
+        }
+        
+        .timeline-inner {
+            min-width: 100%;
+            height: 450px;
+            position: relative;
+        }
+        
+        .timeline-reset-btn {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 10;
+            padding: 5px 14px;
+            background: rgba(21, 28, 37, 0.9);
+            color: var(--gold);
+            border: 1px solid var(--gold-dark);
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+        }
+        
+        .timeline-reset-btn.visible {
+            display: inline-block;
+        }
+        
+        .timeline-reset-btn:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+        
+        /* Key Finding Box */
+        .key-finding {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid var(--gold-dark);
+        }
+        
+        .key-finding h3 {
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .key-finding p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+        }
+        
+        .key-finding strong {
+            color: var(--gold-light);
+        }
+        
+        /* Network List */
+        .network-list {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .network-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: var(--bg-dark);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        
+        .network-item:hover {
+            border-color: var(--gold);
+            background: rgba(212, 168, 75, 0.05);
+            transform: translateX(3px);
+        }
+        
+        /* Active filter indicator bar */
+        .active-filter-bar {
+            background: rgba(212, 168, 75, 0.1);
+            border: 1px solid var(--gold-dark);
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin-bottom: 20px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .active-filter-bar.visible {
+            display: flex;
+        }
+        
+        .active-filter-bar .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .active-filter-bar .filter-tag {
+            background: var(--navy);
+            color: var(--gold);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid var(--gold-dark);
+        }
+        
+        .active-filter-bar .clear-btn {
+            background: none;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-secondary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .active-filter-bar .clear-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        
+        .network-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .network-count {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+        
+        .media-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        
+        .media-badge.conservative {
+            background: var(--green);
+            color: var(--green-light);
+        }
+        
+        .media-badge.liberal {
+            background: var(--red);
+            color: var(--red-light);
+        }
+        
+        .media-badge.neutral {
+            background: var(--gray);
+            color: var(--gray-light);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 50px;
+        }
+        
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .stat-value {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Transcript Results List */
+        .transcript-results {
+            margin-top: 30px;
+        }
+        
+        .transcript-item {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .transcript-item:hover {
+            transform: translateX(4px);
+            border-color: var(--gold);
+            box-shadow: 0 4px 12px rgba(212, 168, 75, 0.15);
+        }
+        
+        .transcript-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 15px;
+        }
+        
+        .transcript-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        
+        .transcript-item-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .transcript-item-date {
+            color: var(--gold);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .transcript-item-summary {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .transcript-item-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .transcript-topic-tag {
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            background: var(--navy-dark);
+            color: var(--text-secondary);
+            border-radius: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .transcript-item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="https://mn06watch.substack.com" class="nav-brand">
+            <img src="https://mn06watch.com/transcripts/MN06Watch_Logo.png" alt="MN-06 Watch" class="nav-logo">
+            <span>MN-06 Watch</span>
+        </a>
+        <div class="nav-links">
+            <a href="https://mn06watch.com/" class="nav-link">Vote Tracker</a>
+            <a href="https://mn06watch.com/tweets/" class="nav-link">Tweet Archive</a>
+            <a href="https://mn06watch.com/transcripts/" class="nav-link">Transcripts</a>
+            <a href="./" class="nav-link active">Analytics</a>
+            <a href="https://mn06watch.substack.com/subscribe" class="nav-link">Subscribe</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="page-title">Transcript <span>Analytics</span></div>
+            <div class="page-subtitle">Data-driven analysis of Rep. Tom Emmer's media strategy</div>
+        </header>
+        
+        <div class="filter-bar">
+            <span class="filter-label">Date Range:</span>
+            <input type="date" id="start-date" class="filter-input">
+            <span class="filter-label">to</span>
+            <input type="date" id="end-date" class="filter-input">
+            <button onclick="applyFilter()" class="filter-btn">Apply Filter</button>
+            <button onclick="resetFilter()" class="filter-btn" style="background: var(--navy); color: var(--gold);">Reset</button>
+        </div>
+        
+        <div class="active-filter-bar" id="active-filter-bar">
+            <div class="filter-tags" id="active-filter-tags"></div>
+            <button class="clear-btn" onclick="clearFilters()">✕ Clear All Filters</button>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-transcripts">--</div>
+                <div class="stat-label">Total Transcripts</div>
+                <div class="stat-sublabel" id="date-range-label">All time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-time">--</div>
+                <div class="stat-label">Total Interview Time</div>
+                <div class="stat-sublabel">Hours:Minutes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="friendly-pct">--</div>
+                <div class="stat-label">Conservative Media</div>
+                <div class="stat-sublabel">Conservative outlets</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="hostile-count">0</div>
+                <div class="stat-label">Liberal Media</div>
+                <div class="stat-sublabel">CNN, MSNBC, etc.</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="network-count">--</div>
+                <div class="stat-label">Networks</div>
+                <div class="stat-sublabel">Unique outlets</div>
+            </div>
+        </div>
+        
+        <div class="key-finding">
+            <h3>🎯 Key Finding</h3>
+            <p>Rep. Tom Emmer has given <strong id="finding-hostile">zero</strong> interviews to hostile or challenging media outlets. <strong id="finding-friendly-pct">--</strong> of his media appearances are with friendly conservative outlets that rarely challenge his claims or hold him accountable.</p>
+        </div>
+        
+        <div class="chart-grid">
+            <div class="chart-card">
+                <div class="chart-title">Media Friendliness Breakdown</div>
+                <div class="chart-container">
+                    <canvas id="media-pie-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-mediaType" onclick="activeFilters.mediaType = null; applyAllFilters();">✕ Reset Media Filter</button>
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <div class="chart-title">Top Networks</div>
+                <div class="chart-container">
+                    <canvas id="network-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-network" onclick="activeFilters.network = null; applyAllFilters();">✕ Reset Network Filter</button>
+                </div>
+            </div>
+            
+            <div class="chart-card full-width">
+                <div class="chart-title">Top Topics Discussed</div>
+                <div class="chart-container">
+                    <canvas id="topics-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-topic" onclick="activeFilters.topic = null; applyAllFilters();">✕ Reset Topic Filter</button>
+                </div>
+            </div>
+            
+            <div class="chart-card full-width">
+                <div class="chart-title">Policy Categories</div>
+                <div class="chart-container">
+                    <canvas id="categories-bar-chart"></canvas>
+                    <button class="chart-reset-btn" id="reset-category" onclick="activeFilters.category = null; applyAllFilters();">✕ Reset Category Filter</button>
+                </div>
+            </div>
+            
+            <div class="chart-card full-width">
+                <div class="chart-title">Interview Timeline</div>
+                <div class="timeline-scroll-wrapper">
+                    <div class="timeline-inner" id="timeline-inner">
+                        <canvas id="timeline-chart"></canvas>
+                        <button class="timeline-reset-btn" id="reset-date" onclick="activeFilters.startDate = null; activeFilters.endDate = null; document.getElementById('start-date').value=''; document.getElementById('end-date').value=''; applyAllFilters();">✕ Reset Date Filter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card" style="position: relative;">
+            <div class="chart-title">Network Breakdown by Media Type</div>
+            <button class="chart-reset-btn" id="reset-network2" onclick="activeFilters.network = null; applyAllFilters();" style="position: absolute; top: 20px; right: 20px; bottom: auto; left: auto;">✕ Reset Network Filter</button>
+            <div class="network-list" id="network-list">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        
+
+        <div class="chart-card full-width transcript-results">
+            <div class="chart-title" id="results-title">All Transcripts (25)</div>
+            <div id="transcript-list">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        
+        <footer>
+            <p>Analytics powered by MN-06 Watch's transcript archive.</p>
+            <p style="margin-top: 8px;"><a href="https://mn06watch.com/">Vote Tracker</a> · <a href="https://mn06watch.com/transcripts/">Transcript Archive</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
+            <p style="margin-top: 10px;">© 2025 MN-06 Watch. Independent accountability journalism.</p>
+        </footer>
+    </div>
+    
+    <script>
+        let allTranscripts = [];
+        let filteredTranscripts = [];
+        let charts = {};
+        
+        // Track active filters for combining
+        let activeFilters = {
+            network: null,
+            topic: null,
+            category: null,
+            mediaType: null,
+            startDate: null,
+            endDate: null
+        };
+        
+        // ========================================
+        // NETWORK NORMALIZATION
+        // ========================================
+        const NETWORK_MAP = {
+            // Fox News Channel variations
+            'fox news channel': 'Fox News Channel',
+            'FOX NEWS CHANNEL': 'Fox News Channel',
+            
+            // Fox Business variations
+            'fox business network': 'Fox Business Network',
+            'FOX BUSINESS NETWORK': 'Fox Business Network',
+            
+            // Fox News Radio variations
+            'fox news radio': 'Fox News Radio',
+            'FOX NEWS RADIO': 'Fox News Radio',
+            'FOX RADIO': 'Fox News Radio',
+            
+            // Fox local
+            'fox 9 local': 'Fox 9 Local',
+            'FOX 9 LOCAL': 'Fox 9 Local',
+            'FOX 35 ORLANDO': 'Fox 35 Orlando',
+            
+            // Newsmax variations
+            'newsmax': 'Newsmax',
+            'NEWSMAX': 'Newsmax',
+            
+            // One America News
+            'one america news': 'One America News',
+            'ONE AMERICA NEWS': 'One America News',
+            
+            // 77 WABC variations
+            '77 wabc': '77 WABC',
+            '77 wabc radio': '77 WABC',
+            '77 WABC Radio': '77 WABC',
+            
+            // 890 WLS variations
+            '890 wls radio': '890 WLS',
+            '890 WLS RADIO': '890 WLS',
+            
+            // Salem variations
+            'salem news channel': 'Salem Radio Network',
+            'SALEM NEWS CHANNEL': 'Salem Radio Network',
+            'Salem Podcast Network': 'Salem Radio Network',
+            'salem radio network': 'Salem Radio Network',
+            
+            // KNSI variations
+            'knsi': 'KNSI',
+            'KNSI Local Radio': 'KNSI',
+            'knsi local radio': 'KNSI',
+            
+            // Bloomberg
+            'bloomberg': 'Bloomberg',
+            'BLOOMBERG': 'Bloomberg',
+            
+            // ABC variations
+            'abc': 'ABC',
+            'ABC NEWS': 'ABC',
+            'abc news': 'ABC',
+            
+            // Other capitalizations
+            'DAILY WIRE': 'Daily Wire',
+            'BREITBART': 'Breitbart',
+            'KTLK': 'KTLK',
+            'SIRIUSXM PATRIOT': 'SiriusXM Patriot',
+            'JOHN FREDERICKS MEDIA NETWORK': 'John Fredericks Media Network',
+            'NEWS TALK 1130': 'News Talk 1130',
+            'THE FLAG': 'The Flag',
+            "FLORIDA'S VOICE": "Florida's Voice",
+            'AM 560': 'AM 560',
+            'KDHL RADIO': 'KDHL Radio',
+            '1420 AM': '1420 AM',
+            'CNBC': 'CNBC',
+            'CNN': 'CNN',
+            'NBC': 'NBC',
+            'CBS': 'CBS',
+            
+            // Press conferences, speeches, committee — merge into "Official"
+            'press conference': 'Press Conference / Speech',
+            'PRESS CONFERENCE': 'Press Conference / Speech',
+            'Press Conference': 'Press Conference / Speech',
+            'floor speech': 'Press Conference / Speech',
+            'FLOOR SPEECH': 'Press Conference / Speech',
+            'SPEECH': 'Press Conference / Speech',
+            'HOUSE FLOOR': 'Press Conference / Speech',
+            'COMMITTEE': 'Committee Hearing',
+            'committee hearing': 'Committee Hearing',
+            'Committee Hearing': 'Committee Hearing',
+            'Committmee Meeting': 'Committee Hearing',
+        };
+        
+        // Media type overrides for entries that are missing or wrong
+        const MEDIA_TYPE_OVERRIDES = {
+            'Breitbart': 'Conservative',
+            'SiriusXM Patriot': 'Conservative',
+            'Daily Wire': 'Conservative',
+            'John Fredericks Media Network': 'Conservative',
+            'The Flag': 'Conservative',
+            "Florida's Voice": 'Conservative',
+            'News Talk 1130': 'Conservative',
+            'AM 560': 'Conservative',
+            'KDHL Radio': 'Conservative',
+            '1420 AM': 'Conservative',
+            'KTLK': 'Conservative',
+            'Press Conference / Speech': 'Neutral',
+            'Committee Hearing': 'Neutral',
+        };
+        
+        // Known network assignments for empty-network entries (by show name)
+        const SHOW_NETWORK_MAP = {
+            'House Leadership Stakeout': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'House Leadership on Democrat Shutdown': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'Protecting Illegals, Not Minnesotans': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'Promises Made, Promises Kept': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'Recognizing an outstanding caseworker': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'The Minnesota Sheriffs': { network: 'Press Conference / Speech', media_type: 'Neutral' },
+            'The Chris Stigall Show': { network: '1210 WPHT', media_type: 'Conservative' },
+            'Breitbart News Saturday': { network: 'Breitbart', media_type: 'Conservative' },
+            'the Ruthless Podcast': { network: 'Ruthless Podcast', media_type: 'Conservative' },
+            'Will Corrente': { network: 'The Source Podcast', media_type: 'Conservative' },
+            'Sid and Friends': { network: 'Newsmax', media_type: 'Conservative' },
+            'The John Fredericks Show': { network: 'John Fredericks Media Network', media_type: 'Conservative' },
+            'The Record': { network: 'The Record Podcast', media_type: 'Neutral' },
+            'The Matt Gaetz Show': { network: 'The Matt Gaetz Show', media_type: 'Conservative' },
+            'Bloomberg': { network: 'Bloomberg', media_type: 'Neutral' },
+            'Scott Jennings Show': { network: 'Salem Radio Network', media_type: 'Conservative' },
+            'SquawkBox': { network: 'CNBC', media_type: 'Neutral' },
+        };
+        
+        function normalizeNetwork(network, show) {
+            // If network is empty, try to match by show name
+            if (!network || network.trim() === '') {
+                for (const [showMatch, info] of Object.entries(SHOW_NETWORK_MAP)) {
+                    if (show && show.includes(showMatch)) {
+                        return info;
+                    }
+                }
+                // Fallback: label as "Unknown"
+                return { network: 'Unknown', media_type: 'Neutral' };
+            }
+            
+            // Normalize known network names
+            const normalized = NETWORK_MAP[network] || NETWORK_MAP[network.toLowerCase()] || network;
+            
+            return { network: normalized };
+        }
+        
+        function normalizeAllTranscripts(transcripts) {
+            return transcripts.map(t => {
+                const result = normalizeNetwork(t.network, t.show);
+                const normalized = { ...t, network: result.network };
+                
+                // Apply media_type override if we matched empty network
+                if (result.media_type) {
+                    normalized.media_type = result.media_type;
+                }
+                // Also apply media type overrides from our map
+                if (MEDIA_TYPE_OVERRIDES[normalized.network]) {
+                    normalized.media_type = MEDIA_TYPE_OVERRIDES[normalized.network];
+                }
+                return normalized;
+            });
+        }
+        
+        // ========================================
+        // DURATION PARSER (handles all formats)
+        // ========================================
+        function parseDurationToSeconds(duration) {
+            if (!duration) return 0;
+            
+            // Remove brackets: "[4:38]" → "4:38"
+            duration = duration.replace(/[\[\]]/g, '').trim();
+            
+            // Handle "~5 minutes" or "4.5 minutes" or "~2.5 minutes"
+            const minutesMatch = duration.match(/~?(\d+\.?\d*)\s*minutes?/i);
+            if (minutesMatch) {
+                return Math.round(parseFloat(minutesMatch[1]) * 60);
+            }
+            
+            // Handle MM:SS or HH:MM:SS
+            const parts = duration.split(':');
+            if (parts.length === 2) {
+                const mins = parseInt(parts[0]) || 0;
+                const secs = parseInt(parts[1]) || 0;
+                return mins * 60 + secs;
+            } else if (parts.length === 3) {
+                const hrs = parseInt(parts[0]) || 0;
+                const mins = parseInt(parts[1]) || 0;
+                const secs = parseInt(parts[2]) || 0;
+                return hrs * 3600 + mins * 60 + secs;
+            }
+            
+            return 0;
+        }
+        
+        // ========================================
+        // DATE FILTER (click timeline to filter)
+        // ========================================
+        function filterByDate(date) {
+            activeFilters.startDate = date;
+            activeFilters.endDate = date;
+            document.getElementById('start-date').value = date;
+            document.getElementById('end-date').value = date;
+            applyAllFilters();
+        }
+        
+        // Load data
+        async function loadData() {
+            try {
+                const response = await fetch('https://pub-19f43b48149546699964c5a800800a2f.r2.dev/transcripts/transcripts_data.json');
+                allTranscripts = normalizeAllTranscripts(await response.json());
+                
+                // Set date range inputs
+                const dates = allTranscripts.map(t => new Date(t.date));
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                
+                document.getElementById('start-date').value = minDate.toISOString().split('T')[0];
+                document.getElementById('end-date').value = maxDate.toISOString().split('T')[0];
+                
+                resetFilter();
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+        
+        function applyFilter() {
+            activeFilters.startDate = document.getElementById('start-date').value;
+            activeFilters.endDate = document.getElementById('end-date').value;
+            applyAllFilters();
+        }
+        
+        function resetFilter() {
+            clearFilters();
+        }
+        
+        function updateDashboard() {
+            updateStats();
+            updateCharts();
+            updateNetworkList();
+            displayTranscriptList();
+        }
+        
+        function updateStats() {
+            const total = filteredTranscripts.length;
+            const friendly = filteredTranscripts.filter(t => t.media_type === 'Conservative').length;
+            const hostile = filteredTranscripts.filter(t => t.media_type === 'Liberal').length;
+            const networks = new Set(filteredTranscripts.map(t => t.network)).size;
+            
+            const friendlyPct = total > 0 ? ((friendly / total) * 100).toFixed(0) : 0;
+            
+            // Calculate total interview time
+            let totalSeconds = 0;
+            filteredTranscripts.forEach(t => {
+                totalSeconds += parseDurationToSeconds(t.duration);
+            });
+            const totalHours = Math.floor(totalSeconds / 3600);
+            const totalMinutes = Math.floor((totalSeconds % 3600) / 60);
+            const timeDisplay = totalHours > 0 ? `${totalHours}h ${totalMinutes}m` : `${totalMinutes}m`;
+            
+            document.getElementById('total-transcripts').textContent = total;
+            document.getElementById('total-time').textContent = timeDisplay;
+            document.getElementById('friendly-pct').textContent = friendlyPct + '%';
+            document.getElementById('hostile-count').textContent = hostile;
+            document.getElementById('network-count').textContent = networks;
+            
+            document.getElementById('finding-hostile').textContent = hostile === 0 ? 'zero' : hostile;
+            document.getElementById('finding-friendly-pct').textContent = friendlyPct + '%';
+        }
+        
+        function updateCharts() {
+            createMediaPieChart();
+            createNetworkBarChart();
+            createTopicsBarChart();
+            createCategoriesBarChart();
+            createTimelineChart();
+        }
+        
+        function createMediaPieChart() {
+            const ctx = document.getElementById('media-pie-chart');
+            
+            if (charts.mediaPie) charts.mediaPie.destroy();
+            
+            const total = filteredTranscripts.length;
+            const counts = {
+                'Conservative': filteredTranscripts.filter(t => t.media_type === 'Conservative').length,
+                'Neutral': filteredTranscripts.filter(t => t.media_type === 'Neutral').length,
+                'Liberal': filteredTranscripts.filter(t => t.media_type === 'Liberal').length
+            };
+            
+            const pcts = {
+                'Conservative': total > 0 ? ((counts.Conservative / total) * 100).toFixed(1) : 0,
+                'Neutral': total > 0 ? ((counts.Neutral / total) * 100).toFixed(1) : 0,
+                'Liberal': total > 0 ? ((counts.Liberal / total) * 100).toFixed(1) : 0
+            };
+            
+            charts.mediaPie = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [`🟢 Conservative (${pcts.Conservative}%)`, `⚪ Neutral (${pcts.Neutral}%)`, `🔴 Liberal (${pcts.Liberal}%)`],
+                    datasets: [{
+                        data: [counts.Conservative, counts.Neutral, counts.Liberal],
+                        backgroundColor: ['#86efac', '#d1d5db', '#fca5a5'],
+                        borderColor: ['#2d5016', '#374151', '#7f1d1d'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const mediaTypes = ['Conservative', 'Neutral', 'Liberal'];
+                            const mediaType = mediaTypes[index];
+                            filterByMediaType(mediaType);
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#e6edf3',
+                                font: { size: 14 },
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => {
+                                    const count = ctx.raw;
+                                    const pct = total > 0 ? ((count / total) * 100).toFixed(1) : 0;
+                                    return `${count} transcripts (${pct}%)`;
+                                },
+                                afterLabel: () => 'Click to filter'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createNetworkBarChart() {
+            const ctx = document.getElementById('network-bar-chart');
+            
+            if (charts.networkBar) charts.networkBar.destroy();
+            
+            const networkCounts = {};
+            filteredTranscripts.forEach(t => {
+                networkCounts[t.network] = (networkCounts[t.network] || 0) + 1;
+            });
+            
+            const sorted = Object.entries(networkCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 8);
+            
+            charts.networkBar = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(([network]) => network.length > 25 ? network.substring(0, 25) + '...' : network),
+                    datasets: [{
+                        label: 'Appearances',
+                        data: sorted.map(([_, count]) => count),
+                        backgroundColor: '#d4a84b',
+                        borderColor: '#b8923f',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const network = sorted[index][0];
+                            filterByNetwork(network);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: () => 'Click to filter'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#8b949e' },
+                            grid: { color: '#2a3441' }
+                        },
+                        y: {
+                            ticks: { color: '#e6edf3', font: { size: 11 } },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createTopicsBarChart() {
+            const ctx = document.getElementById('topics-bar-chart');
+            
+            if (charts.topicsBar) charts.topicsBar.destroy();
+            
+            const topicCounts = {};
+            filteredTranscripts.forEach(t => {
+                (t.topics || []).forEach(topic => {
+                    const normalized = topic.toLowerCase().trim();
+                    topicCounts[normalized] = (topicCounts[normalized] || 0) + 1;
+                });
+            });
+            
+            const sorted = Object.entries(topicCounts)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 15);
+            
+            charts.topicsBar = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(([topic]) => topic),
+                    datasets: [{
+                        label: 'Mentions',
+                        data: sorted.map(([_, count]) => count),
+                        backgroundColor: '#d4a84b',
+                        borderColor: '#b8923f',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const topic = sorted[index][0];
+                            filterByTopic(topic);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: () => 'Click to filter'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#e6edf3', maxRotation: 45, minRotation: 45 },
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: { color: '#8b949e' },
+                            grid: { color: '#2a3441' }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createCategoriesBarChart() {
+            const ctx = document.getElementById('categories-bar-chart');
+            
+            if (charts.categoriesBar) charts.categoriesBar.destroy();
+            
+            const categoryCounts = {};
+            filteredTranscripts.forEach(t => {
+                (t.topic_categories || []).forEach(cat => {
+                    categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+                });
+            });
+            
+            const sorted = Object.entries(categoryCounts)
+                .sort((a, b) => b[1] - a[1]);
+            
+            // Color coding by category type
+            const categoryColors = {};
+            sorted.forEach(([cat]) => {
+                if (cat.startsWith('People:')) categoryColors[cat] = '#8b5cf6';
+                else if (cat.includes('State') || cat.includes('District')) categoryColors[cat] = '#06b6d4';
+                else categoryColors[cat] = '#d4a84b';
+            });
+            
+            charts.categoriesBar = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sorted.map(([cat]) => cat.length > 30 ? cat.substring(0, 30) + '...' : cat),
+                    datasets: [{
+                        label: 'Transcripts',
+                        data: sorted.map(([_, count]) => count),
+                        backgroundColor: sorted.map(([cat]) => categoryColors[cat] || '#d4a84b'),
+                        borderColor: sorted.map(([cat]) => {
+                            if (cat.startsWith('People:')) return '#7c3aed';
+                            if (cat.includes('State') || cat.includes('District')) return '#0891b2';
+                            return '#b8923f';
+                        }),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const category = sorted[index][0];
+                            filterByCategory(category);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `${ctx.raw} transcripts`,
+                                afterLabel: () => 'Click to filter'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#8b949e' },
+                            grid: { color: '#2a3441' }
+                        },
+                        y: {
+                            ticks: { color: '#e6edf3', font: { size: 11 } },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function createTimelineChart() {
+            const ctx = document.getElementById('timeline-chart');
+            
+            if (charts.timeline) charts.timeline.destroy();
+            
+            // Group by date
+            const dateCounts = {};
+            filteredTranscripts.forEach(t => {
+                dateCounts[t.date] = (dateCounts[t.date] || 0) + 1;
+            });
+            
+            const sorted = Object.entries(dateCounts).sort((a, b) => new Date(a[0]) - new Date(b[0]));
+            
+            // Dynamically size the inner container based on data points
+            // Min 100% width, but grow to ~50px per data point for readability
+            const innerEl = document.getElementById('timeline-inner');
+            const wrapperWidth = innerEl.parentElement.clientWidth;
+            const dynamicWidth = Math.max(wrapperWidth, sorted.length * 50);
+            innerEl.style.width = dynamicWidth + 'px';
+            
+            // Size the canvas explicitly so it fills the inner container
+            ctx.style.width = dynamicWidth + 'px';
+            ctx.style.height = '440px';
+            ctx.width = dynamicWidth;
+            ctx.height = 440;
+            
+            // Also include year in labels when data spans multiple years
+            const dates = sorted.map(([d]) => new Date(d));
+            const years = new Set(dates.map(d => d.getFullYear()));
+            const showYear = years.size > 1;
+            
+            // Use responsive:false so Chart.js respects our explicit canvas size
+            charts.timeline = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: sorted.map(([date]) => {
+                        const d = new Date(date);
+                        const fmt = { month: 'short', day: 'numeric' };
+                        if (showYear) fmt.year = '2-digit';
+                        return d.toLocaleDateString('en-US', fmt);
+                    }),
+                    datasets: [{
+                        label: 'Interviews',
+                        data: sorted.map(([_, count]) => count),
+                        backgroundColor: 'rgba(212, 168, 75, 0.2)',
+                        borderColor: '#d4a84b',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        fill: true,
+                        pointRadius: 5,
+                        pointHoverRadius: 8,
+                        pointBackgroundColor: '#d4a84b',
+                        pointBorderColor: '#b8923f',
+                        pointHoverBackgroundColor: '#e4bc6b'
+                    }]
+                },
+                options: {
+                    responsive: false,
+                    maintainAspectRatio: false,
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const index = elements[0].index;
+                            const date = sorted[index][0];
+                            filterByDate(date);
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: (items) => {
+                                    const idx = items[0].dataIndex;
+                                    return new Date(sorted[idx][0]).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+                                },
+                                label: (ctx) => `${ctx.raw} interview${ctx.raw !== 1 ? 's' : ''}`,
+                                afterLabel: () => 'Click to filter'
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#e6edf3' },
+                            grid: { color: '#2a3441' }
+                        },
+                        y: {
+                            ticks: { color: '#8b949e', stepSize: 1 },
+                            grid: { color: '#2a3441' }
+                        }
+                    }
+                }
+            });
+        }
+        
+        function updateNetworkList() {
+            const container = document.getElementById('network-list');
+            
+            const networkData = {};
+            filteredTranscripts.forEach(t => {
+                if (!networkData[t.network]) {
+                    networkData[t.network] = {
+                        count: 0,
+                        mediaType: t.media_type
+                    };
+                }
+                networkData[t.network].count++;
+            });
+            
+            const sorted = Object.entries(networkData)
+                .sort((a, b) => b[1].count - a[1].count);
+            
+            container.innerHTML = sorted.map(([network, data]) => {
+                const badgeClass = data.mediaType ? data.mediaType.toLowerCase() : 'neutral';
+                const emoji = badgeClass === 'conservative' ? '🟢' : badgeClass === 'liberal' ? '🔴' : '⚪';
+                const escapedNetwork = network.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                
+                return `
+                    <div class="network-item" onclick="filterByNetwork('${escapedNetwork}')" style="cursor: pointer;" title="Click to filter">
+                        <div>
+                            <span class="network-name">${network}</span>
+                            <span class="media-badge ${badgeClass}">${emoji} ${data.mediaType || 'Neutral'}</span>
+                        </div>
+                        <span class="network-count">${data.count}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+
+        function applyAllFilters() {
+            // Start with all transcripts
+            let results = [...allTranscripts];
+            
+            // Apply network filter
+            if (activeFilters.network) {
+                results = results.filter(t => t.network === activeFilters.network);
+            }
+            
+            // Apply topic filter
+            if (activeFilters.topic) {
+                results = results.filter(t => 
+                    t.topics && t.topics.some(topicItem => 
+                        topicItem.toLowerCase().trim() === activeFilters.topic.toLowerCase().trim()
+                    )
+                );
+            }
+            
+            // Apply category filter
+            if (activeFilters.category) {
+                results = results.filter(t => 
+                    t.topic_categories && t.topic_categories.includes(activeFilters.category)
+                );
+            }
+            
+            // Apply media type filter
+            if (activeFilters.mediaType) {
+                results = results.filter(t => t.media_type === activeFilters.mediaType);
+            }
+            
+            // Apply date range filter
+            if (activeFilters.startDate || activeFilters.endDate) {
+                results = results.filter(t => {
+                    const tDate = new Date(t.date);
+                    if (activeFilters.startDate && tDate < new Date(activeFilters.startDate)) return false;
+                    if (activeFilters.endDate && tDate > new Date(activeFilters.endDate)) return false;
+                    return true;
+                });
+            }
+            
+            filteredTranscripts = results;
+            updateFilterLabel();
+            updateDashboard();
+        }
+        
+        function updateFilterLabel() {
+            const parts = [];
+            if (activeFilters.network) parts.push(`Network: ${activeFilters.network}`);
+            if (activeFilters.topic) parts.push(`Topic: ${activeFilters.topic}`);
+            if (activeFilters.category) parts.push(`Category: ${activeFilters.category}`);
+            if (activeFilters.mediaType) parts.push(`Media: ${activeFilters.mediaType}`);
+            if (activeFilters.startDate || activeFilters.endDate) {
+                if (activeFilters.startDate === activeFilters.endDate && activeFilters.startDate) {
+                    const dateStr = new Date(activeFilters.startDate + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    parts.push(`Date: ${dateStr}`);
+                } else {
+                    const start = activeFilters.startDate || 'beginning';
+                    const end = activeFilters.endDate || 'present';
+                    parts.push(`Date: ${start} to ${end}`);
+                }
+            }
+            
+            const label = parts.length > 0 ? parts.join(' • ') : 'All Transcripts';
+            document.getElementById('date-range-label').textContent = label;
+            
+            // Update the active filter bar
+            const filterBar = document.getElementById('active-filter-bar');
+            const filterTags = document.getElementById('active-filter-tags');
+            if (parts.length > 0) {
+                filterBar.classList.add('visible');
+                filterTags.innerHTML = parts.map(p => `<span class="filter-tag">${p}</span>`).join('');
+            } else {
+                filterBar.classList.remove('visible');
+                filterTags.innerHTML = '';
+            }
+            
+            // Show/hide per-chart reset buttons
+            const toggleBtn = (id, active) => {
+                const btn = document.getElementById(id);
+                if (btn) btn.classList.toggle('visible', !!active);
+            };
+            toggleBtn('reset-mediaType', activeFilters.mediaType);
+            toggleBtn('reset-network', activeFilters.network);
+            toggleBtn('reset-network2', activeFilters.network);
+            toggleBtn('reset-topic', activeFilters.topic);
+            toggleBtn('reset-category', activeFilters.category);
+            toggleBtn('reset-date', activeFilters.startDate || activeFilters.endDate);
+        }
+        
+        function filterByNetwork(network) {
+            activeFilters.network = network;
+            applyAllFilters();
+        }
+        
+        function filterByTopic(topic) {
+            activeFilters.topic = topic;
+            applyAllFilters();
+        }
+        
+        function filterByCategory(category) {
+            activeFilters.category = category;
+            applyAllFilters();
+        }
+        
+        function filterByMediaType(mediaType) {
+            activeFilters.mediaType = mediaType;
+            applyAllFilters();
+        }
+        
+        function clearFilters() {
+            activeFilters = {
+                network: null,
+                topic: null,
+                category: null,
+                mediaType: null,
+                startDate: null,
+                endDate: null
+            };
+            document.getElementById('start-date').value = '';
+            document.getElementById('end-date').value = '';
+            applyAllFilters();
+        }
+        
+
+        function displayTranscriptList() {
+            const container = document.getElementById('transcript-list');
+            const title = document.getElementById('results-title');
+            
+            // Update title
+            const count = filteredTranscripts.length;
+            const filterLabel = document.getElementById('date-range-label').textContent;
+            if (filterLabel === 'All Transcripts') {
+                title.textContent = `All Transcripts (${count})`;
+            } else {
+                title.textContent = `Filtered Transcripts (${count}) - ${filterLabel}`;
+            }
+            
+            if (count === 0) {
+                container.innerHTML = '<p style="text-align: center; color: var(--text-secondary); padding: 40px;">No transcripts match the current filter.</p>';
+                return;
+            }
+            
+            // Sort by date (newest first)
+            const sorted = [...filteredTranscripts].sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            container.innerHTML = sorted.map(t => {
+                const date = new Date(t.date + 'T12:00:00').toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+                
+                const topics = (t.topics || []).slice(0, 5).map(topic => 
+                    `<span class="transcript-topic-tag">${topic}</span>`
+                ).join('');
+                
+                const categories = (t.topic_categories || []).slice(0, 4).map(cat =>
+                    `<span class="transcript-topic-tag" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd; border-color: rgba(139, 92, 246, 0.3); cursor: pointer;" onclick="event.stopPropagation(); filterByCategory('${cat}')">${cat}</span>`
+                ).join('');
+                
+                const mediaTypeClass = (t.media_type || 'Neutral').toLowerCase();
+                const mediaEmoji = mediaTypeClass === 'conservative' ? '🟢' : mediaTypeClass === 'liberal' ? '🔴' : '⚪';
+                
+                return `
+                    <div class="transcript-item" onclick="window.open('../${t.filename}', '_blank')">
+                        <div class="transcript-item-header">
+                            <div>
+                                <div class="transcript-item-title">${t.show}</div>
+                                <div class="transcript-item-meta">
+                                    <span class="transcript-item-date">${date}</span>
+                                    <span>${t.network} ${mediaEmoji}</span>
+                                    ${t.duration ? `<span>${t.duration}</span>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="transcript-item-summary">${t.summary || 'No summary available.'}</div>
+                        
+                        ${categories ? `<div class="transcript-item-topics">${categories}</div>` : ''}
+                        ${topics ? `<div class="transcript-item-topics">${topics}</div>` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // Initialize
+        loadData();
+    </script>
+</body>
+</html>
+
