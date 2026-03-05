@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oversight of What, Exactly? | MN-06 Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a365d;
+  --navy-dark: #0f2240;
+  --navy-mid: #1e4a7a;
+  --gold: #d69e2e;
+  --gold-light: #ecc94b;
+  --gold-pale: #fefce8;
+  --white: #ffffff;
+  --off-white: #f7fafc;
+  --light-gray: #edf2f7;
+  --mid-gray: #718096;
+  --text: #2d3748;
+  --text-light: #4a5568;
+  --red: #c53030;
+  --red-bg: #fff5f5;
+  --green: #276749;
+  --green-bg: #f0fff4;
+  --border: #e2e8f0;
+  --purple: #6b46c1;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Serif 4', Georgia, serif; background: var(--off-white); color: var(--text); line-height: 1.75; }
+
+/* ── NAV ── */
+nav {
+  background: var(--navy);
+  padding: 0.65rem 2rem;
+  display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+  border-bottom: 3px solid var(--gold);
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-logo { font-family:'Playfair Display',serif; font-weight:900; font-size:1.1rem; color:var(--white); text-decoration:none; }
+.nav-logo span { color:var(--gold); }
+nav a.nav-link { color:#8fafc8; text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:.07em; text-transform:uppercase; transition:color .2s; }
+nav a.nav-link:hover { color:var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy-dark);
+  padding: 4rem 2rem 3.5rem;
+  border-bottom: 4px solid var(--gold);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background: repeating-linear-gradient(-55deg, transparent 0, transparent 60px, rgba(214,158,46,.035) 60px, rgba(214,158,46,.035) 61px);
+  pointer-events:none;
+}
+.hero-inner { max-width:860px; margin:0 auto; position:relative; }
+.kicker {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold); background:rgba(214,158,46,.12); border:1px solid rgba(214,158,46,.25);
+  padding:.25rem .75rem; margin-bottom:1.25rem;
+}
+.kicker::before { content:'◆'; font-size:.45rem; }
+.hero h1 {
+  font-family:'Playfair Display',serif; font-size:clamp(2.2rem,5.5vw,3.5rem);
+  font-weight:900; color:var(--white); line-height:1.1; margin-bottom:1rem; max-width:760px;
+}
+.hero h1 em { color:var(--gold); font-style:italic; }
+.hero-deck { font-size:1.1rem; color:#8fafc8; max-width:680px; margin-bottom:1.75rem; font-weight:300; line-height:1.65; }
+.byline-row { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+.byline { font-family:'JetBrains Mono',monospace; font-size:.65rem; color:var(--mid-gray); letter-spacing:.04em; }
+.byline strong { color:var(--gold); }
+.verdict-badge { font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.1em; text-transform:uppercase; background:var(--gold); color:var(--navy-dark); padding:.25rem .8rem; font-weight:700; }
+
+/* ── FLIP TILES ── */
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  max-width: 860px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(26,54,93,.1);
+}
+.flip-tile { height: 140px; perspective: 800px; cursor: pointer; background: var(--white); }
+.flip-tile-inner {
+  position: relative; width: 100%; height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-tile.flipped .flip-tile-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back {
+  position: absolute; inset: 0;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 1rem; text-align: center;
+}
+.flip-front { background: var(--white); }
+.flip-back { background: var(--navy); transform: rotateY(180deg); }
+.flip-tile:hover .flip-front { background: var(--gold-pale); }
+.flip-num { font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1; margin-bottom:.3rem; }
+.flip-num.red { color:var(--red); }
+.flip-num.gold { color:var(--gold); }
+.flip-num.navy { color:var(--navy); }
+.flip-label { font-family:'JetBrains Mono',monospace; font-size:.59rem; letter-spacing:.07em; text-transform:uppercase; color:var(--mid-gray); line-height:1.5; }
+.flip-hint { font-family:'JetBrains Mono',monospace; font-size:.52rem; color:var(--gold); letter-spacing:.06em; margin-top:.4rem; opacity:0.7; }
+.flip-back-num { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:900; color:var(--gold); line-height:1; margin-bottom:.3rem; }
+.flip-back-label { font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.06em; text-transform:uppercase; color:#8fafc8; line-height:1.5; }
+.flip-back-sub { font-size:.72rem; color:#a0c4d8; margin-top:.3rem; font-style:italic; font-family:'Source Serif 4',serif; line-height:1.4; }
+@media(max-width:600px){ .flip-grid{grid-template-columns:1fr 1fr} .flip-tile{height:130px} }
+
+/* ── ARTICLE ── */
+.article { max-width:860px; margin:0 auto; padding:0 2rem 5rem; }
+.section-label {
+  font-family:'JetBrains Mono',monospace; font-size:.63rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); margin-top:3rem; margin-bottom:.5rem;
+  display:flex; align-items:center; gap:.6rem;
+}
+.section-label::after { content:''; flex:1; height:1px; background:rgba(214,158,46,.3); }
+h2 { font-family:'Playfair Display',serif; font-size:1.7rem; color:var(--navy); margin-bottom:1rem; line-height:1.25; }
+h3 { font-family:'Playfair Display',serif; font-size:1.15rem; color:var(--navy-mid); margin:1.75rem 0 .6rem; }
+p { margin-bottom:1.1rem; font-size:1.02rem; }
+
+/* ── MISSION BOX ── */
+.mission-box { background:var(--navy-dark); border-left:5px solid var(--gold); padding:1.75rem 2rem; margin:2rem 0; }
+.mission-label { font-family:'JetBrains Mono',monospace; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:.7rem; }
+.mission-box p { color:var(--white); font-size:1.08rem; font-style:italic; margin:0; line-height:1.6; }
+.mission-box cite { display:block; font-family:'JetBrains Mono',monospace; font-size:.62rem; color:#8fafc8; margin-top:.7rem; font-style:normal; letter-spacing:.04em; }
+
+/* ── COMPARE TABS ── */
+.compare-widget { background:var(--white); border:1px solid var(--border); margin:2rem 0; box-shadow:0 2px 12px rgba(26,54,93,.08); }
+.compare-tabs { display:flex; border-bottom:2px solid var(--border); background:var(--off-white); flex-wrap:wrap; }
+.compare-tab {
+  flex:1; min-width:120px; padding:.8rem 1rem;
+  font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.06em; text-transform:uppercase;
+  border:none; background:none; cursor:pointer; color:var(--mid-gray);
+  border-bottom:3px solid transparent; margin-bottom:-2px; transition:all .2s; text-align:center;
+}
+.compare-tab:hover { color:var(--navy); background:var(--light-gray); }
+.compare-tab.active { color:var(--navy); border-bottom-color:var(--gold); background:var(--white); font-weight:700; }
+.compare-panel { display:none; padding:1.5rem; }
+.compare-panel.active { display:block; }
+.compare-note { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--mid-gray); margin-bottom:1rem; letter-spacing:.04em; }
+.hearing-list { list-style:none; }
+.hearing-row { display:flex; align-items:flex-start; gap:1rem; padding:.8rem 0; border-bottom:1px solid var(--border); }
+.hearing-row:last-child { border-bottom:none; }
+.hearing-dot { width:9px; height:9px; border-radius:50%; margin-top:.45rem; flex-shrink:0; }
+.dot-target { background:var(--red); }
+.dot-federal { background:var(--green); }
+.dot-none { background:#cbd5e0; }
+.hearing-text { font-size:.93rem; color:var(--text); flex:1; line-height:1.5; }
+.hearing-text strong { color:var(--navy); }
+.hearing-tag { font-family:'JetBrains Mono',monospace; font-size:.58rem; letter-spacing:.06em; padding:.15rem .5rem; white-space:nowrap; flex-shrink:0; }
+.tag-dem { background:var(--red-bg); color:var(--red); border:1px solid #fed7d7; }
+.tag-fed { background:var(--green-bg); color:var(--green); border:1px solid #c6f6d5; }
+.tag-missing { background:var(--light-gray); color:var(--mid-gray); border:1px solid var(--border); }
+
+/* ── HEARING TIMELINE ── */
+.timeline { position:relative; margin:2rem 0; }
+.timeline::before { content:''; position:absolute; left:1rem; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--gold), var(--navy)); }
+.tl-item { display:flex; gap:1.5rem; margin-bottom:1.5rem; position:relative; }
+.tl-dot { width:1rem; height:1rem; border-radius:50%; flex-shrink:0; margin-top:.35rem; position:relative; z-index:1; border:2px solid var(--white); }
+.tl-dot.hearing { background:var(--red); box-shadow:0 0 0 2px var(--red); }
+.tl-dot.action { background:var(--green); box-shadow:0 0 0 2px var(--green); }
+.tl-dot.nothing { background:#cbd5e0; box-shadow:0 0 0 2px #cbd5e0; }
+.tl-content { flex:1; background:var(--white); border:1px solid var(--border); padding:1rem 1.25rem; }
+.tl-date { font-family:'JetBrains Mono',monospace; font-size:.6rem; color:var(--gold); letter-spacing:.08em; text-transform:uppercase; margin-bottom:.25rem; }
+.tl-title { font-family:'Playfair Display',serif; font-weight:700; color:var(--navy); font-size:.98rem; margin-bottom:.35rem; }
+.tl-body { font-size:.88rem; color:var(--text-light); line-height:1.55; }
+.tl-tag { display:inline-block; font-family:'JetBrains Mono',monospace; font-size:.58rem; letter-spacing:.06em; padding:.15rem .5rem; margin-top:.4rem; }
+.tag-hearing { background:var(--red-bg); color:var(--red); border:1px solid #fed7d7; }
+.tag-action { background:var(--green-bg); color:var(--green); border:1px solid #c6f6d5; }
+.tag-nothing { background:var(--light-gray); color:var(--mid-gray); border:1px solid var(--border); }
+.tag-partial { background:#fefcbf; color:#744210; border:1px solid #f6e05e; }
+
+/* ── RECEIPT CARDS ── */
+.receipt-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:1rem; margin:1.5rem 0; }
+.receipt-card {
+  border:1px solid var(--border); background:var(--white); padding:1.25rem;
+  position:relative; cursor:pointer;
+  transition:box-shadow .25s, transform .25s, border-color .25s;
+}
+.receipt-card:hover { box-shadow:0 6px 24px rgba(26,54,93,.15); transform:translateY(-3px); border-color:var(--navy); }
+.receipt-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.receipt-card.pardons::before { background:var(--red); }
+.receipt-card.contract::before { background:var(--gold); }
+.receipt-card.federal::before { background:var(--navy); }
+.receipt-card.doge::before { background:var(--purple); }
+.receipt-card.ballroom::before { background:var(--gold-light); }
+.receipt-card.ice::before { background:#2c7a7b; }
+.receipt-card.ai::before { background:#0077b6; }
+.receipt-icon { font-size:1.6rem; margin-bottom:.5rem; display:block; }
+.receipt-title { font-family:'Playfair Display',serif; font-size:.98rem; font-weight:700; color:var(--navy); margin-bottom:.3rem; line-height:1.3; }
+.receipt-amount { font-family:'JetBrains Mono',monospace; font-size:1.3rem; font-weight:700; color:var(--red); margin-bottom:.35rem; }
+.receipt-amount.gold { color:var(--gold); }
+.receipt-amount.navy { color:var(--navy); }
+.receipt-amount.teal { color:#2c7a7b; }
+.receipt-amount.blue { color:#0077b6; }
+.receipt-desc { font-size:.87rem; color:var(--text-light); line-height:1.55; }
+.click-hint { font-family:'JetBrains Mono',monospace; font-size:.58rem; color:var(--gold); letter-spacing:.06em; margin-top:.75rem; display:flex; align-items:center; gap:.3rem; }
+.click-hint::before { content:'▶'; font-size:.5rem; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  display:none; position:fixed; inset:0; background:rgba(15,34,64,.85);
+  z-index:1000; align-items:center; justify-content:center; padding:1rem;
+}
+.modal-overlay.open { display:flex; }
+.modal {
+  background:var(--white); max-width:680px; width:100%; max-height:85vh;
+  overflow-y:auto; position:relative; border-top:5px solid var(--gold);
+  box-shadow:0 20px 60px rgba(0,0,0,.4);
+  animation:modalIn .2s ease;
+}
+@keyframes modalIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+.modal-close {
+  position:absolute; top:.75rem; right:.75rem; width:2rem; height:2rem;
+  background:var(--navy); color:var(--white); border:none; cursor:pointer;
+  font-size:1rem; display:flex; align-items:center; justify-content:center;
+}
+.modal-header { background:var(--navy-dark); padding:1.5rem; }
+.modal-kicker { font-family:'JetBrains Mono',monospace; font-size:.6rem; color:var(--gold); letter-spacing:.1em; text-transform:uppercase; margin-bottom:.4rem; }
+.modal-title { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--white); font-weight:900; line-height:1.2; }
+.modal-amount { font-family:'JetBrains Mono',monospace; font-size:1.6rem; font-weight:700; color:var(--gold); margin-top:.5rem; }
+.modal-body { padding:1.5rem; }
+.modal-body p { font-size:.95rem; margin-bottom:.9rem; }
+.modal-list { list-style:none; margin:.75rem 0 1rem; }
+.modal-list li { font-size:.93rem; padding:.45rem 0; border-bottom:1px solid var(--border); padding-left:1.2rem; position:relative; color:var(--text); }
+.modal-list li::before { content:'→'; position:absolute; left:0; color:var(--gold); font-size:.85rem; }
+.modal-source { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--mid-gray); border-top:1px solid var(--border); padding-top:.75rem; margin-top:.75rem; letter-spacing:.03em; }
+
+/* ── DHS SECTION ── */
+.dhs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin:1.5rem 0; }
+.dhs-card { background:var(--white); border:1px solid var(--border); border-left:4px solid var(--red); padding:1.1rem 1.25rem; transition:box-shadow .2s; }
+.dhs-card:hover { box-shadow:0 4px 16px rgba(197,48,48,.12); }
+.dhs-card-num { font-family:'JetBrains Mono',monospace; font-size:1.5rem; font-weight:700; color:var(--red); line-height:1; margin-bottom:.3rem; }
+.dhs-card-title { font-family:'Playfair Display',serif; font-size:.95rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; }
+.dhs-card-body { font-size:.86rem; color:var(--text-light); line-height:1.55; }
+.dhs-source { font-family:'JetBrains Mono',monospace; font-size:.58rem; color:var(--mid-gray); margin-top:.5rem; }
+
+/* ── PULLQUOTE ── */
+.pullquote {
+  border-left:5px solid var(--gold); background:var(--navy-dark);
+  padding:1.5rem 1.75rem 1.5rem 2.5rem; margin:2rem 0; position:relative;
+}
+.pullquote::before {
+  content:'\201C'; font-family:'Playfair Display',serif; font-size:5rem;
+  color:var(--gold); position:absolute; top:-1rem; left:1rem; line-height:1; opacity:.4; pointer-events:none;
+}
+.pullquote p { font-size:1.08rem; font-style:italic; color:#e2eaf4; margin-bottom:.5rem; }
+.pullquote cite { font-family:'JetBrains Mono',monospace; font-size:.62rem; color:var(--gold); letter-spacing:.06em; display:block; }
+
+/* ── BAR CHART ── */
+.bar-chart { margin:1.5rem 0; }
+.bar-row { display:flex; align-items:center; gap:1rem; margin-bottom:.85rem; }
+.bar-label { font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.03em; min-width:210px; color:var(--text); line-height:1.4; }
+.bar-track { flex:1; height:30px; background:var(--light-gray); position:relative; border-radius:2px; overflow:hidden; }
+.bar-fill {
+  height:100%; display:flex; align-items:center; padding-left:.6rem;
+  font-family:'JetBrains Mono',monospace; font-size:.66rem; font-weight:700;
+  color:var(--white); transition:width 1.1s cubic-bezier(.16,1,.3,1); width:0; border-radius:2px;
+}
+.bar-fill.navy { background:var(--navy); }
+.bar-fill.red { background:var(--red); }
+.bar-fill.gold { background:var(--gold); color:var(--navy-dark); }
+.bar-fill.blue { background:#0077b6; }
+/* Hatched disputed bar */
+.bar-fill.disputed {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(26,54,93,0.35) 0px,
+    rgba(26,54,93,0.35) 6px,
+    rgba(26,54,93,0.12) 6px,
+    rgba(26,54,93,0.12) 12px
+  );
+  border: 1px dashed rgba(26,54,93,0.4);
+  color: var(--navy);
+}
+.bar-disputed-label {
+  font-family:'JetBrains Mono',monospace; font-size:.58rem; color:var(--mid-gray);
+  font-style:italic; white-space:nowrap; flex-shrink:0;
+}
+
+/* ── VERDICT / CONCLUSION ── */
+.verdict-box { background:var(--navy); border:2px solid var(--gold); padding:2rem; margin:2.5rem 0; }
+.verdict-box h3 { font-family:'Playfair Display',serif; color:var(--gold); font-size:1.4rem; margin-bottom:.7rem; }
+.verdict-box p { color:var(--white); max-width:600px; margin:0 auto; font-size:1.02rem; }
+
+/* ── FINAL CHARGE ── */
+.final-charge {
+  background: var(--navy-dark);
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+  padding: 2.5rem 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+.final-charge p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--white);
+  line-height: 1.55;
+  max-width: 640px;
+  margin: 0 auto 1rem;
+}
+.final-charge p strong { color: var(--gold); }
+.final-charge .receipts-not-rage {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-top: 1.25rem;
+}
+
+/* ── SOURCES ── */
+.sources-section { margin-top:3rem; border-top:2px solid var(--border); padding-top:1.5rem; }
+.sources-toggle { background:none; border:1px solid var(--border); padding:.6rem 1.25rem; font-family:'JetBrains Mono',monospace; font-size:.68rem; letter-spacing:.06em; cursor:pointer; color:var(--navy); display:flex; align-items:center; gap:.5rem; transition:all .2s; }
+.sources-toggle:hover { background:var(--navy); color:var(--white); }
+.sources-list { display:none; margin-top:1rem; list-style:none; }
+.sources-list.open { display:block; }
+.sources-list li { font-size:.82rem; padding:.4rem 0; border-bottom:1px solid var(--border); color:var(--text-light); font-family:'JetBrains Mono',monospace; font-size:.65rem; letter-spacing:.02em; }
+.sources-list li::before { content:'→ '; color:var(--gold); }
+
+/* ── FOOTER ── */
+footer { background:var(--navy-dark); border-top:3px solid var(--gold); padding:2rem; text-align:center; margin-top:2rem; }
+footer p { font-family:'JetBrains Mono',monospace; font-size:.63rem; color:var(--mid-gray); letter-spacing:.05em; margin-bottom:.3rem; }
+footer a { color:var(--gold); text-decoration:none; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.hero-inner > * { opacity:0; animation:fadeUp .5s ease forwards; }
+.hero-inner > *:nth-child(1){animation-delay:.05s}
+.hero-inner > *:nth-child(2){animation-delay:.15s}
+.hero-inner > *:nth-child(3){animation-delay:.25s}
+.hero-inner > *:nth-child(4){animation-delay:.35s}
+
+@media(max-width:600px){
+  .bar-label{min-width:130px;font-size:.58rem}
+  .receipt-grid,.dhs-grid{grid-template-columns:1fr}
+  nav{gap:1rem}
+  .compare-tabs{flex-wrap:wrap}
+  .compare-tab{min-width:100px;font-size:.58rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://mn06watch.com" class="nav-logo">MN-06 <span>Watch</span></a>
+  <a href="https://mn06watch.com" class="nav-link">Vote Tracker</a>
+  <a href="https://mn06watch.com/sponsorships/" class="nav-link">Bills</a>
+  <a href="https://mn06watch.com/transcripts/" class="nav-link">Transcripts</a>
+  <a href="https://mn06watch.substack.com" class="nav-link">Newsletter</a>
+  <a href="https://thewatchdogs.us" class="nav-link">TheWatchdogs.us</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Investigation &nbsp;·&nbsp; March 5, 2026</div>
+    <h1>Oversight of <em>What,</em> Exactly?</h1>
+    <p class="hero-deck">The House Oversight Committee exists to hold the federal government accountable. Fifty-plus hearings. Forty bills. Thirty-five depositions. Here is what they chose to scrutinize — and what they looked away from.</p>
+    <div class="byline-row">
+      <p class="byline">By <strong>Chad Maschke</strong> &nbsp;·&nbsp; Founder & Editor-in-Chief, MN-06 Watch &nbsp;·&nbsp; TheWatchdogs LLC</p>
+      <span class="verdict-badge">Accountability Issue</span>
+    </div>
+  </div>
+</div>
+
+<!-- FLIP TILES -->
+<div class="flip-grid">
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num navy">50+</div>
+        <div class="flip-label">Committee hearings<br>held in 2025</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">~40</div>
+        <div class="flip-back-label">Bills passed<br>35 depositions</div>
+        <div class="flip-back-sub">Mix of real reform & partisan investigations. Autopen hearings: 0 findings.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num red">4</div>
+        <div class="flip-label">Hearings on<br>one state's fraud</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">Jan–Mar</div>
+        <div class="flip-back-label">2 Committees<br>MN Only</div>
+        <div class="flip-back-sub">Prosecutions already underway before Congress convened.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num red">$1.3B</div>
+        <div class="flip-label">Fraud restitution<br>wiped by pardons</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">0</div>
+        <div class="flip-back-label">Oversight hearings<br>on pardons</div>
+        <div class="flip-back-sub">Over half of individual pardons went to white-collar criminals.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num gold">$200M</div>
+        <div class="flip-label">DoD contract<br>terminated — Anthropic</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">0</div>
+        <div class="flip-back-label">Oversight hearings<br>on DoD action</div>
+        <div class="flip-back-sub">Hegseth invoked supply-chain authority never before used on an American company.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num red">30+</div>
+        <div class="flip-label">Deaths in ICE<br>custody, 2025</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">0</div>
+        <div class="flip-back-label">Oversight hearings<br>on ICE deaths</div>
+        <div class="flip-back-sub">Record year. One ruled homicide. Inspections down 36%.</div>
+      </div>
+    </div>
+  </div>
+  <div class="flip-tile" onclick="this.classList.toggle('flipped')">
+    <div class="flip-tile-inner">
+      <div class="flip-front">
+        <div class="flip-num gold">$240M</div>
+        <div class="flip-label">Inauguration fund<br>— record, no rules</div>
+        <div class="flip-hint">flip ▸</div>
+      </div>
+      <div class="flip-back">
+        <div class="flip-back-num">0</div>
+        <div class="flip-back-label">Oversight hearings<br>on donor favors</div>
+        <div class="flip-back-sub">16 of 24 ballroom donors hold federal contracts. FT: "culture of quid pro quo."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<div class="article">
+
+  <!-- S1: THE MISSION -->
+  <div class="section-label">Section 01 &nbsp; The Mandate</div>
+  <h2>What the Committee Is Actually For</h2>
+
+  <p>The House Committee on Oversight and Government Reform is the most powerful investigative committee in Congress. It has subpoena authority over cabinet secretaries, federal contractors, and agency heads. It can compel documents, demand sworn testimony, and refer findings for prosecution. No other committee has broader jurisdiction over how the federal government spends money, exercises power, and treats the people it serves.</p>
+
+  <div class="mission-box">
+    <div class="mission-label">Official Mission Statement — oversight.house.gov</div>
+    <p>"Our mission statement is to ensure the efficiency, effectiveness, and accountability of the <strong>federal government</strong> and all its agencies. We provide a check and balance on the role and power of Washington — and a voice to the people it serves."</p>
+    <cite>— House Committee on Oversight and Government Reform, about page (current)</cite>
+  </div>
+
+  <p>In 2025, under Chairman James Comer, the committee held more than 50 hearings, passed nearly 40 bills, and conducted 35 depositions. That's a serious workload. Some of it was genuinely good-government work: the <strong>GOOD Act</strong> (bipartisan — Comer + Ro Khanna, requiring agencies to publish regulatory guidance in one place), the <strong>Federal Contractor Cybersecurity Vulnerability Reduction Act</strong> (bipartisan — Mace + Shontel Brown), a <strong>Whistleblower Protections for Contractors Act</strong>, and the <strong>SAMOSA Act</strong> on federal software waste. Real work. Not flashy. Exactly the kind of thing the committee is for.</p>
+
+  <p>But a committee is defined not just by what it examines — but by what it chooses to ignore. And the gap between the committee's stated mandate and its actual hearing calendar is the subject of this piece.</p>
+
+  <!-- COMPARE WIDGET -->
+  <div class="compare-widget">
+    <div class="compare-tabs">
+      <button class="compare-tab active" onclick="showPanel('p-dem',this)">Dem Targets</button>
+      <button class="compare-tab" onclick="showPanel('p-fed',this)">Federal Oversight</button>
+      <button class="compare-tab" onclick="showPanel('p-miss',this)">What Was Missing</button>
+    </div>
+    <div id="p-dem" class="compare-panel active">
+      <p class="compare-note">HIGHLIGHTED IN COMMITTEE'S OWN 2025 YEAR-IN-REVIEW / HEARING RECORD</p>
+      <ul class="hearing-list">
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>"Exposing the Biden Autopen Presidency"</strong> — Multiple hearings. No legislation. No referrals. No findings.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>Clinton Epstein Depositions</strong> — Both Bill and Hillary Clinton deposed. No Republican figures named in Epstein files received similar scrutiny.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>"Biden's Green New Deal Scam"</strong> — Listed as accomplishment in Comer's year-end review.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>"Debunking Democrats' Latest Hoax Against President Trump"</strong> — Listed as accomplishment. Verbatim.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>"Holding Sanctuary Mayors Accountable"</strong> — Targeting Democratic state and local officials.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-target"></span><span class="hearing-text"><strong>Minnesota Fraud, Parts I–IV</strong> (Jan. 7, Jan. 21, March 4) — Real fraud, already prosecuted. State officials testifying before a federal committee while federal accountability issues go unexamined.</span><span class="hearing-tag tag-dem">Dem Target</span></li>
+      </ul>
+    </div>
+    <div id="p-fed" class="compare-panel">
+      <p class="compare-note">FEDERAL OVERSIGHT ACTUALLY CONDUCTED (PARTIAL LIST)</p>
+      <ul class="hearing-list">
+        <li class="hearing-row"><span class="hearing-dot dot-federal"></span><span class="hearing-text"><strong>DOGE Subcommittee</strong> — Federal real estate, improper payments, NGO funding. Focused on Biden-era spending targets.</span><span class="hearing-tag tag-fed">Federal</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-federal"></span><span class="hearing-text"><strong>"Curbing Federal Fraud" (Jan. 13, 2026)</strong> — Tools to detect fraud in federal programs. Constructive, limited scope.</span><span class="hearing-tag tag-fed">Federal</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-federal"></span><span class="hearing-text"><strong>DoD Background Check IT (Feb. 24)</strong> — Oversight of failing background check system. Bipartisan.</span><span class="hearing-tag tag-fed">Federal</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-federal"></span><span class="hearing-text"><strong>Bondi Epstein Subpoena (March 4)</strong> — Bipartisan 24–19. First real accountability action against a current administration official. Took over a year.</span><span class="hearing-tag tag-fed">Federal</span></li>
+      </ul>
+    </div>
+    <div id="p-miss" class="compare-panel">
+      <p class="compare-note">FEDERAL ACCOUNTABILITY SUBJECTS — ZERO HEARINGS AS OF MARCH 4, 2026</p>
+      <ul class="hearing-list">
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>Trump pardons wiping $1.3B fraud restitution</strong> — Over half of 88 individual pardons for white-collar crime. Fraud victims received nothing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>Noem $220M no-bid DHS contracts</strong> — Firm formed 11 days before $143M award. Grilled by GOP's own Kennedy. No Oversight hearing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>DOGE access to Treasury payment systems</strong> — Unelected operatives. Democrats blocked from requesting hearing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>30+ ICE custody deaths in 2025 (record)</strong> — One ruled homicide. ICE inspections down 36%. No oversight hearing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>Trump inauguration / ballroom donations ($240M+)</strong> — 16 of 24 donors hold federal contracts. FT: "dozens" of donors received favorable government action. No hearing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+        <li class="hearing-row"><span class="hearing-dot dot-none"></span><span class="hearing-text"><strong>DoD blacklisting Anthropic — a legal first</strong> — Supply-chain designation never used on an American company. AI used in active combat strikes the same day. No hearing.</span><span class="hearing-tag tag-missing">No Hearing</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- S2: EXHIBIT A — MINNESOTA -->
+  <div class="section-label">Section 02 &nbsp; Exhibit A</div>
+  <h2>Minnesota: Four Hearings, One State, Already Prosecuted</h2>
+
+  <p>Minnesota pandemic fraud — real, documented, 98 federal indictments and 64 convictions — became the committee's flagship accountability story in 2026. That scrutiny wasn't wrong. It was selective. The prosecutions were already underway under Biden's DOJ before a single congressional subpoena was issued. And the same committee that found the bandwidth for four hearings on a state government's pandemic failures could not find time for a single hearing on $1.3 billion in pardoned fraud restitution.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot hearing"></div>
+      <div class="tl-content">
+        <div class="tl-date">January 7, 2026 — House Oversight Committee</div>
+        <div class="tl-title">Minnesota Fraud Hearing, Part I</div>
+        <div class="tl-body">Witnesses: Three Republican Minnesota state legislators (Robbins, Hudson, Rarick) testified that Walz knew about fraud "from the very beginning." No Democratic state officials. CNN: the hearing "delivered more political sparring than clarity." On the same day, an ICE officer shot and killed Renee Good during Operation Metro Surge — a motion to subpoena DHS for shooting footage failed on a tie vote.</div>
+        <span class="tl-tag tag-hearing">Hearing</span>
+        <span class="tl-tag tag-partial">Limited scope</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot hearing"></div>
+      <div class="tl-content">
+        <div class="tl-date">January 21, 2026 — House Judiciary Subcommittee (Biggs)</div>
+        <div class="tl-title">"When Public Funds Are Abused" — Nick Shirley Testifies</div>
+        <div class="tl-body">Witnesses: YouTuber Nick Shirley (100M+ views on Minnesota fraud video); Jennifer Larson, CEO of Holland Autism Center; Scott Dexter, former MN fraud investigator. POGO's Dylan Hedtler-Gaudette testified that CBS News and MN Inspector General could not substantiate Shirley's video — security footage showed children at one allegedly empty daycare. Rep. Raskin: MN fraud was already being investigated and prosecuted under Biden before Republicans seized on it. One concrete federal consequence: DHS froze child care payments, affecting legitimate providers alongside fraudulent ones.</div>
+        <span class="tl-tag tag-hearing">Hearing</span>
+        <span class="tl-tag tag-nothing">YouTuber as key witness</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot nothing"></div>
+      <div class="tl-content">
+        <div class="tl-date">January–February 2026 — No federal accountability action</div>
+        <div class="tl-title">$1.3B pardoned. Noem contract awarded. ICE deaths mounting.</div>
+        <div class="tl-body">During this same window: Trump pardoned Trevor Milton (wiping ~$700M restitution after $1.8M donation). 30+ deaths in ICE custody reported. DHS cut detention inspections by 36%. Congress voted $28B more for ICE and CBP. The Pentagon demanded Anthropic remove privacy safeguards from its AI contract. No Oversight hearings on any of these.</div>
+        <span class="tl-tag tag-nothing">No hearing</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot hearing"></div>
+      <div class="tl-content">
+        <div class="tl-date">March 4, 2026 — House Oversight Committee</div>
+        <div class="tl-title">Minnesota Fraud Hearing, Part II — Walz & Ellison Testify</div>
+        <div class="tl-body">Gov. Walz and AG Ellison sworn testimony. Republicans pressed both officials on the "court order" claim (Walz overstated; a judge sanctioned MDE $47K for contempt, but never formally ordered restart). Rep. Perry challenged Ellison's "not a serious thing" quote — clipping two sentences from a CNN interview in which Ellison was calling Republican criticism political, not the fraud itself. One committee member: "Fraud is not a victimless crime." The same committee has held zero hearings on $1.3B in pardoned fraud restitution.</div>
+        <span class="tl-tag tag-hearing">Hearing</span>
+        <span class="tl-tag tag-partial">One-sided scope</span>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot action"></div>
+      <div class="tl-content">
+        <div class="tl-date">March 4, 2026 — Same Committee, Same Day</div>
+        <div class="tl-title">Epstein: Bondi Subpoenaed 24–19</div>
+        <div class="tl-body">In a rare bipartisan vote, five Republicans (Mace, Boebert, Burchett, Cloud, Perry) joined Democrats to subpoena AG Bondi on Epstein file compliance. Bondi missed a statutory deadline, distributed largely public information to conservative influencers in February 2025, and her DOJ was later found to have tracked lawmakers' own search histories while reviewing files. The committee previously deposed both Clintons. No Republican figures named in the files received similar scrutiny.</div>
+        <span class="tl-tag tag-action">Action taken</span>
+        <span class="tl-tag tag-partial">Bipartisan, late</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- S3: THE RECEIPTS -->
+  <div class="section-label">Section 03 &nbsp; The Receipts</div>
+  <h2>Federal Fraud. Federal Money. No Oversight.</h2>
+
+  <p>Everything below is squarely federal — federal pardons, federal contracts, federal AI policy, federal custody. Each falls within the committee's explicit mandate. Each received zero hearings. Click any card for the full receipt.</p>
+
+  <div class="receipt-grid">
+
+    <div class="receipt-card ai" onclick="openModal('m-anthropic')">
+      <span class="receipt-icon">🤖</span>
+      <div class="receipt-title">DoD vs. Anthropic — Breaking This Week</div>
+      <div class="receipt-amount blue">$200M + a Legal First</div>
+      <div class="receipt-desc">Pentagon blacklisted an American AI company as a "supply chain risk" — a designation reserved for foreign adversaries — because it refused to enable mass domestic surveillance or fully autonomous weapons. Hours later, that same AI was used in U.S. strikes on Iran.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card pardons" onclick="openModal('m-pardons')">
+      <span class="receipt-icon">⚖️</span>
+      <div class="receipt-title">Trump Pardons — Fraud Wiped Clean</div>
+      <div class="receipt-amount">$1.3B+</div>
+      <div class="receipt-desc">Over half of individual pardons were for white-collar crime. Restitution — money owed directly to fraud victims — erased. David Gentile: 10,000 investors. Jason Galanis: union workers and a Native American tribe.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card contract" onclick="openModal('m-noem')">
+      <span class="receipt-icon">📋</span>
+      <div class="receipt-title">Noem $220M No-Bid DHS Contract</div>
+      <div class="receipt-amount gold">$220M</div>
+      <div class="receipt-desc">Safe America Media: formed 11 days before $143M award. Subcontractor CEO married to Noem's former spokesperson. GOP Sen. Kennedy grilled Noem for three minutes. Zero Oversight Committee action.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card ice" onclick="openModal('m-ice')">
+      <span class="receipt-icon">🚔</span>
+      <div class="receipt-title">ICE / CBP Operations — Deaths & Violations</div>
+      <div class="receipt-amount teal">30+ Deaths</div>
+      <div class="receipt-desc">Record deaths in ICE custody in 2025. One ruled homicide by asphyxia. 97+ court order violations in MN alone. 36% drop in facility inspections. Noem blocked unannounced congressional visits.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card ballroom" onclick="openModal('m-ballroom')">
+      <span class="receipt-icon">🏛️</span>
+      <div class="receipt-title">Inauguration & Ballroom Donors — Favors Returned</div>
+      <div class="receipt-amount gold">$240M</div>
+      <div class="receipt-desc">Record $239M inauguration fund. No rules on spending. 16 of 24 ballroom donors hold federal contracts. FT analysis: "dozens" of donors received pardons, dropped investigations, or favorable policy.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card doge" onclick="openModal('m-doge')">
+      <span class="receipt-icon">💻</span>
+      <div class="receipt-title">DOGE Treasury Access</div>
+      <div class="receipt-amount" style="color:var(--purple);font-family:'JetBrains Mono',monospace;font-size:1.2rem;font-weight:700;margin-bottom:.35rem;">Unelected</div>
+      <div class="receipt-desc">Unconfirmed DOGE operatives accessed Treasury payment systems. The committee's own DOGE subcommittee focused exclusively on Biden-era spending. Democrats blocked from requesting hearings.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+    <div class="receipt-card federal" onclick="openModal('m-epstein')">
+      <span class="receipt-icon">📁</span>
+      <div class="receipt-title">Epstein Files — DOJ Obstruction</div>
+      <div class="receipt-amount navy">Subpoenaed Yesterday</div>
+      <div class="receipt-desc">Bondi distributed binders of public info to influencers in Feb. 2025. DOJ missed statutory deadline. Files released in batches. DOJ tracked lawmakers' own search histories. Finally subpoenaed 24–19 — after over a year.</div>
+      <div class="click-hint">Click for full receipt</div>
+    </div>
+
+  </div>
+
+  <!-- S4: DHS UNDER NOEM -->
+  <div class="section-label">Section 04 &nbsp; DHS Under Noem</div>
+  <h2>One Department. Six Accountability Failures. Zero Hearings.</h2>
+  <p>DHS Secretary Noem testified before the <em>Senate</em> Judiciary Committee on March 3, 2026 — the day before the Minnesota hearing. Republicans on that committee were harsher than anything heard in the Oversight room the following day. The House Oversight Committee, with direct jurisdiction over DHS operations and federal contracts, has held zero hearings on any of the following.</p>
+
+  <div class="dhs-grid">
+    <div class="dhs-card">
+      <div class="dhs-card-num">$220M</div>
+      <div class="dhs-card-title">No-Bid Contracts to Political Allies</div>
+      <div class="dhs-card-body">Safe America Media (11 days old when it received $143M) and Strategy Group (subcontractor whose CEO married Noem's ex-spokesperson). GOP Sen. Kennedy: "My research shows you did not bid them out." No Oversight hearing.</div>
+      <div class="dhs-source">ProPublica, Nov. 2025 · Senate Judiciary, March 3, 2026</div>
+    </div>
+    <div class="dhs-card">
+      <div class="dhs-card-num">30+</div>
+      <div class="dhs-card-title">Deaths in ICE Custody — Record Year</div>
+      <div class="dhs-card-body">2025 was the deadliest year in ICE custody in at least two decades. One death — Geraldo Lunas Campos — ruled homicide by asphyxia. ICE's initial account contradicted by autopsy. GOP Sen. Tillis called for Noem to resign.</div>
+      <div class="dhs-source">POGO Investigates, Jan. 2026 · Just Security, Feb. 2026</div>
+    </div>
+    <div class="dhs-card">
+      <div class="dhs-card-num">97+</div>
+      <div class="dhs-card-title">Court Orders Violated in Minnesota Alone</div>
+      <div class="dhs-card-body">A federal judge documented at minimum 97 court order violations in 66 MN cases, with 113 additional violations identified. DHS separately admitted 52 violations in NJ courts. POGO called for Noem's impeachment.</div>
+      <div class="dhs-source">POGO, "Noem Must Go," March 3, 2026</div>
+    </div>
+    <div class="dhs-card">
+      <div class="dhs-card-num">36%</div>
+      <div class="dhs-card-title">Drop in ICE Detention Inspections</div>
+      <div class="dhs-card-body">In March 2025, Noem dismantled the DHS Office for Civil Rights and Civil Liberties and the detention oversight office. "Alligator Alcatraz" (FL) received zero inspections in all of 2025. Congressional visits then blocked with 7-day notice requirements.</div>
+      <div class="dhs-source">POGO / American University IRW, Jan. 2026</div>
+    </div>
+    <div class="dhs-card">
+      <div class="dhs-card-num">170+</div>
+      <div class="dhs-card-title">U.S. Citizens Detained by ICE</div>
+      <div class="dhs-card-body">ProPublica documented 170+ U.S. citizens detained by ICE. A secret May 2025 ICE memo — revealed by whistleblowers in Jan. 2026 — instructed agents they could enter homes without judicial warrants, contradicting ICE's own training materials and the Fourth Amendment.</div>
+      <div class="dhs-source">ProPublica, Oct. 2025 · Whistleblower disclosure, Jan. 2026</div>
+    </div>
+    <div class="dhs-card">
+      <div class="dhs-card-num">2</div>
+      <div class="dhs-card-title">People Shot Dead by DHS in Minneapolis</div>
+      <div class="dhs-card-body">Renee Good (Jan. 7) and Alex Pretti (Jan. 24) were both killed during MN ICE operations. Noem labeled both aggressors; accounts were later contradicted in court. Motion to subpoena DHS footage failed on a tie vote at the Jan. 7 Oversight hearing itself.</div>
+      <div class="dhs-source">PBS NewsHour, March 3, 2026 · POGO, March 3, 2026</div>
+    </div>
+  </div>
+
+  <!-- S5: THE STANDARD -->
+  <div class="section-label">Section 05 &nbsp; The Standard</div>
+  <h2>"Fraud Is Not a Victimless Crime."</h2>
+
+  <p>During yesterday's hearing, at least one Republican committee member pressed Walz and Ellison on the point that fraud is not victimless — that real people lost real money and real trust. It's a correct and important argument.</p>
+
+  <div class="pullquote">
+    <p>Fraud is not a victimless crime. Real families lost real money. Children lost access to real services. Public trust in real programs was damaged.</p>
+    <cite>— Republican committee member, House Oversight hearing, March 4, 2026</cite>
+  </div>
+
+  <p>Apply that standard universally for a moment. David Gentile defrauded more than 10,000 investors of $1.6 billion — veterans, farmers, teachers. Jason Galanis stole from union pension funds and a Native American tribe. Paul Walczak took money from his employees' paychecks to buy a yacht. Trevor Milton lied to thousands of retail investors who lost real savings.</p>
+
+  <p>All four were pardoned. Their restitution obligations — money owed directly to their victims — were erased by executive order. The House Judiciary Democrats analysis confirms those pardons will also reduce funding to the Victims of Crime Act grant program, the primary federal source of support for domestic violence shelters, sexual assault centers, and child abuse services.</p>
+
+  <p>Those are real victims too. They just don't get four congressional hearings.</p>
+
+  <!-- S6: THE NUMBERS -->
+  <div class="section-label">Section 06 &nbsp; Comparative Scale</div>
+  <h2>How the Numbers Stack Up</h2>
+
+  <p>All figures are proven, charged, or publicly documented. The $9B Minnesota estimate — U.S. Attorney Joe Thompson's preliminary figure across 14 Medicaid programs, disputed by state officials and not yet charged — is addressed in the note below but does not appear in the bars. The $1.3B pardon figure is court-ordered restitution erased: the legal floor, not the ceiling, since restitution orders are routinely reduced through plea deals and ability-to-pay assessments. The actual fraud committed is higher.</p>
+
+  <style>
+  .dual-chart { margin: 1.5rem 0; }
+  .chart-section-head {
+    font-family: 'JetBrains Mono', monospace; font-size: .58rem; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--mid-gray);
+    margin: 1.1rem 0 .5rem; display: flex; align-items: center; gap: .5rem;
+  }
+  .chart-section-head::after { content:''; flex:1; height:1px; background: var(--border); }
+  .chart-row { display: flex; align-items: center; gap: 1rem; margin-bottom: .75rem; }
+  .chart-lbl {
+    font-family: 'JetBrains Mono', monospace; font-size: .63rem;
+    letter-spacing: .02em; min-width: 230px; color: var(--text); line-height: 1.4;
+  }
+  .chart-lbl.indent { padding-left: 1.1rem; color: var(--mid-gray); }
+  .chart-track {
+    flex: 1; height: 32px; background: var(--light-gray);
+    position: relative; border-radius: 2px; overflow: hidden;
+  }
+  .chart-bar {
+    height: 100%; display: flex; align-items: center; padding: 0 .6rem;
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem; font-weight: 700;
+    color: var(--white); border-radius: 2px;
+    transition: width 1.1s cubic-bezier(.16,1,.3,1); width: 0;
+    white-space: nowrap;
+  }
+  .chart-bar.red   { background: var(--red); }
+  .chart-bar.gold  { background: var(--gold); color: var(--navy-dark); }
+  .chart-bar.navy  { background: var(--navy); }
+  .chart-bar.blue  { background: #0077b6; }
+  .chart-tag {
+    font-family: 'JetBrains Mono', monospace; font-size: .55rem;
+    color: var(--mid-gray); font-style: italic; white-space: nowrap; flex-shrink: 0;
+  }
+  .chart-tag.green { color: var(--green); font-style: normal; }
+  .chart-divider { border: none; border-top: 1px dashed var(--border); margin: .4rem 0 .8rem; }
+  .scale-note {
+    font-family: 'JetBrains Mono', monospace; font-size: .58rem;
+    color: var(--mid-gray); font-style: italic; text-align: right; margin-bottom: .4rem;
+  }
+  </style>
+
+  <div class="dual-chart" id="barChart">
+
+    <div class="chart-section-head">Minnesota — proven federal charges only</div>
+    <p class="scale-note">Scale: $1.6B = full width (Gentile)</p>
+
+    <div class="chart-row">
+      <span class="chart-lbl">MN fraud — DOJ proven charges (FOF)</span>
+      <div class="chart-track">
+        <div class="chart-bar navy" data-w="22">$250–350M</div>
+      </div>
+      <span class="chart-tag green">✓ charged</span>
+    </div>
+
+    <hr class="chart-divider">
+    <div class="chart-section-head">Federal items — zero oversight hearings</div>
+    <p class="scale-note">Scale: $1.6B = full width</p>
+
+    <div class="chart-row">
+      <span class="chart-lbl">David Gentile fraud — pardoned</span>
+      <div class="chart-track">
+        <div class="chart-bar red" data-w="100">$1.6B fraud committed</div>
+      </div>
+      <span class="chart-tag green">✓ convicted</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-lbl indent">↳ restitution order erased</span>
+      <div class="chart-track">
+        <div class="chart-bar red" style="opacity:.5" data-w="100">erased by pardon</div>
+      </div>
+      <span class="chart-tag">est. $1B+</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-lbl">Trevor Milton (Nikola) — pardoned</span>
+      <div class="chart-track">
+        <div class="chart-bar red" data-w="44">$675–700M restitution wiped</div>
+      </div>
+      <span class="chart-tag green">✓ convicted</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-lbl">Noem no-bid DHS contracts</span>
+      <div class="chart-track">
+        <div class="chart-bar gold" data-w="14">$220M</div>
+      </div>
+      <span class="chart-tag green">✓ documented</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-lbl">Trump inauguration fund (unregulated)</span>
+      <div class="chart-track">
+        <div class="chart-bar gold" data-w="15">$240M</div>
+      </div>
+      <span class="chart-tag green">✓ documented</span>
+    </div>
+    <div class="chart-row">
+      <span class="chart-lbl">Anthropic — DoD contract terminated</span>
+      <div class="chart-track">
+        <div class="chart-bar blue" data-w="13">$200M contract</div>
+      </div>
+      <span class="chart-tag green">✓ documented</span>
+    </div>
+
+  </div>
+  <p style="font-size:.75rem;color:var(--mid-gray);font-family:'JetBrains Mono',monospace;margin-top:.75rem;line-height:1.7;background:var(--light-gray);padding:.75rem;border-left:3px solid var(--gold);">ON THE $9B FIGURE: U.S. Attorney Joe Thompson estimated total MN fraud across 14 Medicaid programs could reach $9B. This figure is a preliminary investigative estimate, not a charged amount — and state officials including Gov. Walz have disputed it. The proven FOF charges total ~$250M (DOJ/FBI confirmed); an expanded federal estimate reaches ~$350M as of early 2026. This chart uses only the proven number. · ON RESTITUTION: The $1.3B figure (House Judiciary Dems, June 2025) is court-ordered restitution erased by pardon — the legal minimum victims were owed. Actual fraud committed by pardoned individuals is higher; restitution orders are routinely reduced through plea deals and ability-to-pay assessments. Gentile's exact restitution order was not publicly disclosed before his commutation.</p>
+
+  <!-- S7: CONCLUSION -->
+  <div class="section-label">Section 07 &nbsp; The Conclusion</div>
+  <h2>The Committee Had the Authority. It Made a Choice.</h2>
+
+  <p>This is not an argument that Minnesota fraud didn't deserve scrutiny. It did. Real children lost access to real services. Real federal dollars were stolen. Ninety-eight indictments and 64 convictions say the system worked — largely before Congress got involved.</p>
+
+  <p>What this is: a documented record of what happens when the most powerful oversight committee in Congress functions as opposition research with subpoena power. Four hearings on a state government's pandemic failures. Zero on the Pentagon blacklisting an American company for refusing to enable domestic surveillance. Zero on thirty-plus people who died in federal custody. Zero on a cabinet secretary who awarded $220 million in no-bid contracts to her political allies — a fact her own party's senators found worth pressing her on.</p>
+
+  <p>The Epstein subpoena yesterday — 24–19, five Republicans crossing over — is the closest thing to genuine federal accountability this committee has produced against a sitting official in this Congress. It took over a year of stonewalling, a missed statutory deadline, and a revelation that the DOJ was tracking lawmakers' own reading habits to get there.</p>
+
+  <div class="final-charge">
+    <p>Congress is not the only check on executive power. But it is the <strong>first</strong> one — the one closest to the people, the one with the widest jurisdiction, the one explicitly designed to ask hard questions of whoever holds power. That job doesn't pause when the party that controls the committee also controls the executive branch. If anything, that's exactly when it matters most.</p>
+    <p>The committee's own charter says it provides "a check and balance on the role and power of Washington." There is no asterisk. There is no exception for when your side is the one being checked.</p>
+    <p>Thirty people died in federal custody last year. One death was ruled a homicide. A Defense Secretary invoked emergency procurement law against an American company — for refusing to help surveil Americans. A record $239 million moved from corporate donors to an inaugural fund with no spending rules, and sixteen of those donors received favorable federal action.</p>
+    <p><strong>Someone is supposed to ask about that. Under oath. On the record.</strong></p>
+    <div class="receipts-not-rage">MN-06 Watch · Receipts, Not Rage · TheWatchdogs LLC</div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources-section">
+    <button class="sources-toggle" onclick="toggleSources(this)"><span>▶</span> Show All Sources (27)</button>
+    <ul class="sources-list" id="sourcesList">
+      <li>House Oversight Committee — Mission Statement, oversight.house.gov/about</li>
+      <li>Comer Year-in-Review 2025, oversight.house.gov, December 2025</li>
+      <li>CNN Takeaways — Minnesota Fraud Hearing Part I, January 7, 2026</li>
+      <li>NewsNation / Washington Examiner — Nick Shirley testimony, Judiciary subcommittee, January 21, 2026</li>
+      <li>House Judiciary Democrats — "At Subcommittee Hearing, Republicans' Selective Outrage," January 21, 2026</li>
+      <li>CBS News — "$9B fraud estimate," U.S. Attorney Joe Thompson, January 2026</li>
+      <li>House Judiciary Democrats — Trump Pardon Analysis, $1.3B restitution, June 17, 2025</li>
+      <li>NBC News — "Trump pardons forgive financial crimes," January 20, 2026</li>
+      <li>Washington Monthly — "White-Collar Criminals Like Him," December 2025</li>
+      <li>ProPublica — Noem $220M DHS contracts, November 2025</li>
+      <li>Senate Judiciary Committee — Noem hearing transcript, March 3, 2026</li>
+      <li>POGO — "Noem Must Go: Congress Needs to Impeach DHS Secretary," March 3, 2026</li>
+      <li>POGO / American University IRW — ICE inspection decline (36%), January 2026</li>
+      <li>ProPublica — "170+ U.S. Citizens Detained by Immigration Agents," October 2025</li>
+      <li>Center for American Progress — "Trump Administration's ICE and CBP," January 2026</li>
+      <li>WOLA Border Update — Detention deaths, DHS appropriations, January 2026</li>
+      <li>Just Security — "Expert Survey on DHS, CBP, and ICE Reforms," February 2026</li>
+      <li>Washington Post — Top Trump inauguration donors, May 2025</li>
+      <li>More Perfect Union / Sludge — "Trump's Corporate Colluders," December 2025</li>
+      <li>Financial Times — Quid pro quo donor analysis, October 2025</li>
+      <li>PBS NewsHour — Bondi Judiciary hearing / Noem Senate Judiciary, February–March 2026</li>
+      <li>Newsweek / Axios / The Hill — Bondi subpoena vote 24–19, March 4, 2026</li>
+      <li>Courthouse News — Bondi "burn book" / lawmaker search tracking, February 2026</li>
+      <li>Anthropic — Statement on Department of War, February 26, 2026</li>
+      <li>Lawfare — "Pentagon's Anthropic Designation Won't Survive First Contact with Legal System," March 1, 2026</li>
+      <li>CNBC — "Defense tech companies dropping Claude," March 4, 2026</li>
+      <li>Center for American Progress — "DoD Conflict with Anthropic," March 4, 2026</li>
+    </ul>
+  </div>
+
+</div><!-- /article -->
+
+<!-- MODALS -->
+<div class="modal-overlay" id="m-anthropic" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-anthropic')">✕</button>
+    <div class="modal-header" style="background:#003d5c">
+      <div class="modal-kicker">Full Receipt · DoD / AI Policy · Breaking March 2026</div>
+      <div class="modal-title">The Pentagon vs. Anthropic: A Case Study in Unaccountable Power</div>
+      <div class="modal-amount" style="color:#48cae4">$200M contract — and a legal first</div>
+    </div>
+    <div class="modal-body">
+      <p>In July 2025, the Department of Defense awarded Anthropic a $200 million contract to deploy Claude on classified military networks — the first frontier AI model in that environment. The contract included two safeguard restrictions Anthropic had insisted on from the start: Claude would not be used for <strong>mass domestic surveillance of Americans</strong> or <strong>fully autonomous weapons systems</strong> that fire without human involvement.</p>
+      <p>In January 2026, that arrangement became a problem.</p>
+      <ul class="modal-list">
+        <li><strong>Jan–Feb 2026:</strong> Pentagon demanded Anthropic remove both safeguards, asserting it must have unrestricted "any lawful use" access. Anthropic refused. CEO Dario Amodei: "we cannot in good conscience accede to their request."</li>
+        <li><strong>Feb. 27, 2026:</strong> Hegseth announced on X that DoD would designate Anthropic a "supply chain risk to national security." Trump directed every federal agency to immediately cease all Anthropic use.</li>
+        <li><strong>The legal first:</strong> This designation under FASCSA / 10 U.S.C. §3252 has been used exactly once before — against a foreign-linked company. Anthropic had cut off CCP-linked firms at a cost of hundreds of millions in revenue, shut down CCP-sponsored cyberattacks, and advocated for export controls on AI chips. Designating them a foreign-style threat is, per Lawfare, "an exercise of authority Congress never contemplated."</li>
+        <li><strong>The contradiction:</strong> The same week, Hegseth invoked the Defense Production Act to <em>compel</em> Anthropic's cooperation — implying the technology was too essential to forgo. Days later, Trump: "We don't need it, we don't want it." The six-month wind-down period means DoD itself doesn't believe there's an acute threat.</li>
+        <li><strong>The Iran timing:</strong> The Wall Street Journal reported Claude was used in U.S. military strikes on Iran hours after the ban announcement. A company cannot be simultaneously an indispensable national security asset and a foreign-grade supply chain threat.</li>
+        <li><strong>Blast radius:</strong> GSA removed Anthropic from the federal procurement schedule. HHS, State, and Treasury announced phase-outs. AWS and Google Cloud — both DoD contractors — are theoretically subject to the supply-chain restriction; if applied, it would take Anthropic's infrastructure offline entirely. OpenAI signed a classified network deal the same night the ban was announced.</li>
+      </ul>
+      <p>This is textbook Oversight Committee jurisdiction: a Defense Secretary using novel, legally contested procurement authority to punish an American company for refusing to remove privacy and safety guardrails — during active combat operations. Zero hearings.</p>
+      <div class="modal-source">SOURCES: Anthropic statement, Feb. 26, 2026 · Lawfare, March 1, 2026 · CNBC, March 4, 2026 · CNN Business, Feb. 27, 2026 · Center for American Progress, March 4, 2026 · Nextgov/FCW, March 4, 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-pardons" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-pardons')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · Federal Pardons</div>
+      <div class="modal-title">Trump Pardons Wipe Fraud Restitution</div>
+      <div class="modal-amount">$1.3B+ owed to victims — erased</div>
+    </div>
+    <div class="modal-body">
+      <p>Over half of Trump's 88 individual pardons were for white-collar offenses including money laundering, bank fraud, and wire fraud. In many cases the pardons specifically eliminated restitution orders — money owed directly to the victims of those crimes.</p>
+      <ul class="modal-list">
+        <li><strong>Trevor Milton (Nikola):</strong> Convicted of securities and wire fraud. Lied to investors about prototype trucks. Sentenced to 4 years + ~$700M restitution. Donated $1.8M to Trump committees in Oct. 2024. Pardoned March 2025 before restitution order issued. His lawyer: Pam Bondi's brother.</li>
+        <li><strong>David Gentile:</strong> Convicted of defrauding 10,000+ investors of $1.6 billion. Sentenced to 7 years. Served 12 days. Commuted. Victims included veterans, farmers, teachers.</li>
+        <li><strong>Jason Galanis:</strong> Stole $80M+ from union pension funds and a Native American tribe. Testified as GOP witness in Hunter Biden investigation. $84.4M restitution erased.</li>
+        <li><strong>Paul Walczak:</strong> Withheld $10M from employees' paychecks for yacht and luxury lifestyle. His mother donated $1M to MAGA Inc. and attended Mar-a-Lago dinner. Pardoned before prison.</li>
+        <li><strong>Chrisleys:</strong> $30M in fraudulent loans. Pardoned 2025.</li>
+        <li><strong>Ross Ulbricht:</strong> Life sentence. ~$184M restitution to drug trafficking victims. Erased.</li>
+      </ul>
+      <p>House Judiciary Democrats: Trump's pardons will also reduce funding to the Victims of Crime Act (VOCA) grant program — the primary federal source for domestic violence, sexual assault, and child abuse victim services.</p>
+      <div class="modal-source">SOURCES: House Judiciary Democrats, June 2025 · NBC News, Jan. 2026 · Washington Monthly, Dec. 2025</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-noem" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-noem')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · Noem DHS Contracts</div>
+      <div class="modal-title">$220M in No-Bid DHS Contracts to Political Allies</div>
+      <div class="modal-amount">$220M — taxpayer funded, no competitive bidding</div>
+    </div>
+    <div class="modal-body">
+      <p>DHS awarded $220M in taxpayer-funded advertising contracts for a campaign featuring Noem prominently. The contracts were not competitively bid.</p>
+      <ul class="modal-list">
+        <li><strong>Safe America Media:</strong> Received $143M primary contract. Incorporated approximately 11 days before the award. No track record. No competitive process.</li>
+        <li><strong>Strategy Group (subcontractor):</strong> CEO is married to Tricia McLaughlin, Noem's former spokesperson. The firm worked on Noem's 2022 South Dakota gubernatorial campaign.</li>
+        <li><strong>Sen. Kennedy (R-LA):</strong> "It troubles me that a fifth to a quarter of a billion dollars of taxpayer money, when we're scratching for every penny… I just can't agree with."</li>
+        <li><strong>Sen. Welch (D-VT):</strong> Confirmed Noem's former assistant and her husband received the contract.</li>
+      </ul>
+      <p>The House Oversight Committee — which held four hearings on Minnesota's handling of federal funds — has scheduled zero hearings on $220M in federal funds awarded without competition to the DHS Secretary's political allies.</p>
+      <div class="modal-source">SOURCES: ProPublica, Nov. 2025 · Reuters, March 2026 · Senate Judiciary hearing, March 3, 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-ice" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-ice')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · ICE / CBP Operations</div>
+      <div class="modal-title">Record Deaths. Court Violations. Blocked Oversight.</div>
+      <div class="modal-amount">30+ deaths · 97+ court violations in MN alone</div>
+    </div>
+    <div class="modal-body">
+      <p>2025 was the deadliest year in ICE custody in at least two decades. Congressional oversight was actively blocked by DHS. Zero Oversight Committee hearings.</p>
+      <ul class="modal-list">
+        <li><strong>Renee Good (Jan. 7, Minneapolis):</strong> Shot and killed by ICE during Operation Metro Surge. Noem labeled her an aggressor; account contradicted in court. Motion to subpoena DHS footage at the Jan. 7 Oversight hearing failed on a tie vote.</li>
+        <li><strong>Alex Pretti (Jan. 24, Minneapolis):</strong> Shot by CBP while filming enforcement operations. Labeled aggressor; prosecutors later contradicted that account.</li>
+        <li><strong>Geraldo Lunas Campos:</strong> Death in ICE custody ruled homicide by asphyxia by El Paso County medical examiner. ICE's account contradicted by autopsy.</li>
+        <li><strong>97+ court order violations in MN:</strong> Federal judge documented 97 violations in 66 cases, then identified 113 more. DHS admitted 52 additional violations in NJ.</li>
+        <li><strong>Secret warrant memo (May 2025):</strong> ICE instructed agents they could enter homes without judicial warrants. Revealed by whistleblowers January 2026. Contradicts ICE training materials and the Fourth Amendment.</li>
+        <li><strong>36% inspection drop:</strong> Noem dismantled detention oversight offices March 2025. "Alligator Alcatraz" received zero inspections in all of 2025.</li>
+        <li><strong>Congressional access blocked:</strong> Noem reinstated 7-day notice requirement for oversight visits after members won the right to unannounced visits in court.</li>
+      </ul>
+      <div class="modal-source">SOURCES: POGO, Jan. & March 2026 · CAP analysis, Jan. 2026 · WOLA Border Update · PBS NewsHour · Just Security</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-ballroom" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-ballroom')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · Inauguration & Ballroom</div>
+      <div class="modal-title">$240M in Donations. No Spending Rules. Favors Returned.</div>
+      <div class="modal-amount">$239M inauguration + ballroom donors with federal contracts</div>
+    </div>
+    <div class="modal-body">
+      <p>Trump raised a record $239M for his 2025 inauguration — more than double his 2017 record. Unlike campaign contributions, inaugural fund donations have virtually no legal regulations.</p>
+      <ul class="modal-list">
+        <li><strong>16 of 24 publicly disclosed ballroom donors</strong> hold federal contracts or face enforcement actions, per Public Citizen analysis.</li>
+        <li><strong>Meta:</strong> $1M donation. FTC antitrust appeal dropped. CFPB investigation shelved.</li>
+        <li><strong>Nvidia:</strong> $1M. Allowed to sell advanced AI chips to China (previously banned). DOJ antitrust probe — no action.</li>
+        <li><strong>Delta & United Airlines:</strong> Each $1M. Trump admin scrapped Biden rule requiring cash compensation for stranded passengers.</li>
+        <li><strong>Boeing:</strong> Donated. DOJ deal not to prosecute for 737 Max deaths — weeks after $50B Defense contract for F-47 jets.</li>
+        <li><strong>Extremity Care:</strong> $10M. Six weeks later, administration delayed policy limiting Medicare coverage of their product.</li>
+        <li><strong>Financial Times:</strong> "The volume of favorable outcomes for donors raises the question of whether a culture of quid pro quo exists."</li>
+      </ul>
+      <p>The Trust for the National Mall refused to disclose all donor names and confirmed anonymous giving would continue.</p>
+      <div class="modal-source">SOURCES: Washington Post, May 2025 · More Perfect Union/Sludge · Public Citizen · FT analysis, Oct. 2025 · Sen. Warren press releases</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-doge" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-doge')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · DOGE Treasury Access</div>
+      <div class="modal-title">Unelected Access to Federal Payment Systems</div>
+      <div class="modal-amount">No confirmed officials. No oversight hearings.</div>
+    </div>
+    <div class="modal-body">
+      <p>DOGE operatives — not Senate-confirmed, not subject to standard ethics requirements — were granted access to the Treasury Department's federal payment infrastructure, which processes trillions of dollars in federal outlays annually.</p>
+      <ul class="modal-list">
+        <li>Treasury's system handles Social Security, Medicare, federal contractor payments, and virtually every federal expenditure.</li>
+        <li>Democrats formally requested Oversight hearings on DOGE Treasury access. Requests were blocked by the Republican majority.</li>
+        <li>The committee's own DOGE subcommittee held hearings focused exclusively on Biden-era NGO grants and federal real estate.</li>
+        <li>Multiple courts issued injunctions limiting DOGE access; the administration contested these in parallel.</li>
+        <li>No DOGE official has testified under oath before the House Oversight Committee about what data was accessed, copied, or shared.</li>
+      </ul>
+      <div class="modal-source">SOURCES: House Oversight Committee record · Committee hearing archive 2025–2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-epstein" onclick="closeIfOverlay(event,this)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('m-epstein')">✕</button>
+    <div class="modal-header">
+      <div class="modal-kicker">Full Receipt · Epstein / DOJ</div>
+      <div class="modal-title">Binders → Deadlines Missed → Bipartisan Subpoena</div>
+      <div class="modal-amount">24–19 bipartisan subpoena — March 4, 2026</div>
+    </div>
+    <div class="modal-body">
+      <p>The Epstein files saga is the closest thing to federal accountability this committee has produced against a current administration official. The timeline reveals how long it took, and who was and wasn't investigated.</p>
+      <ul class="modal-list">
+        <li><strong>February 2025:</strong> Bondi distributes binders of largely public Epstein information to conservative influencers at the White House. No new revelations. Backlash from Trump's base.</li>
+        <li><strong>July 2025:</strong> DOJ concludes no "client list" exists. Congress passes Epstein Files Transparency Act mandating release by Dec. 19, 2025.</li>
+        <li><strong>December 2025:</strong> DOJ misses deadline; releases files in batches.</li>
+        <li><strong>February 2026:</strong> Bondi testifies before House Judiciary with "burn book" of opposition research. DOJ later revealed to have tracked which lawmakers looked at which documents. Speaker Johnson criticized the AG.</li>
+        <li><strong>Who was investigated:</strong> Bill Clinton deposed. Hillary Clinton deposed. No Republican figures named in the files received comparable scrutiny.</li>
+        <li><strong>March 4, 2026:</strong> Subpoenaed 24–19. Five Republicans (Mace, Boebert, Burchett, Cloud, Perry) crossed over. 65,000+ documents and 2,000+ videos still reportedly missing.</li>
+      </ul>
+      <div class="modal-source">SOURCES: PBS NewsHour · CBS News · Newsweek · Axios · The Hill · Courthouse News — March 4, 2026</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>MN-06 Watch &nbsp;·&nbsp; Receipts, Not Rage &nbsp;·&nbsp; TheWatchdogs LLC</p>
+  <p>Tips & corrections: <a href="mailto:chad.maschke@gmail.com">chad.maschke@gmail.com</a> &nbsp;·&nbsp; <a href="https://x.com/mn6watch">@mn6watch</a> &nbsp;·&nbsp; <a href="https://mn06watch.substack.com">Substack</a></p>
+  <p style="margin-top:.4rem;">Independently produced · Not affiliated with any political party · TheWatchdogs LLC © 2026</p>
+</footer>
+
+<script>
+function showPanel(id, btn) {
+  document.querySelectorAll('.compare-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.compare-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function toggleSources(btn) {
+  const list = document.getElementById('sourcesList');
+  list.classList.toggle('open');
+  btn.querySelector('span').textContent = list.classList.contains('open') ? '▼' : '▶';
+}
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeIfOverlay(e, overlay) {
+  if (e.target === overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open'));
+    document.body.style.overflow = '';
+  }
+});
+const barFills = document.querySelectorAll('.chart-bar[data-w]');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      if (!el.classList.contains('overflow')) {
+        setTimeout(() => { el.style.width = el.dataset.w + '%'; }, 120);
+      }
+      obs.unobserve(el);
+    }
+  });
+}, { threshold: 0.3 });
+barFills.forEach(b => obs.observe(b));
+</script>
+</body>
+</html>
