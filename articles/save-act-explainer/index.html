@@ -609,6 +609,8 @@
   function init(){
     order = shuffle([0,1,2,3,4]);
     jIdx=0; choices=[];
+    var sum=document.getElementById('judge-summary');
+    if(sum) sum.innerHTML='';
     renderJudge();
   }
 
@@ -634,12 +636,14 @@
     var r=choice==='accept'?s.accept:s.reject;
     choices.push({scenario:s.title, choice:choice, position:jIdx+1});
 
-    // TRACKING: send to Google Form
-    var fd = new FormData();
-    fd.append('entry.1452082409', s.title);
-    fd.append('entry.1457079814', choice);
-    fd.append('entry.957113071', String(jIdx+1));
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLScwKwSsD8vXBXyrGIVdqRMsXV4ASgDxyh4ClDBZk8H4gmJqLQ/formResponse', {method:'POST', mode:'no-cors', body:fd}).catch(function(){});
+    // TRACKING: send to Google Form via image pixel (most reliable cross-origin method)
+    var trackUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScwKwSsD8vXBXyrGIVdqRMsXV4ASgDxyh4ClDBZk8H4gmJqLQ/formResponse?'
+      + 'entry.1452082409=' + encodeURIComponent(s.title)
+      + '&entry.1457079814=' + encodeURIComponent(choice)
+      + '&entry.957113071=' + encodeURIComponent(String(jIdx+1))
+      + '&submit=Submit';
+    var img = new Image();
+    img.src = trackUrl;
 
     var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart');
     sE.style.display='none'; rE.style.display='block'; btn.style.display='block';
@@ -695,8 +699,11 @@
 
   window.nextJudge=function(){
     jIdx++;
-    if(jIdx>=scenarios.length){
-      // Reset for another run
+    if(jIdx>=scenarios.length && !document.getElementById('judge-summary').innerHTML){
+      // Show summary after final scenario
+      showJudgeSummary();
+    } else if(jIdx>=scenarios.length){
+      // Already saw summary, reset for another run
       init();
     } else {
       renderJudge();
