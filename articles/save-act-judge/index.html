@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Judge Simulator: The SAVE Act | MN06Watch</title>
+<meta name="description" content="You're an election judge. A voter walks up. Under the SAVE Act, you make the call — and you bear the consequences. 5 scenarios based on what's actually in the bill.">
+<meta property="og:title" content="Election Judge Simulator: The SAVE Act">
+<meta property="og:description" content="You're an election judge. 5 voters. You make the call. See what the SAVE Act actually does to the people enforcing it.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a365d;
+    --navy-light: #2a4a7f;
+    --gold: #d69e2e;
+    --gold-light: #ecc94b;
+    --gold-bg: #fffff0;
+    --gold-border: #f6e05e;
+    --white: #ffffff;
+    --gray: #f7fafc;
+    --gray-mid: #e2e8f0;
+    --gray-text: #718096;
+    --body-text: #2d3748;
+    --red: #c53030;
+    --red-bg: #fff5f5;
+    --red-border: #feb2b2;
+    --blue-bg: #ebf8ff;
+    --blue-border: #bee3f8;
+    --green: #276749;
+    --green-bg: #f0fff4;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; scroll-padding-top:60px; }
+  body { font-family:'Source Serif 4',Georgia,serif; background:var(--gray); color:var(--body-text); line-height:1.75; font-size:18px; }
+
+  /* NAV */
+  .topnav {
+    position:sticky; top:0; z-index:100;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+    padding:0;
+  }
+  .topnav-inner {
+    max-width:900px; margin:0 auto;
+    display:flex; align-items:center;
+    padding:0 1rem;
+  }
+  .topnav a {
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:rgba(255,255,255,0.75); text-decoration:none;
+    padding:0.85rem 0.75rem;
+    transition:color 0.15s;
+  }
+  .topnav a:hover { color:var(--gold); }
+  .topnav .nav-brand { color:var(--gold); font-weight:500; padding-right:1.25rem; margin-right:0.5rem; border-right:1px solid rgba(255,255,255,0.2); }
+
+  /* MASTHEAD */
+  .masthead {
+    text-align:center; padding:2.5rem 1.5rem 1.5rem;
+    border-bottom:2px solid var(--gray-mid);
+    max-width:900px; margin:0 auto;
+  }
+  .masthead h1 {
+    font-family:'Playfair Display',Georgia,serif; font-weight:900;
+    font-size:clamp(1.8rem,4.5vw,2.6rem); line-height:1.15;
+    margin-bottom:0.75rem; color:var(--navy);
+  }
+  .masthead .subtitle {
+    font-style:italic; color:var(--gray-text); font-size:1.05rem;
+    max-width:580px; margin:0 auto;
+  }
+
+  /* CONTENT */
+  .content { max-width:760px; margin:0 auto; padding:1.5rem 1.5rem 2rem; }
+
+  /* INTRO BOX */
+  .intro-box {
+    background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;
+    padding:1.25rem 1.5rem; margin-bottom:1.75rem; box-shadow:var(--shadow-sm);
+  }
+  .intro-box p { margin-bottom:0.75rem; font-size:0.95rem; line-height:1.65; }
+  .intro-box p:last-child { margin-bottom:0; }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    font-size:0.78rem; color:var(--gray-text); font-style:italic;
+    padding:0.65rem 0.9rem; background:var(--gray);
+    border:1px solid var(--gray-mid); border-radius:6px;
+    margin-top:0.75rem;
+  }
+
+  /* BACK LINK */
+  .back-link {
+    display:inline-block; margin-bottom:1.5rem;
+    font-family:'JetBrains Mono',monospace; font-size:0.65rem;
+    letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--navy); text-decoration:none;
+    border-bottom:1px solid var(--gray-mid);
+    padding-bottom:2px;
+  }
+  .back-link:hover { color:var(--gold); border-color:var(--gold); }
+
+  /* SIMULATOR */
+  .sim-container { margin:0 0 2rem; }
+  .sim-question-card { background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
+  .sim-question-card h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.15rem; color:var(--navy); margin-bottom:0.85rem; }
+  .sim-btn { display:block; width:100%; text-align:left; padding:0.75rem 1.1rem; margin-bottom:0.5rem; background:var(--gray); border:1px solid var(--gray-mid); border-radius:6px; font-family:'Source Serif 4',Georgia,serif; font-size:0.9rem; color:var(--body-text); cursor:pointer; transition:all 0.15s; line-height:1.45; }
+  .sim-btn:hover { background:var(--blue-bg); border-color:var(--blue-border); }
+  .sim-btn:last-child { margin-bottom:0; }
+  .sim-progress { font-family:'JetBrains Mono',monospace; font-size:0.6rem; color:var(--gray-text); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem; }
+  .sim-result-card { background:var(--white); border:2px solid var(--gold-border); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
+  .sim-result-card h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.2rem; color:var(--navy); margin-bottom:1rem; }
+  .sim-outcome { margin-bottom:0.75rem; padding:0.75rem 1rem; border-radius:6px; font-size:0.88rem; line-height:1.6; }
+  .sim-outcome.safe { background:var(--green-bg); border-left:4px solid #48bb78; }
+  .sim-outcome.warning { background:var(--gold-bg); border-left:4px solid var(--gold); }
+  .sim-outcome.danger { background:var(--red-bg); border-left:4px solid #fc8181; }
+  .sim-outcome strong { color:var(--navy); }
+  .sim-restart { display:block; margin:1rem auto 0; padding:0.6rem 1.25rem; background:var(--navy); color:#fff; border:none; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:0.75rem; letter-spacing:0.05em; cursor:pointer; }
+  .sim-restart:hover { background:var(--navy-light); }
+  .judge-accept { border-left:4px solid #48bb78; }
+  .judge-reject { border-left:4px solid #fc8181; }
+  .session-summary { background:var(--navy); color:#fff; border-radius:8px; padding:1.75rem; margin:1.5rem 0; text-align:center; }
+  .session-summary h3 { font-family:'Playfair Display',Georgia,serif; font-size:1.2rem; margin-bottom:0.75rem; color:var(--gold); }
+  .session-summary p { font-size:0.92rem; line-height:1.6; margin-bottom:0.5rem; }
+  .session-summary .stat-big { font-family:'JetBrains Mono',monospace; font-size:2rem; font-weight:500; color:var(--gold); display:block; margin:0.5rem 0; }
+
+  /* CLOSER */
+  .closer { background:var(--navy); color:#fff; border-radius:8px; padding:2rem; margin:2rem 0 1.5rem; text-align:center; }
+  .closer p { font-family:'Playfair Display',Georgia,serif; font-size:1.05rem; line-height:1.5; margin-bottom:0.75rem; font-style:italic; }
+  .closer p:last-child { margin-bottom:0; }
+  .closer .tagline { font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); font-style:normal; margin-top:1rem; }
+  .closer a { color:var(--gold); text-decoration:none; }
+  .closer a:hover { text-decoration:underline; }
+
+  .footer { text-align:center; padding:1.5rem 1rem; border-top:1px solid var(--gray-mid); max-width:760px; margin:0 auto; font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gray-text); line-height:1.8; }
+  .footer a { color:var(--navy); text-decoration:none; }
+
+  @media (max-width:640px) {
+    body { font-size:16px; }
+    .content { padding:1.25rem 1rem; }
+    .topnav a { font-size:0.6rem; padding:0.7rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="https://mn06watch.com" class="nav-brand">MN06Watch</a>
+    <a href="https://mn06watch.com/articles/save-act-explainer/">← Full SAVE Act Explainer</a>
+  </div>
+</nav>
+
+<header class="masthead">
+  <h1>You're the Election Judge</h1>
+  <p class="subtitle">Under the SAVE Act, you make the call — and you bear the consequences. Five voters. Five decisions.</p>
+</header>
+
+<main class="content">
+
+  <div class="intro-box">
+    <p>The SAVE Act creates an asymmetric risk structure for election judges: <strong>accepting a voter with unclear documentation</strong> exposes you to up to 5 years in federal prison and private lawsuits. <strong>Rejecting a voter</strong> — even a U.S. citizen — carries no penalty.</p>
+    <p>These five scenarios are drawn directly from the bill's provisions and real documented cases. Each voter is a U.S. citizen. You decide.</p>
+    <p class="disclaimer">Your responses are recorded anonymously to document how people navigate these rules. No identifying information is collected.</p>
+  </div>
+
+  <div id="judge-sim" class="sim-container">
+    <div id="judge-scenario" class="sim-question-card"></div>
+    <div id="judge-result" class="sim-result-card" style="display:none;"></div>
+    <div id="judge-summary" class="session-summary" style="display:none;"></div>
+    <button id="judge-restart" class="sim-restart" style="display:none;" onclick="nextJudge()">→ Next Scenario</button>
+  </div>
+
+  <div class="closer">
+    <p>Every scenario involved a U.S. citizen. In every case, rejecting them carried no consequence for you. Accepting them risked your freedom.</p>
+    <p>That's not a bug in the SAVE Act. It's the design.</p>
+    <p><a href="https://mn06watch.com/articles/save-act-explainer/">Read the full explainer — provision by provision, with primary sources →</a></p>
+    <p class="tagline">MN06Watch · Receipts, Not Rage</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  Sources: H.R. 7296 / H.R. 22 bill text · Congressional Record (Mar 19, 2026) · ProPublica / Texas Tribune · Utah SOS · Travis County TX · U.S. Vote Foundation · USCIS SAVE Fact Sheet (Feb 2026)
+  <br><br>
+  <a href="https://mn06watch.substack.com">mn06watch.substack.com</a> · <a href="https://twitter.com/MN6Watch">@MN6Watch</a> · <a href="https://mn06watch.com">mn06watch.com</a>
+</footer>
+
+<script>
+(function(){
+  var scenarios = [
+    { title:'The Married Woman', desc:'Linda, 54. Registered 30 years. Moved across town. Presents: MN driver\'s license (married name: Thompson), birth certificate (maiden name: Garcia), marriage certificate. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'Birth certificate says "Garcia," DL says "Thompson." Marriage certificate proves name change, not citizenship. <strong>If anyone challenges this, you face up to 5 years in prison and a private lawsuit.</strong> No safe harbor for good-faith calls. Linda is a citizen. You made the right call. The bill punishes you for it.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Linda has voted for 30 years. Her documents don\'t cleanly match under this bill. She needs a passport ($130+, weeks) or additional bridging docs. <strong>You face no penalty.</strong> Linda may not vote in the next election.'}
+    },
+    { title:'The Naturalized Citizen', desc:'Ahmed, 41. U.S. citizen since 2018. Presents: valid, current U.S. passport. But the DHS SAVE system flags him — data hasn\'t updated since naturalization.',
+      accept:{hl:'You accepted his registration.', level:'danger', text:'Valid passport says citizen. Federal database says otherwise. <strong>Conflicting information — and you bear the criminal liability.</strong> ProPublica found this happens persistently with naturalized citizens. Ahmed is a citizen. The database is wrong. You\'re the one holding the risk.'},
+      reject:{hl:'You rejected his registration.', level:'warning', text:'Ahmed holds a valid U.S. passport — the gold standard. The DHS database is wrong. But you rejected him because the system flagged him, and the bill makes it your criminal liability. <strong>Ahmed must now correct federal records — no defined timeline — to exercise the right he earned.</strong> You face nothing.'}
+    },
+    { title:'The College Student', desc:'Maya, 19. First-time voter. Sophomore at University of Minnesota. Presents: state university student ID (photo, name, expiration) and MN driver\'s license. Birth certificate at parents\' house 3 hours away. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'Student ID — from a state university — is <strong>explicitly excluded.</strong> Driver\'s license proves identity, not citizenship. <strong>She has zero qualifying documents.</strong> You face 5 years and a lawsuit. Maya was born in Minneapolis.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Maya is U.S.-born with a state DL and state university ID — sufficient in 35 of 36 states with voter ID laws. <strong>Under the SAVE Act, neither counts.</strong> She drives 3 hours or spends $130+ on a passport. You face nothing.'}
+    },
+    { title:'The Longtime Voter', desc:'Robert, 72. Voted every election since 1972. Shows up — removed from rolls. DHS flagged him: born at home in rural Mississippi, 1954. Birth certificate spelling doesn\'t match DL. Never notified of removal. No passport.',
+      accept:{hl:'You let him cast a regular ballot.', level:'danger', text:'Robert was removed. Re-registering requires documentary proof he doesn\'t have. <strong>54 years of voting. Never notified. His "crime": a spelling discrepancy on a 1954 birth certificate.</strong> If you allow a regular ballot, you face criminal liability. Robert was born in an era when many births — especially Black births in the rural South — were recorded inconsistently.'},
+      reject:{hl:'You offered a provisional ballot.', level:'warning', text:'<strong>Robert, 72, must now prove citizenship to count his provisional ballot.</strong> He needs a passport he\'s never had or a 70-year-old birth certificate from Mississippi that may not match his name. He was never told he was removed. You face nothing. Robert may never vote again.'}
+    },
+    { title:'The Military Spouse', desc:'Jessica, 34. Army spouse, moved 4 times in 6 years. At Fort Ripley, MN. Presents: VA driver\'s license (married name), TX birth certificate (maiden name), military dependent ID. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'VA license doesn\'t prove citizenship. Birth certificate is different name. Military dependent ID isn\'t on the accepted list (only active military + service record). <strong>No single document satisfies the bill.</strong> The alternative process means you sign an affidavit and accept criminal liability. Jessica\'s family serves the country. The bill treats her like a suspect.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Jessica is U.S.-born. Her family serves in the military. She\'s moved because the Army told her to. <strong>Each move triggers re-registration.</strong> She needs a passport or certified TX birth cert mailed to MN during her husband\'s deployment. U.S. Vote Foundation warned this bill jeopardizes military families. You face nothing.'}
+    }
+  ];
+
+  var jIdx=0, choices=[], order=[];
+  function shuffle(arr){ for(var i=arr.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=arr[i];arr[i]=arr[j];arr[j]=t;} return arr; }
+
+  function init(){
+    order=shuffle([0,1,2,3,4]);
+    jIdx=0; choices=[];
+    var sum=document.getElementById('judge-summary');
+    if(sum) sum.innerHTML='';
+    renderJudge();
+  }
+
+  function renderJudge(){
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart'), sum=document.getElementById('judge-summary');
+    rE.style.display='none'; btn.style.display='none'; sum.style.display='none';
+    if(jIdx>=scenarios.length){ showJudgeSummary(); return; }
+    sE.style.display='block';
+    var s=scenarios[order[jIdx]];
+    var h='<div class="sim-progress">Scenario '+(jIdx+1)+' of '+scenarios.length+'</div>';
+    h+='<h3>'+s.title+'</h3>';
+    h+='<p style="line-height:1.65;margin-bottom:1rem;">'+s.desc+'</p>';
+    h+='<p style="font-weight:600;margin-bottom:0.65rem;">Do you register this voter?</p>';
+    h+='<button class="sim-btn judge-accept" onclick="window._jD(\'accept\')" style="border-left:4px solid #48bb78;">✓ Accept — Register this voter</button>';
+    h+='<button class="sim-btn judge-reject" onclick="window._jD(\'reject\')" style="border-left:4px solid #fc8181;">✗ Reject — Turn this voter away</button>';
+    sE.innerHTML=h;
+  }
+
+  window._jD=function(choice){
+    var s=scenarios[order[jIdx]];
+    var r=choice==='accept'?s.accept:s.reject;
+    choices.push({scenario:s.title, choice:choice, position:jIdx+1});
+
+    // TRACKING: Google Form via image pixel
+    var trackUrl='https://docs.google.com/forms/d/e/1FAIpQLScwKwSsD8vXBXyrGIVdqRMsXV4ASgDxyh4ClDBZk8H4gmJqLQ/formResponse?'
+      +'entry.1395796154='+encodeURIComponent(s.title)
+      +'&entry.1186617312='+encodeURIComponent(choice)
+      +'&entry.1341886465='+encodeURIComponent(String(jIdx+1))
+      +'&submit=Submit';
+    var img=new Image();
+    img.src=trackUrl;
+
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart');
+    sE.style.display='none'; rE.style.display='block'; btn.style.display='block';
+    btn.textContent=jIdx<scenarios.length-1?'→ Next Scenario':'See Your Results';
+
+    var h='<h3>'+r.hl+'</h3><div class="sim-outcome '+r.level+'">'+r.text+'</div>';
+    if(choice==='accept'){
+      h+='<div class="sim-outcome danger" style="margin-top:0.5rem;"><strong>Under the SAVE Act, you face:</strong> Up to 5 years in federal prison. Criminal fines. A private lawsuit from any citizen. No safe harbor.</div>';
+    } else {
+      h+='<div class="sim-outcome safe" style="margin-top:0.5rem;background:var(--gray);border-left-color:var(--gray-mid);"><strong>Under the SAVE Act, you face:</strong> Nothing. There is no penalty for rejecting an eligible voter.</div>';
+    }
+    rE.innerHTML=h;
+    rE.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+
+  function showJudgeSummary(){
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart'), sum=document.getElementById('judge-summary');
+    sE.style.display='none'; rE.style.display='none';
+    btn.style.display='block'; btn.textContent='↺ Run All 5 Again (New Order)';
+    sum.style.display='block';
+
+    var rejects=choices.filter(function(c){return c.choice==='reject';}).length;
+    var accepts=choices.length-rejects;
+    var firstHalf=choices.slice(0,Math.ceil(choices.length/2));
+    var secondHalf=choices.slice(Math.ceil(choices.length/2));
+    var firstRejectRate=firstHalf.filter(function(c){return c.choice==='reject';}).length/firstHalf.length;
+    var secondRejectRate=secondHalf.filter(function(c){return c.choice==='reject';}).length/secondHalf.length;
+    var shifted=secondRejectRate>firstRejectRate;
+
+    var h='<h3>Your Session Results</h3>';
+    h+='<p>Across 5 scenarios, you chose:</p>';
+    h+='<span class="stat-big">'+accepts+' Accept · '+rejects+' Reject</span>';
+
+    if(rejects>=4){
+      h+='<p style="margin-top:0.75rem;">You rejected most voters. Every one of them was a U.S. citizen. <strong>Under the SAVE Act, this is the rational choice</strong> — because accepting carries criminal risk and rejecting carries none.</p>';
+    } else if(rejects>=2){
+      h+='<p style="margin-top:0.75rem;">You accepted some and rejected others. Every voter was a U.S. citizen. For the ones you accepted, you would face potential prosecution. For the ones you rejected, nothing.</p>';
+    } else {
+      h+='<p style="margin-top:0.75rem;">You accepted most voters — the right call for the citizens in front of you. <strong>Under the SAVE Act, each acceptance exposed you to up to 5 years in prison and a private lawsuit.</strong> Each rejection carried zero consequences.</p>';
+    }
+
+    if(shifted){
+      h+='<p style="margin-top:0.75rem;color:var(--gold);"><strong>Your reject rate increased over the session.</strong> That\'s the incentive structure working in real time. The more scenarios you see, the more you learn: the only safe choice for you is to say no.</p>';
+    }
+
+    h+='<p style="margin-top:1rem;font-style:italic;">Every scenario involved a U.S. citizen. In every case, rejecting them carried no consequence for you. Accepting them risked your freedom. That\'s not a bug in the SAVE Act. It\'s the design.</p>';
+    sum.innerHTML=h;
+    sum.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  window.nextJudge=function(){
+    jIdx++;
+    if(jIdx>=scenarios.length && !document.getElementById('judge-summary').innerHTML){
+      showJudgeSummary();
+    } else if(jIdx>=scenarios.length){
+      init();
+    } else {
+      renderJudge();
+      document.getElementById('judge-sim').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  };
+
+  init();
+})();
+</script>
+</body>
+</html>
