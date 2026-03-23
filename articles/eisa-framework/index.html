@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Integrity Standards Act — MN06Watch</title>
+<meta property="og:title" content="If Citizenship Verification Is the Goal: A Data-Consistent Framework">
+<meta property="og:description" content="80% support voter ID. 28% support the SAVE Act. The gap is in the details. Here's what getting it right actually looks like.">
+<meta property="og:image" content="https://mn06watch.com/articles/save-act-explainer/og-image.png">
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --white: #ffffff;
+    --light: #f7fafc;
+    --gray: #718096;
+    --dark: #2d3748;
+    --green: #276749;
+    --red: #9b2335;
+    --border: #e2e8f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', 'Georgia', serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  .site-nav {
+    background: var(--navy);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .site-nav .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .site-nav .tagline {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* STICKY SECTION NAV */
+  .sticky-nav {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0;
+    position: sticky;
+    top: 49px;
+    z-index: 99;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .sticky-nav a {
+    display: inline-block;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 10px 16px;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+  }
+  .sticky-nav a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4a7f 100%);
+    color: var(--white);
+    padding: 64px 24px 48px;
+    text-align: center;
+  }
+  .hero-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero .subtitle {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto 32px;
+  }
+  .hero-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: opacity 0.2s;
+  }
+  .btn-primary:hover { opacity: 0.9; }
+  .btn-secondary {
+    background: transparent;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    border: 2px solid rgba(255,255,255,0.4);
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* PREMISE BANNER */
+  .premise-banner {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .premise-banner strong { font-size: 1.05rem; }
+
+  /* CONTAINER */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* SECTION */
+  .section {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  .section p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--dark);
+  }
+
+  /* POLLING BARS */
+  .polling-section { background: var(--white); }
+  .poll-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-bottom: 4px;
+  }
+  .poll-item { margin-bottom: 24px; }
+  .poll-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 6px;
+  }
+  .poll-bar-wrap {
+    background: #e2e8f0;
+    border-radius: 4px;
+    height: 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .poll-bar {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    transition: width 1.2s ease;
+  }
+  .bar-green { background: #276749; }
+  .bar-gold { background: var(--gold); color: var(--navy); }
+  .bar-red { background: #9b2335; }
+  .bar-gray { background: #a0aec0; color: var(--dark); }
+  .poll-sub {
+    font-size: 0.82rem;
+    color: var(--gray);
+    margin-top: 4px;
+    font-style: italic;
+  }
+  .poll-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gray);
+    margin-bottom: 6px;
+  }
+  .poll-gap-note {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .poll-gap-note strong { color: var(--gold); }
+
+  /* DATA TABLE */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.9rem;
+  }
+  .data-table th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 14px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .data-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .data-table tr:nth-child(even) td { background: var(--light); }
+  .data-table tr:hover td { background: #edf2f7; }
+
+  /* COMPARISON TABLE */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.88rem;
+  }
+  .compare-table th {
+    padding: 12px 14px;
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .compare-table th:first-child { background: var(--navy); color: var(--white); }
+  .compare-table th:nth-child(2) { background: #9b2335; color: var(--white); }
+  .compare-table th:nth-child(3) { background: #276749; color: var(--white); }
+  .compare-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .compare-table td:first-child { font-weight: 600; color: var(--navy); background: var(--light); }
+  .compare-table tr:hover td { opacity: 0.9; }
+
+  /* PROVISION CARDS */
+  .provision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .provision-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .provision-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 14px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  .provision-header:hover { background: #2a4a7f; }
+  .provision-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+  .provision-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  .provision-toggle {
+    font-size: 1.2rem;
+    color: var(--gold);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+  .provision-toggle.open { transform: rotate(45deg); }
+  .provision-body {
+    padding: 20px;
+    display: none;
+    border-top: 3px solid var(--gold);
+  }
+  .provision-body.open { display: block; }
+  .provision-body p { font-size: 0.95rem; margin-bottom: 12px; }
+  .provision-body ul { margin: 8px 0 12px 20px; }
+  .provision-body ul li { font-size: 0.93rem; margin-bottom: 6px; }
+  .provision-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gray);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .provision-source a { color: var(--navy); }
+
+  /* DOCUMENT CARDS */
+  .doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .doc-category {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .doc-cat-header {
+    padding: 12px 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .doc-cat-header.always { background: #276749; color: white; }
+  .doc-cat-header.conditions { background: var(--gold); color: var(--navy); }
+  .doc-cat-header.auto { background: var(--navy); color: white; }
+  .doc-cat-header.fallback { background: #718096; color: white; }
+  .doc-item {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+  }
+  .doc-item:last-child { border-bottom: none; }
+  .doc-item strong { display: block; color: var(--dark); margin-bottom: 2px; }
+  .doc-item span { color: var(--gray); font-size: 0.8rem; font-style: italic; }
+
+  /* FAQ */
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    background: var(--white);
+  }
+  .faq-q {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    user-select: none;
+  }
+  .faq-q:hover { background: var(--light); }
+  .faq-q-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.4;
+  }
+  .faq-toggle {
+    color: var(--gold);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: transform 0.2s;
+  }
+  .faq-toggle.open { transform: rotate(45deg); }
+  .faq-a {
+    padding: 0 20px 16px;
+    display: none;
+    border-top: 2px solid var(--gold);
+    margin-top: 0;
+  }
+  .faq-a.open { display: block; }
+  .faq-a p { font-size: 0.93rem; margin-top: 14px; margin-bottom: 8px; }
+  .faq-a ul { margin: 8px 0 12px 20px; }
+  .faq-a ul li { font-size: 0.91rem; margin-bottom: 5px; }
+  .faq-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray);
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .faq-source a { color: var(--navy); }
+
+  /* COST TABLE */
+  .cost-note {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+  .cost-note strong { color: var(--gold); }
+
+  /* CALLOUT */
+  .callout {
+    border-left: 4px solid var(--gold);
+    background: #fffbeb;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.6;
+  }
+
+  /* BILL LINK SECTION */
+  .bill-cta {
+    background: var(--navy);
+    color: var(--white);
+    padding: 48px 24px;
+    text-align: center;
+  }
+  .bill-cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  .bill-cta p {
+    color: rgba(255,255,255,0.8);
+    max-width: 560px;
+    margin: 0 auto 24px;
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: #111827;
+    color: rgba(255,255,255,0.6);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 0.82rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .section h2 { font-size: 1.4rem; }
+    .nav-links { display: none; }
+    .compare-table { font-size: 0.78rem; }
+    .compare-table th, .compare-table td { padding: 8px 10px; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/save-act-explainer/">SAVE Act Explainer</a>
+    <a href="https://mn06watch.com/articles/save-act-judge/">Judge Simulator</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<!-- STICKY SECTION NAV -->
+<div class="sticky-nav">
+  <a href="#premise">The Premise</a>
+  <a href="#data">The Data</a>
+  <a href="#comparison">Comparison</a>
+  <a href="#provisions">Six Provisions</a>
+  <a href="#documents">Documents</a>
+  <a href="#costs">Costs</a>
+  <a href="#faq">FAQ</a>
+  <a href="#bill">The Bill</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">MN06Watch · Election Integrity Standards Act · March 2026</div>
+  <h1>If Citizenship Verification Is the Goal: <span>A Data-Consistent Framework</span></h1>
+  <p class="subtitle">80% of Americans support voter ID. 28% support the SAVE Act. The gap is in the details — and the data shows exactly what getting it right looks like.</p>
+  <div class="hero-links">
+    <a href="#provisions" class="btn-primary">See the Framework</a>
+    <a href="#bill" class="btn-secondary">Read the Draft Bill</a>
+  </div>
+</div>
+
+<!-- PREMISE BANNER -->
+<div class="premise-banner">
+  <strong>This framework accepts the premise.</strong> Citizenship verification in Federal elections is a legitimate policy goal. The question is how to do it in a way that actually works — for eligible voters and election officials alike.
+</div>
+
+<!-- POLLING -->
+<div id="premise" style="background: var(--white);">
+  <div class="container section polling-section">
+    <div class="section-label">CBS News/YouGov · March 16–19, 2026 · n=2,500 · MOE ±2.2</div>
+    <h2>The Polling Gap: What You Think You're Supporting vs. What's in the Bill</h2>
+    <p>The same pollster asked about voter ID, proof of citizenship, and the SAVE Act by name — in the same week. The results show why implementation matters.</p>
+
+    <div class="poll-item">
+      <div class="poll-source">CBS/YouGov, Mar 2026</div>
+      <div class="poll-title">Photo ID to vote</div>
+      <div class="poll-bar-wrap">
+        <div class="poll-bar bar-green" style="width: 80%">80%</div>
+      </div>
+      <div class="poll-sub">Includes 65% of Democrats, 79% of independents, 80% of Black voters, 77% of Hispanic voters</div>
+    </div>
+
+    <div class="poll-item">
+      <div class="poll-source">CBS/YouGov, Mar 2026</div>
+      <div class="poll-title">Proof of citizenship to register</div>
+      <div class="poll-bar-wrap">
+        <div class="poll-bar bar-gold" style="width: 66%">66%</div>
+      </div>
+      <div class="poll-sub">93% of Republicans, 61% of independents, 43% of Democrats</div>
+    </div>
+
+    <div class="poll-item">
+      <div class="poll-source">CBS/YouGov, Mar 2026</div>
+      <div class="poll-title">"The SAVE America Act" (by name)</div>
+      <div class="poll-bar-wrap">
+        <div class="poll-bar bar-red" style="width: 28%">28%</div>
+      </div>
+      <div class="poll-sub">31% oppose · 41% not sure · Only 16% of Republicans say they know the specifics</div>
+    </div>
+
+    <div class="poll-item">
+      <div class="poll-source">Not polled</div>
+      <div class="poll-title">DHS voter rolls · Criminal penalties · No notification before removal · 5 states only for REAL ID</div>
+      <div class="poll-bar-wrap">
+        <div class="poll-bar bar-gray" style="width: 15%; min-width: 120px;">Not polled</div>
+      </div>
+    </div>
+
+    <div class="poll-gap-note">
+      The gap between <strong>80%</strong> and <strong>28%</strong> — same pollster, same week — is not a gap in values. It's a gap between the concept of voter ID and the specific implementation of the SAVE Act. A data-consistent framework closes that gap.
+    </div>
+
+    <div style="background: #1a365d; border-radius: 8px; padding: 18px 20px; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+      <div style="text-align:center; color: white;">
+        <div style="font-family: JetBrains Mono, monospace; font-size: 0.7rem; color: #d69e2e; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">69 Million Women</div>
+        <div style="font-size: 0.88rem; color: rgba(255,255,255,0.85);">Birth certificate doesn't match current name after marriage — EISA resolves via SSA records, no bridge document needed</div>
+      </div>
+      <div style="text-align:center; color: white; border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2); padding: 0 16px;">
+        <div style="font-family: JetBrains Mono, monospace; font-size: 0.7rem; color: #d69e2e; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">Verify Once</div>
+        <div style="font-size: 0.88rem; color: rgba(255,255,255,0.85);">Move to a new state, new county, or change your name — a registry lookup replaces re-verification. Voter verification only — nothing else.</div>
+      </div>
+      <div style="text-align:center; color: white;">
+        <div style="font-family: JetBrains Mono, monospace; font-size: 0.7rem; color: #d69e2e; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.1em;">If You've Voted Before</div>
+        <div style="font-size: 0.88rem; color: rgba(255,255,255,0.85);">Long-time voters are likely already verified through existing HAVA §303 database matching — no new action required.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DATA -->
+<div id="data" style="background: var(--light);">
+  <div class="container section">
+    <div class="section-label">What the Audits Show</div>
+    <h2>The Scale of the Problem Being Solved</h2>
+    <p>Any honest framework starts with documented scale. The audits that have actually looked for non-citizen federal voting are consistent:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Jurisdiction</th>
+          <th>Scope</th>
+          <th>Finding</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Utah</strong></td>
+          <td>2M+ registered voters audited (Apr 2025–Jan 2026)</td>
+          <td>1 non-citizen registration, 0 votes cast</td>
+          <td>BPC / Utah SOS</td>
+        </tr>
+        <tr>
+          <td><strong>Georgia</strong></td>
+          <td>8.2M ballots cast</td>
+          <td>9 non-citizen ballots — all caught by existing systems</td>
+          <td>Georgia SOS</td>
+        </tr>
+        <tr>
+          <td><strong>Kansas</strong></td>
+          <td>Full voter roll</td>
+          <td>0.002% non-citizen rate; 30,000+ eligible citizens blocked</td>
+          <td>BPC / Kansas SOS</td>
+        </tr>
+        <tr>
+          <td><strong>Travis County, TX</strong></td>
+          <td>SAVE-flagged voters</td>
+          <td>25% had already proved citizenship at registration</td>
+          <td>ProPublica / Texas Tribune</td>
+        </tr>
+        <tr>
+          <td><strong>Virginia</strong></td>
+          <td>Voter roll purge</td>
+          <td>94% of those removed were U.S. citizens</td>
+          <td>VoteRiders, 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Heritage Foundation</strong></td>
+          <td>20-year national database</td>
+          <td>Fewer than 100 confirmed non-citizen voting cases nationally</td>
+          <td>Heritage Foundation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      Non-citizen voting in Federal elections is already a felony. HAVA Section 303 (2002) requires all 50 states to verify registrations against DMV and SSA databases. The enforcement infrastructure exists and is working. A new framework should strengthen verification at the system level — not shift the burden onto individual voters to prove eligibility that existing systems can already confirm.
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON -->
+<div id="comparison" style="background: var(--white);">
+  <div class="container section">
+    <div class="section-label">Side by Side</div>
+    <h2>Immediate Mandate vs. Data-Consistent Framework</h2>
+    <p>The difference is not whether to verify — it's whether the implementation is designed to work.</p>
+
+    <div style="overflow-x: auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Provision</th>
+            <th>SAVE Act <span style="font-weight:400;font-size:0.7rem;">(House-passed, Feb. 2026)</span></th>
+            <th>EISA Framework</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cost to voter</td>
+            <td>Full document cost ($25–$60+)</td>
+            <td>Free — federal program pays vital records offices directly</td>
+          </tr>
+          <tr>
+            <td>Implementation timeline</td>
+            <td>Immediate upon enactment</td>
+            <td>Minimum two federal election cycles with readiness certification</td>
+          </tr>
+          <tr>
+            <td>Verification method</td>
+            <td>Document presentation at registration desk</td>
+            <td>SSA/DMV database match; documents as fallback only</td>
+          </tr>
+          <tr>
+            <td>Name mismatch (69M women)</td>
+            <td>Marriage certificate (implementation undefined)</td>
+            <td>SSA name history database — no bridge document required</td>
+          </tr>
+          <tr>
+            <td>Tribal IDs</td>
+            <td>Limited (KIC card only)</td>
+            <td>All federally recognized tribal IDs with photo + expiration</td>
+          </tr>
+          <tr>
+            <td>Student IDs</td>
+            <td>Excluded</td>
+            <td>State public university IDs with photo + expiration + enrollment verification</td>
+          </tr>
+          <tr>
+            <td>Official liability</td>
+            <td>Criminal exposure regardless of intent</td>
+            <td>Negligence standard; safe harbor for good-faith compliance</td>
+          </tr>
+          <tr>
+            <td>Mail ballot secrecy</td>
+            <td>ID copy required with ballot</td>
+            <td>ID verified at registration; signature verification at submission</td>
+          </tr>
+          <tr>
+            <td>Roll removal</td>
+            <td>No notification requirement</td>
+            <td>Written notice + 90-day cure period required</td>
+          </tr>
+          <tr>
+            <td>Moving to new state or jurisdiction</td>
+            <td>Must re-verify from scratch</td>
+            <td>Registry lookup — no new documents required</td>
+          </tr>
+          <tr>
+            <td>One-time verification</td>
+            <td>No — re-verify at each registration event</td>
+            <td>Yes — verify once, registry carries it forward permanently</td>
+          </tr>
+          <tr>
+            <td>Constitutional footing</td>
+            <td>Weaker than Crawford (no free ID)</td>
+            <td>Consistent with Crawford v. Marion County (2008)</td>
+          </tr>
+          <tr>
+            <td>80% consensus served?</td>
+            <td>No — 28% support once specifics known</td>
+            <td>Yes — achieves the stated goal without documented barriers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- PROVISIONS -->
+<div id="provisions" style="background: var(--light);">
+  <div class="container section">
+    <div class="section-label">The Framework</div>
+    <h2>Six Provisions — Each Sourced to the Data</h2>
+    <p>Each provision addresses a specific, documented failure mode of rushed or underfunded implementation. Click any provision to expand.</p>
+
+    <div class="provision-grid">
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 1</div>
+            <div class="provision-title">Free Government-Issued ID — Federally Funded</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>If the federal government imposes a new requirement on a constitutional right, the federal government must eliminate cost as a barrier to exercising that right. This is not peripheral — it is the constitutional threshold.</p>
+          <p>The Supreme Court upheld Indiana's voter ID law in <em>Crawford v. Marion County</em> (2008) in part because Indiana provided free ID. A federal mandate without free ID is constitutionally weaker than Indiana's state law.</p>
+          <ul>
+            <li>Birth certificate replacement: $10–$35 in-person; $20–$60 online</li>
+            <li>21.3 million eligible voters lack ready access to citizenship documents</li>
+            <li>Only 1 in 4 Americans without a college degree has a valid passport</li>
+            <li>Rural voters may face 50+ mile round trips to a vital records office</li>
+          </ul>
+          <p><strong>Implementation:</strong> Federal program pays vital records offices directly — payment flows government-to-government, no individual reimbursement, no fraud surface.</p>
+          <p><strong>One document per registration event:</strong> Each eligible voter receives reimbursement for one citizenship document per registration event. Once citizenship is confirmed in the Federal verified-citizen registry, no further document is required at any subsequent registration — moving, name change, or otherwise. For most voters, this means one document, one time, ever.</p>
+          <div class="provision-source"><strong>Constitutional basis:</strong> In <em>Crawford</em>, Justice Stevens wrote that a voter ID requirement "would not save the statute under our reasoning in <em>Harper</em>, if the State required voters to pay a tax or a fee to obtain a new photo identification." The free ID provision in EISA is the constitutional load-bearing wall — remove it and the entire framework's constitutional footing weakens. Sources: <a href="https://supreme.justia.com/cases/federal/us/553/181/">Crawford v. Marion County, 553 U.S. 181 (2008)</a> · <a href="https://supreme.justia.com/cases/federal/us/383/663/">Harper v. Virginia Board of Elections, 383 U.S. 663 (1966)</a> · University of Maryland Center for Democracy and Civic Engagement, 2025</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 2</div>
+            <div class="provision-title">Phased Implementation — Minimum Two Federal Election Cycles</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>Only one state — Arizona — has experience administering proof-of-citizenship voter registration, and its system has been in litigation since implementation. No other state has the infrastructure to comply on day one.</p>
+          <p>New Hampshire implemented a proof-of-citizenship requirement in 2025 with no meaningful phase-in. In the elections that followed, <strong>244 eligible voters were turned away</strong> — not non-citizens, but citizens who were not notified in time.</p>
+          <p>HAVA precedent: Congress provided states with implementation timelines and $3.86 billion when it passed HAVA in 2002. It took until 2006 for most states to reach full compliance.</p>
+          <ul>
+            <li>Minimum two federal election cycles before enforcement</li>
+            <li>Federal readiness certification required before a state may enforce</li>
+            <li>Provisional ballots count in full during the phase-in period</li>
+            <li>Federal funding tied to readiness milestones</li>
+          </ul>
+          <div class="provision-source">Sources: <a href="https://www.eac.gov/grants/hava-grant-programs">EAC HAVA Grant Programs</a> · New Hampshire 2025 local election data</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 3</div>
+            <div class="provision-title">Verification at the System Level, Not the Registration Desk</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>The most accurate and least burdensome citizenship verification happens at the database level — not when a voter presents documents to an election official with no training in document authentication.</p>
+          <p>HAVA Section 303 already established this principle in 2002: all 50 states verify registrations against DMV and SSA databases. That infrastructure exists and works. The question is whether to strengthen it or replace it with a document-presentation requirement that introduces new failure points.</p>
+          <ul>
+            <li>SSA database match at point of DMV transaction — builds on existing HAVA §303</li>
+            <li>DHS SAVE system cross-check for naturalized citizens</li>
+            <li>Automatic registration for verified citizens — no document presentation required</li>
+            <li>Document fallback only for the small percentage of inconclusive cases</li>
+            <li>Annual database error audit with corrective procedures if error rate exceeds 1%</li>
+          </ul>
+          <div class="provision-source">Sources: <a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title52-section21083">HAVA §303, 52 U.S.C. §21083</a> · USCIS Fact Sheet, February 2026</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 4</div>
+            <div class="provision-title">Name Change Resolution via SSA Name History</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>84% of women who marry change their surname — approximately <strong>69 million American women</strong> whose birth certificate does not match their current legal name.</p>
+          <p>The SSA already maintains a complete name change history linked to Social Security numbers. Every legal name change generates an SSA record update. This data already exists. Using it eliminates the name mismatch problem entirely without requiring chain-of-custody documentation.</p>
+          <ul>
+            <li>SSA name history is the primary record — no bridge document required when SSA confirms</li>
+            <li>Signed affidavit backup for cases where SSA records are incomplete</li>
+            <li>False attestation remains a federal crime — existing fraud deterrent</li>
+            <li>Covers marriage, divorce, court order, and all lawful name change mechanisms equally</li>
+          </ul>
+          <div class="provision-source">Sources: <a href="https://www.americanprogress.org/article/the-save-act-overview-and-facts/">Center for American Progress — SAVE Act Overview</a> · SSA name change records infrastructure</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 5</div>
+            <div class="provision-title">Federal Verified-Citizen Registry — Verify Once, Carry Forward</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>Once your citizenship is verified, it should stay verified. A Federal verified-citizen registry records citizenship status linked to your Social Security number. Every time you re-register — moving to a new state, moving within the same state, changing your name — the receiving state queries the registry instead of starting over.</p>
+          <p>For most voters this means citizenship verification happens exactly once in their lives. The registry carries the verification forward permanently, unless citizenship status is disputed.</p>
+          <ul>
+            <li><strong>Interstate portability:</strong> Move from Minnesota to Texas — Texas queries the registry, finds your verified status, registers you without requiring documents again</li>
+            <li><strong>Intrastate portability:</strong> Move across town in the same county — same lookup, same result</li>
+            <li><strong>Name change portability:</strong> SSA updates your name record; the registry updates automatically; no bridge document required at re-registration</li>
+            <li><strong>Privacy protected:</strong> Registry accessible only to authorized election officials for voter registration purposes; subject to Privacy Act of 1974</li>
+            <li><strong>Error correction:</strong> 30-day review process if status is disputed; provisional ballot counts in full during review</li>
+          </ul>
+          <p>This is the provision that most directly reduces friction for the average voter — and it makes the entire framework more efficient. One verification event funds the registry entry. Every subsequent registration event is a lookup, not a re-verification.</p>
+          <p style="background: #f0f4f8; border-left: 3px solid #1a365d; padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 0.88rem; margin-top: 12px;"><strong>This registry is a voter verification tool — nothing else.</strong> It cannot be used for any purpose other than confirming citizenship for voter registration. It is not a general citizenship database. The bill text prohibits any use outside voter registration verification, and the registry is subject to the full protections of the Privacy Act of 1974.</p>
+          <div class="provision-source">Source: EISA Section 5(f) — Privacy and Security · Privacy Act of 1974 (5 U.S.C. 552a)</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 6</div>
+            <div class="provision-title">Good-Faith Safe Harbor for Election Officials</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p>A verification system is only as reliable as the incentive structure facing the people who administer it. When the penalty for accepting a questionable registration is up to five years in prison — and the penalty for rejecting an eligible voter is nothing — officials will reject in all cases of uncertainty. That produces errors in one direction only.</p>
+          <p>This framework establishes:</p>
+          <ul>
+            <li>Negligence standard — criminal liability requires demonstrable negligence or willful misconduct, not good-faith error</li>
+            <li>Written state procedures that officials follow to establish the safe harbor</li>
+            <li>Explicit safe harbor for officials who follow those procedures</li>
+            <li>Full criminal penalties maintained for officials who knowingly accept ineligible registrations</li>
+          </ul>
+          <p>The goal is accurate elections, not paralyzed election officials. These are not in conflict.</p>
+          <div class="provision-source">Source: SAVE America Act bill text, criminal penalty provisions</div>
+        </div>
+      </div>
+
+      <div class="provision-card">
+        <div class="provision-header" onclick="toggleProvision(this)">
+          <div>
+            <div class="provision-num">PROVISION 7</div>
+            <div class="provision-title">Mail Ballot Secrecy + Notification Before Roll Removal</div>
+          </div>
+          <div class="provision-toggle">+</div>
+        </div>
+        <div class="provision-body">
+          <p><strong>Mail ballot secrecy:</strong> Citizenship verification belongs at registration — not at ballot submission. Requiring an ID copy with a mail ballot connects an identifying document to specific ballot choices, compromising the secret ballot. Oregon has voted entirely by mail since 2000. Military absentee voting dates to the Civil War. Signature verification remains the authentication standard at submission.</p>
+          <p><strong>Notification before roll removal:</strong> Virginia conducted a voter roll purge in which <strong>94% of those removed were U.S. citizens</strong>. Roll maintenance without notice and cure produces that outcome.</p>
+          <ul>
+            <li>Written notification to address of record before any removal</li>
+            <li>Minimum 90-day cure period to respond or provide documentation</li>
+            <li>Provisional ballot available during cure period — counts in full</li>
+            <li>Public database of pending removals maintained by each state</li>
+          </ul>
+          <div class="provision-source">Sources: <a href="https://www.justice.gov/crt/national-voter-registration-act-1993-nvra">NVRA §8</a> · VoteRiders Virginia purge data, 2025</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- DOCUMENTS -->
+<div id="documents" style="background: var(--white);">
+  <div class="container section">
+    <div class="section-label">Qualifying Documents</div>
+    <h2>What Documents Would Qualify Under EISA?</h2>
+    <p>The framework is designed so that most eligible voters are verified automatically — no document presentation required. Documents are the fallback, not the primary mechanism.</p>
+
+    <div class="doc-grid">
+
+      <div class="doc-category">
+        <div class="doc-cat-header always">✓ Always Qualifies</div>
+        <div class="doc-item"><strong>U.S. Passport or Passport Card</strong><span>No conditions</span></div>
+        <div class="doc-item"><strong>Certificate of Naturalization</strong><span>Issued by DHS</span></div>
+        <div class="doc-item"><strong>Certificate of Citizenship</strong><span>Issued by DHS</span></div>
+        <div class="doc-item"><strong>Consular Report of Birth Abroad</strong><span>Issued by State Dept.</span></div>
+        <div class="doc-item"><strong>American Indian Card (KIC)</strong><span>Issued by DHS</span></div>
+      </div>
+
+      <div class="doc-category">
+        <div class="doc-cat-header conditions">◑ Qualifies With Conditions</div>
+        <div class="doc-item"><strong>Birth Certificate</strong><span>Must meet statutory criteria (seal, DOB, place of birth, parent name, authorized signature)</span></div>
+        <div class="doc-item"><strong>Enhanced Driver's License</strong><span>Only in 5 states: MI, MN, NY, VT, WA — must explicitly indicate citizenship</span></div>
+        <div class="doc-item"><strong>Tribal ID</strong><span>Any federally recognized tribe · Photo + expiration date required · <em>Unlike current proposals, EISA accepts all federally recognized tribal IDs — not just the DHS KIC card</em></span></div>
+        <div class="doc-item"><strong>State University Student ID</strong><span>State-accredited public institution · Photo + expiration + enrollment verification · Institution provides enrollment doc at no cost</span></div>
+      </div>
+
+      <div class="doc-category">
+        <div class="doc-cat-header auto">⚡ Resolved Automatically — No Document Needed</div>
+        <div class="doc-item"><strong>SSA Database Confirms Citizenship</strong><span>Most eligible voters — verification happens in the background at DMV/SSA level</span></div>
+        <div class="doc-item"><strong>SSA Name History Confirms Name Change</strong><span>Marriage, divorce, court order — no marriage certificate required if SSA confirms</span></div>
+        <div class="doc-item"><strong>Federal Registry Match on Re-Registration</strong><span>Moving to a new state, new county, or updating registration — registry lookup replaces re-verification. Verify once, carry forward permanently.</span></div>
+      </div>
+
+      <div class="doc-category">
+        <div class="doc-cat-header fallback">↩ Fallback — When SSA Records Incomplete</div>
+        <div class="doc-item"><strong>Signed Affidavit</strong><span>Attesting that name on citizenship document is a previous legal name · False attestation is a federal crime</span></div>
+      </div>
+
+    </div>
+
+    <div class="callout" style="margin-top: 24px;">
+      The SAVE Act excludes student IDs entirely and limits tribal IDs to the KIC card only. EISA expands qualifying documents while maintaining verification integrity — serving the 80% consensus without the documented barriers.
+    </div>
+  </div>
+</div>
+
+<!-- COSTS -->
+<div id="costs" style="background: var(--light);">
+  <div class="container section">
+    <div class="section-label">Federal Investment</div>
+    <h2>What This Costs — And Why the Federal Government Pays</h2>
+    <p>If Congress imposes a new requirement on a constitutional right, the burden of funding falls on the federal government. The HAVA model provides the proven infrastructure: formula grants through the Election Assistance Commission, tied to state implementation plans.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Program Component</th>
+          <th>Estimated Cost</th>
+          <th>Basis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Free birth certificate program</strong></td>
+          <td>$750M–$1.2B (one-time)</td>
+          <td>~30M voters lacking ready access × avg $25 document cost + administrative overhead</td>
+        </tr>
+        <tr>
+          <td><strong>Federal verified-citizen registry + SSA integration</strong></td>
+          <td>$300–$500M (one-time)</td>
+          <td>Federal IT modernization at comparable scope; registry replaces repeated per-state verification costs</td>
+        </tr>
+        <tr>
+          <td><strong>State implementation grants (2-cycle phase-in)</strong></td>
+          <td>$400–$600M</td>
+          <td>HAVA formula grant model, scaled to new mandate scope</td>
+        </tr>
+        <tr>
+          <td><strong>Mobile ID/document assistance (rural)</strong></td>
+          <td>$200–$400M</td>
+          <td>Comparable mobile DMV programs in rural states</td>
+        </tr>
+        <tr>
+          <td><strong>Election official training + safe harbor documentation</strong></td>
+          <td>$50–$100M</td>
+          <td>HAVA poll worker training program precedent</td>
+        </tr>
+        <tr>
+          <td><strong>Total estimated federal investment</strong></td>
+          <td><strong>$1.7B–$2.9B</strong></td>
+          <td>One-time + phase-in costs; registry eliminates ongoing per-state re-verification costs; ongoing administration via EAC</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cost-note">
+      For context: Congress has distributed <strong>$4.35 billion</strong> in HAVA formula funding since 2003 to support election administration infrastructure. The investment required to implement a constitutionally sound citizenship verification system is comparable in scale to the investment Congress already made after 2000. The SAVE Act as passed by the House contains no federal funding mechanism. An unfunded mandate shifts those costs onto the voters least able to bear them — and weakens the constitutional footing established in <em>Crawford</em>.
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" style="background: var(--white);">
+  <div class="container section">
+    <div class="section-label">Common Questions</div>
+    <h2>Frequently Asked Questions</h2>
+    <p>This framework takes the counterarguments seriously. Each answer is grounded in the data.</p>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">If non-citizen voting is really a problem, can we afford to wait two election cycles to fix it?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>The audits that have actually looked for non-citizen federal voting consistently find it is vanishingly rare: Utah audited 2 million voters and found 1 non-citizen registration and 0 votes. Georgia found 9 non-citizen ballots out of 8.2 million cast. The Heritage Foundation's 20-year national database contains fewer than 100 confirmed cases nationally.</p>
+        <p>A two-cycle phase-in exists to ensure that eligible citizens are not removed from rolls or turned away while states build the infrastructure to implement verification correctly. The alternative — immediate implementation — has a documented track record: New Hampshire 2025, 244 eligible voters turned away in a single round of local elections. Those were not non-citizens. They were citizens who were not notified in time.</p>
+        <p>The core trade-off: accepting certain, documented disenfranchisement of eligible citizens in exchange for faster implementation of a system designed to address a problem the data consistently struggles to find is not a trade-off that holds up to scrutiny. If the problem is rare enough that audits can barely find it, a two-cycle phase-in to implement the solution correctly costs very little. The cost of getting it wrong falls entirely on eligible voters.</p>
+        <div class="faq-source">Sources: BPC/Utah SOS · Georgia SOS · Heritage Foundation Election Fraud Database · New Hampshire 2025 election data</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">If you have nothing to hide, why oppose citizenship verification?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>This framework does not oppose citizenship verification. It accepts the premise and proposes an implementation that works.</p>
+        <p>But the question's premise reverses the constitutional burden of proof. In the American legal framework, the government bears the burden of demonstrating that a restriction on a constitutional right is justified — citizens do not bear the burden of proving they deserve to exercise a right they already hold.</p>
+        <p>The Supreme Court addressed this directly in <em>Crawford v. Marion County</em> (2008). The Court upheld Indiana's voter ID law — but the constitutional reasoning depended on the ID being free. Justice Stevens wrote explicitly that if the State required voters to pay a fee to obtain identification, the law would not survive constitutional scrutiny. The government's obligation to provide free ID is not a courtesy — it is the constitutional load-bearing condition that makes the requirement valid at all.</p>
+        <p>The question is not whether voters should prove innocence. It is whether the government's implementation meets the standard the Court already established. This framework does. An unfunded immediate mandate does not.</p>
+        <div class="faq-source">Sources: <a href="https://supreme.justia.com/cases/federal/us/553/181/">Crawford v. Marion County, 553 U.S. 181 (2008)</a> · <a href="https://supreme.justia.com/cases/federal/us/383/663/">Harper v. Virginia Board of Elections, 383 U.S. 663 (1966)</a></div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">Other countries require proof of citizenship to vote. Why shouldn't we?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Many countries do require identity verification to vote. The comparison is instructive — but it supports this framework, not an unfunded immediate mandate.</p>
+        <p>Canada, Germany, and most European democracies with strict verification requirements also provide national ID at no cost, maintain automatic voter registration, and fund the infrastructure required to implement the system. They did not impose the document requirement and leave citizens to source their own documents at their own expense.</p>
+        <p>If the standard is other developed democracies, that standard includes free ID, government-funded document retrieval, and phased implementation — all of which this framework provides. An unfunded mandate with no phase-in does not meet that standard.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">Getting ID isn't that hard — people do it for all kinds of things. Why is voting different?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>For most Americans, obtaining ID is not difficult. This framework does not dispute that. The question is whether "most Americans" is the right threshold for restricting a constitutional right.</p>
+        <p>The data on the populations most affected is specific:</p>
+        <ul>
+          <li>21.3 million eligible voters lack ready access to citizenship documents (University of Maryland, 2025)</li>
+          <li>Only 1 in 4 Americans without a college degree has a valid passport</li>
+          <li>Only 1 in 5 Americans with income below $50,000 has a valid passport</li>
+          <li>Rural voters may face 50+ mile round trips to a vital records office</li>
+        </ul>
+        <p>The free ID provision in this framework addresses this directly. If obtaining ID is straightforward for most people, the cost of providing it free to those for whom it is not is modest. The cost of not providing it is disenfranchisement of eligible citizens.</p>
+        <div class="faq-source">Source: University of Maryland Center for Democracy and Civic Engagement, 2025 · Bipartisan Policy Center</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">Isn't a database approach vulnerable to errors?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Yes — and that vulnerability must be built into the framework, not ignored. This is a genuine concern that deserves a direct answer.</p>
+        <p>Database errors exist in every large-scale government system. The DHS SAVE system acknowledged in February 2026 that it cannot make confident citizenship determinations in all cases. A ProPublica/Texas Tribune investigation found DHS rushed the SAVE system before it could verify updated citizenship data. Travis County, Texas found that 25% of voters flagged as potential non-citizens had already proved citizenship when they registered.</p>
+        <p>This is precisely why this framework includes: a 90-day cure period for flagged registrations before any removal; provisional ballots for voters under review; annual database error audits with corrective procedures; and document presentation as a fallback for inconclusive cases. The answer to database vulnerability is not to abandon database verification — it is to build error-correction into the system.</p>
+        <div class="faq-source">Sources: USCIS Fact Sheet, February 2026 · ProPublica/Texas Tribune, Travis County data</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">Can't provisional ballots solve the phase-in problem?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Provisional ballots are a mitigation, not a solution. They have a documented failure rate that falls disproportionately on the voters least likely to have the documents a new requirement demands.</p>
+        <p>Provisional ballots require voters to follow up within a narrow cure window — typically a few days — to provide qualifying documentation. Voters who lack the documentation on election day are generally the same voters who will have difficulty obtaining it within the cure window. The New Hampshire data is instructive: of 244 voters turned away in 2025 local elections, the turnaway itself was the problem — not the absence of a provisional process.</p>
+        <p>Provisional ballots are an appropriate backstop within a fully implemented, properly funded system. They are not a substitute for the phase-in period that allows states to build that system.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">Kansas and Virginia show the current system isn't working. Doesn't that prove we need stronger verification?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>The Kansas and Virginia data are worth examining carefully — because they support the case for this framework, not against it.</p>
+        <p>Kansas implemented proof-of-citizenship voter registration. The result: a 0.002% non-citizen registration rate — and more than 30,000 eligible citizens blocked from registering. Courts struck the law down. The Kansas data does not show the current system failing to catch non-citizens. It shows a poorly designed verification system blocking eligible citizens at a rate thousands of times higher than the problem it was designed to solve.</p>
+        <p>Virginia conducted a voter roll purge. 94% of those removed were U.S. citizens. That is not evidence that voter rolls are full of non-citizens. It is evidence that roll purges without adequate notice and cure periods remove eligible citizens. Both data points argue for the provisions in this framework — not against them.</p>
+        <div class="faq-source">Sources: BPC/Kansas SOS · VoteRiders Virginia purge data, 2025</div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-text">What happens when someone moves? Do they have to verify citizenship again?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a">
+        <p>Under EISA, no. This is one of the most important distinctions between this framework and a document-based mandate with no portability mechanism.</p>
+        <p>Once a voter's citizenship is confirmed — either through SSA/DMV database matching or through the document fallback process — that verification is recorded in the Federal verified-citizen registry, linked to their Social Security number. When they re-register in a new state, a new county, or the same jurisdiction after a move, the receiving election authority queries the registry. A confirmed match is sufficient. No new documents required.</p>
+        <p>The same applies to name changes. When the SSA updates its name records following a marriage, divorce, or court order, the registry updates automatically. A voter who re-registers under their new name does not need to present a marriage certificate or other bridge document — the registry confirms both citizenship and the name change.</p>
+        <p>The practical result: for most eligible voters, citizenship verification happens exactly once in their lives. Every subsequent registration event — moving across the country, moving across town, updating a name — is a registry lookup, not a re-verification. This is the provision that most directly reduces friction while maintaining the integrity of the verification record.</p>
+        <div class="faq-source">Source: EISA Section 5 — Federal Verified-Citizen Registry</div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- BILL CTA -->
+<div id="bill" class="bill-cta">
+  <h2>The Election Integrity Standards Act</h2>
+  <p>This framework has been drafted as model legislation in proper Congressional bill format. It amends HAVA and NVRA directly, includes a full findings section sourced to the audit data, and is designed so any Senator or Representative could introduce it.</p>
+  <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px;">
+    <a href="https://www.senate.gov/senators/senators-contact.htm" class="btn-primary" target="_blank" rel="noopener">Contact Your Senator ↗</a>
+    <a href="https://mn06watch.com/articles/eisa-bill/" class="btn-secondary">Read the Bill Text</a>
+    <a href="https://mn06watch.com/articles/save-act-explainer/" class="btn-secondary">SAVE Act Explainer ↗</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div>MN06Watch · <a href="https://mn06watch.com">mn06watch.com</a> · <a href="https://mn06watch.substack.com">Substack</a></div>
+  <div style="margin-top: 8px; color: rgba(255,255,255,0.4);">Receipts, not rage. · This is a citizen journalism project, not a legal or legislative drafting service.</div>
+</footer>
+
+<script>
+function toggleProvision(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector('.provision-toggle');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+  toggle.textContent = isOpen ? '+' : '×';
+}
+
+function toggleFaq(q) {
+  const answer = q.nextElementSibling;
+  const toggle = q.querySelector('.faq-toggle');
+  const isOpen = answer.classList.contains('open');
+  answer.classList.toggle('open', !isOpen);
+  toggle.classList.toggle('open', !isOpen);
+  toggle.textContent = isOpen ? '+' : '×';
+}
+
+// Animate bars on scroll
+const bars = document.querySelectorAll('.poll-bar');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute('data-width') || entry.target.style.width;
+    }
+  });
+}, { threshold: 0.3 });
+
+bars.forEach(bar => {
+  const w = bar.style.width;
+  bar.setAttribute('data-width', w);
+  bar.style.width = '0%';
+  setTimeout(() => observer.observe(bar), 100);
+});
+</script>
+
+</body>
+</html>

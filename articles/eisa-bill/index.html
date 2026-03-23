@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Election Integrity Standards Act — Draft Bill Text — MN06Watch</title>
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --white: #ffffff;
+    --light: #f7fafc;
+    --gray: #718096;
+    --dark: #2d3748;
+    --border: #e2e8f0;
+    --paper: #fafaf7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+  .site-nav { background: var(--navy); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-family: Georgia, serif; color: var(--white); font-size: 1.1rem; font-weight: 700; text-decoration: none; }
+  .tagline { color: var(--gold); font-size: 0.8rem; font-style: italic; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; margin-left: 20px; }
+  .hero { background: var(--navy); color: var(--white); padding: 48px 24px 36px; text-align: center; }
+  .draft-badge { display: inline-block; background: var(--gold); color: var(--navy); font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 4px; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 8px; }
+  .hero p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 20px; font-size: 0.93rem; }
+  .hero-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: 9px 18px; border-radius: 5px; text-decoration: none; font-size: 0.83rem; font-weight: 600; }
+  .btn-gold { background: var(--gold); color: var(--navy); }
+  .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+
+  .layout { display: grid; grid-template-columns: 210px 1fr; max-width: 1080px; margin: 0 auto; }
+
+  .sidebar { background: var(--white); border-right: 1px solid var(--border); padding: 28px 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .sidebar-label { font-size: 0.63rem; color: var(--gray); letter-spacing: 0.12em; text-transform: uppercase; padding: 0 18px 8px; }
+  .sidebar a { display: block; padding: 6px 18px; font-size: 0.73rem; color: var(--dark); text-decoration: none; border-left: 3px solid transparent; line-height: 1.4; }
+  .sidebar a:hover, .sidebar a.active { background: var(--light); border-left-color: var(--navy); color: var(--navy); }
+  .sidebar-sec { font-size: 0.63rem; color: var(--gray); padding: 10px 18px 3px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .bill-content { background: var(--paper); padding: 44px 52px; min-height: 100vh; }
+
+  .title-block { text-align: center; padding-bottom: 28px; border-bottom: 2px solid var(--dark); margin-bottom: 36px; }
+  .b-congress { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .b-session { font-size: 0.8rem; color: var(--gray); margin-bottom: 18px; }
+  .b-rule { border: none; border-top: 1px solid var(--dark); margin: 14px auto; width: 60%; }
+  .b-abill { font-size: 1.5rem; font-weight: 700; margin: 14px 0 8px; }
+  .b-purpose { font-size: 0.9rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+  .draft-notice { background: #fffbeb; border: 1px solid var(--gold); border-radius: 5px; padding: 11px 15px; font-size: 0.73rem; color: #744210; margin-top: 18px; line-height: 1.5; }
+
+  .enacting { font-size: 0.9rem; font-style: italic; margin: 28px 0 22px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+
+  .bsec { margin-bottom: 36px; scroll-margin-top: 20px; }
+  .bsec-hdr { font-size: 0.85rem; font-weight: 700; margin-bottom: 11px; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; padding-bottom: 5px; border-bottom: 2px solid var(--navy); }
+  .bsec-hdr span { font-weight: 400; color: var(--gray); margin-left: 8px; font-size: 0.75rem; }
+
+  .bp { font-size: 0.9rem; margin-bottom: 9px; line-height: 1.7; }
+  .bs { margin-left: 28px; font-size: 0.89rem; margin-bottom: 8px; line-height: 1.7; }
+  .bpar { margin-left: 58px; font-size: 0.88rem; margin-bottom: 7px; line-height: 1.7; }
+  .bsub { margin-left: 86px; font-size: 0.87rem; margin-bottom: 6px; line-height: 1.7; }
+
+  .bquoted { margin: 6px 16px 10px 28px; background: #edf2f7; border-left: 3px solid var(--navy); padding: 11px 15px; font-size: 0.87rem; line-height: 1.7; }
+  .bquoted .bs { margin-left: 18px; }
+  .bquoted .bpar { margin-left: 36px; }
+  .bquoted .bsub { margin-left: 54px; }
+
+  .fnote { background: var(--navy); color: var(--white); border-radius: 5px; padding: 12px 16px; font-size: 0.8rem; margin-bottom: 18px; line-height: 1.5; }
+  .fnote strong { color: var(--gold); }
+  .cnote { background: #fffbeb; border: 1px solid var(--gold); border-radius: 5px; padding: 12px 16px; font-size: 0.8rem; margin-bottom: 18px; line-height: 1.5; color: #744210; font-style: italic; }
+
+  .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
+
+  .drafter { background: #edf2f7; border: 1px solid var(--border); border-radius: 7px; padding: 22px; margin-top: 44px; font-size: 0.83rem; color: var(--gray); line-height: 1.7; }
+  .drafter h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark); margin-bottom: 10px; }
+  .drafter p { margin-bottom: 9px; }
+
+  footer { background: #111827; color: rgba(255,255,255,0.55); padding: 28px 24px; text-align: center; font-size: 0.8rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .bill-content { padding: 22px 18px; }
+    .nav-links { display: none; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/eisa-framework/" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;">Framework Explainer</a>
+    <a href="https://mn06watch.com/articles/save-act-explainer/" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;margin-left:20px;">SAVE Act Explainer</a>
+    <a href="https://mn06watch.substack.com" style="color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;margin-left:20px;">Substack</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="draft-badge">DISCUSSION DRAFT &mdash; NOT INTRODUCED LEGISLATION</div>
+  <h1>Election Integrity Standards Act</h1>
+  <p>Model legislation for evidence-based citizenship verification in Federal elections. Amends HAVA and NVRA. Drafted for any Senator or Representative to introduce.</p>
+  <div class="hero-links">
+    <a href="https://mn06watch.com/articles/eisa-framework/" class="btn btn-gold">Framework Explainer</a>
+    <a href="https://mn06watch.com/articles/save-act-explainer/" class="btn btn-outline">SAVE Act Explainer</a>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="sidebar">
+    <div class="sidebar-label">Table of Contents</div>
+    <a href="#s1">Sec. 1 &mdash; Short Title</a>
+    <a href="#s2">Sec. 2 &mdash; Findings</a>
+    <a href="#s3">Sec. 3 &mdash; Definitions</a>
+    <a href="#s4">Sec. 4 &mdash; Free Voter ID</a>
+    <a href="#s5">Sec. 5 &mdash; Verified-Citizen Registry</a>
+    <a href="#s6">Sec. 6 &mdash; Database Verification</a>
+    <a href="#s7">Sec. 7 &mdash; Name Changes</a>
+    <a href="#s8">Sec. 8 &mdash; Phased Implementation</a>
+    <a href="#s9">Sec. 9 &mdash; Safe Harbor</a>
+    <a href="#s10">Sec. 10 &mdash; Roll Maintenance</a>
+    <a href="#s11">Sec. 11 &mdash; Mail Ballots</a>
+    <a href="#s12">Sec. 12 &mdash; Funding</a>
+    <a href="#s13">Sec. 13 &mdash; Effective Date</a>
+    <div class="sidebar-sec">Notes</div>
+    <a href="#drafting">Drafting Notes</a>
+  </nav>
+
+  <main class="bill-content">
+
+    <div class="title-block">
+      <div class="b-congress">119TH CONGRESS</div>
+      <div class="b-session">1st Session</div>
+      <hr class="b-rule">
+      <div class="b-abill">A BILL</div>
+      <p class="b-purpose">To establish evidence-based standards for citizenship verification in Federal elections, to require Federal funding for implementation, to protect eligible voters from erroneous removal from voter rolls, and for other purposes.</p>
+      <div class="draft-notice">&#9888; DISCUSSION DRAFT &mdash; NOT INTRODUCED LEGISLATION &mdash; Prepared by MN06Watch &middot; mn06watch.com &middot; Not reviewed by Congressional counsel. Offered as a model for evidence-based citizenship verification legislation consistent with <em>Crawford v. Marion County</em> and existing HAVA infrastructure.</div>
+    </div>
+
+    <p class="enacting">Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled,</p>
+    <hr class="divider">
+
+    <div class="bsec" id="s1">
+      <div class="bsec-hdr">SEC. 1. <span>Short Title; Table of Contents.</span></div>
+      <div class="bs">(a) SHORT TITLE.&mdash;This Act may be cited as the &lsquo;Election Integrity Standards Act&rsquo; or &lsquo;EISA&rsquo;.</div>
+      <div class="bs">(b) TABLE OF CONTENTS.&mdash;The table of contents of this Act is as follows:</div>
+      <div class="bpar">Sec. 1. Short title; table of contents.</div>
+      <div class="bpar">Sec. 2. Findings and purpose.</div>
+      <div class="bpar">Sec. 3. Definitions.</div>
+      <div class="bpar">Sec. 4. Federal funding for free voter identification documents.</div>
+      <div class="bpar">Sec. 5. Federal verified-citizen registry.</div>
+      <div class="bpar">Sec. 6. Database-level citizenship verification.</div>
+      <div class="bpar">Sec. 7. Name change resolution through SSA records.</div>
+      <div class="bpar">Sec. 8. Phased implementation requirements.</div>
+      <div class="bpar">Sec. 9. Good-faith safe harbor for election officials.</div>
+      <div class="bpar">Sec. 10. Voter roll maintenance and notification requirements.</div>
+      <div class="bpar">Sec. 11. Mail ballot integrity.</div>
+      <div class="bpar">Sec. 12. Federal funding mechanism.</div>
+      <div class="bpar">Sec. 13. Effective date.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s2">
+      <div class="bsec-hdr">SEC. 2. <span>Findings and Purpose.</span></div>
+      <div class="fnote">The findings section is the evidentiary foundation of the bill. <strong>Every finding is sourced to primary data</strong> &mdash; the same receipts in active rotation throughout SAVE Act coverage.</div>
+      <div class="bs">(a) FINDINGS.&mdash;Congress finds the following:</div>
+      <div class="bpar">(1) Citizenship is a requirement to vote in Federal elections under Federal law, and knowingly casting a ballot as a non-citizen in a Federal election is a Federal crime.</div>
+      <div class="bpar">(2) The Help America Vote Act of 2002 (52 U.S.C. 20901 et seq.) established a framework requiring all 50 States to verify voter registrations against databases maintained by the Social Security Administration and State motor vehicle agencies. This framework has been in operation since 2002.</div>
+      <div class="bpar">(3) Audits of voter rolls conducted by State officials have consistently found that non-citizen registration and voting in Federal elections is rare. Specifically&mdash;</div>
+      <div class="bsub">(A) the State of Utah conducted a comprehensive citizenship review of its entire voter registration list between April 2025 and January 2026, examining more than 2,000,000 registered voters, and identified 1 confirmed instance of non-citizen registration and 0 instances of non-citizen voting;</div>
+      <div class="bsub">(B) the State of Georgia identified 9 ballots cast by non-citizens out of 8,200,000 ballots cast in a statewide election, all of which were identified and flagged by existing verification systems;</div>
+      <div class="bsub">(C) the State of Kansas implemented a proof-of-citizenship voter registration requirement and found a non-citizen registration rate of 0.002 percent, while simultaneously blocking more than 30,000 eligible citizens from registering to vote, a result that led to the law being struck down by Federal courts; and</div>
+      <div class="bsub">(D) the Heritage Foundation&rsquo;s Election Fraud Database, compiled over 20 years of national data, contains fewer than 100 confirmed cases of non-citizen voting in Federal elections.</div>
+      <div class="bpar">(4) Existing verification systems have demonstrated effectiveness. Virginia conducted a voter roll purge in which 94 percent of voters removed were subsequently found to be United States citizens, demonstrating the risk of erroneous removal without adequate safeguards.</div>
+      <div class="bpar">(5) Travis County, Texas found that 25 percent of voters flagged by the Department of Homeland Security&rsquo;s Systematic Alien Verification for Entitlements (SAVE) system as potential non-citizens had already demonstrated proof of citizenship at the time of registration, indicating significant error rates in automated flagging systems.</div>
+      <div class="bpar">(6) Approximately 21,300,000 eligible voters in the United States lack ready access to citizenship documents, according to research by the University of Maryland Center for Democracy and Civic Engagement (2025).</div>
+      <div class="bpar">(7) Approximately 69,000,000 American women have a birth certificate that does not match their current legal name due to a name change following marriage, divorce, or court order, representing approximately 84 percent of women who marry.</div>
+      <div class="bpar">(8) The cost of a certified copy of a birth certificate ranges from $10 to $35 when ordered in person and $20 to $60 when ordered online. These costs constitute a barrier to voting for low-income eligible citizens.</div>
+      <div class="bpar">(9) The Supreme Court of the United States upheld Indiana&rsquo;s voter identification law in <em>Crawford v. Marion County Election Board</em>, 553 U.S. 181 (2008), in part because the State provided free identification to voters who required it. Justice Stevens wrote that the requirement &ldquo;would not save the statute under our reasoning in <em>Harper</em>, if the State required voters to pay a tax or a fee to obtain a new photo identification.&rdquo; A Federal mandate that imposes document requirements without providing the means to meet those requirements at no cost is constitutionally weaker than the Indiana law upheld in <em>Crawford</em>.</div>
+      <div class="bpar">(10) The Social Security Administration maintains a complete record of legal name changes linked to Social Security numbers, updated whenever an individual reports a legal name change. This existing database infrastructure can resolve name mismatch issues without requiring voters to present chain-of-custody documentation.</div>
+      <div class="bpar">(11) New Hampshire implemented a proof-of-citizenship requirement for voting in local elections in 2025. In elections held under that requirement, 244 eligible voters were turned away because they had not been notified of the new requirement in time to obtain qualifying documents.</div>
+      <div class="bpar">(12) The Congress has distributed more than $4,350,000,000 in formula funding to States through the Help America Vote Act since 2003 to support election administration infrastructure. A comparable Federal investment is required to implement any new citizenship verification mandate in a manner that protects eligible voters.</div>
+      <div class="bpar">(13) Eligible voters who move between States or jurisdictions are currently required to re-establish their registration in each new jurisdiction. A Federal verified-citizen registry that carries citizenship verification status across registration events would eliminate redundant verification burdens while maintaining the integrity of the verification record.</div>
+      <div class="bpar">(14) Reducing friction for eligible voters in the registration and re-registration process is consistent with the goals of accurate, efficient, and accessible Federal election administration, and does not conflict with robust citizenship verification.</div>
+      <div class="bs">(b) PURPOSE.&mdash;The purposes of this Act are&mdash;</div>
+      <div class="bpar">(1) to strengthen citizenship verification in Federal elections through database-level verification that builds on existing HAVA infrastructure;</div>
+      <div class="bpar">(2) to eliminate cost as a barrier to voting by requiring Federal funding for voter identification documents;</div>
+      <div class="bpar">(3) to protect eligible citizens from erroneous removal from voter rolls by requiring notice and an opportunity to cure;</div>
+      <div class="bpar">(4) to protect election officials acting in good faith from criminal liability for honest errors;</div>
+      <div class="bpar">(5) to resolve name mismatch issues using existing SSA records; and</div>
+      <div class="bpar">(6) to ensure that any Federal citizenship verification mandate is accompanied by sufficient Federal funding and implementation time.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s3">
+      <div class="bsec-hdr">SEC. 3. <span>Definitions.</span></div>
+      <div class="bp">In this Act:</div>
+      <div class="bs">(1) CITIZENSHIP DOCUMENT.&mdash;The term &lsquo;citizenship document&rsquo; means&mdash;</div>
+      <div class="bpar">(A) a United States passport or United States passport card;</div>
+      <div class="bpar">(B) a birth certificate issued by a State, local, or tribal government authority of the United States that bears the official seal of the issuing authority and includes the individual&rsquo;s full name, date of birth, place of birth, and the name of one or both parents;</div>
+      <div class="bpar">(C) a Certificate of Naturalization issued by the Secretary of Homeland Security;</div>
+      <div class="bpar">(D) a Certificate of Citizenship issued by the Secretary of Homeland Security;</div>
+      <div class="bpar">(E) a Consular Report of Birth Abroad issued by the Secretary of State;</div>
+      <div class="bpar">(F) an enhanced driver&rsquo;s license or enhanced identification card issued by a State that explicitly indicates the holder is a citizen of the United States;</div>
+      <div class="bpar">(G) an American Indian Card issued by the Department of Homeland Security with the classification &lsquo;KIC&rsquo;;</div>
+      <div class="bpar">(H) a tribal identification card issued by a federally recognized Indian tribe that includes a photograph of the individual, includes an expiration date, and is issued pursuant to the tribal government&rsquo;s enrollment verification process; or</div>
+      <div class="bpar">(I) a student identification card issued by a State-accredited public college or university that includes a photograph of the individual, includes an expiration date, and is accompanied by official documentation from the issuing institution confirming current enrollment, which documentation the institution shall provide at no cost to the student upon request.</div>
+      <div class="bs">(2) COVERED ELECTION.&mdash;The term &lsquo;covered election&rsquo; means any election for Federal office, as defined in section 301(3) of the Federal Election Campaign Act of 1971 (52 U.S.C. 30101(3)).</div>
+      <div class="bs">(3) ELECTION OFFICIAL.&mdash;The term &lsquo;election official&rsquo; means any State or local official responsible for administering voter registration or conducting elections for Federal office.</div>
+      <div class="bs">(4) EAC.&mdash;The term &lsquo;EAC&rsquo; means the Election Assistance Commission established under section 201 of HAVA (52 U.S.C. 20921).</div>
+      <div class="bs">(5) HAVA.&mdash;The term &lsquo;HAVA&rsquo; means the Help America Vote Act of 2002 (52 U.S.C. 20901 et seq.).</div>
+      <div class="bs">(6) NAME MISMATCH.&mdash;The term &lsquo;name mismatch&rsquo; means a discrepancy between the name on a citizenship document and the name on a voter registration application or government-issued photo identification, resulting from a legal name change due to marriage, divorce, court order, or other lawful process.</div>
+      <div class="bs">(7) SSA.&mdash;The term &lsquo;SSA&rsquo; means the Social Security Administration.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s4">
+      <div class="bsec-hdr">SEC. 4. <span>Federal Funding for Free Voter Identification Documents.</span></div>
+      <div class="cnote">Constitutional basis: In <em>Crawford v. Marion County Election Board</em>, 553 U.S. 181 (2008), Justice Stevens wrote that the voter ID requirement &ldquo;would not save the statute under our reasoning in <em>Harper</em>, if the State required voters to pay a tax or a fee to obtain a new photo identification.&rdquo; The free document program in this section is the constitutional load-bearing condition for this Act&rsquo;s validity under <em>Harper v. Virginia Board of Elections</em>, 383 U.S. 663 (1966).</div>
+      <div class="bs">(a) PROGRAM ESTABLISHED.&mdash;The Administrator of General Services, in consultation with the EAC and the Secretary of Health and Human Services, shall establish a program to provide Federal reimbursement to State vital records offices for the cost of issuing citizenship documents to eligible voters who require such documents to satisfy any citizenship verification requirement imposed under Federal or State law in connection with a covered election.</div>
+      <div class="bs">(b) ELIGIBILITY.&mdash;An individual is eligible for reimbursement under subsection (a) if the individual is a citizen of the United States; is registered to vote or is seeking to register to vote in a covered election; and does not already possess a citizenship document sufficient to satisfy applicable verification requirements.</div>
+      <div class="bs">(c) REIMBURSEMENT STRUCTURE.&mdash;Reimbursement under this section shall be paid directly from the Federal Government to the issuing vital records office, not to the individual voter; cover the full cost of the citizenship document including any processing fees; and not require the individual voter to pay any amount and seek reimbursement.</div>
+      <div class="bs">(d) ONE DOCUMENT PER REGISTRATION EVENT.&mdash;An individual is entitled to receive Federal reimbursement under this section for not more than one citizenship document per registration event. For purposes of this subsection, a &lsquo;registration event&rsquo; means each instance in which an individual is required to register or update voter registration information, including upon initial registration, upon moving to a new jurisdiction, and upon a qualifying name change. Once an individual&rsquo;s citizenship has been confirmed in the Federal verified-citizen registry established under section 5, no further document reimbursement shall be required for subsequent registration events in any State unless the individual&rsquo;s citizenship status is disputed.</div>
+      <div class="bs">(e) AUTHORIZATION OF APPROPRIATIONS.&mdash;There are authorized to be appropriated to carry out this section $1,500,000,000 for fiscal year 2026, to remain available until expended.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s5">
+      <div class="bsec-hdr">SEC. 5. <span>Federal Verified-Citizen Registry.</span></div>
+      <div class="bs">(a) REGISTRY ESTABLISHED.&mdash;The Election Assistance Commission, in coordination with the Social Security Administration and the Department of Homeland Security, shall establish and maintain a Federal verified-citizen registry for the purpose of recording the citizenship verification status of individuals who have been verified as citizens of the United States in connection with voter registration for a covered election.</div>
+      <div class="bs">(b) REGISTRY FUNCTIONS.&mdash;The Federal verified-citizen registry shall assign a unique verification identifier to each individual whose citizenship has been confirmed; record the method and date of verification; record name history associated with each individual&rsquo;s Social Security number, updated automatically when the SSA receives a report of a legal name change; be accessible to State election officials for the purpose of verifying citizenship status when an individual registers or re-registers to vote in any State; and be updated to reflect any determination that an individual is not a citizen of the United States, with immediate notification to the State in which the individual is registered.</div>
+      <div class="bs">(c) INTERSTATE PORTABILITY.&mdash;When an individual who is recorded in the Federal verified-citizen registry registers or re-registers to vote in a covered election in any State, including upon moving from one State to another or within the same State, the receiving State shall query the Federal verified-citizen registry to determine whether the individual&rsquo;s citizenship has already been verified; shall accept a confirmed registry match as sufficient proof of citizenship, without requiring the individual to present a citizenship document again; and may not require the individual to submit to new citizenship verification procedures if the individual&rsquo;s citizenship status is confirmed in the registry and has not been disputed.</div>
+      <div class="bs">(d) INTRASTATE PORTABILITY.&mdash;The interstate portability requirements of subsection (c) shall apply equally when an individual moves within the same State and re-registers to vote in a new county, city, or jurisdiction within that State.</div>
+      <div class="bs">(e) NAME CHANGE PORTABILITY.&mdash;When an individual&rsquo;s name changes and the SSA updates its records accordingly, the Federal verified-citizen registry shall automatically update the individual&rsquo;s name record. A State receiving a re-registration from an individual whose name has changed shall query the registry and, upon confirming a match based on the individual&rsquo;s Social Security number, shall accept the updated registry record as sufficient proof of both citizenship and the name change, without requiring a bridge document.</div>
+      <div class="bs">(f) PRIVACY AND SECURITY.&mdash;The Federal verified-citizen registry shall&mdash;</div>
+      <div class="bpar">(1) be accessible only to authorized Federal and State election officials for the purpose of citizenship verification in connection with voter registration;</div>
+      <div class="bpar">(2) not be used for any purpose other than citizenship verification for voter registration &mdash; this registry is a voter verification tool, and nothing else;</div>
+      <div class="bpar">(3) not be used in connection with immigration enforcement, removal proceedings, or any proceeding under the Immigration and Nationality Act (8 U.S.C. 1101 et seq.);</div>
+      <div class="bpar">(4) not be shared with any Federal, State, or local agency for any purpose other than voter registration citizenship verification, and not be shared with any non-governmental entity without the express written consent of the individual; and</div>
+      <div class="bpar">(5) be subject to the full protections of the Privacy Act of 1974 (5 U.S.C. 552a).</div>
+      <div class="bs">(g) ERROR CORRECTION.&mdash;An individual who believes their citizenship status has been incorrectly recorded in the Federal verified-citizen registry shall have the right to request a review by the EAC within 30 days of receiving notice of an adverse determination; present documentation supporting their citizenship status during the review period; and cast a provisional ballot in any covered election occurring during the review period, which ballot shall be counted in full if the EAC confirms the individual&rsquo;s citizenship.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s6">
+      <div class="bsec-hdr">SEC. 6. <span>Database-Level Citizenship Verification.</span></div>
+      <div class="bs">(a) AMENDMENT.&mdash;Section 303 of HAVA (52 U.S.C. 21083) is amended by adding at the end the following new subsection:</div>
+      <div class="bquoted">
+        <p>&lsquo;(d) CITIZENSHIP VERIFICATION THROUGH DATABASE MATCHING.&mdash;</p>
+        <div class="bs">(1) IN GENERAL.&mdash;Each State shall establish and maintain a citizenship verification system that matches voter registration data against records maintained by the SSA and the Department of Homeland Security to verify citizenship status; cross-references the DHS SAVE system for individuals whose citizenship status cannot be confirmed through SSA records alone; automatically registers as verified any individual whose citizenship is confirmed through database matching; and routes to a document-based fallback process only those individuals whose citizenship status cannot be confirmed through database matching.</div>
+        <div class="bs">(2) FALLBACK PROCESS.&mdash;For individuals whose citizenship cannot be confirmed through database matching, a State shall notify the individual in writing of the inability to confirm citizenship; provide a list of qualifying citizenship documents and information about the free document program under section 4; allow not less than 90 days to provide a citizenship document; and place the individual on provisional registration status during the cure period, allowing a provisional ballot in any covered election during that period.</div>
+        <div class="bs">(3) DATABASE INTEGRITY.&mdash;Each State shall conduct an annual audit of citizenship verification database matches to identify error rates; report annual audit results to the EAC; and implement corrective procedures for any error rate exceeding 1 percent of database matches.&rsquo;.</div>
+      </div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s7">
+      <div class="bsec-hdr">SEC. 7. <span>Name Change Resolution Through SSA Records.</span></div>
+      <div class="bs">(a) IN GENERAL.&mdash;In carrying out citizenship verification under section 6, a State shall use Social Security Administration name history records as the primary means of resolving name mismatches.</div>
+      <div class="bs">(b) SSA NAME HISTORY RECORDS.&mdash;The Commissioner of Social Security shall, upon request from a State election official acting pursuant to this Act, provide confirmation of whether a name on a citizenship document corresponds to a prior legal name of the individual as reflected in SSA records.</div>
+      <div class="bs">(c) NO BRIDGE DOCUMENT REQUIRED.&mdash;A State may not require an individual to present a marriage certificate, divorce decree, or other chain-of-custody documentation to resolve a name mismatch if the mismatch can be resolved through SSA name history records under subsection (b).</div>
+      <div class="bs">(d) AFFIDAVIT BACKUP.&mdash;For individuals whose name mismatch cannot be resolved through SSA name history records, a State shall accept a signed affidavit from the individual attesting that the name on the citizenship document is a previous legal name. A false statement on such an affidavit shall be subject to applicable Federal and State penalties for false statements made in connection with voter registration.</div>
+      <div class="bs">(e) COVERAGE.&mdash;The name change resolution procedures in this section shall apply equally to name changes resulting from marriage, divorce, court order, or any other lawful legal process.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s8">
+      <div class="bsec-hdr">SEC. 8. <span>Phased Implementation Requirements.</span></div>
+      <div class="bs">(a) IMPLEMENTATION PERIOD.&mdash;No State may enforce any citizenship verification requirement imposed under this Act against any individual seeking to register to vote in a covered election until the State has received a Federal readiness certification from the EAC under subsection (b); and not less than 2 Federal election cycles have elapsed since the date of enactment of this Act.</div>
+      <div class="bs">(b) FEDERAL READINESS CERTIFICATION.&mdash;The EAC shall issue a Federal readiness certification to a State upon determining that the State has established the Federal verified-citizen registry connection under section 5; the database-level citizenship verification system under section 6; the free voter identification document program under section 4; the name change resolution procedures under section 7; the good-faith safe harbor procedures under section 9; the voter roll maintenance and notification procedures under section 10; and has trained election officials on all procedures required by this Act.</div>
+      <div class="bs">(c) PROVISIONAL REGISTRATION DURING PHASE-IN.&mdash;During the period before a State receives a Federal readiness certification, any individual who seeks to register to vote in a covered election shall be placed on provisional registration status and shall be entitled to cast a provisional ballot in any covered election. Such provisional ballots shall be counted in full.</div>
+      <div class="bs">(d) EAC IMPLEMENTATION ASSISTANCE.&mdash;The EAC shall provide technical assistance to States in developing the systems and procedures required for Federal readiness certification.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s9">
+      <div class="bsec-hdr">SEC. 9. <span>Good-Faith Safe Harbor for Election Officials.</span></div>
+      <div class="bs">(a) SAFE HARBOR ESTABLISHED.&mdash;An election official shall not be subject to criminal liability under any Federal or State law for accepting a voter registration application that is later determined to be ineligible on the basis of citizenship, if the election official followed the written procedures established by the State pursuant to subsection (b); and did not have actual knowledge at the time of acceptance that the applicant was not a citizen of the United States.</div>
+      <div class="bs">(b) REQUIRED STATE PROCEDURES.&mdash;Each State shall establish written procedures for election officials to follow when processing voter registration applications under this Act. Such procedures shall specify the steps for database verification, document acceptance under the fallback process, and the affidavit process, and shall be made publicly available on the State election authority&rsquo;s website.</div>
+      <div class="bs">(c) NEGLIGENCE AND WILLFUL MISCONDUCT.&mdash;The safe harbor established in subsection (a) shall not apply to an election official who accepted a voter registration application with actual knowledge that the applicant was not a citizen of the United States; or deviated from the written procedures established under subsection (b) in a manner constituting gross negligence or willful misconduct.</div>
+      <div class="bs">(d) NO SAFE HARBOR FOR SYSTEMATIC FAILURES.&mdash;The safe harbor established in subsection (a) does not apply to a State or local election authority that fails to establish the written procedures required under subsection (b) or that systematically fails to implement the verification requirements of this Act.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s10">
+      <div class="bsec-hdr">SEC. 10. <span>Voter Roll Maintenance and Notification Requirements.</span></div>
+      <div class="bs">(a) AMENDMENT TO NVRA.&mdash;Section 8 of the National Voter Registration Act of 1993 (52 U.S.C. 20507) is amended by adding at the end the following:</div>
+      <div class="bquoted">
+        <p>&lsquo;(k) CITIZENSHIP-BASED REMOVAL REQUIREMENTS.&mdash;</p>
+        <div class="bs">(1) NOTICE REQUIRED.&mdash;A State may not remove a registrant from the official list of eligible voters on the basis of a determination or indication that the registrant may not be a citizen of the United States unless the State sends written notice to the registrant at the registrant&rsquo;s address of record, by forwardable mail, informing the registrant of the proposed removal and the basis for it; includes in the notice a list of citizenship documents the registrant may present to contest the removal, information about the free voter identification document program under section 4, a telephone number and website for the State election authority, and a clear statement that the registrant will remain registered during the cure period; and provides the registrant a cure period of not less than 90 days to present a citizenship document or contest the proposed removal.</div>
+        <div class="bs">(2) PROVISIONAL BALLOT DURING CURE PERIOD.&mdash;A registrant who has received notice of proposed removal and has not been finally removed shall be entitled to cast a provisional ballot in any covered election occurring during the cure period. Such provisional ballot shall be counted in full unless the State finally determines, following the cure period, that the registrant is not a citizen of the United States.</div>
+        <div class="bs">(3) PUBLIC DATABASE.&mdash;Each State shall maintain a publicly accessible online database of all voter registrations in proposed-removal status under this subsection, updated not less than weekly, including the county of registration and the date the notice of proposed removal was sent, but not including personally identifiable information of the registrant.</div>
+        <div class="bs">(4) ERROR CORRECTION.&mdash;A registrant who was removed from the voter rolls under this subsection and who subsequently demonstrates citizenship shall be immediately restored to the voter rolls and shall be entitled to vote in any upcoming covered election.&rsquo;.</div>
+      </div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s11">
+      <div class="bsec-hdr">SEC. 11. <span>Mail Ballot Integrity.</span></div>
+      <div class="bs">(a) VERIFICATION AT REGISTRATION.&mdash;Citizenship verification under this Act shall occur at the point of voter registration, not at the point of ballot submission. No State shall require a voter to include a copy of a citizenship document or photo identification with a mail ballot for a covered election.</div>
+      <div class="bs">(b) SIGNATURE VERIFICATION.&mdash;Nothing in this Act shall be construed to prohibit a State from requiring signature verification on mail ballots as a means of confirming that the ballot was submitted by the registered voter.</div>
+      <div class="bs">(c) BALLOT SECRECY.&mdash;No requirement imposed under this Act shall be implemented in a manner that compromises the secrecy of a voter&rsquo;s ballot choices.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s12">
+      <div class="bsec-hdr">SEC. 12. <span>Federal Funding Mechanism.</span></div>
+      <div class="bs">(a) EAC FORMULA GRANTS.&mdash;Section 101 of HAVA (52 U.S.C. 20901) is amended by adding at the end the following:</div>
+      <div class="bquoted">
+        <p>&lsquo;(d) ELECTION INTEGRITY STANDARDS ACT IMPLEMENTATION GRANTS.&mdash;</p>
+        <div class="bs">(1) IN GENERAL.&mdash;The EAC shall make payments to each State to assist the State in implementing the requirements of the Election Integrity Standards Act, including developing and maintaining the database-level citizenship verification system; establishing and operating the free voter identification document program; training election officials; establishing voter roll maintenance and notification procedures; and establishing mobile voter identification document assistance units to serve rural and low-income voters.</div>
+        <div class="bs">(2) FORMULA.&mdash;Payments under this subsection shall be made on the basis of a formula that accounts for the voting-age population of the State; the estimated number of eligible voters lacking ready access to citizenship documents; and the geographic size of the State and the proportion of the population living in rural areas.</div>
+        <div class="bs">(3) CONDITIONS.&mdash;A State receiving funds under this subsection shall submit an implementation plan to the EAC describing how funds will be used; submit annual reports to the EAC on implementation progress and expenditures; and make implementation plans and annual reports publicly available on the State election authority&rsquo;s website.&rsquo;.</div>
+      </div>
+      <div class="bs">(b) AUTHORIZATION OF APPROPRIATIONS.&mdash;There are authorized to be appropriated to the EAC to carry out this section $2,000,000,000 for fiscal year 2026 and each of the 4 succeeding fiscal years, to remain available until expended.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="bsec" id="s13">
+      <div class="bsec-hdr">SEC. 13. <span>Effective Date.</span></div>
+      <div class="bs">(a) IN GENERAL.&mdash;Except as provided in subsection (b), this Act shall take effect on the date of enactment.</div>
+      <div class="bs">(b) ENFORCEMENT DELAYED.&mdash;The citizenship verification requirements of sections 5, 6, and 7 shall not be enforced against any individual seeking to register to vote until the date that is 2 Federal election cycles after the date of enactment of this Act, and then only in States that have received a Federal readiness certification under section 8(b).</div>
+      <div class="bs">(c) FEDERAL ELECTION CYCLE DEFINED.&mdash;For purposes of this section, the term &lsquo;Federal election cycle&rsquo; means the 2-year period between regularly scheduled general elections for Members of the House of Representatives.</div>
+    </div>
+    <hr class="divider">
+
+    <div class="drafter" id="drafting">
+      <h3>Drafting Notes &mdash; Not Part of Bill Text</h3>
+      <p>This is a discussion draft prepared by MN06Watch. It is not introduced legislation and has not been reviewed by Congressional counsel. It is offered as a model for evidence-based citizenship verification legislation consistent with <em>Crawford v. Marion County Election Board</em>, 553 U.S. 181 (2008), and the existing HAVA infrastructure.</p>
+      <p><strong>Amendment vehicle:</strong> This bill amends HAVA (Section 303 for database verification; Section 101 for funding) and NVRA (Section 8 for roll maintenance).</p>
+      <p><strong>Scope:</strong> Federal elections only, consistent with Congressional authority under Article I, Section 4 of the Constitution.</p>
+      <p><strong>Constitutional footing:</strong> The free document program in Section 4 is the constitutional load-bearing condition for this Act&rsquo;s validity. In <em>Crawford</em>, Justice Stevens explicitly stated that a voter ID requirement would fail under <em>Harper v. Virginia Board of Elections</em> if the State required voters to pay a fee to obtain identification. Note: There is no Supreme Court ruling that affirmatively requires Congress to fund mandates imposed on voters or states &mdash; the funding obligation rests on <em>Crawford</em>&rsquo;s constitutional logic, not a direct commandeering ruling.</p>
+      <p><strong>Registry privacy (Section 5(f)):</strong> The &ldquo;voter verification tool, and nothing else&rdquo; language in paragraph (2) is the plain-language statement of purpose. Paragraph (3) provides the legal prohibition on use in immigration proceedings. Together they create both a policy statement and a legal boundary without leading with agency names.</p>
+      <p><strong>Student ID (Section 3(1)(I)):</strong> The enrollment verification requirement &mdash; provided at no cost by the institution &mdash; is the hook that makes the document government-verified.</p>
+      <p><strong>Tribal ID (Section 3(1)(H)):</strong> Expands tribal ID coverage beyond the KIC card to all federally recognized tribal IDs with photo and expiration date, consistent with the federal government&rsquo;s trust responsibility to tribal nations.</p>
+      <p style="color:var(--navy);font-style:italic;margin-top:14px;">MN06Watch &middot; mn06watch.com &middot; Receipts, not rage.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div>MN06Watch &middot; <a href="https://mn06watch.com">mn06watch.com</a> &middot; <a href="https://mn06watch.substack.com">Substack</a></div>
+  <div style="margin-top:7px;color:rgba(255,255,255,0.35);">This is a citizen journalism project. EISA is a discussion draft, not introduced legislation.</div>
+</footer>
+
+<script>
+const secs = document.querySelectorAll('.bsec');
+const links = document.querySelectorAll('.sidebar a');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+secs.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

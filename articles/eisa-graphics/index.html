@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EISA Shareable Graphics — MN06Watch</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
+
+  :root {
+    --navy: #1a365d;
+    --navy-deep: #0f2240;
+    --gold: #d69e2e;
+    --gold-light: #f6c244;
+    --white: #ffffff;
+    --off-white: #f7f3ee;
+    --red: #9b2335;
+    --green: #276749;
+    --gray: #718096;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #111;
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .instructions {
+    color: rgba(255,255,255,0.3);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    text-align: center;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+
+  .graphics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 40px;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  /* ============ GRAPHIC WRAPPER ============ */
+  .graphic-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .graphic-label {
+    color: rgba(255,255,255,0.4);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .graphic-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  /* ============ GRAPHIC 1: POLLING GAP ============ */
+  .g1 {
+    background: var(--navy-deep);
+  }
+
+  .g1-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(214,158,46,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(155,35,53,0.12) 0%, transparent 50%);
+  }
+
+  .g1-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .g1-content {
+    position: relative;
+    z-index: 2;
+    padding: 44px 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .g1-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .g1-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding: 24px 0;
+  }
+
+  .g1-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--white);
+    line-height: 1.3;
+    max-width: 360px;
+  }
+
+  .g1-headline em {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  .poll-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .poll-row-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+  }
+
+  .poll-row-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .poll-track {
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .poll-fill {
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    animation: fillBar 1.2s ease forwards;
+    width: 0%;
+  }
+
+  @keyframes fillBar {
+    to { width: var(--target-width); }
+  }
+
+  .fill-green { background: #276749; color: white; --target-width: 80%; }
+  .fill-gold { background: var(--gold); color: var(--navy); --target-width: 66%; }
+  .fill-red { background: #9b2335; color: white; --target-width: 28%; }
+
+  .poll-arrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  .poll-arrow-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, #276749, #9b2335);
+    margin-left: 16px;
+    position: relative;
+  }
+
+  .poll-arrow-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+  }
+
+  .g1-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .g1-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .g1-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .g1-brand span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.3);
+    font-weight: 400;
+    text-align: right;
+    letter-spacing: 0.08em;
+  }
+
+  /* ============ GRAPHIC 2: STUDENT ID ============ */
+  .g2 {
+    background: var(--off-white);
+  }
+
+  .g2-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--navy), var(--gold));
+  }
+
+  .g2-content {
+    position: relative;
+    z-index: 2;
+    padding: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .g2-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--navy);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+
+  .g2-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .g2-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  .g2-headline strong {
+    color: var(--gold);
+  }
+
+  .g2-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .g2-box {
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+
+  .g2-box-bad {
+    background: #fee2e2;
+    border: 1.5px solid #fca5a5;
+  }
+
+  .g2-box-good {
+    background: #dcfce7;
+    border: 1.5px solid #86efac;
+  }
+
+  .g2-box-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .g2-box-bad .g2-box-label { color: #991b1b; }
+  .g2-box-good .g2-box-label { color: #166534; }
+
+  .g2-box-text {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .g2-box-bad .g2-box-text { color: #7f1d1d; }
+  .g2-box-good .g2-box-text { color: #14532d; }
+
+  .g2-sub {
+    font-size: 0.78rem;
+    color: var(--gray);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .g2-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .g2-url {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--navy);
+    opacity: 0.4;
+  }
+
+  .g2-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .g2-brand span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--gray);
+    font-weight: 400;
+    text-align: right;
+  }
+
+  /* ============ GRAPHIC 3: NAME MISMATCH ============ */
+  .g3 {
+    background: var(--navy);
+  }
+
+  .g3-stripe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(214,158,46,0.06) 100%);
+  }
+
+  .g3-number {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(8rem, 18vw, 14rem);
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .g3-content {
+    position: relative;
+    z-index: 2;
+    padding: 44px 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .g3-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .g3-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .g3-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .g3-num {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 9vw, 6rem);
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .g3-unit {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .g3-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    color: var(--white);
+    line-height: 1.4;
+    max-width: 380px;
+  }
+
+  .g3-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+
+  .g3-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .g3-comp-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+
+  .g3-comp-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .g3-comp-icon.bad { background: #9b2335; color: white; }
+  .g3-comp-icon.good { background: #276749; color: white; }
+
+  .g3-comp-text { color: rgba(255,255,255,0.75); }
+  .g3-comp-text strong { color: var(--white); }
+
+  .g3-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .g3-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.25);
+  }
+
+  .g3-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .g3-brand span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.3);
+    font-weight: 400;
+  }
+
+  /* ============ GRAPHIC 4: PORTABILITY / MOVE ============ */
+  .g4 {
+    background: #0f1923;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .g4-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(214,158,46,0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  }
+
+  .g4-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(39,103,73,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .g4-content {
+    position: relative;
+    z-index: 2;
+    padding: 44px 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .g4-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .g4-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .g4-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+    color: var(--white);
+    line-height: 1.25;
+  }
+
+  .g4-headline em {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  .g4-scenario {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .g4-scenario-col {
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .g4-scenario-col.before {
+    background: rgba(155,35,53,0.15);
+    border: 1px solid rgba(155,35,53,0.3);
+  }
+
+  .g4-scenario-col.after {
+    background: rgba(39,103,73,0.15);
+    border: 1px solid rgba(39,103,73,0.3);
+  }
+
+  .g4-scenario-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .before .g4-scenario-label { color: #fca5a5; }
+  .after .g4-scenario-label { color: #86efac; }
+
+  .g4-scenario-text {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .g4-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.2rem;
+  }
+
+  .g4-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .g4-tagline strong {
+    color: rgba(255,255,255,0.7);
+    font-style: normal;
+  }
+
+  .g4-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .g4-url {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.2);
+  }
+
+  .g4-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 700;
+    text-align: right;
+  }
+
+  .g4-brand span {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.55rem;
+    color: rgba(255,255,255,0.25);
+    font-weight: 400;
+  }
+
+  /* Download hint */
+  .download-hint {
+    color: rgba(255,255,255,0.25);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 580px) {
+    .graphics-grid { grid-template-columns: 1fr; }
+    .graphic-card { aspect-ratio: 4/5; }
+  }
+</style>
+</head>
+<body>
+
+<h1>EISA — Shareable Graphics · MN06Watch</h1>
+<p class="instructions">Four standalone shareable cards · Screenshot each one individually · Each links back to mn06watch.com/articles/eisa-framework/</p>
+
+<div class="graphics-grid">
+
+  <!-- GRAPHIC 1: POLLING GAP -->
+  <div class="graphic-wrap">
+    <div class="graphic-label">Graphic 1 — The Polling Gap · All audiences</div>
+    <div class="graphic-card g1">
+      <div class="g1-bg"></div>
+      <div class="g1-grid"></div>
+      <div class="g1-content">
+        <div class="g1-eyebrow">CBS News/YouGov · Same pollster · Same week · March 2026</div>
+
+        <div class="g1-main">
+          <div class="g1-headline">The gap between what you think you're supporting — and <em>what's actually in the bill.</em></div>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="poll-row">
+              <div class="poll-row-title">Photo ID to vote</div>
+              <div class="poll-track">
+                <div class="poll-fill fill-green" style="animation-delay:0.2s">80%</div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;padding:2px 0;">
+              <div style="width:2px;height:32px;background:linear-gradient(to bottom,#276749,#9b2335);margin-left:14px;border-radius:2px;opacity:0.7;"></div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:rgba(255,255,255,0.35);font-style:italic;">same pollster · same week</div>
+            </div>
+
+            <div class="poll-row">
+              <div class="poll-row-title">"The SAVE America Act" — by name</div>
+              <div class="poll-track">
+                <div class="poll-fill fill-red" style="animation-delay:0.5s">28%</div>
+              </div>
+              <div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:rgba(255,255,255,0.3);margin-top:4px;">41% not sure · only 16% of Republicans know the specifics</div>
+            </div>
+          </div>
+
+          <div style="background:rgba(214,158,46,0.1);border:1px solid rgba(214,158,46,0.25);border-radius:6px;padding:12px 16px;">
+            <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--gold);margin-bottom:4px;">The question isn't whether to verify.</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);line-height:1.5;">It's whether the implementation matches what 80% of Americans actually support. There's a better way.</div>
+          </div>
+        </div>
+
+        <div class="g1-footer">
+          <div class="g1-source">mn06watch.com/articles/eisa-framework</div>
+          <div class="g1-brand">MN06Watch<span>Receipts, not rage.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="download-hint">↑ Screenshot this card for sharing</div>
+  </div>
+
+  <!-- GRAPHIC 2: STUDENT ID -->
+  <div class="graphic-wrap">
+    <div class="graphic-label">Graphic 2 — Student ID · 18–28 audience</div>
+    <div class="graphic-card g2">
+      <div class="g2-accent"></div>
+      <div class="g2-content">
+        <div class="g2-eyebrow">MN06Watch · Election Integrity Standards Act · EISA</div>
+
+        <div class="g2-main">
+          <div class="g2-headline">Your student ID.<br><strong>One bill says yes.<br>One says no.</strong></div>
+
+          <div class="g2-compare">
+            <div class="g2-box g2-box-bad">
+              <div class="g2-box-label">✕ SAVE Act</div>
+              <div class="g2-box-text">Student IDs excluded entirely. No passport? You're starting from scratch.</div>
+            </div>
+            <div class="g2-box g2-box-good">
+              <div class="g2-box-label">✓ EISA</div>
+              <div class="g2-box-text">State university student ID qualifies. Photo + expiration + enrollment verification.</div>
+            </div>
+          </div>
+
+          <div class="g2-sub">Both bills claim to be about election integrity. Only one was designed to actually work for the 80% who support voter verification — including you.</div>
+        </div>
+
+        <div class="g2-footer">
+          <div class="g2-url">mn06watch.com/articles/eisa-framework</div>
+          <div class="g2-brand">MN06Watch<span>Receipts, not rage.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="download-hint">↑ Screenshot this card for sharing</div>
+  </div>
+
+  <!-- GRAPHIC 3: NAME MISMATCH -->
+  <div class="graphic-wrap">
+    <div class="graphic-label">Graphic 3 — Name Mismatch · Women 30–50</div>
+    <div class="graphic-card g3">
+      <div class="g3-stripe"></div>
+      <div class="g3-number">69M</div>
+      <div class="g3-content">
+        <div class="g3-eyebrow">The name on your birth certificate</div>
+
+        <div class="g3-main">
+          <div class="g3-stat">
+            <div class="g3-num">69M</div>
+            <div class="g3-unit">American women</div>
+          </div>
+
+          <div class="g3-headline">have a birth certificate that doesn't match their current legal name after marriage.</div>
+
+          <div class="g3-divider"></div>
+
+          <div class="g3-comparison">
+            <div class="g3-comp-row">
+              <div class="g3-comp-icon bad">✕</div>
+              <div class="g3-comp-text"><strong>SAVE Act:</strong> Requires a bridge document — but doesn't specify what that means. Implementation undefined.</div>
+            </div>
+            <div class="g3-comp-row">
+              <div class="g3-comp-icon good">✓</div>
+              <div class="g3-comp-text"><strong>EISA:</strong> SSA already has your name change history. No marriage certificate required.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="g3-footer">
+          <div class="g3-source">Source: Center for American Progress · mn06watch.com/articles/eisa-framework</div>
+          <div class="g3-brand">MN06Watch<span>Receipts, not rage.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="download-hint">↑ Screenshot this card for sharing</div>
+  </div>
+
+  <!-- GRAPHIC 4: PORTABILITY / MOVE -->
+  <div class="graphic-wrap">
+    <div class="graphic-label">Graphic 4 — Portability · 25–45 broad audience</div>
+    <div class="graphic-card g4">
+      <div class="g4-dots"></div>
+      <div class="g4-glow"></div>
+      <div class="g4-content">
+        <div class="g4-eyebrow">When you move — what happens to your voter registration?</div>
+
+        <div class="g4-main">
+          <div class="g4-headline">Verify once.<br><em>Carry it forward.</em><br>Forever.</div>
+
+          <div class="g4-scenario">
+            <div class="g4-scenario-col before">
+              <div class="g4-scenario-label">✕ Immediate Mandate</div>
+              <div class="g4-scenario-text">Move to a new state. Start over. Find your documents again. Prove citizenship again.</div>
+            </div>
+            <div class="g4-arrow">→</div>
+            <div class="g4-scenario-col after">
+              <div class="g4-scenario-label">✓ EISA</div>
+              <div class="g4-scenario-text">Move anywhere. Registry lookup confirms your verified status. Done.</div>
+            </div>
+          </div>
+
+          <div class="g4-tagline">
+            <strong>The Federal Verified-Citizen Registry</strong> — verify citizenship once, at any point in your life. Every re-registration after that is a lookup, not a re-verification. Moving across the country or across town: same result.
+          </div>
+        </div>
+
+        <div class="g4-footer">
+          <div class="g4-url">mn06watch.com/articles/eisa-framework</div>
+          <div class="g4-brand">MN06Watch<span>Receipts, not rage.</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="download-hint">↑ Screenshot this card for sharing</div>
+  </div>
+
+</div>
+
+<script>
+// Trigger bar animations when cards scroll into view
+const bars = document.querySelectorAll('.poll-fill');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.animationPlayState = 'running';
+    }
+  });
+}, { threshold: 0.3 });
+
+bars.forEach(bar => {
+  bar.style.animationPlayState = 'paused';
+  obs.observe(bar);
+});
+</script>
+</body>
+</html>
