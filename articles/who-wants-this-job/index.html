@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Wants This Job? — MN-06 Candidate Field 2026 — MN06Watch</title>
+<meta property="og:title" content="Who Wants This Job? Every MN-06 Candidate in Their Own Words">
+<meta property="og:description" content="We sent every declared candidate the same 5 questions. Two responded. One dropped out. Here's where the race stands.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mn06watch.com/articles/who-wants-this-job/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Who Wants This Job? Every MN-06 Candidate in Their Own Words">
+<meta name="twitter:description" content="We sent every declared candidate the same 5 questions. Two responded. One dropped out. Here's where the race stands.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --white: #ffffff;
+    --light: #f7fafc;
+    --gray: #718096;
+    --dark: #2d3748;
+    --green: #276749;
+    --red: #9b2335;
+    --blue: #1a5fb4;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Source Serif 4', Georgia, serif; background: var(--light); color: var(--dark); line-height: 1.7; }
+
+  .site-nav { background: var(--navy); padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .site-nav .logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.1rem; font-weight: 700; text-decoration: none; }
+  .site-nav .tagline { color: var(--gold); font-size: 0.8rem; font-style: italic; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.82rem; margin-left: 20px; font-family: 'JetBrains Mono', monospace; }
+  .nav-links a:hover { color: var(--gold); }
+
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, #2a4a7f 100%); color: var(--white); padding: 56px 24px 44px; text-align: center; }
+  .hero-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 14px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.15; margin-bottom: 14px; }
+  .hero p { font-size: 1.05rem; color: rgba(255,255,255,0.8); max-width: 620px; margin: 0 auto; line-height: 1.6; }
+
+  .content-wrap { max-width: 860px; margin: 0 auto; padding: 36px 24px 60px; }
+  .intro-text { font-size: 1rem; line-height: 1.8; margin-bottom: 36px; }
+  .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; margin-top: 40px; }
+  .section-label:first-of-type { margin-top: 0; }
+
+  /* THREE-CARD GRID */
+  .candidates-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .candidate-card {
+    background: var(--white);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.25s;
+    cursor: pointer;
+  }
+  .candidate-card:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+  .candidate-card.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .candidate-card.active .card-name { color: var(--white); }
+  .candidate-card.active .card-meta { color: rgba(255,255,255,0.6); }
+  .candidate-card.active .card-oneliner { color: rgba(255,255,255,0.75); }
+  .candidate-card.active .headshot-r,
+  .candidate-card.active .headshot-d,
+  .candidate-card.active .headshot-e { background: rgba(255,255,255,0.15); }
+  .candidate-card.active .headshot-placeholder { color: var(--white); }
+  .card-inner { padding: 22px 18px; text-align: center; user-select: none; }
+  .headshot { width: 84px; height: 84px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .headshot img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .headshot-placeholder { font-family: 'JetBrains Mono', monospace; font-size: 1.4rem; font-weight: 600; }
+  .headshot-r { background: #fce8eb; }
+  .headshot-r .headshot-placeholder { color: var(--red); }
+  .headshot-d { background: #e6f1fb; }
+  .headshot-d .headshot-placeholder { color: var(--blue); }
+  .headshot-e { background: #f0f0f0; }
+  .card-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--dark); line-height: 1.2; margin-bottom: 3px; }
+  .card-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--gray); margin-bottom: 6px; }
+  .card-oneliner { font-size: 0.84rem; color: var(--gray); line-height: 1.4; margin-bottom: 12px; min-height: 2.8em; }
+  .card-cta {
+    display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500;
+    color: var(--navy); background: var(--light); border: 1px solid var(--border); border-radius: 6px;
+    padding: 7px 16px; transition: all 0.2s; letter-spacing: 0.02em;
+  }
+  .candidate-card:hover .card-cta { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .candidate-card.active .card-cta { background: var(--gold); color: var(--navy); border-color: var(--gold); font-weight: 600; }
+
+  /* ANSWER PANELS */
+  .answers-panel { display: none; background: var(--white); border: 2px solid var(--gold); border-radius: 12px; padding: 28px 32px; margin-top: 18px; margin-bottom: 12px; animation: fadeIn 0.3s ease; }
+  .answers-panel.visible { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+  .panel-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
+  .panel-headshot { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+  .panel-headshot img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .panel-headshot .headshot-placeholder { font-size: 1.1rem; }
+  .panel-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; }
+  .panel-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); }
+  .panel-close { margin-left: auto; background: none; border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); transition: all 0.15s; }
+  .panel-close:hover { background: var(--light); color: var(--dark); }
+  .bio-block { font-size: 0.9rem; color: var(--gray); padding: 14px 18px; background: var(--light); border-radius: 8px; margin-bottom: 24px; line-height: 1.65; border-left: 3px solid var(--gold); }
+  .qa-block { margin-bottom: 22px; }
+  .qa-question { font-family: 'JetBrains Mono', monospace; font-size: 0.73rem; font-weight: 500; color: var(--gold); letter-spacing: 0.03em; margin-bottom: 8px; text-transform: uppercase; }
+  .qa-answer { font-size: 0.95rem; line-height: 1.75; color: var(--dark); }
+  .qa-answer p { margin-bottom: 10px; }
+  .qa-answer p:last-child { margin-bottom: 0; }
+  .qa-answer strong { font-weight: 600; }
+  .qa-answer em { font-style: italic; color: var(--gray); }
+  .qa-answer ul { margin: 8px 0 10px 20px; list-style: disc; }
+  .qa-answer ul li { margin-bottom: 6px; font-size: 0.93rem; }
+  .qa-divider { height: 1px; background: var(--border); margin: 22px 0; }
+  .no-response-note { font-size: 0.95rem; color: var(--gray); line-height: 1.7; padding: 8px 0; }
+
+  /* OTHER CANDIDATES GRID */
+  .others-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .other-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .other-card:hover { border-color: var(--gold); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  .other-card.active { border-color: var(--navy); background: #f8faff; }
+  .other-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: 2px; }
+  .other-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--gray); margin-bottom: 6px; }
+  .other-status { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; color: var(--red); }
+  .other-status-out { color: var(--gray); }
+  .other-cta { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--navy); margin-top: 8px; }
+
+  .other-panel { display: none; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 26px; margin-top: 14px; margin-bottom: 10px; animation: fadeIn 0.3s ease; }
+  .other-panel.visible { display: block; }
+
+  .methodology { margin-top: 40px; padding: 22px 26px; border-left: 3px solid var(--gold); background: var(--white); border-radius: 0 8px 8px 0; font-size: 0.85rem; line-height: 1.65; color: var(--gray); }
+  .methodology strong { color: var(--dark); }
+
+  footer { background: #111827; color: rgba(255,255,255,0.55); padding: 28px 24px; text-align: center; font-size: 0.8rem; margin-top: 48px; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 700px) {
+    .hero { padding: 36px 18px 30px; }
+    .hero h1 { font-size: 1.6rem; }
+    .content-wrap { padding: 24px 16px 40px; }
+    .candidates-grid { grid-template-columns: 1fr; }
+    .others-grid { grid-template-columns: 1fr; }
+    .headshot { width: 72px; height: 72px; }
+    .answers-panel { padding: 20px 18px; }
+    .nav-links { display: none; }
+  }
+  @media (min-width: 701px) and (max-width: 900px) {
+    .candidates-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.substack.com">Substack</a>
+    <a href="https://mn06watch.com/articles/">Articles</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-label">MN-06 Watch &middot; Special Report</div>
+  <h1>Who Wants This Job?</h1>
+  <p>We sent every declared candidate for Minnesota's 6th Congressional District the same five questions. Two responded. One dropped out. Here's where the race stands &mdash; in their own words.</p>
+</div>
+
+<div class="content-wrap">
+
+  <div class="intro-text">
+    MN-06 Watch contacted every declared candidate for Minnesota's 6th Congressional District on March 20, 2026, with five identical questions. Follow-up emails were sent to non-respondents on March 25. Rep. Emmer's congressional office was contacted through the same process as all other candidates. Candidates who responded are listed first in alphabetical order. Responses are published as received. The primary is August 11, 2026. The general election is November 3, 2026. Minnesota uses an open primary &mdash; voters do not need to register with a party to participate.
+  </div>
+
+  <!-- ==================== THREE TOP CARDS ==================== -->
+  <div class="candidates-grid">
+
+    <div class="candidate-card" id="card-chapin" onclick="openCandidate('chapin')">
+      <div class="card-inner">
+        <div class="headshot headshot-d">
+          <!-- Replace: <img src="chapin-headshot.jpg" alt="Doug Chapin"> -->
+          <span class="headshot-placeholder">DC</span>
+        </div>
+        <div class="card-name">Doug Chapin</div>
+        <div class="card-meta">DFL &middot; Hanover</div>
+        <div class="card-oneliner">Election law expert. Pew elections director. Georgetown law. Running on democracy, affordability, and rule of law.</div>
+        <div class="card-cta">Read his answers &#9660;</div>
+      </div>
+    </div>
+
+    <div class="candidate-card" id="card-foley" onclick="openCandidate('foley')">
+      <div class="card-inner">
+        <div class="headshot headshot-r">
+          <img src="foley-headshot.jpg" alt="Michael Foley">
+        </div>
+        <div class="card-name">Michael Foley</div>
+        <div class="card-meta">Republican &middot; Elk River</div>
+        <div class="card-oneliner">Marine veteran. Biochemical engineer. Republican primary challenger running on accountability and constituent access.</div>
+        <div class="card-cta">Read his answers &#9660;</div>
+      </div>
+    </div>
+
+    <div class="candidate-card" id="card-emmer" onclick="openCandidate('emmer')">
+      <div class="card-inner">
+        <div class="headshot headshot-e">
+          <img src="https://emmer.house.gov/sites/evo-subsites/emmer.house.gov/files/evo-media-image/emmer-tom-official.jpg" alt="Tom Emmer">
+        </div>
+        <div class="card-name">Tom Emmer</div>
+        <div class="card-meta">Republican &middot; Incumbent &middot; Majority Whip</div>
+        <div class="card-oneliner">Six-term incumbent. House Majority Whip. Has represented MN-06 since 2015.</div>
+        <div class="card-cta">See response &#9660;</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== CHAPIN ANSWERS ==================== -->
+  <div class="answers-panel" id="panel-chapin">
+    <div class="panel-header">
+      <div class="panel-headshot headshot-d">
+        <span class="headshot-placeholder">DC</span>
+      </div>
+      <div>
+        <div class="panel-name">Doug Chapin</div>
+        <div class="panel-meta">DFL &middot; Hanover &middot; Election law expert</div>
+      </div>
+      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Chapin is a nationally recognized election law expert and policy researcher. He spent over a decade leading The Pew Charitable Trusts' elections team and founded electionline.org, the nation's leading nonpartisan source for election policy news. He built the first online certificate program in election administration at the University of Minnesota's Humphrey School of Public Affairs. Chapin holds a J.D. from Georgetown and a Master's in Public Administration from Harvard's Kennedy School. He served as elections counsel to Democrats on the U.S. Senate Rules Committee. He and his partner own Sweater Vest Strategies, a Minnesota-based policy research and advocacy firm, and he hosts <em>Civics Anonymous</em>, a nonpartisan discussion series on law and government. He says he decided to run on Inauguration Day 2025 when the President pardoned January 6 defendants. Former DFL primary candidate Jeremy Wicklund withdrew from the race and endorsed Chapin.
+    </div>
+    <div class="qa-block">
+      <div class="qa-question">Q1 &middot; Why are you running for this seat?</div>
+      <div class="qa-answer">
+        <p>I decided to run for Congress in January 2025 when the President pardoned the January 6 rioters. My background is in democracy, elections, public policy and the law and I realized that it wasn't enough to improve the voting process incrementally from the outside when the barbarians were literally at the gates.</p>
+        <p>I'm running against Tom "go get 'em ICE" Emmer because he is the best (worst?) example of what is wrong with our current Congress. The Founders designed Congress to be the people's branch of government with responsibility to make decisions about revenue, spending, foreign policy and other vital national issues &hellip; and the current Congress is acting like a subservient rubber stamp to a President who acts and speaks like he wants to be a king. As Majority Whip, Emmer has the opportunity to help lead the House but instead has decided to use his position to act as the President's #1 cheerleader and blindly vocal defender. Defeating him would send a message to Members of both parties that they serve the Constitution, not any one individual.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q2 &middot; What are your top three priorities for MN-06?</div>
+      <div class="qa-answer">
+        <p><strong>Affordability</strong> &mdash; an economy that works for everyone. Every working family should have access to good jobs with adequate benefits and an opportunity to save for a home, higher education, retirement or whatever else they value. In short, every working family deserves an opportunity to thrive and not just survive.</p>
+        <p><strong>Health care</strong> &mdash; a system that cares for everyone. The current for-profit insurance system values shareholders over patients and their healthcare providers. I support a single-payer system like Medicare for All to put patients back in charge of their care &mdash; including all aspects of care including mental health and reproductive care.</p>
+        <p><strong>Rule of law</strong> &mdash; a government that serves everyone. Fighting to restore Congress' place as the people's branch and reassert its authority to represent every American (including immigrants) and not just the wealthy few.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q3 &middot; What is one thing the district's representative should be doing for constituents that isn't happening right now?</div>
+      <div class="qa-answer">
+        <p>I believe a Member of Congress &mdash; especially in the House &mdash; has three jobs:</p>
+        <p><em>Legislating</em> &mdash; the push and pull of lawmaking.</p>
+        <p><em>Constituent service</em> &mdash; helping district residents navigate the federal bureaucracy (Social Security, IRS, Medicare/Medicaid, service academies, etc.).</p>
+        <p><em>Being a booster for the district</em> &mdash; a one-person Chamber of Commerce, if you will &mdash; who seeks out opportunities for public and private investment and looks to share our successes.</p>
+        <p>Emmer doesn't do any of these well, but he has completely failed at #3. He has clearly decided he'd rather be in DC and acts like time spent here at home is a necessary evil. I think the 6th has an amazing story and I'm eager to tell it in DC, across the nation and around the world.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q4 &middot; How do you plan to stay accessible and engaged with constituents if elected?</div>
+      <div class="qa-answer">
+        <p>It's common knowledge that Emmer has zero presence, physical or otherwise, in the district. I have plans for three major efforts to remedy that:</p>
+        <p>Regular (at least monthly) opportunities for me personally to face the voters &mdash; ideally in-person but also virtually if business keeps me in DC &mdash; town halls, Q&amp;As, "lunch and learns", etc.</p>
+        <p>A commitment to true responsiveness as opposed to form letters and canned responses &mdash; check out my social media (especially Threads) for an example of what that might look like.</p>
+        <p>Increase the number of district offices &mdash; I plan to use more of my "clerk hire" allowance for district (as opposed to DC) staff, including at least one who travels to communities that don't have a physical space.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q5 &middot; What is an MN-06 issue that doesn't get talked about enough?</div>
+      <div class="qa-answer">
+        <p>An emerging regional identity. Conventional wisdom is that the 6th (and Central Minnesota generally) is a rural area distinct from the more urban areas of the Twin Cities Metro and St. Cloud. But the reality is that the area is rapidly becoming a more cohesive and diverse community as development expands and new residents move in. Census data says that 1 in 5 residents have moved here in the last 5 years &mdash; a fact that I can confirm having spoken to so many CD6 voters in the last year. Increasingly, we are seeing young people coming back to their hometowns after school/training &hellip; as well as lots of older people who are returning to be closer to their children and grandchildren ("grandkid chasers" as one woman called herself). Yes, there are still areas of the district where farming and small-town life is dominant but it's clear that the 6th is more than just a collection of individual counties, cities and towns &mdash; it's a region with shared needs for jobs, healthcare, education, and public investment in infrastructure like the North Star rail line. This isn't the district that Tom Emmer first won in 2014 &mdash; it's a district that's ready for someone new who not only unifies the community but really values them &mdash; instead of pitting them one against another.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOLEY ANSWERS ==================== -->
+  <div class="answers-panel" id="panel-foley">
+    <div class="panel-header">
+      <div class="panel-headshot headshot-r">
+        <img src="foley-headshot.jpg" alt="Michael Foley">
+      </div>
+      <div>
+        <div class="panel-name">Michael Foley</div>
+        <div class="panel-meta">Republican &middot; Elk River &middot; Age 40</div>
+      </div>
+      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Foley is a Marine Corps veteran who served in Iraq and a biochemical engineer. He describes himself as a moderate Republican who entered the race over concerns about divisive rhetoric and constituent access in MN-06. Foley has drawn attention for showing up at Indivisible protests outside Rep. Emmer's Otsego office to speak directly with voters &mdash; including those who don't share his party affiliation. His campaign has publicly stated that Emmer's office would not agree to meet with him.
+    </div>
+    <div class="qa-block">
+      <div class="qa-question">Q1 &middot; Why are you running for this seat?</div>
+      <div class="qa-answer">
+        <p>I'm running for Congress because Washington has lost touch with the people it's supposed to serve. I grew up here and served this country. I led Marines in Iraq making high pressure decisions, and I led engineers in industry solving real&#8209;world problems. What I see in Washington today is not leadership, it's dysfunction. Instead of accountability, teamwork, and results, we get gridlock, finger&#8209;pointing, and political theater.</p>
+        <p>Congress is intended to be the branch of government closest to the people, but today it keeps avoiding the hard decisions &ndash; diluting the voice of the people.</p>
+        <p>I'm running because I believe representation should come from everyday people who step up, serve with integrity, and then step aside after a limited number of terms. I'm running to restore trust, to bring back fiscal responsibility, and to put the focus on the people who built this district and deserve a government that finally works for them.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q2 &middot; What are your top three priorities for MN-06?</div>
+      <div class="qa-answer">
+        <p>My top 3 priorities are <strong>Affordability, Accountability, and Mending Division.</strong></p>
+        <p><strong>1. Affordability</strong> is number one on voters' minds. People are working harder than ever and still falling behind. Three major drivers are hitting families the hardest:</p>
+        <p><em>Tariffs that raise prices</em> &mdash; Tariffs have been unpredictable and overly broad. Businesses don't know what costs will look like next month, so they raise prices now to protect themselves. Families end up paying the bill. Tariffs should be used with precision and only when they strengthen American industries rather than punish consumers.</p>
+        <p><em>Taxes that squeeze working families</em> &mdash; Minnesota families are paying too much while Washington keeps spending without discipline. If we truly want to lower taxes, we must balance the budget, and that means confronting the reality that both parties protect their own sacred spending items. I'll push for a balanced budget, lower taxes for working families, and an end to blank&#8209;check spending.</p>
+        <p><em>Healthcare costs that are unpredictable and unfair</em> &mdash; Healthcare is one of the biggest affordability crises in the district. Too many Minnesotans go in for a procedure believing it's covered, only to receive a massive bill because one provider was out of network. I will fight for real price transparency, upfront cost information, and reforms that put patients before lobbyists.</p>
+        <p><strong>2. Accountability &amp; Reform</strong> &mdash; Congress has become ineffective because they have been there too long and are only chasing re-election. I support term limits, banning single&#8209;stock trading, and reducing the influence of super PACs. Representation should come from everyday people who serve, sacrifice, and then step aside.</p>
+        <p><strong>3. Mending Division</strong> &mdash; Our democracy weakens when the loudest, most extreme voices set the agenda. Career politicians have learned to pit people against each other while they reward insiders. We can restore respect by rewarding courage over spectacle, encouraging honest debate, and rebuilding institutions that focus on solutions instead of outrage.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q3 &middot; What is one thing the district's representative should be doing for constituents that isn't happening right now?</div>
+      <div class="qa-answer">
+        <p>Our representative is not showing up.</p>
+        <p>For years, MN&#8209;06 has had a representative who refuses to hold public town halls. Voters know he is the Majority Whip in Congress that spends every moment whipping votes for policies that are hurting them. Representation isn't about holding a seat &mdash; it's about listening, answering hard questions, and being accountable.</p>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q4 &middot; How do you plan to stay accessible and engaged with constituents if elected?</div>
+      <div class="qa-answer">
+        <p>The people of MN&#8209;06 deserve a representative who faces them. I am not a politician and have no desire to become a career politician; therefore, I can focus on engaging with constituents instead of fundraising for a re-election.</p>
+        <p>If elected, I will:</p>
+        <ul>
+          <li>Hold regular, open town halls across the district</li>
+          <li>Provide transparent communication about votes and decisions</li>
+          <li>Build a constituent&#8209;first office culture focused on service, not gatekeeping</li>
+        </ul>
+      </div>
+    </div>
+    <div class="qa-divider"></div>
+    <div class="qa-block">
+      <div class="qa-question">Q5 &middot; What is an MN-06 issue that doesn't get talked about enough?</div>
+      <div class="qa-answer">
+        <p>One thing not talked about enough is exploitation in senior care and assisted living organizations. Families are paying more while receiving less, and too many facilities hide behind misleading labels and corporate structures. I've thought through this myself when a family member was recently battling cancer.</p>
+        <p>Seniors deserve dignity, safety, and transparency &mdash; not corporate shell games.</p>
+        <p>I will push for oversight, transparency, investigations into abuse, honest labeling of services, and accountability for facilities that take advantage of seniors.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== EMMER PANEL ==================== -->
+  <div class="answers-panel" id="panel-emmer">
+    <div class="panel-header">
+      <div class="panel-headshot headshot-e">
+        <img src="https://emmer.house.gov/sites/evo-subsites/emmer.house.gov/files/evo-media-image/emmer-tom-official.jpg" alt="Tom Emmer">
+      </div>
+      <div>
+        <div class="panel-name">Tom Emmer</div>
+        <div class="panel-meta">Republican &middot; Incumbent &middot; House Majority Whip</div>
+      </div>
+      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Emmer has represented Minnesota's 6th Congressional District since 2015. He serves as House Majority Whip, the third-ranking Republican in the U.S. House. Before Congress, he served in the Minnesota House of Representatives (2005&ndash;2009) and was the Republican nominee for Governor in 2010. He is an attorney by training. He previously held in-person town halls in the district; his most recent was August 9, 2023, in Hamburg, MN.
+    </div>
+    <div class="no-response-note">
+      <p>Rep. Emmer's congressional office was contacted on March 20, 2026, with the same five questions sent to every declared candidate in the race. A follow-up was sent on March 25. No response was received.</p>
+    </div>
+  </div>
+
+  <!-- ==================== OTHER CANDIDATES ==================== -->
+  <div class="section-label">Other declared candidates</div>
+
+  <div class="others-grid">
+    <div class="other-card" id="ocard-amberson" onclick="openOther('amberson')">
+      <div class="other-name">Anson Amberson</div>
+      <div class="other-meta">DFL &middot; Minden Twp.</div>
+      <div class="other-status">No response</div>
+      <div class="other-cta">Bio &#9660;</div>
+    </div>
+    <div class="other-card" id="ocard-doss" onclick="openOther('doss')">
+      <div class="other-name">Kelly Doss</div>
+      <div class="other-meta">Forward Independence &middot; St. Cloud</div>
+      <div class="other-status">No response</div>
+      <div class="other-cta">Bio &#9660;</div>
+    </div>
+    <div class="other-card" id="ocard-winkelman" onclick="openOther('winkelman')">
+      <div class="other-name">Austin Winkelman</div>
+      <div class="other-meta">Unaffiliated</div>
+      <div class="other-status other-status-out">Not reachable</div>
+      <div class="other-cta">Bio &#9660;</div>
+    </div>
+  </div>
+
+  <div class="other-panel" id="opanel-amberson">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div><strong>Anson Amberson</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gray);">(DFL &middot; Minden Twp.)</span></div>
+      <button class="panel-close" onclick="closeOther(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Amberson has served communities for over 40 years through United Methodist service projects, Habitat for Humanity, medical research, disaster relief, hospital trauma center work, retail pharmacy, natural resources management and education, substitute teaching, and aviation programs. He moved to Minnesota in 2005 and resides in Minden Township near Sauk Rapids. His campaign emphasizes empathy and broad community experience. He is seeking the DFL endorsement for MN-06.
+    </div>
+    <div class="no-response-note">Contacted March 20 and March 25, 2026. No response to the five candidate questions was received by deadline.</div>
+  </div>
+
+  <div class="other-panel" id="opanel-doss">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div><strong>Kelly Doss</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gray);">(Forward Independence &middot; St. Cloud)</span></div>
+      <button class="panel-close" onclick="closeOther(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Doss is a St. Cloud-based small business owner and life coach who was endorsed by the Forward Independence Party in November 2025 as part of their first slate of candidates. She holds a bachelor's degree in political science and psychology and a master's in political science. She has spent more than a decade in nonprofit leadership, including serving as Vice President for Development for the Great River Children's Museum. Her campaign priorities include universal healthcare, Social Security reform, campaign finance reform, term limits, and addressing the impact of artificial intelligence on the workforce. She is running in the general election, not a primary.
+    </div>
+    <div class="no-response-note">Contacted March 20 and March 25, 2026. No response to the five candidate questions was received by deadline.</div>
+  </div>
+
+  <div class="other-panel" id="opanel-winkelman">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div><strong>Austin Winkelman</strong> <span style="font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:var(--gray);">(Unaffiliated)</span></div>
+      <button class="panel-close" onclick="closeOther(event)">Close</button>
+    </div>
+    <div class="bio-block">
+      Winkelman is a Monticello-area native and plastics engineering technician who ran in the 2024 DFL primary for MN-06, losing to Jeanne Hendricks. He is running in 2026 as an unaffiliated independent aligned with Democrats. He attended Hennepin Technical College and founded Plastic Man LLC, an employee-owned cooperative. His platform emphasizes progressive taxation modeled on post-WWII fiscal policy, corporate accountability, and protecting democracy.
+    </div>
+    <div class="no-response-note">Campaign website and social media accounts appear to be inactive. Outreach was not possible.</div>
+  </div>
+
+  <!-- Note about Wicklund -->
+  <p style="font-size:0.85rem;color:var(--gray);margin-top:16px;font-style:italic;">Jeremy Wicklund (DFL, Otsego) withdrew from the race and endorsed Doug Chapin.</p>
+
+  <!-- ==================== METHODOLOGY ==================== -->
+  <div class="methodology">
+    <strong>About this piece.</strong> MN-06 Watch sent identical emails to every declared candidate for Minnesota's 6th Congressional District on Thursday, March 20, 2026, containing five questions. Follow-up emails were sent to non-respondents on Tuesday, March 25. Rep. Emmer's congressional office was contacted through the same process as all other candidates. All responses are published as received. Candidate biographies were compiled from campaign websites, public reporting, and official filings. The primary election is <strong>August 11, 2026</strong>. The general election is <strong>November 3, 2026</strong>. Minnesota uses an open primary &mdash; voters do not need to register with a party to participate in either primary.
+  </div>
+
+</div>
+
+<footer>
+  <div><a href="https://mn06watch.com">mn06watch.com</a> &middot; <a href="https://mn06watch.substack.com">Substack</a></div>
+  <div style="margin-top: 8px;">Receipts, not rage.</div>
+  <div style="margin-top: 6px; color: rgba(255,255,255,0.35); font-size: 0.72rem;">We document what your representative does. You decide what it means.</div>
+</footer>
+
+<script>
+function openCandidate(who) {
+  var panels = document.querySelectorAll('.answers-panel');
+  var cards = document.querySelectorAll('.candidate-card');
+  var targetPanel = document.getElementById('panel-' + who);
+  var targetCard = document.getElementById('card-' + who);
+  var wasVisible = targetPanel.classList.contains('visible');
+
+  panels.forEach(function(p) { p.classList.remove('visible'); });
+  cards.forEach(function(c) {
+    c.classList.remove('active');
+    var cta = c.querySelector('.card-cta');
+    if (c.id === 'card-emmer') { cta.innerHTML = 'See response &#9660;'; }
+    else { cta.innerHTML = 'Read his answers &#9660;'; }
+  });
+
+  closeAllOthers();
+
+  if (!wasVisible) {
+    targetPanel.classList.add('visible');
+    targetCard.classList.add('active');
+    var activeCta = targetCard.querySelector('.card-cta');
+    if (who === 'emmer') { activeCta.innerHTML = 'Viewing &#9650;'; }
+    else { activeCta.innerHTML = 'Viewing answers &#9650;'; }
+    setTimeout(function() {
+      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+}
+
+function closeCandidate(e) {
+  e.stopPropagation();
+  document.querySelectorAll('.answers-panel').forEach(function(p) { p.classList.remove('visible'); });
+  document.querySelectorAll('.candidate-card').forEach(function(c) {
+    c.classList.remove('active');
+    var cta = c.querySelector('.card-cta');
+    if (c.id === 'card-emmer') { cta.innerHTML = 'See response &#9660;'; }
+    else { cta.innerHTML = 'Read his answers &#9660;'; }
+  });
+}
+
+function openOther(who) {
+  var panels = document.querySelectorAll('.other-panel');
+  var cards = document.querySelectorAll('.other-card');
+  var targetPanel = document.getElementById('opanel-' + who);
+  var targetCard = document.getElementById('ocard-' + who);
+  var wasVisible = targetPanel.classList.contains('visible');
+
+  panels.forEach(function(p) { p.classList.remove('visible'); });
+  cards.forEach(function(c) { c.classList.remove('active'); });
+
+  closeAllCandidates();
+
+  if (!wasVisible) {
+    targetPanel.classList.add('visible');
+    targetCard.classList.add('active');
+    setTimeout(function() {
+      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  }
+}
+
+function closeOther(e) {
+  e.stopPropagation();
+  document.querySelectorAll('.other-panel').forEach(function(p) { p.classList.remove('visible'); });
+  document.querySelectorAll('.other-card').forEach(function(c) { c.classList.remove('active'); });
+}
+
+function closeAllOthers() {
+  document.querySelectorAll('.other-panel').forEach(function(p) { p.classList.remove('visible'); });
+  document.querySelectorAll('.other-card').forEach(function(c) { c.classList.remove('active'); });
+}
+
+function closeAllCandidates() {
+  document.querySelectorAll('.answers-panel').forEach(function(p) { p.classList.remove('visible'); });
+  document.querySelectorAll('.candidate-card').forEach(function(c) {
+    c.classList.remove('active');
+    var cta = c.querySelector('.card-cta');
+    if (c.id === 'card-emmer') { cta.innerHTML = 'See response &#9660;'; }
+    else { cta.innerHTML = 'Read his answers &#9660;'; }
+  });
+}
+</script>
+
+</body>
+</html>
