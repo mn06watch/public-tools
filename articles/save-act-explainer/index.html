@@ -141,6 +141,24 @@
   .card-detail-inner p:last-child { margin-bottom:0; }
   .card-detail-inner strong { color:var(--navy); }
   .receipt { font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--navy); background:var(--blue-bg); border:1px solid var(--blue-border); padding:0.1rem 0.35rem; border-radius:3px; white-space:nowrap; }
+
+  /* FAQ */
+  .faq-section { margin:2.5rem 0; }
+  .faq-section h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.6rem; color:var(--navy); margin-bottom:0.5rem; }
+  .faq-section .faq-intro { font-size:0.9rem; color:var(--gray-text); margin-bottom:1.5rem; }
+  .faq-item { border:1px solid var(--gray-mid); border-radius:8px; margin-bottom:0.75rem; overflow:hidden; }
+  .faq-q { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.25rem; cursor:pointer; background:var(--white); gap:1rem; }
+  .faq-q:hover { background:var(--light); }
+  .faq-q-text { font-size:0.95rem; font-weight:700; color:var(--navy); line-height:1.4; }
+  .faq-toggle { font-size:1.25rem; color:var(--gold); flex-shrink:0; transition:transform 0.2s; font-weight:300; }
+  .faq-item.open .faq-toggle { transform:rotate(45deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+  .faq-item.open .faq-a { max-height:3000px; }
+  .faq-a-inner { padding:1.25rem; border-top:2px solid var(--gold-border); }
+  .faq-a-inner p { font-size:0.88rem; line-height:1.65; margin-bottom:0.85rem; color:var(--body-text); }
+  .faq-a-inner p:last-child { margin-bottom:0; }
+  .faq-a-inner strong { color:var(--navy); }
+  .faq-source { font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gray-text); margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--gray-mid); line-height:1.6; }
   .stat-callout { background:var(--gold-bg); border-left:4px solid var(--gold); padding:0.85rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; }
   .stat-callout strong { color:var(--gold); font-family:'JetBrains Mono',monospace; font-size:0.85rem; }
   .key-response { background:var(--green-bg); border-left:4px solid #48bb78; padding:0.75rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; font-weight:600; }
@@ -218,6 +236,7 @@
     <a href="#exists">Current Law</a>
     <a href="#husted">Husted UC</a>
     <a href="#judge">Election Judge</a>
+    <a href="#faq">FAQ</a>
   </div>
 </nav>
 
@@ -230,7 +249,7 @@
 <main class="content">
 
   <div style="background:#fffff0; border:2px solid var(--gold); border-radius:8px; padding:1rem 1.25rem; margin-bottom:1.75rem;">
-    <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">Updated March 22, 2026 — <a href="#changelog" style="color:var(--gold);">see changelog</a></p>
+    <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">Updated March 24, 2026 — <a href="#changelog" style="color:var(--gold);">see changelog</a></p>
   </div>
 
   <p class="lead">Both parties agree that only citizens should vote in federal elections. That's already the law — and has been since 1996. The question is whether the SAVE America Act is the right way to enforce it, or whether it creates more problems than it solves.</p>
@@ -477,6 +496,61 @@
     <button id="judge-restart" class="sim-restart" style="display:none;" onclick="nextJudge()">→ Next Scenario</button>
   </div>
 
+  <!-- ===================== SECTION 6: FAQ ===================== -->
+  <div class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p class="faq-intro">Common objections and the documented responses. Click any question to expand.</p>
+
+    <div class="faq-item" id="faq-strict-liability">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Shouldn't election officials be held accountable if they knowingly register ineligible voters?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Yes — and existing law already does that. The problem with the SAVE Act isn't that it holds officials accountable. It's that it uses <strong>strict liability instead of a negligence standard</strong>, which means it punishes honest errors the same as intentional violations.</p>
+        <p>Under a negligence standard — the legal framework used in virtually every other professional liability context — an official who follows written procedures, acts in good faith, and has no actual knowledge of ineligibility is protected. An official who <em>knowingly</em> registers an ineligible voter faces full criminal penalties. The distinction tracks intent.</p>
+        <p>Under the SAVE Act's strict liability standard, that distinction disappears. An official who follows every procedure correctly, makes a reasonable judgment call on an ambiguous case, and turns out to be wrong faces the same exposure as one who deliberately commits fraud — <strong>up to five years federal prison plus private civil lawsuits from any individual, with no merit requirement.</strong></p>
+        <p>Strict liability is appropriate in narrow contexts where the harm is so severe and the actor's control so complete that intent is irrelevant — environmental contamination, product liability. It is not appropriate where officials are making high-volume, time-pressured judgment calls on ambiguous documentation with no clear guidance, no funding, and no training.</p>
+        <p>The SAVE Act's choice of strict liability over negligence is not incidental. A negligence standard would hold bad actors accountable while protecting good-faith officials. Strict liability holds everyone accountable for every error — which produces one predictable outcome: officials stop making judgment calls and default to rejection in every uncertain case.</p>
+        <div class="faq-source">Sources: SAVE Act §2(j) · INA 8 U.S.C. §1324a (I-9 good faith standard)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-escape-hatch">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Doesn't the attestation escape hatch solve the problem for people who can't produce documents?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The escape hatch exists on paper. The incentive structure guarantees it won't be used.</p>
+        <p>Under the SAVE Act, an election official who accepts a registration without full documentary proof faces <strong>up to five years in federal prison plus private civil lawsuits</strong> — filed by any individual, with no merit requirement and no cap on legal costs. The official who rejects an eligible citizen faces nothing. Zero penalty. Zero liability.</p>
+        <p>Before EAC guidance exists — and the bill takes effect immediately, with guidance arriving ten days later while primaries are already underway — officials have no framework at all. When guidance does arrive, if it is vague or silent on a specific document combination (virtually guaranteed given the complexity of citizenship documentation across 330 million people), officials face the same calculation: prison and lawsuits for accepting, nothing for rejecting. <strong>The default will be rejection every time.</strong></p>
+        <p>Decades of behavioral economics research establish why. Kahneman and Tversky's foundational work on loss aversion demonstrates that people weight potential losses roughly twice as heavily as equivalent gains. When the asymmetry is this extreme — prison and lawsuits on one side, nothing on the other — rational actors don't use the escape hatch. They default to rejection in every case of uncertainty.</p>
+        <p>This isn't speculation. Kansas implemented a similar documentary proof requirement and blocked <strong>30,000+ eligible citizens</strong> while stopping 0.002% non-citizen registrations. Virginia conducted voter purges and <strong>94% of those removed were U.S. citizens.</strong> New Hampshire implemented proof-of-citizenship requirements and turned away <strong>244 eligible voters on day one.</strong> In each case, the incentive to reject produced exactly that outcome.</p>
+        <p>The closest comparable framework is I-9 employment verification, which also requires citizenship attestation. Federal law explicitly builds in a good faith safe harbor: employers who follow written procedures and act without actual knowledge of ineligibility are protected from penalty. The SAVE Act omits that standard entirely. That's not consistent with how citizenship attestation works elsewhere — it's the exception.</p>
+        <div class="faq-source">Sources: Kahneman &amp; Tversky, "Prospect Theory: An Analysis of Decision Under Risk" (1979) · Kahneman, Thinking, Fast and Slow (2011) · INA 8 U.S.C. §1324a (I-9 good faith safe harbor) · ICE I-9 Inspection Guidance · BPC (Kansas) · VoteRiders (Virginia, 2025) · AP (New Hampshire, March 2026) · SAVE Act §2(j)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-private-action">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Doesn't the private right of action just give citizens a way to hold bad officials accountable?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>In theory. In practice, it creates an organized intimidation infrastructure with no merit threshold.</p>
+        <p>Any individual can file a civil lawsuit against an election official for accepting a registration — <strong>with no requirement that the plaintiff believes anything improper occurred, no requirement of harm, and no good faith threshold.</strong> The bill creates a cause of action that can be weaponized by anyone, for any reason, at any time an official uses the escape hatch. The official must retain legal counsel and mount a defense regardless of outcome.</p>
+        <p>The average election clerk earns approximately <strong>$32,000 per year.</strong> The average county clerk earns approximately <strong>$48,000.</strong> A single civil suit — even a completely meritless one filed by someone who has no belief that anything was wrong — requires legal representation, time, and professional exposure that can be financially ruinous for a local government employee at that salary level.</p>
+        <p>A well-funded outside group — a PAC, a nonprofit, or a single wealthy individual — could systematically monitor registration offices, identify officials who use the attestation process, and file coordinated civil suits against them. The suits don't need to succeed. The filing itself is the deterrent. We have already seen nine-figure sums flow into election-related political action committees in recent cycles. The same funding infrastructure that drives political advertising can drive coordinated litigation campaigns against individual county clerks.</p>
+        <p>This is not a hypothetical concern. It is the predictable application of an existing and well-documented political funding infrastructure to a new statutory tool that requires no merit, no harm, and no good faith to deploy.</p>
+        <p>The result isn't accountability for bad actors. It's targeted suppression of the one official behavior — using the escape hatch — that the bill nominally permits. An official who knowingly registers an ineligible voter should face consequences. An official making a good-faith judgment call on ambiguous documentation should not face a litigation campaign funded by outside groups with no stake in the individual case.</p>
+        <p>It is worth asking why the bill was structured this way. A genuine escape hatch — one intended to be used — would include a negligence standard, a safe harbor for officials following written procedures, and no private right of action for non-meritorious claims. <a href="https://mn06watch.com/articles/eisa-framework/?v=2" style="color:var(--navy);font-weight:600;">EISA includes all three.</a> The SAVE Act includes none of them. That's not an oversight.</p>
+        <div class="faq-source">Sources: Glassdoor / SalaryExpert (election clerk and county clerk median salaries, 2024–2025) · SAVE Act §2(j) · OpenSecrets (PAC spending data)</div>
+      </div></div>
+    </div>
+
+  </div>
+
   <!-- FINAL CLOSER -->
   <div class="closer">
     <p>Voter ID is popular. The SAVE Act is not just voter ID.</p>
@@ -490,6 +564,10 @@
   <!-- CHANGELOG -->
   <div id="changelog" style="margin:2rem 0 1.5rem; padding:1.25rem 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;">
     <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-text); margin-bottom:1rem;">Changelog</p>
+    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
+      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 24, 2026</p>
+      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added FAQ section with three new entries addressing common objections: (1) strict liability vs. negligence standard — why the SAVE Act's structure punishes honest errors the same as intentional fraud; (2) the attestation escape hatch — why the incentive structure (up to 5yr prison for accepting, zero penalty for rejecting) guarantees officials default to rejection, grounded in Kahneman &amp; Tversky loss aversion research and Kansas/Virginia/New Hampshire precedent; (3) private right of action — why the no-merit-threshold civil lawsuit mechanism creates an organized intimidation infrastructure deployable by any individual or well-funded outside group, with no requirement that the plaintiff believes anything improper occurred. FAQ entries include direct anchor links: #faq-strict-liability, #faq-escape-hatch, #faq-private-action.</p>
+    </div>
     <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
       <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 22, 2026</p>
       <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added clarification on marriage certificate ambiguity in the documentary proof card: the bill's statutory text does not list marriage certificates as acceptable documentation. States are directed to establish a process for name mismatches but given no guidance on which documents qualify, leaving election officials to make high-stakes judgment calls under threat of prosecution.</p>
