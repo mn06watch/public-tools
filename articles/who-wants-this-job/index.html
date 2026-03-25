@@ -97,15 +97,21 @@
   .answers-panel { display: none; background: var(--white); border: 2px solid var(--gold); border-radius: 12px; padding: 28px 32px; margin-top: 18px; margin-bottom: 12px; animation: fadeIn 0.3s ease; }
   .answers-panel.visible { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
-  .panel-header { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
-  .panel-headshot { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
-  .panel-headshot img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-  .panel-headshot .headshot-placeholder { font-size: 1.1rem; }
-  .panel-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; }
-  .panel-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); }
-  .panel-close { margin-left: auto; background: none; border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); transition: all 0.15s; }
-  .panel-close:hover { background: var(--light); color: var(--dark); }
+  .panel-header { position: relative; width: 100%; height: 220px; border-radius: 10px 10px 0 0; overflow: hidden; margin: -28px -32px 24px -32px; width: calc(100% + 64px); }
+  .panel-header img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .panel-header-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 24px; background: linear-gradient(transparent, rgba(0,0,0,0.75)); }
+  .panel-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: #fff; }
+  .panel-meta { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: rgba(255,255,255,0.75); margin-top: 2px; }
+  .panel-close { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); border: none; border-radius: 6px; padding: 5px 14px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.85); transition: all 0.15s; backdrop-filter: blur(4px); }
+  .panel-close:hover { background: rgba(0,0,0,0.7); color: #fff; }
   .bio-block { font-size: 0.9rem; color: var(--gray); padding: 14px 18px; background: var(--light); border-radius: 8px; margin-bottom: 24px; line-height: 1.65; border-left: 3px solid var(--gold); }
+
+  .panel-header-small { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--border); }
+  .panel-headshot-small { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+  .panel-name-small { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; }
+  .panel-meta-small { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); }
+  .panel-close-small { margin-left: auto; background: none; border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray); transition: all 0.15s; }
+  .panel-close-small:hover { background: var(--light); color: var(--dark); }
   .qa-block { margin-bottom: 22px; }
   .qa-question { font-family: 'JetBrains Mono', monospace; font-size: 0.73rem; font-weight: 500; color: var(--gold); letter-spacing: 0.03em; margin-bottom: 8px; text-transform: uppercase; }
   .qa-answer { font-size: 0.95rem; line-height: 1.75; color: var(--dark); }
@@ -160,6 +166,7 @@
     .others-grid { grid-template-columns: 1fr; }
     .headshot { width: 72px; height: 72px; }
     .answers-panel { padding: 20px 18px; }
+    .panel-header { margin: -20px -18px 20px -18px; width: calc(100% + 36px); height: 180px; }
     .nav-links { display: none; }
   }
   @media (min-width: 701px) and (max-width: 900px) {
@@ -236,14 +243,12 @@
   <!-- ==================== CHAPIN ANSWERS ==================== -->
   <div class="answers-panel" id="panel-chapin">
     <div class="panel-header">
-      <div class="panel-headshot headshot-d">
-        <img src="chapin-headshot.jpg" alt="Doug Chapin" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-      </div>
-      <div>
+      <img src="chapin-headshot.jpg" alt="Doug Chapin">
+      <div class="panel-header-overlay">
         <div class="panel-name">Doug Chapin</div>
         <div class="panel-meta">DFL &middot; Hanover &middot; Election law expert</div>
       </div>
-      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+      <button class="panel-close" onclick="closeCandidate(event)">Close &times;</button>
     </div>
     <div class="bio-block">
       Chapin is a nationally recognized election law expert and policy researcher. He spent over a decade leading The Pew Charitable Trusts' elections team and founded electionline.org, the nation's leading nonpartisan source for election policy news. He built the first online certificate program in election administration at the University of Minnesota's Humphrey School of Public Affairs. Chapin holds a J.D. from Georgetown and a Master's in Public Administration from Harvard's Kennedy School. He served as elections counsel to Democrats on the U.S. Senate Rules Committee. He and his partner own Sweater Vest Strategies, a Minnesota-based policy research and advocacy firm, and he hosts <em>Civics Anonymous</em>, a nonpartisan discussion series on law and government. He says he decided to run on Inauguration Day 2025 when the President pardoned January 6 defendants. Former DFL primary candidate Jeremy Wicklund withdrew from the race and endorsed Chapin.
@@ -297,14 +302,12 @@
   <!-- ==================== FOLEY ANSWERS ==================== -->
   <div class="answers-panel" id="panel-foley">
     <div class="panel-header">
-      <div class="panel-headshot headshot-r">
-        <img src="foley-headshot.jpg" alt="Michael Foley">
-      </div>
-      <div>
+      <img src="foley-headshot.jpg" alt="Michael Foley">
+      <div class="panel-header-overlay">
         <div class="panel-name">Michael Foley</div>
-        <div class="panel-meta">Republican &middot; Elk River &middot; Age 40</div>
+        <div class="panel-meta">Republican &middot; Elk River &middot; Marine veteran &middot; Biochemical engineer</div>
       </div>
-      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+      <button class="panel-close" onclick="closeCandidate(event)">Close &times;</button>
     </div>
     <div class="bio-block">
       Foley is a Marine Corps veteran who served in Iraq and a biochemical engineer. He describes himself as a moderate Republican who entered the race over concerns about divisive rhetoric and constituent access in MN-06. Foley has drawn attention for showing up at Indivisible protests outside Rep. Emmer's Otsego office to speak directly with voters &mdash; including those who don't share his party affiliation. His campaign has publicly stated that Emmer's office would not agree to meet with him.
@@ -364,15 +367,15 @@
 
   <!-- ==================== EMMER PANEL ==================== -->
   <div class="answers-panel" id="panel-emmer">
-    <div class="panel-header">
-      <div class="panel-headshot headshot-e">
-        <img src="https://emmer.house.gov/sites/evo-subsites/emmer.house.gov/files/evo-media-image/emmer-tom-official.jpg" alt="Tom Emmer">
+    <div class="panel-header-small">
+      <div class="panel-headshot-small headshot-e">
+        <img src="emmer-headshot.jpg" alt="Tom Emmer" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
       </div>
       <div>
-        <div class="panel-name">Tom Emmer</div>
-        <div class="panel-meta">Republican &middot; Incumbent &middot; House Majority Whip</div>
+        <div class="panel-name-small">Tom Emmer</div>
+        <div class="panel-meta-small">Republican &middot; Incumbent &middot; House Majority Whip</div>
       </div>
-      <button class="panel-close" onclick="closeCandidate(event)">Close</button>
+      <button class="panel-close-small" onclick="closeCandidate(event)">Close &times;</button>
     </div>
     <div class="bio-block">
       Emmer has represented Minnesota's 6th Congressional District since 2015. He serves as House Majority Whip, the third-ranking Republican in the U.S. House. Before Congress, he served in the Minnesota House of Representatives (2005&ndash;2009) and was the Republican nominee for Governor in 2010. He is an attorney by training. He previously held in-person town halls in the district; his most recent was August 9, 2023, in Hamburg, MN.
