@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAVE Act vs. EISA — Full Scorecard | MN06Watch</title>
+<meta name="description" content="8-factor comparison of the SAVE America Act vs. the Election Integrity Standards Act. Scored by Grok AI. EISA 6 · SAVE 1 · 1 tie.">
+<meta property="og:title" content="SAVE Act vs. EISA — Full Scorecard">
+<meta property="og:description" content="8-factor comparison. EISA 6 · SAVE 1 · 1 tie. Scored by Grok AI.">
+<meta property="og:url" content="https://mn06watch.com/articles/eisa-scorecard/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --gold-light: #f6e05e;
+    --white: #ffffff;
+    --light: #f7fafc;
+    --gray-mid: #e2e8f0;
+    --gray-text: #718096;
+    --body-text: #2d3748;
+    --red: #c53030;
+    --green: #276749;
+    --green-light: #c6f6d5;
+    --red-light: #fed7d7;
+    --tie-bg: #ebf4ff;
+    --tie-color: #2b6cb0;
+    --max-width: 480px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--light);
+    color: var(--body-text);
+    min-height: 100vh;
+    padding: 0 0 3rem;
+  }
+
+  /* HEADER */
+  .site-header {
+    background: var(--navy);
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-header .brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .site-header .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    padding: 1.75rem 1.25rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+  }
+  .hero .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 span { color: var(--gold); }
+
+  /* FINAL SCORE BADGE */
+  .score-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(214,158,46,0.4);
+    border-radius: 100px;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .score-badge .score-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.05em;
+  }
+  .score-badge .score-item.eisa { color: #68d391; }
+  .score-badge .score-item.save { color: #fc8181; }
+  .score-badge .dot {
+    color: rgba(255,255,255,0.3);
+    font-size: 0.5rem;
+  }
+
+  .hero .scoring-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1.25rem 1rem 0;
+  }
+
+  /* FACTOR CARD */
+  .factor-card {
+    background: var(--white);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--gray-mid);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .factor-header {
+    padding: 1rem 1.1rem 0.75rem;
+    border-bottom: 1px solid var(--gray-mid);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .factor-header:hover { background: #fafafa; }
+
+  .factor-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    margin-bottom: 0.3rem;
+  }
+
+  .factor-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+
+  .winner-pill {
+    flex-shrink: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+    white-space: nowrap;
+    margin-top: 0.1rem;
+  }
+  .winner-pill.eisa { background: var(--green-light); color: var(--green); }
+  .winner-pill.eisa-decisive { background: var(--green); color: var(--white); }
+  .winner-pill.save { background: var(--red-light); color: var(--red); }
+  .winner-pill.tie { background: var(--tie-bg); color: var(--tie-color); }
+
+  .factor-toggle {
+    font-size: 1.1rem;
+    color: var(--gold);
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    margin-top: 0.1rem;
+  }
+  .factor-card.open .factor-toggle { transform: rotate(45deg); }
+
+  /* EXPANDABLE BODY */
+  .factor-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .factor-card.open .factor-body { max-height: 2000px; }
+
+  .bill-block {
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--gray-mid);
+  }
+  .bill-block:last-child { border-bottom: none; }
+
+  .bill-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .bill-label.save-label { color: var(--red); }
+  .bill-label.eisa-label { color: var(--green); }
+  .bill-label .indicator {
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .bill-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--body-text);
+    margin-bottom: 0.5rem;
+  }
+
+  .receipt-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+    border-top: 1px solid var(--gray-mid);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .verdict-block {
+    background: var(--light);
+    padding: 0.85rem 1.1rem;
+    border-top: 2px solid var(--gold);
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .verdict-text {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--body-text);
+    font-style: italic;
+  }
+
+  /* SUMMARY TABLE */
+  .summary-section {
+    background: var(--navy);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(214,158,46,0.3);
+  }
+  .summary-header {
+    padding: 1rem 1.1rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .summary-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    gap: 0.5rem;
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-factor {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.75);
+    flex: 1;
+  }
+  .summary-factor span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: rgba(255,255,255,0.4);
+    display: block;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+
+  /* INTRO */
+  .intro-block {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray-mid);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--body-text);
+  }
+  .intro-block p { margin-bottom: 0.75rem; }
+  .intro-block p:last-child { margin-bottom: 0; }
+  .intro-block strong { color: var(--navy); }
+
+  /* SECTION LABEL */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-text);
+    margin: 1.25rem 0 0.6rem;
+  }
+
+  /* CLOSER */
+  .closer {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 1.25rem 1.1rem;
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+  .closer p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0.75rem;
+  }
+  .closer .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0;
+  }
+  .closer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .closer a:hover { text-decoration: underline; }
+
+  /* LINKS */
+  .link-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .link-btn {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.8);
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .link-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .link-btn.primary {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .link-btn.primary:hover { background: var(--gold-light); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="https://mn06watch.com" class="brand">MN06Watch</a>
+  <div class="tagline">Receipts, not rage.</div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Save Act vs. EISA · Full Scorecard</div>
+  <h1>8 factors.<br><span>One question.</span></h1>
+  <div class="score-badge">
+    <span class="score-item eisa">EISA 6</span>
+    <span class="dot">·</span>
+    <span class="score-item save">SAVE 1</span>
+    <span class="dot">·</span>
+    <span class="score-item">1 tie</span>
+  </div>
+  <div class="scoring-note">Scoring framework: Grok AI analysis</div>
+</div>
+
+<div class="main">
+
+  <div class="intro-block">
+    <p>The question was never whether to verify. Both bills close the non-citizen voting loophole. The question is <strong>whether the implementation matches the actual documented scale of the problem</strong> — and whether it does so without creating the chaos it claims to prevent.</p>
+    <p>All receipts are sourced to primary data. Factor 4 updated March 24, 2026 with Washington SOS cost estimate.</p>
+  </div>
+
+  <!-- SUMMARY TABLE -->
+  <div class="summary-section">
+    <div class="summary-header">
+      <h2>Score Summary</h2>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 1</span>Fraud Prevention</div>
+      <span class="winner-pill tie">TIE</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 2</span>Disenfranchisement Risk</div>
+      <span class="winner-pill eisa-decisive">EISA</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 3</span>Constitutional Footing</div>
+      <span class="winner-pill eisa">EISA</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 4</span>Cost & Feasibility</div>
+      <span class="winner-pill eisa-decisive">EISA decisively</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 5</span>Privacy & Federalism</div>
+      <span class="winner-pill save">Slight SAVE edge</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 6</span>Official Incentives</div>
+      <span class="winner-pill eisa">EISA</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 7</span>Implementation Timeline</div>
+      <span class="winner-pill eisa">EISA</span>
+    </div>
+    <div class="summary-row">
+      <div class="summary-factor"><span>Factor 8</span>Net Balance</div>
+      <span class="winner-pill eisa-decisive">EISA decisively</span>
+    </div>
+  </div>
+
+  <div class="section-label">Factor Breakdown — tap to expand</div>
+
+  <!-- FACTOR 1 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 1 · Fraud Prevention</div>
+        <div class="factor-headline">TIE. Both close the loophole.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill tie">TIE</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">In-person proof of citizenship + DHS SAVE database check + criminal penalties. Closes the honor-system attestation gap. Document-first at point of registration.</div>
+        <div class="receipt-line">Approach: document-first at point of registration</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Database-first via SSA/DMV — same infrastructure HAVA §303 has required since 2002. Document fallback only when database is inconclusive. Federal registry makes verification permanent. Perjury felony remains.</div>
+        <div class="receipt-line">Approach: database-first, document only as fallback</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill tie">TIE</span>
+        <div class="verdict-text">Both close the non-citizen voting loophole. Utah: 2M+ audited → 1 non-citizen registration, 0 votes cast. Georgia: 9 ballots out of 8.2M. Calling it honestly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 2 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 2 · Disenfranchisement Risk</div>
+        <div class="factor-headline">Citizens protected?</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa-decisive">EISA</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">21.3M eligible citizens lack ready access to citizenship docs. 69M women have name mismatches between birth certificate and current ID. No notice before roll removal. Immediate effect. Officials face 5yr prison for borderline acceptances.</div>
+        <div class="receipt-line">Kansas: 30,000+ citizens blocked to stop 0.002% non-citizen rate · Virginia purge: 94% removed were U.S. citizens · VoteRiders 2025</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Free federally-funded docs. SSA name history resolves name mismatches — no marriage certificate required. 90-day written notice + cure period. All tribal IDs + university student IDs accepted.</div>
+        <div class="receipt-line">U of Maryland 2025 · CAP · BPC · VoteRiders 2025</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa-decisive">EISA</span>
+        <div class="verdict-text">Kansas blocked 30,000+ eligible citizens to stop 0.002% non-citizen registrations. EISA prevents that at national scale by design. ~1,000x less collateral harm.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 3 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 3 · Constitutional Footing</div>
+        <div class="factor-headline">Crawford: ID must be free. SAVE skips it.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa">EISA</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">No free document program. No funding. No safe harbor. Invites Harper v. Virginia poll tax challenge — the same precedent that would have killed Indiana's law if the ID wasn't free.</div>
+        <div class="receipt-line">Crawford, 553 U.S. 181 (2008) — SAVE omits the constitutional condition</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Section 4: federal government pays vital records offices directly. Stevens: a fee requirement "would not save the statute" under Harper. EISA builds the constitutional condition in from the start.</div>
+        <div class="receipt-line">Crawford, 553 U.S. 181 (2008) · Harper v. Virginia, 383 U.S. 663 (1966)</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa">EISA</span>
+        <div class="verdict-text">SCOTUS upheld Indiana's voter ID law because the ID was free. That's the constitutional condition. SAVE omits it. EISA builds it in explicitly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 4 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 4 · Cost & Feasibility</div>
+        <div class="factor-headline">Cheap on paper. Chaos in practice.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa-decisive">EISA decisively</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">$0 new federal funding. Unfunded mandate on states. No training, no infrastructure window, no readiness check. Takes effect immediately — before the 2026 midterms regardless of preparedness.</div>
+        <div class="receipt-line">Washington SOS: $35.7–$39.3M cost increase for 2026 midterms alone — not budgeted · WA SOS Office, March 2026 · "That's just my state." — SOS Steve Hobbs · NH 2025: 244 eligible citizens turned away — no phase-in</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">$1.5B for free document program. $2B/year EAC formula grants. Minimum two federal election cycles before enforcement. Federal readiness certification required — systems, training, and free-document program must exist before enforcement begins.</div>
+        <div class="receipt-line">HAVA precedent: $4.35B+ invested in election infrastructure since 2003 · Congress has funded this before</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa-decisive">EISA decisively</span>
+        <div class="verdict-text">A bill that looks free but triggers operational meltdown doesn't achieve election integrity. Sticker price is irrelevant if the system collapses in practice. Washington SOS: "That's just my state."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 5 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 5 · Privacy & Federalism</div>
+        <div class="factor-headline">Neither bill is clean. Calling it honestly.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill save">Slight SAVE edge</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label">SAVE Act — Slight Edge, No New Registry</div>
+        <div class="bill-text">No new federal citizenship database. But requires states to hand unredacted voter rolls to DHS — full SSNs, dates of birth, home addresses. Federal agencies share data on flagged individuals.</div>
+        <div class="receipt-line">DHS unredacted voter roll handoff is a substantial privacy exposure · DOGE/SSA signed voter data agreement with outside advocacy group — DOJ court filing, Jan 2026</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label">EISA — Narrow Use, Privacy Act Protections</div>
+        <div class="bill-text">Registry limited strictly to voter registration verification — nothing else. Cannot be used for immigration enforcement. Subject to Privacy Act of 1974. Still centralizes some data.</div>
+        <div class="receipt-line">"This registry is a voter verification tool — and nothing else." — EISA §5(f)(2)</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill save">Slight SAVE edge</span>
+        <div class="verdict-text">SAVE creates no new registry — a genuine advantage. But the DHS unredacted roll handoff is a substantial privacy exposure. Neither bill is clean. Calling it honestly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 6 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 6 · Official Incentives</div>
+        <div class="factor-headline">Incentivize rejection = incentivize disenfranchisement.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa">EISA</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">Up to 5yr prison + private civil suits for accepting a questionable registration — regardless of intent. Zero penalty for wrongfully rejecting an eligible voter. Strict liability regardless of good faith.</div>
+        <div class="receipt-line">Strict liability regardless of intent · $0 penalty for wrongful rejection · Election clerk median: ~$32K/yr — defense costs alone are ruinous</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Good-faith safe harbor: written procedures + no actual knowledge = protected. Gross negligence or willful misconduct = full criminal penalties. Negligence standard — not strict liability. Modeled on I-9 employment verification.</div>
+        <div class="receipt-line">Distinguishes honest errors from willful violations · INA 8 U.S.C. §1324a (I-9 good faith standard)</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa">EISA</span>
+        <div class="verdict-text">SAVE's incentive structure produces officials who default to rejection in every borderline case. That's the predictable output of the math. EISA fixes it.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 7 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 7 · Implementation Timeline</div>
+        <div class="factor-headline">New Hampshire 2025. At national scale.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa">EISA</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">Takes effect immediately upon enactment. No phase-in. No training window. No infrastructure requirement. Must comply before 2026 midterms regardless of state readiness. EAC guidance arrives 10 days after enactment — officials making decisions before it exists.</div>
+        <div class="receipt-line">NH 2025: immediate implementation → 244 eligible citizens turned away · AP, March 2026</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Minimum two federal election cycles before enforcement. Federal readiness certification required — functioning systems, trained officials, free-document program must exist first. No enforcement until the infrastructure exists to enforce fairly.</div>
+        <div class="receipt-line">Enforcement only after EAC federal readiness certification</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa">EISA</span>
+        <div class="verdict-text">NH 2025: 244 eligible citizens turned away because the system went live without notice or infrastructure. That's the proof of concept for what immediate implementation produces.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FACTOR 8 -->
+  <div class="factor-card" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div>
+        <div class="factor-meta">Factor 8 · Net Balance</div>
+        <div class="factor-headline">The question was never whether to verify.</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.5rem;flex-shrink:0;">
+        <span class="winner-pill eisa-decisive">EISA decisively</span>
+        <span class="factor-toggle">+</span>
+      </div>
+    </div>
+    <div class="factor-body">
+      <div class="bill-block">
+        <div class="bill-label save-label"><span class="indicator">×</span> SAVE America Act</div>
+        <div class="bill-text">Prevents dozens to hundreds of non-citizen votes annually. At cost of thousands to millions of citizen registration burdens — Kansas and Virginia at national scale. Achieves the goal on paper; produces chaos and disenfranchisement in practice.</div>
+        <div class="receipt-line">Utah: 2M+ → 1 non-citizen reg, 0 votes · Georgia: 9 / 8.2M cast · Heritage Foundation: &lt;100 cases / 20 years nationally</div>
+      </div>
+      <div class="bill-block">
+        <div class="bill-label eisa-label"><span class="indicator">✓</span> EISA (Draft)</div>
+        <div class="bill-text">Equivalent fraud prevention with ~1,000x less collateral harm. Citizens confirmed via database never encounter a document requirement. Same prevention — calibrated to the actual documented scale of the problem.</div>
+        <div class="receipt-line">Same prevention · calibrated to actual documented scale</div>
+      </div>
+      <div class="verdict-block">
+        <span class="winner-pill eisa-decisive">EISA decisively</span>
+        <div class="verdict-text">Final score: EISA 6 · SAVE 1 · 1 tie. Any Senator or Representative could introduce EISA tomorrow.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closer">
+    <p>The question was never whether to verify. It was whether the implementation matches the actual documented scale of the problem. EISA achieves the goal. SAVE produces the chaos.</p>
+    <div class="link-row" style="justify-content:center;">
+      <a href="https://mn06watch.com/articles/eisa-framework/?v=2" class="link-btn primary">Framework</a>
+      <a href="https://mn06watch.com/articles/eisa-bill/" class="link-btn">Bill Text</a>
+      <a href="https://mn06watch.com/articles/save-act-explainer/" class="link-btn">SAVE Act Explainer</a>
+    </div>
+    <br>
+    <div class="tagline">MN06Watch · Receipts, not rage.</div>
+  </div>
+
+</div>
+
+<script>
+  // Cards are tap-to-expand, handled by onclick on .factor-card
+  // Toggle already handled inline
+</script>
+</body>
+</html>
