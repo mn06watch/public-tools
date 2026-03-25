@@ -460,7 +460,7 @@
 
   <div class="existing-law">
     <h4>Help America Vote Act (HAVA) § 303 — Since 2002</h4>
-    <p><strong>All 50 states already verify</strong> registration against DMV and SSA databases. Every form requires DL# or last 4 SSN. Registrars confirm via DHS, SSA, and USPS.</p>
+    <p><strong>All 50 states already verify identity</strong> at registration against DMV and SSA databases. Every form requires DL# or last 4 SSN — confirmed via SSA/DMV matching. This verifies that the person exists and their documents match. Citizenship is attested under penalty of perjury; states that use the SAVE database cross-check that attestation separately. The SAVE Act adds a documentary proof mandate on top of this existing infrastructure.</p>
   </div>
   <div class="existing-law">
     <h4>Illegal Immigration Reform Act — Since 1996</h4>
@@ -617,6 +617,10 @@
   <div id="changelog" style="margin:2rem 0 1.5rem; padding:1.25rem 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;">
     <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-text); margin-bottom:1rem;">Changelog</p>
     <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
+      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 25, 2026 — Correction</p>
+      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Corrected description of HAVA §303 verification. Previous language stated all 50 states "verify registration" against DMV/SSA databases — accurate but imprecise. HAVA §303 verifies <em>identity</em> (SSN/DL match confirms the person exists and documents match), not citizenship specifically. Citizenship is attested under penalty of perjury; states using the SAVE database cross-check that attestation separately. The distinction matters: HAVA closes the identity gap, not the citizenship gap. The SAVE Act addresses the citizenship gap — the question is whether its method is proportionate to the documented scale of the problem.</p>
+    </div>
+    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
       <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 25, 2026</p>
       <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added four new FAQ entries based on recurring objections documented in live engagement: (1) "If you're already registered, you don't have to do anything" — corrected with re-registration trigger, Virginia purge receipt, and no-notification requirement; (2) Minnesota election judge guilty plea — clarifies this was official misconduct bypassing registration paperwork, not a citizenship verification failure; SAVE Act would not have prevented it; (3) 80–90% polling conflation — distinguishes photo ID support from SAVE Act by-name support (28%, CBS/YouGov March 16–19); (4) California jury duty / 449K claim — named as ecological fallacy, receipted with CA Deputy SOS statement and county-level zero-match data. Anchor links: #faq-existing-registrants, #faq-election-judge, #faq-polling-conflation, #faq-california-jury.</p>
     </div>
@@ -735,7 +739,7 @@
 
     var h='<h3 style="border-left:4px solid '+clr+';padding-left:0.75rem;">'+lbl+'</h3>';
     out.forEach(function(o){ h+='<div class="sim-outcome '+o.l+'">'+o.t+'</div>'; });
-    h+='<div class="sim-summary"><strong>Remember:</strong> Non-citizen voting has been illegal since 1996. All 50 states verify registration under HAVA (2002). Utah audited 2M+ records: 1 non-citizen registration, 0 votes. Is this burden proportionate to that problem?</div>';
+    h+='<div class="sim-summary"><strong>Remember:</strong> Non-citizen voting has been illegal since 1996. All 50 states verify identity at registration under HAVA (2002) — citizenship is attested under penalty of perjury. Utah audited 2M+ records: 1 non-citizen registration, 0 votes. Is this burden proportionate to that problem?</div>';
     document.getElementById('sim-result').innerHTML=h;
   }
   render();
