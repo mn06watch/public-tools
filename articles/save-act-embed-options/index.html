@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embed Test — What MN Reformer Would See</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Barlow+Condensed:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: system-ui, sans-serif; background:#f5f5f5; color:#212529; }
+  .demo-header {
+    background:#323a44; color:#fff; padding:1rem 2rem;
+    font-family:'Barlow Condensed', sans-serif; font-size:0.8rem;
+    letter-spacing:0.15em; text-transform:uppercase;
+  }
+  .demo-header span { color:#9688cf; }
+  .demo-body { max-width:900px; margin:2rem auto; padding:0 1.5rem; }
+  .demo-body h2 { font-family:'Barlow', sans-serif; font-size:1.8rem; font-weight:800; margin-bottom:1rem; }
+  .demo-body p { font-family:'Newsreader', serif; font-size:1.1rem; line-height:1.7; margin-bottom:1.5rem; color:#333; }
+  .option-box { background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:1.5rem; margin:2rem 0; }
+  .option-box h3 { font-family:'Barlow Condensed', sans-serif; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:#6151a3; margin-bottom:1rem; }
+  .option-box .label { font-family:'Barlow', sans-serif; font-weight:600; font-size:0.9rem; margin-bottom:0.5rem; }
+  .option-box .note { font-size:0.8rem; color:#718096; margin-bottom:1rem; }
+  iframe { width:100%; border:1px solid #e2e8f0; border-radius:4px; }
+  .link-demo {
+    display:block; background:#6151a3; color:#fff; text-align:center;
+    padding:1rem 2rem; border-radius:8px; text-decoration:none;
+    font-family:'Barlow', sans-serif; font-weight:600; font-size:1rem;
+    transition: background 0.2s;
+  }
+  .link-demo:hover { background:#4a3d8f; }
+  .verdict { background:#f5f3fa; border-left:4px solid #6151a3; padding:1rem 1.25rem; margin:1.5rem 0; font-size:0.9rem; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<div class="demo-header">
+  <span>Preview</span> — How This Looks From MN Reformer's Side
+</div>
+
+<div class="demo-body">
+  <h2>Two Options for MN Reformer</h2>
+  <p>Both serve the same content. The question is which experience is better for Reformer readers.</p>
+
+  <div class="option-box">
+    <h3>Option A — Iframe Embed</h3>
+    <p class="label">What WordPress readers would see:</p>
+    <p class="note">Fixed height, no responsive scaling, scroll-within-scroll, no SEO value for the Reformer. WordPress often strips iframes.</p>
+    <iframe src="https://mn06watch.com/articles/save-act-explainer-reformer/" height="600"></iframe>
+    <div class="verdict">
+      <strong>Problem:</strong> Readers get a scroll-within-a-scroll. The explainer has interactive elements (polling bars, card accordions, judge simulator) that fight with the parent page's scroll. Mobile is worse. And WordPress security plugins frequently strip iframes from post content.
+    </div>
+  </div>
+
+  <div class="option-box">
+    <h3>Option B — Direct Link to Branded Page (Recommended)</h3>
+    <p class="label">MN Reformer writes a short intro post, readers click through:</p>
+    <p class="note">Full-page experience. Reformer branding. Responsive. All interactive elements work. SEO value flows to the Reformer via the author link.</p>
+    <a href="https://mn06watch.com/articles/save-act-explainer-reformer/" class="link-demo" target="_blank">      Read the Full SAVE Act Explainer →
+    </a>
+    <div class="verdict" style="margin-top:1rem;">
+      <strong>Better:</strong> The reader gets the full interactive experience — polling bars animate, cards expand, judge simulator works, FAQ accordions open. The page looks native to the Reformer. MN Reformer's intro post frames it, the link delivers it. Clean.
+    </div>
+  </div>
+
+  <div class="option-box">
+    <h3>What MN Reformer's Post Would Look Like</h3>
+    <p class="note">He'd publish something like this on minnesotareformer.com:</p>
+    <div style="background:#fafafa; border:1px solid #e2e8f0; border-radius:6px; padding:1.5rem; font-family:'Newsreader', serif;">
+      <p style="font-family:'Barlow Condensed', sans-serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:#6151a3; margin-bottom:0.5rem;">Government & Politics</p>
+      <h2 style="font-family:'Barlow', sans-serif; font-weight:800; font-size:1.6rem; margin-bottom:0.5rem;">What's Actually in the SAVE Act — An Interactive Explainer</h2>
+      <p style="font-size:0.85rem; color:#505257; margin-bottom:1rem;">By Chad Maschke · March 26, 2026</p>
+      <p style="font-size:1rem; line-height:1.65; margin-bottom:1rem;">80% of Americans support voter ID. Only 28% support the SAVE Act by name. The gap between those numbers — from the same pollster, the same week — is the story of a bill whose details change minds.</p>
+      <p style="font-size:1rem; line-height:1.65; margin-bottom:1rem;">This interactive explainer walks through every major provision, the talking point used to sell it, and what the bill text and evidence actually show. It includes a voter impact simulator, an election judge scenario exercise, and a sourced FAQ addressing the most common objections.</p>
+      <a href="https://mn06watch.com/articles/save-act-explainer-reformer/" style="display:inline-block; background:#6151a3; color:#fff; padding:0.7rem 1.5rem; border-radius:6px; text-decoration:none; font-family:'Barlow', sans-serif; font-weight:600;">Read the Full Explainer →</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
