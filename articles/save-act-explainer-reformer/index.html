@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The SAVE Act: What They're Selling vs. What's in the Bill | Minnesota Reformer</title>
+<meta name="description" content="80% support voter ID. Only 28% support the SAVE Act. Here's what's actually in it — provision by provision, with primary sources.">
+<meta property="og:title" content="The SAVE Act: What They're Selling vs. What's in the Bill">
+<meta property="og:description" content="Same pollster, same week: 80% support voter ID. 28% support the SAVE Act. Here's what's actually in it — provision by provision, with primary sources.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://mn06watch.com/assets/og-save-act.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mn06watch.com/assets/og-save-act.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Barlow+Condensed:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #323a44;
+    --navy-light: #4a5568;
+    --gold: #6151a3;
+    --gold-light: #9688cf;
+    --gold-bg: #f5f3fa;
+    --gold-border: #c4b5f0;
+    --white: #ffffff;
+    --gray: #f7fafc;
+    --gray-mid: #e2e8f0;
+    --gray-text: #505257;
+    --body-text: #212529;
+    --red: #c53030;
+    --red-bg: #fff5f5;
+    --red-border: #feb2b2;
+    --blue-bg: #ebf8ff;
+    --blue-border: #bee3f8;
+    --green: #276749;
+    --green-bg: #f0fff4;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+  body { font-family:'Newsreader',Georgia,serif; background:var(--gray); color:var(--body-text); line-height:1.75; font-size:18px; }
+
+  /* NAV */
+  .topnav {
+    position:sticky; top:0; z-index:100;
+    background:var(--navy); border-bottom:2px solid var(--gold);
+    padding:0; overflow-x:auto; white-space:nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .topnav-inner {
+    max-width:900px; margin:0 auto;
+    display:flex; align-items:center;
+    padding:0 1rem;
+  }
+  .topnav a {
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:rgba(255,255,255,0.75); text-decoration:none;
+    padding:0.85rem 0.75rem;
+    transition: color 0.15s;
+    flex-shrink:0;
+  }
+  .topnav a:hover, .topnav a:focus { color:var(--gold); }
+  .topnav .nav-brand {
+    color:var(--gold); font-weight:500;
+    padding-right:1.25rem; margin-right:0.5rem;
+    border-right:1px solid rgba(255,255,255,0.2);
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    text-align:center; padding:2.5rem 1.5rem 1.5rem;
+    border-bottom:2px solid var(--gray-mid);
+    max-width:900px; margin:0 auto;
+  }
+  .masthead h1 {
+    font-family:'Barlow',sans-serif; font-weight:800;
+    font-size:clamp(1.8rem,4.5vw,3rem); line-height:1.15;
+    margin-bottom:0.75rem; color:var(--navy);
+  }
+  .masthead .subtitle {
+    font-style:italic; color:var(--gray-text); font-size:1.1rem;
+    max-width:620px; margin:0 auto;
+  }
+
+  /* CONTENT */
+  .content { max-width:760px; margin:0 auto; padding:1.5rem 1.5rem 2rem; }
+  .content p { margin-bottom:1.25rem; }
+  .content p.lead { font-size:1.1rem; font-weight:600; }
+  .section-header {
+    font-family:'Barlow',sans-serif; font-weight:700;
+    font-size:1.4rem; margin:2.5rem 0 1rem; padding-bottom:0.4rem;
+    border-bottom:2px solid var(--gray-mid); color:var(--navy);
+  }
+  .mono-label {
+    font-family:'Barlow Condensed',sans-serif; font-size:0.65rem;
+    letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-text);
+    margin-bottom:0.75rem;
+  }
+
+  /* POLLING */
+  .polling-bars {
+    background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;
+    padding:1.5rem; margin:1.5rem 0; box-shadow:var(--shadow-sm);
+  }
+  .poll-item { margin-bottom:1rem; }
+  .poll-item:last-child { margin-bottom:0; }
+  .poll-label { font-size:0.92rem; font-weight:600; color:var(--navy); margin-bottom:0.3rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.25rem; }
+  .poll-source { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; color:var(--gray-text); font-weight:400; }
+  .poll-bar-track { background:#e2e8f0; border-radius:4px; height:28px; overflow:hidden; }
+  .poll-bar-fill { height:100%; border-radius:4px; display:flex; align-items:center; padding-left:10px; font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; font-weight:500; color:#fff; transition:width 1.2s cubic-bezier(0.22,1,0.36,1); width:0; }
+  .poll-bar-fill.high { background:#38a169; }
+  .poll-bar-fill.mid { background:var(--gold); }
+  .poll-bar-fill.low { background:#a0aec0; color:#4a5568; }
+  .poll-note { font-size:0.78rem; color:var(--gray-text); font-style:italic; margin-top:0.2rem; }
+
+  /* CARDS */
+  .card {
+    background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;
+    margin:1.5rem 0; overflow:hidden; box-shadow:var(--shadow-sm);
+    cursor:pointer; transition:box-shadow 0.2s;
+  }
+  .card:hover { box-shadow:var(--shadow-md); }
+  .card-header { display:flex; align-items:stretch; }
+  .card-claim, .card-reality { padding:1.1rem 1.25rem; flex:1; }
+  .card-claim { background:var(--red-bg); border-right:1px solid var(--red-border); }
+  .card-reality { background:var(--blue-bg); }
+  .card-side-label { font-family:'Barlow Condensed',sans-serif; font-size:0.58rem; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:0.4rem; font-weight:500; }
+  .card-claim .card-side-label { color:var(--red); }
+  .card-reality .card-side-label { color:var(--navy); }
+  .card-claim p, .card-reality p { font-size:0.9rem; line-height:1.5; margin:0; color:var(--body-text); }
+  .card-reality p strong { color:var(--navy); }
+  .card-expand { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; color:var(--gray-text); text-align:center; padding:0.4rem; background:#edf2f7; border-top:1px solid var(--gray-mid); transition:all 0.2s; }
+  .card.open .card-expand { background:var(--gold-bg); color:var(--gold); }
+  .card-detail { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+  .card.open .card-detail { max-height:1400px; }
+  .card-detail-inner { padding:1.25rem; border-top:2px solid var(--gold-border); }
+  .card-detail-inner p { font-size:0.88rem; margin-bottom:0.75rem; line-height:1.6; }
+  .card-detail-inner p:last-child { margin-bottom:0; }
+  .card-detail-inner strong { color:var(--navy); }
+  .receipt { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; color:var(--navy); background:var(--blue-bg); border:1px solid var(--blue-border); padding:0.1rem 0.35rem; border-radius:3px; white-space:nowrap; }
+
+  /* FAQ */
+  .faq-section { margin:2.5rem 0; }
+  .faq-section h2 { font-family:'Barlow',sans-serif; font-size:1.6rem; color:var(--navy); margin-bottom:0.5rem; }
+  .faq-section .faq-intro { font-size:0.9rem; color:var(--gray-text); margin-bottom:1.5rem; }
+  .faq-category { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin:1.75rem 0 0.75rem; padding-bottom:0.4rem; border-bottom:1px solid var(--gray-mid); }
+  .faq-category:first-of-type { margin-top:0; }
+  .faq-item { border:1px solid var(--gray-mid); border-radius:8px; margin-bottom:0.75rem; overflow:hidden; }
+  .faq-q { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.25rem; cursor:pointer; background:var(--white); gap:1rem; }
+  .faq-q:hover { background:var(--light); }
+  .faq-q-text { font-size:0.95rem; font-weight:700; color:var(--navy); line-height:1.4; }
+  .faq-toggle { font-size:1.25rem; color:var(--gold); flex-shrink:0; transition:transform 0.2s; font-weight:300; }
+  .faq-item.open .faq-toggle { transform:rotate(45deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+  .faq-item.open .faq-a { max-height:3000px; }
+  .faq-a-inner { padding:1.25rem; border-top:2px solid var(--gold-border); }
+  .faq-a-inner p { font-size:0.88rem; line-height:1.65; margin-bottom:0.85rem; color:var(--body-text); }
+  .faq-a-inner p:last-child { margin-bottom:0; }
+  .faq-a-inner strong { color:var(--navy); }
+  .faq-source { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; color:var(--gray-text); margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--gray-mid); line-height:1.6; }
+  .stat-callout { background:var(--gold-bg); border-left:4px solid var(--gold); padding:0.85rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; }
+  .stat-callout strong { color:var(--gold); font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; }
+  .key-response { background:var(--green-bg); border-left:4px solid #48bb78; padding:0.75rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; font-weight:600; }
+
+  /* EXISTING LAW */
+  .existing-law { background:var(--blue-bg); border:1px solid var(--blue-border); border-radius:8px; padding:1.25rem; margin:1.25rem 0; }
+  .existing-law h4 { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--navy); margin-bottom:0.6rem; }
+  .existing-law p { font-size:0.88rem; margin-bottom:0.4rem; }
+
+  /* TIMELINE */
+  .narrative-box { background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1.5rem; margin:1.5rem 0; box-shadow:var(--shadow-sm); }
+  .narrative-box h3 { font-family:'Barlow',sans-serif; font-size:1.2rem; margin-bottom:0.75rem; color:var(--navy); }
+  .timeline-step { display:flex; gap:0.75rem; margin-bottom:1rem; }
+  .timeline-marker { width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:500; flex-shrink:0; margin-top:2px; }
+  .timeline-step p { font-size:0.88rem; margin:0; line-height:1.55; }
+
+  /* SIMULATOR SHARED */
+  .sim-container { margin:1.5rem 0 2rem; }
+  .sim-question-card { background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
+  .sim-question-card h3 { font-family:'Barlow',sans-serif; font-size:1.15rem; color:var(--navy); margin-bottom:0.85rem; }
+  .sim-question-card p.sim-context { font-size:0.84rem; color:var(--gray-text); font-style:italic; margin-bottom:1rem; }
+  .sim-btn { display:block; width:100%; text-align:left; padding:0.75rem 1.1rem; margin-bottom:0.5rem; background:var(--gray); border:1px solid var(--gray-mid); border-radius:6px; font-family:'Newsreader',Georgia,serif; font-size:0.9rem; color:var(--body-text); cursor:pointer; transition:all 0.15s; line-height:1.45; }
+  .sim-btn:hover { background:var(--blue-bg); border-color:var(--blue-border); }
+  .sim-btn:last-child { margin-bottom:0; }
+  .sim-progress { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; color:var(--gray-text); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem; }
+  .sim-result-card { background:var(--white); border:2px solid var(--gold-border); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
+  .sim-result-card h3 { font-family:'Barlow',sans-serif; font-size:1.2rem; color:var(--navy); margin-bottom:1rem; }
+  .sim-outcome { margin-bottom:0.75rem; padding:0.75rem 1rem; border-radius:6px; font-size:0.88rem; line-height:1.6; }
+  .sim-outcome.safe { background:var(--green-bg); border-left:4px solid #48bb78; }
+  .sim-outcome.warning { background:var(--gold-bg); border-left:4px solid var(--gold); }
+  .sim-outcome.danger { background:var(--red-bg); border-left:4px solid #fc8181; }
+  .sim-outcome strong { color:var(--navy); }
+  .sim-summary { margin-top:1rem; padding-top:1rem; border-top:1px solid var(--gray-mid); font-size:0.88rem; line-height:1.65; }
+  .sim-restart { display:block; margin:1rem auto 0; padding:0.6rem 1.25rem; background:var(--navy); color:#fff; border:none; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:0.75rem; letter-spacing:0.05em; cursor:pointer; }
+  .sim-restart:hover { background:var(--navy-light); }
+  .disclaimer { font-size:0.78rem; color:var(--gray-text); font-style:italic; margin-top:1rem; padding:0.65rem 0.9rem; background:var(--gray); border:1px solid var(--gray-mid); border-radius:6px; }
+  .disclaimer strong { color:var(--body-text); font-style:normal; }
+
+  /* JUDGE-SPECIFIC */
+  .judge-accept { border-left:4px solid #48bb78; }
+  .judge-reject { border-left:4px solid #fc8181; }
+
+  /* SESSION TRACKER */
+  .session-summary { background:var(--navy); color:#fff; border-radius:8px; padding:1.75rem; margin:1.5rem 0; text-align:center; }
+  .session-summary h3 { font-family:'Barlow',sans-serif; font-size:1.2rem; margin-bottom:0.75rem; color:var(--gold); }
+  .session-summary p { font-size:0.92rem; line-height:1.6; margin-bottom:0.5rem; }
+  .session-summary .stat-big { font-family:'Barlow Condensed',sans-serif; font-size:2rem; font-weight:500; color:var(--gold); display:block; margin:0.5rem 0; }
+
+  /* CLOSER */
+  .closer { background:var(--navy); color:#fff; border-radius:8px; padding:2rem; margin:2rem 0 1.5rem; text-align:center; }
+  .closer p { font-family:'Barlow',sans-serif; font-size:1.15rem; line-height:1.5; margin-bottom:0.75rem; font-style:italic; }
+  .closer p:last-child { margin-bottom:0; }
+  .closer .tagline { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); font-style:normal; margin-top:1rem; }
+
+  .footer { text-align:center; padding:1.5rem 1rem; border-top:1px solid var(--gray-mid); max-width:760px; margin:0 auto; font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; color:var(--gray-text); line-height:1.8; }
+  .footer a { color:var(--navy); text-decoration:none; }
+
+  @media (max-width:640px) {
+    .card-header { flex-direction:column; }
+    .card-claim { border-right:none; border-bottom:1px solid var(--red-border); }
+    body { font-size:16px; }
+    .content { padding:1.25rem 1rem; }
+    .topnav a { font-size:0.6rem; padding:0.7rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="https://minnesotareformer.com" class="nav-brand">Minnesota Reformer</a>
+    <a href="#sim-you">How It Affects You</a>
+    <a href="#provisions">Provisions</a>
+    <a href="#exists">Current Law</a>
+    <a href="#husted">Husted UC</a>
+    <a href="#judge">Election Judge</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- MASTHEAD -->
+<header class="masthead" id="top">
+  <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:0.75rem;">Government &amp; Politics</p>
+  <h1>The SAVE Act: What They're Selling vs. What's in the Bill</h1>
+  <p class="subtitle">80% of Americans support voter ID. Only 28% support the SAVE Act. Here's what's actually in it.</p>
+  <p style="font-size:0.8rem; color:var(--gray-text); margin-top:1rem;">By <a href="https://minnesotareformer.com/author/chadmaschke/" style="color:var(--gold); font-weight:600; text-decoration:none;">Chad Maschke</a> for Minnesota Reformer</p>
+</header>
+
+<main class="content">
+
+  <div style="background:var(--white); border:1px solid var(--gray-mid); border-left:3px solid var(--navy); border-radius:0 6px 6px 0; padding:0.85rem 1.1rem; margin-bottom:1.75rem;">
+    <p style="margin:0; font-size:0.82rem; line-height:1.6; color:var(--body-text);"><strong>Note on terminology:</strong> This explainer covers the <strong>SAVE America Act</strong> (H.R. 7296, passed House February 11, 2026), currently before the Senate. It supersedes the original SAVE Act (H.R. 22, passed House April 2025). The two bills share the same core citizenship documentation requirement; the SAVE America Act adds unredacted voter roll sharing with DHS and photo ID requirements at the polls. References to "the SAVE Act" throughout this explainer refer to the SAVE America Act now before the Senate.</p>
+  </div>
+
+  <p class="lead">Both parties agree that only citizens should vote in federal elections. That's already the law — and has been since 1996. The question is whether the SAVE America Act is the right way to enforce it, or whether it creates more problems than it solves.</p>
+
+  <!-- POLLING GAP -->
+  <div class="polling-bars">
+    <div class="mono-label">The Polling Gap: What You Think You're Supporting</div>
+    <div class="poll-item">
+      <div class="poll-label"><span>Photo ID to vote</span><span class="poll-source">CBS/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill high" data-width="80">80%</div></div>
+      <div class="poll-note">Includes 65% of Democrats, 79% of independents, 80% of Black voters, 77% of Hispanic voters</div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>Proof of citizenship to register</span><span class="poll-source">CBS/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill mid" data-width="66">66%</div></div>
+      <div class="poll-note">93% of Republicans, 61% of independents, 43% of Democrats</div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>"The SAVE America Act" (by name)</span><span class="poll-source">CBS/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill low" data-width="28">28%</div></div>
+      <div class="poll-note">31% oppose · 41% not sure · Only 16% of Republicans say they know specifics</div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>DHS voter rolls · Criminal penalties · Private right of action · Immediate implementation</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill low" data-width="15">Not polled</div></div>
+      <div class="poll-note">No public polling exists on these provisions</div>
+    </div>
+  </div>
+
+  <!-- ===================== SECTION 1: HOW IT AFFECTS YOU ===================== -->
+  <h2 class="section-header" id="sim-you">How Would This Affect You?</h2>
+  <p>The talking points make the SAVE Act sound simple. The impact depends on your circumstances. <strong>Answer five questions to see what the bill would require of you.</strong></p>
+
+  <div id="simulator" class="sim-container">
+    <div id="sim-question" class="sim-question-card"></div>
+    <div id="sim-result" class="sim-result-card" style="display:none;"></div>
+    <button id="sim-restart" class="sim-restart" style="display:none;" onclick="restartSim()">↺ Start Over with Different Answers</button>
+  </div>
+
+  <p class="disclaimer"><strong>Disclaimer:</strong> This is a simplified illustration. Individual circumstances vary based on state laws, available documents, disability accommodations, military or overseas status, tribal membership, and local election office procedures. Consult your state or county election office for specific requirements.</p>
+
+  <!-- ===================== SECTION 2: PROVISIONS ===================== -->
+  <h2 class="section-header" id="provisions">What's in the Bill — Provision by Provision</h2>
+  <p>Below is every major provision, the talking point used to sell it, and what the bill text and evidence show. <strong>Click any card to see the receipts.</strong></p>
+
+  <!-- CARD 1: Documentary Proof -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"It simply requires proof of citizenship to register and photo ID to vote."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>Requires <strong><em>documentary</em> proof — passport, birth certificate, or naturalization certificate — presented in person.</strong> A driver's license does not qualify.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>Driver's licenses have never proved citizenship.</strong> Non-citizens on visas and green cards have always been eligible for state driver's licenses. Only five states (MI, MN, NY, VT, WA) issue enhanced licenses that indicate citizenship.</p>
+      <div class="stat-callout"><strong>21.3 million</strong> eligible voters lack ready access to citizenship documents — 10% of Democrats, 7% of Republicans, 14% unaffiliated. <span class="receipt">U of Maryland, 2025</span></div>
+      <p><strong>69 million women and 4 million men</strong> have a last name that doesn't match their birth certificate. <span class="receipt">Center for American Progress</span></p>
+      <p><strong>On marriage certificates:</strong> The bill's statutory text does not list marriage certificates as acceptable proof of citizenship. It directs states to establish a process for name mismatches but does not specify which documents qualify. Whether a marriage certificate will be accepted depends entirely on state implementation — which has not been determined. The ambiguity itself is the problem: election officials face up to 5 years in prison for good-faith errors, with no clear guidance on what constitutes a correct call. <span class="receipt">FactCheck.org / VoteRiders / BPC, 2026</span></p>
+      <p>Passport: $130–$160. Replacement birth certificates: weeks. <strong>The bill provides zero funding.</strong></p>
+      <div class="key-response">An I-9 employment form accepts a driver's license + Social Security card. The SAVE Act imposes a higher bar for voting than for getting a job.</div>
+      <p><strong>Kansas:</strong> Non-citizen registration was 0.002%. The law blocked 30,000+ eligible citizens (12% of applicants) before courts struck it down. <span class="receipt">BPC / Kansas SOS</span></p>
+      <p><strong>New Hampshire:</strong> 244 people turned away during 2025 local elections alone. <span class="receipt">AP, Mar 2026</span></p>
+      <p><strong>Alaska/Hawaii:</strong> Some voters would need to fly to reach their election office. <span class="receipt">CAP analysis</span></p>
+    </div></div>
+  </div>
+
+  <!-- CARD 2: DHS Voter Rolls -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"We're just cleaning up voter rolls."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>States must share <strong>unredacted voter rolls with DHS</strong> — giving the federal government unprecedented access to state voter data.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>The SAVE system wasn't built for this</strong> and has documented accuracy problems. It "cannot make confident determination of citizenship" in many cases. SSA data is a "snapshot in time." <span class="receipt">USCIS SAVE Fact Sheet, Feb 2026</span></p>
+      <div class="stat-callout"><strong>25%</strong> of voters SAVE flagged in Travis County, TX had registered through a process requiring proof of citizenship — the state never checked before sending the list to counties. <span class="receipt">Court filing, Travis County Voter Reg. Dir., Oct 2025 / ProPublica / Texas Tribune</span></div>
+      <p>DHS <strong>rushed the tool into use before it could discern up-to-date citizenship info.</strong> Persistent mistakes with naturalized citizens. <span class="receipt">ProPublica / Texas Tribune, Feb 2026</span></p>
+      <p><strong>49.5 million registrations checked.</strong> DHS referred 0.02% (~10,000). Only a fraction were potentially non-citizens. <span class="receipt">FactCheck.org / NYT</span></p>
+      <div class="key-response">No restrictions on what DHS does with the data. DOGE members within SSA already agreed to turn over voter rolls to an outside advocacy group. <span class="receipt">Brennan Center, 2026</span></div>
+      <div class="stat-callout"><strong>"Nothing to hide" is a logical fallacy.</strong> States have provided publicly available voter rolls. What's being demanded is unredacted data — SSNs and driver's license numbers — with no restrictions on use. Privacy is a right, not a privilege earned by innocence. The burden is on those demanding access to justify why they need it. Three federal courts have already rejected DOJ's legal authority to demand this data. <span class="receipt">CA, OR, MI federal courts, 2025–2026</span></div>
+      <div class="stat-callout"><strong>Dhillon's "tens of thousands" claim comes from media interviews, not court filings.</strong> In court, DOJ has presented no such evidence — which is why three federal courts have dismissed their cases. One confirmed prosecution exists: one man in Philadelphia. DOJ has referred dozens more cases — not tens of thousands. A federal court reviewing DOJ's own filings found they contained "factual, legal, and typographical errors." <span class="receipt">Democracy Docket / CNN, 2026</span></div>
+      <p><strong>Utah full audit:</strong> 2M+ records → one non-citizen registration → zero non-citizen votes. A separate prior review found 4 additional non-citizens linked to a registration system error; at least one had voted. All were removed. <span class="receipt">BPC / Utah SOS / Utah House testimony, Jan 2026</span></p>
+    </div></div>
+  </div>
+
+  <!-- CARD 3: Already Registered -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"If you're already registered, YOU STAY REGISTERED."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>States must take <strong>"affirmative steps on an ongoing basis"</strong> to cross-reference rolls. <strong>Flagged = prove citizenship or be removed.</strong></p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>Existing registration does not exempt you.</strong> Anyone who moves, changes name, or updates registration must re-register with full documentary proof.</p>
+      <div class="stat-callout"><strong>New Hampshire:</strong> Joshua Bogdan, born in the U.S., moved within state — turned away. Needed a passport he didn't have or birth certificate an hour away. Voted only by luck. <span class="receipt">AP, Mar 2026</span></div>
+      <div class="key-response">Kansas rate nationally: ~2.8M blocked. Document access metric: up to 21.3M.</div>
+      <p><strong>The bill does not require notification before removal.</strong> The text gestures at "notice" but specifies no mechanism, timeline, or enforcement. <span class="receipt">Rock the Vote / FactCheck.org</span></p>
+      <div class="stat-callout"><strong>Virginia voter purge:</strong> 94% of those removed were U.S. citizens. You could discover you've been purged on Election Day. <span class="receipt">VoteRiders, 2025</span></div>
+    </div></div>
+  </div>
+
+  <!-- CARD 4: Student/Tribal IDs -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"Any valid government-issued photo ID will work."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p><strong>Student IDs excluded</strong> — even state university. <strong>Tribal IDs only with expiration date</strong>, which many lack.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p>Acceptable ID list is narrower than <strong>35 of 36 states</strong> with existing voter ID. Only Ohio is stricter. <span class="receipt">LWV / NCSL</span></p>
+      <p><strong>Young voters</strong> are less likely to have passports, more likely to move frequently (each move triggers re-registration). <span class="receipt">Ms. Magazine</span></p>
+      <div class="key-response">This would override existing, less restrictive voter ID laws in 35 states — a federal mandate that's stricter than almost every state chose for itself. <span class="receipt">CAP</span></div>
+    </div></div>
+  </div>
+
+  <!-- CARD 5: Alternative Process -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"There's an alternative process. Read page 12, line 22."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>Alternative exists on paper. <strong>Same bill criminalizes officials who use it</strong> — a liability trap.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p>Voter signs attestation under perjury. <strong>Official must personally determine eligibility and sign their own affidavit.</strong></p>
+      <p>Section 2(j): <strong>up to 5 years in prison</strong> for officials who register someone without proof. Plus private right of action — lawsuits from any citizen.</p>
+      <div class="stat-callout"><strong>Incentive runs one direction.</strong> Reject eligible voter = no penalty. Accept without full docs = prosecution + lawsuits. <span class="receipt">Cognition, 2015; Kahneman/Tversky</span></div>
+      <div class="key-response">You don't create a safety net and then prosecute people for catching someone in it.</div>
+    </div></div>
+  </div>
+
+  <!-- CARD 6: Criminal Penalties -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"This just holds people accountable."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p><strong>Criminal penalties for officials</strong> + <strong>private right of action</strong> — anyone can sue, claim needs no merit.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p>County employees face <strong>5 years federal prison</strong> for good-faith errors.</p>
+      <p>Any individual can sue — <strong>official must defend regardless of merit.</strong></p>
+      <div class="key-response">Bill mandates the problem federally, delegates solution locally — no standards, no funding, no training, no safe harbor.</div>
+      <p>Disproportionately affects naturalized citizens, married women, transgender voters — exactly the registrations requiring judgment.</p>
+    </div></div>
+  </div>
+
+  <!-- CARD 7: Mail-In Voting -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"This doesn't change how you vote."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>Mail voters must <strong>send ID photocopy</strong> with ballot. Must register <strong>in person</strong>. Trump demanding amendment to <strong>ban most mail-in voting</strong>.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>48 million Americans vote by mail.</strong> 8 states + D.C. vote primarily by mail. No framework provided for adaptation.</p>
+      <p>Mail voting is not a COVID-era invention. Oregon has conducted all-mail elections since 2000. Absentee voting for military has existed since the Civil War. Five states had all-mail elections before 2020.</p>
+      <p>ID photocopy with ballot <strong>compromises ballot secrecy.</strong></p>
+      <div class="key-response">Trump demands amendment banning most mail-in voting. Separate from base bill but negotiated as part of same package. <span class="receipt">AP, Mar 2026</span></div>
+      <p><strong>Military/overseas voters</strong> at risk per U.S. Vote Foundation.</p>
+    </div></div>
+  </div>
+
+  <!-- CARD 8: Non-citizen voting scale -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"Non-citizens are voting in our elections."</p></div>
+      <div class="card-reality"><div class="card-side-label">What Every Audit Shows</div><p><strong>Virtually nonexistent.</strong> The solution's scale wildly exceeds the problem's.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>Utah:</strong> 2M+ records → 1 non-citizen registration → 0 votes. <span class="receipt">Utah SOS / BPC</span></p>
+      <p><strong>Georgia:</strong> 8.2M registered → 20 non-citizen registrations found → 9 had ever voted. <span class="receipt">Georgia SOS, Oct 2024</span></p>
+      <p><strong>Brennan Center (2016):</strong> 23.5M votes → 30 suspected cases (0.0001%). <span class="receipt">Brennan Center</span></p>
+      <p><strong>Heritage Foundation:</strong> &lt;100 non-citizen voting cases over 20 years. <span class="receipt">Heritage database</span></p>
+      <div class="key-response">The bill's provisions would affect millions of eligible voters to address a problem measured in single digits nationwide.</div>
+    </div></div>
+  </div>
+
+  <!-- CARD 9: Democrats oppose voter ID -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"Democrats are against voter ID."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Record Shows</div><p><strong>Democrats voted for nationwide voter ID. Zero Republicans voted for it.</strong> The dispute is about everything else in this bill.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p>Democrats voted to enact voter ID similar to West Virginia's law. <strong>Not a single Republican voted for it.</strong> <span class="receipt">CAP / Congressional Record</span></p>
+      <p>Schumer: <strong>"This is not a voter ID bill. This is about purging the voter rolls."</strong></p>
+      <div class="key-response">The framing conflates photo ID with the full bill. Democrats have indicated willingness on voter ID. The dispute is documentary proof, DHS rolls, criminal penalties, private action, and immediate implementation.</div>
+    </div></div>
+  </div>
+
+  <!-- CARD 10: Immediate Implementation -->
+  <div class="card" onclick="this.classList.toggle('open')">
+    <div class="card-header">
+      <div class="card-claim"><div class="card-side-label">The Talking Point</div><p>"We need to secure elections now."</p></div>
+      <div class="card-reality"><div class="card-side-label">What the Bill Says</div><p>Takes effect <strong>immediately</strong>. No phase-in. Primaries already underway. States overhaul overnight.</p></div>
+    </div>
+    <div class="card-expand">↓ Click for the evidence</div>
+    <div class="card-detail"><div class="card-detail-inner">
+      <p><strong>2026 primaries are already being held.</strong> EAC guidance in 10 days. Rolls to DHS in 30 days.</p>
+      <div class="key-response">No major election change has ever been implemented this fast. HAVA gave states years. REAL ID has been delayed 5 times over 20 years. This demands immediate compliance with no funding and elections underway.</div>
+      <p>New Hampshire showed even poll workers didn't understand their smaller-scale version. <span class="receipt">AP, Mar 2026</span></p>
+    </div></div>
+  </div>
+
+  <!-- ===================== SECTION 3: WHAT ALREADY EXISTS ===================== -->
+  <h2 class="section-header" id="exists">What Already Exists</h2>
+  <p>The SAVE Act is framed as filling a gap. These federal laws have been in place for decades.</p>
+
+  <div class="existing-law">
+    <h4>Help America Vote Act (HAVA) § 303 — Since 2002</h4>
+    <p><strong>All 50 states already verify identity</strong> at registration against DMV and SSA databases. Every form requires DL# or last 4 SSN — confirmed via SSA/DMV matching. This verifies that the person exists and their documents match. Citizenship is attested under penalty of perjury; states that use the SAVE database cross-check that attestation separately. The SAVE Act adds a documentary proof mandate on top of this existing infrastructure.</p>
+  </div>
+  <div class="existing-law">
+    <h4>Illegal Immigration Reform Act — Since 1996</h4>
+    <p><strong>Non-citizen voting is already a federal crime</strong> — 5 years + deportation. False attestation carries same penalties. The SAVE Act adds a documentation requirement to a 30-year-old law.</p>
+  </div>
+  <div class="existing-law">
+    <h4>Current Systems Are Already Catching Rare Cases</h4>
+    <p>Minnesota's SOS testified safeguards <strong>flagged fraudulent registrations before votes were cast.</strong> Utah: 1 non-citizen in 2M registered (0 votes). Georgia: 20 non-citizens in 8.2M registered (9 ever voted). <strong>The system works.</strong></p>
+  </div>
+
+  <!-- ===================== SECTION 4: HUSTED ===================== -->
+  <h2 class="section-header" id="husted">The Clean Voter ID Bill That Both Sides Blocked</h2>
+  <p>On March 19, Sen. Husted (R-OH) proposed S. 4155 — standalone photo ID, no citizenship docs. Here's what the Congressional Record shows:</p>
+
+  <div class="narrative-box">
+    <h3>Senate Floor, March 19, 2026</h3>
+    <div class="timeline-step"><div class="timeline-marker">1</div><p><strong>Husted proposed S. 4155:</strong> Photo ID only. Five forms: state DL, state ID, passport, military ID, tribal ID. No proof-of-citizenship. No DHS rolls. No criminal penalties.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">2</div><p><strong>Merkley raised concerns:</strong> 48M mail voters need ID copy (ballot secrecy). Student IDs excluded. Cited Utah audit.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">3</div><p><strong>Merkley offered modification:</strong> Add Freedom to Vote by Mail protections — targeted compromise.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">4</div><p><strong>Husted rejected</strong> — objected to unsolicited mail-in ballot provisions.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">5</div><p><strong>Merkley objected to original.</strong> Both sides blocked the other. Neither accepted the other's terms.</p></div>
+  </div>
+  <p><strong>"Democrats killed a clean voter ID bill"</strong> omits that a Democrat tried to negotiate and the Republican refused. Both had lines. That's the full record.</p>
+
+  <!-- ===================== SECTION 5: ELECTION JUDGE ===================== -->
+  <h2 class="section-header" id="judge">Now Put Yourself Behind the Desk</h2>
+  <p>You're an election judge. A voter walks up. Under the SAVE Act, <strong>you</strong> make the call. Here's what's at stake for <em>you</em>.</p>
+
+  <div id="judge-sim" class="sim-container">
+    <div id="judge-scenario" class="sim-question-card"></div>
+    <div id="judge-result" class="sim-result-card" style="display:none;"></div>
+    <div id="judge-summary" class="session-summary" style="display:none;"></div>
+    <button id="judge-restart" class="sim-restart" style="display:none;" onclick="nextJudge()">→ Next Scenario</button>
+  </div>
+
+  <!-- ===================== SECTION 6: FAQ ===================== -->
+  <div class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p class="faq-intro">Common objections and the documented responses. Click any question to expand.</p>
+
+    <div class="faq-category">Common Claims vs. Record</div>
+
+    <div class="faq-item" id="faq-polling-conflation">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">80–90% of Americans support this bill. Why are Democrats blocking something with that level of support?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The 80–90% figures measure support for <strong>photo ID requirements</strong> — not the SAVE Act. These are different questions about different policies.</p>
+        <p>CBS News/YouGov asked about the SAVE Act by name during the same week as those photo ID polls: <strong>28% favor, 31% oppose, 41% not sure.</strong> Only 16% of Republicans say they know "a lot" about the bill. When voters learn what's actually in it — the documentation requirements, the incentive structure, the implementation timeline — support collapses.</p>
+        <p>The same pollster, the same week, produced both the 80% and the 28% numbers. That gap between described provisions and named legislation is the story. Provisions poll higher than the bill because the details change minds.</p>
+        <div class="faq-source">Sources: CBS News/YouGov, March 16–19, 2026 (n=2,500, MOE ±2.2) · cbsnews.com/news/voting-process-photo-id-opinion-poll/</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-existing-registrants">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">If you're already registered, you don't have to do anything. So what's the problem?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Existing registration protects you only if nothing in your life changes. Anyone who <strong>moves, changes their name, or updates their registration</strong> must re-register with full documentary proof under the SAVE Act. That covers 69 million women with name mismatches between their birth certificate and current ID, military families who relocate frequently, college students, and anyone who changes address.</p>
+        <p>The bill also requires states to take "affirmative steps on an ongoing basis" to cross-reference voter rolls against federal databases. Flagged registrants must prove citizenship or be removed — and the bill contains no requirement that states notify voters before removal. You could be purged and not find out until Election Day.</p>
+        <p>Virginia's 2025 purge documented the real-world result: <strong>94% of those removed were U.S. citizens.</strong></p>
+        <div class="faq-source">Sources: SAVE Act bill text (p.12 l.22; affirmative steps requirement) · CAP (69M women name mismatch) · VoteRiders (Virginia purge, 2025) · Rock the Vote / FactCheck.org (no notification requirement)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-38-states">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">38 states already require voter ID. How is this any different?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>It's different because <strong>voter ID and documentary proof of citizenship are different requirements.</strong> The 38 states that require voter ID accept driver's licenses — the most common form of government-issued ID in America. The SAVE Act does not accept driver's licenses for registration because a driver's license does not prove citizenship. Non-citizens on visas and green cards have always been eligible for state driver's licenses.</p>
+        <p>Senator Cornyn's argument that "38 states require voter ID" without distinguishing what those laws actually require conflates a requirement Americans already meet (showing a DL at the polls) with one most Americans have never faced (producing a passport or birth certificate to register). These are not the same policy. They are not even close.</p>
+        <p>Of the 36 states with voter ID laws, <strong>only Ohio has a standard as restrictive as the SAVE Act.</strong> The bill would override the existing, less restrictive voter ID frameworks that 35 states chose for themselves — imposing a federal mandate stricter than almost every state's own law.</p>
+        <p>The same political coalition that opposes federal election standards when proposed by Democrats is imposing them here. The Freedom to Vote Act proposed national voter ID with broader accepted documents. Not a single Republican voted for it.</p>
+        <div class="faq-source">Sources: NCSL Voter ID Laws by State · LWV comparison analysis · SAVE Act §2(a) (accepted documents list) · Sen. Cornyn Senate floor remarks, March 19, 2026 · Congressional Record (Freedom to Vote Act vote)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-real-id">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Can't you just use your REAL ID? Doesn't everyone have one by now?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The SAVE Act accepts a REAL ID only if it <strong>"indicates the applicant is a citizen of the United States."</strong> Standard REAL IDs do not do this. They verify lawful presence — which includes green card holders, visa holders, and other non-citizens. A REAL ID star means the card meets federal security standards. It does not mean the holder is a citizen.</p>
+        <p>Only <strong>5 states</strong> — Michigan, Minnesota, New York, Vermont, and Washington — issue Enhanced Driver's Licenses that explicitly indicate U.S. citizenship. These are distinct from standard REAL IDs: they carry a U.S. flag marking, cost more, and are designed for border crossing. The TSA confirms that EDLs provide "proof of identity and U.S. citizenship" — standard REAL IDs do not.</p>
+        <p>For voters in the other <strong>45 states</strong>, a REAL ID does not satisfy the SAVE Act. They still need a passport, birth certificate, or naturalization certificate. The "just use your REAL ID" argument sounds reasonable until you read the bill's actual text — which most voters, and apparently some legislators, have not.</p>
+        <div class="faq-source">Sources: SAVE Act §2(a) ("indicates the applicant is a citizen") · TSA REAL ID FAQ (EDL definition) · DHS (5 states issuing EDLs: MI, MN, NY, VT, WA) · Institute for Responsive Government ("no state where a REAL ID proves U.S. citizenship")</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-election-judge">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">A Minnesota election judge just pleaded guilty to letting unregistered people vote. Doesn't that prove we need the SAVE Act?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Timothy Scouton pleaded guilty to letting 11 people <strong>skip registration paperwork</strong> — not 11 non-citizens voting. No citizenship issue was alleged at any point in the case. The SAVE Act governs citizenship documentation at registration. Scouton bypassed the registration process entirely — directing staff to skip forms altogether.</p>
+        <p>An official willing to circumvent one requirement will circumvent all of them. The SAVE Act would not have stopped this. The fix for official misconduct is prosecution — which is exactly what happened. The Minnesota Secretary of State said the case was caught immediately and that the office is unaware of any other case like it.</p>
+        <p><strong>The system worked.</strong> That's the receipt, not the argument against it.</p>
+        <div class="faq-source">Sources: Star Tribune, March 23, 2026 (guilty plea) · Minnesota Secretary of State statement · SAVE Act bill text (scope limited to citizenship documentation at registration)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-california-jury">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">449,000 Californians were excused from jury duty because they weren't citizens — but they were registered voters. Doesn't that prove massive non-citizen registration?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>This is the <strong>ecological fallacy</strong> — two unrelated statistics juxtaposed to imply a connection that doesn't exist. California jury pools are drawn from <strong>DMV lists AND voter rolls</strong>. Non-citizens can obtain California driver's licenses under state law, so they appear in jury pools via DMV data, not voter registration.</p>
+        <p>California's Deputy Secretary of State called the claim "false and inaccurate." County-level investigations found no overlap: in Nevada County, 97 potential jurors were excused for non-citizenship — and a search of their names on the voter registration list found zero matches. In Sierra County, 3 were dismissed for non-citizenship; none were registered voters.</p>
+        <p>The claim has been debunked by PolitiFact, Snopes, and Lead Stories. It has circulated in various forms since at least 2019. No evidence has ever been produced that those 449K were registered voters.</p>
+        <div class="faq-source">Sources: California Deputy Secretary of State Paula Valle (Lead Stories) · PolitiFact, November 2019 · Snopes · CA Code of Civil Procedure §197 (jury source lists include DMV) · Nevada County and Sierra County court officials (PolitiFact)</div>
+      </div></div>
+    </div>
+
+
+    <div class="faq-category">Legal Structure</div>
+
+    <div class="faq-item" id="faq-strict-liability">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Shouldn't election officials be held accountable if they knowingly register ineligible voters?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Yes — and existing law already does that. The problem with the SAVE Act isn't that it holds officials accountable. It's that it uses <strong>strict liability instead of a negligence standard</strong>, which means it punishes honest errors the same as intentional violations.</p>
+        <p>Under a negligence standard — the legal framework used in virtually every other professional liability context — an official who follows written procedures, acts in good faith, and has no actual knowledge of ineligibility is protected. An official who <em>knowingly</em> registers an ineligible voter faces full criminal penalties. The distinction tracks intent.</p>
+        <p>Under the SAVE Act's strict liability standard, that distinction disappears. An official who follows every procedure correctly, makes a reasonable judgment call on an ambiguous case, and turns out to be wrong faces the same exposure as one who deliberately commits fraud — <strong>up to five years federal prison plus private civil lawsuits from any individual, with no merit requirement.</strong></p>
+        <p>Strict liability is appropriate in narrow contexts where the harm is so severe and the actor's control so complete that intent is irrelevant — environmental contamination, product liability. It is not appropriate where officials are making high-volume, time-pressured judgment calls on ambiguous documentation with no clear guidance, no funding, and no training.</p>
+        <p>The SAVE Act's choice of strict liability over negligence is not incidental. A negligence standard would hold bad actors accountable while protecting good-faith officials. Strict liability holds everyone accountable for every error — which produces one predictable outcome: officials stop making judgment calls and default to rejection in every uncertain case.</p>
+        <div class="faq-source">Sources: SAVE Act §2(j) · INA 8 U.S.C. §1324a (I-9 good faith standard)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-escape-hatch">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Doesn't the attestation escape hatch solve the problem for people who can't produce documents?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The escape hatch exists on paper. The incentive structure guarantees it won't be used.</p>
+        <p>Under the SAVE Act, an election official who accepts a registration without full documentary proof faces <strong>up to five years in federal prison plus private civil lawsuits</strong> — filed by any individual, with no merit requirement and no cap on legal costs. The official who rejects an eligible citizen faces nothing. Zero penalty. Zero liability.</p>
+        <p>Before EAC guidance exists — and the bill takes effect immediately, with guidance arriving ten days later while primaries are already underway — officials have no framework at all. When guidance does arrive, if it is vague or silent on a specific document combination (virtually guaranteed given the complexity of citizenship documentation across 330 million people), officials face the same calculation: prison and lawsuits for accepting, nothing for rejecting. <strong>The default will be rejection every time.</strong></p>
+        <p>Decades of behavioral economics research establish why. Kahneman and Tversky's foundational work on loss aversion demonstrates that people weight potential losses roughly twice as heavily as equivalent gains. When the asymmetry is this extreme — prison and lawsuits on one side, nothing on the other — rational actors don't use the escape hatch. They default to rejection in every case of uncertainty.</p>
+        <p>This isn't speculation. Kansas implemented a similar documentary proof requirement and blocked <strong>30,000+ eligible citizens</strong> while stopping 0.002% non-citizen registrations. Virginia conducted voter purges and <strong>94% of those removed were U.S. citizens.</strong> New Hampshire implemented proof-of-citizenship requirements and turned away <strong>244 eligible voters on day one.</strong> In each case, the incentive to reject produced exactly that outcome.</p>
+        <p>The closest comparable framework is I-9 employment verification, which also requires citizenship attestation. Federal law explicitly builds in a good faith safe harbor: employers who follow written procedures and act without actual knowledge of ineligibility are protected from penalty. The SAVE Act omits that standard entirely. That's not consistent with how citizenship attestation works elsewhere — it's the exception.</p>
+        <div class="faq-source">Sources: Kahneman &amp; Tversky, "Prospect Theory: An Analysis of Decision Under Risk" (1979) · Kahneman, Thinking, Fast and Slow (2011) · INA 8 U.S.C. §1324a (I-9 good faith safe harbor) · ICE I-9 Inspection Guidance · BPC (Kansas) · VoteRiders (Virginia, 2025) · AP (New Hampshire, March 2026) · SAVE Act §2(j)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-private-action">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Doesn't the private right of action just give citizens a way to hold bad officials accountable?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>In theory. In practice, it creates an organized intimidation infrastructure with no merit threshold.</p>
+        <p>Any individual can file a civil lawsuit against an election official for accepting a registration — <strong>with no requirement that the plaintiff believes anything improper occurred, no requirement of harm, and no good faith threshold.</strong> The bill creates a cause of action that can be weaponized by anyone, for any reason, at any time an official uses the escape hatch. The official must retain legal counsel and mount a defense regardless of outcome.</p>
+        <p>The average election clerk earns approximately <strong>$32,000 per year.</strong> The average county clerk earns approximately <strong>$48,000.</strong> A single civil suit — even a completely meritless one filed by someone who has no belief that anything was wrong — requires legal representation, time, and professional exposure that can be financially ruinous for a local government employee at that salary level.</p>
+        <p>A well-funded outside group — a PAC, a nonprofit, or a single wealthy individual — could systematically monitor registration offices, identify officials who use the attestation process, and file coordinated civil suits against them. The suits don't need to succeed. The filing itself is the deterrent. We have already seen nine-figure sums flow into election-related political action committees in recent cycles. The same funding infrastructure that drives political advertising can drive coordinated litigation campaigns against individual county clerks.</p>
+        <p>This is not a hypothetical concern. It is the predictable application of an existing and well-documented political funding infrastructure to a new statutory tool that requires no merit, no harm, and no good faith to deploy.</p>
+        <p>The result isn't accountability for bad actors. It's targeted suppression of the one official behavior — using the escape hatch — that the bill nominally permits. An official who knowingly registers an ineligible voter should face consequences. An official making a good-faith judgment call on ambiguous documentation should not face a litigation campaign funded by outside groups with no stake in the individual case.</p>
+        <p>It is worth asking why the bill was structured this way. A genuine escape hatch — one intended to be used — would include a negligence standard, a safe harbor for officials following written procedures, and no private right of action for non-meritorious claims. <a href="https://mn06watch.com/articles/eisa-framework/?v=2" style="color:var(--navy);font-weight:600;">EISA includes all three.</a> The SAVE Act includes none of them. That's not an oversight.</p>
+        <div class="faq-source">Sources: Glassdoor / SalaryExpert (election clerk and county clerk median salaries, 2024–2025) · SAVE Act §2(j) · OpenSecrets (PAC spending data)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-crawford">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">The Supreme Court already upheld voter ID in Crawford v. Marion County. Isn't this settled law?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Crawford upheld Indiana's voter ID law. It did not uphold documentary proof of citizenship, and the reasoning in Crawford actually undermines the case for the SAVE Act.</p>
+        <p>Justice Stevens's lead opinion turned on a specific finding: because <strong>Indiana provided free photo IDs</strong>, the burden on voters was "limited." The opinion states explicitly that the burden was acceptable because "Indiana's cards are free" and the "inconvenience of going to the Bureau of Motor Vehicles, gathering required documents, and posing for a photograph does not qualify as a substantial burden on most voters' right to vote."</p>
+        <p>The SAVE Act requires documents that are not free. A passport costs <strong>$130–$160.</strong> Replacement birth certificates cost <strong>$10–$60</strong> depending on the state and take <strong>weeks to months</strong> to process. The bill provides <strong>zero funding</strong> for document acquisition. That's not the Crawford fact pattern — it's closer to the one Crawford distinguished itself from.</p>
+        <p>Harper v. Virginia Board of Elections (1966) struck down a <strong>$1.50 poll tax</strong> — the Court held that "to introduce wealth or payment of any fee as a measure of a voter's qualifications is to introduce invidious discrimination." The SAVE Act imposes costs 80 to 100 times that amount with no fee waiver and no funding mechanism.</p>
+        <p>Crawford also noted that the "severity of the somewhat heavier burden" on voters without ID was "mitigated" by Indiana's provisional ballot process. The SAVE Act's provisional ballot mechanism requires the voter to produce the same documentary proof after the fact — there is no alternative path to having the ballot counted without the documents the voter didn't have in the first place.</p>
+        <p>The gap between Crawford (free ID, provisional ballot safety valve) and the SAVE Act ($130+ documents, no funding, no meaningful provisional alternative) is precisely the constitutional exposure that Crawford's own reasoning creates.</p>
+        <div class="faq-source">Sources: Crawford v. Marion County Election Board, 553 U.S. 181 (2008) · Harper v. Virginia Board of Elections, 383 U.S. 663 (1966) · SAVE Act bill text (no funding provision) · U.S. State Department (passport fees)</div>
+      </div></div>
+    </div>
+
+
+    <div class="faq-category">Implementation</div>
+
+    <div class="faq-item" id="faq-not-hard">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">If you can get a driver's license, you can get a birth certificate. This isn't that hard.</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Kansas tested this theory. <strong>31,089 eligible citizens couldn't clear it</strong> — 12% of everyone who tried to register for the first time. A federal court struck the law down. The 10th Circuit affirmed.</p>
+        <p>Replacement birth certificates cost $10–$60 depending on the state and processing method. Standard processing takes <strong>2 to 12 weeks.</strong> Passports cost $130–$160 and take 6–8 weeks. Many Americans born before modern record-keeping — particularly Black Americans born in the rural South, Native Americans born on reservations, and older citizens born at home — have birth certificates with errors, missing records, or no certificate at all. The University of Maryland found <strong>3.8 million adult citizens have no documentary proof of citizenship whatsoever.</strong></p>
+        <p>The bill provides <strong>zero funding</strong> for document acquisition, processing, or outreach. It mandates the requirement and delegates the cost entirely to individual voters.</p>
+        <p>Here is the comparison that clarifies the standard: to get a job in America, federal I-9 employment verification accepts a <strong>driver's license plus a Social Security card.</strong> The SAVE Act demands more to vote than the federal government requires to work. If a DL and Social Security card are sufficient to verify someone is authorized to work in the United States, the question is why they aren't sufficient to verify someone is authorized to vote.</p>
+        <p>New Hampshire implemented a similar requirement and <strong>244 people were turned away</strong> during low-turnout local elections alone — including a U.S.-born veteran who had previously voted in the state. The "it's not hard" premise has been tested. The results are documented.</p>
+        <div class="faq-source">Sources: Fish v. Kobach, 10th Circuit (31,089 blocked, 39 non-citizens over 19 years) · USAGov / state vital records offices (birth certificate fees and processing times) · U.S. State Department (passport fees) · U of Maryland / Brennan Center (3.8M with no DPOC) · INA 8 U.S.C. §1324a (I-9 accepted documents) · NH Campaign for Voting Rights / NH Bulletin (244 turned away, 2025)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-federalize">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">This doesn't federalize elections. It just enforces what the Constitution already requires.</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The SAVE Act overrides the voter ID laws of <strong>35 of 36 states</strong> by imposing a documentation standard stricter than what those states chose for themselves. It mandates that states share unredacted voter rolls with a federal agency — DHS — with no restrictions on use. It dictates an EAC guidance timeline of 10 days and a roll submission deadline of 30 days. It prescribes which documents states must accept and which they cannot. It subjects state and local election officials to federal criminal penalties for how they administer state voter registration.</p>
+        <p>Whether you call that "federalizing elections" is a semantic question. What it does, functionally, is impose federal control over state election administration procedures — the same thing the bill's sponsors say they oppose when proposed by the other party.</p>
+        <p>Utah Lt. Governor Deidre Henderson — a Republican and the state's chief elections officer — made this point directly: <strong>"If we want a federal law mandating voter ID or Documentary Proof of Citizenship, and it's really not about disenfranchising a bunch of voters, then states and voters need an onramp with time to prepare — get the documents, obtain the right ID, set up the system. That's not what's happening with the SAVE America Act."</strong></p>
+        <p>The Constitution gives states primary authority to administer elections. Congress has the power to override — Article I, Section 4. But it is worth noting who invokes that power and when. The Freedom to Vote Act proposed national voter ID standards with a broader accepted documents list. It received zero Republican votes. The SAVE Act proposes a stricter national standard with narrower accepted documents. It received near-unanimous Republican support. The principle is not "states should control elections." The principle is "federal standards are acceptable when they restrict access and unacceptable when they expand it."</p>
+        <div class="faq-source">Sources: SAVE Act bill text (DHS roll-sharing, EAC timeline, accepted documents) · NCSL (35 of 36 states with less restrictive voter ID) · Utah Lt. Gov. Deidre Henderson, social media post, March 25, 2026 (Deseret News) · U.S. Constitution Art. I §4 · Congressional Record (Freedom to Vote Act vote)</div>
+      </div></div>
+    </div>
+
+
+  </div>
+  </div>
+
+  <!-- FINAL CLOSER -->
+  <div class="closer">
+    <p>Voter ID is popular. The SAVE Act is not just voter ID.</p>
+    <p>It's a documentation mandate, a federal database cross-reference, criminal penalties for election officials, a private right of action, and immediate implementation — built on a system its own operators say can't reliably determine citizenship.</p>
+    <p>The question isn't whether you support voter ID. It's whether you support all of this.</p>
+    <p class="tagline">Produced by MN06Watch for Minnesota Reformer</p>
+  </div>
+
+</main>
+
+  <!-- UPDATED + CHANGELOG -->
+  <div id="changelog" style="margin:2rem 0 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1rem 1.5rem; text-align:center;">
+    <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin:0 0 0.5rem;">Updated March 26, 2026</p>
+    <a href="https://mn06watch.com/articles/save-act-changelog-reformer/" style="font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); text-decoration:none; font-weight:500;">View full changelog →</a>
+  </div>
+
+<footer class="footer">
+  <p style="font-size:0.78rem; line-height:1.55; margin-bottom:0.75rem; color:var(--gray-text); font-style:italic;"><strong>Disclaimer:</strong> This explainer is a journalistic analysis of public legislative text and cited sources. The author is not an attorney. Legal characterizations (strict liability, safe harbor, private right of action) reflect the consensus reading among cited legal analysts and advocacy organizations, not independent legal counsel. Consult an attorney for legal advice.</p>
+  Sources: Congressional Record (Mar 19, 2026) · H.R. 7296 / H.R. 22 bill text · CBS News/YouGov (Mar 2026) · Pew Research (Aug 2025) · Harvard CAPS/Harris (Feb 2026) · YouGov (Mar 2026) · U of Maryland (2025) · Bipartisan Policy Center · Center for American Progress · Brennan Center · Campaign Legal Center · League of Women Voters · Issue One · FactCheck.org · Travis County TX · Utah SOS · Kansas SOS · Georgia SOS · USCIS SAVE Fact Sheet (Feb 2026) · ProPublica / Texas Tribune · AP · CEIR · Heritage Foundation · U.S. Vote Foundation · NBC News · Ms. Magazine · Rock the Vote · VoteRiders · CNBC · CNN · PBS NewsHour · Senate Democratic Caucus Analysis
+  <br><br>
+  <span style="color:var(--gold);">Minnesota Reformer</span> · <a href="https://minnesotareformer.com">minnesotareformer.com</a><br>
+  Produced by <a href="https://mn06watch.com">MN06Watch</a> · <a href="https://mn06watch.substack.com">mn06watch.substack.com</a> · <a href="https://twitter.com/MN6Watch">@MN6Watch</a>
+</footer>
+
+<!-- ===================== ALL SCRIPTS ===================== -->
+<script>
+// Polling bar animation
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.poll-bar-fill').forEach(function(b,i){
+          setTimeout(function(){ b.style.width = b.dataset.width+'%'; }, i*300);
+        });
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.3});
+  var p = document.querySelector('.polling-bars');
+  if(p) obs.observe(p);
+})();
+
+// ===================== VOTER SIMULATOR =====================
+(function(){
+  var st = {step:0, answers:{}};
+  var Qs = [
+    {id:'registered', question:'Are you currently registered to vote?', options:[
+      {label:'Yes — at my current address', value:'yes_current'},
+      {label:'Yes — but I\'ve moved since', value:'yes_moved'},
+      {label:'No — I need to register', value:'no'}
+    ]},
+    {id:'name_change', question:'Has your legal name changed since your birth certificate was issued?', context:'Marriage, divorce, adoption, gender transition.', options:[
+      {label:'No — name matches', value:'no'},
+      {label:'Yes — changed at marriage', value:'married'},
+      {label:'Yes — other reason', value:'other'}
+    ]},
+    {id:'documents', question:'Which documents do you have readily available right now?', context:'Physically accessible today — not stored somewhere else.', options:[
+      {label:'Current (not expired) U.S. passport', value:'passport'},
+      {label:'Birth certificate matching my current name', value:'bc_match'},
+      {label:'Birth certificate with a different name', value:'bc_mismatch'},
+      {label:'None of these', value:'none'}
+    ]},
+    {id:'voting_method', question:'How do you typically vote?', options:[
+      {label:'In person', value:'in_person'},
+      {label:'By mail / absentee', value:'mail'},
+      {label:'Vote-by-mail state (OR, WA, CO, HI, UT, NV, VT, DC)', value:'vbm_state'}
+    ]},
+    {id:'naturalized', question:'How did you become a U.S. citizen?', options:[
+      {label:'Born in the U.S.', value:'born'},
+      {label:'Naturalized (born in another country)', value:'naturalized'},
+      {label:'Born abroad to U.S. parent(s)', value:'abroad'}
+    ]}
+  ];
+
+  function render(){
+    var qE=document.getElementById('sim-question'), rE=document.getElementById('sim-result'), btn=document.getElementById('sim-restart');
+    if(st.step>=Qs.length){ qE.style.display='none'; rE.style.display='block'; btn.style.display='block'; renderResult(); rE.scrollIntoView({behavior:'smooth',block:'start'}); return; }
+    qE.style.display='block'; rE.style.display='none'; btn.style.display='none';
+    var q=Qs[st.step], h='<div class="sim-progress">Question '+(st.step+1)+' of '+Qs.length+'</div><h3>'+q.question+'</h3>';
+    if(q.context) h+='<p class="sim-context">'+q.context+'</p>';
+    q.options.forEach(function(o){ h+='<button class="sim-btn" onclick="window._sA(\''+q.id+'\',\''+o.value+'\')">'+o.label+'</button>'; });
+    qE.innerHTML=h;
+  }
+  window._sA=function(id,v){ st.answers[id]=v; st.step++; render(); };
+  window.restartSim=function(){ st.step=0; st.answers={}; render(); document.getElementById('simulator').scrollIntoView({behavior:'smooth',block:'start'}); };
+
+  function renderResult(){
+    var a=st.answers, out=[], risk=0;
+    if(a.registered==='no'){ out.push({l:'danger',t:'<strong>Must register in person</strong> with documentary proof. Can\'t complete by mail or online. Driver\'s license insufficient.'}); risk+=3; }
+    else if(a.registered==='yes_moved'){ out.push({l:'danger',t:'<strong>Moved = re-register with full documentary proof in person.</strong> Previous registration doesn\'t carry over.'}); risk+=3; }
+    else { out.push({l:'warning',t:'<strong>Registered but not exempt from ongoing DHS verification.</strong> If flagged (even incorrectly), you could be removed — <strong>without notification.</strong> You might find out on Election Day.'}); risk+=1; }
+
+    if(a.name_change!=='no'){ out.push({l:'danger',t:'<strong>Name doesn\'t match birth certificate.</strong> You\'re among 69M+ Americans in this situation. Need bridging documents. Marriage license proves name change, not citizenship. Official faces criminal penalties for accepting unclear documentation.'}); risk+=2; }
+    else { out.push({l:'safe',t:'Name matches birth certificate. No additional burden here.'}); }
+
+    if(a.documents==='passport'){ out.push({l:'safe',t:'<strong>Current passport is the cleanest path.</strong> Must not be expired.'}); }
+    else if(a.documents==='bc_match'){ out.push({l:'safe',t:'Birth certificate matching your name works. Must present in person.'}); }
+    else if(a.documents==='bc_mismatch'){ out.push({l:'warning',t:'<strong>Birth certificate doesn\'t match current name.</strong> Need bridging docs. Official\'s judgment call — and they face criminal penalties for getting it wrong.'}); risk+=1; }
+    else { out.push({l:'danger',t:'<strong>No qualifying document available.</strong> You\'re among 21.3 million eligible Americans. Passport: $130–$160, weeks. Birth cert replacement: varies, weeks. Bill provides no funding and takes effect immediately.'}); risk+=3; }
+
+    if(a.voting_method!=='in_person'){ var x=a.voting_method==='vbm_state'?' Your state\'s entire system would need restructuring.':'';
+      out.push({l:'warning',t:'<strong>Must include ID photocopy with ballot</strong> (compromises secrecy). Must have registered in person first.'+x+' Trump demanding amendment to ban most mail-in voting.'}); risk+=1;
+    } else { out.push({l:'safe',t:'In-person is simplest. Need qualifying photo ID — but student IDs excluded, tribal IDs need expiration date.'}); }
+
+    if(a.naturalized==='naturalized'){ out.push({l:'danger',t:'<strong>Naturalized citizens face highest risk.</strong> SAVE database doesn\'t reliably update. SSA data is "snapshot in time." Travis County: 25% of voters SAVE flagged had registered through a process requiring proof of citizenship (court filing, Oct 2025). You could be flagged, removed without notice, forced to re-prove citizenship you already earned.'}); risk+=3; }
+    else if(a.naturalized==='abroad'){ out.push({l:'warning',t:'<strong>Citizens born abroad face elevated risk.</strong> SAVE system may not confirm citizenship without specific USCIS/State Dept documents.'}); risk+=2; }
+    else { out.push({l:'safe',t:'U.S.-born = lower DHS flagging risk. Errors still occur (Virginia: 94% of purged voters were citizens).'}); }
+
+    var lbl,clr;
+    if(risk<=2){lbl='Low additional burden';clr='#48bb78';}
+    else if(risk<=5){lbl='Moderate burden — new requirements apply to you';clr='#d69e2e';}
+    else if(risk<=8){lbl='High burden — multiple barriers affect your ability to vote';clr='#fc8181';}
+    else{lbl='Severe burden — you could be prevented from voting';clr='#e53e3e';}
+
+    var h='<h3 style="border-left:4px solid '+clr+';padding-left:0.75rem;">'+lbl+'</h3>';
+    out.forEach(function(o){ h+='<div class="sim-outcome '+o.l+'">'+o.t+'</div>'; });
+    h+='<div class="sim-summary"><strong>Remember:</strong> Non-citizen voting has been illegal since 1996. All 50 states verify identity at registration under HAVA (2002) — citizenship is attested under penalty of perjury. Utah audited 2M+ records: 1 non-citizen registration, 0 votes. Is this burden proportionate to that problem?</div>';
+    document.getElementById('sim-result').innerHTML=h;
+  }
+  render();
+})();
+
+// ===================== ELECTION JUDGE SIMULATOR =====================
+(function(){
+  var scenarios = [
+    { title:'The Married Woman', desc:'Linda, 54. Registered 30 years. Moved across town. Presents: MN driver\'s license (married name: Thompson), birth certificate (maiden name: Garcia), marriage certificate. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'Birth certificate says "Garcia," DL says "Thompson." Marriage certificate proves name change, not citizenship. <strong>If anyone challenges this, you face up to 5 years in prison and a private lawsuit.</strong> No safe harbor for good-faith calls. Linda is a citizen. You made the right call. The bill punishes you for it.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Linda has voted for 30 years. Her documents don\'t cleanly match under this bill. She needs a passport ($130+, weeks) or additional bridging docs. <strong>You face no penalty.</strong> Linda may not vote in the next election.'}
+    },
+    { title:'The Naturalized Citizen', desc:'Ahmed, 41. U.S. citizen since 2018. Presents: valid, current U.S. passport. But the DHS SAVE system flags him — data hasn\'t updated since naturalization.',
+      accept:{hl:'You accepted his registration.', level:'danger', text:'Valid passport says citizen. Federal database says otherwise. <strong>Conflicting information — and you bear the criminal liability.</strong> ProPublica found this happens persistently with naturalized citizens. Ahmed is a citizen. The database is wrong. You\'re the one holding the risk.'},
+      reject:{hl:'You rejected his registration.', level:'warning', text:'Ahmed holds a valid U.S. passport — the gold standard. The DHS database is wrong. But you rejected him because the system flagged him, and the bill makes it your criminal liability. <strong>Ahmed must now correct federal records — no defined timeline — to exercise the right he earned.</strong> You face nothing.'}
+    },
+    { title:'The College Student', desc:'Maya, 19. First-time voter. Sophomore at University of Minnesota. Presents: state university student ID (photo, name, expiration) and MN driver\'s license. Birth certificate at parents\' house 3 hours away. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'Student ID — from a state university — is <strong>explicitly excluded.</strong> Driver\'s license proves identity, not citizenship. <strong>She has zero qualifying documents.</strong> You face 5 years and a lawsuit. Maya was born in Minneapolis.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Maya is U.S.-born with a state DL and state university ID — sufficient in 35 of 36 states with voter ID laws. <strong>Under the SAVE Act, neither counts.</strong> She drives 3 hours or spends $130+ on a passport. You face nothing.'}
+    },
+    { title:'The Longtime Voter', desc:'Robert, 72. Voted every election since 1972. Shows up — removed from rolls. DHS flagged him: born at home in rural Mississippi, 1954. Birth certificate spelling doesn\'t match DL. Never notified of removal. No passport.',
+      accept:{hl:'You let him cast a regular ballot.', level:'danger', text:'Robert was removed. Re-registering requires documentary proof he doesn\'t have. <strong>54 years of voting. Never notified. His "crime": a spelling discrepancy on a 1954 birth certificate.</strong> If you allow a regular ballot, you face criminal liability. Robert was born in an era when many births — especially Black births in the rural South — were recorded inconsistently.'},
+      reject:{hl:'You offered a provisional ballot.', level:'warning', text:'<strong>Robert, 72, must now prove citizenship to count his provisional ballot.</strong> He needs a passport he\'s never had or a 70-year-old birth certificate from Mississippi that may not match his name. He was never told he was removed. You face nothing. Robert may never vote again.'}
+    },
+    { title:'The Military Spouse', desc:'Jessica, 34. Army spouse, moved 4 times in 6 years. At Fort Ripley, MN. Presents: VA driver\'s license (married name), TX birth certificate (maiden name), military dependent ID. No passport.',
+      accept:{hl:'You accepted her registration.', level:'danger', text:'VA license doesn\'t prove citizenship. Birth certificate is different name. Military dependent ID isn\'t on the accepted list (only active military + service record). <strong>No single document satisfies the bill.</strong> The alternative process means you sign an affidavit and accept criminal liability. Jessica\'s family serves the country. The bill treats her like a suspect.'},
+      reject:{hl:'You rejected her registration.', level:'warning', text:'Jessica is U.S.-born. Her family serves in the military. She\'s moved because the Army told her to. <strong>Each move triggers re-registration.</strong> She needs a passport or certified TX birth cert mailed to MN during her husband\'s deployment. U.S. Vote Foundation warned this bill jeopardizes military families. You face nothing.'}
+    }
+  ];
+
+  var jIdx=0, choices=[], order=[];
+  function shuffle(arr){ for(var i=arr.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=arr[i];arr[i]=arr[j];arr[j]=t;} return arr; }
+
+  function init(){
+    order = shuffle([0,1,2,3,4]);
+    jIdx=0; choices=[];
+    var sum=document.getElementById('judge-summary');
+    if(sum) sum.innerHTML='';
+    renderJudge();
+  }
+
+  function renderJudge(){
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart'), sum=document.getElementById('judge-summary');
+    rE.style.display='none'; btn.style.display='none'; sum.style.display='none';
+
+    if(jIdx>=scenarios.length){ showJudgeSummary(); return; }
+
+    sE.style.display='block';
+    var s=scenarios[order[jIdx]];
+    var h='<div class="sim-progress">Scenario '+(jIdx+1)+' of '+scenarios.length+'</div>';
+    h+='<h3>'+s.title+'</h3>';
+    h+='<p style="line-height:1.65;margin-bottom:1rem;">'+s.desc+'</p>';
+    h+='<p style="font-weight:600;margin-bottom:0.65rem;">Do you register this voter?</p>';
+    h+='<button class="sim-btn judge-accept" onclick="window._jD(\'accept\')" style="border-left:4px solid #48bb78;">✓ Accept — Register this voter</button>';
+    h+='<button class="sim-btn judge-reject" onclick="window._jD(\'reject\')" style="border-left:4px solid #fc8181;">✗ Reject — Turn this voter away</button>';
+    sE.innerHTML=h;
+  }
+
+  window._jD=function(choice){
+    var s=scenarios[order[jIdx]];
+    var r=choice==='accept'?s.accept:s.reject;
+    choices.push({scenario:s.title, choice:choice, position:jIdx+1});
+
+    // TRACKING: send to Google Form via image pixel (most reliable cross-origin method)
+    var trackUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScwKwSsD8vXBXyrGIVdqRMsXV4ASgDxyh4ClDBZk8H4gmJqLQ/formResponse?'
+      + 'entry.1395796154=' + encodeURIComponent(s.title)
+      + '&entry.1186617312=' + encodeURIComponent(choice)
+      + '&entry.1341886465=' + encodeURIComponent(String(jIdx+1))
+      + '&submit=Submit';
+    var img = new Image();
+    img.src = trackUrl;
+
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart');
+    sE.style.display='none'; rE.style.display='block'; btn.style.display='block';
+    btn.textContent = jIdx < scenarios.length-1 ? '→ Next Scenario' : 'See Your Results';
+
+    var h='<h3>'+r.hl+'</h3><div class="sim-outcome '+r.level+'">'+r.text+'</div>';
+    if(choice==='accept'){
+      h+='<div class="sim-outcome danger" style="margin-top:0.5rem;"><strong>Under the SAVE Act, you face:</strong> Up to 5 years in federal prison. Criminal fines. A private lawsuit from any citizen. No safe harbor.</div>';
+    } else {
+      h+='<div class="sim-outcome safe" style="margin-top:0.5rem;background:var(--gray);border-left-color:var(--gray-mid);"><strong>Under the SAVE Act, you face:</strong> Nothing. There is no penalty for rejecting an eligible voter.</div>';
+    }
+    rE.innerHTML=h;
+    rE.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+
+  function showJudgeSummary(){
+    var sE=document.getElementById('judge-scenario'), rE=document.getElementById('judge-result'), btn=document.getElementById('judge-restart'), sum=document.getElementById('judge-summary');
+    sE.style.display='none'; rE.style.display='none';
+    btn.style.display='block'; btn.textContent='↺ Run All 5 Again (New Order)';
+    sum.style.display='block';
+
+    var rejects=choices.filter(function(c){return c.choice==='reject';}).length;
+    var accepts=choices.length-rejects;
+
+    // Check if reject rate increased over time
+    var firstHalf=choices.slice(0,Math.ceil(choices.length/2));
+    var secondHalf=choices.slice(Math.ceil(choices.length/2));
+    var firstRejectRate=firstHalf.filter(function(c){return c.choice==='reject';}).length/firstHalf.length;
+    var secondRejectRate=secondHalf.filter(function(c){return c.choice==='reject';}).length/secondHalf.length;
+    var shifted = secondRejectRate > firstRejectRate;
+
+    var h='<h3>Your Session Results</h3>';
+    h+='<p>Across 5 scenarios, you chose:</p>';
+    h+='<span class="stat-big">'+accepts+' Accept · '+rejects+' Reject</span>';
+
+    if(rejects>=4){
+      h+='<p style="margin-top:0.75rem;">You rejected most voters. Every one of them was a U.S. citizen. <strong>Under the SAVE Act, this is the rational choice</strong> — because accepting carries criminal risk and rejecting carries none.</p>';
+    } else if(rejects>=2){
+      h+='<p style="margin-top:0.75rem;">You accepted some and rejected others. Every voter was a U.S. citizen. For the ones you accepted, you would face potential prosecution. For the ones you rejected, nothing.</p>';
+    } else {
+      h+='<p style="margin-top:0.75rem;">You accepted most voters — the right call for the citizens in front of you. <strong>Under the SAVE Act, each acceptance exposed you to up to 5 years in prison and a private lawsuit.</strong> Each rejection carried zero consequences.</p>';
+    }
+
+    if(shifted){
+      h+='<p style="margin-top:0.75rem; color:var(--gold);"><strong>Your reject rate increased over the session.</strong> That\'s the incentive structure working in real time. The more scenarios you see, the more you learn: the only safe choice for you is to say no.</p>';
+    }
+
+    h+='<p style="margin-top:1rem; font-style:italic;">Every scenario involved a U.S. citizen. In every case, rejecting them carried no consequence for you. Accepting them risked your freedom. That\'s not a bug in the SAVE Act. It\'s the design.</p>';
+    h+='<p style="margin-top:1rem;font-size:0.75rem;opacity:0.6;">Your responses were recorded anonymously to document how people navigate these rules. No identifying information was collected.</p>';
+
+    sum.innerHTML=h;
+    sum.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  window.nextJudge=function(){
+    jIdx++;
+    if(jIdx>=scenarios.length && !document.getElementById('judge-summary').innerHTML){
+      // Show summary after final scenario
+      showJudgeSummary();
+    } else if(jIdx>=scenarios.length){
+      // Already saw summary, reset for another run
+      init();
+    } else {
+      renderJudge();
+      document.getElementById('judge-sim').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  };
+
+  init();
+})();
+</script>
+</body>
+</html>
