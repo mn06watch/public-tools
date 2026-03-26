@@ -33,8 +33,8 @@
     --red-border: #feb2b2;
     --blue-bg: #f5f3fa;
     --blue-border: #c4b5f0;
-    --green: #276749;
-    --green-bg: #f0fff4;
+    --green: #4a6670;
+    --green-bg: #eef3f5;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
     --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
   }
@@ -163,7 +163,7 @@
   .faq-source { font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; color:var(--gray-text); margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--gray-mid); line-height:1.6; }
   .stat-callout { background:var(--gold-bg); border-left:4px solid var(--gold); padding:0.85rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; }
   .stat-callout strong { color:var(--gold); font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; }
-  .key-response { background:var(--green-bg); border-left:4px solid #48bb78; padding:0.75rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; font-weight:600; }
+  .key-response { background:var(--green-bg); border-left:4px solid #6a9aaa; padding:0.75rem 1.1rem; margin:0.75rem 0; border-radius:0 6px 6px 0; font-size:0.88rem; font-weight:600; }
 
   /* EXISTING LAW */
   .existing-law { background:var(--gold-bg); border:1px solid var(--gold-border); border-radius:8px; padding:1.25rem; margin:1.25rem 0; }
@@ -214,7 +214,7 @@
   .sim-result-card { background:var(--white); border:2px solid var(--gold-border); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
   .sim-result-card h3 { font-family:'Barlow',sans-serif; font-size:1.2rem; color:var(--navy); margin-bottom:1rem; }
   .sim-outcome { margin-bottom:0.75rem; padding:0.75rem 1rem; border-radius:6px; font-size:0.88rem; line-height:1.6; }
-  .sim-outcome.safe { background:var(--green-bg); border-left:4px solid #48bb78; }
+  .sim-outcome.safe { background:var(--green-bg); border-left:4px solid #6a9aaa; }
   .sim-outcome.warning { background:var(--gold-bg); border-left:4px solid var(--gold); }
   .sim-outcome.danger { background:var(--red-bg); border-left:4px solid #fc8181; }
   .sim-outcome strong { color:var(--navy); }
@@ -225,7 +225,7 @@
   .disclaimer strong { color:var(--body-text); font-style:normal; }
 
   /* JUDGE-SPECIFIC */
-  .judge-accept { border-left:4px solid #48bb78; }
+  .judge-accept { border-left:4px solid #6a9aaa; }
   .judge-reject { border-left:4px solid #fc8181; }
 
   /* SESSION TRACKER */
@@ -529,7 +529,7 @@
 
   <div class="narrative-box husted-detail" id="husted-mar26">
     <h3>Senate Floor — March 26, 2026</h3>
-    <div class="timeline-step"><div class="timeline-marker">1</div><p><strong>Husted offered Amendment #4732:</strong> Same five photo ID types as S. 4155. Framed as standalone — no citizenship docs, no DHS rolls. Required mail-in voters to include a photocopy of their ID with their ballot.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">1</div><p><strong>Husted offered Amendment #4732:</strong> Same five photo ID types as S. 4155. Same photocopied-ID requirement for mail-in voters — the specific provision that triggered Merkley's objection on March 19. No citizenship docs, no DHS rolls. Nothing changed from the version Democrats already blocked.</p></div>
     <div class="timeline-step"><div class="timeline-marker">2</div><p><strong>Schumer objected:</strong> Called it "a wolf in sheep's clothing." Same core argument as March 19 — the amendment would override every state's existing voter ID law and impose a photocopied-ID requirement that compromises ballot secrecy for mail voters.</p></div>
     <div class="timeline-step"><div class="timeline-marker">3</div><p><strong>Husted rebutted:</strong> ID information goes on the outside of the secrecy envelope, not inside with the ballot. Validated before separation. Ballot counted separately.</p></div>
     <div class="timeline-step"><div class="timeline-marker">4</div><p><strong>Padilla added:</strong> The amendment excludes student IDs, veteran IDs, and tribal IDs without expiration dates — forms accepted in many states today. Democrats cited the Freedom to Vote Act as their alternative, allowing broader ID types including utility bills and bank cards.</p></div>
@@ -538,7 +538,7 @@
   </div>
 
   <div class="husted-bottom-line">
-    <strong>The pattern:</strong> The objections that blocked unanimous consent on March 19 were the same objections that defeated the roll-call vote on March 26. Narrowing the bill didn't change the outcome — because the Democratic objections were never about the SAVE Act's other provisions. They were about what this specific voter ID mechanism does: override existing state laws with a stricter federal standard and impose a photocopied-ID requirement on 48 million mail voters.
+    <strong>The pattern:</strong> On March 19, Democrats objected to the photocopied-ID requirement for mail voters and the exclusion of commonly accepted ID types. On March 26, Husted brought back the same bill with those provisions unchanged. The result was the same. A bill designed to pass would have addressed the stated objections. A bill designed to force a vote on the record doesn't need to.
   </div>
 
   <script>
@@ -864,7 +864,7 @@
     else { out.push({l:'safe',t:'U.S.-born = lower DHS flagging risk. Errors still occur (Virginia: 94% of purged voters were citizens).'}); }
 
     var lbl,clr;
-    if(risk<=2){lbl='Low additional burden';clr='#48bb78';}
+    if(risk<=2){lbl='Low additional burden';clr='#6a9aaa';}
     else if(risk<=5){lbl='Moderate burden — new requirements apply to you';clr='#d69e2e';}
     else if(risk<=8){lbl='High burden — multiple barriers affect your ability to vote';clr='#fc8181';}
     else{lbl='Severe burden — you could be prevented from voting';clr='#e53e3e';}
@@ -925,7 +925,7 @@
     h+='<h3>'+s.title+'</h3>';
     h+='<p style="line-height:1.65;margin-bottom:1rem;">'+s.desc+'</p>';
     h+='<p style="font-weight:600;margin-bottom:0.65rem;">Do you register this voter?</p>';
-    h+='<button class="sim-btn judge-accept" onclick="window._jD(\'accept\')" style="border-left:4px solid #48bb78;">✓ Accept — Register this voter</button>';
+    h+='<button class="sim-btn judge-accept" onclick="window._jD(\'accept\')" style="border-left:4px solid #6a9aaa;">✓ Accept — Register this voter</button>';
     h+='<button class="sim-btn judge-reject" onclick="window._jD(\'reject\')" style="border-left:4px solid #fc8181;">✗ Reject — Turn this voter away</button>';
     sE.innerHTML=h;
   }
