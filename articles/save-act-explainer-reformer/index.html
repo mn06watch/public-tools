@@ -196,6 +196,10 @@
   .husted-detail.active { display:block; }
   .husted-bottom-line { font-size:0.92rem; line-height:1.65; margin-top:1.25rem; padding:1rem 1.25rem; background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; }
   .husted-bottom-line strong { color:var(--navy); }
+  .husted-addendum { margin-top:1.25rem; padding:1.1rem 1.25rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; box-shadow:var(--shadow-sm); }
+  .husted-addendum-label { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+  .husted-addendum p { font-size:0.88rem; line-height:1.65; margin-bottom:0.6rem; }
+  .husted-addendum p:last-child { margin-bottom:0; }
   @media (max-width:600px) {
     .husted-toggle { gap:0.5rem; }
     .husted-tab { padding:1rem 0.75rem; }
@@ -555,6 +559,13 @@
   }
   </script>
 
+  <div class="husted-addendum">
+    <div class="husted-addendum-label">Addendum · March 26, 2026</div>
+    <p>Hours after the vote, Husted appeared on CNN, where anchor Brianna Keilar pressed him on his own record. As Ohio Secretary of State, Husted ran elections under a voter ID law significantly less restrictive than what the SAVE Act proposes — and his office produced one conviction for voter fraud. When Keilar pointed this out, Husted grew visibly frustrated.</p>
+    <p>The bill's author administered elections under a looser standard and found essentially no fraud. The SAVE Act would impose a stricter standard nationally — to solve a problem his own tenure documented at a rate of one.</p>
+    <p style="font-size:0.82rem; color:var(--gray-text); margin-top:0.5rem;">Sources: CNN interview, March 26, 2026 · Raw Story · AlterNet</p>
+  </div>
+
   <!-- ===================== SECTION 5: ELECTION JUDGE ===================== -->
   <h2 class="section-header" id="judge">Now Put Yourself Behind the Desk</h2>
   <p>You're an election judge. A voter walks up. Under the SAVE Act, <strong>you</strong> make the call. Here's what's at stake for <em>you</em>.</p>
@@ -601,12 +612,12 @@
 
     <div class="faq-item" id="faq-38-states">
       <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
-        <div class="faq-q-text">38 states already require voter ID. How is this any different?</div>
+        <div class="faq-q-text">36 states already require voter ID. How is this any different?</div>
         <div class="faq-toggle">+</div>
       </div>
       <div class="faq-a"><div class="faq-a-inner">
-        <p>It's different because <strong>voter ID and documentary proof of citizenship are different requirements.</strong> The 38 states that require voter ID accept driver's licenses — the most common form of government-issued ID in America. The SAVE Act does not accept driver's licenses for registration because a driver's license does not prove citizenship. Non-citizens on visas and green cards have always been eligible for state driver's licenses.</p>
-        <p>Senator Cornyn's argument that "38 states require voter ID" without distinguishing what those laws actually require conflates a requirement Americans already meet (showing a DL at the polls) with one most Americans have never faced (producing a passport or birth certificate to register). These are not the same policy. They are not even close.</p>
+        <p>It's different because <strong>voter ID and documentary proof of citizenship are different requirements.</strong> The 36 states that require voter ID accept driver's licenses — the most common form of government-issued ID in America. The SAVE Act does not accept driver's licenses for registration because a driver's license does not prove citizenship. Non-citizens on visas and green cards have always been eligible for state driver's licenses.</p>
+        <p>The argument that "36 states require voter ID" without distinguishing what those laws actually require conflates a requirement Americans already meet (showing a DL at the polls) with one most Americans have never faced (producing a passport or birth certificate to register). These are not the same policy. They are not even close.</p>
         <p>Of the 36 states with voter ID laws, <strong>only Ohio has a standard as restrictive as the SAVE Act.</strong> The bill would override the existing, less restrictive voter ID frameworks that 35 states chose for themselves — imposing a federal mandate stricter than almost every state's own law.</p>
         <p>The same political coalition that opposes federal election standards when proposed by Democrats is imposing them here. The Freedom to Vote Act proposed national voter ID with broader accepted documents. Not a single Republican voted for it.</p>
         <div class="faq-source">Sources: NCSL Voter ID Laws by State · LWV comparison analysis · SAVE Act §2(a) (accepted documents list) · Sen. Cornyn Senate floor remarks, March 19, 2026 · Congressional Record (Freedom to Vote Act vote)</div>
@@ -649,6 +660,23 @@
         <p>California's Deputy Secretary of State called the claim "false and inaccurate." County-level investigations found no overlap: in Nevada County, 97 potential jurors were excused for non-citizenship — and a search of their names on the voter registration list found zero matches. In Sierra County, 3 were dismissed for non-citizenship; none were registered voters.</p>
         <p>The claim has been debunked by PolitiFact, Snopes, and Lead Stories. It has circulated in various forms since at least 2019. No evidence has ever been produced that those 449K were registered voters.</p>
         <div class="faq-source">Sources: California Deputy Secretary of State Paula Valle (Lead Stories) · PolitiFact, November 2019 · Snopes · CA Code of Civil Procedure §197 (jury source lists include DMV) · Nevada County and Sierra County court officials (PolitiFact)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-juxtaposition">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Posts listing mail-in ballot counts or registration totals by state — what are they actually showing?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>A recurring pattern on social media: list a large number — mail-in ballots cast, registered voters, ballot requests — next to a senator's name or a party label, and let the reader assume the volume itself is evidence of fraud. No claim is made. No anomaly is identified. The numbers are just presented.</p>
+        <p>This is <strong>proof by juxtaposition</strong> — a rhetorical device where statistics are placed side by side so the reader's brain fills in a connection the poster never had to defend. It works because a big number <em>feels</em> alarming, and debunking it requires explaining systems the original post deliberately skipped.</p>
+        <p><strong>Mail-in ballots aren't unverified.</strong> Every state that conducts mail voting uses signature matching, unique barcodes tied to individual registrations, and ballot tracking systems. "No photo ID required" is not the same as "no verification." It means the state uses a different verification method — one that in most cases was enacted by bipartisan or Republican-majority legislatures.</p>
+        <p><strong>Voter rolls are designed to lag behind reality.</strong> The National Voter Registration Act restricts how aggressively states can remove names. People die, move, or become ineligible — their registrations persist until the state completes a maintenance cycle. Outdated registrations are not votes. They are administrative lag built into the system by federal law.</p>
+        <p><strong>Census citizenship estimates are estimates.</strong> The American Community Survey's margin of error can reach ±50,000 or more in smaller states. A "gap" of a few thousand between registered voters and estimated eligible citizens may not be a gap at all.</p>
+        <p><strong>The actual audits find almost nothing.</strong> Utah audited every one of its 2 million+ registrations specifically looking for noncitizen voting. Result: 1 noncitizen registration, 0 votes cast. Georgia audited 8.2 million: 20 noncitizens found, 9 had ever voted.</p>
+        <p><strong>The question to ask every time:</strong> Did the person posting this identify a specific anomaly, or did they list large numbers and let you assume the rest? A subtraction problem is not an audit. A big number next to a name is not evidence. If the volume of legal mail-in voting is the concern, the argument is against mail voting itself — not against the voters who used it.</p>
+        <div class="faq-source">Sources: NCSL Mail Voting Policies by State · NVRA §8 (list maintenance restrictions) · U.S. Census Bureau ACS methodology (margin of error) · Utah SOS citizenship audit, January 2026 · Georgia SOS citizenship audit, October 2024</div>
       </div></div>
     </div>
 
