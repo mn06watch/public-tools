@@ -154,9 +154,6 @@
   .faq-item.open .faq-toggle { transform:rotate(45deg); }
   .faq-a { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
   .faq-item.open .faq-a { max-height:3000px; }
-  /* Changelog collapsible */
-  #changelog.cl-open #cl-toggle { transform:rotate(45deg); }
-  #changelog.cl-open #cl-body { max-height:5000px; }
   .faq-a-inner { padding:1.25rem; border-top:2px solid var(--gold-border); }
   .faq-a-inner p { font-size:0.88rem; line-height:1.65; margin-bottom:0.85rem; color:var(--body-text); }
   .faq-a-inner p:last-child { margin-bottom:0; }
@@ -250,10 +247,6 @@
 </header>
 
 <main class="content">
-
-  <div style="background:#fffff0; border:2px solid var(--gold); border-radius:8px; padding:1rem 1.25rem; margin-bottom:1rem;">
-    <p style="margin:0; font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);">Updated March 26, 2026 — <a href="#changelog" style="color:var(--gold);">see changelog</a></p>
-  </div>
 
   <div style="background:var(--white); border:1px solid var(--gray-mid); border-left:3px solid var(--navy); border-radius:0 6px 6px 0; padding:0.85rem 1.1rem; margin-bottom:1.75rem;">
     <p style="margin:0; font-size:0.82rem; line-height:1.6; color:var(--body-text);"><strong>Note on terminology:</strong> This explainer covers the <strong>SAVE America Act</strong> (H.R. 7296, passed House February 11, 2026), currently before the Senate. It supersedes the original SAVE Act (H.R. 22, passed House April 2025). The two bills share the same core citizenship documentation requirement; the SAVE America Act adds unredacted voter roll sharing with DHS and photo ID requirements at the polls. References to "the SAVE Act" throughout this explainer refer to the SAVE America Act now before the Senate.</p>
@@ -620,50 +613,10 @@
 
 </main>
 
-  <!-- CHANGELOG -->
-  <div id="changelog" style="margin:2rem 0 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; overflow:hidden;">
-    <div onclick="this.parentElement.classList.toggle('cl-open')" style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.5rem; cursor:pointer; user-select:none;">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray-text); margin:0;">Changelog</p>
-      <span style="font-size:1.1rem; color:var(--gold); font-weight:300; transition:transform 0.2s;" id="cl-toggle">+</span>
-    </div>
-    <div id="cl-body" style="max-height:0; overflow:hidden; transition:max-height 0.5s ease;">
-    <div style="padding:0 1.5rem 1.25rem;">
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 26, 2026 — Corrections &amp; precision updates</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Corrected Georgia non-citizen voting statistic. Previous language stated "8.2M registered → 9 non-citizen ballots," which conflated registered voters with ballots cast. Corrected to: 20 non-citizen registrations were found out of 8.2M registered voters; of those 20, 9 had ever cast a ballot in previous elections. Source: Georgia Secretary of State citizenship audit, October 2024.</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added context to Utah audit statistic. The formal audit found 1 non-citizen registration out of 2M+ records (0 votes). A separate prior review found 4 additional non-citizens linked to a registration system error, at least one of whom had voted. All were removed. Source: Utah SOS / Utah House testimony, January 2026.</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Corrected Travis County statistic and citation. Previous language stated 25% of flagged voters "had already provided proof of citizenship," sourced to "Travis County Elections." The 25% figure refers to flagged voters who had registered through DPS, a process requiring proof of citizenship — but the state never cross-checked DPS records before flagging them. Corrected language and sourced to the federal court filing by Travis County's voter registration director (October 2025) and ProPublica/Texas Tribune reporting.</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added legal disclaimer noting the author is not an attorney and legal characterizations reflect cited analysts' consensus.</p>
-    </div>
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 26, 2026 — Terminology clarification</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added clarifying note that this explainer covers the SAVE America Act (H.R. 7296, passed House February 11, 2026), which supersedes the original SAVE Act (H.R. 22). The SAVE America Act adds unredacted voter roll sharing with DHS and photo ID requirements at the polls to the original bill's citizenship documentation requirement. References to "the SAVE Act" throughout the explainer refer to the SAVE America Act now before the Senate. The page title and URL are unchanged to preserve existing links and search indexing.</p>
-    </div>
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 26, 2026 — Correction</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Corrected description of HAVA §303 verification. Previous language stated all 50 states "verify registration" against DMV/SSA databases — accurate but imprecise. HAVA §303 verifies <em>identity</em> (SSN/DL match confirms the person exists and documents match), not citizenship specifically. Citizenship is attested under penalty of perjury; states using the SAVE database cross-check that attestation separately. The distinction matters: HAVA closes the identity gap, not the citizenship gap. The SAVE Act addresses the citizenship gap — the question is whether its method is proportionate to the documented scale of the problem.</p>
-    </div>
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 26, 2026</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added four new FAQ entries based on recurring objections documented in live engagement: (1) "If you're already registered, you don't have to do anything" — corrected with re-registration trigger, Virginia purge receipt, and no-notification requirement; (2) Minnesota election judge guilty plea — clarifies this was official misconduct bypassing registration paperwork, not a citizenship verification failure; SAVE Act would not have prevented it; (3) 80–90% polling conflation — distinguishes photo ID support from SAVE Act by-name support (28%, CBS/YouGov March 16–19); (4) California jury duty / 449K claim — named as ecological fallacy, receipted with CA Deputy SOS statement and county-level zero-match data. Anchor links: #faq-existing-registrants, #faq-election-judge, #faq-polling-conflation, #faq-california-jury.</p>
-    </div>
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 24, 2026</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added FAQ section with three new entries addressing common objections: (1) strict liability vs. negligence standard — why the SAVE Act's structure punishes honest errors the same as intentional fraud; (2) the attestation escape hatch — why the incentive structure (up to 5yr prison for accepting, zero penalty for rejecting) guarantees officials default to rejection, grounded in Kahneman &amp; Tversky loss aversion research and Kansas/Virginia/New Hampshire precedent; (3) private right of action — why the no-merit-threshold civil lawsuit mechanism creates an organized intimidation infrastructure deployable by any individual or well-funded outside group, with no requirement that the plaintiff believes anything improper occurred. FAQ entries include direct anchor links: #faq-strict-liability, #faq-escape-hatch, #faq-private-action.</p>
-    </div>
-    <div style="margin-bottom:0.75rem; padding-bottom:0.75rem; border-bottom:1px solid var(--gray-mid);">
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 22, 2026</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added clarification on marriage certificate ambiguity in the documentary proof card: the bill's statutory text does not list marriage certificates as acceptable documentation. States are directed to establish a process for name mismatches but given no guidance on which documents qualify, leaving election officials to make high-stakes judgment calls under threat of prosecution.</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added rebuttal to "nothing to hide" fallacy in the DHS voter rolls card. States have provided publicly available voter rolls — what's being demanded is unredacted SSNs and driver's license numbers. Privacy is a right, not a privilege earned by innocence. Three federal courts have rejected DOJ's legal authority to demand it.</p>
-      <p style="font-size:0.88rem; margin:0 0 0.5rem; line-height:1.6;">Added note on Dhillon's "tens of thousands" claim: this comes from media interviews, not court filings. DOJ has one confirmed prosecution. Three federal courts have dismissed DOJ's cases. A court reviewing DOJ filings found "factual, legal, and typographical errors."</p>
-      <p style="font-size:0.88rem; margin:0; line-height:1.6;">Added note to mail voting card: mail voting predates COVID by over 150 years. Oregon has conducted all-mail elections since 2000; absentee voting for military dates to the Civil War.</p>
-    </div>
-    <div>
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gold); margin-bottom:0.25rem;">March 21, 2026</p>
-      <p style="font-size:0.88rem; margin:0; line-height:1.6;">Updated polling section with CBS News/YouGov data (March 16–19, n=2,500, MOE ±2.2): 28% favor the SAVE Act by name, 31% oppose, 41% not sure. Same poll found 80% support photo ID to vote and 66% support proof of citizenship to register. First direct polling on the bill by name.</p>
-    </div>
-    </div>
-    </div>
+  <!-- UPDATED + CHANGELOG -->
+  <div id="changelog" style="margin:2rem 0 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1rem 1.5rem; text-align:center;">
+    <p style="font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin:0 0 0.5rem;">Updated March 26, 2026</p>
+    <a href="https://mn06watch.com/articles/save-act-explainer/changelog/" style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); text-decoration:none; font-weight:500;">Changelog — Corrections, additions &amp; updates →</a>
   </div>
 
 <footer class="footer">
