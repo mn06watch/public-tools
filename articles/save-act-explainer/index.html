@@ -146,6 +146,8 @@
   .faq-section { margin:2.5rem 0; }
   .faq-section h2 { font-family:'Playfair Display',Georgia,serif; font-size:1.6rem; color:var(--navy); margin-bottom:0.5rem; }
   .faq-section .faq-intro { font-size:0.9rem; color:var(--gray-text); margin-bottom:1.5rem; }
+  .faq-category { font-family:'JetBrains Mono',monospace; font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin:1.75rem 0 0.75rem; padding-bottom:0.4rem; border-bottom:1px solid var(--gray-mid); }
+  .faq-category:first-of-type { margin-top:0; }
   .faq-item { border:1px solid var(--gray-mid); border-radius:8px; margin-bottom:0.75rem; overflow:hidden; }
   .faq-q { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.25rem; cursor:pointer; background:var(--white); gap:1rem; }
   .faq-q:hover { background:var(--light); }
@@ -501,6 +503,8 @@
     <h2>Frequently Asked Questions</h2>
     <p class="faq-intro">Common objections and the documented responses. Click any question to expand.</p>
 
+    <div class="faq-category">Legal Structure</div>
+
     <div class="faq-item" id="faq-strict-liability">
       <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <div class="faq-q-text">Shouldn't election officials be held accountable if they knowingly register ineligible voters?</div>
@@ -548,6 +552,24 @@
         <div class="faq-source">Sources: Glassdoor / SalaryExpert (election clerk and county clerk median salaries, 2024–2025) · SAVE Act §2(j) · OpenSecrets (PAC spending data)</div>
       </div></div>
     </div>
+
+    <div class="faq-item" id="faq-crawford">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">The Supreme Court already upheld voter ID in Crawford v. Marion County. Isn't this settled law?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Crawford upheld Indiana's voter ID law. It did not uphold documentary proof of citizenship, and the reasoning in Crawford actually undermines the case for the SAVE Act.</p>
+        <p>Justice Stevens's lead opinion turned on a specific finding: because <strong>Indiana provided free photo IDs</strong>, the burden on voters was "limited." The opinion states explicitly that the burden was acceptable because "Indiana's cards are free" and the "inconvenience of going to the Bureau of Motor Vehicles, gathering required documents, and posing for a photograph does not qualify as a substantial burden on most voters' right to vote."</p>
+        <p>The SAVE Act requires documents that are not free. A passport costs <strong>$130–$160.</strong> Replacement birth certificates cost <strong>$10–$60</strong> depending on the state and take <strong>weeks to months</strong> to process. The bill provides <strong>zero funding</strong> for document acquisition. That's not the Crawford fact pattern — it's closer to the one Crawford distinguished itself from.</p>
+        <p>Harper v. Virginia Board of Elections (1966) struck down a <strong>$1.50 poll tax</strong> — the Court held that "to introduce wealth or payment of any fee as a measure of a voter's qualifications is to introduce invidious discrimination." The SAVE Act imposes costs 80 to 100 times that amount with no fee waiver and no funding mechanism.</p>
+        <p>Crawford also noted that the "severity of the somewhat heavier burden" on voters without ID was "mitigated" by Indiana's provisional ballot process. The SAVE Act's provisional ballot mechanism requires the voter to produce the same documentary proof after the fact — there is no alternative path to having the ballot counted without the documents the voter didn't have in the first place.</p>
+        <p>The gap between Crawford (free ID, provisional ballot safety valve) and the SAVE Act ($130+ documents, no funding, no meaningful provisional alternative) is precisely the constitutional exposure that Crawford's own reasoning creates.</p>
+        <div class="faq-source">Sources: Crawford v. Marion County Election Board, 553 U.S. 181 (2008) · Harper v. Virginia Board of Elections, 383 U.S. 663 (1966) · SAVE Act bill text (no funding provision) · U.S. State Department (passport fees)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-category">Common Claims vs. Record</div>
 
     <div class="faq-item" id="faq-existing-registrants">
       <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
@@ -598,6 +620,64 @@
         <p>California's Deputy Secretary of State called the claim "false and inaccurate." County-level investigations found no overlap: in Nevada County, 97 potential jurors were excused for non-citizenship — and a search of their names on the voter registration list found zero matches. In Sierra County, 3 were dismissed for non-citizenship; none were registered voters.</p>
         <p>The claim has been debunked by PolitiFact, Snopes, and Lead Stories. It has circulated in various forms since at least 2019. No evidence has ever been produced that those 449K were registered voters.</p>
         <div class="faq-source">Sources: California Deputy Secretary of State Paula Valle (Lead Stories) · PolitiFact, November 2019 · Snopes · CA Code of Civil Procedure §197 (jury source lists include DMV) · Nevada County and Sierra County court officials (PolitiFact)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-38-states">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">38 states already require voter ID. How is this any different?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>It's different because <strong>voter ID and documentary proof of citizenship are different requirements.</strong> The 38 states that require voter ID accept driver's licenses — the most common form of government-issued ID in America. The SAVE Act does not accept driver's licenses for registration because a driver's license does not prove citizenship. Non-citizens on visas and green cards have always been eligible for state driver's licenses.</p>
+        <p>Senator Cornyn's argument that "38 states require voter ID" without distinguishing what those laws actually require conflates a requirement Americans already meet (showing a DL at the polls) with one most Americans have never faced (producing a passport or birth certificate to register). These are not the same policy. They are not even close.</p>
+        <p>Of the 36 states with voter ID laws, <strong>only Ohio has a standard as restrictive as the SAVE Act.</strong> The bill would override the existing, less restrictive voter ID frameworks that 35 states chose for themselves — imposing a federal mandate stricter than almost every state's own law.</p>
+        <p>The same political coalition that opposes federal election standards when proposed by Democrats is imposing them here. The Freedom to Vote Act proposed national voter ID with broader accepted documents. Not a single Republican voted for it.</p>
+        <div class="faq-source">Sources: NCSL Voter ID Laws by State · LWV comparison analysis · SAVE Act §2(a) (accepted documents list) · Sen. Cornyn Senate floor remarks, March 19, 2026 · Congressional Record (Freedom to Vote Act vote)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-real-id">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Can't you just use your REAL ID? Doesn't everyone have one by now?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The SAVE Act accepts a REAL ID only if it <strong>"indicates the applicant is a citizen of the United States."</strong> Standard REAL IDs do not do this. They verify lawful presence — which includes green card holders, visa holders, and other non-citizens. A REAL ID star means the card meets federal security standards. It does not mean the holder is a citizen.</p>
+        <p>Only <strong>5 states</strong> — Michigan, Minnesota, New York, Vermont, and Washington — issue Enhanced Driver's Licenses that explicitly indicate U.S. citizenship. These are distinct from standard REAL IDs: they carry a U.S. flag marking, cost more, and are designed for border crossing. The TSA confirms that EDLs provide "proof of identity and U.S. citizenship" — standard REAL IDs do not.</p>
+        <p>For voters in the other <strong>45 states</strong>, a REAL ID does not satisfy the SAVE Act. They still need a passport, birth certificate, or naturalization certificate. The "just use your REAL ID" argument sounds reasonable until you read the bill's actual text — which most voters, and apparently some legislators, have not.</p>
+        <div class="faq-source">Sources: SAVE Act §2(a) ("indicates the applicant is a citizen") · TSA REAL ID FAQ (EDL definition) · DHS (5 states issuing EDLs: MI, MN, NY, VT, WA) · Institute for Responsive Government ("no state where a REAL ID proves U.S. citizenship")</div>
+      </div></div>
+    </div>
+
+    <div class="faq-category">Implementation</div>
+
+    <div class="faq-item" id="faq-not-hard">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">If you can get a driver's license, you can get a birth certificate. This isn't that hard.</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Kansas tested this theory. <strong>31,089 eligible citizens couldn't clear it</strong> — 12% of everyone who tried to register for the first time. A federal court struck the law down. The 10th Circuit affirmed.</p>
+        <p>Replacement birth certificates cost $10–$60 depending on the state and processing method. Standard processing takes <strong>2 to 12 weeks.</strong> Passports cost $130–$160 and take 6–8 weeks. Many Americans born before modern record-keeping — particularly Black Americans born in the rural South, Native Americans born on reservations, and older citizens born at home — have birth certificates with errors, missing records, or no certificate at all. The University of Maryland found <strong>3.8 million adult citizens have no documentary proof of citizenship whatsoever.</strong></p>
+        <p>The bill provides <strong>zero funding</strong> for document acquisition, processing, or outreach. It mandates the requirement and delegates the cost entirely to individual voters.</p>
+        <p>Here is the comparison that clarifies the standard: to get a job in America, federal I-9 employment verification accepts a <strong>driver's license plus a Social Security card.</strong> The SAVE Act demands more to vote than the federal government requires to work. If a DL and Social Security card are sufficient to verify someone is authorized to work in the United States, the question is why they aren't sufficient to verify someone is authorized to vote.</p>
+        <p>New Hampshire implemented a similar requirement and <strong>244 people were turned away</strong> during low-turnout local elections alone — including a U.S.-born veteran who had previously voted in the state. The "it's not hard" premise has been tested. The results are documented.</p>
+        <div class="faq-source">Sources: Fish v. Kobach, 10th Circuit (31,089 blocked, 39 non-citizens over 19 years) · USAGov / state vital records offices (birth certificate fees and processing times) · U.S. State Department (passport fees) · U of Maryland / Brennan Center (3.8M with no DPOC) · INA 8 U.S.C. §1324a (I-9 accepted documents) · NH Campaign for Voting Rights / NH Bulletin (244 turned away, 2025)</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-federalize">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">This doesn't federalize elections. It just enforces what the Constitution already requires.</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>The SAVE Act overrides the voter ID laws of <strong>35 of 36 states</strong> by imposing a documentation standard stricter than what those states chose for themselves. It mandates that states share unredacted voter rolls with a federal agency — DHS — with no restrictions on use. It dictates an EAC guidance timeline of 10 days and a roll submission deadline of 30 days. It prescribes which documents states must accept and which they cannot. It subjects state and local election officials to federal criminal penalties for how they administer state voter registration.</p>
+        <p>Whether you call that "federalizing elections" is a semantic question. What it does, functionally, is impose federal control over state election administration procedures — the same thing the bill's sponsors say they oppose when proposed by the other party.</p>
+        <p>Utah Lt. Governor Deidre Henderson — a Republican and the state's chief elections officer — made this point directly: <strong>"If we want a federal law mandating voter ID or Documentary Proof of Citizenship, and it's really not about disenfranchising a bunch of voters, then states and voters need an onramp with time to prepare — get the documents, obtain the right ID, set up the system. That's not what's happening with the SAVE America Act."</strong></p>
+        <p>The Constitution gives states primary authority to administer elections. Congress has the power to override — Article I, Section 4. But it is worth noting who invokes that power and when. The Freedom to Vote Act proposed national voter ID standards with a broader accepted documents list. It received zero Republican votes. The SAVE Act proposes a stricter national standard with narrower accepted documents. It received near-unanimous Republican support. The principle is not "states should control elections." The principle is "federal standards are acceptable when they restrict access and unacceptable when they expand it."</p>
+        <div class="faq-source">Sources: SAVE Act bill text (DHS roll-sharing, EAC timeline, accepted documents) · NCSL (35 of 36 states with less restrictive voter ID) · Utah Lt. Gov. Deidre Henderson, social media post, March 25, 2026 (Deseret News) · U.S. Constitution Art. I §4 · Congressional Record (Freedom to Vote Act vote)</div>
       </div></div>
     </div>
 
