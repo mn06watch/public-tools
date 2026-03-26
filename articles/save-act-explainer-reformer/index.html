@@ -177,6 +177,31 @@
   .timeline-marker { width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; font-weight:500; flex-shrink:0; margin-top:2px; }
   .timeline-step p { font-size:0.88rem; margin:0; line-height:1.55; }
 
+  /* HUSTED SIDE-BY-SIDE TOGGLE */
+  .husted-toggle { display:flex; gap:1rem; margin:1.5rem 0; }
+  .husted-tab {
+    flex:1; background:var(--white); border:2px solid var(--gray-mid); border-radius:8px;
+    padding:1.25rem 1rem; cursor:pointer; text-align:center; transition:all 0.2s;
+    box-shadow:var(--shadow-sm);
+  }
+  .husted-tab:hover { border-color:var(--gold); }
+  .husted-tab.active { border-color:var(--navy); background:var(--navy); }
+  .husted-tab.active .husted-tab-date,
+  .husted-tab.active .husted-tab-label,
+  .husted-tab.active .husted-tab-result { color:#fff; }
+  .husted-tab-date { font-family:'Barlow',sans-serif; font-size:1.1rem; font-weight:800; color:var(--navy); margin-bottom:0.25rem; }
+  .husted-tab-label { font-family:'Barlow Condensed',sans-serif; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray-text); margin-bottom:0.35rem; }
+  .husted-tab-result { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; color:var(--gold); font-weight:500; }
+  .husted-detail { display:none; margin-top:0; }
+  .husted-detail.active { display:block; }
+  .husted-bottom-line { font-size:0.92rem; line-height:1.65; margin-top:1.25rem; padding:1rem 1.25rem; background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; }
+  .husted-bottom-line strong { color:var(--navy); }
+  @media (max-width:600px) {
+    .husted-toggle { gap:0.5rem; }
+    .husted-tab { padding:1rem 0.75rem; }
+    .husted-tab-date { font-size:0.95rem; }
+  }
+
   /* SIMULATOR SHARED */
   .sim-container { margin:1.5rem 0 2rem; }
   .sim-question-card { background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1.75rem; box-shadow:var(--shadow-sm); }
@@ -236,7 +261,7 @@
     <a href="#sim-you">How It Affects You</a>
     <a href="#provisions">Provisions</a>
     <a href="#exists">Current Law</a>
-    <a href="#husted">Husted UC</a>
+    <a href="#husted">Voter ID Votes</a>
     <a href="#judge">Election Judge</a>
     <a href="#faq">FAQ</a>
   </div>
@@ -476,18 +501,59 @@
   </div>
 
   <!-- ===================== SECTION 4: HUSTED ===================== -->
-  <h2 class="section-header" id="husted">The Clean Voter ID Bill That Both Sides Blocked</h2>
-  <p>On March 19, Sen. Husted (R-OH) proposed S. 4155 — standalone photo ID, no citizenship docs. Here's what the Congressional Record shows:</p>
+  <h2 class="section-header" id="husted">The Standalone Voter ID Test — Twice</h2>
+  <p>Republicans separated voter ID from the rest of the SAVE Act and brought it to the Senate floor twice. Both times, Democrats blocked it — for the same reasons.</p>
 
-  <div class="narrative-box">
-    <h3>Senate Floor, March 19, 2026</h3>
+  <div class="husted-toggle">
+    <div class="husted-tab active" onclick="showHusted('mar19')">
+      <div class="husted-tab-date">March 19</div>
+      <div class="husted-tab-label">Unanimous Consent</div>
+      <div class="husted-tab-result">Blocked by objection</div>
+    </div>
+    <div class="husted-tab" onclick="showHusted('mar26')">
+      <div class="husted-tab-date">March 26</div>
+      <div class="husted-tab-label">Roll-Call Vote</div>
+      <div class="husted-tab-result">Failed 52-47</div>
+    </div>
+  </div>
+
+  <div class="narrative-box husted-detail active" id="husted-mar19">
+    <h3>Senate Floor — March 19, 2026</h3>
     <div class="timeline-step"><div class="timeline-marker">1</div><p><strong>Husted proposed S. 4155:</strong> Photo ID only. Five forms: state DL, state ID, passport, military ID, tribal ID. No proof-of-citizenship. No DHS rolls. No criminal penalties.</p></div>
     <div class="timeline-step"><div class="timeline-marker">2</div><p><strong>Merkley raised concerns:</strong> 48M mail voters need ID copy (ballot secrecy). Student IDs excluded. Cited Utah audit.</p></div>
     <div class="timeline-step"><div class="timeline-marker">3</div><p><strong>Merkley offered modification:</strong> Add Freedom to Vote by Mail protections — targeted compromise.</p></div>
     <div class="timeline-step"><div class="timeline-marker">4</div><p><strong>Husted rejected</strong> — objected to unsolicited mail-in ballot provisions.</p></div>
     <div class="timeline-step"><div class="timeline-marker">5</div><p><strong>Merkley objected to original.</strong> Both sides blocked the other. Neither accepted the other's terms.</p></div>
+    <div class="faq-source">Source: Congressional Record, March 19, 2026</div>
   </div>
-  <p><strong>"Democrats killed a clean voter ID bill"</strong> omits that a Democrat tried to negotiate and the Republican refused. Both had lines. That's the full record.</p>
+
+  <div class="narrative-box husted-detail" id="husted-mar26">
+    <h3>Senate Floor — March 26, 2026</h3>
+    <div class="timeline-step"><div class="timeline-marker">1</div><p><strong>Husted offered Amendment #4732:</strong> Same five photo ID types as S. 4155. Framed as standalone — no citizenship docs, no DHS rolls. Required mail-in voters to include a photocopy of their ID with their ballot.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">2</div><p><strong>Schumer objected:</strong> Called it "a wolf in sheep's clothing." Same core argument as March 19 — the amendment would override every state's existing voter ID law and impose a photocopied-ID requirement that compromises ballot secrecy for mail voters.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">3</div><p><strong>Husted rebutted:</strong> ID information goes on the outside of the secrecy envelope, not inside with the ballot. Validated before separation. Ballot counted separately.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">4</div><p><strong>Padilla added:</strong> The amendment excludes student IDs, veteran IDs, and tribal IDs without expiration dates — forms accepted in many states today. Democrats cited the Freedom to Vote Act as their alternative, allowing broader ID types including utility bills and bank cards.</p></div>
+    <div class="timeline-step"><div class="timeline-marker">5</div><p><strong>Vote: 52-47.</strong> Needed 60. No Democrat voted for it. Fetterman, who frequently breaks with his party, voted with Democratic leadership.</p></div>
+    <div class="faq-source">Sources: CBS News · Washington Times · The Hill · Senate roll call vote, March 26, 2026</div>
+  </div>
+
+  <div class="husted-bottom-line">
+    <strong>The pattern:</strong> The objections that blocked unanimous consent on March 19 were the same objections that defeated the roll-call vote on March 26. Narrowing the bill didn't change the outcome — because the Democratic objections were never about the SAVE Act's other provisions. They were about what this specific voter ID mechanism does: override existing state laws with a stricter federal standard and impose a photocopied-ID requirement on 48 million mail voters.
+  </div>
+
+  <script>
+  function showHusted(which) {
+    document.querySelectorAll('.husted-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.husted-detail').forEach(d => d.classList.remove('active'));
+    if (which === 'mar19') {
+      document.querySelector('.husted-tab:first-child').classList.add('active');
+      document.getElementById('husted-mar19').classList.add('active');
+    } else {
+      document.querySelector('.husted-tab:last-child').classList.add('active');
+      document.getElementById('husted-mar26').classList.add('active');
+    }
+  }
+  </script>
 
   <!-- ===================== SECTION 5: ELECTION JUDGE ===================== -->
   <h2 class="section-header" id="judge">Now Put Yourself Behind the Desk</h2>
