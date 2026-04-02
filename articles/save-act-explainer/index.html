@@ -903,8 +903,7 @@
       }
     });
   },{threshold:0.3});
-  var p = document.querySelector('.polling-bars');
-  if(p) obs.observe(p);
+  document.querySelectorAll('.polling-bars').forEach(function(p){ obs.observe(p); });
 })();
 
 // ===================== VOTER SIMULATOR =====================
