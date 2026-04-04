@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Transcript: AG Ellison / MMBA Meeting — December 11, 2021 | MN-06 Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --gold-light: #f6e05e;
+    --white: #ffffff;
+    --light-gray: #f7fafc;
+    --mid-gray: #e2e8f0;
+    --text-dark: #1a202c;
+    --text-muted: #4a5568;
+    --accent-red: #c53030;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--light-gray);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0;
+    border-bottom: 4px solid var(--gold);
+  }
+
+  .masthead-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .masthead-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .masthead-logo span {
+    color: var(--gold);
+  }
+
+  .masthead-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  .masthead-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  /* ARTICLE HEADER */
+  .article-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 40px 24px 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .article-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .article-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .article-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    background: var(--gold);
+  }
+
+  .article-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .article-deck {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+    font-style: italic;
+    max-width: 680px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 16px;
+  }
+
+  .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+  /* CONTENT WRAPPER */
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* CONTEXT BOX */
+  .context-box {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 4px 4px 0;
+    padding: 24px 28px;
+    margin: 36px 0 32px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .context-box h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .context-box p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 8px;
+  }
+
+  .context-box p:last-child { margin-bottom: 0; }
+
+  .context-box strong { color: var(--text-dark); font-weight: 600; }
+
+  /* PARTICIPANTS */
+  .participants {
+    background: var(--white);
+    border: 1px solid var(--mid-gray);
+    border-radius: 4px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+
+  .participants h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--mid-gray);
+  }
+
+  .participant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 12px;
+  }
+
+  .participant {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .participant-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--navy);
+    background: var(--light-gray);
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-top: 1px;
+    letter-spacing: 0.05em;
+  }
+
+  .participant-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+
+  /* TRANSCRIPT */
+  .transcript-body {
+    background: var(--white);
+    border: 1px solid var(--mid-gray);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .section-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section-header .timestamp {
+    color: var(--gold);
+    font-size: 0.65rem;
+  }
+
+  .section-content {
+    padding: 4px 0;
+  }
+
+  .exchange {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    padding: 14px 28px;
+    gap: 16px;
+    border-bottom: 1px solid var(--light-gray);
+    transition: background 0.15s;
+  }
+
+  .exchange:hover {
+    background: #fafbfc;
+  }
+
+  .exchange:last-child {
+    border-bottom: none;
+  }
+
+  .exchange-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .exchange-timestamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+  }
+
+  .speaker-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .speaker-tag.ellison {
+    background: var(--navy);
+    color: var(--gold);
+  }
+
+  .speaker-tag.mahad {
+    background: #2d3748;
+    color: #90cdf4;
+  }
+
+  .speaker-tag.ikram {
+    background: #1a3a2a;
+    color: #68d391;
+  }
+
+  .speaker-tag.nasro {
+    background: #2d2a1a;
+    color: #f6e05e;
+  }
+
+  .speaker-tag.suleiman {
+    background: #2d1f3a;
+    color: #d6bcfa;
+  }
+
+  .speaker-tag.mumba {
+    background: #2a1a1a;
+    color: #fc8181;
+  }
+
+  .speaker-tag.multiple {
+    background: #1a2d2d;
+    color: #81e6d9;
+  }
+
+  .speaker-tag.note {
+    background: transparent;
+    color: var(--text-muted);
+    font-style: italic;
+    padding-left: 0;
+    font-size: 0.6rem;
+  }
+
+  .exchange-text {
+    font-size: 0.93rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    padding-top: 1px;
+  }
+
+  .exchange-text.stage-direction {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.87rem;
+  }
+
+  /* HIGHLIGHT — key quote */
+  .key-quote {
+    background: #fffbeb;
+    border-left: 3px solid var(--gold);
+    grid-column: 1 / -1;
+    padding: 12px 16px;
+    margin: 4px 0;
+    font-size: 0.93rem;
+    line-height: 1.7;
+    border-radius: 0 4px 4px 0;
+  }
+
+  .key-quote-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  /* FOOTNOTE */
+  .transcript-footer {
+    background: var(--light-gray);
+    border: 1px solid var(--mid-gray);
+    border-radius: 4px;
+    padding: 20px 28px;
+    margin-bottom: 40px;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .transcript-footer strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* FOOTER */
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 28px 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-top: 3px solid var(--gold);
+  }
+
+  .site-footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .exchange {
+      grid-template-columns: 80px 1fr;
+      gap: 10px;
+      padding: 12px 16px;
+    }
+    .masthead-inner { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .participant-grid { grid-template-columns: 1fr; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="masthead-logo">MN-06 <span>Watch</span></div>
+      <div class="masthead-tagline">Receipts, not rage — Rep. Tom Emmer (R-MN-06)</div>
+    </div>
+    <div class="masthead-badge">Primary Source</div>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="article-header-inner">
+    <div class="article-label">Full Transcript</div>
+    <h1 class="article-title">AG Keith Ellison / Minnesota Minority Business Association<br>Meeting Recording</h1>
+    <p class="article-deck">Complete verbatim transcript of the 54-minute, 44-second voice memo recorded December 11, 2021. Transcribed via OpenAI Whisper API. Published by MN-06 Watch as a primary source document.</p>
+    <div class="article-meta">
+      <span>📅 Recorded: December 11, 2021</span>
+      <span>⏱ Duration: 54:44</span>
+      <span>🎙 Source: iPhone voice memo</span>
+      <span>📝 Transcribed: Whisper API</span>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrapper">
+
+  <div class="context-box">
+    <h3>Editorial Note</h3>
+    <p>This recording has been at the center of congressional claims that AG Keith Ellison <strong>"obstructed" the Feeding Our Future fraud investigation</strong> in exchange for campaign contributions. MN-06 Watch transcribed the full 54:44 audio and published analysis on February 15, 2025.</p>
+    <p>The audio was originally published by the <strong>Center of the American Experiment</strong> in April 2025. Rep. Tom Emmer has cited this meeting — without linking to the full transcript — in multiple public statements, Senate hearing testimony, and social media posts.</p>
+    <p>Read the full analysis: <strong>Rhetoric vs. Reality #4</strong> — <em>Emmer Wants You to Hear 10 Seconds of a 54-Minute Recording</em></p>
+  </div>
+
+  <div class="participants">
+    <h3>Participants</h3>
+    <div class="participant-grid">
+      <div class="participant">
+        <span class="participant-name">AG ELLISON</span>
+        <span class="participant-desc">Keith Ellison, Minnesota Attorney General</span>
+      </div>
+      <div class="participant">
+        <span class="participant-name">MAHAD</span>
+        <span class="participant-desc">Mahad Omar, political organizer, MMBA representative — primary presenter</span>
+      </div>
+      <div class="participant">
+        <span class="participant-name">IKRAM</span>
+        <span class="participant-desc">Ikram Mohamed, business leader (child care/food service sectors)</span>
+      </div>
+      <div class="participant">
+        <span class="participant-name">NASRO</span>
+        <span class="participant-desc">Nasro Abshir, business leader (child care sector)</span>
+      </div>
+      <div class="participant">
+        <span class="participant-name">SULEIMAN</span>
+        <span class="participant-desc">Suleiman, restaurant owner (Safari Restaurant), food distribution</span>
+      </div>
+      <div class="participant">
+        <span class="participant-name">MUMBA</span>
+        <span class="participant-desc">Abshir Omar, Minnesota Minority Business Association (from Gambia)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="transcript-body">
+
+    <!-- SECTION 1 -->
+    <div class="section-header">
+      <span>Introductions</span>
+      <span class="timestamp">00:00 – 03:30</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[00:00]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">I'm from Somalia. I own restaurants and commercial properties. I'm a restaurant guy and I also own warehouses — we do distribution. We do most of the food service most of the time.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[00:21]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">We call him with all the issues with licensing and trying to get help. Warehouses, restaurants. Most of the restaurants, you know, a lot of restaurants they have themselves. Food services industry.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[00:34]</span><span class="speaker-tag nasro">NASRO</span></div>
+        <div class="exchange-text">If you need machines, like ovens and coffee and all that — you just need a supplier.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[00:42]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">We called Suleiman because in the beginning of COVID, they were the actual restaurant that stepped up to serve our elderly. It started with the elderly and then went down to children and families that weren't able to feed their children.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:04]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">Especially kids who don't go to schools.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:09]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">And he's a huge contributor to Mayor Frey. So we figured, okay, this is a good guy.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:09]</span><span class="speaker-tag note">NOTE</span></div>
+        <div class="exchange-text stage-direction">[Laughter]</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:22]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">I hope he remembers.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:24]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">He remembers, but we also gently remind him.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:28]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">So Nasro, Ikram, and Blackie — they are business leaders amongst business leaders. Organizing hundreds of other small businesses in their industries and sectors. And they're here today as representatives of their cohort.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[01:28]</span><span class="speaker-tag note">NOTE</span></div>
+        <div class="exchange-text stage-direction">[Introductions: Ikram Mohamed, Nasro Abshir, Mahad Omar, Mumba/Abshir Omar (MMBA)]</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[02:02]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">There's a difference between businesses wanting to come together and people who know how to organize. The first time, when we say Isaiah and Muslim Coalition, all this — people didn't know how to be a member as a business. And now today, you just send a link, they sign up. It's like a union. They understand the concept now.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-header">
+      <span>MMBA Overview and Grievances</span>
+      <span class="timestamp">03:01 – 07:10</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[03:01]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">He's very well-rounded, knows a lot of ins and outs of these compliances and how the system works. And he understands how politics works. This man was the actual campaign manager for Bernie Sanders. So let's not sugarcoat that. He knows how to work the angles.<br><br>So the Minnesota Minority Business Association is a collaborative of over 600 businesses from various industries. And the one thing they all have in common outside of their ethnic origins is the battles they've been facing with MDE, DHS, MDH, and various other state agencies that manage the care economy here in Minnesota. And the counties — Hennepin County especially.<br><br>Their commonality is that every time East African business owners enter a market segment, these various departments and counties come in in arbitrary fashions, create unnecessary roadblocks and hurdles, and at times conduct business in a very racist, xenophobic, Islamophobic manner.<br><br>And our community has spent millions of dollars hiring lawyers to sue, to protect our businesses, and these attacks keep coming. In the last few years, business owners from the child care sector came together, and they started organizing, and they started becoming more proactive in fighting for their businesses and their communities.<br><br>But what MMBA is doing is bringing together these various sectors of the care economy to work together in collaboration — to organize money, to organize people — in order to achieve our legislative aims. We're not asking for anything special. We're asking to be treated just like any other business in the state and to be respected in that sense.<br><br>But sadly, we have to organize and spend money to do that. That's the cost of doing business living here in America, and we understand that. But what we are seeing today is our business leaders are moving from our parents' generation to my generation, and we operate a lot differently. We don't have the same fear that our parents did. We understand how the laws work in this country, but more importantly, how power is actually achieved and how it is used for your aims.<br><br>We are interested in protecting our resources — our business owners, the properties that we own, the lines of businesses that we operate in. We're interested in protecting what we have currently and also in expanding our scope. And we are organizing in a very different way. So MMBA — we have a C4 now. And we are not going to be as quiet and amenable as our parents' generation. We are going to be loud and aggressive, and we are going to be organizing for our interests.<br><br>We don't care about the person's hue, their religion, their background, who they're friends with. We are interested in: are you aligned with our vision and our values? And we are willing to put our money where our mouths are — helping elected officials that are interested in protecting communities of color specifically and creating a business atmosphere that's fair and equal.<br><br>But I'm preaching to the choir. You serving in Congress — I still remember when I lived in Seattle, and the debate was happening about you being sworn in on the Quran. Your basic faith being intact. But alhamdulillah, it conspired with you.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[07:07]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">We conspired together.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[07:10]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">And your time in Congress — one of the most difficult periods politically for Muslims in this country. And you having to fight that battle alone. And then now in the attorney general's seat, and that difficult battle you had to take to get there. As you're well aware, this community has been behind you. And we continue to stand behind you. But we are dealing with some very difficult market forces acting against us. And it is costing us tens of millions of dollars a year in legal defenses, in businesses closing, in the psyche of our community being fractured. And it's wrong. It's absolutely wrong. It's illegal, it's immoral, and it is not what should be happening here.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-header">
+      <span>AG Ellison Responds</span>
+      <span class="timestamp">07:59 – 11:42</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[07:59]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Well, let me tell you this. I'm very concerned about it. I don't run the agencies. But often the agencies call on my lawyers to represent them. And so it's good that we're talking because we've been in a series of conversations with Jody Harpstead as late as a week ago on how you cannot crunch down on these businesses.<br><br>Because here's the thing — as big as you are collectively, most are pretty small. And you're running small, tiny businesses out of business over nothing. And a lot of times you think there's a problem — I mean, look, everybody has to comply with what the rules are. But if somebody submits something that's not in the right format, then you call them and say, this is not in the right format. Not: you're out. You're done. Your contracts are over.<br><br>So this has my attention. I'm extremely frustrated by it. But we are in the middle of a battle with the agencies now.<br><br>And I can tell you this: Walz agrees with me that this piddly, stupid stuff — running small people out of business — is terrible. But it's the classic problem. If he's here and this guy here is giving these businesses a hard time, these folks somehow say, 'Hey, they're picking on me.' And he's like, 'Oh, us? No, we're not.' And so it's this back and forth.<br><br>So now what we got to do is make it clear that this has got to stop. He knows that there's a lot of unfair, discriminatory stuff going on with East African businesses. I know it. These department heads like Jody Harpstead now know that we know it. And she says we're going to stop doing it. But I don't believe it until you tell me they've stopped doing it.<br><br>You can say you're not doing it. But if some sister who just opened her child care business is getting the runaround, then for her it's real. So we've got to stay specific.<br><br>There will be cases that — I want you to feel free to call me directly. And it is my goal to see prosperity among people who've been denied it.<br><br>I do recognize there's a problem, but what I really need to be effective on your behalf is to get specific. It's like: this sister, on this day, is having this problem. And then I can call up and be like, what is the problem? And let me tell you, just getting the inquiry from the AG is sometimes enough to make people knock it off. Because they're doing this undercover, in darkness.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-header">
+      <span>Child Care Disparities — Specific Examples</span>
+      <span class="timestamp">11:48 – 14:30</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[11:48]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">In regards to what you're talking about, it's a very serious dynamic. And Ikram and Nasro can speak to this specifically. There was an incident not too long ago. A child care center, a Somali-owned child care center, was severely treated for misplacing and miscategorizing paperwork — minor infractions, human error. And they were shut down.<br><br>And during the same time frame, a KinderCare center — taking care of a child with Down syndrome and a feeding tube — was allowed to wander outside the facility and into a local pond and was retrieved by a neighbor in that community. And all they received was a $1,000 slap on the wrist. The disparities between treatment are real, and it is costing livelihoods and destroying the community.<br><br>There is a fight in this state, as well as in this country, for communities that look like us — having to fight to protect and keep what we have. And the only way we can protect what we have is by inserting ourselves into the political arena, putting our votes where it needs to be, but most importantly, putting our dollars in the right place and supporting candidates that will fight to protect our interests.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[13:29]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">That's right.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[13:30]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">You can only protect our interests when we have your back and you don't have to worry about who's behind you. And we have to be frank and honest. You are dealing with market forces and political situations, and you have to operate in the best manner you can in this state — with your donors, with your power base. But if you are secure in your donor base, and if you are secure in your power base, you can act the way you want to act. Money is freedom.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[13:58]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Absolutely.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[13:59]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Our community, our business owners — we are not the same community as 25 years ago. The amount of money circulating in our community today is powerful. And we haven't really harnessed it in a very meaningful way to support people at the highest level and ensure that they are comfortable and safe, knowing that they can advocate for our communities without regard to your next fundraiser.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section-header">
+      <span>CACFP Program Explained</span>
+      <span class="timestamp">14:26 – 20:00</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[14:26]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">For example, right now, one of the biggest issues facing our community is the CACFP program.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[14:33]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Wait a minute. What is that?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[14:34]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Child and Adult Care Food Program. C-A-C-F-P.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[14:42]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Look at all these alphabets.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[14:48]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">It is a program from the USDA. It's available in all 50 states and territories, and it's managed by generally the Department of Education in each state. It's federal dollars funneled into the state to feed children and adults with developmental disabilities. This program has been around since the 1960s. It's the sister program of Free and Reduced Lunch. Free and Reduced ensures children have access to food while they're at school.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[15:27]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">It was actually started by an African-American?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[15:28]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Yes. The Black Panthers.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[15:35]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">So it's federally funded, locally—</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[15:43]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Administered by the state. By MDE. And the Department of Education has been managing this program for several decades. Due to the COVID pandemic, the federal government instituted changes to the management of the program which allowed for expanded access to communities in our state. And there has been tremendous growth. Our community members and business owners have stepped up to ensure that we're feeding thousands of children every single week, making sure they have access to healthy, high-quality, nutritious meals at home.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[16:19]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">Culturally appropriate.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[16:20]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">And culturally appropriate. Culturally specific for the Asian communities, for the Latina communities, for the Muslim communities, African-American community, Caucasian community, and indigenous communities. It is a massive program that has brought hundreds of millions of dollars to the state of Minnesota, created thousands of jobs, strengthened the capacities of hundreds of nonprofits.<br><br>But MDE saw a bunch of East African business owners taking part. And just like we've seen with MDH, DHS, and various other programs, they came down hard. And we have been fighting for our lives, and we have been kicking their butt. But we cannot be in this position where we are on defensive mode all day long. It's bad for business. You cannot grow. You can't create new jobs. It's discriminatory.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[17:12]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">What are they doing? Are they denying?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[17:14]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">They stopped the program carte blanche. They said there's too many people being fed.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="section-header">
+      <span>How the Money Flows</span>
+      <span class="timestamp">17:57 – 20:00</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[17:57]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Ikram, help me understand how the money flows. So the money flows from the federal government to the state, MDE, and then MDE picks vendors out?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[18:06]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">So the way it works is that the United States Department of Agriculture has the money, right? And then they give it to MDE to administer — to make sure the guidelines and protocols are followed. Then MDE has contracts and agreements with sponsors. Those sponsors have other contracts with sites.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[18:34]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Sites meaning—</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[18:35]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">Partners in quality care, or Feeding Our Future. They are nonprofits. They actually hold a contract with MDE. Then MDE says, you're a multi-site sponsor.<br><br>I'm a sponsor, by the way. So I go directly with MDE. Then MDE only reimburses me for the children that I bill because I'm a self-sponsor.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[19:15]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Got it. So then you say, I fed a bunch of kids, and then you get reimbursed for it.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[19:20]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">But a child care like Nasro, who has a contract with a sponsor like Quality Care or Feeding Our Future — she then sends her bill to them. They send it to MDE.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[19:38]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">So they're basically like the middlemen. So in a way, if MDE cuts you, you could spend a bunch of money feeding kids and they won't honor your bill.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[19:50]</span><span class="speaker-tag multiple">MULTIPLE</span></div>
+        <div class="exchange-text">They have done that.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[19:51]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">So you spend the money first, then you get paid back. It's a reimbursement. So you could get messed up.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:00]</span><span class="speaker-tag multiple">MULTIPLE</span></div>
+        <div class="exchange-text">It has. It has happened.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="section-header">
+      <span>MDE's Tactics and Court Contempt</span>
+      <span class="timestamp">20:02 – 32:00</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:13]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Based on what they have claimed so far is that the program grew too fast. COVID hit, everybody went into getting involved.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:28]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">They're saying, we're giving you your money, we just can't get it to you fast enough. Is that what they're saying?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:33]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">That's super unfortunate, but it might not be malicious.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:40]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Nope. It becomes malicious. So that's how it started. They narrated this story.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[20:50]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">So what happened is MDE had a lot of applications by two major sponsors. Those two sponsors share one common ground: they share the East African community. A lot of Somalis stepped up. Safari stepped up and Safari's all over. Congresswoman Ilhan Omar is volunteering over there.<br><br>So then those two sponsors, when they saw the community step up — because of COVID, because of the riots, to be honest with you. George Floyd — it became a huge ordeal when the restaurants, the mom-and-pop stores shut down. Cub Foods, Target, from Mississippi River by Lake all the way to Uptown. There's no way those people would be able to go get food. People were getting on buses. There was no transportation.<br><br>So then these two sponsors said, let's feed the people in the community and get reimbursed, because this is actual entitled funding. It's not state funding. It's USDA entitled funding. MDE only has to administer it.<br><br>There were lines at Safari looping around Lake Street and it was on Facebook. And a lot of community members said, I want to do it too. They stepped in — mosques, nonprofits, restaurants. MDE put a pause to it. They put a stop-pay.<br><br>Then they denied 142 applications on one sponsor and 208 on the other sponsor. They put over six million dollars on hold.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[23:13]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">This system has been part of faith coalitions. Many churches used to do this.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[23:18]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">They've been doing meals on wheels. Of course. I know the guy who runs Meals on Wheels — Dave Collins.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[23:44]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">There was a white lady who worked in this industry for those big nonprofits. She said this program has been feeding rural areas and mostly white people for years. Nobody complained. Ninety percent used to go to white kids. And now when North Minneapolis and brother Jameel Jackson and sister Nasro, they opened their own sites and understood how to feed the community — halal, not pork, culturally appropriate — now it's got the attention of MDE.<br><br>This should be something they celebrate with the community. But they went from 95% white and 5% minority, and now the minority is trying to serve. Our mosque was part of it. The City of Bloomington came forward and named me 2021 pioneer and changemaker of the community because of this. We've been serving with the Bloomington school district and the mosque, giving meals every Friday, every weekend.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[25:29]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Even with Safari being so huge, they're still being targeted. The Bloomington health department has been giving them constant Q&As.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[25:48]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">One of your staff members reached out to me and said they got a checklist they're supposed to go by. They had instructions from MDE to go to every site at that sponsor. The sponsor and MDE are having some dispute.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[26:24]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Good for her — she sued. I love it.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[26:26]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">But there's a backlash. MDE contracted with or sent a memo to all the city health departments — Brooklyn Park, Minneapolis, St. Paul, Bloomington — and told them to look at four or five different things. My question is, what does the Department of Health have to do with whether children are enrolled at a certain site? It makes no sense.<br><br>The five [non-Somali] departments in Bloomington were given food in our parking lot. They didn't get Q&As. They didn't get pushback. Same contract. But people are coming to us because we're providing culturally appropriate food.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[27:27]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">The way the program works is the USDA provides funding to each state's Department of Education to manage this program. The Department of Education contracts with sponsors. These sponsors go to nonprofits, churches, mosques, synagogues, school districts, community centers, and provide them a subcontract to actually provide the services.<br><br>These nonprofits buy food wholesale from vendors, distributors — they can go to Sysco Foods, Costco, or the local halal mart. They pay out of pocket to buy the food, they serve the children. After the service has been provided, they bill the sponsor, the sponsor bills the state, the state bills the federal government. Washington sends the money down.<br><br>This program has been a lifeline for hundreds of thousands of children in our state. One sponsor, for example, Feeding Our Future, feeds 150,000 kids.<br><br>And MDE has fought in very disgusting ways. Beyond any level of decency.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[28:48]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Do you have a name?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[28:49]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Monica Herrera, Director of Food and Nutrition Services.<br><br>MDE has acted so recklessly that a district court judge in Minnesota found them in contempt for arbitrary and capricious behavior and stated in his opinion he did not have any faith that they would follow the court order — which they did not. And Monica Herrera in her public statement said she disagreed with the judge and that she would do it all over again.<br><br>This is a form of violence against our community, under the color of law, and it shouldn't stand. And they had to pay restitution — MDE had to pay tax dollars.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[29:51]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">What does she say in her own defense? How does she justify her actions?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[30:00]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Her statement was she did not agree with the court's decision. The judge basically stated he had no faith that the Department of Education would follow the court directive, which they did not, and other injunctions were filed against them.<br><br>Basically we have a reckless department on the loose that's not following state law. And you are in the difficult position, under statutory law, to defend that department. Your office is spending a lot of money defending criminal-like behavior, and you are required to.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[30:38]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Well, here's the thing — this is the first I'm really hearing about it. I got 400 people at the AG's office. They get calls, we have a case, they represent us, they don't run them all past me. They just know they're supposed to do this.<br><br>But when you tell me, hey, this is a problem, I call somebody and say, what's going on? And if we don't want to do what the agency is saying, I call the agency head or the governor and say, we cannot do this. We do this fairly regularly. Usually it's environmental stuff, when we have to say we're not going to defend that. And there's other things where we tell them, you're going to get sued, you cannot violate the law this way.<br><br>So this is a very good conversation to have. Quite honestly, I wouldn't even know about it unless you told me, because I only hear about problems.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[31:31]</span><span class="speaker-tag note">NOTE</span></div>
+        <div class="exchange-text stage-direction">[Ellison texts his staff member Luz Frias during the meeting]</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[31:31]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">While we were talking, I sent a note to my staff named Luz Frias, who I think supervises the lawyers who represent MDE, and I asked her: what is going on here? 'Luz, can you tell me who represents MDE, what's going on with the Child and Adult Food Program? Hearing a lot of complaints.' So I should hear some pretty soon.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="section-header">
+      <span>Community Organizing and Pressure</span>
+      <span class="timestamp">32:02 – 38:50</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[32:02]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">I remember when MDE decided to stop payment — you have all these vendors who bought food, who have been distributing it for 30 days, and all of a sudden they're told, we don't know what's going to happen, the program is suspended indefinitely. We brought about 350 of them into one place. And we said, make no mistake, the only reason why they're doing this is: A, they think they can get away with it; B, MDE does not understand the power you all have.<br><br>After that meeting, they start receiving phone calls, people organizing, and within weeks they said, okay, we don't have a problem, we've released the payment.<br><br>But if the department has a problem with particular individuals, you don't come and shut down the entire program while people have been spending money.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[33:15]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">So what I'm getting is, people will spend money to feed people and then expect to be reimbursed—</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[33:23]</span><span class="speaker-tag multiple">MULTIPLE</span></div>
+        <div class="exchange-text">Yes. And they're not.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[33:26]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Not only are they not reimbursing, but they're trying to do everything in their power to use the system against these people so they can get crimes that they can use to label everybody.<br><br>The legal fight against MDE has been very successful. But they are continually changing tactics, and their new tactic is death by attrition. They're trying to snuff people out, going out of their way to work with local city departments, health departments, fire inspection teams, instituting new rules that have no basis in state or federal law — asking the fire department to investigate buildings, whether the code allows food distribution.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[34:24]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">That's kind of about what you're talking about — 'Minnesota allowed Feeding Our Future applications to languish during pandemic.'</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[34:30]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">That's just an example. It's not only one particular sponsor. This is the entire program.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[34:47]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">We had about a hundred-plus child care centers under two different sponsors. They said, 'I've already fed these kids and I cannot get reimbursement.' Some have 40 kids, some have a hundred. And they're asking me to pay for the food. When we asked MDE for an explanation — these people have fed the kids, what is your explanation? — they had no explanation. They just said shut down the entire program.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[35:32]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Do you all know Mukhtar Hussein? She's a nonprofit with Orama Feeds and Shamsiya Hopes. 'Mukhtar Hussein's meal program had been feeding 5,000 children a day in the Twin Cities. A state effort to discipline an intermediary nonprofit forced her to suspend operations.' This article is May 2021. What the heck, man? Who's minding this store?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[36:15]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Unfortunately, you're defending them by default.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[36:17]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Yeah. But you know what they do? We get cases in and they say, 'We're being sued.' And we say, 'What do we do?' Whenever the state gets sued, it's always the Attorney General as the defense lawyer. That's Minnesota Statute 8.06. That doesn't mean that if we're defending the wrong thing, that we just keep on doing it.<br><br>I'm telling you, this has not come to my attention until now really. I've heard this little problem, that little problem, but never this way.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="section-header">
+      <span>Broader Pattern — DHS, Medical Transport, Systemic Racism</span>
+      <span class="timestamp">37:17 – 43:05</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[37:17]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">What we want here today is to establish this relationship — it's not only one program.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[37:36]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">Have you ever heard of a program called medical transportation? There are families whose homes went into foreclosure because their programs and businesses have been shut down by just one letter. And everyone receives the same letter — the only thing they change is the address.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[38:05]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Are they saying that you didn't really give the rides? What is the claim?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[38:06]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">So previously, the state had been going after them for a long time. Those particular businesses, most of them went out of business. About two weeks ago, some of them came to our office — about 20-plus — and they can't even afford the rides they're giving. It's not sustainable. They can't raise the rates. They just put them on suspension. And if your business has been suspended for a long time and you're not getting billed, you just go out of business.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[38:48]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">The state has contracts, work that people do for the state — starting from the largest insurers, building on federal government insurance, owned by white people. Nobody questions. Your office knows there was a billion-dollar fraud in the insurance industry. And what did they do? They assigned a team of lawyers to give compliance trainings and show them how to do it properly. A billion-dollar billing.<br><br>But what's happened is — the state employees, the technocrat people — if they see a Black community, if they see progress of somebody billing the state, whether it's MDE, DHS, MDH, if somebody's billing the state over a certain amount of money, it's automatically fraud.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[40:04]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">They've said that to us at DHS. Reggie Wagner verbally said that to us. 'We follow the money.' And we said, how do you determine fraud? They said, 'We look at who's billing the most.' So if I'm a child care center located in North Minneapolis and I happen to have a hundred kids that are all low income, all C-CAP — oh yeah, that's a red flag.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[40:28]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">Jim Koppel, who was commissioner then, said: 'Listen, this department is so racist, even if you replace the director, the director gets washed out. The commissioner cannot do anything.' He said, 'We have to fire the entire staff — people who were working for 30, 35, 40 years in this department.'<br><br>Speaking of the same issue about autistic children — there are huge numbers of Somali kids who are autistic. One in 32. And we don't have service providers who understand the culture of these kids.<br><br>The DHS commissioner — the one who got replaced, Tony Lourey — we went to him. I said, Tony, look at this problem. He said, 'I see the problem. And with this new Office of Inspector General, they have hired 18 loose cannons.' He said he could see their biases, but asked, 'Do you want me to fire all of them?'</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[42:02]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">All the investigators. Ex-CIA, ex-cop, ex-sheriff. And what are they doing? A lady sent me a video — they came to her child care, taking pictures, going around, counting how many kids are going in. They took pictures of her staff like mugshots.<br><br>DHS is even worse. They're given a budget — $5 million every single year. They've hired ex-cops, ex-army. They're getting paid $40-plus an hour for their job and they can't find anything. One of them would follow a mom: she leaves the house, picks up her kid, he follows her. She dropped off the kids, she was late for five minutes. Entire report. You're getting paid $40 to follow a mom that's making $12. What are you investigating?</div>
+      </div>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="section-header">
+      <span>The Ask — Partnership and Commitment</span>
+      <span class="timestamp">43:05 – 50:03</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:05]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">So basically what we're talking about here, General Ellison, is we have systemic patterns of abuse, waste, and fraud — from the departments — claiming the same from minority business owners. And we've taken it far too long. But we are not willing to operate under that paradigm anymore. We are jumping into the fight with some serious money, serious organizing. And we need you in this fight with us. And I know you're going to get hit hard. But we are going to commit to backing you.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:39]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">How am I going to get hit hard?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:40]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Politically.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:41]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">From who? Where?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:44]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Opponents, establishment. They're hitting you hard all the time.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:47]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Yeah. So nothing's new. That's what we're saying. I'm not going to get a new hit.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:55]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">So what we're saying is — we want to invest in our leaders.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[43:58]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">You should have seen the letters they threatened to kill me last week. And Ilhan gets more. So—</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[44:06]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">We need to cultivate our leaders to fight for these communities. And not just that — to grow and develop and bring a new generation of leaders into office. And we are ready and willing to back those efforts all the way. But we need a true and steadfast partner to fight for basic justice. And that is your MO.</div>
+      </div>
+
+      <!-- KEY QUOTE — the disputed line -->
+      <div class="exchange" style="background: #fffbeb;">
+        <div class="exchange-left"><span class="exchange-timestamp">[44:25]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text" style="border-left: 3px solid var(--gold); padding-left: 14px; margin-left: -4px;">
+          <span style="display:block; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px;">⚠ Disputed / Misquoted — See Note Below</span>
+          Well, brother, let me just tell you this. <strong>Of course I'm here to help.</strong> But let me be clear — I'm not here because I think it's going to help my re-election. I don't care about no re-election. I voluntarily threw my congressional career away. I'm like, I don't want to do it anymore. It's boring to me.<br><br>So to do what I'm doing now — I didn't leave that job to do nothing in this job. Am I going to get more hits than I got by prosecuting a police officer and giving them life in prison? So let's just go fight these people.<br><br>The question is figuring out exactly how to put a stop to it. The how is the real question. We know we should do it. We kind of know who's doing it. Now we need to figure out exactly how we do it.
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="section-header">
+      <span>Jacob Frey / City Council Resolution Story</span>
+      <span class="timestamp">45:25 – 48:00</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[45:25]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">Like last time, when the community faced a lot of pushback from MDE — this is a department where almost every person is fighting anyone who is minority, through DHS. What happened was some of our leaders went to Jacob Frey and said, we cannot function, we cannot do any business.<br><br>So Jacob Frey put together a resolution from the city council, saying he's going to announce from the City of Minneapolis that MDE is a department that is discriminating. He put it together and sent it.<br><br>Guess what they did? They withdrew everything.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[46:22]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">I don't get it.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[46:23]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">They came to him. They said, 'Why do you want to publish this resolution?' After having a conversation, they said, 'We're afraid of USDA coming down. That's why we're acting the way we are.'</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[46:42]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">Everybody blamed somebody else. They passed the buck.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[46:46]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">So what they did — that time they shut down all the sites and stopped paying. They released us immediately. They reimbursed us. Because Frey literally went to the governor's office. He was fighting for his election and he needed this community. They worked together with Jacob.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[47:26]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">That's why I was like — no, we have better leaders who are morally-based leaders who are in this fight with us. All we need is to have a connection and build the bridge between us so our complaints can be heard. Somebody like you — you can talk to the governor.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[47:47]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">But I would bet the governor doesn't know much about it.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[47:50]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">Nobody knows except the people on the ground. The vendors, the providers, and the low-level bureaucrat. That's who knows what's going on.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="section-header">
+      <span>COVID Waivers and Racial Disparity</span>
+      <span class="timestamp">48:04 – 50:00</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[48:04]</span><span class="speaker-tag nasro">NASRO</span></div>
+        <div class="exchange-text">I just want to summarize everything that's happening. USDA is giving the money to MDE. Once the pandemic started, they started giving out waivers. That's why all of us were able to join the program — we weren't before. They made waivers to say, hey, we want to feed more kids, we know food insecurity is getting worse because of the pandemic.<br><br>Then when you have all these new people joining and saying, we're feeding all these children — now all of a sudden, that's a problem. Because of the type of children being fed. Before, when it was just white kids, it was no problem. Now all of a sudden, all these new people can join this program and we're saying, there's actually a need. There's a huge line. Today it's snowing, and there's still so many people coming to get food. People are hungry. People have lost their jobs. People have to decide: should I get groceries or pay my electric bill this month? It's really serious.<br><br>Instead of saying, wow, we have all these new people, let's hire more staff — if people are doing something wrong, let's do our actual jobs and find that while making sure the program runs smoothly, because these are children that need food — it's: 'We need to pause while we figure something out.' But as they're pausing, they're running people out of business.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[49:22]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">That's the intention. That's the point. You have a vendor. You put $200,000 into this. You sold this food. And all of a sudden, April 30th, you're done. And you still owe money to people. And people are still coming to your door saying, you just gave us food last week, we were counting on you.<br><br>There are vendors who provided services in the beginning of 2020 who have not received payment as of today.</div>
+      </div>
+    </div>
+
+    <!-- SECTION 13 -->
+    <div class="section-header">
+      <span>Ellison Commits to Action</span>
+      <span class="timestamp">50:00 – 54:44</span>
+    </div>
+    <div class="section-content">
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[50:03]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">Could you send me an email? Send it to my government email: keith.ellison@ag.state.mn.us. Send me the names of all these folks who are hung up and hanging on by a thread and probably ain't going to survive unless they get their money soon. I can take that list and start calling. I can call Jody Harpstead, the person over at education, and say, what is going on? Why am I getting these complaints? And I'll call them in my office and demand some explanations.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[50:53]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">I'm one of them. April 30th, I got shut down. They put me on hold.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[50:58]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">You mean throughout the whole summer and the fall?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[51:02]</span><span class="speaker-tag suleiman">SULEIMAN</span></div>
+        <div class="exchange-text">Yep. No money since then. I have like 10 pallets sitting up there at Safari. The lawsuit actually initiated from the restaurant, especially Safari. Safari was the largest. They had that big wedding hall. They would host families to come in, pick up their food. A lot of people went there because it was faster. They had walkie-talkies, they were getting hot meals, cooked meals.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[51:41]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">If you're going to Safari getting food, there's no shame in it. You're not getting a free check. People coming to the mosque — they feel shame. But this is a restaurant. He sacrificed his restaurant, which was having huge business, just to run this family-based, children-based food service.<br><br>And now they said restaurants can no longer participate because they're not nonprofits. Under federal law, a site has to have a 501(c)(3).</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[52:34]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">What's double dipping?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[52:35]</span><span class="speaker-tag ikram">IKRAM</span></div>
+        <div class="exchange-text">Running the program and having their restaurant as a regular business at the same time. Under federal law, a site has to be a 501(c)(3).</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[53:05]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">So what a lot of the sponsors did — one in particular that actually sued MDE — was they partnered up with vendors and restaurants. One of them being Safari. Now they actually have a contract with Shanghai, a Chinese vendor. That's not shut down.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[53:28]</span><span class="speaker-tag multiple">MULTIPLE</span></div>
+        <div class="exchange-text">Can't touch that.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[53:31]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">But Safari was denied again this fall. The only way Safari can operate is if it was actually a nonprofit. The property can never be a nonprofit — there's a landlord. But the person that leases can be the 501(c)(3). And those are the things MDE does. They deny us access.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[54:14]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">So this is very simple. I already got my team digging into this.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[54:22]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">When should we come together again to discuss this?</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[54:27]</span><span class="speaker-tag ellison">AG ELLISON</span></div>
+        <div class="exchange-text">I mean, I would say—</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[54:29]</span><span class="speaker-tag mahad">MAHAD</span></div>
+        <div class="exchange-text">We want more of this. It's not only based on one issue. I want to establish this relationship as a team.</div>
+      </div>
+      <div class="exchange">
+        <div class="exchange-left"><span class="exchange-timestamp">[54:44]</span><span class="speaker-tag note">NOTE</span></div>
+        <div class="exchange-text stage-direction">[Meeting concludes. Ellison mentions upcoming travel to Columbia. Date confirmed as December 11, 2021.]</div>
+      </div>
+    </div>
+
+  </div><!-- /transcript-body -->
+
+  <div class="transcript-footer">
+    <strong>Notes on the "Of Course I'm Here to Help" Quote</strong>
+    The phrase <em>"Of course I'm here to help"</em> appears at timestamp [44:25] in response to Mahad Omar's statement: <em>"We need a true and steadfast partner to fight for basic justice. And that is your MO."</em> The full context of Ellison's response — which runs through approximately 45:20 — makes clear he is responding to a plea for advocacy against state agency discrimination, not to a discussion of Feeding Our Future fraud specifically. The HouseGOP official account used this quote in quotation marks on March 4, 2026, in a post that Rep. Emmer reposted. The quote is present in the recording. The framing omits 54 minutes of context.
+    <br><br>
+    <strong>Transcription Method:</strong> Audio transcribed via OpenAI Whisper API. Speaker identification performed manually. Timestamps are approximate to the nearest second. Minor filler words (um, uh) occasionally omitted for readability where they do not affect meaning.
+    <br><br>
+    <strong>Primary Audio Source:</strong> Center of the American Experiment, published April 2025. Full analysis: <em>Rhetoric vs. Reality #4 — Emmer Wants You to Hear 10 Seconds of a 54-Minute Recording</em>, MN-06 Watch, February 15, 2025.
+  </div>
+
+</div><!-- /content-wrapper -->
+
+<footer class="site-footer">
+  <div>MN-06 Watch &nbsp;·&nbsp; <a href="https://mn06watch.substack.com">mn06watch.substack.com</a> &nbsp;·&nbsp; Receipts, not rage.</div>
+  <div style="margin-top:6px; opacity:0.6">Nonpartisan accountability coverage of Rep. Tom Emmer (R-MN-06), House Majority Whip</div>
+</footer>
+
+</body>
+</html>

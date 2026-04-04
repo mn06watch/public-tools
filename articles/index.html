@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles & Tools — MN-06 Watch</title>
+<meta name="description" content="Interactive tools, special reports, and primary source documents from MN-06 Watch. Accountability journalism for Minnesota's 6th Congressional District.">
+<meta property="og:title" content="Articles & Tools — MN-06 Watch">
+<meta property="og:description" content="Interactive tools, special reports, and primary source documents covering Rep. Tom Emmer and MN-06.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mn06watch.com/articles/">
+<meta name="twitter:card" content="summary">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A5C;
+    --gold: #C8922A;
+    --red: #C0392B;
+    --dark: #2C2C2C;
+    --med: #555555;
+    --light: #888888;
+    --line: #E0DCD7;
+    --bg: #FAF8F5;
+    --white: #FFFFFF;
+    --navy-bg: #F0F4F8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    background: var(--bg);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Nav */
+  .site-nav {
+    background: var(--navy);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* Hero */
+  .hero {
+    background: var(--navy);
+    padding: 48px 24px 56px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
+  .hero p {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255,255,255,0.6);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* Content */
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+  }
+
+  /* Section headers */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+  }
+
+  /* Article cards */
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.15s;
+  }
+  .article-card:first-of-type { padding-top: 0; }
+  .article-card:hover { background: var(--navy-bg); margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 6px; }
+
+  .card-badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .badge-interactive { background: rgba(27,58,92,0.1); color: var(--navy); }
+  .badge-legislation { background: rgba(200,146,42,0.15); color: #8B6914; }
+  .badge-source { background: rgba(192,57,43,0.1); color: var(--red); }
+  .badge-voter { background: rgba(45,125,70,0.12); color: #2D7D46; }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .card-desc {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+    color: var(--med);
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .card-meta {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--light);
+  }
+
+  /* Divider between sections */
+  .section-gap { height: 40px; }
+
+  /* Substack CTA */
+  .cta-bar {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta-bar p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  .cta-bar a {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 28px;
+    border-radius: 6px;
+    transition: opacity 0.2s;
+  }
+  .cta-bar a:hover { opacity: 0.85; }
+
+  /* Footer */
+  footer {
+    background: #111827;
+    color: rgba(255,255,255,0.45);
+    padding: 24px;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero { padding: 32px 20px 40px; }
+    .content { padding: 28px 18px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.substack.com">Substack</a>
+    <a href="https://mn06watch.com/articles/">Articles</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Articles &amp; Tools</h1>
+  <p>Interactive explainers, primary source documents, and voter-service tools from MN-06 Watch.</p>
+</div>
+
+<div class="content">
+
+  <div class="section-label">Voter Service</div>
+
+  <a href="/articles/who-wants-this-job/" class="article-card">
+    <span class="card-badge badge-voter">Voter Service</span>
+    <div class="card-title">Who Wants This Job?</div>
+    <div class="card-desc">MN-06 Watch sent every declared candidate for Minnesota's 6th Congressional District the same five questions. Two responded. One withdrew. The incumbent did not respond.</div>
+    <div class="card-meta">March 2026 &middot; Interactive profiles &middot; Updated as candidates file</div>
+  </a>
+
+  <div class="section-gap"></div>
+  <div class="section-label">Interactive Explainers</div>
+
+  <a href="/articles/save-act-explainer/" class="article-card">
+    <span class="card-badge badge-interactive">Interactive</span>
+    <div class="card-title">The SAVE Act Explainer</div>
+    <div class="card-desc">What the SAVE Act actually does, how it works, and who it affects. An interactive tool for understanding the legislation Rep. Emmer calls his top priority.</div>
+    <div class="card-meta">March 2026 &middot; Updated with March 26 Senate vote</div>
+  </a>
+
+  <a href="/articles/eisa-framework/" class="article-card">
+    <span class="card-badge badge-interactive">Interactive</span>
+    <div class="card-title">Election Integrity Standards Act — Framework</div>
+    <div class="card-desc">If citizenship verification is the goal, here's what getting it right actually looks like. A data-consistent alternative to the SAVE Act, with shareable graphics.</div>
+    <div class="card-meta">March 2026 &middot; Explainer with shareable graphics</div>
+  </a>
+
+  <a href="/articles/how-a-rino-became-the-whip/" class="article-card">
+    <span class="card-badge badge-interactive">Interactive</span>
+    <div class="card-title">How a RINO Became the Whip</div>
+    <div class="card-desc">The arc from "Globalist RINO" to Donald Trump's most reliable vote-counter in the House. A scrollable narrative built from the primary source record.</div>
+    <div class="card-meta">March 2026 &middot; Interactive narrative</div>
+  </a>
+
+  <div class="section-gap"></div>
+  <div class="section-label">Primary Source Documents</div>
+
+  <a href="/articles/ellison-transcript/" class="article-card">
+    <span class="card-badge badge-source">Primary Source</span>
+    <div class="card-title">Full Transcript: AG Ellison / MMBA Meeting</div>
+    <div class="card-desc">Complete verbatim transcript of the 54-minute recording from December 11, 2021. The tape Rep. Emmer has cited across 26+ media appearances — without linking to the full text.</div>
+    <div class="card-meta">December 2021 recording &middot; Transcribed February 2025 &middot; Published by MN-06 Watch</div>
+  </a>
+
+  <a href="/articles/eisa-bill/" class="article-card">
+    <span class="card-badge badge-legislation">Model Legislation</span>
+    <div class="card-title">Election Integrity Standards Act — Full Bill Text</div>
+    <div class="card-desc">Model legislation for evidence-based citizenship verification in federal elections. Amends HAVA and NVRA. Drafted for any Senator or Representative to introduce.</div>
+    <div class="card-meta">March 2026 &middot; Discussion draft</div>
+  </a>
+
+  <div class="section-gap"></div>
+  <div class="section-label">Research Tools</div>
+
+  <a href="https://mn06watch.com/site/rep/" class="article-card">
+    <span class="card-badge badge-interactive">Tool</span>
+    <div class="card-title">Rep. Emmer — Vote Tracker &amp; Profile</div>
+    <div class="card-desc">Voting record, tweet archive, transcript library, and sponsorship data for Rep. Tom Emmer (MN-06). Updated daily.</div>
+    <div class="card-meta">Live data &middot; 14,600+ tweets &middot; 810+ transcripts &middot; All votes tracked</div>
+  </a>
+
+  <div class="cta-bar">
+    <p>MN-06 Watch publishes daily accountability coverage of Rep. Tom Emmer.</p>
+    <a href="https://mn06watch.substack.com/subscribe">Subscribe on Substack</a>
+  </div>
+
+</div>
+
+<footer>
+  <a href="https://mn06watch.com">MN06Watch</a> &middot; Independent accountability journalism &middot; mn06watch@gmail.com
+  <br>We document what your representative does. You decide what it means.
+</footer>
+
+</body>
+</html>
