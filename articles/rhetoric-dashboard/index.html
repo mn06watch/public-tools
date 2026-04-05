@@ -489,11 +489,11 @@ canvas {
 </div>
 
 <footer style="background: #111827; color: rgba(255,255,255,0.45); padding: 24px; text-align: center; font-family: 'DM Mono', monospace; font-size: 0.75rem;">
-  <a href="https://mn06watch.com" style="color: var(--gold); text-decoration: none;">MN06Watch</a> · Independent accountability journalism · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9c4c7999fdec8ddcac1e9cec4c8c0c587cac6c4">[email&#160;protected]</a>
+  <a href="https://mn06watch.com" style="color: var(--gold); text-decoration: none;">MN06Watch</a> · Independent accountability journalism · mn06watch@gmail.com
   <br>We document what your representative does. You decide what it means.
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ===== DATA =====
 const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
 
@@ -918,4 +918,71 @@ function drawGapMap() {
     // Row divider
     if (i < gapPairs.length - 1) {
       ctx.strokeStyle = '#E0DCD7'; ctx.lineWidth = 0.5; ctx.setLineDash([]);
-      ctx.beginPath(); ctx.moveTo(pad.l, y + row
+      ctx.beginPath(); ctx.moveTo(pad.l, y + rowH/2); ctx.lineTo(W - pad.r, y + rowH/2); ctx.stroke();
+    }
+  });
+}
+
+// ===== MILESTONES =====
+function buildMilestones() {
+  const container = document.getElementById('milestone-track');
+  let html = '';
+  milestones.forEach(m => {
+    const cls = m.type === 'active' ? 'active' : m.type === 'pivot' ? 'pivot' : '';
+    const badgeColor = m.intensity >= 4.5 ? '#C0392B' : m.intensity >= 3.5 ? '#E8A87C' : m.intensity >= 2.5 ? '#F5D78E' : '#B8D4A8';
+    const badgeText = m.intensity >= 4.5 ? 'Extreme' : m.intensity >= 3.5 ? 'Aggressive' : m.intensity >= 2.5 ? 'Partisan' : 'Professional';
+    html += `<div class="milestone ${cls}">
+      <div class="date">${m.date}</div>
+      <div class="title">${m.title} <span class="badge" style="background:${badgeColor};color:${m.intensity >= 3.5 ? '#fff' : '#2C2C2C'}">${m.intensity.toFixed(1)}/5 — ${badgeText}</span></div>
+      <div class="desc">${m.desc}</div>
+    </div>`;
+  });
+  container.innerHTML = html;
+}
+
+// ===== KEYWORDS =====
+function buildKeywords() {
+  const container = document.getElementById('keyword-container');
+  let html = '<div style="overflow-x:auto;">';
+  
+  Object.keys(keywords).forEach(keyword => {
+    const data = keywords[keyword];
+    const maxVal = Math.max(...years.map(y => data[y] || 0), 1);
+    
+    html += `<div style="display:flex;align-items:center;margin:12px 0;gap:12px;">`;
+    html += `<div class="spark-label" style="min-width:140px;font-family:'DM Mono',monospace;font-size:0.8rem;color:var(--med);text-align:right;flex-shrink:0;">${keyword}</div>`;
+    html += `<div class="spark-bars" style="display:flex;align-items:flex-end;gap:3px;height:36px;flex:1;">`;
+    
+    years.forEach(y => {
+      const val = data[y] || 0;
+      const h = val > 0 ? Math.max((val / maxVal) * 32, 4) : 2;
+      const bg = val > 0 ? data.color : '#E0DCD7';
+      const opacity = val > 0 ? 1 : 0.4;
+      html += `<div style="width:100%;max-width:60px;height:${h}px;background:${bg};opacity:${opacity};border-radius:2px;cursor:pointer;flex:1;" 
+        onmousemove="showTooltip(event, '<strong>${keyword}</strong> (${y})<br>${val} mention${val !== 1 ? 's' : ''}')" 
+        onmouseleave="hideTooltip()"></div>`;
+    });
+    
+    html += `</div></div>`;
+  });
+  
+  // Year labels
+  html += `<div style="display:flex;align-items:center;margin-top:8px;gap:12px;">`;
+  html += `<div style="min-width:140px;flex-shrink:0;"></div>`;
+  html += `<div style="display:flex;gap:3px;flex:1;">`;
+  years.forEach(y => {
+    html += `<div style="flex:1;max-width:60px;text-align:center;font-size:0.65rem;color:var(--light);font-family:'DM Mono',monospace;">${String(y).slice(2)}</div>`;
+  });
+  html += `</div></div>`;
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+// ===== INITIALIZE =====
+buildHeatmap();
+buildMilestones();
+buildKeywords();
+</script>
+</body>
+</html>
