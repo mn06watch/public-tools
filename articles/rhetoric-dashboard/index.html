@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Is He Talking To? — Interactive Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B3A5C;
+  --gold: #C8922A;
+  --red: #C0392B;
+  --dark: #2C2C2C;
+  --med: #555555;
+  --light: #888888;
+  --line: #E0DCD7;
+  --bg: #FAF8F5;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--dark);
+  font-family: 'Source Serif 4', serif;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  color: var(--navy);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 12px;
+}
+
+h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 16px 0 8px 0;
+  color: var(--med);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: var(--med);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.subtitle {
+  color: var(--light);
+  font-size: 1rem;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 32px 0;
+}
+
+.nav-btn {
+  background: var(--white);
+  border: 1px solid var(--line);
+  color: var(--med);
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.nav-btn.active {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+@media (max-width: 768px) {
+  .nav-btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  pointer-events: none;
+  z-index: 100;
+  max-width: 340px;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: var(--dark);
+}
+
+.tooltip strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.tooltip .intensity {
+  font-weight: 600;
+  color: var(--red);
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  font-size: 0.8rem;
+  color: var(--med);
+  font-family: 'DM Mono', monospace;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-swatch {
+  width: 16px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.back-link {
+  color: var(--navy);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 24px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--gold);
+}
+
+.explanation {
+  background: rgba(200, 146, 42, 0.05);
+  border-left: 3px solid var(--gold);
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 0.95rem;
+  color: var(--dark);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Heat map */
+.heatmap-grid {
+  display: grid;
+  gap: 2px;
+  margin: 24px 0;
+  overflow-x: auto;
+  padding: 12px 0;
+}
+
+.heatmap-cell {
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  min-height: 42px;
+  min-width: 40px;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(27, 58, 92, 0.2);
+  z-index: 2;
+  position: relative;
+}
+
+.heatmap-label {
+  font-size: 0.75rem;
+  color: var(--med);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'DM Mono', monospace;
+}
+
+.heatmap-year {
+  font-size: 0.7rem;
+  color: var(--med);
+  text-align: center;
+  font-weight: 600;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Milestone path */
+.milestone-track {
+  position: relative;
+  margin: 24px 0 24px 30px;
+  padding-left: 30px;
+  border-left: 3px solid var(--line);
+}
+
+.milestone {
+  position: relative;
+  padding: 20px 0 28px;
+}
+
+.milestone::before {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid var(--line);
+  background: var(--white);
+}
+
+.milestone.active::before {
+  border-color: var(--red);
+  background: var(--red);
+  box-shadow: 0 0 8px rgba(192, 57, 43, 0.4);
+}
+
+.milestone.pivot::before {
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(200, 146, 42, 0.4);
+}
+
+.milestone .date {
+  color: var(--light);
+  font-size: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.milestone .title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 6px 0;
+  color: var(--dark);
+}
+
+.milestone .desc {
+  color: var(--med);
+  font-size: 0.9rem;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.milestone .badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Keyword frequency sparklines */
+.spark-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.spark-label {
+  width: 140px;
+  font-size: 0.8rem;
+  color: var(--dark);
+  flex-shrink: 0;
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+}
+
+.spark-bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 36px;
+  flex: 1;
+}
+
+.spark-bar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s, opacity 0.3s;
+  cursor: pointer;
+  min-width: 4px;
+}
+
+.spark-bar:hover {
+  opacity: 1 !important;
+  filter: brightness(1.15);
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container { padding: 24px 16px; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .card { padding: 16px; }
+  .heatmap-grid { font-size: 0.65rem; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .heatmap-cell { min-height: 36px; min-width: 32px; }
+  .heatmap-label { font-size: 0.7rem; min-width: 140px; }
+  .legend { gap: 12px; font-size: 0.75rem; }
+  .spark-label { width: 100px; }
+  .spark-bars { height: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav style="background: var(--navy); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+  <div>
+    <a href="https://mn06watch.com" style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold); text-decoration: none; font-weight: 700;">MN06Watch</a>
+    <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; color: rgba(255,255,255,0.4); margin-top: 2px;">Receipts, not rage.</div>
+  </div>
+  <div>
+    <a href="/articles/" style="color: rgba(255,255,255,0.75); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.8rem; margin-left: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Articles</a>
+    <a href="https://mn06watch.substack.com" style="color: rgba(255,255,255,0.75); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.8rem; margin-left: 20px; transition: color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Substack</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<a href="/articles/look-whos-listening/" class="back-link">&larr; Read the full analysis</a>
+<h1>Who Is He Talking To?</h1>
+<p class="subtitle">Interactive Data — How Tom Emmer's language shifted across 300+ transcripts and 14,605 tweets (2015–2026)</p>
+
+<div class="nav">
+  <button class="nav-btn active" onclick="showSection('heatmap')">Intensity Heat Map</button>
+  <button class="nav-btn" onclick="showSection('divergence')">Audience Divergence</button>
+  <button class="nav-btn" onclick="showSection('milestones')">Career Timeline</button>
+  <button class="nav-btn" onclick="showSection('keywords')">Keyword Tracker</button>
+  <button class="nav-btn" onclick="showSection('gapmap')">The Gap Map</button>
+</div>
+
+<!-- ==================== SECTION: HEAT MAP ==================== -->
+<div id="sec-heatmap" class="section">
+<h2>Intensity Heat Map: Audience × Year</h2>
+<div class="explanation">Darker red means more extreme language. Notice where the reds cluster — and where they don't.</div>
+<p>Each cell shows the average intensity of language (1–5 scale) for that audience in that year. Hover for transcript counts and notes.</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#D5E8D4"></div> 1.0–1.5: Calm, professional</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#B8D4A8"></div> 1.5–2.0: Mildly partisan</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#F5D78E"></div> 2.5–3.0: Noticeably partisan</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#E8A87C"></div> 3.5–4.0: Aggressive, personal attacks</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#C0392B"></div> 4.5–5.0: Most extreme language</div>
+</div>
+
+<div id="heatmap-container" class="card"></div>
+</div>
+
+<!-- ==================== SECTION: DIVERGENCE ==================== -->
+<div id="sec-divergence" class="section" style="display:none;">
+<h2>How Emmer's Language Diverged by Audience</h2>
+<div class="explanation">The gap between what Emmer says on local radio and what he says on CBS grew from almost nothing to a chasm.</div>
+<p>Track the separation between his most combative voice (local conservative radio) and his most restrained (official C-SPAN and mainstream media).</p>
+<div class="card">
+<canvas id="divergence-canvas" width="1100" height="420"></canvas>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#C0392B"></div> Local Conservative Radio</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#E74C3C"></div> Fox Primetime</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#1B3A5C"></div> Official (C-SPAN)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#2ECC71"></div> Mainstream Media</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#8E44AD"></div> House Floor</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:rgba(192, 57, 43, 0.15);border:1px dashed #C0392B"></div> The gap widens</div>
+</div>
+</div>
+
+<!-- ==================== SECTION: MILESTONES ==================== -->
+<div id="sec-milestones" class="section" style="display:none;">
+<h2>Career Milestones and Rhetorical Escalation</h2>
+<div class="explanation">Every promotion came with sharper language. The job didn't just allow it — it required it.</div>
+<p>Each step up the Republican leadership ladder corresponded with a measurable shift in how harshly Emmer spoke. Red dots mark escalation points; gold dots mark structural pivots (when his job changed).</p>
+<div class="card">
+<div class="milestone-track" id="milestone-track"></div>
+</div>
+</div>
+
+<!-- ==================== SECTION: KEYWORDS ==================== -->
+<div id="sec-keywords" class="section" style="display:none;">
+<h2>When Specific Phrases Entered His Vocabulary</h2>
+<div class="explanation">Tracking when specific attack phrases entered Emmer's vocabulary. Some appeared overnight.</div>
+<p>Each column is a year. The taller the bar, the more frequently that phrase appeared across all transcripts and tweets that year.</p>
+<div class="card" id="keyword-container"></div>
+</div>
+
+<!-- ==================== SECTION: GAP MAP ==================== -->
+<div id="sec-gapmap" class="section" style="display:none;">
+<h2>Same Week, Different Audiences</h2>
+<div class="explanation">Same week, different audiences. The wider the bar, the bigger the gap between what he told each audience.</div>
+<p>These are instances when Emmer spoke to multiple audiences within the same week. Each row shows how much his language shifted from one audience to another.</p>
+<div class="card">
+<canvas id="gapmap-canvas" width="1100" height="500"></canvas>
+</div>
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#2ECC71;height:14px;width:14px;border-radius:50%"></div> Restrained version</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#C0392B;height:14px;width:14px;border-radius:50%"></div> Aggressive version</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:rgba(192, 57, 43, 0.2);height:14px;width:40px"></div> Size of the shift</div>
+</div>
+</div>
+
+<div id="tooltip" class="tooltip" style="display:none;"></div>
+
+</div>
+
+<footer style="background: #111827; color: rgba(255,255,255,0.45); padding: 24px; text-align: center; font-family: 'DM Mono', monospace; font-size: 0.75rem;">
+  <a href="https://mn06watch.com" style="color: var(--gold); text-decoration: none;">MN06Watch</a> · Independent accountability journalism · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9c4c7999fdec8ddcac1e9cec4c8c0c587cac6c4">[email&#160;protected]</a>
+  <br>We document what your representative does. You decide what it means.
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ===== DATA =====
+const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+const audiences = [
+  { id: 'official', label: 'Official (C-SPAN)', color: '#1B3A5C' },
+  { id: 'committee', label: 'Committee Hearings', color: '#4A90B5' },
+  { id: 'fox_biz', label: 'Fox Business (Kudlow/Cavuto)', color: '#C8922A' },
+  { id: 'fox_prime', label: 'Fox Primetime (Hannity/Watters)', color: '#E74C3C' },
+  { id: 'local_radio', label: 'Local Radio (KNSI/KTLK)', color: '#C0392B' },
+  { id: 'mainstream', label: 'Mainstream (CNBC/CBS/Bloomberg)', color: '#2ECC71' },
+  { id: 'floor', label: 'House Floor Speeches', color: '#8E44AD' }
+];
+
+// intensity[audience_id][year] = { avg, n, notes }
+const intensity = {
+  official: {
+    2015: null, 2016: null, 2017: null, 2018: null, 2019: null, 2020: null,
+    2021: null, 2022: null,
+    2023: { avg: 2.7, n: 16, notes: 'All stakeouts read. Zero Somali mentions. Focus: appropriations, border, debt ceiling.' },
+    2024: { avg: 3.5, n: 31, notes: 'All stakeouts read. Zero Somali mentions. Escalating partisanship on spending, border.' },
+    2025: { avg: 4.0, n: 36, notes: '36 press conferences. Somali fraud appears Dec 2 for first time. Oct shutdown rhetoric at 4.5/5.' },
+    2026: { avg: 4.7, n: 8, notes: 'Jan 7: "Send them home." Full fraud narrative on every stakeout.' }
+  },
+  committee: {
+    2015: { avg: 1.5, n: 6, notes: 'Financial Services. Collaborative, bipartisan. Praised Gwen Moore.' },
+    2016: { avg: 1.8, n: 8, notes: 'Mostly banking/fintech. Exception: refugee vetting at 4/5.' },
+    2017: { avg: 2.0, n: 5, notes: 'Somali community first mentioned (Jul 19) — PROTECTIVE framing.' },
+    2018: { avg: 1.5, n: 4, notes: 'Calmest year. All hearings at 1-2/5.' },
+    2019: { avg: 2.0, n: 3, notes: 'Bitcoin hearing: "I don\'t want to be partisan." Mining at 3/5.' },
+    2020: { avg: 1.8, n: 2, notes: 'Limited committee activity. COVID disruption.' },
+    2021: { avg: 3.2, n: 4, notes: 'IRS surveillance roundtable: FIRST 5/5. "So dirty." "Not China."' },
+    2022: { avg: 3.5, n: 3, notes: 'Fed hearing: "dog devouring its tail." Crime hearing at 4.5/5.' },
+    2023: { avg: 3.0, n: 2, notes: 'Fewer committee appearances as Whip.' },
+    2024: { avg: 3.2, n: 2, notes: 'Financial Services, digital assets focus.' },
+    2025: { avg: 3.5, n: 1, notes: 'Limited committee appearances.' },
+    2026: null
+  },
+  fox_biz: {
+    2015: null, 2016: null, 2017: null,
+    2018: { avg: 2.0, n: 1, notes: 'Mining jobs discussion. Low intensity.' },
+    2019: null, 2020: null,
+    2021: { avg: 2.5, n: 1, notes: 'Emerging combative tone on Fox Business.' },
+    2022: { avg: 3.0, n: 2, notes: 'Inflation, border. Building toward attack mode.' },
+    2023: { avg: 3.5, n: 4, notes: 'Kudlow appearances increase. Consistent partisan framing.' },
+    2024: { avg: 3.8, n: 5, notes: 'Kudlow as primary platform. Cavuto stays calmer (2.5/5).' },
+    2025: { avg: 4.2, n: 12, notes: 'Jul 17 Bottom Line: "Somali gangs" — earliest non-radio Somali. Kudlow escalation.' },
+    2026: { avg: 4.5, n: 3, notes: 'Full fraud narrative on Kudlow. Cavuto still lower.' }
+  },
+  fox_prime: {
+    2015: null, 2016: null, 2017: null, 2018: null, 2019: null, 2020: null,
+    2021: null, 2022: { avg: 4.0, n: 2, notes: 'Faulkner Focus: "banana republic." First primetime combativeness.' },
+    2023: { avg: 4.0, n: 3, notes: 'Hannity, Ingraham appearances. Party line at high intensity.' },
+    2024: { avg: 4.2, n: 4, notes: 'Sunday Morning Futures, Fox & Friends. Consistent 4+/5.' },
+    2025: { avg: 4.8, n: 8, notes: 'Dec 29 Hannity 5/5. Dec 31 The Story 5/5. Full fraud. "Islamic fraud."' },
+    2026: { avg: 5.0, n: 4, notes: 'Jan 2 Jesse Watters: "Send them home." Peak intensity.' }
+  },
+  local_radio: {
+    2015: null, 2016: null, 2017: null, 2018: null, 2019: null, 2020: null,
+    2021: null, 2022: null,
+    2023: { avg: 3.5, n: 2, notes: 'KNSI: constituent-facing but partisan. "Extremists" in DFL.' },
+    2024: { avg: 4.0, n: 3, notes: 'KNSI/KTLK. Walz attacks increase. "Dangerously liberal."' },
+    2025: { avg: 4.8, n: 4, notes: 'Somali fraud narrative deployed first on local radio before national.' },
+    2026: { avg: 5.0, n: 2, notes: '"Islamic fraud" — highest intensity of any venue.' }
+  },
+  mainstream: {
+    2015: null, 2016: null, 2017: null, 2018: null, 2019: null, 2020: null,
+    2021: { avg: 2.0, n: 1, notes: 'Standard talking points. Measured.' },
+    2022: { avg: 2.5, n: 2, notes: 'CNN appearance at 4/5 (outlier for mainstream). Bloomberg at 1.5.' },
+    2023: { avg: 2.3, n: 4, notes: 'CNBC, Bloomberg, CBS. Zero Somali. Technical/policy focus.' },
+    2024: { avg: 2.3, n: 5, notes: 'CNBC at 2-2.5/5 consistently. Zero escalation.' },
+    2025: { avg: 2.5, n: 4, notes: 'Firewall intact: ZERO Somali mentions across all mainstream appearances.' },
+    2026: { avg: 2.5, n: 2, notes: 'Mainstream firewall holds. Somali narrative excluded.' }
+  },
+  floor: {
+    2015: { avg: 1.5, n: 8, notes: 'Constituent tributes, ceremonial. Very low intensity.' },
+    2016: { avg: 2.0, n: 6, notes: 'Refugee vetting at 4/5. Everything else at 1-1.5/5.' },
+    2017: { avg: 2.2, n: 5, notes: '115th priorities at 4/5. Mining at 4/5. Rest at 1/5.' },
+    2018: { avg: 1.5, n: 4, notes: 'All at 1-2/5. Calmest year on the floor.' },
+    2019: { avg: 2.0, n: 3, notes: 'Mining at 3/5. Tributes at 1/5.' },
+    2020: { avg: 2.3, n: 4, notes: 'Mining at 4/5: first "Democrat colleagues from Minnesota" attack.' },
+    2021: { avg: 3.5, n: 5, notes: 'H.R. 1 at 4/5. IRS at 4-5/5. Decisive pivot year.' },
+    2022: { avg: 3.2, n: 3, notes: 'Attack mode normalizing on the floor.' },
+    2023: { avg: 3.5, n: 4, notes: 'Whip role brings more floor time. Partisan default.' },
+    2024: { avg: 3.8, n: 3, notes: 'Higher floor intensity matching leadership role.' },
+    2025: { avg: 4.0, n: 5, notes: 'Government shutdown rhetoric. Partisan framing dominant.' },
+    2026: { avg: 4.5, n: 2, notes: 'Fraud narrative enters floor speeches.' }
+  }
+};
+
+// Milestones data
+const milestones = [
+  { date: 'Jan 2015', title: 'Sworn in as Congressman (MN-06)', intensity: 1.5, type: 'normal',
+    desc: 'Freshman on Financial Services Committee. Collaborative, bipartisan, deferential. Told committee "I still have a lot to learn."' },
+  { date: 'Feb 2016', title: 'First 4/5 spike: Refugee Vetting Speech', intensity: 4.0, type: 'normal',
+    desc: '"Radical Islam," "animals" — but confined to foreign policy. Default mode remains constituent tributes at 1/5.' },
+  { date: 'Jul 2017', title: 'First Somali Reference (PROTECTIVE)', intensity: 2.0, type: 'normal',
+    desc: 'Counter-terrorism hearing. Spoke of MN\'s Somali community with empathy: "one of the largest populations of Somali-Americans." Defended remittances.' },
+  { date: 'Jan 2019', title: 'NRCC Chair', intensity: 2.3, type: 'normal',
+    desc: 'Job: recruit candidates and raise money to win back the House. Messaging sharpens slightly but remains fundraising-focused.' },
+  { date: 'Nov 2020', title: 'Elected Conference Chair', intensity: 2.5, type: 'pivot',
+    desc: 'THE STRUCTURAL TRIGGER. Conference Chair = messaging chief. The job literally requires crafting and delivering party attack lines. This is where the incentive structure changed.' },
+  { date: 'Mar 2021', title: 'H.R. 1 Floor Speech: "Defunding our police"', intensity: 4.0, type: 'active',
+    desc: 'First use of "defunding our police" and "government-run health care" as attack frames on the House floor. The new voice debuts.' },
+  { date: 'Oct 2021', title: 'IRS Roundtable: FIRST 5/5 IN CAREER', intensity: 5.0, type: 'active',
+    desc: '"This is so dirty...literally spying on American citizens." The rhetorical register that would later target the Somali community was born here — hyperbolic, conspiratorial, accusatory.' },
+  { date: 'Aug 2022', title: '"Banana republic" on Fox News', intensity: 4.0, type: 'active',
+    desc: 'First authoritarian comparison on national TV. Combative mode now the default for media appearances. Running for Whip.' },
+  { date: 'Jan 2023', title: 'Elected Majority Whip', intensity: 3.8, type: 'pivot',
+    desc: 'Third-ranking House Republican. Weekly C-SPAN stakeout slot. National platform amplifies everything. Attack rhetoric now has the biggest possible megaphone.' },
+  { date: 'Jan 2025', title: 'Trump Second Term Begins', intensity: 4.3, type: 'pivot',
+    desc: 'Last guardrails removed. Loyalty demonstration becomes paramount. Minnesota-specific targets identified.' },
+  { date: 'Jul 2025', title: 'Bottom Line: "Somali gangs"', intensity: 4.5, type: 'active',
+    desc: 'Earliest non-radio Somali reference. Crime frame precedes fraud frame by 5 months. Testing ground for the narrative.' },
+  { date: 'Dec 2, 2025', title: 'First Official Fraud Speech (C-SPAN)', intensity: 5.0, type: 'active',
+    desc: 'C-SPAN stakeout. Fraud narrative enters official record for the first time. 5 weeks before Jan 7.' },
+  { date: 'Jan 7, 2026', title: '"Send them home"', intensity: 5.0, type: 'active',
+    desc: 'C-SPAN stakeout. Full 5/5. The man who spoke protectively of MN\'s Somali community in 2017 now says "Send them home." Complete transformation.' }
+];
+
+// Gap map data (same-week comparisons)
+const gapPairs = [
+  { date: 'Jun 2018', low: 1.5, lowLabel: 'C-SPAN Washington Journal\n(farmer suicide, empathy)', high: 2.0, highLabel: 'Fox News\n(mining jobs)', gap: 0.5 },
+  { date: 'Mar 2022', low: 2.5, lowLabel: 'Bloomberg\n(policy discussion)', high: 4.0, highLabel: 'CNN State of Union\n("Minneapolis...riots")', gap: 1.5 },
+  { date: 'Oct 2023', low: 2.5, lowLabel: 'CNBC\n(budget analysis)', high: 4.0, highLabel: 'C-SPAN stakeout\n("radical Democrat agenda")', gap: 1.5 },
+  { date: 'Feb 2024', low: 2.0, lowLabel: 'Bloomberg\n(digital assets)', high: 4.0, highLabel: 'KNSI Radio\n("Walz is dangerously liberal")', gap: 2.0 },
+  { date: 'Oct 2025', low: 2.5, lowLabel: 'CNBC\n(budget/spending)', high: 4.5, highLabel: 'C-SPAN stakeout\n(shutdown rhetoric)', gap: 2.0 },
+  { date: 'Dec 2, 2025', low: 3.5, lowLabel: 'Kudlow (Fox Business)\n(immigration talking points)', high: 5.0, highLabel: 'C-SPAN stakeout\n(FIRST official fraud speech)', gap: 1.5 },
+  { date: 'Dec 29–31, 2025', low: 2.5, lowLabel: 'Mainstream media\n(year-end recap)', high: 5.0, highLabel: 'Hannity / The Story\n("Islamic fraud," 5/5)', gap: 2.5 },
+  { date: 'Jan 4–7, 2026', low: 3.5, lowLabel: 'Sunday Morning Futures\n(policy + fraud lite)', high: 5.0, highLabel: 'C-SPAN stakeout\n("Send them home")', gap: 1.5 },
+  { date: 'Jan 29 – Feb 16, 2026', low: 3.5, lowLabel: 'Kudlow (Jan 29)\n(immigration stats)', high: 4.5, highLabel: 'Kudlow (Feb 16)\n(same host, higher intensity)', gap: 1.0 }
+];
+
+// Keyword tracking data
+const keywords = {
+  'defund/defunding': { 2015:0, 2016:0, 2017:0, 2018:0, 2019:0, 2020:5, 2021:12, 2022:18, 2023:15, 2024:10, 2025:8, 2026:4, color: '#C0392B' },
+  'socialist/socialism': { 2015:0, 2016:0, 2017:0, 2018:0, 2019:0, 2020:0, 2021:8, 2022:14, 2023:11, 2024:6, 2025:3, 2026:1, color: '#8E44AD' },
+  'radical': { 2015:0, 2016:2, 2017:0, 2018:0, 2019:1, 2020:3, 2021:7, 2022:10, 2023:16, 2024:12, 2025:18, 2026:14, color: '#C8922A' },
+  'banana republic': { 2015:0, 2016:0, 2017:0, 2018:0, 2019:0, 2020:0, 2021:0, 2022:3, 2023:5, 2024:4, 2025:6, 2026:3, color: '#E8A87C' },
+  'Somali/fraud': { 2015:0, 2016:0, 2017:1, 2018:0, 2019:0, 2020:0, 2021:0, 2022:0, 2023:0, 2024:0, 2025:28, 2026:45, color: '#E74C3C' },
+  'send them home': { 2015:0, 2016:0, 2017:0, 2018:0, 2019:0, 2020:0, 2021:0, 2022:0, 2023:0, 2024:0, 2025:0, 2026:8, color: '#F85149' },
+  'Ilhan Omar': { 2015:0, 2016:0, 2017:0, 2018:0, 2019:2, 2020:4, 2021:3, 2022:5, 2023:8, 2024:7, 2025:15, 2026:12, color: '#1B3A5C' },
+  'Keith Ellison': { 2015:0, 2016:0, 2017:0, 2018:1, 2019:2, 2020:1, 2021:1, 2022:2, 2023:3, 2024:2, 2025:8, 2026:6, color: '#4A90B5' }
+};
+
+// ===== TOOLTIP =====
+const tooltip = document.getElementById('tooltip');
+function showTooltip(e, html) {
+  tooltip.innerHTML = html;
+  tooltip.style.display = 'block';
+  const rect = tooltip.getBoundingClientRect();
+  let x = e.pageX + 12, y = e.pageY - 10;
+  if (x + rect.width > window.innerWidth - 20) x = e.pageX - rect.width - 12;
+  if (y + rect.height > window.innerHeight + window.scrollY - 20) y = e.pageY - rect.height - 10;
+  tooltip.style.left = x + 'px';
+  tooltip.style.top = y + 'px';
+}
+function hideTooltip() { tooltip.style.display = 'none'; }
+
+// ===== NAVIGATION =====
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+  document.getElementById('sec-' + id).style.display = 'block';
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  if (id === 'divergence') drawDivergence();
+  if (id === 'gapmap') drawGapMap();
+}
+
+// ===== HEAT MAP =====
+function buildHeatmap() {
+  const container = document.getElementById('heatmap-container');
+  const cols = years.length + 1;
+  let html = `<div class="heatmap-grid" style="grid-template-columns: 180px repeat(${years.length}, 1fr);">`;
+  // Header row
+  html += '<div></div>';
+  years.forEach(y => html += `<div class="heatmap-year">${y}</div>`);
+  // Data rows
+  audiences.forEach(aud => {
+    html += `<div class="heatmap-label">${aud.label}</div>`;
+    years.forEach(y => {
+      const d = intensity[aud.id] ? intensity[aud.id][y] : null;
+      if (!d) {
+        html += `<div class="heatmap-cell" style="background:#E0DCD7;color:#888888;">—</div>`;
+      } else {
+        const bg = intensityColor(d.avg);
+        const fg = d.avg >= 3.5 ? '#FFFFFF' : '#2C2C2C';
+        html += `<div class="heatmap-cell" style="background:${bg};color:${fg}"
+          onmousemove="showTooltip(event, '<strong>${aud.label} (${y})</strong><br><span class=intensity>${d.avg.toFixed(1)}/5</span> — Very aggressive language (${d.n} transcript${d.n !== 1 ? 's' : ''})<br>${d.notes}')"
+          onmouseleave="hideTooltip()">${d.avg.toFixed(1)}</div>`;
+      }
+    });
+  });
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function intensityColor(v) {
+  if (v <= 1.5) return '#D5E8D4';
+  if (v <= 2.0) return '#B8D4A8';
+  if (v <= 2.5) return '#B8D4A8';
+  if (v <= 3.0) return '#F5D78E';
+  if (v <= 3.5) return '#F5D78E';
+  if (v <= 4.0) return '#E8A87C';
+  if (v <= 4.5) return '#E8A87C';
+  return '#C0392B';
+}
+
+// ===== DIVERGENCE CHART =====
+function drawDivergence() {
+  const canvas = document.getElementById('divergence-canvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const pad = { l: 60, r: 30, t: 30, b: 50 };
+  const gw = W - pad.l - pad.r, gh = H - pad.t - pad.b;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#FAF8F5';
+  ctx.fillRect(0, 0, W, H);
+
+  // Grid
+  ctx.strokeStyle = '#E0DCD7';
+  ctx.lineWidth = 1;
+  for (let i = 1; i <= 5; i++) {
+    const y = pad.t + gh - (i - 1) / 4 * gh;
+    ctx.beginPath(); ctx.setLineDash([4, 4]); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#555555'; ctx.font = '11px "DM Mono", monospace'; ctx.textAlign = 'right';
+    ctx.fillText(i, pad.l - 8, y + 4);
+  }
+
+  // X axis
+  ctx.fillStyle = '#555555'; ctx.textAlign = 'center'; ctx.font = '11px "DM Mono", monospace';
+  years.forEach((y, i) => {
+    const x = pad.l + (i / (years.length - 1)) * gw;
+    ctx.fillText(y, x, H - pad.b + 20);
+  });
+
+  function yPos(v) { return pad.t + gh - ((v - 1) / 4) * gh; }
+  function xPos(i) { return pad.l + (i / (years.length - 1)) * gw; }
+
+  // Data series
+  const series = {
+    local_radio: { color: '#C0392B', dash: [], data: [null,null,null,null,null,null,null,null,3.5,4.0,4.8,5.0] },
+    fox_prime: { color: '#E74C3C', dash: [6,3], data: [null,null,null,null,null,null,null,4.0,4.0,4.2,4.8,5.0] },
+    official: { color: '#1B3A5C', dash: [], data: [null,null,null,null,null,null,null,null,2.7,3.5,4.0,4.7] },
+    mainstream: { color: '#2ECC71', dash: [2,4], data: [null,null,null,null,null,null,2.0,2.5,2.3,2.3,2.5,2.5] },
+    floor: { color: '#8E44AD', dash: [8,4], data: [1.5,2.0,2.2,1.5,2.0,2.3,3.5,3.2,3.5,3.8,4.0,4.5] }
+  };
+
+  // Fill gap between local radio and mainstream
+  ctx.save();
+  ctx.fillStyle = 'rgba(192, 57, 43, 0.08)';
+  ctx.beginPath();
+  let started = false;
+  // Forward pass (local radio or fox_prime top)
+  for (let i = 0; i < 12; i++) {
+    const top = series.local_radio.data[i] || series.fox_prime.data[i];
+    if (top && (series.mainstream.data[i] || series.official.data[i])) {
+      const x = xPos(i);
+      if (!started) { ctx.moveTo(x, yPos(top)); started = true; }
+      else ctx.lineTo(x, yPos(top));
+    }
+  }
+  // Reverse pass (mainstream or official bottom)
+  for (let i = 11; i >= 0; i--) {
+    const bot = series.mainstream.data[i] || series.official.data[i];
+    const top = series.local_radio.data[i] || series.fox_prime.data[i];
+    if (bot && top) ctx.lineTo(xPos(i), yPos(bot));
+  }
+  ctx.closePath(); ctx.fill();
+  ctx.restore();
+
+  // Draw lines
+  Object.values(series).forEach(s => {
+    ctx.strokeStyle = s.color;
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash(s.dash);
+    ctx.beginPath();
+    let first = true;
+    s.data.forEach((v, i) => {
+      if (v !== null) {
+        const x = xPos(i), y = yPos(v);
+        if (first) { ctx.moveTo(x, y); first = false; }
+        else ctx.lineTo(x, y);
+      }
+    });
+    ctx.stroke();
+    ctx.setLineDash([]);
+    // Dots
+    s.data.forEach((v, i) => {
+      if (v !== null) {
+        ctx.fillStyle = s.color;
+        ctx.beginPath(); ctx.arc(xPos(i), yPos(v), 4, 0, Math.PI * 2); ctx.fill();
+      }
+    });
+  });
+
+  // Career milestone lines
+  const milestoneMarks = [
+    { year: 2019, label: 'NRCC Chair' },
+    { year: 2021, label: 'Conf. Chair', sub: '(messaging chief)' },
+    { year: 2023, label: 'Majority Whip' },
+    { year: 2025, label: 'Trump II' }
+  ];
+  milestoneMarks.forEach(m => {
+    const idx = years.indexOf(m.year);
+    const x = xPos(idx);
+    ctx.strokeStyle = '#C8922A'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, pad.t + gh); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#C8922A'; ctx.font = '9px "DM Mono", monospace'; ctx.textAlign = 'center';
+    ctx.fillText(m.label, x, pad.t + gh + 36);
+    if (m.sub) ctx.fillText(m.sub, x, pad.t + gh + 46);
+  });
+
+  // Y axis label
+  ctx.save();
+  ctx.fillStyle = '#555555'; ctx.font = '11px "DM Mono", monospace'; ctx.textAlign = 'center';
+  ctx.translate(15, pad.t + gh / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Intensity (1–5)', 0, 0);
+  ctx.restore();
+}
+
+// ===== MILESTONES =====
+function buildMilestones() {
+  const track = document.getElementById('milestone-track');
+  let html = '';
+  milestones.forEach(m => {
+    const cls = m.type === 'active' ? 'active' : (m.type === 'pivot' ? 'pivot' : '');
+    const badgeColor = m.intensity >= 4.5 ? '#C0392B' : (m.intensity >= 3.5 ? '#E8A87C' : (m.intensity >= 2.5 ? '#C8922A' : '#2ECC71'));
+    html += `<div class="milestone ${cls}">
+      <div class="date">${m.date}</div>
+      <div class="title">${m.title} <span class="badge" style="background:${badgeColor};color:#FFFFFF">${m.intensity.toFixed(1)}/5</span></div>
+      <div class="desc">${m.desc}</div>
+    </div>`;
+  });
+  track.innerHTML = html;
+}
+
+// ===== KEYWORDS =====
+function buildKeywords() {
+  const container = document.getElementById('keyword-container');
+  let html = '<div style="margin-bottom:8px;display:flex;gap:8px;font-size:0.7rem;color:var(--med)"><div style="width:140px"></div>';
+  years.forEach(y => html += `<div style="flex:1;text-align:center;font-family:'DM Mono',monospace">${String(y).slice(2)}</div>`);
+  html += '</div>';
+
+  Object.entries(keywords).forEach(([label, data]) => {
+    const maxVal = Math.max(...Object.values(data).filter(v => typeof v === 'number'));
+    html += `<div class="spark-row"><div class="spark-label" style="color:${data.color}">${label}</div><div class="spark-bars">`;
+    years.forEach(y => {
+      const v = data[y] || 0;
+      const h = maxVal > 0 ? Math.max(2, (v / maxVal) * 32) : 2;
+      const opacity = v === 0 ? 0.15 : 0.9;
+      html += `<div class="spark-bar" style="background:${data.color};opacity:${opacity};height:${h}px"
+        onmousemove="showTooltip(event, '<strong>${label}</strong> (${y})<br>${v} occurrence${v !== 1 ? 's' : ''}')"
+        onmouseleave="hideTooltip()"></div>`;
+    });
+    html += '</div></div>';
+  });
+  container.innerHTML = html;
+}
+
+// ===== GAP MAP =====
+function drawGapMap() {
+  const canvas = document.getElementById('gapmap-canvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const pad = { l: 160, r: 30, t: 30, b: 30 };
+  const gw = W - pad.l - pad.r;
+  const rowH = (H - pad.t - pad.b) / gapPairs.length;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#FAF8F5';
+  ctx.fillRect(0, 0, W, H);
+
+  // Scale: 1-5
+  function xScale(v) { return pad.l + ((v - 1) / 4) * gw; }
+
+  // Grid
+  for (let i = 1; i <= 5; i++) {
+    const x = xScale(i);
+    ctx.strokeStyle = '#E0DCD7'; ctx.lineWidth = 1; ctx.setLineDash([4,4]);
+    ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, H - pad.b); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#555555'; ctx.font = '11px "DM Mono", monospace'; ctx.textAlign = 'center';
+    ctx.fillText(i + '/5', x, pad.t - 8);
+  }
+
+  gapPairs.forEach((pair, i) => {
+    const y = pad.t + i * rowH + rowH / 2;
+    const xLow = xScale(pair.low);
+    const xHigh = xScale(pair.high);
+
+    // Gap fill
+    ctx.fillStyle = 'rgba(192, 57, 43, 0.15)';
+    ctx.fillRect(xLow, y - 12, xHigh - xLow, 24);
+
+    // Gap line
+    ctx.strokeStyle = '#888888'; ctx.lineWidth = 2; ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(xLow, y); ctx.lineTo(xHigh, y); ctx.stroke();
+
+    // Low dot
+    ctx.fillStyle = '#2ECC71';
+    ctx.beginPath(); ctx.arc(xLow, y, 8, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#FFFFFF'; ctx.font = 'bold 9px "DM Mono", monospace'; ctx.textAlign = 'center';
+    ctx.fillText(pair.low.toFixed(1), xLow, y + 3);
+
+    // High dot
+    ctx.fillStyle = '#C0392B';
+    ctx.beginPath(); ctx.arc(xHigh, y, 8, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#FFFFFF'; ctx.font = 'bold 9px "DM Mono", monospace';
+    ctx.fillText(pair.high.toFixed(1), xHigh, y + 3);
+
+    // Gap label
+    ctx.fillStyle = '#C8922A'; ctx.font = 'bold 10px "DM Mono", monospace';
+    ctx.fillText('Δ' + pair.gap.toFixed(1), (xLow + xHigh) / 2, y - 16);
+
+    // Date label
+    ctx.fillStyle = '#2C2C2C'; ctx.font = '11px "DM Mono", monospace'; ctx.textAlign = 'right';
+    ctx.fillText(pair.date, pad.l - 12, y + 4);
+
+    // Row divider
+    if (i < gapPairs.length - 1) {
+      ctx.strokeStyle = '#E0DCD7'; ctx.lineWidth = 0.5; ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(pad.l, y + row

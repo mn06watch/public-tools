@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Is He Talking To? - MN06Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@400;500&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1B3A5C;
+  --gold: #C8922A;
+  --red: #C0392B;
+  --dark: #2C2C2C;
+  --med: #555555;
+  --light: #888888;
+  --line: #E0DCD7;
+  --bg: #FAF8F5;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Serif 4', serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+nav {
+  background: var(--navy);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  margin-left: 20px;
+}
+
+nav a:first-of-type {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-left: 0;
+  font-weight: 700;
+}
+
+nav > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+nav .tagline {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.2rem;
+  color: var(--med);
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.opening-para {
+  color: var(--dark);
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.stat-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 32px 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 24px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 700;
+}
+
+h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin: 32px 0 16px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+p {
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.card.alert {
+  border-left: 4px solid var(--red);
+  background: rgba(192, 57, 43, 0.03);
+}
+
+.quote {
+  border-left: 3px solid var(--gold);
+  background: #FBF8F2;
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--light);
+  font-style: normal;
+}
+
+.comparison-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.comparison-col {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-top: 4px solid transparent;
+}
+
+.comparison-col.conservative {
+  border-top-color: var(--red);
+}
+
+.comparison-col.mainstream {
+  border-top-color: var(--navy);
+}
+
+.comparison-col h4 {
+  margin-top: 0;
+  color: var(--dark);
+}
+
+.comparison-explanation {
+  font-style: italic;
+  color: var(--med);
+  font-size: 0.95rem;
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 16px;
+  text-align: left;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background: #F5F3F0;
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--white);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-right: 6px;
+}
+
+.badge-green {
+  background: rgba(63, 185, 80, 0.15);
+  color: #2a7f3b;
+}
+
+.badge-yellow {
+  background: rgba(200, 146, 42, 0.15);
+  color: #9a6f1f;
+}
+
+.badge-orange {
+  background: rgba(240, 136, 62, 0.15);
+  color: #a0572c;
+}
+
+.badge-red {
+  background: rgba(192, 57, 43, 0.15);
+  color: var(--red);
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+details {
+  margin: 24px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 12px;
+  background: rgba(27, 58, 92, 0.05);
+  border-radius: 4px;
+  user-select: none;
+}
+
+summary:hover {
+  background: rgba(27, 58, 92, 0.1);
+}
+
+details[open] summary {
+  margin-bottom: 12px;
+}
+
+footer {
+  background: #111827;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 24px;
+  text-align: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  margin-top: 60px;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 12px;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  background: #1b3a5c;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .comparison-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-bar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin-left: 0;
+    display: block;
+  }
+
+  nav a:first-of-type {
+    margin-bottom: 6px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="https://mn06watch.com">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div>
+    <a href="/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<div class="container">
+
+<h1>Who Is He Talking To?</h1>
+<p class="subtitle">What Tom Emmer says depends on who's in the room. We read 810 transcripts over 11 years to prove it.</p>
+
+<div class="opening-para">
+<strong>MN-06 Watch independently transcribes every media appearance by Rep. Tom Emmer.</strong> We have 810 transcripts spanning 11 years. We analyzed all of them to answer one question: does he talk differently depending on who's listening? The answer is yes.
+</div>
+
+<div class="stat-bar">
+  <div class="stat-item">
+    <div class="stat-number">810</div>
+    <div class="stat-label">Transcripts</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">300+</div>
+    <div class="stat-label">Full PDFs Read</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">11</div>
+    <div class="stat-label">Years</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-number">5</div>
+    <div class="stat-label">Audiences</div>
+  </div>
+</div>
+
+<!-- ===================== WHEN DID HE CHANGE ===================== -->
+<h2>When Did He Change? Six Stages of Transformation</h2>
+
+<h3>Stage 1: The Humble Freshman (2015–2016)</h3>
+
+<p><span class="badge badge-green">Calm, Professional</span></p>
+
+<p>Reading all committee hearings and floor speeches from this period shows a congressman who was collaborative and deferential. He praised Democratic colleagues by name, told a committee "I still have a lot to learn," and explicitly stated "this really shouldn't be partisan at all."</p>
+
+<p><strong>Key data point:</strong> July 19, 2017 — the terrorist financing committee hearing — is where Emmer first discusses the Somali community. His tone was protective: he described Minnesota as having "one of the largest populations of Somali-Americans" and emphasized that remittances were legitimate family connections that needed to coexist with security. This is the opposite of the 2026 framing.</p>
+
+<h3>Stage 2: The Quiet Legislator (2017–2018)</h3>
+
+<p><span class="badge badge-green">Professional</span></p>
+
+<p>With Republicans controlling Congress and the White House, there was no strategic need for attack rhetoric. Emmer's transcripts from this period are technical: cryptocurrency hearings, banking regulation, flood insurance. He could be combative when needed, but the default mode was constituent service and policy.</p>
+
+<h3>Stage 3: The First Cracks (2019–2020)</h3>
+
+<p><span class="badge badge-yellow">Getting Partisan</span></p>
+
+<p>As NRCC Chair (fundraiser for House races), Emmer's job required sharper messaging. But even in 2020, George Floyd's death produced surprisingly little in his transcripts. The "defund" language entered his tweets in 2020, but not his official statements.</p>
+
+<h3>Stage 4: The Pivot (March 2021)</h3>
+
+<p><span class="badge badge-orange">Aggressive</span></p>
+
+<p>As House Republican Conference Chair (the party's messaging chief), everything changed. For the first time, Emmer scored 5/5: "This is so dirty...literally spying on American citizens" (Oct 28, 2021). The combative register shifted from exception to default.</p>
+
+<h3>Stage 5: Attack Mode Normalizes (2022)</h3>
+
+<p><span class="badge badge-orange">Aggressive</span></p>
+
+<p>2022 consolidated what 2021 started. The language intensified across partisan contexts. But notice what's still absent: no Walz by name, no Ellison, no Somali references, no fraud narrative. The style was established, but the Minnesota-specific targets hadn't been identified yet.</p>
+
+<h3>Stage 6: The Full Transformation (2023–2026)</h3>
+
+<p><span class="badge badge-red">Most Extreme</span></p>
+
+<p>As Majority Whip (third-ranking House Republican), Emmer had a national platform and weekly C-SPAN stakeout access. But the escalation was not gradual — it was a step-change in late 2025 coinciding with Trump's second term, the Feeding Our Future narrative, and ICE enforcement in Minnesota.</p>
+
+<p>By January 2026, the same congressman who humbly learned about financial policy in 2015 was comparing Tim Walz to Jefferson Davis and calling for him to "leave the office in handcuffs" on live television.</p>
+
+<h3>The Career Ladder Explains It</h3>
+
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Years</th>
+    <th>What the Job Required</th>
+    <th>How He Talked</th>
+  </tr>
+  <tr>
+    <td>Backbench (Financial Services)</td>
+    <td>2015–2018</td>
+    <td>Build relationships, learn policy, serve constituents</td>
+    <td><span class="badge badge-green">Professional</span></td>
+  </tr>
+  <tr>
+    <td>NRCC Chair (Recruiter)</td>
+    <td>2019–2020</td>
+    <td>Win House seats — requires sharper messaging</td>
+    <td><span class="badge badge-yellow">Partisan</span></td>
+  </tr>
+  <tr>
+    <td>Conference Chair (Messaging Chief)</td>
+    <td>2021–2022</td>
+    <td>Craft and deliver party attack lines — this is the voice of the caucus</td>
+    <td><span class="badge badge-orange">Aggressive</span></td>
+  </tr>
+  <tr>
+    <td>Majority Whip (Enforcer)</td>
+    <td>2023–present</td>
+    <td>Whip votes AND serve as party's most visible attack voice</td>
+    <td><span class="badge badge-orange">Aggressive</span></td>
+  </tr>
+  <tr>
+    <td>+ Trump II Alignment</td>
+    <td>2025–present</td>
+    <td>Align rhetoric with Trump agenda, demonstrate loyalty through escalation</td>
+    <td><span class="badge badge-red">Most Extreme</span></td>
+  </tr>
+</table>
+
+<p>The finding: it became politically advantageous for Emmer to change how he talked at each step up the ladder. Each promotion rewarded sharper rhetoric. The man who told a committee in 2015 "I still have a lot to learn" did not change his beliefs so much as his incentive structure. By 2026, the incentives demanded "Send them home."</p>
+
+
+<h2 style="margin-top: 60px;">What This Means</h2>
+
+<p>The data shows that Tom Emmer is not simply "more conservative" on conservative media. He operates with five different rhetorical registers depending on his audience. The more scrutiny he faces (mainstream journalists, fact-checkers, mixed audiences), the more measured his language becomes. The less scrutiny he faces (local conservative radio, niche podcasts), the more extreme he becomes.</p>
+
+<p>This is not a slip or a mistake. It's consistent across hundreds of appearances over eleven years. Each audience gets a version of Tom Emmer calibrated to that audience's expectations.</p>
+
+<p>The most concerning finding: the guardrails are eroding. Language that stayed on local radio in 2025 appeared on national television in January 2026. Language that stayed on conservative media is now appearing on C-SPAN — the official congressional record. The wall between local rhetoric and national rhetoric, between talk radio and official government speech, has been demolished.</p>
+
+
+<!-- ===================== SIDE-BY-SIDE COMPARISONS ===================== -->
+<h2>The Same Week, Different Words</h2>
+
+<p>These pairs show Emmer talking about similar topics within days of each other, but with completely different language depending on his audience. The core position is the same. The way he expresses it is not.</p>
+
+<h3>Pair 1: February 16, 2026 — Same Morning, Two Different People</h3>
+
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>Fox & Friends (Fox News, February 16, 2026)</h4>
+    <div class="quote">
+      "What they're doing, Lawrence, is they want reforms that, frankly, protect illegals and criminals at the expense of taxpaying citizens."
+      <span class="quote-source">emmer-fox-friends-February 16, 2026.pdf</span>
+    </div>
+    <div class="quote">
+      "Tim Walls and Jacob Frye should be thanking President Trump for doing their job. They took 4,000 illegals off the streets of Minneapolis. Some of the worst of the worst, rapists, murderers, drug dealers, pedophiles."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <p><span class="badge badge-orange">Aggressive</span> Democrats "protect illegals and criminals." Walz and Frey attacked by name — told to thank Trump. "Rapists, murderers, drug dealers, pedophiles."</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>CBS Mornings (CBS, February 16, 2026)</h4>
+    <div class="quote">
+      "Now they want law enforcement agents to show IDs, but they don't think people should show an ID to vote. There's some type of intellectual disconnect."
+      <span class="quote-source">emmer-cbs-mornings-February 16, 2026.pdf</span>
+    </div>
+    <div class="quote">
+      "This was an agreement between Democrats and Republicans on the House side that the Senate Democrats decided they were not going to honor."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <p><span class="badge badge-green">Professional</span> Same topic, same morning. Framed as a policy disagreement — an "intellectual disconnect." Zero personal attacks. Walz and Frey not mentioned. Uses "Democrats" not "illegals and criminals." Calls the bipartisan bill an "agreement."</p>
+  </div>
+</div>
+
+<p class="comparison-explanation">Same man, same morning, same topic. On Fox, Democrats "protect illegals and criminals" and Walz should be thanking Trump. On CBS, it's a policy "disconnect" and an "agreement" that wasn't honored.</p>
+
+<h3>Pair 2: January 14–16 vs. January 21, 2026 — Fraud and Local Leaders</h3>
+
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>Twin Cities News Talk (KTLK, January 14, 2026)</h4>
+    <div class="quote">
+      "You know, the boy toy mayor who's not really a leader. He thinks he's trying to be the next Gavin Newsom."
+      <span class="quote-source">emmer-twin-cities-news-talk-–-january-14,-2026-20260114.pdf</span>
+    </div>
+    <div class="quote">
+      "Mary Moriarty...she's a cop hating, lying county attorney that really should have been disbarred."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <div class="quote">
+      "These guys foment this violence and this property destruction presumably to take everyone's eyes off the unbelievable fraud."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <p><span class="badge badge-red">Most Extreme</span> Personal attacks on Frey ("boy toy"), Moriarty ("cop hating, lying"). Accuses elected officials of deliberately fomenting violence as a cover-up.</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>Fox 9 Local (January 21, 2026)</h4>
+    <div class="quote">
+      "We disagree, but that doesn't mean we dislike each other. Just because somebody doesn't agree with your point of view doesn't mean that they're your enemy. We all basically want the same things, Amy."
+      <span class="quote-source">emmer-fox-9-all-day-–-january-21,-2026-20260121.pdf</span>
+    </div>
+    <p><span class="badge badge-yellow">Mildly Partisan</span> One week later, same state, same topics. Opens with a conciliatory frame. Still criticizes Ellison and Walz, but with measured language. No "boy toy," no "cop hating," no character attacks.</p>
+  </div>
+</div>
+
+<p class="comparison-explanation">The same congressman. One week apart. Two completely different people.</p>
+
+<h3>Pair 3: KNSI Radio vs. CNBC — Two Universes</h3>
+
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>Hot Talk with the Ox (KNSI, January 16, 2026)</h4>
+    <div class="quote">
+      "Tim Walz...literally he sounds like Jefferson Davis. It's almost like he wants to secede from the union."
+      <span class="quote-source">emmer-hot-talk-with-the-ox-–-january-16,-2026-20260116.pdf</span>
+    </div>
+    <div class="quote">
+      "If that's true, this guy should not just resign, he should leave the office in handcuffs."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <div class="quote">
+      "Joe indicted 86 people, 90% of which are from the Somali community."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <p><span class="badge badge-red">Most Extreme</span> Confederate comparisons. Calls for criminal prosecution of a sitting governor. Uses ethnic identifiers for fraud suspects.</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>CNBC Squawk Box (January 27, 2025)</h4>
+    <div class="quote">
+      "Donald Trump is the master negotiator."
+      <span class="quote-source">emmer-the-squawk-box-–-2025-20250127.pdf</span>
+    </div>
+    <p><span class="badge badge-green">Professional</span> Entirely policy-focused. Discusses inspector general firings, TikTok, AI. Zero mentions of Walz, Ellison, fraud, or Minnesota politics. No personal attacks. Different universe of discourse.</p>
+  </div>
+</div>
+
+<p class="comparison-explanation">These aren't the same week — the CNBC appearance is a year earlier. But that's part of the point: on CNBC, Emmer has never once sounded like the person who appears on KNSI. The language gap between these two platforms is the widest in the entire dataset.</p>
+
+<h3>Pair 4: November 12–14, 2025 — Shutdown Politics</h3>
+
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>Hot Talk with the Ox (KNSI)</h4>
+    <div class="quote">
+      "This New Yorker who took a knee to a Marxist communist anti-semite mayor."
+      <span class="quote-source">Hot Talk with the Ox, November 12, 2025 (re: Hakeem Jeffries)</span>
+    </div>
+    <div class="quote">
+      "The worthless minority leader...he'll gaslight the American people yet again."
+      <span class="quote-source">Same transcript</span>
+    </div>
+    <p><span class="badge badge-orange">Aggressive</span> "Marxist communist anti-semite." "Worthless" minority leader.</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>CNBC Squawk Box (Nov 14, 2025)</h4>
+    <div class="quote">
+      "They broke health care in this country with something called the Affordable Care Act."
+      <span class="quote-source">CNBC Squawk Box, November 14, 2025</span>
+    </div>
+    <p><span class="badge badge-yellow">Heated</span> Same week, same shutdown topic. Uses sharp framing ("broke health care") but stays policy-oriented. No "Marxist," no character attacks.</p>
+  </div>
+</div>
+
+<p class="comparison-explanation">On conservative radio, his opponents are existential threats. On mainstream, they're just wrong.</p>
+
+<h3>Pair 5: December 2, 2025 — Same Day, Official vs. Cable</h3>
+
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>C-SPAN House Leadership Stakeout (Official Congressional Setting)</h4>
+    <div class="quote">
+      "One billion dollars. That's how much money has been stolen...78 are of Somali descent...taxpayer dollars have allegedly been diverted to al-Shabaab terrorists."
+      <span class="quote-source">C-SPAN House Leadership Stakeout, December 2, 2025</span>
+    </div>
+    <p><span class="badge badge-red">Most Extreme</span> The first time the fraud narrative appears in an official congressional setting. Somali ethnic identifier, al-Shabaab claim, preemptive racism defense.</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>Kudlow (Fox Business, Same Day)</h4>
+    <div class="quote">
+      "Tim Walz and Keith Ellison...they actually stopped people, actively stopped people from investigating this fraud. This is not incompetence...somebody being complicit in this act."
+      <span class="quote-source">Kudlow, December 2, 2025</span>
+    </div>
+    <p><span class="badge badge-orange">Aggressive</span> Same day, same topic. Framing shifts from ethnic to political. Somali identifier is used but the emphasis is on Walz/Ellison complicity. National audience gets a controlled version.</p>
+  </div>
+</div>
+
+<p class="comparison-explanation">The narrative testing ground: official podium (5/5) → business cable (4/5) → mainstream (removed entirely).</p>
+
+<h3>Pair 6: December 31, 2025 vs. January 4, 2026 — Same Network, Different Shows</h3>
+
+<div class="comparison">
+  <div class="comp-col conservative">
+    <div class="comp-label">What he said on The Story (Fox News, Dec 31, 2025)</div>
+    <div class="quote">
+      "Tim Walz is a fraud himself. It's not just that he's allowed fraud to happen. He's a fraud."
+      <span class="quote-source">emmer-the-story-–-december-31,-2025-20251231.pdf</span>
+    </div>
+    <p><span class="badge badge-red">Most extreme</span> Somali, al-Shabaab, daycare fraud. Personal character attack on governor.</p>
+  </div>
+  <div class="comp-col mainstream">
+    <div class="comp-label">What he said on Sunday Morning Futures (Fox News, Jan 4, 2026)</div>
+    <div class="quote">
+      Procedural discussion of executive action and DOJ investigations. No Somali, no fraud, no Walz, no ethnic identifiers.
+      <span class="quote-source">emmer-sunday-morning-futures-–-january-4,-2026-20260104.pdf</span>
+    </div>
+    <p><span class="badge badge-green">Calm, professional</span> Four days later, same network. Bartiromo asked about executive action and Emmer followed.</p>
+  </div>
+</div>
+<p class="comparison-explanation">This pair matters because both are Fox News. The difference isn't the network — it's the show format. When hosts open the door to inflammatory content, he walks through it. When they don't, he stays measured.</p>
+
+<h3>Pair 7: Kudlow vs. Kudlow — Same Show, Same Host, Different Weeks</h3>
+<div class="comparison-pair">
+  <div class="comparison-col conservative">
+    <h4>Kudlow (Fox Business, January 29, 2026)</h4>
+    <div class="quote">
+      "The worst of the worst: the rapists, the murderers...Jacob Frey, Tim Walz, and Keith Ellison have been more interested in protecting than the American citizen."
+      <span class="quote-source">emmer-kudlow-20260129.pdf</span>
+    </div>
+    <p><span class="badge badge-orange">Aggressive</span> Personal attacks on three elected officials by name. ICE enforcement focus.</p>
+  </div>
+  <div class="comparison-col mainstream">
+    <h4>Kudlow (Fox Business, February 16, 2026)</h4>
+    <div class="quote">
+      "If they fight it, they just want fraud."
+      <span class="quote-source">emmer-kudlow-20260216.pdf</span>
+    </div>
+    <p><span class="badge badge-green">Professional</span> Same show, same host, three weeks later. Topic shifted to voter ID and the shutdown. Zero Minnesota fraud, zero personal attacks.</p>
+  </div>
+</div>
+<p class="comparison-explanation">Same show, same host — but the topic changed. When Kudlow asks about ICE, Emmer attacks Walz by name. When the subject is voter ID, he drops to a standard policy frame. The Somali fraud narrative is deployed selectively, not reflexively.</p>
+
+<p>Additional side-by-side comparisons show the same pattern: personal attacks on Frey, Moriarty, and Walz appear only on local conservative radio. The "lie, cheat, and steal" language about Somali immigrants appears on national Fox News. The $9 billion fraud figure inflates the actual $250 million case by 36x on local radio. The al-Shabaab terrorism-financing narrative grows more extreme as the audience size shrinks.</p>
+
+<!-- ===================== THINGS HE ONLY SAYS HERE ===================== -->
+<h2>Things He Says on Local Radio That He Won't Say Anywhere Else</h2>
+
+<p>On KNSI and KTLK, local conservative radio stations in his district, Emmer says things he never says on national TV. Here's the complete list from all 8 local conservative radio transcripts read:</p>
+
+<table>
+  <tr>
+    <th>Statement / Phrase</th>
+    <th>Show & Date</th>
+    <th>Appears on Mainstream?</th>
+  </tr>
+  <tr>
+    <td>"He should leave the office in handcuffs" (re: Walz)</td>
+    <td>KNSI, Jan 16, 2026</td>
+    <td>Similar language on America Reports; never on mainstream local or national mainstream</td>
+  </tr>
+  <tr>
+    <td>"Boy toy mayor who's not really a leader"</td>
+    <td>KTLK, Jan 14, 2026</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>"Cop hating, lying county attorney that really should have been disbarred"</td>
+    <td>KTLK, Jan 14, 2026</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>"Worthless minority leader" / "worthless sack of manure" (re: Star Tribune)</td>
+    <td>KNSI, Nov 12, 2025 / KTLK, Jan 9, 2026</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>"Marxist communist anti-semite mayor"</td>
+    <td>KNSI, Nov 12, 2025</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>"Use crayons instead of pens and paper" (re: Democrats)</td>
+    <td>KNSI, Mar 19, 2026</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>"This thug, this religious thug" (re: Iranian leader)</td>
+    <td>KNSI, Mar 19, 2026</td>
+    <td>Never</td>
+  </tr>
+  <tr>
+    <td>Proposing denaturalization bill targeting Somali immigrants by name</td>
+    <td>KTLK, Jan 9, 2026</td>
+    <td>Referenced on Fox 9, but without naming Somali community</td>
+  </tr>
+  <tr>
+    <td>"Coming from a country where they had to lie, cheat, and steal to survive" (Somali reference)</td>
+    <td>KTLK, Jan 9, 2026</td>
+    <td><strong>Yes</strong> — Faulkner Focus (Jan 22), Big Weekend Show (Jan 17), Just the News (Jan 13) — now on national TV</td>
+  </tr>
+  <tr>
+    <td>"85 of them are Somali" / "90% Somali"</td>
+    <td>KNSI Jan 16, KTLK Jan 9</td>
+    <td><strong>Yes</strong> — Now on C-SPAN stakeout (Jan 7), America Reports, Fox & Friends, Faulkner Focus, national appearances</td>
+  </tr>
+</table>
+
+<p style="margin-top: 20px; color: var(--med);"><em>Key finding: The most extreme local-radio language has now migrated to national outlets, but the $9 billion total figure and the most inflammatory personal attacks remain local-only.</em></p>
+
+<!-- ===================== THE NUMBERS THAT TELL THE STORY ===================== -->
+<h2>The Numbers That Tell the Story</h2>
+
+<h3>The Bipartisan Collapse</h3>
+
+<table>
+  <tr>
+    <th>Term</th>
+    <th>2017</th>
+    <th>2019</th>
+    <th>2021 (Peak)</th>
+    <th>2025</th>
+    <th>2026</th>
+  </tr>
+  <tr>
+    <td>"bipartisan"</td>
+    <td>5</td>
+    <td>5</td>
+    <td>32</td>
+    <td>3</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>"my colleagues"</td>
+    <td>2</td>
+    <td>6</td>
+    <td>26</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>"across the aisle"</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<p>The vocabulary of cooperation has been systematically replaced by combat vocabulary. By 2026, Emmer no longer uses bipartisan language at all.</p>
+
+<h3>The Fraud Figure Inflation — Same Case, Different Audience</h3>
+
+<div class="card">
+  <p><strong>Actual case amount:</strong> $250 million (Feeding Our Future)</p>
+  <p><strong>On Salem Radio:</strong> $250 million</p>
+  <p><strong>On KNSI/KTLK local radio:</strong> $9 billion</p>
+  <p><strong>Inflation factor:</strong> 36x</p>
+  <p style="margin-top: 12px; color: var(--med);">The exact same fraud case is described as $250 million on one outlet and $9 billion on another — and nobody pushes back on local radio.</p>
+</div>
+
+<h3>The "St. Cloud" Vanishing Act</h3>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>2017-2019</th>
+    <th>2020</th>
+    <th>2022</th>
+    <th>2024</th>
+    <th>2025</th>
+    <th>2026</th>
+  </tr>
+  <tr>
+    <td>Mentions of St. Cloud in tweets</td>
+    <td>12-14 per year</td>
+    <td>30</td>
+    <td>10</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+</table>
+
+<p>Once he became House Majority Whip, district references disappeared. He shifted from constituent-focused messaging to national partisan messaging.</p>
+
+<h3>The Walz Obsession Timeline</h3>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>2017-2019</th>
+    <th>2020</th>
+    <th>2023</th>
+    <th>2024</th>
+    <th>2025</th>
+    <th>2026 (3 months)</th>
+  </tr>
+  <tr>
+    <td>Mentions of "Walz" in tweets</td>
+    <td>1-2</td>
+    <td>15</td>
+    <td>1</td>
+    <td>14</td>
+    <td>35</td>
+    <td>55</td>
+  </tr>
+</table>
+
+<p>This is not a longstanding rivalry. It's a manufactured target that surged with Trump's second term in 2025.</p>
+
+<h3>The Ethnic Identifier Pattern</h3>
+
+<div class="card alert">
+  <p><strong>Before mid-2025:</strong> Zero uses of "Somali" in any transcript outside of a 2017 protective reference to Minnesota's Somali-American community.</p>
+  <p><strong>From July 2025 onward:</strong> Escalating ethnic identifiers tied to crime (July), then fraud (December), then terrorism-financing (January).</p>
+  <p><strong>July 2025:</strong> "Somali gangs are incredibly dangerous."</p>
+  <p><strong>December 2025:</strong> "78 are of Somali descent."</p>
+  <p><strong>January 2026:</strong> "90% of them come from the Somali community" + "lie, cheat, and steal to survive" cultural characterization.</p>
+  <p><strong>The terrorism-financing narrative escalates by outlet.</strong> On national Fox, Emmer references "Somali fraudsters." On Just the News, he escalates to "$5 million directly to al-Shabaab" and "$700 million in cash leaving Minneapolis airport." On The John Fredericks Show (a niche conservative podcast, January 22, 2026), he claims "$750 million in suitcases of cash from Columbus, Ohio...shipped to Dubai...to Al-Shabaab." Each step down in audience accountability produces a more extreme claim.</p>
+</div>
+
+<!-- ===================== HOW $250 MILLION BECAME $9 BILLION ===================== -->
+<h2>How $250 Million Became $9 Billion</h2>
+
+<p>The Feeding Our Future fraud case involved approximately $250 million in federal dollars diverted. But the figure he cites changes dramatically depending on the audience.</p>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Show</th>
+    <th>Audience</th>
+    <th>Amount Cited</th>
+    <th>Somali Identifier?</th>
+  </tr>
+  <tr>
+    <td>Jul 17, 2025</td>
+    <td>The Bottom Line</td>
+    <td>National Conservative</td>
+    <td>N/A (crime, not fraud)</td>
+    <td>Yes — "Somali gangs"</td>
+  </tr>
+  <tr>
+    <td>Nov 21, 2025</td>
+    <td>Chris Stigall Show</td>
+    <td>National Conservative</td>
+    <td>$250 million</td>
+    <td>No</td>
+  </tr>
+  <tr style="background: rgba(192, 57, 43, 0.08);">
+    <td><strong>Dec 2, 2025</strong></td>
+    <td><strong>House Leadership Stakeout</strong></td>
+    <td><strong>Official Congressional</strong></td>
+    <td><strong>$1 billion</strong></td>
+    <td><strong>Yes</strong></td>
+  </tr>
+  <tr>
+    <td>Dec 2, 2025</td>
+    <td>Kudlow</td>
+    <td>National Conservative</td>
+    <td>Referenced (without specific total)</td>
+    <td>Yes — "Somali fraudsters"</td>
+  </tr>
+  <tr>
+    <td>Dec 5, 2025</td>
+    <td>Larry Kudlow Show</td>
+    <td>National Conservative</td>
+    <td>$250M+</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Dec 23, 2025</td>
+    <td>Making Money</td>
+    <td>National Conservative</td>
+    <td>$250M + "$9 billion"</td>
+    <td>Yes — "90% Somali"</td>
+  </tr>
+  <tr>
+    <td>Dec 29, 2025</td>
+    <td>Hannity</td>
+    <td>National Conservative (Prime)</td>
+    <td>$9 billion</td>
+    <td>Yes — "90% Somali"</td>
+  </tr>
+  <tr>
+    <td>Jan 7, 2026</td>
+    <td>House Leadership Stakeout</td>
+    <td>Official Congressional</td>
+    <td>$9 billion</td>
+    <td>Yes — "Somali fraudsters"</td>
+  </tr>
+  <tr>
+    <td>Jan 8, 2026</td>
+    <td>America Reports</td>
+    <td>National Conservative</td>
+    <td>$9B + $250M</td>
+    <td>Yes</td>
+  </tr>
+  <tr style="background: rgba(0, 0, 0, 0.02);">
+    <td>Feb 16, 2026</td>
+    <td>CBS Mornings</td>
+    <td>National Mainstream</td>
+    <td>Not discussed</td>
+    <td>No</td>
+  </tr>
+  <tr style="background: rgba(0, 0, 0, 0.02);">
+    <td>Feb 24, 2026</td>
+    <td>Squawk Box</td>
+    <td>National Mainstream</td>
+    <td>Not discussed</td>
+    <td>No</td>
+  </tr>
+</table>
+
+<div class="card alert" style="margin-top: 20px;">
+<h3 style="margin-top: 0;">The January 7, 2026 C-SPAN Stakeout: Everything in One Speech</h3>
+<p>On January 7, 2026, standing at the House Leadership Stakeout podium on C-SPAN — the official press briefing platform for the third-ranking Republican in Congress — Emmer delivered a statement that combined every element previously documented across local radio, niche podcasts, and conservative cable into a single official speech:</p>
+<div class="quote">
+  "That's nine billion dollars stolen from hard-working Americans to fund lavish lifestyles for Somali fraudsters and bankroll Al-Shabaab terrorists."
+  <span class="quote-source">C-SPAN House Leadership Stakeout, January 7, 2026 — emmer-house-leadership-stakeout-20260107-FULL.pdf</span>
+</div>
+<div class="quote">
+  "And I have three words regarding Somalis who have committed fraud against the American taxpayer and have refused to assimilate as Americans. Send them home."
+  <span class="quote-source">Same transcript</span>
+</div>
+<div class="quote">
+  "Our embarrassment of a governor and sorry excuse for an attorney general...Our worthless paper back at home..."
+  <span class="quote-source">Same transcript</span>
+</div>
+<p>This single C-SPAN appearance contained: "Somali" four times, the $9 billion inflated figure stated twice, Al-Shabaab terrorism financing, "Send them home," "refused to assimilate," "worthless paper" (Star Tribune), and personal attacks on the governor and attorney general. The language that began on KNSI radio had crossed into the congressional record.</p>
+</div>
+
+<p><strong>The pattern:</strong> The $9 billion figure aggregates the Feeding Our Future case ($250M) with unrelated housing fraud, autism center fraud, SBA loan fraud, and HUD payment fraud — none of which have been adjudicated at those totals. The figure inflates dramatically as the audience accountability decreases. On national mainstream, the fraud narrative vanishes entirely.</p>
+
+<div class="card" style="background: linear-gradient(135deg, #1B3A5C 0%, #234B73 100%); border: none; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 40px 0;">
+  <div>
+    <strong style="color: #C8922A; font-family: 'Playfair Display', serif;">Explore the Interactive Data</strong><br>
+    <span style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Heat map, divergence chart, career timeline, keyword tracker, and gap map.</span>
+  </div>
+  <a href="emmer-rhetoric-visualizations.html" style="background: #C8922A; color: #fff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-family: 'DM Mono', monospace; font-weight: 500; font-size: 0.85rem; white-space: nowrap;">Explore the full interactive data &rarr;</a>
+</div>
+
+<!-- ===================== METHODOLOGY & DETAILS ===================== -->
+<h2>How We Did This Work</h2>
+
+<details>
+<summary>Click to expand methodology and sourcing</summary>
+
+<h3>The Audience Tier System</h3>
+
+<p>Every transcript was categorized into one of five audience tiers:</p>
+
+<table>
+  <tr>
+    <th>Tier</th>
+    <th>Outlets</th>
+    <th>Audience Size</th>
+    <th>Host Pushback</th>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Tier 1: Mainstream</span></td>
+    <td>NBC, ABC, CBS, CNN, Bloomberg, NewsNation</td>
+    <td>Large, mixed</td>
+    <td>Frequent</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-yellow">Tier 2: Business Cable</span></td>
+    <td>CNBC Squawk Box, Bloomberg</td>
+    <td>Large, investor-focused</td>
+    <td>Frequent</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-orange">Tier 3: Conservative Cable</span></td>
+    <td>Fox News, Fox Business, Newsmax, Salem</td>
+    <td>Large, pre-selected</td>
+    <td>Rare</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-orange">Tier 4: Niche Conservative</span></td>
+    <td>Breitbart, podcasts, niche shows</td>
+    <td>Medium, highly filtered</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-red">Tier 5: Local Conservative Radio</span></td>
+    <td>KNSI, KTLK, local AM stations</td>
+    <td>Small, pre-selected</td>
+    <td>None (hosts amplify)</td>
+  </tr>
+</table>
+
+<p>Rhetorical intensity was scored 1–5 for each transcript using these criteria:</p>
+<ul>
+  <li><strong>1/5 (Professional):</strong> Policy framing, respect for opposition, measured language</li>
+  <li><strong>2/5 (Partisan):</strong> Party labels, "Democrats," criticism but institutional framing</li>
+  <li><strong>3/5 (Heated):</strong> "Radical," sharp attacks, dehumanizing language beginning</li>
+  <li><strong>4/5 (Aggressive):</strong> Personal attacks by name, "Marxist," "communist," calls for prosecution</li>
+  <li><strong>5/5 (Most Extreme):</strong> "Handcuffs," "disbarred," ethnic identifiers, terrorism claims, dehumanizing language</li>
+</ul>
+
+<h3>What We Read</h3>
+
+<p><strong>Total transcripts analyzed: 300+ full PDFs from a 795-file archive</strong></p>
+
+<ul>
+  <li>Every C-SPAN House Leadership Stakeout (2023–2026): 60+ transcripts</li>
+  <li>Every C-SPAN press conference (2023–2026): 40+ transcripts</li>
+  <li>Every Kudlow appearance (2023–2026): 8 transcripts</li>
+  <li>Every Cavuto appearance (2023–2024): 6 transcripts</li>
+  <li>Every Making Money appearance: 5 transcripts</li>
+  <li>Every Bottom Line appearance: 6 transcripts</li>
+  <li>Fox primetime/weekend shows: 9 transcripts</li>
+  <li>All local conservative radio (KNSI, KTLK, AM 1420): 8 transcripts</li>
+  <li>National mainstream media (CBS, NBC, ABC, CNN, CNBC): 15+ transcripts</li>
+  <li>Niche conservative (Breitbart, John Fredericks, Just the News): 12+ transcripts</li>
+  <li>Complete 2015–2019 baseline (committee hearings, floor speeches): 70+ transcripts</li>
+</ul>
+
+<p><strong>Tweet analysis:</strong> 10,990 original tweets analyzed for keyword frequency across all years (2017–2026).</p>
+
+<h3>Key Findings Summary</h3>
+
+<table>
+  <tr>
+    <th>Finding</th>
+    <th>Evidence</th>
+  </tr>
+  <tr>
+    <td>Somali ethnic identifier absent before mid-2025</td>
+    <td>Zero Somali references in all 2023 C-SPAN stakeouts (16), all 2024 stakeouts (31), all 2023–2024 Fox Business (15). First non-radio Somali reference: July 17, 2025 (crime frame). First fraud-context Somali: Dec 2, 2025.</td>
+  </tr>
+  <tr>
+    <td>Mainstream media is a complete firewall</td>
+    <td>Zero Somali, zero fraud, zero Walz, zero Ellison across ALL CNBC appearances (9), ALL CBS/NBC/ABC/CNN appearances (15+). The word "Somali" does not appear once.</td>
+  </tr>
+  <tr>
+    <td>C-SPAN fraud rhetoric emerged abruptly</td>
+    <td>83 stakeouts/press conferences from 2023–November 2025 contain zero Somali fraud language. Then December 2, 2025 = full fraud narrative. Not gradual.</td>
+  </tr>
+  <tr>
+    <td>Local conservative radio is the intensity peak</td>
+    <td>8 KNSI/KTLK transcripts average 4.5/5. Zero host pushback across all eight. Hosts amplify claims, never challenge.</td>
+  </tr>
+  <tr>
+    <td>The $9 billion figure is local/niche-only</td>
+    <td>Salem Radio: $250M (accurate). KNSI/KTLK: $9B. Inflation factor: 36x. No fact-checking on local radio.</td>
+  </tr>
+</table>
+
+<h3>Complete Sourcing Table</h3>
+
+<p>Every quote in this report is traceable to a specific transcript PDF. The following are the primary sources referenced:</p>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Show</th>
+    <th>PDF Filename</th>
+  </tr>
+  <tr>
+    <td>Jan 7, 2026</td>
+    <td>House Leadership Stakeout (C-SPAN)</td>
+    <td>emmer-house-leadership-stakeout-20260107-FULL.pdf</td>
+  </tr>
+  <tr>
+    <td>Dec 2, 2025</td>
+    <td>House Leadership Stakeout (C-SPAN)</td>
+    <td>emmer-house-leadership-stakeout-December-02-2025.pdf</td>
+  </tr>
+  <tr>
+    <td>Jan 14, 2026</td>
+    <td>Twin Cities News Talk (KTLK)</td>
+    <td>emmer-twin-cities-news-talk-–-january-14,-2026-20260114.pdf</td>
+  </tr>
+  <tr>
+    <td>Jan 16, 2026</td>
+    <td>Hot Talk with the Ox (KNSI)</td>
+    <td>emmer-hot-talk-with-the-ox-–-january-16,-2026-20260116.pdf</td>
+  </tr>
+  <tr>
+    <td>Jan 21, 2026</td>
+    <td>Fox 9 All Day</td>
+    <td>emmer-fox-9-all-day-–-january-21,-2026-20260121.pdf</td>
+  </tr>
+  <tr>
+    <td>Feb 6, 2026</td>
+    <td>Fox 9</td>
+    <td>emmer-fox-9-February-06-2026.pdf</td>
+  </tr>
+  <tr>
+    <td>Feb 12, 2026</td>
+    <td>House Committee Hearing (C-SPAN)</td>
+    <td>emmer-house-committee-hearing-February-12-2026.pdf</td>
+  </tr>
+  <tr>
+    <td>Feb 16, 2026</td>
+    <td>Fox & Friends</td>
+    <td>emmer-fox-friends-February-16-2026.pdf</td>
+  </tr>
+  <tr>
+    <td>Feb 16, 2026</td>
+    <td>CBS Mornings</td>
+    <td>emmer-cbs-mornings-February-16-2026.pdf</td>
+  </tr>
+  <tr>
+    <td>Feb 24, 2026</td>
+    <td>Squawk Box (CNBC)</td>
+    <td>emmer-squawk-box-20260224.pdf</td>
+  </tr>
+  <tr>
+    <td>Dec 2, 2025</td>
+    <td>Kudlow (Fox Business)</td>
+    <td>emmer-kudlow-December-02-2025.pdf</td>
+  </tr>
+  <tr>
+    <td>Jan 22, 2026</td>
+    <td>The Faulkner Focus (Fox News)</td>
+    <td>emmer-the-faulkner-focus-20260122.pdf</td>
+  </tr>
+  <tr>
+    <td>Jan 13, 2026</td>
+    <td>Just the News</td>
+    <td>emmer-just-the-news-20260113.pdf</td>
+  </tr>
+</table>
+
+<p style="color: var(--light); font-size: 0.9rem; margin-top: 20px;">Analysis compiled April 5, 2026 (updated). Based on 810 transcript metadata entries, 300+ full PDF transcript readings (near-complete archive), and 10,990 original tweets. All quotes sourced from PDF transcripts. The Jan 7, 2026 C-SPAN stakeout transcript was recovered from video source after the original PDF was found blank. Methodology: Transcripts categorized by network using the 5-tier audience system. Rhetorical intensity scored 1–5 per transcript. Complete 2015–2019 baseline established. All C-SPAN stakeouts/press conferences read across full 2023–2026 archive. Language tracked via keyword frequency analysis with verification against full PDFs.</p>
+
+</details>
+
+</div>
+
+<footer>
+  <a href="https://mn06watch.com">MN06Watch</a> · Independent accountability journalism · mn06watch@gmail.com
+  <br>We document what your representative does. You decide what it means.
+</footer>
+
+</body>
+</html>

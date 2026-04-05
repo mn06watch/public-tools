@@ -1,0 +1,260 @@
+================================================================================
+REP. TOM EMMER AUDIENCE-BASED MESSAGING ANALYSIS
+Complete Analysis Index
+================================================================================
+
+ANALYSIS COMPLETED: April 4, 2026
+SUBJECT: Rep. Tom Emmer (R-Minnesota, House Majority Whip)
+SCOPE: 8 transcript pairs from October 2025 - March 2026
+TOTAL TRANSCRIPTS ANALYZED: 17 interviews across 16 shows
+
+================================================================================
+FILES IN THIS ANALYSIS
+================================================================================
+
+1. EMMER_ANALYSIS_EXECUTIVE_SUMMARY.txt (16 KB)
+   → Start here for quick findings and key patterns
+   → Includes rhetorical intensity scores
+   → Shows what facts appear where
+   → Explains audience implications
+   → KEY SECTIONS:
+     - Language intensity comparison
+     - Evidence of selective emphasis
+     - Tone differences when challenged
+     - Fact-check consistency table
+     - Conclusion summary
+
+2. EMMER_AUDIENCE_ANALYSIS.txt (44 KB)
+   → Complete pair-by-pair detailed analysis
+   → Each pair analyzed individually:
+     * Topics discussed
+     * Rhetorical intensity (1-5 scale)
+     * Exact quotes with speaker labels
+     * Numerical claims
+     * District/Minnesota references
+     * Host pushback analysis
+     * Specific differences for each pair
+     * Comparison summaries
+   → Overall pattern summary at end
+
+3. EMMER_QUOTES_BY_PAIR.txt (25 KB)
+   → Curated quotes from each pair side-by-side
+   → Organized by topic within each pair
+   → Easier for seeing specific language differences
+   → Includes analysis of each quote comparison
+   → Best for: Finding specific quotes, seeing phrasing differences
+
+4. ANALYSIS_INDEX.txt (this file)
+   → Navigation guide
+   → Quick reference for each pair
+   → File guide
+
+================================================================================
+PAIR-BY-PAIR QUICK REFERENCE
+================================================================================
+
+PAIR 1: FEBRUARY 16, 2026 - ICE REFORMS
+Conservative: FOX & FRIENDS (Lawrence) | Mainstream: CBS MORNINGS (Vlad)
+→ FINDING: Fox version uses "mass amnesty," CBS version more measured
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~150-290
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~15-80
+
+PAIR 2: FEBRUARY 6 & JANUARY 31, 2026 - IMMIGRATION
+Mainstream: FOX 9 LOCAL (Amy) | Conservative: FOX NEWS LIVE (Aishah Hasnie)
+→ FINDING: Local mainstream includes profiling concerns; conservative doesn't
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~290-500
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~80-200
+
+PAIR 3: JANUARY 21-22, 2026 - ICE SURGE/SHUTDOWN
+Mainstream: FOX 9 ALL DAY (Amy) | Conservative: JOHN FREDERICKS SHOW (John)
+→ FINDING: John Fredericks: personal attacks; Fox 9: explains legal process
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~500-1000
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~200-500
+
+PAIR 4: LATE OCT / EARLY NOV 2025 - SHUTDOWN/DHS
+Mainstream: SQUAWK BOX CNBC (Andrew) | Conservative: JOHN FREDERICKS (John)
+→ FINDING: CNBC: shutdown mechanics; John Fredericks: Democratic weakness
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~1000-1300
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~500-650
+
+PAIR 5: FEBRUARY 2026 - SHUTDOWN/DHS
+Mainstream: SQUAWK BOX CNBC (Joe) | Conservative: NEWSMAX (Sean)
+→ FINDING: Nearly identical talking points, but CNBC adds economy detail
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~1300-1550
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~650-750
+
+PAIR 6: LATE JANUARY 2026 - TIKTOK/GOVERNMENT/CRYPTO
+Mainstream: SQUAWK BOX CNBC (Andrew) | Conservative: CHRIS STIGALL (Chris)
+→ FINDING: CNBC: policy details; Stigall: Minnesota fraud details
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~1550-1850
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~750-850
+
+PAIR 7: MARCH 2026 - TARIFFS/ECONOMY
+Mainstream: ABC NEWS LIVE (Lindsay Davis) | Conservative: JOHN FREDERICKS (John)
+→ FINDING: ABC pushes on consumer impact; John Fredericks celebrates Trump wins
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~1850-2100
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~850-950
+
+PAIR 8: NOVEMBER 2025 - HEALTHCARE/JUDGES/EPSTEIN
+Mainstream: SQUAWK BOX CNBC (Joe/Andrew) | Conservative: CHRIS STIGALL (Chris)
+→ FINDING: CNBC: healthcare policy; Stigall: judicial activism as scandal
+→ In EMMER_AUDIENCE_ANALYSIS.txt: Lines ~2100-2450
+→ Key quotes in EMMER_QUOTES_BY_PAIR.txt: Lines ~950-1000
+
+================================================================================
+KEY FINDINGS BY CATEGORY
+================================================================================
+
+RHETORICAL INTENSITY FINDINGS:
+→ See EXECUTIVE_SUMMARY.txt: "RHETORICAL INTENSITY SCORING" section (lines ~420-445)
+→ Conservative outlets: 3.0-4.5/5 intensity
+→ Mainstream outlets: 1.5-2.5/5 intensity
+→ Ratio: Conservative ~1.8x more intense
+
+SELECTIVE EMPHASIS PATTERNS:
+→ See EXECUTIVE_SUMMARY.txt: "EVIDENCE OF SELECTIVE EMPHASIS" section (lines ~30-85)
+→ Shows same facts presented differently to different audiences
+
+INFLAMMATORY LANGUAGE (Conservative only):
+→ See EXECUTIVE_SUMMARY.txt: "LANGUAGE INTENSITY COMPARISON" (lines ~90-170)
+→ "Numbnuts," "crooked," "should be in cuffs," "pro-terrorist wing"
+→ Complete list of quotes that NEVER appear on mainstream outlets
+
+CONSISTENT TALKING POINTS (Both audiences):
+→ See EXECUTIVE_SUMMARY.txt: "QUOTES THAT APPEAR ON BOTH OUTLETS" (lines ~290-330)
+→ "Body cameras already funded," "Administrative warrant includes due process," etc.
+
+DIFFERENT STATISTICS BY AUDIENCE:
+→ See EXECUTIVE_SUMMARY.txt: "FACT-CHECK: CONSISTENCY OF STATISTICS" (lines ~360-410)
+→ Conservative: Fraud statistics, Ilhan Omar wealth, fentanyl deaths
+→ Mainstream: Tax refunds, inflation, growth rates, SNAP impact
+
+PROFILING ALLEGATIONS RESPONSE:
+→ See EXECUTIVE_SUMMARY.txt: "RESPONSE TO PROFILING ALLEGATIONS" (lines ~255-280)
+→ Mainstream: Takes concerns seriously, becomes defensive
+→ Conservative: Never brought up, never addressed
+
+SCOPE DIFFERENCES:
+→ See EXECUTIVE_SUMMARY.txt: "SCOPE OF DISCUSSION DIFFERENCES" (lines ~185-220)
+→ Conservative: State corruption, media, Democrats
+→ Mainstream: Federal policy, economics, legislation
+
+================================================================================
+HOW TO USE THIS ANALYSIS
+================================================================================
+
+If you want to:
+
+Understand the big picture:
+→ Read EXECUTIVE_SUMMARY.txt (16 KB, ~15 min read)
+
+See detailed breakdown of each pair:
+→ Read AUDIENCE_ANALYSIS.txt (44 KB, ~45 min read)
+
+Find specific quotes:
+→ Search QUOTES_BY_PAIR.txt using Ctrl+F for topic
+
+Check specific pair:
+→ Use PAIR-BY-PAIR QUICK REFERENCE section above
+→ Go to page numbers in relevant files
+
+Verify rhetorical intensity scoring:
+→ See AUDIENCE_ANALYSIS.txt for each pair's analysis
+→ See EXECUTIVE_SUMMARY.txt for summary table
+
+Understand audience implications:
+→ Read AUDIENCE_IMPLICATIONS section in EXECUTIVE_SUMMARY.txt (lines ~565-595)
+
+Make specific claims about Emmer:
+→ Reference QUOTES_BY_PAIR.txt with page numbers
+→ All quotes include speaker labels and dates
+
+================================================================================
+METHODOLOGY NOTE
+================================================================================
+
+This analysis extracted EXACT QUOTES from official transcripts (all from MN-06
+Watch, an independent accountability journalism organization that transcribed
+these interviews).
+
+WHAT WAS MEASURED:
+✓ Language intensity
+✓ Personal attacks vs. policy critique
+✓ Inflammatory adjectives
+✓ Selective emphasis of facts
+✓ Scope of discussion
+✓ Host pushback responses
+✓ Profiling concerns acknowledgment
+✓ State vs. federal political focus
+
+WHAT WAS NOT MEASURED:
+✗ Factual accuracy (some claims disputed, not fact-checked here)
+✗ Audience size/impact
+✗ Full-transcript analysis (analyzed what was transcribed)
+✗ Non-verbal communication
+✗ Interview order/sequence effects
+
+LIMITATION: This analysis shows PATTERNS, not causation. Audience difference could
+reflect: interviewer focus, audience expectations, Emmer's deliberate choices, or
+combination of factors.
+
+================================================================================
+CONTACT/SOURCE INFORMATION
+================================================================================
+
+All transcripts sourced from:
+MN-06 WATCH
+Independent Accountability Journalism
+mn06watch.com
+Email: mn06watch@gmail.com
+
+Transcripts are archived and dated, with YouTube URLs provided for each.
+
+Original interviews span:
+- October 9, 2025 (earliest) to March 4, 2025 (one earlier)
+- Focus period: October 2025 - February 2026
+- Most recent: February 24, 2026
+
+Networks analyzed:
+CONSERVATIVE: Fox News, Fox & Friends, John Fredericks Show (podcast),
+Newsmax, Chris Stigall Show (Salem Radio), WJFV
+
+MAINSTREAM: CBS, Fox 9 Local (Minnesota), CNBC, ABC News
+
+This analysis represents approximately 120+ minutes of interview time across 17
+separate interviews.
+
+================================================================================
+QUICK STATS
+================================================================================
+
+Total files analyzed: 17
+Total duration: ~120 minutes
+Conservative outlet appearances: 9
+Mainstream outlet appearances: 8
+
+Topics with most variation:
+1. Democratic leadership (most inflammatory conservative language)
+2. Immigration enforcement (most profiling discussion on mainstream)
+3. Fraud/corruption (only discussed on conservative)
+4. Economic statistics (only on mainstream)
+5. Health care policy (only on mainstream)
+
+Topics with most consistency:
+1. Administrative warrant effectiveness
+2. Body camera funding claims
+3. Judicial warrant "mass amnesty" claim
+4. 4,000 illegal immigrants removed
+5. 3,000 missing children found
+
+Hosts who pushed back hardest:
+1. Vlad (CBS Mornings) - most challenging
+2. Amy (Fox 9) - frequent but respectful pushback
+3. Lindsay Davis (ABC) - tariff-focused pushback
+
+Hosts who were most supportive:
+1. John Fredericks - highly supportive
+2. Chris Stigall - supportive
+3. Lawrence (Fox & Friends) - no pushback
+
+================================================================================
