@@ -1,5 +1,6 @@
 /**
  * MN-06 Watch: Shared Navigation Component
+ * Updated April 2026 — matches article page design system
  */
 
 (function() {
@@ -9,92 +10,110 @@
     const isAnalytics = path.includes('/analytics');
     const isTweets = path.includes('/tweets');
     const isSponsorship = path.includes('/sponsorship') || path.includes('/bills');
+    const isArticles = path.includes('/articles');
     
     const navHTML = `
-        <a href="https://mn06watch.com" class="mn06-nav-brand">
-            <img src="https://mn06watch.com/MN06Watch_Logo.png" alt="MN-06 Watch" class="mn06-nav-logo">
-            MN-06 Watch
-        </a>
+        <div class="mn06-nav-left">
+            <a href="https://mn06watch.com" class="mn06-nav-brand">MN06Watch</a>
+            <div class="mn06-nav-tagline">Receipts, not rage.</div>
+        </div>
         <div class="mn06-nav-links">
             <a href="https://mn06watch.com/" class="mn06-nav-link ${isVotes ? 'active' : ''}">Vote Tracker</a>
             <a href="https://mn06watch.com/sponsorships/" class="mn06-nav-link ${isSponsorship ? 'active' : ''}">Bills</a>
             <a href="https://mn06watch.com/transcripts/" class="mn06-nav-link ${isTranscripts ? 'active' : ''}">Transcripts</a>
             <a href="https://mn06watch.com/transcripts/analytics/" class="mn06-nav-link ${isAnalytics ? 'active' : ''}">Analytics</a>
             <a href="https://mn06watch.com/tweets/" class="mn06-nav-link ${isTweets ? 'active' : ''}">Tweets</a>
-            <a href="https://mn06watch.substack.com" class="mn06-nav-link" target="_blank">Newsletter</a>
+            <a href="https://mn06watch.com/articles/" class="mn06-nav-link ${isArticles ? 'active' : ''}">Articles</a>
+            <a href="https://mn06watch.substack.com" class="mn06-nav-link" target="_blank">Substack</a>
         </div>
     `;
     
     const navCSS = `
     <style id="mn06-nav-styles">
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@400;500&display=swap');
+        
         #mn06-nav {
             position: sticky !important;
             top: 0 !important;
             z-index: 9999 !important;
-            background: rgba(21, 42, 69, 0.95) !important;
-            border-bottom: 1px solid #2a3441 !important;
-            padding: 10px 20px !important;
+            background: #1B3A5C !important;
+            border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+            padding: 12px 24px !important;
             display: flex !important;
             justify-content: space-between !important;
             align-items: center !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+        }
+        
+        .mn06-nav-left {
+            display: flex !important;
+            flex-direction: column !important;
         }
         
         .mn06-nav-brand {
-            display: flex !important;
-            align-items: center !important;
-            gap: 10px !important;
+            font-family: 'Playfair Display', Georgia, serif !important;
+            font-size: 1.3rem !important;
+            color: #C8922A !important;
             text-decoration: none !important;
-            color: #d4a84b !important;
             font-weight: 700 !important;
-            font-size: 1rem !important;
+            line-height: 1.2 !important;
         }
         
-        .mn06-nav-logo {
-            width: 32px !important;
-            height: 32px !important;
-            border-radius: 50% !important;
+        .mn06-nav-brand:hover {
+            color: #e4bc6b !important;
+        }
+        
+        .mn06-nav-tagline {
+            font-family: 'DM Mono', monospace !important;
+            font-size: 0.68rem !important;
+            color: rgba(255,255,255,0.35) !important;
+            margin-top: 1px !important;
         }
         
         .mn06-nav-links {
             display: flex !important;
-            gap: 20px !important;
+            gap: 4px !important;
             flex-wrap: wrap !important;
+            align-items: center !important;
         }
         
         .mn06-nav-link {
-            color: #8b949e !important;
+            font-family: 'DM Mono', monospace !important;
+            color: rgba(255,255,255,0.55) !important;
             text-decoration: none !important;
-            font-size: 0.9rem !important;
-            padding: 6px 12px !important;
-            border-radius: 6px !important;
-            transition: all 0.2s !important;
+            font-size: 0.78rem !important;
+            padding: 5px 10px !important;
+            border-radius: 5px !important;
+            transition: all 0.15s ease !important;
         }
         
         .mn06-nav-link:hover {
-            color: #e6edf3 !important;
-            background: #1e3a5f !important;
+            color: rgba(255,255,255,0.9) !important;
+            background: rgba(255,255,255,0.08) !important;
         }
         
         .mn06-nav-link.active {
-            color: #d4a84b !important;
-            font-weight: 600 !important;
+            color: #C8922A !important;
+            font-weight: 500 !important;
         }
         
         @media (max-width: 768px) {
             #mn06-nav {
                 flex-direction: column !important;
                 gap: 10px !important;
-                padding: 10px !important;
+                padding: 12px 16px !important;
+            }
+            .mn06-nav-left {
+                align-items: center !important;
             }
             .mn06-nav-links {
-                gap: 10px !important;
+                gap: 2px !important;
                 justify-content: center !important;
             }
             .mn06-nav-link {
-                font-size: 0.8rem !important;
-                padding: 4px 8px !important;
+                font-size: 0.72rem !important;
+                padding: 4px 7px !important;
             }
         }
     </style>

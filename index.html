@@ -35,61 +35,7 @@
             line-height: 1.6;
         }
         
-        /* Top Navigation */
-        .top-nav {
-            background: var(--navy-dark);
-            border-bottom: 1px solid var(--border);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            background: rgba(21, 42, 69, 0.95);
-        }
-        
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        
-        .nav-logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: all 0.2s;
-        }
-        
-        .nav-link:hover {
-            color: var(--text-primary);
-            background: var(--navy);
-        }
-        
-        .nav-link.active {
-            color: var(--gold);
-            font-weight: 600;
-        }
+        /* Navigation handled by nav.js */
         
         .container {
             max-width: 1000px;
@@ -680,9 +626,8 @@
 
     <div class="container">
         <header>
-            <img src="MN06Watch_Logo.png" alt="MN-06 Watch Logo" class="logo-img">
             <div class="logo-text">MN-06 <span>Watch</span></div>
-            <div class="tagline">Receipts, Not Rage. Tracking Rep. Tom Emmer's Voting Record.</div>
+            <div class="tagline">Tracking Rep. Tom Emmer's Complete Voting Record</div>
         </header>
         
         <div class="dashboard">
@@ -779,11 +724,10 @@
         </div>
         
         <footer>
-            <p>Data sourced from official House roll call votes (2015-2025)</p>
+            <p>Data sourced from official House roll call votes (2015-2026)</p>
             <p>An <a href="https://mn06watch.substack.com">MN-06 Watch</a> accountability project</p>
-            <p style="margin-top: 8px;"><a href="https://mn06watch.com/tweets/">Tweet Archive</a> · <a href="https://mn06watch.com/transcripts/">Transcripts</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
-            <p style="margin-top: 10px;">© 2025 MN-06 Watch. Independent accountability journalism.</p>
-            <p style="margin-top: 8px; font-size: 0.8rem; color: #666;">Vote data last updated: January 30, 2026</p>
+            <p style="margin-top: 8px;"><a href="https://mn06watch.com/articles/">Articles &amp; Tools</a> · <a href="https://mn06watch.com/tweets/">Tweet Archive</a> · <a href="https://mn06watch.com/transcripts/">Transcripts</a> · <a href="https://mn06watch.substack.com/subscribe">Subscribe</a></p>
+            <p style="margin-top: 10px;">We document what your representative does. You decide what it means.</p>
         </footer>
     </div>
     
