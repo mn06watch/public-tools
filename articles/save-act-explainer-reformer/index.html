@@ -335,6 +335,28 @@
     </div>
   </div>
 
+  <div class="polling-bars" style="margin-top:0; border-top:2px solid var(--gray-mid); border-radius:0 0 8px 8px;">
+    <div class="mono-label">Support Drops When Voters Consider Who Gets Caught in the Net</div>
+    <div class="poll-item">
+      <div class="poll-label"><span>Support proof of citizenship to register (concept)</span><span class="poll-source">UMass/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill mid" data-width="51">51%</div></div>
+      <div class="poll-note">Slim majority supports the concept — but even the bill's own supporters express reservations about real-world consequences</div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>White voters who support</span><span class="poll-source">UMass/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill mid" data-width="56">56%</div></div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>Latino voters who support</span><span class="poll-source">UMass/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill low" data-width="43">43%</div></div>
+    </div>
+    <div class="poll-item">
+      <div class="poll-label"><span>Black voters who support</span><span class="poll-source">UMass/YouGov, Mar 2026</span></div>
+      <div class="poll-bar-track"><div class="poll-bar-fill low" data-width="39">39%</div></div>
+      <div class="poll-note">The communities most likely to lack documentary proof of citizenship are the least likely to support requiring it</div>
+    </div>
+  </div>
+
   <!-- ===================== SECTION 1: HOW IT AFFECTS YOU ===================== -->
   <h2 class="section-header" id="sim-you">How Would This Affect You?</h2>
   <p>The talking points make the SAVE Act sound simple. The impact depends on your circumstances. <strong>Answer five questions to see what the bill would require of you.</strong></p>
@@ -864,6 +886,34 @@
       </div></div>
     </div>
 
+    <div class="faq-item" id="faq-executive-order">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">What about Trump's executive order on elections?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>On March 31, 2026, with the SAVE Act stalled in the Senate, President Trump signed an executive order titled "Ensuring Citizenship Verification and Integrity in Federal Elections." The order attempts to accomplish by executive action what the bill could not achieve legislatively.</p>
+        <p><strong>What the order does:</strong> Directs DHS and SSA to compile a "State Citizenship List" of confirmed U.S. citizens eligible to vote in each state. Instructs USPS to send mail ballots only to voters on an approved list. Threatens to cut federal funding to states that don't comply. Grants DOGE and DHS access to state voter files. Directs the Attorney General to prioritize prosecution of election officials who distribute ballots to ineligible voters.</p>
+        <p><strong>Legal status:</strong> Three federal courts have already blocked the order's requirement that Americans show a passport or citizenship document to register using the federal form, ruling the president lacks authority to unilaterally alter election procedures. Multiple lawsuits have been filed. Election law expert Rick Hasen (UCLA) called the order "likely unconstitutional" and said implementation for 2026 is "virtually impossible." The DOJ has sued 29 states for refusing to hand over voter files; three courts have dismissed those suits.</p>
+        <p><strong>The SAVE system problem applies here too.</strong> The order relies on the same DHS SAVE database that USCIS has acknowledged "cannot make confident determination of citizenship" in many cases. The same accuracy problems documented in the explainer — Travis County's 25% false-flag rate, persistent errors with naturalized citizens — apply to any citizenship list compiled from this data.</p>
+        <p><strong>One detail:</strong> Trump himself voted by mail in Florida's special election earlier in March 2026 — weeks before signing an order restricting mail voting for everyone else.</p>
+        <div class="faq-source">Sources: NPR, March 31, 2026 · CBS News, March 31, 2026 · CNBC, March 31, 2026 · Brennan Center (EO tracker) · Rick Hasen, UCLA Election Law Blog · White House Fact Sheet, March 31, 2026 · Three federal court rulings blocking EAC form amendment</div>
+      </div></div>
+    </div>
+
+    <div class="faq-item" id="faq-fisa-leverage">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        <div class="faq-q-text">Could the SAVE Act be attached to other legislation?</div>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">
+        <p>Multiple legislative vehicles are being discussed. Rep. Anna Paulina Luna has threatened to "kill FISA unless the SAVE America Act is attached to it." FISA Section 702 — the surveillance authority — expires April 20, 2026. House hardliners have also proposed attaching it to DHS funding bills.</p>
+        <p>In the Senate, the reconciliation path announced by Budget Committee Chairman Lindsey Graham would attempt to include SAVE Act provisions in a filibuster-proof budget bill. But as documented in the Senate status FAQ above, the bill's own sponsor Mike Lee and the House Freedom Caucus have said this path is unviable due to the Byrd Rule.</p>
+        <p>Using the SAVE Act as a "poison pill" — attaching it to must-pass legislation to force Democrats to either accept it or block critical national security or government funding bills — is a documented legislative tactic. It prioritizes the political value of the vote over the policy outcome. Whether that strategy serves election integrity or election-year messaging is a question voters can answer for themselves.</p>
+        <div class="faq-source">Sources: KOMO News (Luna FISA threat) · NBC News, March 25, 2026 (Graham reconciliation) · Roll Call, March 27, 2026 · Democracy Docket (Byrd Rule analysis)</div>
+      </div></div>
+    </div>
+
 
   </div>
   </div>
@@ -880,13 +930,13 @@
 
   <!-- UPDATED + CHANGELOG -->
   <div id="changelog" style="margin:2rem 0 1.5rem; background:var(--white); border:1px solid var(--gray-mid); border-radius:8px; padding:1rem 1.5rem; text-align:center;">
-    <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin:0 0 0.5rem;">Updated April 1, 2026</p>
+    <p style="font-family:'Barlow Condensed',sans-serif; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin:0 0 0.5rem;">Updated April 6, 2026</p>
     <a href="https://mn06watch.com/articles/save-act-changelog-reformer/" style="font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--navy); text-decoration:none; font-weight:500;">View full changelog →</a>
   </div>
 
 <footer class="footer">
   <p style="font-size:0.78rem; line-height:1.55; margin-bottom:0.75rem; color:var(--gray-text); font-style:italic;"><strong>Disclaimer:</strong> This explainer is a journalistic analysis of public legislative text and cited sources. The author is not an attorney. Legal characterizations (strict liability, safe harbor, private right of action) reflect the consensus reading among cited legal analysts and advocacy organizations, not independent legal counsel. Consult an attorney for legal advice.</p>
-  Sources: Congressional Record (Mar 19, 2026) · H.R. 7296 / H.R. 22 bill text · CBS News/YouGov (Mar 2026) · Pew Research (Aug 2025) · Harvard CAPS/Harris (Feb 2026) · YouGov (Mar 2026) · U of Maryland (2025) · Bipartisan Policy Center · Center for American Progress · Brennan Center · Campaign Legal Center · League of Women Voters · Issue One · FactCheck.org · National Association of Counties · Travis County TX · Utah SOS · Kansas SOS · Georgia SOS · USCIS SAVE Fact Sheet (Feb 2026) · ProPublica / Texas Tribune · AP · CEIR · Heritage Foundation · U.S. Vote Foundation · NBC News · Ms. Magazine · Rock the Vote · VoteRiders · CNBC · CNN · PBS NewsHour · NPR · Roll Call · Democracy Docket · Voting Rights Lab · Senate Democratic Caucus Analysis
+  Sources: Congressional Record (Mar 19, 2026) · H.R. 7296 / H.R. 22 bill text · CBS News/YouGov (Mar 2026) · UMass Amherst/YouGov (Mar 2026) · Pew Research (Aug 2025) · Harvard CAPS/Harris (Feb 2026) · YouGov (Mar 2026) · U of Maryland (2025) · Bipartisan Policy Center · Center for American Progress · Brennan Center · Campaign Legal Center · League of Women Voters · Issue One · FactCheck.org · National Association of Counties · Travis County TX · Utah SOS · Kansas SOS · Georgia SOS · USCIS SAVE Fact Sheet (Feb 2026) · ProPublica / Texas Tribune · AP · CEIR · Heritage Foundation · U.S. Vote Foundation · NBC News · Ms. Magazine · Rock the Vote · VoteRiders · CNBC · CNN · PBS NewsHour · NPR · Roll Call · Democracy Docket · Voting Rights Lab · Senate Democratic Caucus Analysis
   <br><br>
   <span style="color:var(--gold);">Minnesota Reformer</span> · <a href="https://minnesotareformer.com">minnesotareformer.com</a><br>
   Produced by <a href="https://mn06watch.com">MN06Watch</a> · <a href="https://mn06watch.substack.com">mn06watch.substack.com</a> · <a href="https://twitter.com/MN6Watch">@MN6Watch</a>
