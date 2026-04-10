@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Integrity Gap — Network Maps | MN06Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:wght@400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #1a365d;
+  --navy-deep: #0f2440;
+  --navy-light: #2c5282;
+  --gold: #d69e2e;
+  --gold-dim: #b7881f;
+  --cream: #f7fafc;
+  --warm: #faf8f5;
+  --warm-dark: #f0ece6;
+  --text: #1a202c;
+  --text-mid: #4a5568;
+  --text-muted: #718096;
+  --red: #c53030;
+  --red-light: #e53e3e;
+  --green: #276749;
+  --green-light: #38a169;
+  --purple: #6b46c1;
+  --purple-light: #805ad5;
+  --blue: #2b6cb0;
+}
+
+body {
+  background: var(--warm);
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 2px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 0;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 10px 18px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.tab:hover { color: var(--navy); }
+
+.tab.active {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+  background: var(--cream);
+}
+
+.tab.active-red {
+  color: var(--red);
+  border-bottom-color: var(--red);
+  background: #fff5f5;
+}
+
+.panel {
+  background: var(--cream);
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 16px 8px;
+  min-height: 440px;
+  display: none;
+}
+
+.panel.active { display: block; }
+
+.attribution {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 12px;
+}
+
+svg text { user-select: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>The Integrity Gap — Network Maps</h1>
+  <p class="subtitle">Documented connections · IRS filings · court records · podcast transcripts · on-the-record reporting</p>
+
+  <div class="tabs">
+    <button class="tab active" onclick="showTab(0)">The Architect</button>
+    <button class="tab" onclick="showTab(1)">The Money</button>
+    <button class="tab" onclick="showTab(2)">The Pipeline</button>
+    <button class="tab" onclick="showTab(3)">Inside the House</button>
+  </div>
+
+  <!-- TAB 0: THE ARCHITECT -->
+  <div class="panel active" id="panel0">
+    <svg viewBox="0 0 760 500" style="width:100%;height:auto;">
+      <!-- Mitchell center -->
+      <rect x="280" y="225" width="200" height="60" rx="8" fill="var(--navy)" stroke="var(--gold)" stroke-width="2"/>
+      <text x="380" y="250" text-anchor="middle" fill="var(--cream)" font-size="13" font-weight="700" font-family="Playfair Display,serif">Cleta Mitchell</text>
+      <text x="380" y="268" text-anchor="middle" fill="var(--gold)" font-size="9" font-family="JetBrains Mono,monospace">ERA feminist → Election denial architect</text>
+
+      <!-- Positions -->
+      <rect x="60" y="45" width="120" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="120" y="65" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">CPI</text>
+      <text x="120" y="77" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Senior Legal Fellow</text>
+
+      <rect x="230" y="30" width="120" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="290" y="50" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">EIN</text>
+      <text x="290" y="62" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Founder</text>
+
+      <rect x="410" y="30" width="140" height="38" rx="5" fill="var(--cream)" stroke="var(--green-light)" stroke-width="1.5"/>
+      <text x="480" y="50" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Bradley Foundation</text>
+      <text x="480" y="62" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Board of Directors</text>
+
+      <rect x="590" y="45" width="120" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="650" y="65" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">ALEC</text>
+      <text x="650" y="77" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Secret Working Group</text>
+
+      <rect x="30" y="175" width="120" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="90" y="195" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">PILF</text>
+      <text x="90" y="207" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Board Chair</text>
+
+      <rect x="615" y="175" width="130" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="680" y="195" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">CNP</text>
+      <text x="680" y="207" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Board of Governors</text>
+
+      <rect x="30" y="320" width="140" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="100" y="340" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">FAIR Elections Fund</text>
+      <text x="100" y="352" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Founder (2023) · No website</text>
+
+      <rect x="600" y="320" width="130" height="38" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="665" y="340" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">EAC Board</text>
+      <text x="665" y="352" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Advisor 2021–2023</text>
+
+      <rect x="155" y="415" width="160" height="42" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="235" y="435" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">SAVE Act Coalition</text>
+      <text x="235" y="449" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">"Key Architect" · 555-555-5555</text>
+
+      <rect x="435" y="415" width="160" height="42" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="515" y="435" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Only Citizens Vote</text>
+      <text x="515" y="449" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Co-convener · 90+ orgs</text>
+
+      <!-- Spokes -->
+      <line x1="310" y1="225" x2="150" y2="83" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="340" y1="225" x2="290" y2="68" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="430" y1="225" x2="480" y2="68" stroke="var(--green-light)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="460" y1="230" x2="620" y2="83" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="280" y1="240" x2="150" y2="200" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="480" y1="240" x2="615" y2="200" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="300" y1="285" x2="140" y2="320" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="460" y1="285" x2="615" y2="325" stroke="var(--blue)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="330" y1="285" x2="260" y2="415" stroke="var(--red)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+      <line x1="420" y1="285" x2="490" y2="415" stroke="var(--red)" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+      <text x="380" y="490" text-anchor="middle" fill="var(--text-muted)" font-size="10" font-family="Source Serif 4,serif" font-style="italic">One person. Ten positions. Every node connects back to Mitchell.</text>
+    </svg>
+  </div>
+
+  <!-- TAB 1: THE MONEY -->
+  <div class="panel" id="panel1">
+    <svg viewBox="0 0 760 580" style="width:100%;height:auto;">
+      <!-- Donors -->
+      <text x="250" y="20" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="JetBrains Mono,monospace" letter-spacing="2">DONORS</text>
+      <rect x="40" y="35" width="130" height="52" rx="5" fill="var(--cream)" stroke="var(--green-light)" stroke-width="1.5"/>
+      <text x="105" y="55" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Uihlein Family</text>
+      <text x="105" y="67" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$1.25M (2020)</text>
+      <text x="105" y="78" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$1M+ (2021)</text>
+
+      <rect x="195" y="35" width="130" height="52" rx="5" fill="var(--cream)" stroke="var(--green-light)" stroke-width="1.5"/>
+      <text x="260" y="52" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Trump Save</text>
+      <text x="260" y="64" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">America PAC</text>
+      <text x="260" y="78" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$1M (Jul 2021)</text>
+
+      <rect x="350" y="35" width="130" height="52" rx="5" fill="var(--cream)" stroke="var(--green-light)" stroke-width="1.5"/>
+      <text x="415" y="55" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">DonorsTrust</text>
+      <text x="415" y="67" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$1.3M to CPI</text>
+      <text x="415" y="78" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$10K → EIN</text>
+
+      <!-- Arrows to CPI -->
+      <line x1="105" y1="87" x2="270" y2="155" stroke="var(--green-light)" stroke-width="1.5"/>
+      <polygon points="270,155 262,148 260,157" fill="var(--green-light)"/>
+      <text x="170" y="115" fill="var(--green-light)" font-size="8" font-family="JetBrains Mono,monospace">$1.25M+</text>
+
+      <line x1="260" y1="87" x2="290" y2="155" stroke="var(--green-light)" stroke-width="1.5"/>
+      <polygon points="290,155 284,146 280,155" fill="var(--green-light)"/>
+
+      <line x1="415" y1="87" x2="340" y2="155" stroke="var(--green-light)" stroke-width="1.5"/>
+      <polygon points="340,155 340,146 348,148" fill="var(--green-light)"/>
+      <text x="390" y="115" fill="var(--green-light)" font-size="8" font-family="JetBrains Mono,monospace">$1.3M</text>
+
+      <!-- CPI -->
+      <rect x="180" y="160" width="260" height="55" rx="8" fill="var(--navy)" stroke="var(--gold)" stroke-width="2"/>
+      <text x="310" y="183" text-anchor="middle" fill="var(--cream)" font-size="12" font-weight="700" font-family="Playfair Display,serif">Conservative Partnership Institute</text>
+      <text x="310" y="200" text-anchor="middle" fill="var(--gold)" font-size="9" font-family="JetBrains Mono,monospace">$46M revenue (2021) · $72M assets</text>
+
+      <!-- BRADLEY CIRCLE - the dominant visual -->
+      <rect x="560" y="35" width="130" height="42" rx="5" fill="var(--cream)" stroke="var(--green-light)" stroke-width="2"/>
+      <text x="625" y="55" text-anchor="middle" fill="var(--navy)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Bradley Foundation</text>
+      <text x="625" y="69" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">funds CPI</text>
+
+      <rect x="570" y="155" width="110" height="42" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="2"/>
+      <text x="625" y="175" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Mitchell</text>
+      <text x="625" y="189" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">board member</text>
+
+      <!-- Circle arrows -->
+      <line x1="625" y1="77" x2="625" y2="152" stroke="var(--red)" stroke-width="2.5" stroke-dasharray="8,4"/>
+      <polygon points="625,152 620,142 630,142" fill="var(--red)"/>
+      <text x="648" y="118" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">sits on board</text>
+
+      <line x1="570" y1="180" x2="445" y2="185" stroke="var(--red)" stroke-width="2.5" stroke-dasharray="8,4"/>
+      <polygon points="445,185 455,180 455,190" fill="var(--red)"/>
+      <text x="510" y="200" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">runs EIN inside CPI</text>
+
+      <path d="M 590,42 Q 520,15 445,160" fill="none" stroke="var(--green-light)" stroke-width="2"/>
+      <polygon points="445,160 450,148 440,150" fill="var(--green-light)"/>
+      <text x="495" y="60" fill="var(--green-light)" font-size="8" font-family="JetBrains Mono,monospace">funds CPI</text>
+
+      <!-- CIRCULAR label -->
+      <rect x="530" y="103" width="70" height="18" rx="4" fill="var(--red)" opacity="0.15"/>
+      <rect x="530" y="103" width="70" height="18" rx="4" fill="none" stroke="var(--red)" stroke-width="1"/>
+      <text x="565" y="116" text-anchor="middle" fill="var(--red)" font-size="8" font-weight="700" font-family="JetBrains Mono,monospace">CIRCULAR</text>
+
+      <!-- Below CPI -->
+      <line x1="240" y1="215" x2="150" y2="260" stroke="var(--gold)" stroke-width="1.5"/>
+      <polygon points="150,260 158,252 154,262" fill="var(--gold)"/>
+      <text x="180" y="235" fill="var(--gold)" font-size="8" font-family="JetBrains Mono,monospace">$625K/yr</text>
+
+      <line x1="310" y1="218" x2="310" y2="260" stroke="var(--blue)" stroke-width="1.5"/>
+      <polygon points="310,260 305,250 315,250" fill="var(--blue)"/>
+
+      <line x1="380" y1="215" x2="460" y2="260" stroke="var(--gold)" stroke-width="1.5"/>
+      <polygon points="460,260 452,252 456,262" fill="var(--gold)"/>
+      <text x="435" y="235" fill="var(--gold)" font-size="8" font-family="JetBrains Mono,monospace">$587K/yr</text>
+
+      <rect x="80" y="268" width="110" height="42" rx="5" fill="var(--cream)" stroke="var(--text-muted)" stroke-width="1"/>
+      <text x="135" y="288" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Jim DeMint</text>
+      <text x="135" y="302" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Founder · $625K</text>
+
+      <rect x="240" y="268" width="140" height="42" rx="5" fill="var(--cream)" stroke="var(--blue)" stroke-width="1.5"/>
+      <text x="310" y="285" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Election Integrity</text>
+      <text x="310" y="296" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Network</text>
+      <text x="310" y="308" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Mitchell's program</text>
+
+      <rect x="410" y="268" width="120" height="42" rx="5" fill="var(--cream)" stroke="var(--text-muted)" stroke-width="1"/>
+      <text x="470" y="288" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Mark Meadows</text>
+      <text x="470" y="302" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Sr Partner · $587K</text>
+
+      <!-- FAIR Fund -->
+      <line x1="310" y1="312" x2="310" y2="348" stroke="var(--blue)" stroke-width="1.5"/>
+      <polygon points="310,348 305,338 315,338" fill="var(--blue)"/>
+
+      <rect x="230" y="355" width="155" height="48" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="307" y="375" text-anchor="middle" fill="var(--navy)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">FAIR Elections Fund</text>
+      <text x="307" y="387" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$3.9M year 1 · No website</text>
+      <text x="307" y="398" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Mitchell founded 2023</text>
+
+      <line x1="385" y1="380" x2="470" y2="380" stroke="var(--red)" stroke-width="2"/>
+      <polygon points="470,380 460,375 460,385" fill="var(--red)"/>
+      <text x="428" y="373" fill="var(--red)" font-size="8" font-weight="600" font-family="JetBrains Mono,monospace">$121K</text>
+
+      <rect x="475" y="358" width="130" height="42" rx="5" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="1.5"/>
+      <text x="540" y="375" text-anchor="middle" fill="var(--purple)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Heather Honey</text>
+      <text x="540" y="389" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Verity Vote · consulting</text>
+
+      <!-- Shell org -->
+      <line x1="310" y1="403" x2="310" y2="440" stroke="var(--red)" stroke-width="1" stroke-dasharray="5,3"/>
+      <polygon points="310,440 305,430 315,430" fill="var(--red)"/>
+      <text x="310" y="432" text-anchor="middle" fill="var(--text-muted)" font-size="7" font-family="JetBrains Mono,monospace">no disclosed funding</text>
+
+      <rect x="195" y="448" width="225" height="48" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="307" y="468" text-anchor="middle" fill="var(--red)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">SAVE America Act Coalition</text>
+      <text x="307" y="480" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">555-555-5555 · mymail@mailservice.com</text>
+      <text x="307" y="491" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">no disclosed leadership</text>
+
+      <text x="380" y="540" text-anchor="middle" fill="var(--red)" font-size="10" font-family="Source Serif 4,serif" font-style="italic" font-weight="600">The money she directs as a board member funds the program she runs.</text>
+
+      <text x="380" y="560" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Source Serif 4,serif" font-style="italic">NYT found CPI paid $3.2M to its own senior leadership and their relatives.</text>
+    </svg>
+  </div>
+
+  <!-- TAB 2: THE PIPELINE -->
+  <div class="panel" id="panel2">
+    <svg viewBox="0 0 760 500" style="width:100%;height:auto;">
+      <!-- Header -->
+      <text x="380" y="20" text-anchor="middle" fill="var(--navy)" font-size="12" font-weight="700" font-family="Playfair Display,serif">MITCHELL</text>
+      <text x="380" y="34" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">directs every stage</text>
+
+      <!-- Top pipeline label -->
+      <rect x="25" y="50" width="710" height="18" rx="3" fill="var(--red)" opacity="0.08"/>
+      <text x="380" y="63" text-anchor="middle" fill="var(--red)" font-size="9" font-weight="600" font-family="JetBrains Mono,monospace" letter-spacing="1.5">DESTROY → REPLACE → DRAFT → LEGISLATE</text>
+
+      <!-- Top row boxes -->
+      <rect x="25" y="78" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="100" y="96" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Destroy ERIC</text>
+      <text x="100" y="110" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2022–2023</text>
+      <text x="100" y="121" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">9 states withdrew</text>
+      <text x="100" y="132" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">officials knew it was lies</text>
+
+      <rect x="205" y="78" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="280" y="96" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">Promote EagleAI</text>
+      <text x="280" y="110" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2022–2024</text>
+      <text x="280" y="121" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">"nonfunctional"</text>
+      <text x="280" y="132" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">"inaccurate conclusions"</text>
+
+      <rect x="395" y="78" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="1.5"/>
+      <text x="470" y="96" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">ALEC Model Bill</text>
+      <text x="470" y="110" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2019–2024</text>
+      <text x="470" y="121" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">secret working group</text>
+      <text x="470" y="132" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">"teach you to gerrymander"</text>
+
+      <rect x="585" y="78" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--red)" stroke-width="2"/>
+      <text x="660" y="96" text-anchor="middle" fill="var(--red)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">SAVE America Act</text>
+      <text x="660" y="110" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2026 · 28% support</text>
+      <text x="660" y="121" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">criminalizes officials</text>
+      <text x="660" y="132" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$0 funding</text>
+
+      <!-- Top arrows -->
+      <line x1="175" y1="112" x2="203" y2="112" stroke="var(--red)" stroke-width="2.5"/>
+      <polygon points="203,112 195,107 195,117" fill="var(--red)"/>
+      <line x1="355" y1="112" x2="393" y2="112" stroke="var(--red)" stroke-width="2.5"/>
+      <polygon points="393,112 385,107 385,117" fill="var(--red)"/>
+      <line x1="545" y1="112" x2="583" y2="112" stroke="var(--red)" stroke-width="2.5"/>
+      <polygon points="583,112 575,107 575,117" fill="var(--red)"/>
+
+      <!-- Bottom pipeline label -->
+      <rect x="25" y="225" width="710" height="18" rx="3" fill="var(--purple)" opacity="0.06"/>
+      <text x="380" y="238" text-anchor="middle" fill="var(--purple)" font-size="9" font-weight="600" font-family="JetBrains Mono,monospace" letter-spacing="1">HONEY'S THREAD — THE SAME PERSON AT EVERY STAGE</text>
+
+      <!-- Bottom row boxes -->
+      <rect x="25" y="252" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="1.5"/>
+      <text x="100" y="270" text-anchor="middle" fill="var(--purple)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">AZ Cyber Ninjas</text>
+      <text x="100" y="284" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2021</text>
+      <text x="100" y="295" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Mitchell funded $1M</text>
+      <text x="100" y="306" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Honey did ballot work</text>
+
+      <rect x="205" y="252" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="1.5"/>
+      <text x="280" y="270" text-anchor="middle" fill="var(--purple)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">ERIC Report</text>
+      <text x="280" y="284" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2022</text>
+      <text x="280" y="295" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">presented at CPI summit</text>
+      <text x="280" y="306" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">later found false</text>
+
+      <rect x="395" y="252" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="1.5"/>
+      <text x="470" y="270" text-anchor="middle" fill="var(--purple)" font-size="11" font-weight="600" font-family="Source Serif 4,serif">FAIR Fund Payment</text>
+      <text x="470" y="284" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">2023</text>
+      <text x="470" y="295" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">$121K to Verity Vote</text>
+      <text x="470" y="306" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Mitchell's dark money</text>
+
+      <rect x="585" y="252" width="150" height="68" rx="5" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="2"/>
+      <text x="660" y="267" text-anchor="middle" fill="var(--purple)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">DHS Deputy Asst Sec</text>
+      <text x="660" y="280" text-anchor="middle" fill="var(--purple)" font-size="10" font-weight="600" font-family="Source Serif 4,serif">Election Integrity</text>
+      <text x="660" y="296" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Aug 2025 · new position</text>
+      <text x="660" y="307" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">receives voter rolls</text>
+
+      <!-- Bottom arrows -->
+      <line x1="175" y1="286" x2="203" y2="286" stroke="var(--purple-light)" stroke-width="2.5"/>
+      <polygon points="203,286 195,281 195,291" fill="var(--purple-light)"/>
+      <line x1="355" y1="286" x2="393" y2="286" stroke="var(--purple-light)" stroke-width="2.5"/>
+      <polygon points="393,286 385,281 385,291" fill="var(--purple-light)"/>
+      <line x1="545" y1="286" x2="583" y2="286" stroke="var(--purple-light)" stroke-width="2.5"/>
+      <polygon points="583,286 575,281 575,291" fill="var(--purple-light)"/>
+
+      <!-- Cross connections -->
+      <line x1="100" y1="252" x2="100" y2="148" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="75" y="200" fill="var(--gold)" font-size="7" font-family="JetBrains Mono,monospace" transform="rotate(-90,75,200)">funds audit</text>
+
+      <line x1="280" y1="252" x2="280" y2="148" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="255" y="200" fill="var(--gold)" font-size="7" font-family="JetBrains Mono,monospace" transform="rotate(-90,255,200)">report kills ERIC</text>
+
+      <line x1="470" y1="148" x2="470" y2="252" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="495" y="200" fill="var(--gold)" font-size="7" font-family="JetBrains Mono,monospace" transform="rotate(-90,495,200)">Mitchell pays Honey</text>
+
+      <line x1="660" y1="148" x2="660" y2="252" stroke="var(--gold)" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="685" y="200" fill="var(--gold)" font-size="7" font-family="JetBrains Mono,monospace" transform="rotate(-90,685,200)">bill → Honey's office</text>
+
+      <!-- Jan 6 callout -->
+      <rect x="30" y="340" width="140" height="32" rx="4" fill="var(--warm)" stroke="var(--text-muted)" stroke-width="1"/>
+      <text x="100" y="355" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Also: false PA number</text>
+      <text x="100" y="366" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Trump cited on Jan 6</text>
+      <line x1="100" y1="320" x2="100" y2="340" stroke="var(--text-muted)" stroke-width="1" stroke-dasharray="3,3"/>
+
+      <!-- Captions -->
+      <text x="380" y="420" text-anchor="middle" fill="var(--gold)" font-size="10" font-family="Source Serif 4,serif" font-style="italic" font-weight="600">Honey's work feeds Mitchell's campaigns. Mitchell's money funds Honey's work.</text>
+      <text x="380" y="440" text-anchor="middle" fill="var(--purple)" font-size="10" font-family="Source Serif 4,serif" font-style="italic" font-weight="600">Both tracks converge at DHS.</text>
+      <text x="380" y="470" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Source Serif 4,serif" font-style="italic">The same Honey who worked the audit wrote the ERIC report, got paid by Mitchell's fund,</text>
+      <text x="380" y="485" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Source Serif 4,serif" font-style="italic">and now runs the federal office that would implement Mitchell's bill.</text>
+    </svg>
+  </div>
+
+  <!-- TAB 3: INSIDE THE HOUSE -->
+  <div class="panel" id="panel3">
+    <svg viewBox="0 0 700 420" style="width:100%;height:auto;">
+      <!-- Mitchell -->
+      <rect x="105" y="65" width="180" height="60" rx="8" fill="var(--navy)" stroke="var(--gold)" stroke-width="2"/>
+      <text x="195" y="90" text-anchor="middle" fill="var(--cream)" font-size="13" font-weight="700" font-family="Playfair Display,serif">Cleta Mitchell</text>
+      <text x="195" y="108" text-anchor="middle" fill="var(--gold)" font-size="9" font-family="JetBrains Mono,monospace">Acknowledged "Key Architect"</text>
+
+      <!-- Honey -->
+      <rect x="415" y="65" width="190" height="60" rx="8" fill="var(--navy)" stroke="var(--purple-light)" stroke-width="2"/>
+      <text x="510" y="87" text-anchor="middle" fill="var(--cream)" font-size="13" font-weight="700" font-family="Playfair Display,serif">Heather Honey</text>
+      <text x="510" y="102" text-anchor="middle" fill="var(--purple-light)" font-size="8.5" font-family="JetBrains Mono,monospace">Deputy Asst Secretary</text>
+      <text x="510" y="114" text-anchor="middle" fill="var(--purple-light)" font-size="8.5" font-family="JetBrains Mono,monospace">Election Integrity · DHS</text>
+
+      <!-- Connection -->
+      <line x1="285" y1="95" x2="415" y2="95" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="350" y="86" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">podcast collaborators</text>
+      <text x="350" y="110" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">Mitchell paid Honey $121K</text>
+
+      <!-- Bill -->
+      <rect x="110" y="195" width="170" height="45" rx="6" fill="var(--cream)" stroke="var(--red)" stroke-width="2"/>
+      <text x="195" y="215" text-anchor="middle" fill="var(--red)" font-size="12" font-weight="600" font-family="Source Serif 4,serif">SAVE America Act</text>
+      <text x="195" y="230" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">architects the bill</text>
+
+      <line x1="195" y1="125" x2="195" y2="193" stroke="var(--gold)" stroke-width="2.5"/>
+      <polygon points="195,193 190,183 200,183" fill="var(--gold)"/>
+
+      <!-- DHS -->
+      <rect x="420" y="195" width="180" height="45" rx="6" fill="var(--cream)" stroke="var(--purple-light)" stroke-width="2"/>
+      <text x="510" y="215" text-anchor="middle" fill="var(--purple)" font-size="12" font-weight="600" font-family="Source Serif 4,serif">DHS Election Integrity</text>
+      <text x="510" y="230" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">oversees implementation</text>
+
+      <line x1="510" y1="125" x2="510" y2="193" stroke="var(--purple-light)" stroke-width="2.5"/>
+      <polygon points="510,193 505,183 515,183" fill="var(--purple-light)"/>
+
+      <!-- Mandate arrow -->
+      <line x1="280" y1="217" x2="418" y2="217" stroke="var(--red)" stroke-width="2"/>
+      <polygon points="418,217 408,212 408,222" fill="var(--red)"/>
+      <text x="350" y="210" text-anchor="middle" fill="var(--red)" font-size="8" font-family="JetBrains Mono,monospace">mandates submission to</text>
+
+      <!-- Voter rolls -->
+      <rect x="200" y="290" width="300" height="52" rx="6" fill="var(--cream)" stroke="var(--red)" stroke-width="2"/>
+      <text x="350" y="310" text-anchor="middle" fill="var(--red)" font-size="12" font-weight="600" font-family="Source Serif 4,serif">Every state's voter rolls</text>
+      <text x="350" y="324" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">names · addresses · party · emails</text>
+      <text x="350" y="335" text-anchor="middle" fill="var(--text-muted)" font-size="8" font-family="JetBrains Mono,monospace">no restrictions on federal use of data</text>
+
+      <line x1="350" y1="242" x2="350" y2="288" stroke="var(--red)" stroke-width="2"/>
+      <polygon points="350,288 345,278 355,278" fill="var(--red)"/>
+
+      <!-- The line -->
+      <text x="350" y="376" text-anchor="middle" fill="var(--red)" font-size="18" font-weight="800" font-family="Playfair Display,serif" letter-spacing="-0.5">The call is coming from inside the house.</text>
+
+      <text x="350" y="400" text-anchor="middle" fill="var(--text-muted)" font-size="9" font-family="Source Serif 4,serif" font-style="italic">American Oversight is suing DHS for Honey's communications with Mitchell's network.</text>
+    </svg>
+  </div>
+
+  <p class="attribution">MN06Watch · mn06watch.com · Receipts, not rage.</p>
+</div>
+
+<script>
+function showTab(n) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => { t.classList.remove('active'); t.classList.remove('active-red'); });
+  document.getElementById('panel' + n).classList.add('active');
+  const tabs = document.querySelectorAll('.tab');
+  tabs[n].classList.add(n === 3 ? 'active-red' : 'active');
+}
+</script>
+
+</body>
+</html>
