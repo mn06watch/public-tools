@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In Their Own Words — Primary Source Audio | MN06Watch</title>
+<meta property="og:title" content="In Their Own Words — Primary Source Audio">
+<meta property="og:description" content="Cleta Mitchell and Heather Honey explain, on their own podcast, why they destroyed ERIC. Their objection wasn't fraud. It was voter registration.">
+<meta property="og:site_name" content="MN06Watch">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #1a365d;
+  --navy-light: #2c5282;
+  --gold: #d69e2e;
+  --gold-dim: #b7881f;
+  --cream: #f7fafc;
+  --warm: #faf8f5;
+  --warm-dark: #f0ece6;
+  --text: #1a202c;
+  --text-mid: #4a5568;
+  --text-muted: #718096;
+  --red: #c53030;
+  --purple: #6b46c1;
+  --border: #e2e8f0;
+}
+
+body {
+  background: var(--warm);
+  font-family: 'Source Serif 4', Georgia, serif;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+.site-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--gold-dim);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.site-name a { color: var(--gold-dim); text-decoration: none; }
+.site-name a:hover { color: var(--gold); }
+
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-mid);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-size: 16px;
+  color: var(--text-mid);
+  margin-bottom: 12px;
+  border-left: 3px solid var(--gold);
+  padding-left: 16px;
+}
+
+.source-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* Section headers */
+.section-header {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 48px 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.section-desc {
+  font-size: 15px;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+}
+
+/* Audio clip cards */
+.clip-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.clip-card:hover {
+  border-color: var(--gold);
+}
+
+.clip-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.clip-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.clip-quote {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text);
+  background: var(--warm-dark);
+  padding: 12px 16px;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 10px;
+}
+
+.clip-speaker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold-dim);
+  font-weight: 500;
+}
+
+.clip-context {
+  font-size: 14px;
+  color: var(--text-mid);
+  margin-bottom: 12px;
+}
+
+.clip-audio {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.clip-audio audio {
+  width: 100%;
+  height: 40px;
+}
+
+.clip-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* External sources section */
+.external-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.external-card a {
+  color: var(--navy-light);
+  text-decoration: underline;
+}
+
+.external-card a:hover {
+  color: var(--gold);
+}
+
+/* Pull quote */
+.pull-quote {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--red);
+  text-align: center;
+  padding: 32px 24px;
+  margin: 40px 0;
+  border-top: 2px solid var(--red);
+  border-bottom: 2px solid var(--red);
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.footer a { color: var(--gold-dim); text-decoration: none; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  .subtitle { font-size: 16px; }
+  .section-header { font-size: 19px; }
+  .pull-quote { font-size: 18px; padding: 24px 16px; }
+  .clip-card { padding: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <div class="site-name"><a href="https://mn06watch.com">MN06Watch</a></div>
+  <h1>In Their Own Words</h1>
+  <p class="subtitle">Primary source audio from Cleta Mitchell's podcast, "Who's Counting"</p>
+  <p class="intro">The Election Integrity Network's podcast ran from 2021 to 2024, produced by the Conservative Partnership Institute. In 84 episodes, Mitchell and her guests — including secretaries of state, activists, and her closest collaborator Heather Honey — explained their strategy in their own words, to their own audience. These clips are sourced directly from the original audio.</p>
+  <p class="source-note">Podcast: "Who's Counting with Cleta Mitchell" · Produced by CPI's Election Integrity Network · Transcribed via Deepgram · Timestamps verified against word-level data</p>
+</header>
+
+<!-- SECTION 1: THE ERIC OBJECTION -->
+<h2 class="section-header">The ERIC Objection</h2>
+<p class="section-desc">In Episode 45, Mitchell and her guest Heather Honey discuss ERIC — the Electronic Registration Information Center, the bipartisan voter roll system that 33 states used to catch duplicate registrations and dead voters. Their objection wasn't fraud. It was voter registration.</p>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 45 · 9:08</div>
+  <div class="clip-title">"Eligible but unregistered"</div>
+  <div class="clip-quote">
+    "They were very, very interested in getting records associated with people that they call eligible but unregistered. And so these are people who have declined to register when they interacted with a particular agency. So maybe they went to get their driver's license or photo ID, and they were asked at the time, would you like to register to vote? And these people said, no."
+    <div class="clip-speaker">— Heather Honey</div>
+  </div>
+  <p class="clip-context">Honey describes ERIC's focus on people who declined to register to vote — not fraud, not ineligible voters, but eligible citizens who said no.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip01_eligible_but_unregistered.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 45 · ~9:08 · Heather Honey (Speaker 2)</div>
+</div>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 45 · 9:25</div>
+  <div class="clip-title">"No thank you. I don't want to."</div>
+  <div class="clip-quote">
+    "And these people said, no. Thank you. I don't want to. And so these folks are then targeted, and the membership agreement requires states to reach out to those people and say, you know, come on now. Are you sure you don't want to?"
+    <div class="clip-speaker">— Heather Honey</div>
+  </div>
+  <p class="clip-context">Honey uses the word "targeted" to describe ERIC contacting eligible voters about registration. The system was following federal law. She frames compliance as an attack.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip02_said_no_thank_you.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 45 · ~9:25 · Heather Honey (Speaker 2)</div>
+</div>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 45 · 19:33</div>
+  <div class="clip-title">"10 times more people added than removed"</div>
+  <div class="clip-quote">
+    "They cause 10 times more people to be added to the roles than they could ever cause to be removed."
+    <div class="clip-speaker">— Heather Honey</div>
+  </div>
+  <p class="clip-context">The core admission. ERIC caught duplicate registrations and dead voters — but it also registered eligible citizens. And that was the problem. Honey now holds a newly created position at DHS overseeing election integrity.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip03_ten_times_more.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 45 · ~19:33 · Heather Honey (Speaker 2)</div>
+</div>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 45 · 20:26</div>
+  <div class="clip-title">"95% of them to register — each and every"</div>
+  <div class="clip-quote">
+    "What is mandatory is that they have to send letters to follow up to try to get these eligible but unregistered. I guess they call them EBUs, eligible but unregistered. They have to try to get 95% of them to register."
+    <div class="clip-speaker">— Cleta Mitchell</div>
+  </div>
+  <p class="clip-context">Mitchell confirms: ERIC's mandatory voter outreach — contacting eligible citizens about registration — was the provision she objected to. Not fraud. Registration.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip04_ninety_five_percent.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 45 · ~20:26 · Cleta Mitchell (Speaker 0)</div>
+</div>
+
+<div class="pull-quote">Mitchell objected to ERIC because it registered voters.<br>The bill she architects removes them.</div>
+
+<!-- SECTION 2: THE PRESSURE -->
+<h2 class="section-header">The Pressure Campaign</h2>
+<p class="section-desc">Nine states withdrew from ERIC between 2022 and 2023. Missouri Secretary of State Jay Ashcroft's own staff privately called the conspiracy theories driving the withdrawals "horrible and misleading." On Mitchell's podcast, Ashcroft acknowledged her pressure.</p>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 15 · 17:53</div>
+  <div class="clip-title">"We've cussed and discussed about it"</div>
+  <div class="clip-quote">
+    "We've cussed and discussed about it."
+    <div class="clip-speaker">— Jay Ashcroft, Missouri Secretary of State</div>
+  </div>
+  <div class="clip-quote" style="margin-top: 8px;">
+    "We did. And, but you worked hard on it and then made a decision to withdraw."
+    <div class="clip-speaker">— Cleta Mitchell</div>
+  </div>
+  <p class="clip-context">Ashcroft admits Mitchell pressured him on ERIC. Mitchell confirms it. On her own podcast, to her own audience. Missouri withdrew anyway.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip06_cussed_and_discussed.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 15 · ~17:53 · Jay Ashcroft (Speaker 1) and Cleta Mitchell (Speaker 0)</div>
+</div>
+
+<!-- SECTION 3: THE CAMPUS STRATEGY -->
+<h2 class="section-header">The Campus Strategy</h2>
+<p class="section-desc">The SAVE America Act excludes student IDs — even from state universities. Mitchell specifically called for this. At a private RNC donor retreat in 2023, audio obtained by the Washington Post captured her outlining a strategy to limit college campus voting. On her own podcast, she said the quiet part out loud.</p>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 25 · 24:33</div>
+  <div class="clip-title">"Feed them into the election process"</div>
+  <div class="clip-quote">
+    "A massive project that has been funded by the left and through our federal tax dollars to get college students on campuses to basically feed them into the election process so that there are polling places on the campuses."
+    <div class="clip-speaker">— Cleta Mitchell</div>
+  </div>
+  <p class="clip-context">Mitchell frames eligible college students voting at campus polling places as a threat. The SAVE America Act does exactly what she describes wanting: it excludes student IDs, effectively eliminates same-day registration, and restricts the mail voting that students rely on.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip07_campus_voting.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 25 · ~24:33 · Cleta Mitchell (Speaker 0)</div>
+</div>
+
+<!-- SECTION 4: THE CONTRACTOR -->
+<h2 class="section-header">The Contractor</h2>
+<p class="section-desc">Heather Honey appears at every stage of the investigation documented in "The Integrity Gap." She worked on the Arizona Cyber Ninjas audit Mitchell funded. She wrote the ERIC report Mitchell used to pressure state withdrawals. She was paid $121,284 by Mitchell's dark money fund. In August 2025, she was appointed DHS Deputy Assistant Secretary for Election Integrity — a position that didn't exist before Trump created it. If the SAVE America Act passes, she receives every state's voter rolls.</p>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 55 · 1:10</div>
+  <div class="clip-title">Mitchell introduces Honey</div>
+  <div class="clip-quote">
+    "Her name is Heather Honey and she is a wonderful person... she has started an organization called Verity Vote."
+    <div class="clip-speaker">— Cleta Mitchell</div>
+  </div>
+  <p class="clip-context">Mitchell introducing Honey on her own podcast. The relationship is on the record. Honey's Verity Vote later received $121,284 from Mitchell's FAIR Elections Fund.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip08_honey_intro.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 55 · ~1:10 · Cleta Mitchell (Speaker 0)</div>
+</div>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 55 · 2:32</div>
+  <div class="clip-title">"Open source intelligence"</div>
+  <div class="clip-quote">
+    "I do open source intelligence training and so my background is in investigations."
+    <div class="clip-speaker">— Heather Honey</div>
+  </div>
+  <p class="clip-context">Honey describes herself as a researcher and investigator. Her research has been repeatedly debunked — by the DOJ, by Votebeat and Spotlight PA, by state election officials, and by a Maricopa County court. She now holds a federal position premised on the credibility of that research.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip09_honey_background.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 55 · ~2:32 · Heather Honey (Speaker 2)</div>
+</div>
+
+<div class="clip-card">
+  <div class="clip-label">Episode 55 · 9:06</div>
+  <div class="clip-title">"More ballots than what they had sent"</div>
+  <div class="clip-quote">
+    "They had received more ballots, more mail ballots, than what the records showed that they had sent."
+    <div class="clip-speaker">— Heather Honey</div>
+  </div>
+  <p class="clip-context">Honey describes the Pennsylvania mail ballot discrepancy that became the basis for the false "205,000 more votes than voters" claim — the number the DOJ called "false" and that Trump repeated from the stage on January 6, 2021.</p>
+  <div class="clip-audio">
+    <audio controls preload="none">
+      <source src="clips/clip10_more_ballots.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <div class="clip-meta">Episode 55 · ~9:06 · Heather Honey (Speaker 2)</div>
+</div>
+
+<!-- SECTION 5: EXTERNAL SOURCES -->
+<h2 class="section-header">External Audio Sources</h2>
+<p class="section-desc">These recordings are publicly available from the outlets that obtained them. We link to the original sources rather than hosting them.</p>
+
+<div class="external-card">
+  <div class="clip-label">January 2, 2021</div>
+  <div class="clip-title" style="font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">The Raffensperger Call</div>
+  <p class="clip-context">The hour-long phone call where President Trump pressured Georgia Secretary of State Brad Raffensperger to "find 11,780 votes." Mitchell is introduced by name at the start of the call and speaks multiple times, including an exchange where Raffensperger's general counsel tells her the data is wrong.</p>
+  <p style="font-size: 14px; margin-top: 8px;">
+    <a href="https://www.washingtonpost.com/politics/trump-raffensperger-call-transcript-georgia-vote/2021/01/03/2768e0cc-4ddd-11eb-83e3-322644d82356_story.html">Washington Post — full audio + transcript</a><br>
+    <a href="https://www.npr.org/2021/01/03/953012128/this-was-a-scam-in-recorded-call-trump-pushed-official-to-overturn-georgia-vote">NPR — audio excerpts + analysis</a><br>
+    <a href="https://www.wsbtv.com/news/politics/full-audio-call-between-president-trump-georgia-secretary-state-brad-raffensperger-election/6F7PDHDFDVCNTD3E76V7PIZWII/">WSB-TV Atlanta — independently obtained full recording</a>
+  </p>
+</div>
+
+<div class="external-card">
+  <div class="clip-label">June 21, 2022</div>
+  <div class="clip-title" style="font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">January 6 Committee — Mitchell Deposition</div>
+  <p class="clip-context">Video of Mitchell's deposition played during the fourth public hearing. Mitchell testified that state legislatures have "plenary power" to choose electors and that the Electoral Count Act is unconstitutional. She conceded "Perhaps, yes" when confronted with her own text about organizing "competing sets of electors."</p>
+  <p style="font-size: 14px; margin-top: 8px;">
+    <a href="https://www.c-span.org/clip/january-6-hearings/user-clip-cleta-mitchell-testimony-re-1st-eastman-memo/5020763">C-SPAN — Mitchell deposition clip on Eastman memo</a><br>
+    <a href="https://www.justsecurity.org/77022/january-6-clearinghouse/">Just Security — Full deposition transcript (permanent archive)</a><br>
+    <a href="https://www.npr.org/2022/06/21/1105848096/jan-6-committee-hearing-transcript">NPR — Full hearing transcript (June 21, 2022)</a>
+  </p>
+</div>
+
+<div class="footer">
+  <a href="https://mn06watch.com">MN06Watch</a> · Receipts, not rage.<br>
+  All audio sourced from publicly available recordings. Podcast clips from "Who's Counting with Cleta Mitchell," originally hosted at whoscounting.us.
+</div>
+
+</div>
+</body>
+</html>
