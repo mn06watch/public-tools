@@ -6,7 +6,7 @@
 <title>The SAVE Act: What They're Selling vs. What's in the Bill | Minnesota Reformer</title>
 <meta name="description" content="80% support voter ID. Only 28% support the SAVE Act. Here's what's actually in it — provision by provision, with primary sources.">
 <meta property="og:title" content="The SAVE Act: What They're Selling vs. What's in the Bill">
-<meta property="og:description" content="Same pollster, same week: 80% support voter ID. 28% support the SAVE Act. Here's what's actually in it — provision by provision, with primary sources.">
+<meta property="og:description" content="80% support voter ID. 28% support the SAVE Act. The more people learn, the less they support it. Here's what's actually in it — provision by provision, with primary sources.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://mn06watch.com/assets/og-save-act.png">
 <meta property="og:image:width" content="1200">
@@ -115,6 +115,77 @@
   .poll-bar-fill.mid { background:var(--gold); }
   .poll-bar-fill.low { background:#a0aec0; color:#4a5568; }
   .poll-note { font-size:0.78rem; color:var(--gray-text); font-style:italic; margin-top:0.2rem; }
+
+  /* POLL CAROUSEL */
+  .poll-carousel {
+    background:var(--white); border:1px solid var(--gray-mid); border-radius:8px;
+    padding:1.25rem 1.5rem; margin:0.75rem 0 1.5rem; box-shadow:var(--shadow-sm);
+    position:relative; overflow:hidden;
+  }
+  .poll-carousel .carousel-header {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--gray-mid);
+  }
+  .poll-carousel .carousel-title {
+    font-family:'JetBrains Mono',monospace; font-size:0.7rem; text-transform:uppercase;
+    letter-spacing:1.5px; color:var(--navy); font-weight:600;
+  }
+  .poll-carousel .carousel-counter {
+    font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gray-text);
+  }
+  .poll-carousel .carousel-nav {
+    display:flex; gap:0.5rem; align-items:center;
+  }
+  .poll-carousel .carousel-nav button {
+    background:var(--navy); color:#fff; border:none; border-radius:4px;
+    width:28px; height:28px; cursor:pointer; font-size:0.85rem; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    transition:background 0.2s;
+  }
+  .poll-carousel .carousel-nav button:hover { background:var(--gold); color:var(--navy); }
+  .carousel-slide {
+    display:none; animation:carouselFade 0.4s ease;
+  }
+  .carousel-slide.active { display:block; }
+  @keyframes carouselFade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+  .carousel-slide .cs-pollster {
+    font-family:'JetBrains Mono',monospace; font-size:0.65rem; color:var(--gray-text);
+    text-transform:uppercase; letter-spacing:1px; margin-bottom:0.25rem;
+  }
+  .carousel-slide .cs-question {
+    font-size:0.88rem; font-weight:600; color:var(--navy); margin-bottom:0.5rem; line-height:1.4;
+  }
+  .carousel-slide .cs-bar-track {
+    background:#e2e8f0; border-radius:4px; height:32px; overflow:hidden; margin-bottom:0.35rem;
+  }
+  .carousel-slide .cs-bar-fill {
+    height:100%; border-radius:4px; display:flex; align-items:center; padding-left:12px;
+    font-family:'JetBrains Mono',monospace; font-size:0.8rem; font-weight:600; color:#fff;
+    transition:width 0.8s cubic-bezier(0.22,1,0.36,1);
+  }
+  .cs-bar-fill.cs-high { background:#38a169; }
+  .cs-bar-fill.cs-mid { background:var(--gold); color:var(--navy); }
+  .cs-bar-fill.cs-low { background:#c53030; }
+  .cs-bar-fill.cs-gray { background:#a0aec0; color:#4a5568; }
+  .carousel-slide .cs-detail {
+    font-size:0.78rem; color:var(--gray-text); font-style:italic; line-height:1.5;
+  }
+  .carousel-slide .cs-takeaway {
+    font-size:0.82rem; font-weight:600; color:var(--navy);
+    margin-top:0.5rem; padding-top:0.5rem; border-top:1px dashed var(--gray-mid);
+  }
+  .carousel-dots {
+    display:flex; justify-content:center; gap:6px; margin-top:0.75rem;
+  }
+  .carousel-dots .dot {
+    width:8px; height:8px; border-radius:50%; background:#d4d4d4;
+    cursor:pointer; transition:background 0.2s, transform 0.2s;
+  }
+  .carousel-dots .dot.active { background:var(--navy); transform:scale(1.3); }
+  .carousel-pattern {
+    font-family:'JetBrains Mono',monospace; font-size:0.7rem; text-align:center;
+    color:var(--gray-text); margin-top:0.5rem; letter-spacing:0.5px;
+  }
 
   /* CARDS */
   .card {
@@ -312,29 +383,94 @@
     </div>
   </div>
 
-  <!-- DEEPER POLLING DATA (collapsible) -->
-  <div class="faq-item" id="polling-deeper" style="margin:0 0 1.5rem; border:1px solid var(--gray-mid); border-radius:0 0 8px 8px; border-top:2px solid var(--gray-mid);">
-    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')" style="background:var(--white);">
-      <div class="faq-q-text" style="font-size:0.85rem;">What do voters think the bill would actually do? (CBS/YouGov + UMass/YouGov)</div>
-      <div class="faq-toggle">+</div>
+  <!-- POLL CAROUSEL: Every Poll -->
+  <div class="poll-carousel" id="pollCarousel">
+    <div class="carousel-header">
+      <span class="carousel-title">Every Poll on the SAVE Act</span>
+      <div class="carousel-nav">
+        <span class="carousel-counter"><span id="carouselCurrent">1</span> / <span id="carouselTotal">10</span></span>
+        <button onclick="carouselPrev()" aria-label="Previous">‹</button>
+        <button onclick="carouselNext()" aria-label="Next">›</button>
+      </div>
     </div>
-    <div class="faq-a"><div class="faq-a-inner">
-      <p class="mono-label" style="margin-bottom:0.5rem;">CBS/YouGov · March 16–19, 2026 · n=2,500 · MOE ±2.2</p>
-      <div class="stat-callout"><strong>57%</strong> say the bill would mostly prevent citizens from voting or prevent both equally. A majority of voters — including independents — believe the bill would harm citizens as much or more than it would stop noncitizens.</div>
-      <div class="stat-callout"><strong>51% of Republicans</strong> say noncitizen voting happens "sometimes" or less. A majority of the bill's own base does not believe the problem is widespread.</div>
-      <div class="stat-callout"><strong>42%</strong> call ineligible voting a "major problem." <strong>44%</strong> call preventing eligible citizens from voting a "major problem." Voters rate the two concerns as essentially equal.</div>
 
-      <p class="mono-label" style="margin-top:1.25rem; margin-bottom:0.5rem;">UMass Amherst/YouGov · March 20–25, 2026 · n=1,000 · MOE ±3.5</p>
-      <div class="stat-callout"><strong>51%</strong> support the concept of proof of citizenship to register — but even the bill's own supporters express reservations about real-world consequences for eligible citizens.</div>
-      <p style="font-size:0.88rem;">Support by race: <strong>56%</strong> white · <strong>43%</strong> Latino · <strong>39%</strong> Black. The communities most likely to lack documentary proof of citizenship are the least likely to support requiring it.</p>
-      <p style="font-size:0.88rem;">The poll directors stated: <em>"Americans may support the principle of citizenship verification in the abstract while remaining genuinely uncomfortable with who gets caught in the net."</em></p>
-      <div class="faq-source">Sources: CBS News/YouGov, March 16–19, 2026 · CNN analysis of same data · UMass Amherst/YouGov, April 3, 2026 release · NYT/Siena (via Brennan Center) · NACo, March 2026</div>
+    <div class="carousel-slide active" data-idx="0">
+      <div class="cs-pollster">CBS News/YouGov · Mar 16–19, 2026 · 2,500 adults surveyed</div>
+      <div class="cs-question">Do you support "The SAVE America Act"? (by name, no description)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-low" style="width:28%">28%</div></div>
+      <div class="cs-detail">31% oppose · 41% not sure. Only 16% of Republicans say they know "a lot" about the bill. The same CBS/YouGov poll found 80% support photo ID — the gap between the concept and this bill is 52 points.</div>
+      <div class="cs-takeaway">The largest, most rigorous poll on the SAVE Act by name. 28% support from the gold-standard pollster.</div>
+    </div>
 
-      <p class="mono-label" style="margin-top:1.25rem; margin-bottom:0.5rem;">The Priority Test</p>
-      <div class="stat-callout"><strong>0%</strong> of voters named "election integrity" as the most important problem facing the country when asked by NYT/Siena. Not low — literally zero. The urgency that drives this bill exists in advocacy circles and on Capitol Hill. It does not exist among voters.</div>
-    </div></div>
+    <div class="carousel-slide" data-idx="1">
+      <div class="cs-pollster">Pew Research Center · Aug 2025 · 5,000+ adults surveyed</div>
+      <div class="cs-question">Do you support requiring a valid government-issued photo ID to vote?</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-high" style="width:83%">83%</div></div>
+      <div class="cs-detail">71% of Democrats · 83% of independents · 76% of Black voters. This is the number SAVE Act supporters cite most — but it measures photo ID, not the bill.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="2">
+      <div class="cs-pollster">Harvard CAPS/Harris · Feb 2026 · 2,066 adults surveyed</div>
+      <div class="cs-question">Do you support the "SAVE America Act"? (summarized description, provisions not disclosed)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:71%">71%</div></div>
+      <div class="cs-detail">Respondents heard a curated summary — not the actual provisions. Criminal penalties, DHS voter roll access, and immediate implementation were not described. The White House cited this as proof of "massive support."</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="3">
+      <div class="cs-pollster">McLaughlin &amp; Associates · Mar 4–9, 2026 · 1,000 adults surveyed</div>
+      <div class="cs-question">Do you support the SAVE Act? (told: proof of citizenship + photo ID to vote)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:65%">65%</div></div>
+      <div class="cs-detail">Commissioned by Tea Party Patriots Action. Respondents told about proof of citizenship and photo ID requirements only. Not mentioned: criminal penalties for election officials, DHS voter roll access, no notification before removal, immediate implementation, or that most common IDs don't qualify.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="4">
+      <div class="cs-pollster">Rasmussen Reports · Mar 8–10, 2026 · 1,098 adults surveyed</div>
+      <div class="cs-question">Do you support the SAVE Act? (question wording not publicly available)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:63%">63%</div></div>
+      <div class="cs-detail">Full question wording behind paywall. Rasmussen blocked @MN6Watch on April 13 for citing Wisconsin Elections Commission data correcting a claim they amplified.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="5">
+      <div class="cs-pollster">YouGov · Mar 13–16, 2026 · 1,500 adults surveyed</div>
+      <div class="cs-question">Do you support requiring proof of citizenship to register to vote?</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:59%">59%</div></div>
+      <div class="cs-detail">Measures the concept of proof of citizenship — not the SAVE Act specifically. No mention of which documents qualify or what happens if you lack them.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="6">
+      <div class="cs-pollster">UMass Amherst/YouGov · Mar 20–25, 2026 · 1,000 adults surveyed</div>
+      <div class="cs-question">Do you support requiring proof of citizenship to register? (concept with caveats)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:51%">51%</div></div>
+      <div class="cs-detail">Even supporters expressed reservations about consequences for eligible citizens. Support by race: 56% white · 43% Latino · 39% Black. 0% named election integrity as the nation's top priority.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="7">
+      <div class="cs-pollster">Navigator Research · Mar 12–16, 2026 · 1,000 adults surveyed</div>
+      <div class="cs-question">Do you support the SAVE Act? (before and after opposing information)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-mid" style="width:50%">50% → 45%</div></div>
+      <div class="cs-detail">Support dropped 5 points after hearing opposing messages. Independents went underwater by 12 points (34% support / 46% oppose). Most effective counter: Trump prioritizing this over cost of living.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="8">
+      <div class="cs-pollster">Public Policy Polling (A− rated, 538) · Feb 23–24, 2026 · 597 adults surveyed</div>
+      <div class="cs-question">Do you support the SAVE Act? (before and after learning provisions)</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-low" style="width:61%">61% oppose</div></div>
+      <div class="cs-detail">Initial: 34% support / 35% oppose / 31% not sure. After learning the actual provisions, opposition surged 26 points to 61%. Support barely moved (34% → 35%). Learning what's in the bill doesn't build support — it builds opposition.</div>
+    </div>
+
+    <div class="carousel-slide" data-idx="9">
+      <div class="cs-pollster">NYT/Siena · 2026 · via Brennan Center</div>
+      <div class="cs-question">What is the most important problem facing the country?</div>
+      <div class="cs-bar-track"><div class="cs-bar-fill cs-gray" style="width:5%">0%</div></div>
+      <div class="cs-detail">Zero percent of voters named "election integrity" as the most important problem facing the country. Not low — literally zero. The urgency driving this bill exists in advocacy circles and on Capitol Hill. It does not exist among voters.</div>
+      <div class="cs-takeaway">The bill's premise — that election integrity is an urgent national crisis — is not shared by the American public.</div>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="carousel-pattern">Start with the result. Then see how every other poll got a different number — and why.</div>
   </div>
 
+  
   <!-- ===================== SECTION 2: PROVISIONS ===================== -->
   <h2 class="section-header" id="provisions">What's in the Bill — Provision by Provision</h2>
   <p>Below is every major provision, the talking point used to sell it, and what the bill text and evidence show. <strong>Click any card to see the receipts.</strong></p>
@@ -507,16 +643,39 @@
 
     <div class="faq-category">Common Claims vs. Record</div>
 
-    <div class="faq-item" id="faq-polling-conflation">
+    <!-- POLLING DEEP DIVE (moved from polling section) -->
+  <div class="faq-item" id="polling-deeper" style="margin:0 0 1.5rem; border:1px solid var(--gray-mid); border-radius:0 0 8px 8px; border-top:2px solid var(--gray-mid);">
+    <div class="faq-q" onclick="this.parentElement.classList.toggle('open')" style="background:var(--white);">
+      <div class="faq-q-text" style="font-size:0.85rem;">What does the polling actually show? (Full crosstabs + priority data)</div>
+      <div class="faq-toggle">+</div>
+    </div>
+    <div class="faq-a"><div class="faq-a-inner">
+      <p class="mono-label" style="margin-bottom:0.5rem;">CBS/YouGov · March 16–19, 2026 · 2,500 adults surveyed</p>
+      <div class="stat-callout"><strong>57%</strong> say the bill would mostly prevent citizens from voting or prevent both equally. A majority of voters — including independents — believe the bill would harm citizens as much or more than it would stop noncitizens.</div>
+      <div class="stat-callout"><strong>51% of Republicans</strong> say noncitizen voting happens "sometimes" or less. A majority of the bill's own base does not believe the problem is widespread.</div>
+      <div class="stat-callout"><strong>42%</strong> call ineligible voting a "major problem." <strong>44%</strong> call preventing eligible citizens from voting a "major problem." Voters rate the two concerns as essentially equal.</div>
+
+      <p class="mono-label" style="margin-top:1.25rem; margin-bottom:0.5rem;">UMass Amherst/YouGov · March 20–25, 2026 · 1,000 adults surveyed</p>
+      <div class="stat-callout"><strong>51%</strong> support the concept of proof of citizenship to register — but even the bill's own supporters express reservations about real-world consequences for eligible citizens.</div>
+      <p style="font-size:0.88rem;">Support by race: <strong>56%</strong> white · <strong>43%</strong> Latino · <strong>39%</strong> Black. The communities most likely to lack documentary proof of citizenship are the least likely to support requiring it.</p>
+      <p style="font-size:0.88rem;">The poll directors stated: <em>"Americans may support the principle of citizenship verification in the abstract while remaining genuinely uncomfortable with who gets caught in the net."</em></p>
+      <div class="faq-source">Sources: CBS News/YouGov, March 16–19, 2026 · CNN analysis of same data · UMass Amherst/YouGov, April 3, 2026 release · NYT/Siena (via Brennan Center) · NACo, March 2026</div>
+
+      <p class="mono-label" style="margin-top:1.25rem; margin-bottom:0.5rem;">The Priority Test</p>
+      <div class="stat-callout"><strong>0%</strong> of voters named "election integrity" as the most important problem facing the country when asked by NYT/Siena. Not low — literally zero. The urgency that drives this bill exists in advocacy circles and on Capitol Hill. It does not exist among voters.</div>
+    </div></div>
+  </div>
+
+  <div class="faq-item" id="faq-polling-conflation">
       <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <div class="faq-q-text">80–90% of Americans support this bill. Why are Democrats blocking something with that level of support?</div>
         <div class="faq-toggle">+</div>
       </div>
       <div class="faq-a"><div class="faq-a-inner">
         <p>The 80–90% figures measure support for <strong>photo ID requirements</strong> — not the SAVE Act. These are different questions about different policies.</p>
-        <p>CBS News/YouGov asked about the SAVE Act by name during the same week as those photo ID polls: <strong>28% favor, 31% oppose, 41% not sure.</strong> Only 16% of Republicans say they know "a lot" about the bill. When voters learn what's actually in it — the documentation requirements, the incentive structure, the implementation timeline — support collapses.</p>
-        <p>The same pollster, the same week, produced both the 80% and the 28% numbers. That gap between described provisions and named legislation is the story. Provisions poll higher than the bill because the details change minds.</p>
-        <div class="faq-source">Sources: CBS News/YouGov, March 16–19, 2026 (n=2,500, MOE ±2.2) · cbsnews.com/news/voting-process-photo-id-opinion-poll/</div>
+        <p>CBS News/YouGov asked about the SAVE Act by name: <strong>28% favor, 31% oppose, 41% not sure.</strong> Only 16% of Republicans say they know "a lot" about the bill. When voters learn what's actually in it — the documentation requirements, the incentive structure, the implementation timeline — support collapses.</p>
+        <p>The same CBS/YouGov poll found 80% support photo ID. That 52-point gap between the concept and this bill is the story. Provisions poll higher than the bill because the details change minds.</p>
+        <div class="faq-source">Sources: CBS News/YouGov, March 16–19, 2026 (2,500 adults surveyed) · cbsnews.com/news/voting-process-photo-id-opinion-poll/</div>
       </div></div>
     </div>
 
@@ -1182,6 +1341,68 @@
   };
 
   init();
+})();
+
+// POLL CAROUSEL
+(function(){
+  var slides = document.querySelectorAll('#pollCarousel .carousel-slide');
+  var total = slides.length;
+  var current = 0;
+  var autoTimer;
+
+  document.getElementById('carouselTotal').textContent = total;
+
+  // Build dots
+  var dotsEl = document.getElementById('carouselDots');
+  for(var i=0;i<total;i++){
+    var d = document.createElement('span');
+    d.className = 'dot' + (i===0?' active':'');
+    d.setAttribute('data-idx',i);
+    d.onclick = function(){ goTo(parseInt(this.getAttribute('data-idx'))); };
+    dotsEl.appendChild(d);
+  }
+
+  function goTo(idx){
+    slides[current].classList.remove('active');
+    dotsEl.children[current].classList.remove('active');
+    current = ((idx % total) + total) % total;
+    slides[current].classList.add('active');
+    dotsEl.children[current].classList.add('active');
+    document.getElementById('carouselCurrent').textContent = current+1;
+    resetAuto();
+  }
+
+  window.carouselNext = function(){ goTo(current+1); };
+  window.carouselPrev = function(){ goTo(current-1); };
+
+  function resetAuto(){
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function(){ goTo(current+1); }, 6000);
+  }
+
+  // Only start when carousel is visible
+  var el = document.getElementById('pollCarousel');
+  var started = false;
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting && !started){
+        started = true;
+        goTo(0); // Reset to first slide
+        resetAuto();
+      } else if(entry.isIntersecting && started){
+        resetAuto();
+      } else {
+        clearInterval(autoTimer);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(el);
+
+  // Pause on hover
+  el.addEventListener('mouseenter', function(){ clearInterval(autoTimer); });
+  el.addEventListener('mouseleave', function(){ if(started) resetAuto(); });
 })();
 </script>
 </body>
