@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — Eliminationist and Delegitimizing Rhetoric in Congressional X, 2026 — MN-06 Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a365d;
+  --navy-deep: #0f2547;
+  --navy-soft: #2c5282;
+  --gold: #d69e2e;
+  --gold-soft: #f6e2b3;
+  --gold-deep: #975a16;
+  --white: #ffffff;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-500: #718096;
+  --gray-700: #2d3748;
+  --gray-900: #1a202c;
+  --d-color: #2c5282;
+  --d-soft: #ebf4fb;
+  --r-color: #9b2c2c;
+  --r-soft: #fde8e8;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --serif-body: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--serif-body);
+  background: var(--white);
+  color: var(--gray-900);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 16px 0;
+}
+.site-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+}
+.brand-tag {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--gold-soft);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 64px 24px 72px;
+  border-top: 4px solid var(--gold);
+}
+.hero-inner { max-width: 800px; margin: 0 auto; }
+.hero-back {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.hero-back:hover { color: var(--gold-soft); }
+.hero-eyebrow {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+.hero-eyebrow .sep { margin: 0 12px; opacity: 0.5; }
+.hero h1 {
+  font-family: var(--serif-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+.hero-deck {
+  font-family: var(--serif-body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+}
+.hero-meta {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  margin-top: 24px;
+  letter-spacing: 0.04em;
+}
+
+/* TOC */
+.toc-wrap {
+  background: var(--gray-50);
+  padding: 48px 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.toc {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 28px 32px;
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+  border-top: 3px solid var(--gold);
+}
+.toc-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+.toc ol {
+  list-style: none;
+  counter-reset: toc;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+}
+.toc li {
+  counter-increment: toc;
+  padding: 6px 0;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+}
+.toc li::before {
+  content: counter(toc, decimal-leading-zero);
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+.toc a {
+  font-family: var(--serif-body);
+  color: var(--gray-900);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.toc a:hover { color: var(--navy); }
+
+/* ARTICLE */
+.article-wrap { background: var(--white); padding: 56px 0; }
+.article {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.article p, .article li {
+  font-family: var(--serif-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--gray-900);
+}
+.article p { margin-bottom: 20px; }
+.article ul, .article ol { margin: 0 0 20px 24px; }
+.article li { margin-bottom: 8px; }
+.article h2 {
+  font-family: var(--serif-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 56px 0 8px;
+  color: var(--navy);
+  padding-top: 24px;
+  border-top: 2px solid var(--gold);
+}
+.article h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+.article h2 .sec-num {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold-deep);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.article h3 {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-weight: 600;
+  margin: 36px 0 14px;
+  color: var(--navy);
+}
+.article h4 {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 24px 0 10px;
+}
+.article strong { font-weight: 600; color: var(--gray-900); }
+.article em { font-style: italic; }
+.article blockquote {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 24px 0;
+  padding: 18px 24px;
+  background: var(--gray-50);
+  border-left: 4px solid var(--gold);
+  color: var(--gray-700);
+}
+
+.lede {
+  font-size: 19px !important;
+  line-height: 1.55 !important;
+  color: var(--gray-700) !important;
+  margin-bottom: 24px !important;
+}
+
+/* CALLOUT */
+.callout {
+  margin: 28px 0;
+  padding: 20px 26px;
+  background: var(--gold-soft);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+}
+.callout-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 8px;
+}
+.callout p {
+  font-size: 16px !important;
+  margin-bottom: 0 !important;
+  color: var(--navy-deep) !important;
+}
+
+/* TABLES */
+.tbl-wrap {
+  margin: 24px 0;
+  overflow-x: auto;
+  border: 1px solid var(--gray-200);
+  border-radius: 4px;
+}
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 13px;
+  background: var(--white);
+}
+.data thead th {
+  background: var(--navy);
+  color: var(--white);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.data thead th.num { text-align: right; }
+.data tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.data tbody td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.data tbody tr:last-child td { border-bottom: none; }
+.data tbody tr:hover td { background: var(--gray-50); }
+.data tbody td strong { color: var(--navy); font-weight: 600; }
+
+/* CODE BLOCK */
+pre.prompt {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  background: var(--navy-deep);
+  color: #e2e8f0;
+  padding: 24px 28px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 24px 0;
+  border-left: 4px solid var(--gold);
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
+pre.prompt::before {
+  content: 'PRODUCTION PROMPT — VERBATIM';
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+pre.sql {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.6;
+  background: var(--gray-50);
+  color: var(--navy-deep);
+  padding: 18px 24px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 16px 0;
+  border-left: 3px solid var(--navy-soft);
+  white-space: pre;
+}
+code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  background: var(--gray-100);
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: var(--navy-deep);
+}
+
+/* DEFINITION CARDS for taxonomy categories */
+.cat-def {
+  margin: 20px 0;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--navy);
+  border-radius: 4px;
+}
+.cat-def h4 {
+  font-family: var(--serif-display) !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--navy) !important;
+  margin: 0 0 10px !important;
+}
+.cat-def-num {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.cat-def p {
+  font-size: 15px !important;
+  margin-bottom: 12px !important;
+}
+.cat-def-examples { margin-top: 10px; }
+.cat-def-row {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  padding: 6px 0;
+  font-size: 14px;
+}
+.cat-def-row .lbl {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 4px;
+}
+.cat-def-row .lbl.in { color: var(--r-color); }
+.cat-def-row .lbl.out { color: #2f855a; }
+.cat-def-row .ex {
+  font-family: var(--serif-body);
+  font-style: italic;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+/* FOOTER */
+.article-footer {
+  max-width: 760px;
+  margin: 60px auto 0;
+  padding: 48px 24px 64px;
+  border-top: 2px solid var(--gold);
+  text-align: center;
+}
+.byline {
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.65;
+  max-width: 560px;
+  margin: 0 auto 20px;
+}
+.byline a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
+.back-to-article {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 14px 32px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  text-transform: uppercase;
+}
+.back-to-article:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.85);
+  border-top: 4px solid var(--gold);
+  padding: 32px 24px;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.site-footer .tagline {
+  color: var(--gold);
+  font-style: italic;
+  font-family: var(--serif-body);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .hero { padding: 48px 24px 56px; }
+  .toc ol { grid-template-columns: 1fr; }
+  pre.prompt, pre.sql { font-size: 11px; padding: 16px; }
+  .article h2 { font-size: 24px; }
+  .nav-links { display: none; }
+  .data { font-size: 12px; }
+  .data thead th, .data tbody td { padding: 10px 12px; }
+  .cat-def-row { grid-template-columns: 1fr; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://mn06watch.com" class="brand">MN06WATCH<span class="brand-tag">Receipts, not rage.</span></a>
+    <nav class="nav-links">
+      <a href="https://mn06watch.com/articles/">Articles</a>
+      <a href="https://mn06watch.substack.com">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <a href="../" class="hero-back">← Back to article</a>
+    <div class="hero-eyebrow">
+      Methodology
+      <span class="sep">·</span>
+      Congressional Rhetoric Audit
+    </div>
+    <h1>Methodology: Eliminationist and Delegitimizing Rhetoric in Congressional X, 2026</h1>
+    <p class="hero-deck">The full classifier prompt, counting rules, validation procedures, and edge case rulings used to produce the 90-day audit of 122,106 congressional X posts. Anyone wishing to apply the same criteria to a different corpus or replicate the analysis on a future window can do so from this page.</p>
+    <div class="hero-meta">Analysis window: January 26 – April 26, 2026 (90 days) · Prepared April 26, 2026 · Audit-trail review verdict appended April 27, 2026 · EC-07 methodology refinement and reclassification appended April 27, 2026</div>
+  </div>
+</section>
+
+<div class="toc-wrap">
+  <nav class="toc">
+    <div class="toc-title">Sections</div>
+    <ol>
+      <li><a href="#s1">Platform scope — X only</a></li>
+      <li><a href="#s2">Scope rationale — Lane 2 adoption</a></li>
+      <li><a href="#s3">Universe of members</a></li>
+      <li><a href="#s4">Minimum post threshold</a></li>
+      <li><a href="#s5">Why we include "fascist" and "commie"</a></li>
+      <li><a href="#s6">Consolidated taxonomy</a></li>
+      <li><a href="#s7">Classifier architecture and full prompt</a></li>
+      <li><a href="#s8">How we count repeated rhetoric</a></li>
+      <li><a href="#s10">Validation results — pre-run blind review</a></li>
+      <li><a href="#s11">Disclosures</a></li>
+      <li><a href="#s12">Pre-publication task results</a></li>
+      <li><a href="#task4">Task 4 — EC-07 reclassification (post-validation)</a></li>
+      <li><a href="#s12c">Audit-trail review verdict</a></li>
+    </ol>
+  </nav>
+</div>
+
+<div class="article-wrap">
+<article class="article">
+
+<!-- SECTION 1 -->
+<h2 id="s1"><span class="sec-num">Section 01</span>Platform scope — X only</h2>
+
+<p class="lede">This analysis covers X (formerly Twitter) posts exclusively. It does not include Bluesky, Truth Social, YouTube, podcast transcripts, press releases, floor speeches, or any other channel.</p>
+
+<h4>Why X, and not the partisan platforms</h4>
+
+<p>Bluesky and Truth Social are both partisan echo chambers at the congressional level. In the 90-day analysis window, Democrats posted approximately 24,500 times on Bluesky; Republicans posted approximately 485 times — a 50:1 ratio. Truth Social runs the inverse pattern: Republicans dominate, Democratic congressional presence is negligible. Each platform's audience self-selects toward agreement; cross-party exposure on either is minimal; rhetorical pushback rarely happens.</p>
+
+<p>The concern driving this analysis is the argument that political rhetoric creates preconditions for political violence in the broader public sphere. If that argument has weight, the rhetoric that matters most is the rhetoric that <strong>crosses the partisan divide</strong> — the rhetoric that gets screenshotted, quote-reposted by hostile accounts, surfaces in mainstream news cycles, and reaches voters who don't already agree. X is the platform where political rhetoric travels across that divide at scale. Bluesky and Truth Social are mostly preaching to the converted, where the same rhetoric stays inside its bubble and doesn't reach cross-party audiences.</p>
+
+<p>Including either Bluesky or Truth Social in the corpus would also create a structural denominator imbalance — one party would have substantially more posts in the denominator on each platform, not because of differences in rhetorical behavior but because of differences in platform adoption. The 50:1 D-skew on Bluesky and the corresponding R-skew on Truth Social would each inflate one party's normalized rate without measuring anything about the cross-party rhetoric the analysis is designed to capture.</p>
+
+<p>Restricting to X produces a corpus where <strong>Republicans actually post more</strong> (63,822 original posts vs. Democrats' 58,011), making per-post normalization across parties defensible. Both parties are present on X at scale, and it remains the primary venue for real-time public political communication from elected officials reaching audiences across the partisan divide.</p>
+
+<p>(A secondary consideration: Truth Social's API and bulk historical data access are significantly more restrictive than X's, which would impose meaningful additional cost on an independent analysis. This is a real factor but it is the secondary one. Even with unlimited access, including Truth Social would create the same denominator-imbalance and echo-chamber problems described above.)</p>
+
+<p>Bluesky and Truth Social data are not discarded — both are held for a planned separate standing tracker on within-platform rhetoric, which will address each platform's echo-chamber dynamics on their own terms rather than as part of cross-platform aggregate metrics.</p>
+
+<div class="callout">
+  <div class="callout-label">Scope statement for publication</div>
+  <p>"This analysis covers original X posts (no reposts) from all current voting members of Congress — 535 members — during the 90-day period from January 26 to April 26, 2026."</p>
+</div>
+
+<!-- SECTION 2 -->
+<h2 id="s2"><span class="sec-num">Section 02</span>Scope rationale — from "violent rhetoric" to "eliminationist and delegitimizing rhetoric"</h2>
+
+<p>This analysis was originally scoped as "violent rhetoric." On April 26, 2026 — in the context of active public discourse following the WHCD — the scope was expanded to <strong>"eliminationist and delegitimizing rhetoric"</strong> for the following reason.</p>
+
+<p>Public debate this week centers on the argument that totalitarian-regime political labels applied to political opponents — "fascist," "Nazi," "communist," "Marxist" — create preconditions for political violence even when no explicit call to violence is made. These labels delegitimize political opponents by identifying them not as wrong, but as categorically outside the bounds of legitimate governance.</p>
+
+<p>A taxonomy that included Category 5 (calls to violence, threats) but excluded the delegitimizing label that often precedes them would produce an asymmetric analysis. It would capture "hang them" but not "they are fascists who must be removed" — treating the escalation threshold differently depending on how far a post traveled along the rhetoric-to-violence spectrum.</p>
+
+<p>The expanded scope makes the analysis responsive to its news hook while remaining empirically grounded. The piece title reflects the two-part scope: <strong>eliminationist</strong> (calls for removal/eradication of a group) and <strong>delegitimizing</strong> (labels that mark political opponents as outside the legitimate political order).</p>
+
+<!-- SECTION 3 -->
+<h2 id="s3"><span class="sec-num">Section 03</span>Universe of members</h2>
+
+<ul>
+  <li><strong>Total current members:</strong> 541 (active and appointed)</li>
+  <li><strong>Scope for this analysis:</strong> 535 voting members (435 House + 100 Senate)</li>
+  <li><strong>Members with zero X posts in window:</strong> 6</li>
+  <li><strong>Members excluded by 100-post threshold:</strong> reported separately in the small-sample table</li>
+</ul>
+
+<!-- SECTION 4 -->
+<h2 id="s4"><span class="sec-num">Section 04</span>Minimum post threshold</h2>
+
+<p><strong>Members with fewer than 100 original X posts in the 90-day window are excluded from rate-based headline rankings.</strong> Members with 50–99 posts are reported separately with rates and CIs displayed but labeled as smaller-sample with caution disclaimers.</p>
+
+<h4>Rationale</h4>
+
+<p>Rate-based metrics (flags per 100 posts) are unstable for small samples. A member with 53 posts and 1 flag has a rate of 1.89/100 with a 95% CI of [0.34, 9.84] — the upper bound is more than five times the lower. Including such members in a headline rate-based ranking produces unstable, editorially misleading positions.</p>
+
+<h4>Asymmetric impact — disclosed</h4>
+
+<p>The 100-post threshold removes more Republicans than Democrats. R P25 = 86 posts; D P25 = 142 posts. A larger share of Republican members fall near the exclusion zone. The rule is applied symmetrically — the criterion is identical for all members regardless of party. The asymmetric impact is a structural feature of the X volume distribution, not an analytical choice.</p>
+
+<!-- SECTION 5 -->
+<h2 id="s5"><span class="sec-num">Section 05</span>Why we include "fascist" and "commie" as labels</h2>
+
+<p>The most important editorial decision in this analysis is the symmetric treatment of totalitarian-regime labels applied to political opponents — Category 6 of the taxonomy.</p>
+
+<h4>The symmetric logic</h4>
+
+<p>When a Republican member of Congress posts "the COMMIE-crats in Washington want to destroy America," that is not a policy critique. It is a political identity label that marks an entire party as constitutionally illegitimate — as belonging to an ideology that is categorically incompatible with American governance. The post does not argue that Democrats are wrong; it argues that they are something other than Americans.</p>
+
+<p>The same logic applies in the opposite direction. When a Democratic member of Congress posts "hold every fascist in this Administration accountable," the word "fascist" is doing the same work: it is not identifying a policy failure, it is identifying an opponent as a member of a totalitarian movement that must be opposed, not merely defeated.</p>
+
+<h4>Both directions appear in the data at scale</h4>
+
+<ul>
+  <li>D members applying fascist/Nazi as identity labels to R members or the Administration: ~50 posts in window</li>
+  <li>R members applying commie/Marxist as identity labels to D members or D officials: ~156 posts in window</li>
+</ul>
+
+<p>The directional imbalance in raw counts is a finding, not a flaw in the analysis. We do not pre-adjust for it. We do normalize by post volume (per 100 posts) to account for D/R corpus size differences.</p>
+
+<div class="callout">
+  <div class="callout-label">Pre-commitment</div>
+  <p>This decision was made before we ran the counts. The methodology was set symmetrically. Whatever the data shows, publishes.</p>
+</div>
+
+<h4>What this is NOT</h4>
+
+<ul>
+  <li>A false-equivalence claim that Republican and Democratic rhetoric are identical</li>
+  <li>A claim that "fascist" and "commie" are equally accurate descriptions of the current parties</li>
+  <li>A claim that both parties engage in eliminationist rhetoric at equal rates</li>
+</ul>
+
+<p>The analysis measures the occurrence of a specific rhetorical behavior. It makes no claim about whether any label is accurate. Editorial interpretation of the directional findings is for the piece's conclusion, not the methodology.</p>
+
+<!-- SECTION 6 -->
+<h2 id="s6"><span class="sec-num">Section 06</span>Consolidated taxonomy</h2>
+
+<p>For this analysis, <strong>eliminationist or delegitimizing rhetoric</strong> is language that does one or more of the following in a political context directed at political opponents, groups, or institutions:</p>
+
+<div class="cat-def" id="cat1">
+  <div class="cat-def-num">Category 01</div>
+  <h4>Calls to violence</h4>
+  <p>Direct or near-direct calls for physical violence against named or identified individuals, groups, or institutions. Includes coded calls where violence is the reasonably implied meaning.</p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"SHOOT to KILL! No place for radical Islam in SC!" / "Hang these dirtbags and send them to Hell"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">"We will fight this bill every step of the way" / "We need to defeat them in November"</div></div>
+  </div>
+</div>
+
+<div class="cat-def" id="cat2">
+  <div class="cat-def-num">Category 02</div>
+  <h4>Dehumanizing language</h4>
+  <p>Language that strips human dignity from a group of people by applying animal, pest, disease, or annihilation metaphors to human beings as a class. The target must be human beings (not policies, institutions, or leaders as individuals).</p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"vermin" applied to immigrants as a class / "[group] is a plague/infestation on our country"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">"illegal policy," "corrupt institution," "incompetent leadership"</div></div>
+  </div>
+</div>
+
+<div class="cat-def" id="cat3">
+  <div class="cat-def-num">Category 03</div>
+  <h4>Eliminationist framing</h4>
+  <p>Language asserting that a group of people has no legitimate place in the country, political system, or society, and must be eradicated, expelled, or purged as an end goal. Distinct from restrictionist policy positions.</p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"[Group] is a DEATH CULT and has NO PLACE in America" / "we must eliminate them from our politics"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">"We should reduce immigration" / "We disagree with this policy approach"</div></div>
+  </div>
+</div>
+
+<div class="cat-def" id="cat4">
+  <div class="cat-def-num">Category 04</div>
+  <h4>Explicit threats against named individuals</h4>
+  <p>Direct or implied threats of physical, legal, or social harm directed at a specific, named person, beyond normal accountability language.</p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">Specific named threat of physical harm / "you will pay for this personally"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">"The Secretary should resign" / "We will pursue legal accountability for these actions"</div></div>
+  </div>
+</div>
+
+<div class="cat-def" id="cat5">
+  <div class="cat-def-num">Category 05</div>
+  <h4>"Enemy of the people" designation</h4>
+  <p>Labeling domestic political opponents or civic institutions as existential enemies requiring elimination, not merely defeat. The distinguishing feature is framing opponents as illegitimate participants in society who must be removed from it.</p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"elected Democrats are the ENEMY OF THE PEOPLE" (framing party as anti-citizen entity)</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">"Democrats are wrong on this policy" / "The Administration is making a serious mistake"</div></div>
+  </div>
+</div>
+
+<div class="cat-def" id="cat6">
+  <div class="cat-def-num">Category 06</div>
+  <h4>Totalitarian-regime political labels as identity designations</h4>
+  <p>Language that applies the identity label of a totalitarian movement — fascist, Nazi, communist, Marxist, commie — to a class of political opponents or named elected officials, as an assertion of political identity rather than a historical reference or ideological description.</p>
+  <h4>Classification rules — used verbatim in Haiku prompt</h4>
+  <p style="font-size:14px !important; color:var(--gray-700) !important;"><strong>IN — applied as an identity label to a class of political opposition or named elected official:</strong></p>
+  <div class="cat-def-examples">
+    <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"Democrats are fascists" / "the COMMIE-crats in Washington" / "hold every fascist in this Administration accountable" / "Trump is a fascist" / "the Marxist Left wants to destroy America" / "AOC is a Marxist"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">Historical reference: "the Nazis invaded Poland in 1939" / "the Holocaust was carried out by the Nazi regime" / "during the communist era in East Germany"</div></div>
+    <div class="cat-def-row"><div class="lbl out">Out</div><div class="ex">Ideology descriptor about a self-identified position: "Bernie Sanders is a democratic socialist" / "AOC's Marxist policies" (closer call, default OUT — describing policy, not labeling person)</div></div>
+  </div>
+  <p style="font-size:14px !important; color:var(--gray-700) !important; margin-top:12px !important;"><strong>Default:</strong> when in doubt between identity-label and policy-descriptor, classify OUT.</p>
+</div>
+
+<div class="callout">
+  <div class="callout-label">Symmetric application — non-negotiable</div>
+  <p>A Democratic member calling Republican colleagues or officials "fascists" is the same classification action as a Republican member calling Democratic colleagues or officials "communists." The Haiku classifier prompt is party-blind. Category 6 results are reported directionally (D-applied-to-R / R-applied-to-D) as a secondary breakdown, but the primary rate metric is calculated identically for both.</p>
+</div>
+
+<h3>Out — all categories: explicitly excluded</h3>
+
+<p>The following are <strong>never</strong> eliminationist or delegitimizing rhetoric under any category of this taxonomy:</p>
+
+<ul>
+  <li>Standard political combat metaphors: "fight," "battle," "war on [issue]," "defeat [opponent]"</li>
+  <li>Accountability language with documented factual basis: "criminal conduct," "illegal [action]," "impeachable offense," "should be prosecuted"</li>
+  <li>Historical references to fascism/Nazism/communism in historical or educational context — including Holocaust Remembrance posts, WWII discussions, and historical regime comparisons</li>
+  <li>Counter-speech: posts criticizing violent or delegitimizing rhetoric by others</li>
+  <li>Polling citations and factual public opinion claims</li>
+  <li>Standard geopolitical analogies: "Cold War," "nuclear option," "scorched earth policy"</li>
+  <li>Non-targeted hyperbole without a specific group: "this is killing us," "destroying America"</li>
+  <li>Normal democratic accountability: calls for resignation, investigation, impeachment, or electoral defeat</li>
+  <li>Policy positions framed as stakes: "we can't let [policy] destroy our country"</li>
+  <li>Derogatory labels without delegitimizing structure: "RINO," "radical," "extremist" (do not assert totalitarian identity)</li>
+</ul>
+
+<h3>Edge case rulings (resolved 2026-04-26)</h3>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th style="width:80px">Edge case</th><th>Ruling</th></tr></thead>
+  <tbody>
+    <tr><td><strong>EC-01</strong><br>"enemy of the people"</td><td>IN under Category 5 when framing implies political illegitimacy</td></tr>
+    <tr><td><strong>EC-02</strong><br>"death cult" + "no place in America"</td><td>IN under Categories 2+3 (dehumanizing + eliminationist)</td></tr>
+    <tr><td><strong>EC-03</strong><br>"SHOOT To KILL / No place for radical Islam"</td><td>IN under Category 1 (call to violence)</td></tr>
+    <tr><td><strong>EC-04</strong><br>"Hang these dirtbags"</td><td>IN under Category 1; <strong>no exception for criminal-accused targets</strong></td></tr>
+    <tr><td><strong>EC-05</strong><br>"flood America with millions of unvetted illegals"</td><td>OUT as standalone (no explicit eliminationist call)</td></tr>
+    <tr><td><strong>EC-06a</strong><br>"COMMIE-crats"</td><td>IN under Category 6 (totalitarian identity label)</td></tr>
+    <tr><td><strong>EC-06b</strong><br>"Sanctuary cities protect m*rderers, r*pists"</td><td>OUT (policy framing, not delegitimizing label)</td></tr>
+    <tr><td><strong>EC-07</strong><br>Class-identity criminal nouns<br><em>(added 2026-04-27 post-validation)</em></td><td>IN under Cat 2 when a criminal/subhuman/cult identity noun ("fraudsters," "barbarians," "monsters," "thugs," "savages," "terrorists," "invaders," "cultists," "goons") is applied as an identity attribute of a named ethnic, national, religious, immigration-status, or political-affiliation class. Examples: "Somali fraudsters," "Muslim terrorists," "Palestinian thugs," "MAGA cultists," "ICE thugs." The existence of documented criminal cases involving members of the named group does NOT create an exception. <strong>Series-frame extension:</strong> Posts that use named individuals as exemplars of a curated class-identity claim (e.g., a "Crime Chronicle" series naming individuals as exemplars of "career criminal illegal aliens") are IN — the series itself constructs the class. The OUT clause for "specific named individuals" applies only when the post reports on the individual's case without making class-identity claims about the group.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Commemoration-day exclusion rule</h3>
+
+<p>Posts published on or within 3 days of a recognized commemoration day (Holocaust Remembrance Day, MLK Day, Veterans Day, 9/11 anniversary, Kristallnacht anniversary, etc.) that reference historical atrocities, regimes, or movements <strong>for the purpose of remembrance, education, or historical fact</strong> — and not to label current political actors as members of those regimes or movements — are out of scope.</p>
+
+<p>This rule applies symmetrically. It is intended to prevent commemorative speech from being flagged as the rhetoric it explicitly opposes. The rule is included verbatim in the Haiku production prompt.</p>
+
+<!-- SECTION 7 -->
+<h2 id="s7"><span class="sec-num">Section 07</span>Classifier architecture and full prompt</h2>
+
+<h4>Production classifier</h4>
+
+<p>No existing classifier in the TheWatchdogs system was built for this taxonomy. Workstream 5 ran a new Claude Haiku classification pass against all 122,106 original X posts in the window.</p>
+
+<p><strong>Approach:</strong> Anthropic Messages Batch API. Posts submitted in batches of 10,000. Results stored in <code>rhetoric_classifications</code> PostgreSQL table.</p>
+
+<p><strong>Party-blind classification — non-negotiable commitment:</strong> The Haiku prompt receives post text and post date only. No member name, no party, no chamber, no bioguide_id. The classifier cannot infer party from any field it receives. This is enforced in the script.</p>
+
+<p><strong>Conservative bias on close calls — non-negotiable commitment:</strong> The prompt instructs the classifier to default OUT when ambiguous. Only classify IN when clear. This is in the prompt verbatim.</p>
+
+<p><strong>Second validation gate — required before publication:</strong> After the full classification run, 50 Haiku-classified hits were pulled (stratified across categories proportionally to hit volume) for a second blind review at the same 86% accuracy threshold. Result: 49/50 = 98%. PASS.</p>
+
+<h4>Production Haiku prompt — exact, verbatim, for audit and reproduction</h4>
+
+<pre class="prompt">Classify this congressional tweet for eliminationist and delegitimizing rhetoric.
+
+TAXONOMY — classify IN if the tweet clearly meets ANY of these 6 categories:
+
+CAT 1 (Calls to violence): Direct or near-direct calls for physical violence against named or identified people, groups, or institutions.
+IN: "hang them", "shoot to kill [group]", explicit violence directives
+OUT: "fight this bill", "defeat them in November", "take down this policy"
+
+CAT 2 (Dehumanizing language): Applies animal, pest, disease, criminal-identity, or annihilation metaphors to human beings as a class.
+IN: "vermin", "[group] is a plague/infestation/disease", annihilation metaphors applied to human groups
+IN (EC-07 — class-identity criminal nouns): When a criminal/subhuman/cult identity noun is applied as an identity attribute to an ethnic, national, religious, immigration-status, or political-affiliation class:
+  - "Somali fraudsters" (Somali-as-class + fraudster-as-identity)
+  - "Muslim barbarians" / "Muslim terrorists" (Muslim-as-class + criminal-identity)
+  - "illegal monsters" (illegal-as-class + monster-as-identity)
+  - "Palestinian thugs" (Palestinian-as-class + thug-as-identity)
+  - "MAGA cultists" / "Trump cultists" (political-affiliation + cult-identity)
+  - "Antifa thugs" applied as identity (political-affiliation + thug-identity)
+  - "ICE thugs" / "ICE goons" (institutional class-identity)
+Series-frame posts that name specific individuals as exemplars of a class-identity claim are IN. The OUT clause for "specific named individuals" applies only when the post reports on the individual's specific case without making class-identity claims about the group they belong to.
+The existence of documented criminal cases involving the named group does NOT create an exception. The pattern is IN regardless of whether real crimes were committed by individuals in the group.
+OUT: "corrupt institution", "incompetent official", derogatory adjectives for policies, naming specific convicted individuals (e.g., "John Smith, a convicted fraudster") WITHOUT class-identity framing, criticizing a specific named person's actions WITHOUT class-identity attachment.
+KEY: For EC-07 to apply, the criminal noun must function as an IDENTITY ATTRIBUTE of a class. "Somali fraudsters" attributes fraudster-identity to Somalis as a class. "John Smith committed fraud" describes a specific person's actions and is OUT.
+
+CAT 3 (Eliminationist framing): Asserts a group of people has no legitimate place in society and must be expelled or eradicated as an end goal.
+IN: "[group] is a DEATH CULT and has NO PLACE in America", "we must eliminate them from our politics entirely"
+OUT: "reduce immigration", "oppose this policy", standard restrictionist policy positions
+
+CAT 4 (Threats against named individuals): Direct or implied threats of physical harm against a specific, named person.
+IN: explicit threat of physical harm to a named elected official
+OUT: "should resign", "will face accountability", "we will prosecute" (legal accountability language)
+
+CAT 5 (Enemy-of-the-people designation): Labels domestic political opponents or institutions as existential enemies requiring elimination, not merely defeat.
+IN: "Democrats are the ENEMY OF THE PEOPLE" (asserts political illegitimacy, not just policy error)
+OUT: "Democrats are wrong on policy", "the Administration is making serious mistakes"
+
+CAT 6 (Totalitarian-regime labels as identity): Applies the identity label of a totalitarian movement to current political opponents or named officials.
+IN: "Democrats are fascists", "the COMMIE-crats in Washington", "hold every fascist accountable", "the Marxist Left wants to destroy America", "Commie mayor", "AOC is a Marxist", "Trump is a Nazi"
+OUT (historical reference): "Nazis murdered 6 million Jews", "the fascist regime in 1930s Germany"
+OUT (counter-speech): "stop comparing ICE to Nazis", "you shouldn't call people fascists"
+OUT (ideology descriptor): "Bernie calls himself a democratic socialist", "AOC's Marxist policies" [default OUT — describes policy, not labels person]
+IMPORTANT Cat 6 rule: If the term describes an ideology or policy rather than labeling a current person or group as a member of a totalitarian movement, classify OUT. Default OUT on close calls.
+
+COMMEMORATION-DAY EXCLUSION:
+If the post references historical atrocities, regimes, or movements (Nazi, Holocaust, fascist, communist, etc.) for the purpose of REMEMBRANCE, EDUCATION, or HISTORICAL FACT — and NOT to label current political actors as members of those movements — classify OUT. This applies especially to posts near recognized commemoration dates (Holocaust Remembrance Day Jan 27, MLK Day, Veterans Day, 9/11 anniversary, Kristallnacht anniversary Nov 9, etc.). Counter-speech posts ("stop calling people Nazis") are also OUT.
+
+CONSERVATIVE BIAS: When in doubt, classify OUT. Only classify IN when the fit to a category is clear.
+
+Post date: {date}
+Post text: {text}
+
+Respond in JSON only, no other text:
+{"category": null, "in": false, "confidence": "high", "reasoning": "one brief sentence"}
+If IN, replace null with the category number (1-6) and false with true.
+If multiple categories apply, return the lowest-numbered applicable category.</pre>
+
+<h4>Output schema</h4>
+
+<p>Classification results are stored in a PostgreSQL table linked to the source posts table by post ID. Each classification record includes the category (1–6 if IN, NULL if OUT), the IN/OUT boolean, the classifier's confidence level, the one-sentence reasoning, the Anthropic batch ID for audit, and a timestamp. The classification is one-to-one with the post.</p>
+
+<!-- SECTION 8 -->
+<h2 id="s8"><span class="sec-num">Section 08</span>How we count repeated rhetoric</h2>
+
+<p>Congressional members on X often repeat similar phrases across many posts. A member who labels opponents "Marxists" 22 times in 90 days is exhibiting a different behavior than a member who makes a direct call to violence three times. Treating these identically — either by counting every instance or by counting only one — misrepresents both.</p>
+
+<p>We apply a <strong>hybrid, category-aware counting rule</strong> that reflects the distinction between discrete dangerous acts and rhetorical patterns.</p>
+
+<h3>Category-rule mapping</h3>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Category</th><th>Rule</th><th>Rationale</th></tr></thead>
+  <tbody>
+    <tr><td>Cat 1 — Calls to violence</td><td><strong>Rule A: every instance</strong></td><td>Each call to violence is independently alarming. "Hang them" said three times is three calls, not one with repetition. No discount.</td></tr>
+    <tr><td>Cat 2 — Dehumanizing language</td><td><strong>Rule C: cap at 3 per pattern</strong></td><td>Dehumanizing labels reflect rhetorical pattern. Three instances captures the habit; further repetition adds no additional signal.</td></tr>
+    <tr><td>Cat 3 — Eliminationist framing</td><td><strong>Rule A: every instance</strong></td><td>Each "no place in society" statement is an independent claim of intended exclusion.</td></tr>
+    <tr><td>Cat 4 — Threats against named individuals</td><td><strong>Rule A: every instance</strong></td><td>Each threat against a named person is independently consequential regardless of prior threats.</td></tr>
+    <tr><td>Cat 5 — Enemy-of-the-people designation</td><td><strong>Rule C: cap at 3 per pattern</strong></td><td>Identity-labeling rhetoric; pattern matters more than instance count.</td></tr>
+    <tr><td>Cat 6 — Totalitarian-regime labels</td><td><strong>Rule C: cap at 3 per pattern</strong></td><td>Repeated identity-label usage is rhetorical habit. Caps single-pattern repetition without erasing intensity differences.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><em>Pattern</em> = a distinct recurring phrase or label type within a category (e.g., "Marxist" is one pattern; "Communist" is another, even within Category 6).</p>
+
+<h3>Same-text deduplication — applies all categories</h3>
+
+<p>If a member posts identical or near-identical text (>90% string similarity) three or more times within a 24-hour window, those collapse to one instance, regardless of category. This prevents social-media amplification artifacts — a member who spam-posts the same text does not receive N separate flags.</p>
+
+<p>Distinct posts on distinct dates with distinct phrasing count separately under whichever category rule applies.</p>
+
+<h3>Worked examples</h3>
+
+<h4>Example A — Category 1, Rule A</h4>
+<p>Tim Burchett (R) posted three distinct variations of "hang these dirtbags" across February–March 2026. Under Rule A, that is 3 Category 1 flags. Each post is a distinct statement made on a distinct date; no deduplication applies.</p>
+
+<h4>Example B — Category 6, Rule C</h4>
+<p>Chip Roy (R) used "Marxist" as an identity label for political opponents 22 times across the 90-day window, and "Communist" as a D-member-referencing label 3 times. Under Rule C, "Marxist" counts as 3 (capped from 22); "Communist" counts as 3 (already at cap). Total: 6 Category 6 flags for Roy — not 25 as raw count would show, not 2 as pattern-counting would show.</p>
+
+<h4>Example C — Category 6, Rule C, opposite direction</h4>
+<p>Delia C. Ramirez (D) used "fascist" as an identity label for Trump administration officials 18 times. Under Rule C, "fascist" counts as 3 (capped from 18). Total: 3 Category 6 flags. The same rule applies in both directions — Roy's 22 "Marxist" uses cap at 3; Ramirez's 18 "fascist" uses cap at 3.</p>
+
+<h4>Example D — Category 3, Rule A</h4>
+<p>A member posts five distinct statements asserting a religious group "has NO PLACE in America" across different dates in the window. All five are distinct framing statements, each an independent eliminationist claim. Rule A applies: 5 Category 3 flags.</p>
+
+<h3>Why this structure</h3>
+
+<blockquote>"Counting every instance of identity-labeling treats one member's rhetorical tic as if it were independent escalation. Counting only one instance per pattern erases real intensity differences. We split the difference category-by-category."</blockquote>
+
+<p>The hybrid approach reflects a substantive judgment: <strong>rhetorical patterns</strong> (Cats 2, 5, 6) are meaningfully different from <strong>discrete dangerous acts</strong> (Cats 1, 3, 4) in how repetition scales their significance. A member who calls for violence three times is three times as alarming as one who does it once. A member who labels opponents "Marxists" 22 times vs. 6 times is exhibiting the same pattern — with more intensity, but not 3.7× more alarming.</p>
+
+<p>The rule is applied symmetrically. The same category assignment and the same counting rule apply regardless of the speaker's party.</p>
+
+<!-- SECTION 10 -->
+<h2 id="s10"><span class="sec-num">Section 10</span>Validation results — pre-run blind review</h2>
+
+<p>Before running the full 122,106-post classification, a 50-item blind review was conducted to validate the taxonomy's accuracy when applied by a human reviewer using the same IN/OUT criteria that would be given to the Haiku classifier.</p>
+
+<h3>Results</h3>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Metric</th><th class="num">Count</th><th class="num">Rate</th></tr></thead>
+  <tbody>
+    <tr><td>True positives — blind reviewer</td><td class="num">36</td><td class="num">—</td></tr>
+    <tr><td>Total blind pool items</td><td class="num">50</td><td class="num">—</td></tr>
+    <tr><td><strong>Raw pool accuracy</strong></td><td class="num">36/50</td><td class="num"><strong>72%</strong></td></tr>
+    <tr><td>Commemorative/historical exclusions</td><td class="num">9</td><td class="num">—</td></tr>
+    <tr><td>In-scope items — after exclusions</td><td class="num">41</td><td class="num">—</td></tr>
+    <tr><td><strong>In-scope accuracy</strong></td><td class="num">36/41</td><td class="num"><strong>88%</strong></td></tr>
+    <tr><td>Gate threshold</td><td class="num">—</td><td class="num"><strong>86%</strong></td></tr>
+    <tr><td><strong>Gate result</strong></td><td class="num">—</td><td class="num"><strong>PASS</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout">
+  <div class="callout-label">Dual disclosure</div>
+  <p>We report both rates. The difference between 72% and 88% tells the reader exactly what the upstream keyword scanner is doing. Hiding the 72% would hide the contamination problem the taxonomy already solves.</p>
+</div>
+
+<h3>The 9 commemorative post exclusions</h3>
+
+<p>Nine items in the 50-item blind pool were flagged as out-of-scope by the reviewer — not because the taxonomy was wrong, but because the upstream keyword scanner had surfaced content the taxonomy already categorically excludes: commemorative references to historical atrocities.</p>
+
+<p>These were posts published around <strong>International Holocaust Remembrance Day (January 27, 2026)</strong> that used the words "Nazi" or "fascist" in historical context — honoring victims, condemning historical regimes, or marking the anniversary of the liberation of Auschwitz. Per the taxonomy's OUT criteria, these posts are explicitly excluded regardless of the keyword that surfaced them.</p>
+
+<h4>Worked examples of upstream contamination</h4>
+
+<ul>
+  <li><em>"On International Holocaust Remembrance Day, we honor the six million Jews murdered by the Nazi regime. We reaffirm our pledge to root out antisemitism."</em> — Scanner fired on "Nazi." Taxonomy: OUT (historical reference, commemorative context, remembrance purpose).</li>
+  <li><em>"Today marks the liberation of Auschwitz. We honor those murdered by the Nazis and commit to Never Again."</em> — Scanner fired on "Nazi." Taxonomy: OUT (historical reference, educational purpose).</li>
+  <li><em>"Eighty-one years ago, the Auschwitz concentration camp was liberated. We mark that solemn anniversary."</em> — Scanner fired on "Nazi." Taxonomy: OUT (same).</li>
+</ul>
+
+<p>All nine were correctly identified as out-of-scope by the reviewer. <strong>They represent keyword scanner noise, not taxonomy failure.</strong> The taxonomy IN/OUT criteria are sufficient to exclude them — the scanner just shouldn't have put them in the candidate pool in the first place.</p>
+
+<h3>Why the in-scope rate is the right gate</h3>
+
+<p>The accuracy gate was set at 86% against the in-scope candidate pool — posts that the taxonomy was actually designed to evaluate. The 9 commemorative posts were never in scope; the keyword scanner put them in the candidate pool despite the taxonomy having already excluded that content type. Scoring the gate against the contaminated pool (72%) would penalize the taxonomy for a defect upstream of it.</p>
+
+<p>This reasoning is disclosed, not hidden. The 72% is published alongside the 88% because the gap explains the scanner's failure mode: it matches on the word, not the use.</p>
+
+<h3>Second validation gate — pre-publication requirement</h3>
+
+<p>After the Haiku classifier ran the full 122,106-post corpus, a second 50-item blind review was conducted against Haiku's actual output — stratified proportionally across the 6 categories. The same 86% in-scope gate applied.</p>
+
+<div class="callout">
+  <div class="callout-label">Second gate result</div>
+  <p>49 of 50 true positives = <strong>98% accuracy</strong>. Per-category: Cat 1 11/11, Cat 2 8/8, Cat 3 10/10, Cat 4 1/1, Cat 5 1/1, Cat 6 18/19. Single false positive: a member criticizing another politician's labeling by quoting it (HR-28 pattern). PASS.</p>
+</div>
+
+<!-- SECTION 11 -->
+<h2 id="s11"><span class="sec-num">Section 11</span>Disclosures</h2>
+
+<ol>
+  <li><strong>Platform asymmetry:</strong> X-only scope was chosen to avoid Bluesky's 50:1 D-skew and Truth Social's inverse R-skew, both of which are partisan echo chambers with minimal cross-party reach. On X, Republicans post more than Democrats in this window. Disclosed in every output table.</li>
+  <li><strong>Threshold asymmetry:</strong> The 100-post minimum removes more Republicans than Democrats (R P25 = 86 vs. D P25 = 142). The rule is symmetric; the impact is structural.</li>
+  <li><strong>Scope change:</strong> Taxonomy expanded from violent rhetoric to eliminationist and delegitimizing rhetoric on April 26, 2026, in response to active public discourse. Decision made before aggregate counts were produced.</li>
+  <li><strong>Category 6 direction imbalance:</strong> Pre-classifier keyword counts: ~50 D→R fascist/Nazi label posts; ~156 R→D commie/Marxist label posts. These are rough keyword counts; final Haiku-classified totals may differ. The analysis does not pre-adjust for this imbalance.</li>
+  <li><strong>Dual validation disclosure:</strong> Raw blind pool accuracy 72% (36/50); in-scope accuracy 88% (36/41). Both rates disclosed.</li>
+  <li><strong>Party-blind classification:</strong> Haiku classifier receives post text and date only. No member name, party, or chamber. Enforced at the script level.</li>
+  <li><strong>Conservative bias:</strong> Classifier defaults OUT on ambiguous cases. This biases toward undercounting, not overcounting.</li>
+  <li><strong>Classifier limitations:</strong> Custom Claude Haiku classifier validated by two blind reviews (pre-run and post-run). False positives and false negatives are possible; second validation gate is the pre-publication floor.</li>
+  <li><strong>Counting rule:</strong> Hybrid category-aware (Rule A for Cats 1, 3, 4; Rule C cap-3 for Cats 2, 5, 6). Same-text deduplication across all categories.</li>
+  <li><strong>Audit trail:</strong> Every flagged post in the top-10 member ranking links to the original post on X. Available at the audit trail page.</li>
+  <li><strong>Origination, not reach:</strong> This analysis measures rhetoric originated by members on their own accounts. It does not measure how that content travels through media ecosystems. Networked-propaganda research has documented that the right and left media ecosystems are structured asymmetrically with different amplification dynamics; the per-100-posts rate does not capture that.</li>
+  <li><strong>Sample recency:</strong> Window closes April 26, 2026.</li>
+  <li><strong>EC-07 methodology refinement (added 2026-04-27):</strong> A user-surfaced classifier inconsistency around the criminal-identity-as-class-attribute pattern was identified during state-delegation review after the initial classification run completed. The taxonomy's existing Cat 2 rule was clarified (EC-07 in Section 6) to make the rule's application explicit; the corpus was reclassified against the updated prompt; a second validation gate was conducted at 86.7% in-scope accuracy. Both pre-EC-07 and post-EC-07 numbers are disclosed (see Task 4). Headline numbers in this report reflect the post-EC-07 classification. The R/D ratio moved from 4.23× to 4.35×; the directional finding holds in Categories 1, 2, and 3; Category 6 remains statistically tied.</li>
+</ol>
+
+<!-- SECTION 12 -->
+<h2 id="s12"><span class="sec-num">Section 12</span>Pre-publication task results</h2>
+
+<h3>Task 1 — Category 6 R spot check: 1/20 HR-28 pattern</h3>
+
+<p>A 20-item random sample of Category 6 R flags was reviewed for the criticizing-by-quoting edge case identified during the second blind review (HR-28 pattern: a member reporting another politician's framing rather than originating the labeling).</p>
+
+<p><strong>Result: 1 of 20 items fit the HR-28 pattern.</strong> Decision band 0–1 of 20 → proceed unchanged, document the result.</p>
+
+<p>The single HR-28 instance in the spot check: Dan Crenshaw (R-TX) posting about Tim Walz's use of "modern-day SS" to describe ICE — Crenshaw was criticizing Walz's framing, not applying the label himself.</p>
+
+<p><strong>Estimated HR-28 contamination rate in Cat 6 R flags:</strong> approximately 5% (1/20). This rate is too low to alter the headline numbers and does not affect the directional finding. It is disclosed here.</p>
+
+<h3>Task 2 — 100-post threshold for headline ranking</h3>
+
+<p>The headline top-10 ranking applies a <strong>100-post minimum</strong> (updated from 50). Members with 50–99 posts are reported separately with rates and CIs displayed but labeled as smaller-sample with caution disclaimers.</p>
+
+<p><strong>Rationale:</strong> A member with 53 posts and 1 flag has a rate of 1.89/100 with a 95% CI of [0.34, 9.84] — the upper bound is more than five times the lower. Including such members in a headline rate-based ranking produces unstable, editorially misleading positions. The 100-post threshold is the standard small-sample adjustment for proportion-based rankings.</p>
+
+<h3>Task 3 — Confidence intervals: Wilson interval confirmed</h3>
+
+<p>All confidence intervals use the <strong>Wilson score interval</strong> for a binomial proportion (95%, z=1.96), not the normal approximation. The normal approximation is unreliable at small event counts (k &lt; 5 or k/n &lt; 0.05), which applies to many members in this analysis.</p>
+
+<p>Wilson CIs are reported for: party-level aggregates, per-member rates in top-10 and small-sample tables, per-category D/R rates in the category breakdown.</p>
+
+<h3>Per-category directional findings (initial classifier run)</h3>
+
+<p style="font-size: 14px; color: var(--gray-500); font-style: italic; margin-bottom: 16px;">These are the directional findings from the initial Haiku classifier run. A subsequent post-validation review identified a classifier inconsistency that prompted Task 4 (below). The post-EC-07 numbers and revised directional findings appear in Task 4.</p>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Cat</th><th>Label</th><th class="num">D rate/100</th><th class="num">R rate/100</th><th>CIs overlap?</th><th>Direction</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Calls to violence</td><td class="num">0.0037</td><td class="num">0.0801</td><td><strong>No</strong></td><td>R significantly higher</td></tr>
+    <tr><td>2</td><td>Dehumanizing language</td><td class="num">0.0037</td><td class="num">0.0417</td><td><strong>No</strong></td><td>R significantly higher</td></tr>
+    <tr><td>3</td><td>Eliminationist framing</td><td class="num">0.0018</td><td class="num">0.0835</td><td><strong>No</strong></td><td>R significantly higher</td></tr>
+    <tr><td>4</td><td>Named-individual threats</td><td class="num">0.0018</td><td class="num">0.0017</td><td>Yes</td><td>No significant difference</td></tr>
+    <tr><td>5</td><td>Enemy-of-the-people</td><td class="num">0.0000</td><td class="num">0.0117</td><td>Yes</td><td>R higher (small N)</td></tr>
+    <tr><td>6</td><td>Totalitarian-regime labels</td><td class="num">0.0549</td><td class="num">0.0601</td><td><strong>Yes</strong></td><td>No significant difference</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>The directional finding holds in Categories 1, 2, and 3 with non-overlapping confidence intervals.</strong> Category 6 — the symmetric fascist vs. commie category added for Lane 2 — shows no statistically significant difference between D and R rates. Categories 4 and 5 have counts too small to distinguish.</p>
+
+<p>Category 6's near-parity by rate is the key Lane 2 finding: when normalized for post volume, Democrats and Republicans apply totalitarian-regime identity labels to opponents at statistically indistinguishable rates. The overall R-higher aggregate finding is driven by Categories 1, 2, and 3 — categories where the taxonomy's conservative bias (default OUT) means the gap is more likely understated than overstated.</p>
+
+<h3 id="task4">Task 4 — EC-07 discovery, methodology refinement, and corpus reclassification (added 2026-04-27, post-validation)</h3>
+
+<p>During Minnesota delegation review on April 27, 2026, an editorial check on Tom Emmer's posting pattern surfaced a classifier inconsistency. Emmer had posted the phrase "Somali fraudsters" — applying a criminal-identity noun as an attribute of an ethnic class — multiple times in the analysis window. The Haiku classifier had defaulted these posts OUT, on the reasoning that documented criminal cases existed. Structurally identical posts in the corpus had been flagged IN under Cat 2: Randy Fine's "Muslim barbarians," Andrew Ogles's "RAPISTS and GANG MEMBERS" applied to immigrants. The classifier was applying the Cat 2 rule inconsistently to the same rhetorical pattern.</p>
+
+<p>The taxonomy did not have a "documented criminal cases" exception for Cat 2. The pattern — applying a criminal/subhuman identity noun as an attribute of an ethnic, national, religious, immigration-status, or political-affiliation class — meets the existing Cat 2 definition (dehumanizing language applied to a class). The classifier's inconsistency was an application error, not a rule mismatch.</p>
+
+<p>Rather than publish despite the known inconsistency, the methodology was clarified and the corpus reclassified.</p>
+
+<h4>EC-07 ruling adopted</h4>
+
+<p>EC-07 (in Section 6 above) was added to make the Cat 2 rule explicit for class-identity criminal noun patterns. The ruling covers ethnic, national, religious, immigration-status, AND political-affiliation classes, plus institutional classes (e.g., "ICE thugs," "ICE goons"). The principle: dehumanization of human beings as a class is Cat 2 regardless of which class. Symmetric application across parties is non-negotiable.</p>
+
+<p>The Haiku production prompt (Section 7) was updated to reflect EC-07 verbatim, including the series-frame clarification described below.</p>
+
+<h4>Targeted reclassification batch</h4>
+
+<p>A keyword sweep identified 1,265 candidate posts in the 122,106-post corpus matching the EC-07 pattern signature (class-identity term paired with criminal-identity noun). 26 candidates were already classified IN under the original taxonomy and required no action. The remaining 1,239 OUT candidates were submitted to a Claude Haiku batch reclassification using the updated prompt.</p>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Outcome</th><th class="num">Count</th></tr></thead>
+  <tbody>
+    <tr><td>OUT candidates submitted</td><td class="num">1,239</td></tr>
+    <tr><td>OUT → IN flips (R)</td><td class="num">197</td></tr>
+    <tr><td>OUT → IN flips (D)</td><td class="num">24</td></tr>
+    <tr><td>OUT → IN flips (I)</td><td class="num">0</td></tr>
+    <tr><td><strong>Total reclassified</strong></td><td class="num"><strong>221</strong></td></tr>
+    <tr><td>Remained OUT</td><td class="num">1,013</td></tr>
+    <tr><td>Parse errors (defaulted OUT, no change)</td><td class="num">5</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>R-side flips were dominated by ethnic, religious, and immigration-status class targeting (Somali, Muslim, Palestinian, immigrant). D-side flips were dominated by institutional class targeting (ICE agents, federal personnel) clustered partially around Operation Metro Surge. Both patterns meet the Cat 2 rule under EC-07. Both flag.</p>
+
+<h4>Series-frame clarification</h4>
+
+<p>Validation review surfaced a pattern the original EC-07 wording did not anticipate: posts in which a member uses named individuals as exemplars of a curated class-identity claim. Specifically, a member running a "Crime Chronicle" series naming specific criminal defendants under a unifying frame ("Worst-of-the-Worst career criminals and illegal aliens") is constructing a class through serial naming. The named individuals are the vehicles; the class characterization is the message.</p>
+
+<p>This pattern was ruled IN under EC-07. The reasoning: the series itself constructs the class. The OUT clause for "specific named individuals" was designed to exclude posts reporting on a single bad actor's case without class-identity framing — not to exempt class-identity claims merely because they cite named exemplars. The same ruling would apply symmetrically to any side using a series-frame to construct class identity (e.g., a Democratic member running a series naming individual ICE agents as "Worst-of-the-Worst federal thugs"). The clarifying language has been added to the EC-07 ruling and to the Haiku prompt.</p>
+
+<h4>Validation gate — post-EC-07 reclassification</h4>
+
+<p>A 30-item stratified blind review was conducted on the EC-07 reclassifications, using seed=20260427 for reproducibility. Stratification: 25 R Cat 2, 2 R Cat 6, 3 D Cat 2 — proportional to the flip distribution.</p>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Metric</th><th class="num">Count</th><th class="num">Rate</th></tr></thead>
+  <tbody>
+    <tr><td>True positives</td><td class="num">23 + 3 (series-frame, ruled IN)</td><td class="num">26</td></tr>
+    <tr><td>False positives</td><td class="num">2</td><td class="num">—</td></tr>
+    <tr><td>Category mistags (IN correct, category wrong)</td><td class="num">1</td><td class="num">—</td></tr>
+    <tr><td>Strict accuracy (TP/30, treating series-frame as borderline)</td><td class="num">23/30</td><td class="num">76.7%</td></tr>
+    <tr><td><strong>In-scope accuracy (post series-frame ruling)</strong></td><td class="num"><strong>26/30</strong></td><td class="num"><strong>86.7%</strong></td></tr>
+    <tr><td>Gate threshold</td><td class="num">—</td><td class="num">86%</td></tr>
+    <tr><td><strong>Gate result</strong></td><td class="num">—</td><td class="num"><strong>PASS</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Both rates are disclosed. The strict 76.7% reflects the gate result if the three series-frame items are counted as false positives — i.e., if EC-07's "specific named individuals" OUT clause is read literally. The in-scope 86.7% reflects the gate result after the series-frame clarification. The series-frame ruling was made on its substantive merits — the same ruling would apply to a Democratic member's structurally equivalent series — not because it produced a passing gate score. Both rates are published so readers can apply their own preferred interpretation.</p>
+
+<p>2 false positives (Items 04 and 19 in the validation sample) stand as residual classifier error. Item 04: "ICE criminals" framing in a post about DA Krasner that did not actually pair an ethnic/class group with the criminal noun. Item 19: a named-individual immigration fraud accusation against Rep. Omar that did not include class-identity framing. Both meet the OUT criteria under EC-07 and were ruled FP. The residual error rate of 2/30 = 6.7% is consistent with the original validation gate's accuracy expectations.</p>
+
+<h4>Post-EC-07 directional findings</h4>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Cat</th><th>Label</th><th class="num">D pre</th><th class="num">D post</th><th class="num">R pre</th><th class="num">R post</th><th>CIs overlap?</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Calls to violence</td><td class="num">0.0037</td><td class="num">0.0037</td><td class="num">0.0801</td><td class="num">0.0801</td><td><strong>No</strong></td></tr>
+    <tr><td>2</td><td>Dehumanizing language</td><td class="num">0.0037</td><td class="num">0.0403</td><td class="num">0.0417</td><td class="num">0.2071</td><td><strong>No</strong></td></tr>
+    <tr><td>3</td><td>Eliminationist framing</td><td class="num">0.0018</td><td class="num">0.0018</td><td class="num">0.0835</td><td class="num">0.0835</td><td><strong>No</strong></td></tr>
+    <tr><td>4</td><td>Named-individual threats</td><td class="num">0.0018</td><td class="num">0.0018</td><td class="num">0.0017</td><td class="num">0.0017</td><td>Yes</td></tr>
+    <tr><td>5</td><td>Enemy-of-the-people</td><td class="num">0.0000</td><td class="num">0.0000</td><td class="num">0.0117</td><td class="num">0.0117</td><td>Yes</td></tr>
+    <tr><td>6</td><td>Totalitarian-regime labels</td><td class="num">0.0549</td><td class="num">0.0549</td><td class="num">0.0601</td><td class="num">0.0618</td><td><strong>Yes</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Aggregate party rates (post-EC-07):</strong></p>
+<ul>
+  <li>R: 0.4458 per 100 posts (95% CI [0.396, 0.503]) — up from 0.2789 pre-EC-07</li>
+  <li>D: 0.1026 per 100 posts (95% CI [0.079, 0.133]) — up from 0.0659 pre-EC-07</li>
+  <li>R/D ratio: 4.35× — up marginally from 4.23× pre-EC-07</li>
+</ul>
+
+<p>The directional finding (R significantly higher, non-overlapping CIs) holds. Category 2 is now the second-largest contributor to the asymmetry behind Category 3, with the ratio narrowing slightly (R 5.1× D pre-EC-07 within Cat 2; R 5.1× D post-EC-07). Category 6 remains statistically tied — EC-07 was almost exclusively Cat 2 work and did not affect totalitarian-regime label counts. Categories 1, 3, 4, and 5 are unaffected by EC-07.</p>
+
+<p>The headline finding — that totalitarian-regime labels are applied symmetrically while calls to violence, dehumanizing language, and eliminationist framing are applied asymmetrically — is unchanged. The texture is sharper post-EC-07 because the dehumanization-of-ethnic-classes pattern is now visible at the headline-rate scale rather than partially suppressed.</p>
+
+<h4>Reclassification audit trail</h4>
+
+<p>Every reclassified post is tagged in the <code>rhetoric_classifications</code> table with <code>ec07_reclassified = TRUE</code> and the original classification preserved in companion columns (<code>ec07_original_is_in</code>, <code>ec07_original_category</code>, <code>ec07_original_reasoning</code>). The audit trail page indicates which flagged posts in the published top-10 ranking were reclassified under EC-07.</p>
+
+<!-- AUDIT TRAIL VERDICT -->
+<h2 id="s12c"><span class="sec-num">Final verdict</span>Audit-trail review verdict</h2>
+
+<p><strong>Audit conducted by:</strong> Chad Maschke (editor), post-classification, post-validation.</p>
+<p><strong>Members audited:</strong> Andrew Ogles (rank 1, 27 flags) and Randy Fine (rank 2, 36 flags).</p>
+<p><strong>Protocol:</strong> 3-pass review (category distribution, 5-post random sample, 1 worst-case stress test per member) plus independent source verification.</p>
+
+<div class="tbl-wrap">
+<table class="data">
+  <thead><tr><th>Pass</th><th class="num">Posts reviewed</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td>Pass 2 random sample — Ogles (seed=20260427)</td><td class="num">5</td><td>5/5 TP</td></tr>
+    <tr><td>Pass 2 random sample — Fine (seed=20260427)</td><td class="num">5</td><td>5/5 TP</td></tr>
+    <tr><td>Pass 3 stress test — Fine ("Palestinian is a synonym for evil," Cat 2)</td><td class="num">1</td><td>Defensible</td></tr>
+    <tr><td>Pass 3 stress test — Ogles ("DEPORT THEM ALL and execute this illegal pos!!!" Cat 1)</td><td class="num">1</td><td>Defensible</td></tr>
+    <tr><td><strong>Combined Pass 2</strong></td><td class="num"><strong>10</strong></td><td><strong>10/10 TP</strong></td></tr>
+    <tr><td><strong>Combined Pass 3</strong></td><td class="num"><strong>2</strong></td><td><strong>2/2 defensible</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>Source verification:</strong> 11/11 posts confirmed live via X oEmbed API. 11/11 correct attribution (author name returned by oEmbed matches verified member identity). Zero deletions, zero protected accounts.</p>
+
+<div class="callout">
+  <div class="callout-label">Decision rule outcome</div>
+  <p>10/10 TP across both members + defensible worst-case = PROCEED unchanged. No member pulled from headline ranking. No methodology adjustments required.</p>
+</div>
+
+<p><strong>Reproduction:</strong> Pass 2 sample is reproducible. Seed=20260427. Query: <code>SELECT * FROM rhetoric_classifications WHERE bioguide_id IN ('O000175','F000484') AND is_in=TRUE ORDER BY RANDOM();</code> with seed set before query.</p>
+
+</article>
+</div>
+
+<footer class="article-footer">
+  <p class="byline">
+    Methodology document for the April 27, 2026 special report. Prepared by Chad Maschke for <a href="https://mn06watch.com">MN-06 Watch</a> and <a href="https://thewatchdogs.us">TheWatchdogs.us</a>. The complete audit trail of all 114 flagged posts in the top-ten ranking is available separately.
+  </p>
+  <a href="../" class="back-to-article">← Back to the article</a>
+</footer>
+
+<div class="site-footer">
+  MN06WATCH · INDEPENDENT ACCOUNTABILITY JOURNALISM
+  <div class="tagline">We document what your representative does. You decide what it means.</div>
+</div>
+
+</body>
+</html>

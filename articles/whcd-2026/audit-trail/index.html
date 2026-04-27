@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit Trail — Congressional Rhetoric Audit — MN-06 Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a365d;
+  --navy-deep: #0f2547;
+  --navy-soft: #2c5282;
+  --gold: #d69e2e;
+  --gold-soft: #f6e2b3;
+  --gold-deep: #975a16;
+  --white: #ffffff;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-500: #718096;
+  --gray-700: #2d3748;
+  --gray-900: #1a202c;
+  --d-color: #2c5282;
+  --d-soft: #ebf4fb;
+  --r-color: #9b2c2c;
+  --r-soft: #fde8e8;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --serif-body: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--serif-body);
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header { background: var(--navy); color: var(--white); padding: 16px 0; }
+.site-header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: var(--sans); font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+.brand-tag { font-family: var(--serif-body); font-style: italic; font-weight: 400; font-size: 13px; color: var(--gold-soft); text-transform: none; letter-spacing: 0; margin-left: 4px; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-family: var(--sans); font-weight: 500; font-size: 13px; color: rgba(255,255,255,0.85); text-decoration: none; }
+.nav-links a:hover { color: var(--gold); }
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 56px 24px 64px;
+  border-top: 4px solid var(--gold);
+}
+.hero-inner { max-width: 1080px; margin: 0 auto; }
+.hero-back { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
+.hero-back:hover { color: var(--gold-soft); }
+.hero-eyebrow { font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.hero-eyebrow .sep { margin: 0 12px; opacity: 0.5; }
+.hero h1 {
+  font-family: var(--serif-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  color: var(--white);
+}
+.hero-deck { font-family: var(--serif-body); font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.85); max-width: 760px; }
+.hero-meta { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 20px; letter-spacing: 0.04em; }
+
+.summary-strip { background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.1); }
+.summary-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.sum-stat { padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); color: var(--white); }
+.sum-stat:last-child { border-right: none; }
+.sum-num { font-family: var(--serif-display); font-weight: 700; font-size: 36px; line-height: 1; color: var(--gold); letter-spacing: -0.02em; }
+.sum-label { font-family: var(--sans); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.75); margin-top: 10px; font-weight: 500; }
+
+main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+
+/* CONTROLS */
+.controls {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(26,54,93,0.04);
+}
+.controls-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; }
+.ctl-group { flex: 1; min-width: 180px; }
+.ctl-group.search-group { flex: 2; min-width: 280px; }
+.ctl-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.ctl-input, .ctl-select {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--serif-body);
+  font-size: 15px;
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--gray-900);
+  transition: border-color 120ms;
+}
+.ctl-input:focus, .ctl-select:focus { outline: none; border-color: var(--navy); }
+.ctl-input::placeholder { color: var(--gray-300); }
+
+.cat-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--gray-100); }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: all 120ms;
+  letter-spacing: 0.02em;
+}
+.chip:hover { border-color: var(--navy-soft); }
+.chip.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.chip .chip-num { font-variant-numeric: tabular-nums; opacity: 0.7; font-size: 11px; }
+.chip.active .chip-num { opacity: 0.85; }
+
+.results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+.results-count { color: var(--gray-700); }
+.results-count strong { color: var(--navy); font-weight: 700; }
+.sort-control { display: flex; gap: 6px; align-items: center; }
+.sort-control label { font-size: 11px; color: var(--gray-500); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.sort-control select { padding: 4px 8px; font-size: 12px; border: 1px solid var(--gray-300); border-radius: 3px; font-family: var(--sans); }
+
+/* TABLE / CARDS */
+.rows-wrap {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+.row {
+  border-bottom: 1px solid var(--gray-100);
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: 50px 1fr 100px 110px;
+  gap: 16px;
+  align-items: start;
+  cursor: pointer;
+  transition: background 80ms;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--gray-50); }
+.row.expanded { background: var(--gold-soft); border-left: 4px solid var(--gold); padding-left: 18px; }
+
+.row-rank {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  padding-top: 4px;
+}
+.row-rank-tag {
+  font-family: var(--sans);
+  font-size: 9px;
+  color: var(--gray-500);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.row-content { min-width: 0; }
+.row-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.row-member {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+}
+.party-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.party-tag.r { background: var(--r-color); color: var(--white); }
+.party-tag.d { background: var(--d-color); color: var(--white); }
+.cat-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--navy);
+  color: var(--white);
+}
+.cat-tag .cat-num-prefix { color: var(--gold); margin-right: 4px; }
+.row-text {
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.row-text.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.row-cat {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--gray-500);
+  text-align: right;
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.row-engagement {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--gray-500);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  padding-top: 4px;
+}
+.row-engagement strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.row-engagement .eng-secondary { font-size: 11px; color: var(--gray-500); }
+
+/* EXPANDED DETAIL */
+.row-detail {
+  display: none;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--gray-300);
+}
+.row.expanded .row-detail { display: block; }
+.detail-section { margin-bottom: 12px; }
+.detail-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 4px;
+}
+.detail-value {
+  font-family: var(--serif-body);
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.55;
+}
+.detail-value.mono { font-family: var(--mono); font-size: 12px; color: var(--gray-700); }
+.detail-actions { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid var(--gray-200); margin-top: 14px; }
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 8px 14px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  transition: all 120ms;
+  text-transform: uppercase;
+}
+.detail-link:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.detail-link.secondary { background: var(--white); color: var(--navy); border-color: var(--navy-soft); }
+.detail-link.secondary:hover { background: var(--gold-soft); color: var(--navy); border-color: var(--gold); }
+
+.empty-state {
+  text-align: center;
+  padding: 56px 24px;
+  color: var(--gray-500);
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 16px;
+  background: var(--white);
+}
+
+/* INFO BANNER */
+.info {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  font-family: var(--serif-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--gray-700);
+}
+.info strong { color: var(--navy); font-weight: 700; }
+.info a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
+
+.article-footer {
+  max-width: 760px;
+  margin: 56px auto 0;
+  padding: 40px 24px;
+  text-align: center;
+}
+.byline { font-family: var(--serif-body); font-style: italic; font-size: 14px; color: var(--gray-700); line-height: 1.65; max-width: 560px; margin: 0 auto 20px; }
+.byline a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
+.back-to-article {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 14px 32px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  text-transform: uppercase;
+}
+.back-to-article:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+.site-footer { background: var(--navy); color: rgba(255,255,255,0.85); border-top: 4px solid var(--gold); padding: 32px 24px; text-align: center; font-family: var(--sans); font-size: 12px; letter-spacing: 0.05em; }
+.site-footer .tagline { color: var(--gold); font-style: italic; font-family: var(--serif-body); font-size: 14px; font-weight: 400; margin-top: 8px; }
+
+@media (max-width: 800px) {
+  .summary-inner { grid-template-columns: repeat(2, 1fr); }
+  .sum-stat:nth-child(2) { border-right: none; }
+  .sum-stat:nth-child(1), .sum-stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .controls-row { gap: 12px; }
+  .ctl-group { min-width: 140px; }
+  .row {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+  .row-cat, .row-engagement { display: none; }
+  .row-rank { font-size: 18px; }
+  .nav-links { display: none; }
+  .row-text { font-size: 15px; }
+  .results-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://mn06watch.com" class="brand">MN06WATCH<span class="brand-tag">Receipts, not rage.</span></a>
+    <nav class="nav-links">
+      <a href="https://mn06watch.com/articles/">Articles</a>
+      <a href="https://mn06watch.substack.com">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <a href="../" class="hero-back">← Back to article</a>
+    <div class="hero-eyebrow">
+      Audit Trail
+      <span class="sep">·</span>
+      Congressional Rhetoric Audit
+    </div>
+    <h1>The complete audit trail</h1>
+    <p class="hero-deck">Every flagged post in the top-10 member ranking. Each row links to the original post on X with full classifier reasoning, engagement data, and the counting rule that applied. Filter by member, party, or category. Click any row to expand the full detail.</p>
+    <div class="hero-meta">110 posts · 10 members · January 26 – April 26, 2026 · Last updated April 27, 2026 (post-EC-07 reclassification)</div>
+  </div>
+</section>
+
+<div class="summary-strip">
+  <div class="summary-inner">
+    <div class="sum-stat"><div class="sum-num">110</div><div class="sum-label">Total flagged posts</div></div>
+    <div class="sum-stat"><div class="sum-num">10</div><div class="sum-label">Members audited</div></div>
+    <div class="sum-stat"><div class="sum-num">9R · 1D</div><div class="sum-label">Party breakdown</div></div>
+    <div class="sum-stat"><div class="sum-num">5</div><div class="sum-label">Categories represented</div></div>
+  </div>
+</div>
+
+<main>
+
+<div class="info">
+  <strong>How to use this page:</strong> Each row shows one flagged post with the member, date, category, engagement metrics, and a direct link to the original post on X. Click any row to expand and see the classifier's reasoning, the counting rule that applied, and additional metadata. The methodology used to classify these posts is documented at <a href="../methodology/">the methodology page</a>. Category 4 (named threats) had only two flags total across the entire 122,106-post corpus and zero in the top-10 ranking, so it is not represented here.
+</div>
+
+<div class="info" style="background: #fef9e7; border-left: 4px solid var(--gold-deep); margin-top: 16px;">
+  <strong>EC-07 reclassification — April 27, 2026:</strong> A user-surfaced classifier inconsistency around the criminal-identity-as-class-attribute pattern was identified during state-delegation review after the initial run. EC-07 (a Cat 2 clarification covering criminal-identity nouns applied as identity attributes to ethnic, religious, immigration-status, political-affiliation, or institutional classes) was added to the methodology, and 1,239 candidate posts were reclassified by Haiku against the updated prompt. 221 posts flipped from OUT to IN (197 R / 24 D / 0 I); 12 of those flips appear in this audit trail (marked <span style="display:inline-block; padding:2px 6px; background:var(--gold-deep); color:white; font-size:10px; font-weight:700; letter-spacing:0.05em; border-radius:3px;">EC-07</span> in the row detail). Members marked <span style="color:var(--gold-deep); font-weight:700;">★</span> are small-sample entries — their 95% CI upper bound exceeds 3× the point estimate. Full methodology refinement narrative is in <a href="../methodology/#task4">Section 12, Task 4</a> of the methodology page.
+</div>
+
+<div class="controls">
+  <div class="controls-row">
+    <div class="ctl-group search-group">
+      <label class="ctl-label" for="searchInput">Search post text</label>
+      <input type="text" id="searchInput" class="ctl-input" placeholder="Type to filter...">
+    </div>
+    <div class="ctl-group">
+      <label class="ctl-label" for="memberFilter">Member</label>
+      <select id="memberFilter" class="ctl-select">
+        <option value="">All members</option>
+      </select>
+    </div>
+    <div class="ctl-group">
+      <label class="ctl-label" for="partyFilter">Party</label>
+      <select id="partyFilter" class="ctl-select">
+        <option value="">Both parties</option>
+        <option value="R">Republican (R)</option>
+        <option value="D">Democrat (D)</option>
+      </select>
+    </div>
+  </div>
+  <div class="cat-chips" id="catChips"></div>
+</div>
+
+<div class="results-bar">
+  <div class="results-count">Showing <strong id="resultsCount">110</strong> of <strong>110</strong> flagged posts</div>
+  <div class="sort-control">
+    <label for="sortSelect">Sort:</label>
+    <select id="sortSelect">
+      <option value="rank-date">Rank, then date (asc)</option>
+      <option value="date-desc">Date (newest first)</option>
+      <option value="date-asc">Date (oldest first)</option>
+      <option value="likes-desc">Engagement (most liked)</option>
+      <option value="category">Category number</option>
+    </select>
+  </div>
+</div>
+
+<div class="rows-wrap" id="rowsWrap"></div>
+
+</main>
+
+<footer class="article-footer">
+  <p class="byline">
+    The complete audit trail for the April 27, 2026 special report on eliminationist and delegitimizing rhetoric in Congressional posts on X. Prepared by Chad Maschke for <a href="https://mn06watch.com">MN-06 Watch</a> and <a href="https://thewatchdogs.us">TheWatchdogs.us</a>. Methodology and full classifier prompt available at the <a href="../methodology/">methodology page</a>.
+  </p>
+  <a href="../" class="back-to-article">← Back to the article</a>
+</footer>
+
+<div class="site-footer">
+  MN06WATCH · INDEPENDENT ACCOUNTABILITY JOURNALISM
+  <div class="tagline">We document what your representative does. You decide what it means.</div>
+</div>
+
+<script>
+const DATA = [{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-01-30","post_timestamp_utc":"2026-01-30T21:08:54.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a group has no legitimate place in society and must be expelled ('have to go back'), meeting eliminationist framing criteria.","post_text":"We cannot live in the same country with these people, they all have to go back. \n\nStand with ICE.","thread_context":"original post","has_media":"no","likes":3100,"reposts":1185,"replies":164,"direct_url":"https://x.com/RepOgles/status/2017344292440687049","db_post_id":"1489548"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T15:15:12.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies dehumanizing labels ('RAPISTS and GANG MEMBERS') to characterize an entire group (immigrants/Democrats' supporters) by criminal identity, reducing them to negative categorical descriptors rather than addressing policy positions.","post_text":"The Democrats are trying to import more RAPISTS and GANG MEMBERS to vote for them!\n\nRepublicans must stand with ICE.","thread_context":"original post","has_media":"no","likes":419,"reposts":85,"replies":156,"direct_url":"https://x.com/RepOgles/status/2021241547124003117","db_post_id":"1485787"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T16:08:54.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies dehumanizing language by referring to a human group as 'illegals' and uses eliminationist framing ('every illegal alien is GONE') suggesting removal/eradication as an end goal.","post_text":"Illegals are raping Tennessee children. \n\nThe temperature will go down when every illegal alien is GONE. I stand with Bovino, Homan, and all ICE patriots.","thread_context":"original post","has_media":"no","likes":12999,"reposts":2760,"replies":2064,"direct_url":"https://x.com/RepOgles/status/2021255062761177552","db_post_id":"1485754"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T23:49:20.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The tweet applies the dehumanizing animal metaphor 'animals' to a human group (criminal defendants), meeting Category 2 criteria.","post_text":"Four Freddie O’Connell supporters are about to leave Davidson County Jail in handcuffs and board an ICE plane home. Isaias allegedly strangled his wife until her dad came in and saved her. These are the people Democrats are protecting. \n\nThank you ICE for getting these animals","thread_context":"original post","has_media":"no","likes":900,"reposts":298,"replies":147,"direct_url":"https://x.com/RepOgles/status/2021370933596807247","db_post_id":"1485429"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-11","post_timestamp_utc":"2026-02-11T21:04:30.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a religious group has no legitimate place in society and must be expelled, meeting eliminationist framing criteria.","post_text":"The muslims have to go. https://t.co/i99EP0aqyu","thread_context":"quote-retweet","has_media":"no","likes":5738,"reposts":1338,"replies":414,"direct_url":"https://x.com/repogles/status/2021691841549123626","db_post_id":"1154494"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-18","post_timestamp_utc":"2026-02-18T17:52:25.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that denaturalizations and deportations are 'the only way' to save the city, framing a group as requiring elimination from society as an end goal rather than policy disagreement.","post_text":"Mamdani is turning New York into New Baghdad. \n\nDenaturalizations and deportations are the only way to save the Big Apple. https://t.co/69UJOj22Gu","thread_context":"original post","has_media":"no","likes":2508,"reposts":1000,"replies":519,"direct_url":"https://x.com/repogles/status/2024180215673409863","db_post_id":"1448384"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-25","post_timestamp_utc":"2026-02-25T15:44:04.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames unassimilated migrants as 'insurgents from other nations' who don't belong in 'our communities,' asserting they have no legitimate place and implying removal as necessary outcome.","post_text":"Neighborhoods filled with unassimilated migrants are not 'our communities'; they are insurgents from other nations. https://t.co/UsxHTR3X1v","thread_context":"quote-retweet","has_media":"no","likes":1179,"reposts":260,"replies":64,"direct_url":"https://x.com/repogles/status/2026684630674419840","db_post_id":"1452749"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-02-27","post_timestamp_utc":"2026-02-27T19:19:05.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Explicitly calls for executions of a named group ('rapists'), constituting a direct call for violence.","post_text":"I agree @timburchett. A few public executions of rapists would set ALOT of people straight and overall crime would plummet.","thread_context":"original post","has_media":"no","likes":1639,"reposts":367,"replies":142,"direct_url":"https://x.com/RepOgles/status/2027463518107160979","db_post_id":"1585314"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T16:28:25.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames Muslims/imams as security threats requiring surveillance and deportation based on religious identity, asserting they have no legitimate place in American society without forced loyalty pledges—eliminationist framing targeting a religious group.","post_text":"Send the feds to the mosque and interrogate every imam for ties to Islamist terror. \n\nDeport all who refuse to pledge allegiance to the United States of America.","thread_context":"original post","has_media":"no","likes":3601,"reposts":1376,"replies":398,"direct_url":"https://x.com/RepOgles/status/2028507729652830582","db_post_id":"1584409"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-03","post_timestamp_utc":"2026-03-03T21:45:10.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts Muslims have no legitimate place in US society and must be excluded/eliminated as an end goal through exclusionary immigration policy framed as existential necessity.","post_text":"AMEN. Sharia happens when Muslims are allowed into the United States.","thread_context":"original post","has_media":"no","likes":2197,"reposts":417,"replies":71,"direct_url":"https://x.com/RepOgles/status/2028949832954466603","db_post_id":"1588602"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-04","post_timestamp_utc":"2026-03-04T21:54:43.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels a named political opponent (O'connell) with totalitarian-regime identity ('Ayatolla'), applying Islamic theocracy framing to a current U.S. official.","post_text":"Democrats want Tennessee to become Iran. Islamic illegals are everywhere, and Ayatolla O’connell is helping them. \n\nI think it’s time we defund the sanctuary city of Nashville until they comply with ICE.","thread_context":"original post","has_media":"no","likes":3542,"reposts":817,"replies":199,"direct_url":"https://x.com/RepOgles/status/2029314620742140081","db_post_id":"1592367"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-05","post_timestamp_utc":"2026-03-05T20:49:33.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that an entire religious group (Muslims) is fundamentally incompatible with America and calls for their exclusion via a ban, framing their presence as illegitimate.","post_text":"America and Islam are incompatible. \n\nTime for a muslim ban.","thread_context":"original post","has_media":"no","likes":8959,"reposts":2708,"replies":468,"direct_url":"https://x.com/RepOgles/status/2029660611374612518","db_post_id":"1596873"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-06","post_timestamp_utc":"2026-03-06T17:53:12.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'muslim ban' explicitly frames an entire religious group as having no legitimate place in America worthy of legal entry, asserting their elimination from the nation as a policy end-goal.","post_text":"Proud to be the sole Tennessean in the Shara-Free America Caucus. Today is the day to pass my muslim ban.","thread_context":"original post","has_media":"no","likes":848,"reposts":221,"replies":97,"direct_url":"https://x.com/RepOgles/status/2029978617149595793","db_post_id":"1600560"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-07","post_timestamp_utc":"2026-03-07T22:43:55.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet contains explicit call to violence ('Hang them both!!!') which directly meets Category 1 definition.","post_text":" Hang them both!!!\nAND while we’re at it, every naturalized muslim should be deported immediately!","thread_context":"original post","has_media":"no","likes":4013,"reposts":916,"replies":135,"direct_url":"https://x.com/RepOgles/status/2030414167815917873","db_post_id":"1611969"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-09","post_timestamp_utc":"2026-03-09T13:40:08.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that an entire religious group 'don't belong in American society,' which is eliminationist framing that denies a group's legitimate place in the nation.","post_text":"Muslims don't belong in American society.\n\nPluralism is a lie.","thread_context":"original post","has_media":"no","likes":52816,"reposts":8962,"replies":11907,"direct_url":"https://x.com/RepOgles/status/2031002097135599717","db_post_id":"1617731"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-10","post_timestamp_utc":"2026-03-10T16:50:36.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"States Muslims 'don't belong in America' and frames them as illegitimate members of society requiring exclusion, meeting eliminationist framing criteria.","post_text":"The EU has SILENCED my X post that called pluralism a lie and kindly stated that Muslims don’t belong in America. \n\nMuslims run their government, and they are silencing free speech. We must not cower to these barbarians. Free speech must win. Share this everywhere.","thread_context":"original post","has_media":"no","likes":9830,"reposts":4056,"replies":984,"direct_url":"https://x.com/RepOgles/status/2031412417465659543","db_post_id":"1617182"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-10","post_timestamp_utc":"2026-03-10T19:17:49.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts Muslims have no legitimate place in society ('unable to assimilate') and must be expelled ('have to go back'), meeting eliminationist framing criteria.","post_text":"Paperwork doesn't magically make you American. \n\nMuslims are unable to assimilate; they all have to go back.","thread_context":"original post","has_media":"no","likes":14288,"reposts":2609,"replies":1243,"direct_url":"https://x.com/RepOgles/status/2031449464825667735","db_post_id":"1617072"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T21:54:33.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The tweet asserts that people who hold certain religious beliefs have no legitimate place in America ('can't live in America'), framing them as incompatible with American society in eliminationist terms.","post_text":"If you affirm this, you can’t live in America. \n\n“Fight those who do not believe in Allah and the Last Day, nor comply with what Allah and His Messenger have forbidden, nor embrace the religion of truth from among those who were given the Scripture, until they pay the tax,","thread_context":"original post","has_media":"no","likes":4634,"reposts":1179,"replies":336,"direct_url":"https://x.com/RepOgles/status/2032213684198773181","db_post_id":"1667430"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T23:12:16.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that people with certain names/origins have no legitimate place in America, framing one group as belonging and another as not, which constitutes eliminationist framing of a group deemed to lack legitimate place in society.","post_text":"America is for people named Andrew Jackson, NOT Mohamed Mohamed.","thread_context":"original post","has_media":"no","likes":20132,"reposts":2575,"replies":1289,"direct_url":"https://x.com/RepOgles/status/2032233243156644057","db_post_id":"1667388"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-13","post_timestamp_utc":"2026-03-13T23:28:28.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Muslims as inherently dangerous threats, applying an enemy designation that frames an entire religious group as a categorical threat requiring mitigation as an existential problem.","post_text":"I don't care about 'dangerous rhetoric.’\n\nThe threat is dangerous muslims.","thread_context":"original post","has_media":"no","likes":9924,"reposts":1687,"replies":692,"direct_url":"https://x.com/RepOgles/status/2032599706086363543","db_post_id":"1666887"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-03-25","post_timestamp_utc":"2026-03-25T01:02:24.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet contains direct calls to violence: 'Hang him. I'll bring the rope.' is an explicit near-direct call for physical violence against a named/identified person.","post_text":" I’m beyond angry!\nIllegal trans pedo raped a 14 year old boy. I’m tired of this \nHang him.  I’ll bring the rope.","thread_context":"original post","has_media":"no","likes":5766,"reposts":1644,"replies":311,"direct_url":"https://x.com/RepOgles/status/2036609610291765754","db_post_id":"1715996"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-08","post_timestamp_utc":"2026-04-08T13:52:18.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet contains explicit call to violence ('execute this illegal pos') against a named or identified person/group.","post_text":"DEPORT THEM ALL and execute this illegal pos!!!","thread_context":"original post","has_media":"no","likes":2889,"reposts":585,"replies":88,"direct_url":"https://x.com/RepOgles/status/2041876792949039297","db_post_id":"1757315"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-13","post_timestamp_utc":"2026-04-13T17:28:34.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for violence using explicit language ('hang them') against an identified group of people.","post_text":"Correction. Don’t deport them, hang them!","thread_context":"original post","has_media":"no","likes":8589,"reposts":2173,"replies":553,"direct_url":"https://x.com/RepOgles/status/2043743156252946503","db_post_id":"1771582"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-15","post_timestamp_utc":"2026-04-15T14:02:45.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet explicitly calls for 'public hangings' as a policy solution, which is a direct call for violence.","post_text":"We can stop these tragedies. With these two policies: \n\n1. Repealing Hart Celler \n\n2. Public Hangings","thread_context":"original post","has_media":"no","likes":6333,"reposts":1220,"replies":229,"direct_url":"https://x.com/RepOgles/status/2044416137543217508","db_post_id":"1770772"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-20","post_timestamp_utc":"2026-04-20T14:14:14.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames Muslims and globalists as illegitimate forces that must be expelled/overcome ('take their country back'), asserting they have no legitimate place in American society—core eliminationist framing.","post_text":"America goes two ways. \n\nOption A: Muslims and globalists institute THEIR laws on our society. \n\nOPTION B: Christian men stand up and take their country back.\n\nI’m going with option B.","thread_context":"original post","has_media":"no","likes":22314,"reposts":6708,"replies":2576,"direct_url":"https://x.com/RepOgles/status/2046230968013381856","db_post_id":"1812039"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-24","post_timestamp_utc":"2026-04-24T17:33:39.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using explicit language 'hang them' that clearly meets CAT 1 criteria regardless of target.","post_text":"Hang them!","thread_context":"original post","has_media":"no","likes":1036,"reposts":128,"replies":35,"direct_url":"https://x.com/RepOgles/status/2047730702272069680","db_post_id":"1860907"},{"rank":1,"member_name":"Andrew Ogles","party":"R","chamber":"House","state":"TN","post_date":"2026-04-26","post_timestamp_utc":"2026-04-26T02:39:21.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Senate Democrats as 'coconspirators' in an assassination attempt, designating them as existential enemies rather than political opponents with policy disagreements.","post_text":"Hey Senate Libtards fund the dadgum government; DHS and Sec Service.  \nThey just tried to kill the President again and you are coconspirators. \nYOU ARE GUILTY!!!\n@SenateGOP @SenateDems \n@WhiteHouse @RapidResponse47","thread_context":"original post","has_media":"no","likes":3528,"reposts":1007,"replies":205,"direct_url":"https://x.com/RepOgles/status/2048230422031536361","db_post_id":"1860497"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-02","post_timestamp_utc":"2026-02-02T15:02:26.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Designates Muslim people as 'terrorists' as a categorical identity, applying a dehumanizing label that treats an entire religious group as inherently dangerous threats rather than individuals.","post_text":"With Muslim terrorists in the Florida Capitol today, I hope my friends and former colleagues stay watchful and safe.","thread_context":"original post","has_media":"no","likes":1048,"reposts":356,"replies":103,"direct_url":"https://x.com/RepFine/status/2018339232650023171","db_post_id":"1515953"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-06","post_timestamp_utc":"2026-02-06T22:00:49.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a named individual has no legitimate place in society and must be expelled ('denaturalize and deport'), meeting eliminationist framing criteria.","post_text":"It’s clear that Mamdani has NO RESPECT for America or our Constitutional values. \n\nWe need to denaturalize and deport HIM as soon as possible.","thread_context":"original post","has_media":"no","likes":12887,"reposts":2444,"replies":1232,"direct_url":"https://x.com/RepFine/status/2019894073117626545","db_post_id":"1514244"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-06","post_timestamp_utc":"2026-02-06T15:23:53.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies totalitarian-movement identity label ('one of them' — terrorist) to named current political figure Rashida Tlaib, asserting she is a member of an extremist group rather than describing policy positions.","post_text":"I think I called this a while ago.  \n\nRashida Tlaib openly supports and collaborates with Muslim terrorists.  \n\nThat makes her one of them.","thread_context":"original post","has_media":"no","likes":3964,"reposts":1226,"replies":232,"direct_url":"https://x.com/RepFine/status/2019794183125397769","db_post_id":"1514462"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-07","post_timestamp_utc":"2026-02-07T16:04:51.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Labels Muslims as 'invaders' with no legitimate place in America and calls for deportation as an end goal, meeting eliminationist framing criteria.","post_text":"Mehdi Hasan publicly and proudly called non-muslims “cattle” — while leading fellow muslims in prayer at a mosque.\n\nThese are the mainstream muslim invaders who now think they can tell us what “American values” are. \n\nDEPORT.","thread_context":"original post","has_media":"no","likes":7767,"reposts":1043,"replies":433,"direct_url":"https://x.com/RepFine/status/2020166880556666909","db_post_id":"1514132"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-08","post_timestamp_utc":"2026-02-08T18:10:33.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Eliminationist framing asserting that undocumented immigrants must be completely eradicated from society as an end goal ('won't be finished until EVERY illegal is gone. NO EXCEPTIONS') rather than advocating for specific policy changes.","post_text":"Word is @ICEgov is looking for a detention center in Central Florida for illegal immigrants who refuse to leave.\n\nFully support!   Let's round them up!\n\nThe job won't be finished until EVERY illegal is gone. \n\nNO EXCEPTIONS.","thread_context":"original post","has_media":"no","likes":1737,"reposts":386,"replies":170,"direct_url":"https://x.com/RepFine/status/2020560900030103917","db_post_id":"1513978"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-09","post_timestamp_utc":"2026-02-09T16:42:08.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Characterizing 'Mainstream Islam' as 'pure evil' applies a dehumanizing label to a religious group as a class, meeting the dehumanizing language threshold.","post_text":"Mainstream Islam has taken over New York, and we are ALL dealing with the consequences.\n\nZohran Mamdani’s supporters are APPALLINGLY delusional.\n\nMainstream Islam is pure evil.","thread_context":"original post","has_media":"no","likes":3869,"reposts":1321,"replies":497,"direct_url":"https://x.com/RepFine/status/2020901037918269660","db_post_id":"1513818"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T12:36:48.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that undocumented immigrants as a group must be expelled entirely ('round up and deport...ALL of them. NO EXCEPTIONS'), framing removal as a categorical end goal rather than policy debate.","post_text":"Today would be a great day to round up and deport illegals. \n\nEspecially those who liked \"Bad Bunny\"'s filth.\n\nALL of them. \n\nNO EXCEPTIONS.","thread_context":"original post","has_media":"no","likes":720,"reposts":253,"replies":1041,"direct_url":"https://x.com/RepFine/status/2021201683041353764","db_post_id":"1513572"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-13","post_timestamp_utc":"2026-02-13T18:03:13.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet asserts a named individual has no legitimate place in society and must be expelled ('DENATURALIZE AND DEPORT'), meeting eliminationist framing criteria.","post_text":"Absolutely DISGUSTING.\n\nJihadi Mamdani is to blame for the rise in Muslim terror happening across New York City.\n\nDENATURALIZE AND DEPORT HIM NOW.","thread_context":"original post","has_media":"no","likes":3898,"reposts":1658,"replies":736,"direct_url":"https://x.com/RepFine/status/2022370994086633667","db_post_id":"1512638"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-15","post_timestamp_utc":"2026-02-15T00:01:30.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Equating an entire ethnic/national group with 'evil' applies a dehumanizing label that strips the group of human moral status and complexity.","post_text":"Palestinian is a synonym for evil.","thread_context":"original post","has_media":"no","likes":3697,"reposts":877,"replies":3229,"direct_url":"https://x.com/RepFine/status/2022823548360786397","db_post_id":"1512375"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-19","post_timestamp_utc":"2026-02-19T00:02:01.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels a named individual (Mamdani) with the totalitarian-movement identity 'Commie/Communist,' applying an ideological totalitarian regime label to a current political actor.","post_text":"Commie Mamdani is showing his true Communist Colors. \n\nI tried to warn you, New York City.","thread_context":"original post","has_media":"no","likes":2145,"reposts":444,"replies":237,"direct_url":"https://x.com/RepFine/status/2024273226856091878","db_post_id":"1511699"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-24","post_timestamp_utc":"2026-02-24T17:55:53.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts Islamic people represent an existential threat ('takeover') requiring elimination from Western society, framing their presence as illegitimate rather than a policy disagreement.","post_text":"The Islamic takeover of the West is already here. \n\nJust take a look at New York.\n\nThe street prayers are just the BEGINNING.","thread_context":"original post","has_media":"no","likes":6462,"reposts":2096,"replies":549,"direct_url":"https://x.com/RepFine/status/2026355413596147990","db_post_id":"1510656"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-26","post_timestamp_utc":"2026-02-26T12:16:53.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a named group ('Muslim terrorists') has no legitimate place in society and must be expelled ('get out of our country', 'Deport'), meeting eliminationist framing criteria.","post_text":"We need to get these Muslim terrorists out of our country.  \n\nDeport.","thread_context":"original post","has_media":"no","likes":4378,"reposts":1190,"replies":593,"direct_url":"https://x.com/RepFine/status/2026994877859233814","db_post_id":"1509922"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-28","post_timestamp_utc":"2026-02-28T13:38:49.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Contains direct call to military violence ('cut off the head of the snake', 'Bombs away') paired with identification of target ('Muslim terror'), meeting CAT 1 criteria for calls to violence against named groups.","post_text":"We are with you, Mr. President. \n\nWe will cut off the head of the snake of Muslim terror,\n\nBring lasting peace to the Middle East,\n\nAnd save the Iranian People. \n\nBombs away.","thread_context":"original post","has_media":"no","likes":12326,"reposts":3376,"replies":1662,"direct_url":"https://x.com/RepFine/status/2027740274160476357","db_post_id":"1584070"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-02-28","post_timestamp_utc":"2026-02-28T16:47:45.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The tweet contains 'Deport!' as a directive targeting a named individual (Rashida Tlaib), which constitutes a near-direct call for removal that approaches violence against an identified person.","post_text":"Rashida Tlaib parroting Ayatollah propaganda.  I wish I could say I am surprised.  Iran blew up these people when one of their missiles failed. \n\nAnd to think of all the Democrsts who lost their minds when I called her and her pal Ilhan Muslim terrorists.\n\nDeport!","thread_context":"original post","has_media":"no","likes":8037,"reposts":1642,"replies":240,"direct_url":"https://x.com/RepFine/status/2027787820924903730","db_post_id":"1583990"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-01","post_timestamp_utc":"2026-03-01T01:31:25.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that a group ('Muslim terrorists') has no legitimate place in society and must be expelled/eradicated as an end goal, meeting eliminationist framing criteria.","post_text":"Every one of these Muslim terrorists needs to be expelled and deported. \n\nAnd if Columbia refuses, they should lose all federal funding.\n\nDeport!","thread_context":"original post","has_media":"no","likes":15085,"reposts":4421,"replies":554,"direct_url":"https://x.com/RepFine/status/2027919604756975639","db_post_id":"1583834"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-01","post_timestamp_utc":"2026-03-01T20:41:23.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts Muslims have no legitimate place in society and must be expelled ('deported...every single one...NOW'), meeting eliminationist framing criteria.","post_text":"This Muslim terrorist tweeted at me.  \n\nThese monsters need to be deported. \n\nEvery single one. \n\nNOW.","thread_context":"original post","has_media":"no","likes":1705,"reposts":427,"replies":177,"direct_url":"https://x.com/VoteRandyFine/status/2028209001926689246","db_post_id":"1583681"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T15:02:47.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a group (American Muslims at this temple) has no legitimate place in society and must be expelled ('GET THEM THE HELL OUT OF OUR COUNTRY'), meeting eliminationist framing criteria.","post_text":"An American Muslim religious temple is “honoring our leader,” the Ayatollah, calling him a “martyr.”\n\nThe barbarians are no longer at the gates. \n\nThey are inside. \n\nAnd they are publicly bragging about it. \n\nWE NEED TO GET THEM THE HELL OUT OF OUR COUNTRY.","thread_context":"original post","has_media":"no","likes":9817,"reposts":3957,"replies":851,"direct_url":"https://x.com/RepFine/status/2028486180900360229","db_post_id":"1583592"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T16:51:01.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that a group (foreigners/immigrants) has no legitimate place in society ('must go HOME') as an eliminationist end goal, framed as necessary response to security threat.","post_text":"Diversity is not our greatest strength. \n\nInnocent Americans were just killed in Austin because of liberals' fake sympathy for keeping foreigners in our nation who don’t share American values. \n\nThey all must go HOME.","thread_context":"original post","has_media":"no","likes":6062,"reposts":1114,"replies":302,"direct_url":"https://x.com/RepFine/status/2028513416491499959","db_post_id":"1583547"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T20:31:13.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that an entire religious group ('Mainstream Islam') presents a 'fundamental threat' incompatible with American society and culture, framing the group as existentially incompatible with the nation's continued existence.","post_text":"Something that we MUST acknowledge as a culture and a society is that Mainstream Islam presents a fundamental threat to the United States. \n\nOur values do not, and will not, align. \n\nWe must not be afraid to call it what it is.","thread_context":"original post","has_media":"no","likes":3346,"reposts":731,"replies":166,"direct_url":"https://x.com/RepFine/status/2028568831950561783","db_post_id":"1583442"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T13:29:54.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels named individuals (Omar, Tlaib, Mamdani) with totalitarian-movement identity ('terrorist') and implies they are illegitimate members of society requiring removal ('flight home'), meeting CAT 6 criteria.","post_text":"The guy is a Muslim terrorist who hates America.  Should be on the same Sharia Air flight home as Omar, Tlaib, and Mamdani.","thread_context":"original post","has_media":"no","likes":4265,"reposts":1119,"replies":178,"direct_url":"https://x.com/RepFine/status/2028462805217681564","db_post_id":"1583612"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-03","post_timestamp_utc":"2026-03-03T12:01:59.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames an entire religious group as a 'problem' requiring elimination from American society, meeting eliminationist framing criteria.","post_text":"We have a Muslim problem in America.","thread_context":"original post","has_media":"no","likes":12645,"reposts":3904,"replies":1810,"direct_url":"https://x.com/RepFine/status/2028803067999662291","db_post_id":"1588384"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-06","post_timestamp_utc":"2026-03-06T16:50:27.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels domestic political opponents as 'terrorist sympathizers' requiring expulsion, designating them as enemies incompatible with the nation rather than merely policy opponents.","post_text":"The Sharia-Free America Caucus is growing.\n\nI am proud to stand with my fellow patriots in Congress to defend the WEST. \n\nEvery terrorist sympathizer needs to get the hell out of our country.","thread_context":"original post","has_media":"no","likes":1621,"reposts":571,"replies":156,"direct_url":"https://x.com/RepFine/status/2029962828463870268","db_post_id":"1598861"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-08","post_timestamp_utc":"2026-03-08T21:13:28.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet asserts Muslims have no legitimate place in America ('get these people...out of our country') and frames Islam itself as an eliminationist threat, meeting CAT 3 eliminationist framing.","post_text":"The @nypost is reporting the Muslim terrorists who hurled bombs in New York are ISIS. \n\nISIS.  In America. \n\nBut Mamdani and his fellow Democrats think we should be worried about Islamophobia.\n\nWe SHOULD be afraid of Islam.  \n\nWe need to get these people the f out of our country","thread_context":"original post","has_media":"no","likes":18654,"reposts":5837,"replies":1517,"direct_url":"https://x.com/RepFine/status/2030753793155944587","db_post_id":"1612971"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-09","post_timestamp_utc":"2026-03-09T21:49:00.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames Muslims as an existential threat requiring societal change to prevent their dominance, asserting they cannot coexist legitimately in America.","post_text":"New York City has fallen to Muslim terror.  \n\nAmerica is next if we don’t change course.","thread_context":"original post","has_media":"no","likes":9622,"reposts":1389,"replies":510,"direct_url":"https://x.com/RepFine/status/2031125123344826412","db_post_id":"1627371"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T22:37:57.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The 'boxcar' reference invokes Holocaust imagery to suggest Muslims will be eliminated/eradicated from society, framing them as having no legitimate place in America—eliminationist framing.","post_text":"It is inconceivable that you are defending a recently naturalized Muslim who supports terrorism within hours of another naturalized Muslim terrorist attack. \n\nI have news for you, Chuck.  They may load you into the boxcar last, but they will load you just the same. \n\nShame.","thread_context":"original post","has_media":"no","likes":11702,"reposts":2285,"replies":427,"direct_url":"https://x.com/RepFine/status/2032224603930546239","db_post_id":"1664488"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T13:17:05.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Democrats as 'outwardly fighting against Americans,' framing them as enemies of the American people rather than political opponents, combined with inflammatory language about violence.","post_text":"We have reached a point where Democrats are outwardly fighting against Americans. \n\nHow many Americans are going to have to get Allahu Akbar’d before we do something about it? \n\n@pedrobrodrigue7 @DailySignal","thread_context":"original post","has_media":"no","likes":4795,"reposts":1123,"replies":369,"direct_url":"https://x.com/RepFine/status/2032083459015872711","db_post_id":"1664810"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-13","post_timestamp_utc":"2026-03-13T01:51:42.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'expulsion of evil' combined with 'fear of Islam is rational' frames a religious group as illegitimate and targets them for removal from society, meeting the eliminationist framing criterion.","post_text":"No.  The time for drum circles and \"why can't we all just get alongs\" is over. \n\nThe time for the expulsion of evil is here.  \n\nFear of Islam is rational. \n\nAfter a day like today, we need to stop lying that it is not.","thread_context":"original post","has_media":"no","likes":18169,"reposts":3588,"replies":1510,"direct_url":"https://x.com/RepFine/status/2032273365591876010","db_post_id":"1664432"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-13","post_timestamp_utc":"2026-03-13T13:23:07.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Catalogues violent incidents attributed to Muslims to frame Islam/Muslims as an existential enemy requiring fear-based elimination from American society, meeting enemy-of-the-people designation rhetoric.","post_text":"You're an idiot.  Islam isn't a race.  Anyone can practice it.  \n\nBut if it were, how many Americans have to be Allahu Akbar'ed before fear is rational?\n\nA shooting in Texas. \n\nA truck in Michigan. \n\nA university in Virginia. \n\nBombs in New York.  \n\nIn two weeks.  \n\nGet a brain.","thread_context":"original post","has_media":"no","likes":26077,"reposts":4722,"replies":2779,"direct_url":"https://x.com/RepFine/status/2032447364695236887","db_post_id":"1664377"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-26","post_timestamp_utc":"2026-03-26T03:01:11.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that an identified group ('Muslim terrorists') has no legitimate place in U.S. society and must be expelled (denaturalized and deported) as an end goal, meeting eliminationist framing criteria.","post_text":"This is happening IN the United States. \n\nEach and every one of these Muslim terrorists needs to be denaturalized and deported.","thread_context":"original post","has_media":"no","likes":6801,"reposts":2637,"replies":796,"direct_url":"https://x.com/RepFine/status/2037001892044132722","db_post_id":"1724265"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-03-30","post_timestamp_utc":"2026-03-30T15:38:18.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Frames Muslims as an existential threat requiring prevention ('stop the takeover'), asserting they have no legitimate place in Western society as currently constituted.","post_text":"America will look like this in 10 years if we don’t stop the Mainstream Muslim takeover of the West. \n\nThe choice is ours.","thread_context":"original post","has_media":"no","likes":3655,"reposts":1327,"replies":420,"direct_url":"https://x.com/RepFine/status/2038641978208903349","db_post_id":"1735914"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-04","post_timestamp_utc":"2026-04-04T15:36:20.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Framing a group ('Muslim terror supporters') as requiring removal from society ('deport') as an end goal meets eliminationist framing criteria.","post_text":"More of this!  We have a long list of Muslim terror supporters to deport!  \n\nWell done, @SecRubio. https://x.com/secrubio/status/2040444536455942315…","thread_context":"original post","has_media":"no","likes":3608,"reposts":523,"replies":127,"direct_url":"https://x.com/RepFine/status/2040453424253178244","db_post_id":"1744624"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-04","post_timestamp_utc":"2026-04-04T18:50:16.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'DEPORT THEM ALL' in the context of discussing Muslims and 'Muslim terror' frames Muslims as a group with no legitimate place in society, asserting expulsion as an end goal, meeting eliminationist framing criteria.","post_text":"Thanks to legislation I passed while in the Florida Legislature, Ahmad, who claims the First Amendment gives Muslims the right to assault what he considers infidels, will now face five years in prison.  \n\nWe don’t accept Muslim terror in Florida.\n\nDEPORT THEM ALL.","thread_context":"original post","has_media":"no","likes":1480,"reposts":295,"replies":67,"direct_url":"https://x.com/RepFine/status/2040502226154565849","db_post_id":"1744587"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-05","post_timestamp_utc":"2026-04-05T13:23:22.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'Allahu Akbar is coming their way' in context of warfighters constitutes a near-direct call for violence against a named or identified group.","post_text":"Sounds like some Allahu Akbar is coming their way…\n\nBehind you and our warfighters 1000%, Mr. President.","thread_context":"original post","has_media":"no","likes":13114,"reposts":1535,"replies":1657,"direct_url":"https://x.com/RepFine/status/2040782347843383432","db_post_id":"1762936"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-13","post_timestamp_utc":"2026-04-13T15:49:54.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts a named/identified group (foreign supporter of terror) has no legitimate place in the country and must be expelled as an end goal ('Get out').","post_text":"You are a foreigner who openly and ardently supports Muslim terror. \n\nYou have been a guest in our country. \n\nNot any more. \n\nGet out.","thread_context":"original post","has_media":"no","likes":13098,"reposts":2090,"replies":615,"direct_url":"https://x.com/RepFine/status/2043718328032612773","db_post_id":"1779413"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-23","post_timestamp_utc":"2026-04-23T22:29:39.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Uses eliminationist framing by characterizing a group as 'invaders' with no legitimate place, asserting they 'must all be deported' by 'any means necessary,' which implies eradication as an end goal rather than standard policy disagreement.","post_text":"Foreign invaders are conquering us. \n\nAmerica has refused to fight back. \n\nUntil now.  \n\nThe invaders must all be deported. \n\nEvery single one. \n\nBy any means necessary.","thread_context":"original post","has_media":"no","likes":1482,"reposts":411,"replies":155,"direct_url":"https://x.com/RepFine/status/2047442806218609003","db_post_id":"1816392"},{"rank":2,"member_name":"Randy Fine","party":"R","chamber":"House","state":"FL","post_date":"2026-04-24","post_timestamp_utc":"2026-04-24T15:41:46.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Labels a group ('paperwork Americans') as an 'existential threat' requiring expulsion ('Deport them ALL'), meeting eliminationist framing criteria.","post_text":"Abdisatar Ahmed Hassan is a naturalized American Muslim who was born in Kenya to Somali parents.  \n\nOf course he is a “Minneapolis man.”   \n\nThe epidemic of paperwork Americans is an existential threat to the United States. \n\nDeport them ALL.","thread_context":"original post","has_media":"no","likes":931,"reposts":324,"replies":56,"direct_url":"https://x.com/RepFine/status/2047702547058573789","db_post_id":"1856230"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-07","post_timestamp_utc":"2026-02-07T14:35:17.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"This is a direct reference to lynching and implicit call for violence against an unspecified person or group.","post_text":"A short rope and a tall tree.","thread_context":"original post","has_media":"no","likes":28021,"reposts":5307,"replies":1588,"direct_url":"https://x.com/timburchett/status/2020144338064269732","db_post_id":"1486593"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-07","post_timestamp_utc":"2026-02-07T17:08:38.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using explicit language 'hang them' clearly meets CAT 1 criteria for near-direct calls for physical violence.","post_text":"Hang them.","thread_context":"original post","has_media":"no","likes":623387,"reposts":82347,"replies":13094,"direct_url":"https://x.com/timburchett/status/2020182930329596384","db_post_id":"1486549"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-23","post_timestamp_utc":"2026-02-23T23:18:13.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"This is a near-direct call to violence using the well-known eliminationist phrase referring to lynching/execution by rope and tree.","post_text":"Short rope. Tall tree.","thread_context":"original post","has_media":"no","likes":15630,"reposts":3702,"replies":982,"direct_url":"https://x.com/timburchett/status/2026074146333925818","db_post_id":"1482407"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-24","post_timestamp_utc":"2026-02-24T14:15:03.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using explicit language 'hang him' targeting a named or identified person.","post_text":"Hang him.","thread_context":"original post","has_media":"no","likes":2870,"reposts":422,"replies":225,"direct_url":"https://x.com/timburchett/status/2026299841450528918","db_post_id":"1482302"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-27","post_timestamp_utc":"2026-02-27T12:02:08.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for physical violence ('hang him') against an identified person meets CAT 1 criteria clearly.","post_text":"Hang him. Seriously hang him.","thread_context":"original post","has_media":"no","likes":15489,"reposts":3111,"replies":1221,"direct_url":"https://x.com/timburchett/status/2027353554277511357","db_post_id":"1480789"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-02-27","post_timestamp_utc":"2026-02-27T12:32:04.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Contains explicit call to violence ('Hang these dirtbags') against named/identified people, meeting CAT 1 threshold.","post_text":"They are pimps and kids are being raped. Hang these dirtbags and send them to Hell.","thread_context":"original post","has_media":"no","likes":6906,"reposts":2024,"replies":489,"direct_url":"https://x.com/timburchett/status/2027361086186426435","db_post_id":"1480795"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-15","post_timestamp_utc":"2026-03-15T12:59:11.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'hang these dirtbags' is a near-direct call for violence against named individuals in the context of the ICAC program, meeting CAT 1 criteria.","post_text":"Thank you @TimTebow let’s fund our local Internet Crimes Against Children ICAC and hang these dirtbags.","thread_context":"original post","has_media":"no","likes":16641,"reposts":3923,"replies":515,"direct_url":"https://x.com/timburchett/status/2033166116873294016","db_post_id":"1675665"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-19","post_timestamp_utc":"2026-03-19T18:39:27.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'publicly hang' is a direct call for physical violence against a named or identified person/target.","post_text":"Publicly hang this waste of carbon.","thread_context":"original post","has_media":"no","likes":9631,"reposts":2589,"replies":450,"direct_url":"https://x.com/timburchett/status/2034701300370165866","db_post_id":"1692576"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-21","post_timestamp_utc":"2026-03-21T18:40:27.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using 'hang' against a named or identified person.","post_text":"Hang this dirtbag!","thread_context":"original post","has_media":"no","likes":1127,"reposts":337,"replies":85,"direct_url":"https://x.com/timburchett/status/2035426326031573284","db_post_id":"1700838"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-24","post_timestamp_utc":"2026-03-24T16:06:05.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels current political opponents as 'Marxist' (totalitarian movement identity) rather than describing ideology or policy, asserting they have breached defensive positions.","post_text":"The Marxist aren’t at the gate they are over it.","thread_context":"original post","has_media":"no","likes":9255,"reposts":1390,"replies":439,"direct_url":"https://x.com/timburchett/status/2036474642416726148","db_post_id":"1716301"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-25","post_timestamp_utc":"2026-03-25T13:21:09.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using 'hang' against a named or contextually identified person.","post_text":"Hang this dirtbag.","thread_context":"original post","has_media":"no","likes":7779,"reposts":1235,"replies":282,"direct_url":"https://x.com/timburchett/status/2036795524355957015","db_post_id":"1715933"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-03-26","post_timestamp_utc":"2026-03-26T15:27:19.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for violence through reinstating public hangings as a deterrent measure against an unnamed group.","post_text":"If we would bring back public hangings this would stop.","thread_context":"original post","has_media":"no","likes":38882,"reposts":9271,"replies":2125,"direct_url":"https://x.com/timburchett/status/2037189663383843246","db_post_id":"1721836"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-07","post_timestamp_utc":"2026-04-07T18:48:03.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"The phrase 'Hang this waste of carbon dirtbag' is a direct call to violence (hanging) against an identified person or group, clearly meeting CAT 1 criteria.","post_text":"Hang this waste of carbon dirtbag.","thread_context":"original post","has_media":"no","likes":16571,"reposts":3303,"replies":667,"direct_url":"https://x.com/timburchett/status/2041588834178117726","db_post_id":"1757538"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-08","post_timestamp_utc":"2026-04-08T14:24:16.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet contains explicit call to violence ('hang') against a named or identified target, meeting CAT 1 criteria.","post_text":"Publicly hang this dirtbag.","thread_context":"original post","has_media":"no","likes":7169,"reposts":2309,"replies":227,"direct_url":"https://x.com/timburchett/status/2041884836902662349","db_post_id":"1757302"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-08","post_timestamp_utc":"2026-04-08T14:27:01.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for physical restraint and imprisonment of an unspecified person meets near-direct violence standard for CAT 1.","post_text":"Put him in chains and lock him up.","thread_context":"original post","has_media":"no","likes":6331,"reposts":1764,"replies":267,"direct_url":"https://x.com/timburchett/status/2041885529508044853","db_post_id":"1757301"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-08","post_timestamp_utc":"2026-04-08T16:00:16.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using 'burn' as a violent directive against a named/identified person ('dirtbag').","post_text":"Burn this dirtbag.","thread_context":"original post","has_media":"no","likes":10366,"reposts":1262,"replies":527,"direct_url":"https://x.com/timburchett/status/2041908996043375014","db_post_id":"1757256"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-10","post_timestamp_utc":"2026-04-10T13:15:38.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Hashtag '#PublicHanging' is a direct reference to execution by hanging, constituting a near-direct call for violence against an unspecified group or institution.","post_text":"#PublicHanging","thread_context":"original post","has_media":"no","likes":9677,"reposts":2578,"replies":839,"direct_url":"https://x.com/timburchett/status/2042592341756715014","db_post_id":"1756541"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-14","post_timestamp_utc":"2026-04-14T13:52:17.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for physical violence ('hang him publicly') against an unnamed but identified individual meets CAT 1 criteria.","post_text":"Hang him publicly. Seriously hang him publicly.","thread_context":"original post","has_media":"no","likes":28859,"reposts":6314,"replies":1035,"direct_url":"https://x.com/timburchett/status/2044051118238454031","db_post_id":"1771267"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-23","post_timestamp_utc":"2026-04-23T00:15:24.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The term 'savages' applies a dehumanizing label that reduces human beings to a subhuman or primitive class, meeting the definition of dehumanizing language in CAT 2.","post_text":"Savages.","thread_context":"original post","has_media":"no","likes":2376,"reposts":422,"replies":92,"direct_url":"https://x.com/timburchett/status/2047107033137127553","db_post_id":"1820890"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-24","post_timestamp_utc":"2026-04-24T16:12:29.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call to violence using 'hanging,' a near-direct invocation of a specific execution method against an implied target.","post_text":"Now do hanging.","thread_context":"original post","has_media":"no","likes":24343,"reposts":4295,"replies":1854,"direct_url":"https://x.com/timburchett/status/2047710276259094594","db_post_id":"1860953"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-24","post_timestamp_utc":"2026-04-24T21:24:42.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for violence using explicit language ('public hanging') that constitutes a near-direct call for physical violence.","post_text":"Public hanging.","thread_context":"original post","has_media":"no","likes":39661,"reposts":8136,"replies":3163,"direct_url":"https://x.com/timburchett/status/2047788849133191396","db_post_id":"1860793"},{"rank":3,"member_name":"Tim Burchett","party":"R","chamber":"House","state":"TN","post_date":"2026-04-25","post_timestamp_utc":"2026-04-25T01:57:26.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Direct call for execution ('Hang him') against an unnamed but identified individual, meeting the definition of near-direct call for physical violence.","post_text":"Hang him. That would solve it permanently.","thread_context":"original post","has_media":"no","likes":6484,"reposts":763,"replies":229,"direct_url":"https://x.com/timburchett/status/2047857485638140334","db_post_id":"1860725"},{"rank":4,"member_name":"Bernie Moreno","party":"R","chamber":"Senate","state":"OH","post_date":"2026-02-27","post_timestamp_utc":"2026-02-27T16:23:06.000Z","category":1,"category_label":"Calls to violence","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Uses explicit dehumanizing animal metaphor ('rabid dog') combined with violent imagery ('hunt you down') directed at a named/identified group (narcoterrorists), meeting the threshold for near-direct calls to violence.","post_text":"No matter how safe you feel, no matter how much dirty money you have, the United States will hunt you down like the rabid dog you are. Harming Americans has consequences, and these narcoterrorists will feel the wrath of American justice.","thread_context":"original post","has_media":"no","likes":102,"reposts":48,"replies":13,"direct_url":"https://x.com/berniemoreno/status/2027419228446364107","db_post_id":"1509455"},{"rank":4,"member_name":"Bernie Moreno","party":"R","chamber":"Senate","state":"OH","post_date":"2026-02-27","post_timestamp_utc":"2026-02-27T16:23:05.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses dehumanizing animal metaphor ('rabid dog') applied to a human group (narco terrorists), which meets CAT 2 criteria for applying animal metaphors to human beings.","post_text":"No matter how safe you feel, no matter how much dirty money you have, America will hunt you down like the rabid dog you are. Harming Americans has consequences and these narco terrorists will feel the wrath of American justice.","thread_context":"original post","has_media":"no","likes":355,"reposts":90,"replies":38,"direct_url":"https://x.com/berniemoreno/status/2027419225623580992","db_post_id":"1509454"},{"rank":4,"member_name":"Bernie Moreno","party":"R","chamber":"Senate","state":"OH","post_date":"2026-04-17","post_timestamp_utc":"2026-04-17T16:13:17.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels an unnamed Democratic candidate as 'nazi loving' and 'antisemite,' applying totalitarian movement identity labels to a current political opponent rather than describing ideology or policy.","post_text":"Evidently nothing excites Democrat voters more than a nazi loving, police hating, antisemite.\n\n@grahamformaine is destroying @SenSchumer’s hand picked candidate. Wow!","thread_context":"original post","has_media":"no","likes":135,"reposts":39,"replies":59,"direct_url":"https://x.com/berniemoreno/status/2045173765319885124","db_post_id":"1792658"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-02-07","post_timestamp_utc":"2026-02-07T17:40:01.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies totalitarian-regime label ('Communists') as identity to current political opponents (Democrats), meeting CAT 6 criteria.","post_text":"The Democrat Communists, illegal aliens, and the Islamic Terrorists are trying to take over and destroy our way of life.\n \nOur forefathers built this country, and for 250 years, America has been the GREATEST COUNTRY on Earth.\n \nRepublicans need to stop playing soft and FIGHT","thread_context":"original post","has_media":"no","likes":5430,"reposts":1871,"replies":512,"direct_url":"https://x.com/SenTuberville/status/2020190827314630923","db_post_id":"1466850"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-02-12","post_timestamp_utc":"2026-02-12T21:43:14.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that Sharia Law (framed as a group/movement) is a 'DEATH CULT' with 'NO PLACE in America' and calls to 'BAN' it, using eliminationist framing that a practice/ideology has no legitimate place and must be eradicated.","post_text":"Sharia Law is not a religion.\n\nIt is a DEATH CULT and has NO PLACE in America.\n\nI will not be quiet about this. We must BAN SHARIA LAW and protect America from this poison.\nhttps://t.co/F8jBrtUNnM","thread_context":"original post","has_media":"no","likes":6790,"reposts":2320,"replies":474,"direct_url":"https://x.com/SenTuberville/status/2022063975358435399","db_post_id":"1154463"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-02-17","post_timestamp_utc":"2026-02-17T02:53:21.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels 'elected Democrats' as 'the ENEMY OF THE PEOPLE,' designating political opponents as existential enemies rather than merely policy opponents, which meets CAT 5 criteria.","post_text":"Don’t listen to the WOKE mainstream media: voter ID is VERY POPULAR.\n\n95% of Republicans and 71% of DEMOCRAT voters want photo IDs to vote in federal elections.\n\nBut elected Democrats are the ENEMY OF THE PEOPLE, and continue to drag their feet. https://t.co/iKCb5StzzP","thread_context":"original post","has_media":"no","likes":6399,"reposts":1674,"replies":387,"direct_url":"https://x.com/SenTuberville/status/2023591568502837578","db_post_id":"1154451"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-03-03","post_timestamp_utc":"2026-03-03T19:05:22.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'COMMIE-crats' to label current political opponents (Spanberger and the Left) with a totalitarian movement identity rather than describing their ideology or policies.","post_text":"Spanberger—like the rest of the COMMIE-crats—continues to put illegal aliens ahead of American citizens.\n\nThe Left can’t even hide it anymore… they’ll do ANYTHING to protect criminal illegals.","thread_context":"original post","has_media":"no","likes":877,"reposts":266,"replies":49,"direct_url":"https://x.com/SenTuberville/status/2028909618026430539","db_post_id":"1587530"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-03-16","post_timestamp_utc":"2026-03-16T16:19:27.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'DEATH CULT' metaphor applied to a religious/ideological group, meeting dehumanizing language criteria in CAT 2.","post_text":"Sharia Law is INCOMPATIBLE with American values.\n\nThis isn’t about “racism.” Radical Islam isn’t a race. It is a DEATH CULT.\n\nWE DO NOT WANT ANY MORE RADICAL ISLAM HERE.","thread_context":"original post","has_media":"no","likes":10976,"reposts":2683,"replies":728,"direct_url":"https://x.com/SenTuberville/status/2033578902271000648","db_post_id":"1673642"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-03-17","post_timestamp_utc":"2026-03-17T23:23:00.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies 'DEATH CULT' metaphor to identify a human group (Muslims adhering to 'Radical Islam'), which meets dehumanizing language criteria.","post_text":"DEPORT EVERY ISLAMIC TERRORIST.\n \nWhat used to be common sense is now considered “racist.”\n \nRadical Islam is not a race or a religion. It is a DEATH CULT.","thread_context":"original post","has_media":"no","likes":7957,"reposts":1854,"replies":454,"direct_url":"https://x.com/SenTuberville/status/2034047883868074454","db_post_id":"1691899"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-03-19","post_timestamp_utc":"2026-03-19T19:18:03.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses dehumanizing disease metaphors ('CANCER') and annihilation metaphors ('DEATH CULT') applied to a named group (Radical Islam/Sharia Law adherents as a human class).","post_text":"Radical Islam and Sharia Law are a CANCER.\n\nWe’ve seen it infiltrate and tear down Europe.\n\nWe CANNOT let this poisonous DEATH CULT tear down America.","thread_context":"original post","has_media":"no","likes":6615,"reposts":1669,"replies":416,"direct_url":"https://x.com/SenTuberville/status/2034711012859944962","db_post_id":"1690682"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-04-04","post_timestamp_utc":"2026-04-04T23:59:00.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Tweet asserts that Sharia Law (framed as a group/ideology) is a 'DEATH CULT' with 'NO PLACE in America,' using eliminationist framing that a category of people/ideology must be removed from society as an end goal.","post_text":"Sharia Law is not a religion.\n\nIt is a DEATH CULT and has NO PLACE in America.\n\nI will not be “politically correct” about this.","thread_context":"original post","has_media":"no","likes":5416,"reposts":993,"replies":226,"direct_url":"https://x.com/SenTuberville/status/2040579923618795954","db_post_id":"1740444"},{"rank":5,"member_name":"Tommy Tuberville","party":"R","chamber":"Senate","state":"AL","post_date":"2026-04-14","post_timestamp_utc":"2026-04-14T16:26:20.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Explicitly labels Democrats as 'the ENEMY' and asserts they 'won't hold back in trying to destroy us,' framing a domestic political opponent as an existential threat requiring elimination rather than electoral defeat.","post_text":"Democrats view over half the country as the ENEMY and won’t hold back in trying to destroy us.\n \nThat is why this November is so important. President Trump may not be on the ballot, but you can be damn sure the future of our country is on the line.\n \nThere is no such thing as a","thread_context":"original post","has_media":"no","likes":112,"reposts":34,"replies":39,"direct_url":"https://x.com/CoachForGov/status/2044089886379008482","db_post_id":"1775768"},{"rank":6,"member_name":"Tim Sheehy","party":"R","chamber":"Senate","state":"MT","post_date":"2026-02-13","post_timestamp_utc":"2026-02-13T15:50:41.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels 'Code Pink' and similar groups as 'Marxist guerrilla organizations,' applying a totalitarian-movement identity label to current domestic political actors.","post_text":"Groups like Code Pink sit silent as Iran murders thousands, drug cartels poison our nation, and Islamic terrorists murder innocent Jews. Why? Because they are Marxist guerrilla organizations funded and directed by our enemies.","thread_context":"original post","has_media":"no","likes":417,"reposts":74,"replies":28,"direct_url":"https://x.com/TimSheehyMT/status/2022337641585520877","db_post_id":"1464179"},{"rank":6,"member_name":"Tim Sheehy","party":"R","chamber":"Senate","state":"MT","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T12:18:15.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses dehumanizing animal metaphor ('savages') applied to a human group, meeting CAT 2 criteria for dehumanizing language.","post_text":"Democrats imported people like this psycho and now they defund the agency who protects Americans from these savages. Of course, there are no protests for the victims of these heinous crimes.","thread_context":"original post","has_media":"no","likes":90,"reposts":24,"replies":17,"direct_url":"https://x.com/TimSheehyMT/status/2032068654037086694","db_post_id":"1655106"},{"rank":6,"member_name":"Tim Sheehy","party":"R","chamber":"Senate","state":"MT","post_date":"2026-03-25","post_timestamp_utc":"2026-03-25T17:42:05.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Code Pink as 'communist agitators,' applying the totalitarian-movement identity label 'communist' to a named current political group.","post_text":"Code Pink are communist agitators who love Hamas terrorists, serial criminals, and murderous regimes. They defend criminals and demonize innocent American families.","thread_context":"original post","has_media":"no","likes":82,"reposts":14,"replies":12,"direct_url":"https://x.com/TimSheehyMT/status/2036861189972480110","db_post_id":"1717267"},{"rank":7,"member_name":"Ron Wyden","party":"D","chamber":"Senate","state":"OR","post_date":"2026-02-06","post_timestamp_utc":"2026-02-06T23:49:03.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels ICE and Trump's administration as a 'Gestapo' (totalitarian regime identity), applying Nazi movement terminology to current political actors rather than for historical or educational purposes.","post_text":"Donald Trump’s personal Gestapo tear-gassed peaceful marchers here in Portland protesting ICE’s horrors. Proud to stand today with that march’s organizers to say you don’t “hope” a Gestapo reforms, or “tweak” a Gestapo. You stop a Gestapo by saying not one more taxpayer dollar.","thread_context":"original post","has_media":"no","likes":360,"reposts":156,"replies":286,"direct_url":"https://x.com/RonWyden/status/2019921309573214247","db_post_id":"1514203"},{"rank":7,"member_name":"Ron Wyden","party":"D","chamber":"Senate","state":"OR","post_date":"2026-03-23","post_timestamp_utc":"2026-03-23T20:45:34.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies totalitarian-regime label 'gestapo' to identify current U.S. political actors (Trump, ICE agents, Miller, Vance) as members of a fascist movement, not merely describing policy.","post_text":"ICE agents have no experience with aviation security. Trump has deployed his personal gestapo to airports with the sole purpose of intimidating Americans so Stephen Miller and JD Vance can feel powerful. Republicans could end this at any time by joining with Dems to fund TSA.","thread_context":"original post","has_media":"no","likes":215,"reposts":94,"replies":163,"direct_url":"https://x.com/RonWyden/status/2036182588272914575","db_post_id":"1714072"},{"rank":7,"member_name":"Ron Wyden","party":"D","chamber":"Senate","state":"OR","post_date":"2026-03-27","post_timestamp_utc":"2026-03-27T14:19:11.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels ICE as 'Trump's personal gestapo,' applying Nazi totalitarian regime identity to a current U.S. institution and official.","post_text":"Democrats said no more money for Trump’s ICE to keep terrorizing our communities and murdering people on the streets, and we won one for the American people. This is a huge first step to reining in Trump’s personal gestapo.","thread_context":"original post","has_media":"no","likes":214,"reposts":72,"replies":181,"direct_url":"https://x.com/RonWyden/status/2037534905765089482","db_post_id":"1730986"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-03-02","post_timestamp_utc":"2026-03-02T02:27:11.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses a violent attack method as a metonymic slur to dehumanize Muslims by equating the group with terrorism, applying a violent stereotype as an identifier to an entire religious population.","post_text":"How many Americans have to get Allahu Akbar’ed before we realize Islam is a problem?","thread_context":"original post","has_media":"no","likes":102861,"reposts":14589,"replies":7591,"direct_url":"https://x.com/RepBrandonGill/status/2028296028642820307","db_post_id":"1583269"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-03-03","post_timestamp_utc":"2026-03-03T21:03:26.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'killing us' as a dehumanizing disease/plague metaphor applied to a human group (Muslims/Muslim migrants) to characterize immigration as an existential threat.","post_text":"Mass Islamic migration is killing us.","thread_context":"original post","has_media":"no","likes":9850,"reposts":2135,"replies":371,"direct_url":"https://x.com/RepBrandonGill/status/2028939329297408493","db_post_id":"1588634"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-03-11","post_timestamp_utc":"2026-03-11T15:55:07.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Uses 'annihilate' as an eliminationist metaphor asserting that Islam/Muslims have no legitimate place in America and must be removed as an end goal.","post_text":"Importing Islam will annihilate America as we know it.","thread_context":"original post","has_media":"no","likes":5593,"reposts":992,"replies":167,"direct_url":"https://x.com/realBrandonGill/status/2031760840647422156","db_post_id":"1661748"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T20:17:14.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels a named individual (Mohamed Jalloh) by ethnic/national origin as inherently terrorist, applying totalitarian-regime association (terrorism/extremism identity label) to a current person based on identity characteristics.","post_text":"If only there was a way to predict that “Mohamed Jalloh” from Sierra Leone might be a terrorist…","thread_context":"original post","has_media":"no","likes":10517,"reposts":1228,"replies":188,"direct_url":"https://x.com/realBrandonGill/status/2032189194055959021","db_post_id":"1667510"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-04-01","post_timestamp_utc":"2026-04-01T17:04:53.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies dehumanizing language by characterizing Muslims/people from Senegal as inherent security threats ('these people'), employing a disease-vector metaphor ('importing') that suggests the group is a contaminant to be excluded from society.","post_text":"Too bad there’s no way we could have predicted a Muslim from Senegal named ‘Mohamed Jalloh’ might be a terrorist.\n\nWhy are we importing these people into our country?","thread_context":"original post","has_media":"no","likes":14013,"reposts":2292,"replies":217,"direct_url":"https://x.com/RepBrandonGill/status/2039388541981970524","db_post_id":"1744309"},{"rank":8,"member_name":"Brandon Gill","party":"R","chamber":"House","state":"TX","post_date":"2026-04-21","post_timestamp_utc":"2026-04-21T02:57:23.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts Muslims have no legitimate place in American society and must be eliminated from it through complete immigration ban, framed as existential threat to the nation.","post_text":"Either end Muslim immigration completely or your granddaughter will be forced to wear a burka in public schools.","thread_context":"original post","has_media":"no","likes":1874,"reposts":493,"replies":81,"direct_url":"https://x.com/realBrandonGill/status/2046423020449706325","db_post_id":"1811636"},{"rank":9,"member_name":"Rashida Tlaib","party":"D","chamber":"House","state":"MI","post_date":"2026-02-04","post_timestamp_utc":"2026-02-04T15:30:08.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Trump's administration as a 'fascist regime,' applying totalitarian-movement identity to current political actor rather than describing policy or ideology.","post_text":"Trump's fascist regime governs through cruelty, spectacle, lawlessness—and a level of corruption unprecedented in our nation's history.\nhttps://t.co/U1hMh53npD","thread_context":"original post","has_media":"no","likes":192,"reposts":46,"replies":144,"direct_url":"https://x.com/RepRashida/status/2019070977099849956","db_post_id":"98309"},{"rank":9,"member_name":"Rashida Tlaib","party":"D","chamber":"House","state":"MI","post_date":"2026-02-25","post_timestamp_utc":"2026-02-25T04:40:26.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies dehumanizing language ('sicko') and characterizes the person as a predator/pedophile, which functions as a dehumanizing label that removes them from normal moral consideration.","post_text":"This hemar president pretends he cares about children. He is pedophile and protects people just like him. Keep your children away from this sicko.","thread_context":"original post","has_media":"no","likes":8981,"reposts":1043,"replies":1523,"direct_url":"https://x.com/RashidaTlaib/status/2026517623471493565","db_post_id":"1460150"},{"rank":10,"member_name":"Burgess Owens","party":"R","chamber":"House","state":"UT","post_date":"2026-01-31","post_timestamp_utc":"2026-01-31T19:56:23.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels 'the Marxist left' as a totalitarian movement identity applied to current political opponents, meeting Category 6.","post_text":"\"Our Republic dies when good people sit at home.\"\n\nThe Marxist left is strategic, tenacious, angry, and violent. They should not be allowed to carve out a safe harbor in Utah.\n\nSign on, my friends, to end Prop 4. Now is the time to save our great state.\n\nThank you, @KaiSchwemmer.","thread_context":"original post","has_media":"no","likes":631,"reposts":120,"replies":50,"direct_url":"https://x.com/BurgessOwens/status/2017688431694868572","db_post_id":"1470081"},{"rank":10,"member_name":"Burgess Owens","party":"R","chamber":"House","state":"UT","post_date":"2026-02-19","post_timestamp_utc":"2026-02-19T17:39:14.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Democrats as training children to be 'KKK thugs' and 'Antifa cowards,' applying totalitarian/extremist movement identities to current political opponents as a defining characteristic.","post_text":"Déjà vu.\n\nGrowing up in the segregated 1960s, Democrats trained their children to be KKK thugs. Now they are being taught to be Antifa cowards and bullies.\n\nThe Democrat parents of these children should be ashamed of themselves.","thread_context":"original post","has_media":"no","likes":130,"reposts":45,"replies":8,"direct_url":"https://x.com/BurgessOwens/status/2024539286205296768","db_post_id":"1462355"},{"rank":10,"member_name":"Burgess Owens","party":"R","chamber":"House","state":"UT","post_date":"2026-04-16","post_timestamp_utc":"2026-04-16T21:47:32.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Democrats as 'Marxist' to describe their identity/movement membership rather than merely their policies, applying a totalitarian-regime label to current political opponents.","post_text":"As the negative impact on American lives continue to be documented…never forget. This  open border invasion strategy, to destroy our American culture,…. was on purpose. Summarized.. \nAnti-American Democrat Marxist","thread_context":"original post","has_media":"no","likes":35,"reposts":6,"replies":1,"direct_url":"https://x.com/BurgessOwens/status/2044895493113688198","db_post_id":"1773955"}];
+
+const state = {
+  search: '',
+  member: '',
+  party: '',
+  categories: new Set(),  // empty set means all
+  sort: 'rank-date',
+  expanded: new Set()
+};
+
+// ---- POPULATE FILTERS ----
+const memberFilter = document.getElementById('memberFilter');
+const members = [...new Set(DATA.map(r => r.member_name))].sort();
+members.forEach(name => {
+  const r = DATA.find(d => d.member_name === name);
+  const opt = document.createElement('option');
+  opt.value = name;
+  opt.textContent = `${name} (${r.party}-${r.state})`;
+  memberFilter.appendChild(opt);
+});
+
+const catChipsEl = document.getElementById('catChips');
+const catCounts = {};
+DATA.forEach(r => { catCounts[r.category] = (catCounts[r.category] || 0) + 1; });
+const catLabels = {
+  1: 'Calls to violence',
+  2: 'Dehumanizing language',
+  3: 'Eliminationist framing',
+  4: 'Named-individual threats',
+  5: 'Enemy-of-the-people',
+  6: 'Totalitarian-regime labels'
+};
+[1,2,3,5,6].forEach(c => {
+  const chip = document.createElement('button');
+  chip.className = 'chip';
+  chip.dataset.cat = c;
+  chip.innerHTML = `Cat ${c} · ${catLabels[c]} <span class="chip-num">${catCounts[c] || 0}</span>`;
+  chip.addEventListener('click', () => {
+    if (state.categories.has(c)) state.categories.delete(c);
+    else state.categories.add(c);
+    chip.classList.toggle('active');
+    render();
+  });
+  catChipsEl.appendChild(chip);
+});
+
+// ---- WIRE UP CONTROLS ----
+document.getElementById('searchInput').addEventListener('input', e => {
+  state.search = e.target.value.toLowerCase().trim();
+  render();
+});
+memberFilter.addEventListener('change', e => { state.member = e.target.value; render(); });
+document.getElementById('partyFilter').addEventListener('change', e => { state.party = e.target.value; render(); });
+document.getElementById('sortSelect').addEventListener('change', e => { state.sort = e.target.value; render(); });
+
+// ---- FILTER + SORT ----
+function getFiltered() {
+  let rows = DATA;
+  if (state.search) {
+    rows = rows.filter(r => 
+      r.post_text.toLowerCase().includes(state.search) ||
+      r.member_name.toLowerCase().includes(state.search) ||
+      r.classifier_reasoning.toLowerCase().includes(state.search)
+    );
+  }
+  if (state.member) rows = rows.filter(r => r.member_name === state.member);
+  if (state.party) rows = rows.filter(r => r.party === state.party);
+  if (state.categories.size > 0) rows = rows.filter(r => state.categories.has(r.category));
+  
+  rows = [...rows];
+  switch (state.sort) {
+    case 'rank-date':
+      rows.sort((a, b) => a.rank - b.rank || a.post_date.localeCompare(b.post_date));
+      break;
+    case 'date-desc':
+      rows.sort((a, b) => b.post_date.localeCompare(a.post_date));
+      break;
+    case 'date-asc':
+      rows.sort((a, b) => a.post_date.localeCompare(b.post_date));
+      break;
+    case 'likes-desc':
+      rows.sort((a, b) => b.likes - a.likes);
+      break;
+    case 'category':
+      rows.sort((a, b) => a.category - b.category || a.rank - b.rank);
+      break;
+  }
+  return rows;
+}
+
+// ---- RENDER ----
+const rowsWrap = document.getElementById('rowsWrap');
+const resultsCount = document.getElementById('resultsCount');
+
+function fmtNum(n) { return n.toLocaleString('en-US'); }
+function fmtDate(d) {
+  const dt = new Date(d + 'T00:00:00Z');
+  return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function render() {
+  const rows = getFiltered();
+  resultsCount.textContent = rows.length;
+  
+  if (rows.length === 0) {
+    rowsWrap.innerHTML = '<div class="empty-state">No flagged posts match these filters.</div>';
+    return;
+  }
+  
+  rowsWrap.innerHTML = rows.map((r, idx) => {
+    const id = `row-${r.db_post_id}`;
+    const isExpanded = state.expanded.has(r.db_post_id);
+    return `
+      <div class="row${isExpanded ? ' expanded' : ''}" data-id="${r.db_post_id}">
+        <div>
+          <div class="row-rank">#${r.rank}</div>
+          <div class="row-rank-tag">Rank</div>
+        </div>
+        <div class="row-content">
+          <div class="row-meta-line">
+            <span class="row-member">${escapeHtml(r.member_name)}</span>
+            <span class="party-tag ${r.party.toLowerCase()}">${r.party}</span>
+            <span>${escapeHtml(r.chamber)} · ${escapeHtml(r.state)}</span>
+            <span>·</span>
+            <span>${fmtDate(r.post_date)}</span>
+            <span>·</span>
+            <span class="cat-tag"><span class="cat-num-prefix">CAT ${r.category}</span>${escapeHtml(r.category_label)}</span>
+          </div>
+          <div class="row-text${isExpanded ? '' : ' truncated'}">${escapeHtml(r.post_text)}</div>
+          ${isExpanded ? renderDetail(r) : ''}
+        </div>
+        <div class="row-cat">
+          ${escapeHtml(r.counting_rule)}<br>
+          <span style="font-size:10px;color:var(--gray-300);">${r.classifier_confidence} conf.</span>
+        </div>
+        <div class="row-engagement">
+          <strong>${fmtNum(r.likes)}</strong> likes
+          <div class="eng-secondary">${fmtNum(r.reposts)} reposts</div>
+          <div class="eng-secondary">${fmtNum(r.replies)} replies</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  rowsWrap.querySelectorAll('.row').forEach(rowEl => {
+    rowEl.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      const id = rowEl.dataset.id;
+      if (state.expanded.has(id)) state.expanded.delete(id);
+      else state.expanded.add(id);
+      render();
+    });
+  });
+}
+
+function renderDetail(r) {
+  return `
+    <div class="row-detail">
+      <div class="detail-section">
+        <div class="detail-label">Classifier reasoning</div>
+        <div class="detail-value">${escapeHtml(r.classifier_reasoning)}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Thread context</div>
+        <div class="detail-value">${escapeHtml(r.thread_context)}${r.has_media === 'yes' ? ' · contains media' : ''}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Posted (UTC)</div>
+        <div class="detail-value mono">${escapeHtml(r.post_timestamp_utc)}</div>
+      </div>
+      <div class="detail-actions">
+        <a class="detail-link" href="${escapeHtml(r.direct_url)}" target="_blank" rel="noopener">View original on X →</a>
+        <a class="detail-link secondary" href="../methodology/#cat${r.category}">Category ${r.category} criteria</a>
+      </div>
+    </div>
+  `;
+}
+
+render();
+</script>
+
+</body>
+</html>
