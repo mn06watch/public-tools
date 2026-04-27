@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minnesota's Elected Rhetoric — MN-06 Watch</title>
+<meta name="description" content="A 12-month audit of how Minnesota's ten members of Congress posted on X. 10,554 original posts. 99 flagged for eliminationist or delegitimizing rhetoric. Five members at zero. Same methodology as the national congressional rhetoric audit, applied symmetrically across the delegation.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minnesota's Elected Rhetoric">
+<meta property="og:description" content="A 12-month audit of how Minnesota's 10 members of Congress posted on X. 10,554 posts, 99 flagged, five members at zero. Same methodology as the national audit, applied to the home delegation.">
+<meta property="og:url" content="https://mn06watch.com/articles/mn-delegation-rhetoric/">
+<meta property="og:image" content="https://mn06watch.com/articles/mn-delegation-rhetoric/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="MN-06 Watch">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Minnesota's Elected Rhetoric">
+<meta name="twitter:description" content="A 12-month audit of how Minnesota's 10 members of Congress posted on X. 10,554 posts, 99 flagged, five members at zero.">
+<meta name="twitter:image" content="https://mn06watch.com/articles/mn-delegation-rhetoric/og.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a365d;
+  --navy-deep: #0f2547;
+  --navy-soft: #2c5282;
+  --gold: #d69e2e;
+  --gold-soft: #f6e2b3;
+  --gold-deep: #975a16;
+  --white: #ffffff;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-500: #718096;
+  --gray-700: #2d3748;
+  --gray-900: #1a202c;
+  --d-color: #2c5282;
+  --d-soft: #ebf4fb;
+  --r-color: #9b2c2c;
+  --r-soft: #fde8e8;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --serif-body: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--serif-body); background: var(--white); color: var(--gray-900); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+.site-header { background: var(--navy); color: var(--white); padding: 16px 0; }
+.site-header-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: var(--sans); font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+.brand-tag { font-family: var(--serif-body); font-style: italic; font-weight: 400; font-size: 13px; color: var(--gold-soft); text-transform: none; letter-spacing: 0; margin-left: 4px; }
+.nav-links { display: flex; gap: 24px; font-family: var(--sans); font-size: 13px; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 500; letter-spacing: 0.04em; }
+.nav-links a:hover { color: var(--gold-soft); }
+
+.hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); color: var(--white); padding: 80px 0 100px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(214,158,46,0.08) 0%, transparent 50%); pointer-events: none; }
+.hero-inner { max-width: 800px; margin: 0 auto; padding: 0 24px; position: relative; }
+.hero-eyebrow { font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+.hero-eyebrow span { color: rgba(214,158,46,0.6); margin: 0 8px; }
+.hero h1 { font-family: var(--serif-display); font-weight: 800; font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 28px; }
+.hero-deck { font-family: var(--serif-body); font-weight: 400; font-size: clamp(17px, 2vw, 21px); line-height: 1.55; color: rgba(255,255,255,0.88); max-width: 680px; margin-bottom: 40px; }
+.hero-meta { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; }
+.hero-meta span { color: var(--gold-soft); margin: 0 8px; }
+
+.hero-stats { background: var(--gold); color: var(--navy-deep); padding: 24px 0; border-top: 1px solid var(--gold-deep); }
+.hero-stats-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.stat-block { text-align: center; }
+.stat-num { font-family: var(--serif-display); font-weight: 800; font-size: 40px; line-height: 1; color: var(--navy-deep); }
+.stat-label { font-family: var(--sans); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--navy-deep); margin-top: 8px; opacity: 0.85; }
+@media (max-width: 700px) { .hero-stats-inner { grid-template-columns: repeat(2, 1fr); } }
+
+main { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+main p { font-family: var(--serif-body); font-size: 19px; line-height: 1.7; margin-bottom: 24px; color: var(--gray-900); }
+main p strong { font-weight: 700; }
+main p em { font-style: italic; }
+main h2 { font-family: var(--serif-display); font-weight: 700; font-size: 32px; line-height: 1.2; margin: 56px 0 24px; color: var(--navy-deep); letter-spacing: -0.01em; }
+main h3 { font-family: var(--serif-display); font-weight: 600; font-size: 24px; margin: 40px 0 16px; color: var(--navy-deep); }
+main h4 { font-family: var(--sans); font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-deep); margin: 28px 0 12px; }
+main a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; font-weight: 500; }
+main a:hover { color: var(--navy-deep); text-decoration-color: var(--navy); }
+
+.section-mark { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin: 64px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gold); display: block; }
+
+.lead p:first-of-type::first-letter { font-family: var(--serif-display); font-size: 64px; font-weight: 700; float: left; line-height: 0.85; margin: 6px 12px 0 0; color: var(--navy-deep); }
+
+.callout { background: var(--gray-50); border-left: 4px solid var(--gold); padding: 24px 28px; margin: 32px 0; font-family: var(--serif-body); font-size: 18px; line-height: 1.65; }
+.callout-label { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 8px; }
+
+.member-profile { background: var(--white); border: 1px solid var(--gray-200); border-top: 4px solid var(--r-color); padding: 32px 36px; margin: 40px 0; border-radius: 2px; }
+.member-profile.d-pattern { border-top-color: var(--d-color); }
+.member-profile.zero { border-top-color: var(--gray-300); background: var(--gray-50); }
+.member-profile-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.member-profile-name { font-family: var(--serif-display); font-weight: 700; font-size: 26px; color: var(--navy-deep); }
+.member-profile-meta { font-family: var(--sans); font-size: 13px; color: var(--gray-500); letter-spacing: 0.02em; }
+.member-profile-stats { display: flex; gap: 32px; flex-wrap: wrap; margin: 16px 0 24px; padding: 12px 0; border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); font-family: var(--sans); }
+.member-profile-stat { font-size: 13px; color: var(--gray-500); }
+.member-profile-stat strong { display: block; font-family: var(--mono); font-size: 18px; font-weight: 600; color: var(--gray-900); margin-top: 2px; }
+
+.monthly-table, .delegation-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-family: var(--sans); font-size: 14px; }
+.monthly-table th, .delegation-table th { background: var(--navy); color: var(--white); font-weight: 600; padding: 12px 14px; text-align: left; letter-spacing: 0.04em; font-size: 12px; text-transform: uppercase; }
+.monthly-table th.num, .delegation-table th.num { text-align: right; }
+.monthly-table td, .delegation-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-200); }
+.monthly-table td.num, .delegation-table td.num { text-align: right; font-family: var(--mono); }
+.monthly-table tr.spike { background: var(--r-soft); }
+.monthly-table tr.spike td { color: var(--r-deep); font-weight: 600; }
+.delegation-table .member-name { font-weight: 600; color: var(--navy-deep); }
+.party-tag { display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; padding: 2px 7px; margin-left: 8px; border-radius: 3px; vertical-align: middle; color: var(--white); }
+.party-tag.r { background: var(--r-color); }
+.party-tag.d { background: var(--d-color); }
+
+.receipt { background: var(--white); border: 1px solid var(--gray-200); border-radius: 4px; padding: 24px 28px; margin: 24px 0; }
+.receipt-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--gray-100); }
+.receipt-member { font-family: var(--sans); font-weight: 700; font-size: 14px; color: var(--navy-deep); }
+.receipt-meta { font-family: var(--sans); font-size: 12px; color: var(--gray-500); letter-spacing: 0.02em; }
+.receipt-cat { display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--r-color); color: var(--white); padding: 3px 8px; border-radius: 3px; margin-left: 8px; }
+.receipt-cat.d { background: var(--d-color); }
+.receipt-text { font-family: var(--serif-body); font-size: 18px; line-height: 1.55; color: var(--gray-900); font-style: italic; border-left: 3px solid var(--gold); padding: 4px 0 4px 18px; margin-bottom: 16px; }
+.receipt-engagement { display: flex; gap: 20px; font-family: var(--sans); font-size: 13px; color: var(--gray-500); margin-bottom: 8px; }
+.receipt-engagement span strong { color: var(--gray-900); font-family: var(--mono); font-weight: 500; }
+.receipt-link { font-family: var(--sans); font-size: 12px; letter-spacing: 0.02em; }
+
+.scope { background: var(--gray-50); border-radius: 6px; padding: 32px 36px; margin: 40px 0; }
+.scope-eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 4px; }
+.scope h3 { font-family: var(--serif-display); font-weight: 700; font-size: 22px; color: var(--navy-deep); margin: 0 0 20px 0; }
+.scope-item { margin-bottom: 18px; }
+.scope-item:last-child { margin-bottom: 0; }
+.scope-key { font-family: var(--sans); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--navy-deep); margin-bottom: 4px; }
+.scope-val { font-family: var(--serif-body); font-size: 17px; line-height: 1.6; color: var(--gray-700); }
+
+.footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 0 40px; margin-top: 80px; font-family: var(--sans); font-size: 14px; }
+.footer-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+.footer-brand { font-family: var(--sans); font-weight: 800; font-size: 16px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+.footer-tag { font-family: var(--serif-body); font-style: italic; color: var(--gold-soft); margin-bottom: 24px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.footer-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13px; letter-spacing: 0.04em; }
+.footer-links a:hover { color: var(--gold-soft); }
+.footer-fineprint { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="brand">MN-06 Watch <span class="brand-tag">accountability journalism</span></a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/articles/whcd-2026/methodology/">Methodology</a>
+      <a href="/articles/whcd-2026/audit-trail/">Audit Trail</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Special Report <span>·</span> MN Delegation Audit <span>·</span> April 28, 2026</div>
+    <h1>Minnesota's elected rhetoric</h1>
+    <p class="hero-deck">A 12-month audit of how Minnesota's ten members of Congress posted on X. Ten thousand five hundred fifty-four original posts. Ninety-nine flagged for eliminationist or delegitimizing rhetoric. Five members at zero. Same methodology as the national congressional rhetoric audit, applied symmetrically across the delegation.</p>
+    <div class="hero-meta">12-month window: April 26, 2025 – April 26, 2026 <span>·</span> Methodology: <a href="/articles/whcd-2026/methodology/" style="color: var(--gold-soft);">published rule set</a> <span>·</span> Companion to <a href="/articles/whcd-2026/" style="color: var(--gold-soft);">national audit</a></div>
+  </div>
+</section>
+
+<div class="hero-stats">
+  <div class="hero-stats-inner">
+    <div class="stat-block"><div class="stat-num">10,554</div><div class="stat-label">Original posts (10 members)</div></div>
+    <div class="stat-block"><div class="stat-num">99</div><div class="stat-label">Flagged posts</div></div>
+    <div class="stat-block"><div class="stat-num">5 / 10</div><div class="stat-label">Members at zero</div></div>
+    <div class="stat-block"><div class="stat-num">12 mo</div><div class="stat-label">Analysis window</div></div>
+  </div>
+</div>
+
+<main>
+
+<div class="section-mark">Part I · The delegation</div>
+
+<div class="lead">
+
+<p>Across the past twelve months, Minnesota's ten members of Congress posted to X a combined 10,554 original times. Five of those ten members produced zero flagged content over the entire window. Five produced ninety-nine flags between them. The distribution across those five is concentrated.</p>
+
+<p>Four of the five flagged members are Republicans. The fifth is a Democrat. The four flagged Republicans together account for eighty-seven of the ninety-nine total flags. The one flagged Democrat — Rep. Ilhan Omar — accounts for twelve. One member alone, Rep. Tom Emmer of the 6th District, accounts for seventy-one. That is more than the other four flagged members combined; more than the entire Senate caucus produced in flagged content; more than seven of his Minnesota colleagues posted in their lifetimes during the window.</p>
+
+<p>Senator Amy Klobuchar's 2,926 posts, Senator Tina Smith's 791, Rep. Betty McCollum's 778, Rep. Angie Craig's 1,121, and Rep. Kelly Morrison's 218 returned zero hits against a published taxonomy that flags calls to violence, dehumanizing language, eliminationist framing, named-individual threats, enemy-of-the-people designation, and totalitarian-regime identity labels. The taxonomy was set before this analysis ran. The classifier was party-blind. Every member's posts were processed by the same prompt with the same conservative-bias instruction. The zeros are real, and they are verified — coverage is one hundred percent, parse errors are zero across the five, and the spot-check sampling shows substantive content classified correctly as outside the threshold.</p>
+
+<p>This is what the delegation produced over twelve months on X. The methodology that produced these numbers is the same methodology applied to all 535 members of Congress in <a href="/articles/whcd-2026/">a national 90-day audit published April 28, 2026</a>. It is published in full at the <a href="/articles/whcd-2026/methodology/">methodology page</a>, including the classifier prompt, the counting rules, the validation procedures, and every edge case ruling. Disagreements about specific classifications can be examined directly: every flagged post in this analysis links to the original on X, with the classifier's reasoning, the engagement data, and the counting rule that applied.</p>
+
+<p>The 12-month window was chosen for a reason. State-level delegation analysis benefits from a longer window than the 90-day national snapshot: individual members produce smaller post volumes than Congress as a whole, and rare-event patterns require time to surface with statistical confidence. What the 90-day national audit can show across 535 members, this audit shows across ten Minnesotans across a full year of posting.</p>
+
+</div>
+
+<div class="section-mark">Part II · Five members, five patterns</div>
+
+<h2>What's in the ninety-nine</h2>
+
+<p>The taxonomy applied here is published in full at the <a href="/articles/whcd-2026/methodology/">methodology page</a>. Six categories: calls to violence, dehumanizing language, eliminationist framing, named-individual threats, enemy-of-the-people designation, and totalitarian-regime identity labels. Each category has explicit IN and OUT criteria, set in advance and applied consistently. Each member profile below describes the rhetorical pattern that distinguishes that member's flagged content from the other four.</p>
+
+<div class="member-profile">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Tom Emmer<span class="party-tag r">R</span></div>
+    <div class="member-profile-meta">House Majority Whip · MN-06</div>
+  </div>
+  <div class="member-profile-stats">
+    <div class="member-profile-stat">12-month posts<strong>2,315</strong></div>
+    <div class="member-profile-stat">Flagged (uncapped)<strong>71</strong></div>
+    <div class="member-profile-stat">Flagged (capped)<strong>7</strong></div>
+    <div class="member-profile-stat">Capped rate<strong>0.30 / 100</strong></div>
+  </div>
+
+<p>Rep. Tom Emmer of Minnesota's 6th Congressional District — the third-ranking House Republican as Majority Whip — produced 71 flagged posts over the 12-month window. Sixty fall in Category 2: dehumanizing language applied to human beings as a class. Ten fall in Category 6: totalitarian-regime identity labels applied to current officials. One falls in Category 5: enemy-of-the-people designation.</p>
+
+<p>The pattern is not diffuse. Of his 60 dehumanizing-language flags, twenty-six — forty-three percent — apply criminal-identity nouns ("fraudsters," "criminals") to Somali Minnesotans as a group. Nineteen more apply criminal identity to immigrants as a class ("criminal illegal aliens"). Seven apply subhuman-identity language ("monsters," "barbarians") to immigration-status classes. The remainder are scattered across other framings.</p>
+
+<p>Of his 10 totalitarian-regime label flags, nine apply "Communist," "Marxist," or "Commie" as identity labels to currently-serving Democratic officials — primarily New York Mayor Zohran Mamdani during the November 2025 mayoral race period, with secondary mentions of Minneapolis-area Democrats.</p>
+
+<p>Three-quarters of Tom Emmer's 12-month flagged content concentrates in those two themes: Somali Minnesotans as criminals as a class, and named Democrats labeled as Communists. Emmer represents Minnesota's 6th District. Many of his constituents, and many of the Minnesotans whose neighborhoods adjoin MN-06, are Somali Minnesotans. The neighbors of Emmer's voters include the people his flagged posts characterize as a criminal class.</p>
+
+<p>The "Somali fraudsters" framing — the most-repeated single phrase pattern in his window — appears across twenty-six distinct posts. This is the pattern that surfaced during state-delegation review on April 27, 2026 and prompted the methodology's most recent edge case ruling, EC-07. Under EC-07, criminal-identity nouns applied as identity attributes to ethnic, religious, or national-origin classes are flagged Category 2 regardless of whether documented criminal cases exist involving members of the named group. The harm being measured is the application of criminal identity to a class — not the description of any specific named convicted individual.</p>
+
+<p>The Feeding Our Future fraud prosecutions are real. Federal prosecutors have charged dozens of individuals; many have pleaded guilty or been convicted. The methodology does not dispute any of that. It distinguishes between describing specific named individuals' documented cases and applying the criminal noun as a categorical identity attribute of an ethnic community.</p>
+
+<div class="callout">
+  <div class="callout-label">Methodology note · EC-07</div>
+  EC-07 was added to the taxonomy on April 27, 2026 after a user-surfaced classifier inconsistency was identified during state-delegation review. The same ruling applies symmetrically across all parties: it flagged Republican posts naming Muslims as "barbarians," Republican posts naming immigrants as "monsters," and Democratic posts naming ICE agents as "thugs" or "goons." The principle is that dehumanization of human beings as a class is Category 2 regardless of which class. Full validation gate result and procedural details are published in <a href="/articles/whcd-2026/methodology/#task4">Section 12, Task 4</a> of the methodology page.
+</div>
+
+<h4>Temporal arc</h4>
+
+<p>The 71 flags are not evenly distributed across the 12-month window. Two distinct spikes drive the count.</p>
+
+<table class="monthly-table">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th class="num">Posts</th>
+      <th class="num">Flags</th>
+      <th class="num">Cat 2</th>
+      <th class="num">Cat 6</th>
+      <th class="num">Other</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>May 2025</td><td class="num">265</td><td class="num">4</td><td class="num">4</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>June 2025</td><td class="num">200</td><td class="num">6</td><td class="num">6</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>July 2025</td><td class="num">225</td><td class="num">5</td><td class="num">5</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>August 2025</td><td class="num">87</td><td class="num">1</td><td class="num">—</td><td class="num">1</td><td class="num">—</td></tr>
+    <tr><td>September 2025</td><td class="num">216</td><td class="num">1</td><td class="num">1</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>October 2025</td><td class="num">258</td><td class="num">8</td><td class="num">5</td><td class="num">2</td><td class="num">Cat5: 1</td></tr>
+    <tr class="spike"><td><strong>November 2025</strong></td><td class="num">204</td><td class="num"><strong>10</strong></td><td class="num">3</td><td class="num"><strong>7</strong></td><td class="num">—</td></tr>
+    <tr class="spike"><td><strong>December 2025</strong></td><td class="num">255</td><td class="num"><strong>20</strong></td><td class="num"><strong>20</strong></td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>January 2026</td><td class="num">189</td><td class="num">8</td><td class="num">8</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>February 2026</td><td class="num">186</td><td class="num">4</td><td class="num">4</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>March 2026</td><td class="num">122</td><td class="num">4</td><td class="num">4</td><td class="num">—</td><td class="num">—</td></tr>
+    <tr><td>April 2026</td><td class="num">68</td><td class="num">0</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+  </tbody>
+</table>
+
+<p>The November 2025 spike was driven by Category 6 — seven of ten flags that month applied "Communist" or "Marxist" identity labels to current Democratic officials, primarily during the New York City mayoral race period as Zohran Mamdani became a target of national right-wing attention.</p>
+
+<p>The December 2025 spike is the densest concentration of flagged content in any member's 12-month window across the entire delegation. All twenty December flags are Category 2. Every single one is on the same topic. Half explicitly invoke "Somali fraudsters" or related framings; half reference Feeding Our Future prosecutions, "rampant Somali fraud," or "Somalians stole" framings. Federal fraud prosecution updates were generating news during this period. Emmer's response was to post in language characterizing Somali Minnesotans as a class twenty times in a single month.</p>
+
+<p>The pattern declines across Q1 2026 — eight flags in January, four each in February and March. The earlier 2025 baseline (May–July averaged five per month, all Cat 2) suggests the Cat 2 pattern is not specific to the late-2025 surge: it predates it, escalates dramatically in late 2025, and tapers afterward.</p>
+</div>
+
+<div class="member-profile d-pattern">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Ilhan Omar<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">House · MN-05</div>
+  </div>
+  <div class="member-profile-stats">
+    <div class="member-profile-stat">12-month posts<strong>983</strong></div>
+    <div class="member-profile-stat">Flagged (uncapped)<strong>12</strong></div>
+    <div class="member-profile-stat">Flagged (capped)<strong>6</strong></div>
+    <div class="member-profile-stat">Capped rate<strong>0.61 / 100</strong></div>
+  </div>
+
+<p>Twelve flagged posts over 12 months — seven Category 2 (dehumanizing language) and five Category 6 (totalitarian-regime labels). The dominant pattern across both categories is "the pedophile protection party" applied to Republican Party officials, primarily during the Epstein Files debate period in summer 2025. That phrase appears in five Cat 2 flags and three Cat 6 flags. Two additional Cat 6 flags apply "fascist" or "fascism" as identity to current Trump administration officials.</p>
+
+<p>Like Emmer's "Somali fraudsters" pattern, "the pedophile protection party" applies a criminal-identity noun as an attribute of a class. The class is different — political affiliation rather than ethnic identity — but the rhetorical structure is the same. EC-07 covers both. The methodology applies symmetrically by design: a phrase that flags one direction of class-identity criminal-noun rhetoric flags the other.</p>
+
+<p>Omar's twelve flagged posts generated 255,645 total likes — vastly more than Emmer's measured engagement on his 71 flags. The engagement gap reflects audience size, not rhetorical volume: Omar maintains a much larger national left-wing follower base than Emmer's regional and partisan audience. Reach and origination measure different things; both are visible in the audit trail data.</p>
+</div>
+
+<div class="member-profile">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Pete Stauber<span class="party-tag r">R</span></div>
+    <div class="member-profile-meta">House · MN-08</div>
+  </div>
+  <div class="member-profile-stats">
+    <div class="member-profile-stat">12-month posts<strong>819</strong></div>
+    <div class="member-profile-stat">Flagged (uncapped)<strong>10</strong></div>
+    <div class="member-profile-stat">Flagged (capped)<strong>4</strong></div>
+    <div class="member-profile-stat">Capped rate<strong>0.49 / 100</strong></div>
+  </div>
+
+<p>Ten flagged posts over 12 months — nine Category 2 (split between "criminal illegal alien/immigrant" framing and "fraudster identity" applied to immigrant communities), one Category 3 (eliminationist framing). Stauber's pattern is structurally similar to Emmer's — class-identity criminal nouns applied to immigration-status and ethnic groups — at roughly one-seventh the raw volume. None of his flagged content is concentrated in a temporal spike comparable to Emmer's December surge; it is distributed across the year.</p>
+</div>
+
+<div class="member-profile">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Michelle Fischbach<span class="party-tag r">R</span></div>
+    <div class="member-profile-meta">House · MN-07</div>
+  </div>
+  <div class="member-profile-stats">
+    <div class="member-profile-stat">12-month posts<strong>404</strong></div>
+    <div class="member-profile-stat">Flagged (uncapped)<strong>4</strong></div>
+    <div class="member-profile-stat">Flagged (capped)<strong>3</strong></div>
+    <div class="member-profile-stat">Capped rate<strong>0.74 / 100</strong></div>
+  </div>
+
+<p>Four flagged posts, all Category 2, all from January 2026. Three are the "Crime Chronicle" series — a sequence of posts naming individual criminal defendants under a unifying class-frame ("Worst-of-the-Worst career criminal illegal aliens"). The fourth applies "illegal criminal" as a categorical descriptor.</p>
+
+<p>The Crime Chronicle posts surfaced an edge case during methodology review: posts that name specific individuals as exemplars of a curated class-identity claim are flagged because the series itself constructs the class. The OUT clause for "specific named individuals" applies only when the post reports on the individual's case without making class-identity claims about the group they belong to. Fischbach's series uses named individuals as vehicles for a class-identity assertion about the group. The series itself is the construction. EC-07 covers it. The full reasoning is published in <a href="/articles/whcd-2026/methodology/#s6">the methodology page's edge case section</a>. The same ruling applies symmetrically — for example, to a Democratic member running a structurally equivalent series naming individual ICE agents as exemplars of "Worst-of-the-Worst federal thugs."</p>
+</div>
+
+<div class="member-profile">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Brad Finstad<span class="party-tag r">R</span></div>
+    <div class="member-profile-meta">House · MN-01</div>
+  </div>
+  <div class="member-profile-stats">
+    <div class="member-profile-stat">12-month posts<strong>199</strong></div>
+    <div class="member-profile-stat">Flagged (uncapped)<strong>2</strong></div>
+    <div class="member-profile-stat">Flagged (capped)<strong>2</strong></div>
+    <div class="member-profile-stat">Capped rate<strong>1.01 / 100</strong></div>
+  </div>
+
+<p>Two flagged posts over 12 months, both Category 2 — "criminal illegal" framings applied to immigration-status classes. With only 199 posts in the window, Finstad's confidence interval is wide (95% CI [0.28, 3.59] per 100). The point estimate is real; the rank position is statistically imprecise.</p>
+</div>
+
+<div class="section-mark">Part III · The rates question</div>
+
+<h2>Two numbers, both true</h2>
+
+<p>The published methodology applies a counting rule called Rule C to Categories 2, 5, and 6: each repeating phrase pattern is capped at three counted flags per member. The rule exists to prevent cross-member rate comparisons from being distorted by heavy repetition. A member who repeats the same phrase ten times isn't ten times more dehumanizing than one who says it once — the rhetorical content is the same.</p>
+
+<p>Rule C has different effects on different members. It compresses members whose flags concentrate in a few repeating patterns more severely than members whose flags spread across multiple patterns. In Minnesota's flagged five, the effects are visible:</p>
+
+<table class="delegation-table">
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th class="num">Posts</th>
+      <th class="num">Uncapped</th>
+      <th class="num">Uncapped rate</th>
+      <th class="num">Capped</th>
+      <th class="num">Capped rate</th>
+      <th class="num">95% CI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="member-name">Tom Emmer</span><span class="party-tag r">R</span><br><span style="color:var(--gray-500); font-size:12px;">MN-06</span></td>
+      <td class="num">2,315</td>
+      <td class="num">71</td>
+      <td class="num"><strong>3.07</strong></td>
+      <td class="num">7</td>
+      <td class="num">0.30</td>
+      <td class="num">[0.15, 0.62]</td>
+    </tr>
+    <tr>
+      <td><span class="member-name">Ilhan Omar</span><span class="party-tag d">D</span><br><span style="color:var(--gray-500); font-size:12px;">MN-05</span></td>
+      <td class="num">983</td>
+      <td class="num">12</td>
+      <td class="num">1.22</td>
+      <td class="num">6</td>
+      <td class="num"><strong>0.61</strong></td>
+      <td class="num">[0.28, 1.33]</td>
+    </tr>
+    <tr>
+      <td><span class="member-name">Pete Stauber</span><span class="party-tag r">R</span><br><span style="color:var(--gray-500); font-size:12px;">MN-08</span></td>
+      <td class="num">819</td>
+      <td class="num">10</td>
+      <td class="num">1.22</td>
+      <td class="num">4</td>
+      <td class="num">0.49</td>
+      <td class="num">[0.19, 1.25]</td>
+    </tr>
+    <tr>
+      <td><span class="member-name">Michelle Fischbach</span><span class="party-tag r">R</span><br><span style="color:var(--gray-500); font-size:12px;">MN-07</span></td>
+      <td class="num">404</td>
+      <td class="num">4</td>
+      <td class="num">0.99</td>
+      <td class="num">3</td>
+      <td class="num">0.74</td>
+      <td class="num">[0.25, 2.16]</td>
+    </tr>
+    <tr>
+      <td><span class="member-name">Brad Finstad</span><span class="party-tag r">R</span><br><span style="color:var(--gray-500); font-size:12px;">MN-01</span></td>
+      <td class="num">199</td>
+      <td class="num">2</td>
+      <td class="num">1.00</td>
+      <td class="num">2</td>
+      <td class="num"><strong>1.01</strong></td>
+      <td class="num">[0.28, 3.59]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The two metrics tell different stories. On the uncapped behavioral measure — raw volume of flagged rhetoric, ignoring repetition — Emmer's 3.07 per 100 leads the delegation by 2.5 times. On the capped headline measure — the rate-comparison-normalized number used in the national piece — Emmer's 0.30 per 100 ranks fourth among the five flagged members. Omar at 0.61 has the highest capped rate among the flagged members, though her 95% confidence interval [0.28, 1.33] overlaps Emmer's [0.15, 0.62]. The two rates are not statistically distinguishable at the capped level; with the Wilson interval methodology the published rules require, neither member's capped rate dominates the other's.</p>
+
+<p>This inversion is mathematically expected and methodologically transparent. Emmer's 71 raw flags compress to 7 because his Cat 2 flags concentrate heavily in repeating phrase patterns — most of all the 26-instance "Somali fraudsters" pattern, which Rule C reduces to 3. Omar's 12 flags compress to 6 because her flagged content distributes across at least two distinct cap-eligible patterns ("the pedophile protection party" applied across Cat 2 and Cat 6, plus "fascist" framings). The cap exists to prevent rate-comparison distortion from heavy repetition. Applied symmetrically, it produces this kind of inversion when one member's rhetoric is highly repetitive on a few framings and another's is more diverse.</p>
+
+<p>Both rates are real. Both are produced by the same methodology applied symmetrically. The uncapped rate captures the volume and repetition of dehumanizing rhetoric a member produced. The capped rate captures the rate of distinct rhetorical patterns. Different questions, different answers. A reader looking at "how many times did this member post in language the methodology flags" gets one answer (Emmer 71 to Omar 12). A reader looking at "what's this member's rate-normalized comparison metric" gets another (statistically indistinguishable across most of the flagged five). The published methodology does not claim either rate is the "correct" one. They answer different questions, and both are public.</p>
+
+<div class="section-mark">Part IV · Selected receipts</div>
+
+<h2>Direct quotes, direct links</h2>
+
+<p>What follows is a small selection of flagged posts from across the delegation, chosen to illustrate the rhetorical patterns described above. The full audit trail of all 99 flagged posts — every Emmer flag, every Omar flag, every Stauber flag, the four Fischbach flags, the two Finstad flags — is published <span style="color: var(--gold-deep); font-weight: 600;">at the MN audit trail page (publishing alongside this article)</span>, with direct links to every original post on X, complete classifier reasoning, and engagement data. Each receipt below shows the post date, category, post text, engagement, and a direct link to the original.</p>
+
+<div class="receipt">
+  <div class="receipt-header">
+    <div class="receipt-member">Rep. Tom Emmer<span class="receipt-cat">Cat 2 · Dehumanizing</span></div>
+    <div class="receipt-meta">February 25, 2026 · House Whip · MN-06</div>
+  </div>
+  <div class="receipt-text">"The war on fraud has begun. And Somali fraudsters in my home state are about to find out."</div>
+  <div class="receipt-engagement">
+    <span><strong>4,935</strong> likes</span>
+    <span><strong>732</strong> reposts</span>
+  </div>
+  <div class="receipt-link">
+    <a href="https://x.com/GOPMajorityWhip/status/2026777419806310879" target="_blank">View original on X →</a>
+  </div>
+</div>
+
+<p style="font-size: 14px; color: var(--gray-500); font-style: italic; margin-top: 0;">Most-engaged single flagged post in Emmer's 12-month window. Representative of the 26-instance "Somali fraudsters" pattern that constitutes 43% of his Cat 2 flags.</p>
+
+<div class="receipt">
+  <div class="receipt-header">
+    <div class="receipt-member">Rep. Ilhan Omar<span class="receipt-cat d">Cat 6 · Totalitarian-regime label</span></div>
+    <div class="receipt-meta">July 22, 2025 · House · MN-05</div>
+  </div>
+  <div class="receipt-text">"The pedophile protection party is shutting down Congress just to avoid voting on the release of the Epstein files."</div>
+  <div class="receipt-engagement">
+    <span><strong>57,028</strong> likes</span>
+    <span><strong>8,217</strong> reposts</span>
+  </div>
+  <div class="receipt-link">
+    <a href="https://x.com/IlhanMN/status/1947767855396577522" target="_blank">View original on X →</a>
+  </div>
+</div>
+
+<p style="font-size: 14px; color: var(--gray-500); font-style: italic; margin-top: 0;">Most-engaged single flagged post across the entire MN delegation. Surfaces the symmetric application of EC-07 — criminal-identity nouns applied to political-affiliation classes are flagged the same way as criminal-identity nouns applied to ethnic classes.</p>
+
+<p>The complete set of 99 flagged posts from the Minnesota delegation — every Emmer flag, every Omar flag, the ten Stauber flags, the four Fischbach flags, the two Finstad flags — is published with direct X URLs at the <span style="color: var(--gold-deep); font-weight: 600;">MN audit trail page (publishing alongside this article)</span>. The two receipts above are illustrative of the dominant rhetorical patterns; readers who want to see the full picture should consult the audit trail directly.</p>
+
+<div class="section-mark">Part V · Five members at zero</div>
+
+<h2>What 5,834 zero-flag posts looked like</h2>
+
+<p>Half of Minnesota's congressional delegation produced zero flagged posts over the 12-month window. That fact alone — five of ten members at zero — is worth examining, because it could mean two very different things. It could mean the five zero-flag members posted little. It could mean they posted substantively in a different rhetorical register than the methodology flags. The first reading would make the zero-flag finding statistically thin. The second would make it a real finding about how these members communicate.</p>
+
+<p>Across the five members, the zero-flag classified post count is 5,834. That includes Senator Klobuchar's 2,926, Senator Smith's 791, Rep. McCollum's 778, Rep. Craig's 1,121, and Rep. Morrison's 218. Coverage of those 5,834 posts was 100 percent — every single post was processed by the same Haiku classifier with the same EC-07-updated prompt that flagged Emmer's seventy-one. The classifier returned zero hits across all five members for any of the six rhetorical categories.</p>
+
+<p>To check whether those zeros reflected substance or silence, this analysis pulled a stratified ten-post random sample from each member's classified-OUT corpus and read what was actually there. The samples were stratified across the year so that no single month dominates the characterization. Sample posts and methodology are reproducible from seed 20260427.</p>
+
+<p>What the samples showed:</p>
+
+<div class="member-profile zero">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Sen. Amy Klobuchar<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">Senate · MN · 2,926 posts in window · 0 flags</div>
+  </div>
+  <p>Klobuchar's 10-post sample ranged across constituent meetings (a Two Harbors mayor on tourism), bipartisan agricultural legislation co-authored with Smith (Thye-Blatnik federal payments for MN Boundary Waters communities), community recognition (50th anniversary of Hmong American contributions to Minnesota), a Mother's Day post, a Vikings dog photo, an accountability post about PBS/NPR funding cuts, a Ukraine/children's rights condemnation, and one ICE enforcement response: "Get ICE out of Minnesota." The register is constituent-service and community celebration mixed with institutional policy criticism. Even the sharpest sample post (ICE) frames the issue as accountability directed at named officials, not a class-based assertion. Confidence interval on her capped rate, given 2,926 posts: 95% CI [0.00, 0.13].</p>
+</div>
+
+<div class="member-profile zero">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Sen. Tina Smith<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">Senate · MN · 791 posts in window · 0 flags</div>
+  </div>
+  <p>Smith's 10-post sample is notable for its brevity and punch: a high proportion of very short posts — "Math is hard... but Google is free," "We just want health care for our own citizens," "Leave our breweries alone" — that generated her highest engagement (809–1,587 likes per post). Substantive posts covered tariff impacts on a named MN small business owner, DOJ weaponization criticism, and ICE protest solidarity. One Epstein-files quip with an image generated 1,375 likes. The rhetorical register is sardonic institutional criticism — sharp in tone but directed at institutions and policies, not at human classes. Confidence interval on her capped rate: 95% CI [0.00, 0.48].</p>
+</div>
+
+<div class="member-profile zero">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Rep. Betty McCollum<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">House · MN-04 · 778 posts in window · 0 flags</div>
+  </div>
+  <p>McCollum's 10-post sample showed the strongest substantive policy focus of any zero-flag member: international human rights (condemnation of West Bank settler attacks on Kafr Marlik, "blatantly illegal under both international and Israeli law"), civil liberties (response to the Mohsen Mahdawi unlawful detention case), LGBTQ+ recognition, a memorial for Simone Senogles and missing/murdered Indigenous women, a DHS appropriations NO vote statement, and a Trump-Iran contradictions thread. One sample post directly named Trump's "death threats against Democratic Members of Congress" as "dangerous and wrong" — the closest any zero-flag sample post came to rhetoric territory, but clearly counter-speech (McCollum condemning threats directed at others), not rhetoric by any taxonomy category. The methodology's distinction between counter-speech and originated rhetoric is operative here. Confidence interval: 95% CI [0.00, 0.49].</p>
+</div>
+
+<div class="member-profile zero">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Rep. Angie Craig<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">House · MN-02 · 1,121 posts in window · 0 flags</div>
+  </div>
+  <p>Craig's 10-post sample showed a strong constituent-service orientation: a town hall at Lakeville South High School's theater, a surprise appearance at the students' play afterward, a bilateral agricultural meeting with Mexico's Secretary of Agriculture, Farm Aid festival coverage including introducing Wynonna Judd, a pharmaceutical manufacturing bill reintroduction, and constituent casework updates about IRS refunds and VA benefits. Policy posts sharpened toward the end of the window — "Don't mess with Minnesotans. Kristi Noem is next. We need full accountability" — but the framing stays in legal accountability territory, consistent with the taxonomy's "will face accountability" OUT examples. Confidence interval: 95% CI [0.00, 0.34].</p>
+</div>
+
+<div class="member-profile zero">
+  <div class="member-profile-header">
+    <div class="member-profile-name">Rep. Kelly Morrison<span class="party-tag d">D</span></div>
+    <div class="member-profile-meta">House · MN-03 · 218 posts in window · 0 flags · Freshman year</div>
+  </div>
+  <p>Morrison is in her first term, sworn in January 2025. Her active posting period in the dataset concentrates after January 2026; the stratified sample drew entirely from January–April 2026, consistent with her freshman-year ramp-up and likely the result of the Minneapolis ICE enforcement events of that period drawing her into more public posting. Her 218 classified posts are real but compressed into roughly four months of effective activity rather than spread evenly across the 12-month window.</p>
+  <p>Seven of ten sample posts directly addressed federal immigration enforcement: the death of Alex Pretti (U.S. citizen and ICU nurse shot by federal agents on January 25), Renee Good's death after ICE blocked medical care, ICE constitutional violations, and a DHS congressional oversight court ruling. The register is constituent-emergency advocacy — intense in urgency but consistently framed around constitutional rights, legal authority, and institutional accountability rather than adversarial class identity. The three non-ICE sample posts were a precinct caucus notice, a NASA Artemis image, and a Trump veterans housing cut. Morrison's effective sample is narrower than the other zero-flag members; the zero-flag finding holds for her full window but reflects fewer months of active posting. Confidence interval, given partial-window denominator: 95% CI [0.00, 1.73].</p>
+</div>
+
+<p>The five samples taken together give a defensible characterization: these members posted in volume, posted substantively, and posted in registers that the methodology distinguishes from eliminationist or delegitimizing rhetoric. Counter-speech is not rhetoric. Institutional criticism is not class-based assertion. Legal-accountability framing is not eliminationist framing. The methodology is built to make those distinctions, and the zero-flag samples show what it looks like when those distinctions are honored across an active year of posting.</p>
+
+<p>Note on the samples: these characterizations describe the ten-post sample drawn for each member, not the full corpus of their posts. The classification finding (zero flags) covers the full corpus and is verified at 100 percent coverage. The qualitative characterization is a narrower lens — readers who want to examine the full content can review each member's published X timeline directly.</p>
+
+<div class="section-mark">Part VI · What this measures, what it doesn't</div>
+
+<h2>Five things to know before drawing conclusions</h2>
+
+<div class="scope">
+  <div class="scope-eyebrow">Scope and limitations</div>
+
+  <div class="scope-item">
+    <div class="scope-key">Origination, not amplification</div>
+    <div class="scope-val">This measures rhetoric originated by members on their own X accounts. It does not measure how that content travels through media ecosystems, gets amplified by allied accounts, or shapes downstream discourse. Emmer's Somali-fraud posts may travel further than the raw engagement on his account suggests; Omar's may travel less than her higher per-post engagement implies. Origination is one piece of accountability journalism. Amplification is another.</div>
+  </div>
+
+  <div class="scope-item">
+    <div class="scope-key">One platform</div>
+    <div class="scope-val">X only. This analysis does not cover Bluesky, Threads, Truth Social, Instagram, TikTok, podcast appearances, floor speeches, or interviews. Members post differently across platforms; this analysis captures what they say where this analysis looks.</div>
+  </div>
+
+  <div class="scope-item">
+    <div class="scope-key">Originals, not reposts</div>
+    <div class="scope-val">Reposts of others' content are excluded. The analysis measures what a member chooses to write under their own authorship. Quote-retweets that include original commentary are included; pure reposts without added text are not. Kelly Morrison's repost-exclusion rate (39 percent of her total post volume) is the highest among the delegation, reflecting a heavy news-sharing posting style. Even at her higher exclusion rate, her zero-flag finding holds for her original-content corpus.</div>
+  </div>
+
+  <div class="scope-item">
+    <div class="scope-key">A specific window</div>
+    <div class="scope-val">April 26, 2025 through April 26, 2026. Members' rhetoric outside this window is not in scope. The window was chosen to align with the national congressional rhetoric audit's data architecture and to give state-level delegation analysis enough time for rare-event patterns to surface with statistical confidence. Rep. Morrison's first term began in January 2025; her window covers most but not all of her tenure.</div>
+  </div>
+
+  <div class="scope-item">
+    <div class="scope-key">A pre-published rule set</div>
+    <div class="scope-val">The taxonomy was set before this analysis ran. The classifier was party-blind. The counting rules were defined in advance. The edge-case rulings — including EC-07, added on April 27, 2026 in response to user-surfaced classifier inconsistency — are documented at the methodology page with their reasoning. The rules apply symmetrically: the same criteria that flagged Emmer's "Somali fraudsters" pattern flagged Omar's "pedophile protection party" pattern. The same series-frame ruling that flagged Fischbach's Crime Chronicle would flag a Democratic member running a structurally equivalent series. Readers who disagree with any specific rule can examine the rule, the reasoning, and any individual classification through the published audit trail.</div>
+  </div>
+</div>
+
+<div class="section-mark">Part VII · For Minnesota voters</div>
+
+<h2>The receipts are the story</h2>
+
+<p>Minnesota voters elected ten members to represent them in Washington. Two senators, eight members of the House, eight congressional districts, two parties. Across the past twelve months those ten members posted to X 10,554 original times, on a public platform, under their own names. This is what those posts looked like when the same methodology used to audit all 535 members of Congress was applied symmetrically across the delegation.</p>
+
+<p>One member produced 71 flagged posts, dominated by a sustained pattern characterizing Somali Minnesotans as a criminal class. Four other members produced flagged content at meaningfully lower volumes, with patterns that vary by member: institutional class targeting in one case, immigration-status class targeting in others, a series-frame pattern in another. Five members produced no flagged content over a year, in registers that ranged from constituent service to bipartisan policy advocacy to institutional criticism to constituent-emergency advocacy.</p>
+
+<p>This piece does not argue for any particular electoral conclusion. It documents what each member of Minnesota's congressional delegation posted under their own name on X across twelve months, against a published methodology applied symmetrically. The receipts are linked. The methodology is public. The classifier prompt is reproduced in full. The counting rules are defined in advance. The edge case rulings are documented with reasoning that applies the same way regardless of who triggered the ruling.</p>
+
+<p>What conclusion any reader draws from those facts is up to that reader. The point of accountability journalism is to put the receipts where readers can find them. The receipts, in this case, are 99 flagged posts across five members, 5,834 zero-flag posts across five other members, the methodology that distinguished them, and the audit trail that links every flagged post back to the original on X.</p>
+
+<p>The full methodology, including the classifier prompt, the counting rules, the validation procedures, and the edge case rulings, is published <a href="/articles/whcd-2026/methodology/">at the methodology page</a>. The complete audit trail of all 99 flagged posts from the Minnesota delegation, with direct X URLs and engagement data, is <span style="color: var(--gold-deep); font-weight: 600;">at the MN audit trail page (publishing alongside this article)</span>. The party-blind classifier prompt is the same prompt used in the national audit; the counting rules are the same; the validation gates were passed at the same thresholds. The methodology travels.</p>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">MN-06 Watch</div>
+    <div class="footer-tag">Daily accountability journalism for Minnesota's 6th District</div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles/whcd-2026/methodology/">Methodology</a>
+      <span style="color: rgba(255,255,255,0.45); cursor: default;">MN Audit Trail (forthcoming)</span>
+      <a href="/articles/whcd-2026/">National Audit</a>
+      <a href="https://mn06watch.substack.com/subscribe">Subscribe</a>
+    </div>
+    <div class="footer-fineprint">
+      MN-06 Watch is an independent accountability journalism publication. Published by Chad Maschke. The methodology used in this piece is identical to the methodology used in the national congressional rhetoric audit published April 28, 2026. Edge case ruling EC-07 was added to the taxonomy on April 27, 2026 following user-surfaced classifier inconsistency review; the same ruling applies symmetrically to all members across all parties. All flagged posts link to the original public posts on X.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
