@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standards — MN-06 Watch</title>
+<meta name="description" content="How MN-06 Watch makes its work: AI use, sourcing, corrections, and independence.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Standards — MN-06 Watch">
+<meta property="og:description" content="How MN-06 Watch makes its work: AI use, sourcing, corrections, and independence.">
+<meta property="og:url" content="https://mn06watch.com/standards/">
+<meta property="og:site_name" content="MN-06 Watch">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Standards — MN-06 Watch">
+<meta name="twitter:description" content="How MN-06 Watch makes its work: AI use, sourcing, corrections, and independence.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a365d;
+    --navy-deep: #0f2547;
+    --gold: #d69e2e;
+    --gold-deep: #A87818;
+    --gold-soft: #f6e2b3;
+    --bg: #FAF8F5;
+    --white: #FFFFFF;
+    --text: #1a202c;
+    --text-soft: #4a5568;
+    --line: #E0DCD7;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  .site-nav {
+    background: var(--navy);
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .site-nav .brand { display: flex; flex-direction: column; }
+  .logo {
+    font-family: var(--display);
+    font-size: 1.3rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .tagline {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    margin-left: 20px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .hero {
+    background: var(--navy);
+    padding: 56px 24px 64px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    color: var(--white);
+    line-height: 1.1;
+    font-weight: 800;
+  }
+  .hero p {
+    font-family: var(--serif);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.75);
+    max-width: 620px;
+    margin: 18px auto 0;
+    line-height: 1.55;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  .content h2 {
+    font-family: var(--display);
+    font-size: clamp(1.4rem, 2.6vw, 1.7rem);
+    color: var(--navy);
+    margin: 48px 0 14px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .content h2:first-of-type { margin-top: 0; }
+
+  .content p {
+    font-size: 1.06rem;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.65;
+  }
+
+  .content a {
+    color: var(--navy);
+    text-decoration: underline;
+    text-decoration-color: var(--gold);
+    text-underline-offset: 3px;
+  }
+  .content a:hover { text-decoration-color: var(--navy); }
+
+  .lede-rule {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0 0 32px;
+  }
+
+  footer {
+    background: var(--navy-deep);
+    color: rgba(255,255,255,0.55);
+    padding: 32px 24px;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    border-top: 4px solid var(--gold);
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--gold-soft); }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero { padding: 36px 20px 44px; }
+    .content { padding: 40px 20px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">
+    <a href="https://mn06watch.com" class="logo">MN-06 Watch</a>
+    <div class="tagline">RECEIPTS, NOT RAGE.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-eyebrow">Editorial Standards</div>
+  <h1>Standards</h1>
+  <p>How this work gets made.</p>
+</div>
+
+<div class="content">
+
+<p>MN-06 Watch is an independent accountability publication, written by one constituent of Minnesota's 6th Congressional District. The standards below describe how I make this work.</p>
+
+<span class="lede-rule"></span>
+
+<h2>AI use</h2>
+
+<p>I use AI as a production partner. It drafts prose from my framing, helps me format and structure data, and assists in producing graphics. I direct the work, rewrite portions when something isn't right, push back when a draft misses the point, and verify what gets published. I am responsible for everything that appears under my name.</p>
+
+<p>Some pieces — the rhetoric audits in particular — also use AI as an analytical instrument. In that work, the AI is the measurement device. The taxonomy, counting rules, edge case rulings, and validation procedures are mine, set before the count runs. Every flagged post is published with a direct link to the original. Disagreements with any specific classification can be examined against the published rule.</p>
+
+<p>Pieces that use AI as part of their production carry a methods note at the top describing the workflow specific to that piece.</p>
+
+<h2>Sourcing and corrections</h2>
+
+<p>Direct quotes from members of Congress are sourced to specific posts, transcripts, or video, with timestamps and links wherever available. Factual errors are corrected promptly and noted with the date of correction. Send corrections to <a href="mailto:mn06watch@gmail.com">mn06watch@gmail.com</a>.</p>
+
+<h2>Independence</h2>
+
+<p>MN-06 Watch is published by Chad Maschke, a constituent of Minnesota's 6th Congressional District. The publication accepts no funding from candidates, parties, PACs, or campaigns. Reader subscriptions on Substack are the publication's revenue. Editorial decisions are not subject to outside review.</p>
+
+<h2>Methodology</h2>
+
+<p>The full methodology used in the rhetoric audits is published at the <a href="/articles/whcd-2026/methodology/">methodology page</a> and applies symmetrically across all members regardless of party.</p>
+
+</div>
+
+<footer>
+  <a href="https://mn06watch.com">MN-06 Watch</a> &middot; Independent accountability journalism &middot; <a href="mailto:mn06watch@gmail.com">mn06watch@gmail.com</a>
+</footer>
+
+</body>
+</html>

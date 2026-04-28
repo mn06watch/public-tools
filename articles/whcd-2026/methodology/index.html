@@ -561,6 +561,8 @@ code {
 <div class="article-wrap">
 <article class="article">
 
+<p style="background: rgba(200,146,42,0.08); border-left: 3px solid var(--gold-deep, #A87818); padding: 18px 22px; margin: 0 0 32px; font-size: 0.95em;"><strong style="font-family: var(--sans, sans-serif); font-size: 0.9em; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gold-deep, #A87818); display: block; margin-bottom: 6px;">On AI in this methodology</strong>The classifier is AI-based, run via API with a prompt set by me and reproduced in full below. Validation against blind human review was conducted before publication; gate results are documented in this page. The methodology, taxonomy, counting rules, and edge case rulings were set by me. Disagreements with any specific classification can be raised against the published rule rather than the model output. Full standards: <a href="/standards/" style="color: var(--navy, #1a365d); font-weight: 600;">/standards/</a>.</p>
+
 <!-- SECTION 1 -->
 <h2 id="s1"><span class="sec-num">Section 01</span>Platform scope — X only</h2>
 
@@ -713,7 +715,7 @@ code {
   <div class="cat-def-num">Category 06</div>
   <h4>Totalitarian-regime political labels as identity designations</h4>
   <p>Language that applies the identity label of a totalitarian movement — fascist, Nazi, communist, Marxist, commie — to a class of political opponents or named elected officials, as an assertion of political identity rather than a historical reference or ideological description.</p>
-  <h4>Classification rules — used verbatim in Haiku prompt</h4>
+  <h4>Classification rules — used verbatim in classifier prompt</h4>
   <p style="font-size:14px !important; color:var(--gray-700) !important;"><strong>IN — applied as an identity label to a class of political opposition or named elected official:</strong></p>
   <div class="cat-def-examples">
     <div class="cat-def-row"><div class="lbl in">In</div><div class="ex">"Democrats are fascists" / "the COMMIE-crats in Washington" / "hold every fascist in this Administration accountable" / "Trump is a fascist" / "the Marxist Left wants to destroy America" / "AOC is a Marxist"</div></div>
@@ -725,7 +727,7 @@ code {
 
 <div class="callout">
   <div class="callout-label">Symmetric application — non-negotiable</div>
-  <p>A Democratic member calling Republican colleagues or officials "fascists" is the same classification action as a Republican member calling Democratic colleagues or officials "communists." The Haiku classifier prompt is party-blind. Category 6 results are reported directionally (D-applied-to-R / R-applied-to-D) as a secondary breakdown, but the primary rate metric is calculated identically for both.</p>
+  <p>A Democratic member calling Republican colleagues or officials "fascists" is the same classification action as a Republican member calling Democratic colleagues or officials "communists." The classifier prompt is party-blind. Category 6 results are reported directionally (D-applied-to-R / R-applied-to-D) as a secondary breakdown, but the primary rate metric is calculated identically for both.</p>
 </div>
 
 <h3>Out — all categories: explicitly excluded</h3>
@@ -767,24 +769,24 @@ code {
 
 <p>Posts published on or within 3 days of a recognized commemoration day (Holocaust Remembrance Day, MLK Day, Veterans Day, 9/11 anniversary, Kristallnacht anniversary, etc.) that reference historical atrocities, regimes, or movements <strong>for the purpose of remembrance, education, or historical fact</strong> — and not to label current political actors as members of those regimes or movements — are out of scope.</p>
 
-<p>This rule applies symmetrically. It is intended to prevent commemorative speech from being flagged as the rhetoric it explicitly opposes. The rule is included verbatim in the Haiku production prompt.</p>
+<p>This rule applies symmetrically. It is intended to prevent commemorative speech from being flagged as the rhetoric it explicitly opposes. The rule is included verbatim in the production prompt.</p>
 
 <!-- SECTION 7 -->
 <h2 id="s7"><span class="sec-num">Section 07</span>Classifier architecture and full prompt</h2>
 
 <h4>Production classifier</h4>
 
-<p>No existing classifier in the TheWatchdogs system was built for this taxonomy. Workstream 5 ran a new Claude Haiku classification pass against all 122,106 original X posts in the window.</p>
+<p>No existing classifier in the TheWatchdogs system was built for this taxonomy. Workstream 5 ran a new AI classification pass against all 122,106 original X posts in the window.</p>
 
-<p><strong>Approach:</strong> Anthropic Messages Batch API. Posts submitted in batches of 10,000. Results stored in <code>rhetoric_classifications</code> PostgreSQL table.</p>
+<p><strong>Approach:</strong> LLM batch API. Posts submitted in batches of 10,000. Results stored in <code>rhetoric_classifications</code> PostgreSQL table.</p>
 
-<p><strong>Party-blind classification — non-negotiable commitment:</strong> The Haiku prompt receives post text and post date only. No member name, no party, no chamber, no bioguide_id. The classifier cannot infer party from any field it receives. This is enforced in the script.</p>
+<p><strong>Party-blind classification — non-negotiable commitment:</strong> The classifier prompt receives post text and post date only. No member name, no party, no chamber, no bioguide_id. The classifier cannot infer party from any field it receives. This is enforced in the script.</p>
 
 <p><strong>Conservative bias on close calls — non-negotiable commitment:</strong> The prompt instructs the classifier to default OUT when ambiguous. Only classify IN when clear. This is in the prompt verbatim.</p>
 
-<p><strong>Second validation gate — required before publication:</strong> After the full classification run, 50 Haiku-classified hits were pulled (stratified across categories proportionally to hit volume) for a second blind review at the same 86% accuracy threshold. Result: 49/50 = 98%. PASS.</p>
+<p><strong>Second validation gate — required before publication:</strong> After the full classification run, 50 classified hits were pulled (stratified across categories proportionally to hit volume) for a second blind review at the same 86% accuracy threshold. Result: 49/50 = 98%. PASS.</p>
 
-<h4>Production Haiku prompt — exact, verbatim, for audit and reproduction</h4>
+<h4>Production prompt — exact, verbatim, for audit and reproduction</h4>
 
 <pre class="prompt">Classify this congressional tweet for eliminationist and delegitimizing rhetoric.
 
@@ -843,7 +845,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <h4>Output schema</h4>
 
-<p>Classification results are stored in a PostgreSQL table linked to the source posts table by post ID. Each classification record includes the category (1–6 if IN, NULL if OUT), the IN/OUT boolean, the classifier's confidence level, the one-sentence reasoning, the Anthropic batch ID for audit, and a timestamp. The classification is one-to-one with the post.</p>
+<p>Classification results are stored in a PostgreSQL table linked to the source posts table by post ID. Each classification record includes the category (1–6 if IN, NULL if OUT), the IN/OUT boolean, the classifier's confidence level, the one-sentence reasoning, the batch ID for audit, and a timestamp. The classification is one-to-one with the post.</p>
 
 <!-- SECTION 8 -->
 <h2 id="s8"><span class="sec-num">Section 08</span>How we count repeated rhetoric</h2>
@@ -901,7 +903,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 <!-- SECTION 10 -->
 <h2 id="s10"><span class="sec-num">Section 10</span>Validation results — pre-run blind review</h2>
 
-<p>Before running the full 122,106-post classification, a 50-item blind review was conducted to validate the taxonomy's accuracy when applied by a human reviewer using the same IN/OUT criteria that would be given to the Haiku classifier.</p>
+<p>Before running the full 122,106-post classification, a 50-item blind review was conducted to validate the taxonomy's accuracy when applied by a human reviewer using the same IN/OUT criteria that would be given to the classifier.</p>
 
 <h3>Results</h3>
 
@@ -950,7 +952,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <h3>Second validation gate — pre-publication requirement</h3>
 
-<p>After the Haiku classifier ran the full 122,106-post corpus, a second 50-item blind review was conducted against Haiku's actual output — stratified proportionally across the 6 categories. The same 86% in-scope gate applied.</p>
+<p>After the classifier ran the full 122,106-post corpus, a second 50-item blind review was conducted against the classifier's actual output — stratified proportionally across the 6 categories. The same 86% in-scope gate applied.</p>
 
 <div class="callout">
   <div class="callout-label">Second gate result</div>
@@ -964,11 +966,11 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
   <li><strong>Platform asymmetry:</strong> X-only scope was chosen to avoid Bluesky's 50:1 D-skew and Truth Social's inverse R-skew, both of which are partisan echo chambers with minimal cross-party reach. On X, Republicans post more than Democrats in this window. Disclosed in every output table.</li>
   <li><strong>Threshold asymmetry:</strong> The 100-post minimum removes more Republicans than Democrats (R P25 = 86 vs. D P25 = 142). The rule is symmetric; the impact is structural.</li>
   <li><strong>Scope change:</strong> Taxonomy expanded from violent rhetoric to eliminationist and delegitimizing rhetoric on April 26, 2026, in response to active public discourse. Decision made before aggregate counts were produced.</li>
-  <li><strong>Category 6 direction imbalance:</strong> Pre-classifier keyword counts: ~50 D→R fascist/Nazi label posts; ~156 R→D commie/Marxist label posts. These are rough keyword counts; final Haiku-classified totals may differ. The analysis does not pre-adjust for this imbalance.</li>
+  <li><strong>Category 6 direction imbalance:</strong> Pre-classifier keyword counts: ~50 D→R fascist/Nazi label posts; ~156 R→D commie/Marxist label posts. These are rough keyword counts; final classifier totals may differ. The analysis does not pre-adjust for this imbalance.</li>
   <li><strong>Dual validation disclosure:</strong> Raw blind pool accuracy 72% (36/50); in-scope accuracy 88% (36/41). Both rates disclosed.</li>
-  <li><strong>Party-blind classification:</strong> Haiku classifier receives post text and date only. No member name, party, or chamber. Enforced at the script level.</li>
+  <li><strong>Party-blind classification:</strong> Classifier receives post text and date only. No member name, party, or chamber. Enforced at the script level.</li>
   <li><strong>Conservative bias:</strong> Classifier defaults OUT on ambiguous cases. This biases toward undercounting, not overcounting.</li>
-  <li><strong>Classifier limitations:</strong> Custom Claude Haiku classifier validated by two blind reviews (pre-run and post-run). False positives and false negatives are possible; second validation gate is the pre-publication floor.</li>
+  <li><strong>Classifier limitations:</strong> Custom AI classifier validated by two blind reviews (pre-run and post-run). False positives and false negatives are possible; second validation gate is the pre-publication floor.</li>
   <li><strong>Counting rule:</strong> Hybrid category-aware (Rule A for Cats 1, 3, 4; Rule C cap-3 for Cats 2, 5, 6). Same-text deduplication across all categories.</li>
   <li><strong>Audit trail:</strong> Every flagged post in the top-10 member ranking links to the original post on X. Available at the audit trail page.</li>
   <li><strong>Origination, not reach:</strong> This analysis measures rhetoric originated by members on their own accounts. It does not measure how that content travels through media ecosystems. Networked-propaganda research has documented that the right and left media ecosystems are structured asymmetrically with different amplification dynamics; the per-100-posts rate does not capture that.</li>
@@ -1003,7 +1005,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <h3>Per-category directional findings (initial classifier run)</h3>
 
-<p style="font-size: 14px; color: var(--gray-500); font-style: italic; margin-bottom: 16px;">These are the directional findings from the initial Haiku classifier run. A subsequent post-validation review identified a classifier inconsistency that prompted Task 4 (below). The post-EC-07 numbers and revised directional findings appear in Task 4.</p>
+<p style="font-size: 14px; color: var(--gray-500); font-style: italic; margin-bottom: 16px;">These are the directional findings from the initial classifier run. A subsequent post-validation review identified a classifier inconsistency that prompted Task 4 (below). The post-EC-07 numbers and revised directional findings appear in Task 4.</p>
 
 <div class="tbl-wrap">
 <table class="data">
@@ -1025,7 +1027,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <h3 id="task4">Task 4 — EC-07 discovery, methodology refinement, and corpus reclassification (added 2026-04-27, post-validation)</h3>
 
-<p>During Minnesota delegation review on April 27, 2026, an editorial check on Tom Emmer's posting pattern surfaced a classifier inconsistency. Emmer had posted the phrase "Somali fraudsters" — applying a criminal-identity noun as an attribute of an ethnic class — multiple times in the analysis window. The Haiku classifier had defaulted these posts OUT, on the reasoning that documented criminal cases existed. Structurally identical posts in the corpus had been flagged IN under Cat 2: Randy Fine's "Muslim barbarians," Andrew Ogles's "RAPISTS and GANG MEMBERS" applied to immigrants. The classifier was applying the Cat 2 rule inconsistently to the same rhetorical pattern.</p>
+<p>During Minnesota delegation review on April 27, 2026, an editorial check on Tom Emmer's posting pattern surfaced a classifier inconsistency. Emmer had posted the phrase "Somali fraudsters" — applying a criminal-identity noun as an attribute of an ethnic class — multiple times in the analysis window. The classifier had defaulted these posts OUT, on the reasoning that documented criminal cases existed. Structurally identical posts in the corpus had been flagged IN under Cat 2: Randy Fine's "Muslim barbarians," Andrew Ogles's "RAPISTS and GANG MEMBERS" applied to immigrants. The classifier was applying the Cat 2 rule inconsistently to the same rhetorical pattern.</p>
 
 <p>The taxonomy did not have a "documented criminal cases" exception for Cat 2. The pattern — applying a criminal/subhuman identity noun as an attribute of an ethnic, national, religious, immigration-status, or political-affiliation class — meets the existing Cat 2 definition (dehumanizing language applied to a class). The classifier's inconsistency was an application error, not a rule mismatch.</p>
 
@@ -1035,11 +1037,11 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <p>EC-07 (in Section 6 above) was added to make the Cat 2 rule explicit for class-identity criminal noun patterns. The ruling covers ethnic, national, religious, immigration-status, AND political-affiliation classes, plus institutional classes (e.g., "ICE thugs," "ICE goons"). The principle: dehumanization of human beings as a class is Cat 2 regardless of which class. Symmetric application across parties is non-negotiable.</p>
 
-<p>The Haiku production prompt (Section 7) was updated to reflect EC-07 verbatim, including the series-frame clarification described below.</p>
+<p>The production prompt (Section 7) was updated to reflect EC-07 verbatim, including the series-frame clarification described below.</p>
 
 <h4>Targeted reclassification batch</h4>
 
-<p>A keyword sweep identified 1,265 candidate posts in the 122,106-post corpus matching the EC-07 pattern signature (class-identity term paired with criminal-identity noun). 26 candidates were already classified IN under the original taxonomy and required no action. The remaining 1,239 OUT candidates were submitted to a Claude Haiku batch reclassification using the updated prompt.</p>
+<p>A keyword sweep identified 1,265 candidate posts in the 122,106-post corpus matching the EC-07 pattern signature (class-identity term paired with criminal-identity noun). 26 candidates were already classified IN under the original taxonomy and required no action. The remaining 1,239 OUT candidates were submitted to a batch reclassification using the updated prompt.</p>
 
 <div class="tbl-wrap">
 <table class="data">
@@ -1062,7 +1064,7 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 
 <p>Validation review surfaced a pattern the original EC-07 wording did not anticipate: posts in which a member uses named individuals as exemplars of a curated class-identity claim. Specifically, a member running a "Crime Chronicle" series naming specific criminal defendants under a unifying frame ("Worst-of-the-Worst career criminals and illegal aliens") is constructing a class through serial naming. The named individuals are the vehicles; the class characterization is the message.</p>
 
-<p>This pattern was ruled IN under EC-07. The reasoning: the series itself constructs the class. The OUT clause for "specific named individuals" was designed to exclude posts reporting on a single bad actor's case without class-identity framing — not to exempt class-identity claims merely because they cite named exemplars. The same ruling would apply symmetrically to any side using a series-frame to construct class identity (e.g., a Democratic member running a series naming individual ICE agents as "Worst-of-the-Worst federal thugs"). The clarifying language has been added to the EC-07 ruling and to the Haiku prompt.</p>
+<p>This pattern was ruled IN under EC-07. The reasoning: the series itself constructs the class. The OUT clause for "specific named individuals" was designed to exclude posts reporting on a single bad actor's case without class-identity framing — not to exempt class-identity claims merely because they cite named exemplars. The same ruling would apply symmetrically to any side using a series-frame to construct class identity (e.g., a Democratic member running a series naming individual ICE agents as "Worst-of-the-Worst federal thugs"). The clarifying language has been added to the EC-07 ruling and to the classifier prompt.</p>
 
 <h4>Validation gate — post-EC-07 reclassification</h4>
 
