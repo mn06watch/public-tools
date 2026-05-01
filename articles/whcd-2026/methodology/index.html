@@ -584,7 +584,7 @@ code {
 
 <div class="callout">
   <div class="callout-label">Scope statement for publication</div>
-  <p>"This analysis covers original X posts (no reposts) from all current voting members of Congress — 535 members — during the 90-day period from January 26 to April 26, 2026."</p>
+  <p>"This analysis covers X posts authored by current voting members of Congress — 535 members — during the 90-day period from January 26 to April 26, 2026. The corpus includes original posts and quote-posts (where a member shared another account's content with their own added commentary). It excludes direct retweets, where a member amplified another account's content without adding their own words."</p>
 </div>
 
 <!-- SECTION 2 -->
@@ -611,7 +611,7 @@ code {
 <!-- SECTION 4 -->
 <h2 id="s4"><span class="sec-num">Section 04</span>Minimum post threshold</h2>
 
-<p><strong>Members with fewer than 100 original X posts in the 90-day window are excluded from rate-based headline rankings.</strong> Members with 50–99 posts are reported separately with rates and CIs displayed but labeled as smaller-sample with caution disclaimers.</p>
+<p><strong>Members with fewer than 100 X posts (originals plus quote-posts) in the 90-day window are excluded from rate-based headline rankings.</strong> Members with 50–99 posts are reported separately with rates and CIs displayed but labeled as smaller-sample with caution disclaimers.</p>
 
 <h4>Rationale</h4>
 
@@ -1149,6 +1149,11 @@ If multiple categories apply, return the lowest-numbered applicable category.</p
 </div>
 
 <p><strong>Reproduction:</strong> Pass 2 sample is reproducible. Seed=20260427. Query: <code>SELECT * FROM rhetoric_classifications WHERE bioguide_id IN ('O000175','F000484') AND is_in=TRUE ORDER BY RANDOM();</code> with seed set before query.</p>
+
+<!-- CORRECTIONS -->
+<h2 id="corrections"><span class="sec-num">Corrections</span>Updates to this methodology</h2>
+
+<p><strong>April 30, 2026.</strong> The corpus definition in Section 01 was clarified. The published version originally read "original X posts (no reposts)." That language was imprecise: the corpus includes both original posts and quote-posts (where a member shared another account's content with their own added commentary). Both contain member-authored words and were processed identically by the classifier. Direct retweets — where a member amplified another account's content without adding their own words — were excluded from the corpus. The rule was applied identically to all members regardless of party. The published rates and rankings are unchanged.</p>
 
 </article>
 </div>
