@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MN Delegation Audit Trail — MN-06 Watch</title>
+<meta name="description" content="Complete audit trail of all 99 flagged posts in the 12-month Minnesota delegation rhetoric audit. Every post links to the original on X with classifier reasoning and engagement data. April 26, 2025 – April 26, 2026.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MN Delegation Audit Trail">
+<meta property="og:description" content="All 99 flagged posts from the 12-month Minnesota delegation rhetoric audit. Direct X URLs, classifier reasoning, engagement data. 5 members flagged of 10 audited.">
+<meta property="og:url" content="https://mn06watch.com/audit-trail/">
+<meta property="og:image" content="https://mn06watch.com/articles/mn-delegation-rhetoric/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="MN-06 Watch">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MN Delegation Audit Trail">
+<meta name="twitter:description" content="All 99 flagged posts from the 12-month Minnesota delegation rhetoric audit. Direct X URLs, classifier reasoning, engagement data.">
+<meta name="twitter:image" content="https://mn06watch.com/articles/mn-delegation-rhetoric/og.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a365d;
+  --navy-deep: #0f2547;
+  --navy-soft: #2c5282;
+  --gold: #d69e2e;
+  --gold-soft: #f6e2b3;
+  --gold-deep: #975a16;
+  --white: #ffffff;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-500: #718096;
+  --gray-700: #2d3748;
+  --gray-900: #1a202c;
+  --d-color: #2c5282;
+  --d-soft: #ebf4fb;
+  --r-color: #9b2c2c;
+  --r-soft: #fde8e8;
+  --serif-display: 'Playfair Display', Georgia, serif;
+  --serif-body: 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--serif-body);
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header { background: var(--navy); color: var(--white); padding: 16px 0; }
+.site-header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-family: var(--sans); font-weight: 800; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); text-decoration: none; }
+.brand-tag { font-family: var(--serif-body); font-style: italic; font-weight: 400; font-size: 13px; color: var(--gold-soft); text-transform: none; letter-spacing: 0; margin-left: 4px; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { font-family: var(--sans); font-weight: 500; font-size: 13px; color: rgba(255,255,255,0.85); text-decoration: none; }
+.nav-links a:hover { color: var(--gold); }
+
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 56px 24px 64px;
+  border-top: 4px solid var(--gold);
+}
+.hero-inner { max-width: 1080px; margin: 0 auto; }
+.hero-back { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
+.hero-back:hover { color: var(--gold-soft); }
+.hero-eyebrow { font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+.hero-eyebrow .sep { margin: 0 12px; opacity: 0.5; }
+.hero h1 {
+  font-family: var(--serif-display);
+  font-weight: 700;
+  font-size: clamp(28px, 4.4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  color: var(--white);
+}
+.hero-deck { font-family: var(--serif-body); font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.85); max-width: 760px; }
+.hero-meta { font-family: var(--sans); font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 20px; letter-spacing: 0.04em; }
+
+.summary-strip { background: var(--navy-deep); border-top: 1px solid rgba(255,255,255,0.1); }
+.summary-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.sum-stat { padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); color: var(--white); }
+.sum-stat:last-child { border-right: none; }
+.sum-num { font-family: var(--serif-display); font-weight: 700; font-size: 36px; line-height: 1; color: var(--gold); letter-spacing: -0.02em; }
+.sum-label { font-family: var(--sans); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.75); margin-top: 10px; font-weight: 500; }
+
+main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+
+.controls {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(26,54,93,0.04);
+}
+.controls-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; }
+.ctl-group { flex: 1; min-width: 180px; }
+.ctl-group.search-group { flex: 2; min-width: 280px; }
+.ctl-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.ctl-input, .ctl-select {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--serif-body);
+  font-size: 15px;
+  border: 1px solid var(--gray-300);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--gray-900);
+  transition: border-color 120ms;
+}
+.ctl-input:focus, .ctl-select:focus { outline: none; border-color: var(--navy); }
+.ctl-input::placeholder { color: var(--gray-300); }
+
+.cat-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--gray-100); }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: all 120ms;
+  letter-spacing: 0.02em;
+}
+.chip:hover { border-color: var(--navy-soft); }
+.chip.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.chip .chip-num { font-variant-numeric: tabular-nums; opacity: 0.7; font-size: 11px; }
+.chip.active .chip-num { opacity: 0.85; }
+
+.results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 18px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+.results-count { color: var(--gray-700); }
+.results-count strong { color: var(--navy); font-weight: 700; }
+.sort-control { display: flex; gap: 6px; align-items: center; }
+.sort-control label { font-size: 11px; color: var(--gray-500); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.sort-control select { padding: 4px 8px; font-size: 12px; border: 1px solid var(--gray-300); border-radius: 3px; font-family: var(--sans); }
+
+.rows-wrap {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+.row {
+  border-bottom: 1px solid var(--gray-100);
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: 50px 1fr 100px 110px;
+  gap: 16px;
+  align-items: start;
+  cursor: pointer;
+  transition: background 80ms;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--gray-50); }
+.row.expanded { background: var(--gold-soft); border-left: 4px solid var(--gold); padding-left: 18px; }
+
+.row-rank {
+  font-family: var(--serif-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  padding-top: 4px;
+}
+.row-rank-tag {
+  font-family: var(--sans);
+  font-size: 9px;
+  color: var(--gray-500);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.row-content { min-width: 0; }
+.row-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.row-member {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+}
+.party-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.party-tag.r { background: var(--r-color); color: var(--white); }
+.party-tag.d { background: var(--d-color); color: var(--white); }
+.cat-tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--navy);
+  color: var(--white);
+}
+.cat-tag .cat-num-prefix { color: var(--gold); margin-right: 4px; }
+.row-text {
+  font-family: var(--serif-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--gray-900);
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.row-text.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.row-cat {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--gray-500);
+  text-align: right;
+  font-weight: 500;
+  padding-top: 4px;
+}
+
+.row-engagement {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--gray-500);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  padding-top: 4px;
+}
+.row-engagement strong {
+  display: block;
+  font-size: 14px;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.row-engagement .eng-secondary { font-size: 11px; color: var(--gray-500); }
+
+.row-detail {
+  display: none;
+  margin-top: 12px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--gray-300);
+}
+.row.expanded .row-detail { display: block; }
+.detail-section { margin-bottom: 12px; }
+.detail-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 4px;
+}
+.detail-value {
+  font-family: var(--serif-body);
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.55;
+}
+.detail-value.mono { font-family: var(--mono); font-size: 12px; color: var(--gray-700); }
+.detail-actions { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 8px; border-top: 1px solid var(--gray-200); margin-top: 14px; }
+.detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 8px 14px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  transition: all 120ms;
+  text-transform: uppercase;
+}
+.detail-link:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.detail-link.secondary { background: var(--white); color: var(--navy); border-color: var(--navy-soft); }
+.detail-link.secondary:hover { background: var(--gold-soft); color: var(--navy); border-color: var(--gold); }
+
+.empty-state {
+  text-align: center;
+  padding: 56px 24px;
+  color: var(--gray-500);
+  font-family: var(--serif-body);
+  font-style: italic;
+  font-size: 16px;
+  background: var(--white);
+}
+
+.info {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+  font-family: var(--serif-body);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--gray-700);
+}
+.info strong { color: var(--navy); font-weight: 700; }
+.info a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
+
+.article-footer {
+  max-width: 760px;
+  margin: 56px auto 0;
+  padding: 40px 24px;
+  text-align: center;
+}
+.byline { font-family: var(--serif-body); font-style: italic; font-size: 14px; color: var(--gray-700); line-height: 1.65; max-width: 560px; margin: 0 auto 20px; }
+.byline a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); }
+.back-to-article {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 14px 32px;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--navy);
+  text-transform: uppercase;
+}
+.back-to-article:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+.site-footer { background: var(--navy); color: rgba(255,255,255,0.85); border-top: 4px solid var(--gold); padding: 32px 24px; text-align: center; font-family: var(--sans); font-size: 12px; letter-spacing: 0.05em; }
+.site-footer .tagline { color: var(--gold); font-style: italic; font-family: var(--serif-body); font-size: 14px; font-weight: 400; margin-top: 8px; }
+
+@media (max-width: 800px) {
+  .summary-inner { grid-template-columns: repeat(2, 1fr); }
+  .sum-stat:nth-child(2) { border-right: none; }
+  .sum-stat:nth-child(1), .sum-stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .controls-row { gap: 12px; }
+  .ctl-group { min-width: 140px; }
+  .row {
+    grid-template-columns: 36px 1fr;
+    gap: 12px;
+  }
+  .row-cat, .row-engagement { display: none; }
+  .row-rank { font-size: 18px; }
+  .nav-links { display: none; }
+  .row-text { font-size: 15px; }
+  .results-bar { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="https://mn06watch.com" class="brand">MN06WATCH<span class="brand-tag">Receipts, not rage.</span></a>
+    <nav class="nav-links">
+      <a href="https://mn06watch.com/articles/">Articles</a>
+      <a href="https://mn06watch.substack.com">Substack</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <a href="/articles/mn-delegation-rhetoric/" class="hero-back">← Back to MN delegation analysis</a>
+    <div class="hero-eyebrow">
+      Audit Trail
+      <span class="sep">·</span>
+      Minnesota Delegation Rhetoric Audit
+    </div>
+    <h1>The complete MN delegation audit trail</h1>
+    <p class="hero-deck">Every flagged post from the 12-month Minnesota delegation rhetoric audit. Five of ten members produced zero flags. These are the 99 posts from the five who did not. Each row links to the original post on X with full classifier reasoning and engagement data. Filter by member, party, or category. Click any row to expand.</p>
+    <div class="hero-meta">99 posts · 5 flagged members (of 10 audited) · April 26, 2025 – April 26, 2026 · Last updated May 1, 2026</div>
+  </div>
+</section>
+
+<div class="summary-strip">
+  <div class="summary-inner">
+    <div class="sum-stat"><div class="sum-num">99</div><div class="sum-label">Total flagged posts</div></div>
+    <div class="sum-stat"><div class="sum-num">10</div><div class="sum-label">Members audited</div></div>
+    <div class="sum-stat"><div class="sum-num">4R · 1D</div><div class="sum-label">Flagged party breakdown</div></div>
+    <div class="sum-stat"><div class="sum-num">4</div><div class="sum-label">Categories represented</div></div>
+  </div>
+</div>
+
+<main>
+
+<div class="info">
+  <strong>How to use this page:</strong> Each row shows one flagged post with the member, district, date, category, engagement metrics, and a direct link to the original post on X. Click any row to expand and see the classifier&#39;s reasoning and additional metadata. The taxonomy and counting rules are documented at <a href="https://mn06watch.com/articles/whcd-2026/methodology/">the methodology page</a>. Five members — Klobuchar, Smith, McCollum, Craig, and Morrison — produced zero flags across the 12-month window and do not appear here.
+</div>
+
+<div class="info" style="background: #fef9e7; border-left: 4px solid var(--gold-deep); margin-top: 16px;">
+  <strong>EC-07 reclassification — April 27–28, 2026:</strong> EC-07 (a Cat 2 clarification covering criminal-identity nouns applied as identity attributes to ethnic, religious, immigration-status, political-affiliation, or institutional classes) was added to the methodology on April 27, 2026 after a user-surfaced classifier inconsistency was identified during state-delegation review. A parse-error correction sweep on April 28, 2026 added one additional post. 81 of the 99 posts in this audit trail are EC-07 classifications, marked <span style="display:inline-block; padding:2px 6px; background:var(--gold-deep); color:white; font-size:10px; font-weight:700; letter-spacing:0.05em; border-radius:3px;">EC-07</span> in the row detail. The rule applies symmetrically across parties: the same criterion that flagged Emmer&#39;s &ldquo;Somali fraudsters&rdquo; pattern flagged Omar&#39;s &ldquo;pedophile protection party&rdquo; pattern. Full methodology refinement narrative is in <a href="https://mn06watch.com/articles/whcd-2026/methodology/#task4">Section 12, Task 4</a> of the methodology page.
+</div>
+
+<div class="controls">
+  <div class="controls-row">
+    <div class="ctl-group search-group">
+      <label class="ctl-label" for="searchInput">Search post text</label>
+      <input type="text" id="searchInput" class="ctl-input" placeholder="Type to filter...">
+    </div>
+    <div class="ctl-group">
+      <label class="ctl-label" for="memberFilter">Member</label>
+      <select id="memberFilter" class="ctl-select">
+        <option value="">All members</option>
+      </select>
+    </div>
+    <div class="ctl-group">
+      <label class="ctl-label" for="partyFilter">Party</label>
+      <select id="partyFilter" class="ctl-select">
+        <option value="">Both parties</option>
+        <option value="R">Republican (R)</option>
+        <option value="D">Democrat (D)</option>
+      </select>
+    </div>
+  </div>
+  <div class="cat-chips" id="catChips"></div>
+</div>
+
+<div class="results-bar">
+  <div class="results-count">Showing <strong id="resultsCount">99</strong> of <strong>99</strong> flagged posts</div>
+  <div class="sort-control">
+    <label for="sortSelect">Sort:</label>
+    <select id="sortSelect">
+      <option value="rank-date">By member (flag count), then date</option>
+      <option value="date-desc">Date (newest first)</option>
+      <option value="date-asc">Date (oldest first)</option>
+      <option value="likes-desc">Engagement (most liked)</option>
+      <option value="category">Category number</option>
+    </select>
+  </div>
+</div>
+
+<div class="rows-wrap" id="rowsWrap"></div>
+
+</main>
+
+<footer class="article-footer">
+  <p class="byline">
+    The complete audit trail for the May 1, 2026 Minnesota delegation rhetoric analysis. Prepared by Chad Maschke for <a href="https://mn06watch.com">MN-06 Watch</a>. Methodology and full classifier prompt available at the <a href="https://mn06watch.com/articles/whcd-2026/methodology/">methodology page</a>. Companion article: <a href="/articles/mn-delegation-rhetoric/">Minnesota delegation rhetoric audit</a>.
+  </p>
+  <a href="/articles/mn-delegation-rhetoric/" class="back-to-article">← Back to the analysis</a>
+</footer>
+
+<div class="site-footer">
+  MN06WATCH · INDEPENDENT ACCOUNTABILITY JOURNALISM
+  <div class="tagline">We document what your representative does. You decide what it means.</div>
+</div>
+
+<script>
+const DATA = [{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-05-21","post_timestamp_utc":"2025-05-21T15:55:00.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal monster' applies a criminal-identity noun (monster) as an identity attribute to an immigration-status class (illegal), meeting EC-07 dehumanizing language criteria.","post_text":"Over 60 Angel family members signed a letter urging Congress to pass the One Big, Beautiful Bill.\n\nPatty Morin, who is included in the letter, previously shared the heartbreaking story of her daughter's murder at the hands of an illegal monster.\n\nNo one should ever have to endure https://t.co/wvJgZf4i4i","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1925218778012397788","db_post_id":"88312","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-05-21","post_timestamp_utc":"2025-05-21T20:06:49.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'illegal criminal' as a class-identity attribute combining immigration status with criminal identity noun, meeting EC-07 criteria.","post_text":"ICE arrested this illegal criminal who is charged with vehicular homicide in the tragic death of Minnesota mother Victoria Eileen Harwell.\n\nGovernor Tim Walz\u2019s outrageous comparison of our heroic ICE officers to the \u201cGestapo\u201d is an unforgivable insult.\n\nHe should be thanking our https://t.co/DqCqtQe4SS","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1925282152633012533","db_post_id":"88304","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-05-21","post_timestamp_utc":"2025-05-21T20:13:35.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'thugs' as identity attribute to 'illegal aliens' as a class (EC-07: immigration-status class + thug-identity), meeting CAT 2 dehumanizing language criteria.","post_text":"While ICE works to remove criminal illegal aliens from our state, Tim Walz and Mary Moriarty continue to stand in the way to defend and enable these thugs.\n\nHow many more Minnesotans will they allow to become victims of these preventable crimes? https://t.co/szHn9NJ0ql","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1925283855482736737","db_post_id":"88303","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-05-28","post_timestamp_utc":"2025-05-28T19:50:25.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal monster' applies the criminal-identity noun 'monster' as an identity attribute to the immigration-status class 'illegal,' meeting EC-07 dehumanizing language criteria.","post_text":"An illegal monster who threatened to assassinate the President has been arrested.\n\nThe left must unequivocally condemn this dangerous rhetoric.\n\nLess than two weeks ago, James Comey also made threats against the President\u2019s life.\n\nEnough is enough! The media\u2019s lies are https://t.co/iBV3HsHs35","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1927814740015030644","db_post_id":"88268","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-02","post_timestamp_utc":"2025-06-02T18:28:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal criminal' applies the criminal-identity noun 'criminal' as an identity attribute to the immigration-status class 'illegal,' meeting EC-07 dehumanizing language criteria by attributing criminal identity to an entire class.","post_text":"The suspect in the heinous antisemitic terror attack in Boulder is an illegal criminal admitted under the Biden administration.\n\nThis horrific violence was preventable and is a direct consequence of allowing unvetted people into our country.\n\nIt is time to stand strong against https://t.co/FrPuoHdHPN","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1929606066347610464","db_post_id":"88242","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-11","post_timestamp_utc":"2025-06-11T16:32:15.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'CRIMINAL ILLEGAL ALIENS' applies the criminal-identity noun 'criminal' as an identity attribute to the immigration-status class 'illegal aliens,' meeting EC-07 dehumanizing language criteria.","post_text":"RT @GOPoversight: Sanctuary governors are shielding CRIMINAL ILLEGAL ALIENS, then pretending the consequences don\u2019t exist.\n \nTomorrow Hochu\u2026","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1932838297522286855","db_post_id":"88168","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-12","post_timestamp_utc":"2025-06-12T12:54:06.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'criminal illegal aliens' applies criminal-identity noun as class-identity attribute to immigration-status class (illegal aliens), attributing criminality as an identity characteristic to the entire group.","post_text":"Tim Walz puts criminal illegal aliens ahead of law-abiding Minnesotans \u2014 plain and simple.\n\nToday at @GOPoversight, he\u2019ll be exposed for the failure he is.\nhttps://t.co/6XNIdqrKqi","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1933145789292843126","db_post_id":"88157","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-12","post_timestamp_utc":"2025-06-12T14:34:53.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'criminal illegal aliens' and 'criminals' apply criminal-identity nouns as class-identity attributes to the immigration-status class (illegal aliens), dehumanizing through criminal attribution.","post_text":"FACTS: Tim Walz provides free health care, free college, and driver\u2019s licenses to criminal illegal aliens\u2026and then prevents local law enforcement from working with ICE to get these criminals off our streets.\n\nIf that\u2019s not a sanctuary state, I don\u2019t know what is. https://t.co/alBKE6fVxe","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1933171152161218754","db_post_id":"88155","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-12","post_timestamp_utc":"2025-06-12T16:37:55.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('criminal') as class-identity attribute to immigration-status class ('illegal aliens'), meeting EC-07 dehumanizing language standard.","post_text":"My message to Tim Walz is simple: You work for the law-abiding citizens of Minnesota, not criminal illegal aliens \u2014 act like it. https://t.co/y8S51ALA8K","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1933202114274288100","db_post_id":"88139","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-06-24","post_timestamp_utc":"2025-06-24T16:05:36.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('criminal illegal alien') as identity attribute to immigration-status class, meeting EC-07 dehumanizing language criteria.","post_text":"This criminal illegal alien dragged a federal officer 50 yards with his car, is a child sex offender, and has been arrested for domestic assault.\n\nOur brave ICE officers are working overtime to protect us from these dangerous criminals.\n\nThat is why we must pass the One Big, https://t.co/mkc8fJK2US","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1937542635276652822","db_post_id":"88098","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-07-22","post_timestamp_utc":"2025-07-22T15:57:42.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal alien sex offenders' applies the criminal-identity noun 'sex offenders' as an identity attribute to the immigration-status class 'illegal alien,' meeting EC-07 criteria for dehumanizing class-identity language.","post_text":"Leave it to a worthless rag like @StarTribune to paint illegal alien sex offenders as victims. https://t.co/hgVCoMLRB1","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1947687506847404506","db_post_id":"87885","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-07-22","post_timestamp_utc":"2025-07-22T17:13:01.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'criminal illegals' applies the criminal-identity noun 'criminal' as an identity attribute to the class 'illegals' (immigration-status class), meeting EC-07 dehumanizing language criteria.","post_text":"Over the weekend, an off-duty @CBP officer was shot in the face by two criminal illegals let into our country by Joe Biden.\n\nIt\u2019s time ALL Americans rally behind our brave CBP and @ICEgov officers working to protect our borders and remove dangerous illegals from our streets! https://t.co/FfN53Jv2jy","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1947706461607629234","db_post_id":"87884","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-07-22","post_timestamp_utc":"2025-07-22T19:55:27.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'violent, dangerous illegal aliens' attributes criminal-identity nouns (violent, dangerous) to immigration-status class (illegal aliens) as an identity attribute of the group.","post_text":"RT @RepKeithSelf: The Biden administration let countless violent, dangerous illegal aliens into our country, endangering the lives of every\u2026","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1947747339831284019","db_post_id":"87878","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-07-29","post_timestamp_utc":"2025-07-29T19:53:45.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('criminal') as class-identity attribute to immigration-status class ('illegal alien'), exemplifying EC-07 dehumanizing rhetoric.","post_text":"A criminal illegal alien from Honduras killed two innocent MN teenagers while driving under the influence. \n\nHallie Helgeson and Brady Heiling had had their whole lives ahead of them, stolen by someone who shouldn\u2019t have been in this country in the first place.\n\nThis why the https://t.co/WTumolkafM","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1950283626530169162","db_post_id":"87837","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-07-31","post_timestamp_utc":"2025-07-31T17:36:04.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'monster' as identity attribute to Tim Walz as member of a political-affiliation class (DFL), framing him through an EC-07 class-identity criminal designation pattern.","post_text":"This monster viciously murdered his mom, dad, brother, and sister with an ax.\n\nTim Walz and the DFL\u2019s soft-on-crime policies just let him back onto the streets of Minnesota. Let that sink in. https://t.co/04a0F151sH","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1950973750884835573","db_post_id":"87827","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-08-13","post_timestamp_utc":"2025-08-13T19:59:53.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Omar Fateh's agenda as 'radical, communist' \u2014 applying totalitarian-movement identity language ('communist') to a current named political opponent's policy positions.","post_text":"As if Omar Fateh\u2019s radical, communist agenda wasn\u2019t enough, he\u2019s now saying that protecting illegal aliens is his top priority.\n\nIf elected mayor, his absurd agenda will plunge the city even further into the chaos created by the DFL's failed leadership.\nhttps://t.co/igvXwNzgfx","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1955720985480425697","db_post_id":"87785","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-09-18","post_timestamp_utc":"2025-09-18T16:24:19.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'TERRORISTS' as an identity attribute to 'Antifa' as a political-affiliation class, meeting EC-07 criteria for class-identity framing.","post_text":"Antifa\u2019s record of violence and criminality to advance their warped and depraved ideology 100% meets the definition for domestic terrorism.\n\nFor too long, left-wing political violence has been swept under the rug\u2014no more. @POTUS is holding these TERRORISTS accountable. https://t.co/lllXmSmyXD","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1968712699124072498","db_post_id":"87624","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-08","post_timestamp_utc":"2025-10-08T17:39:41.000Z","category":5,"category_label":"Enemy-of-the-people designation","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Democrats as a 'terrorist wing,' designating a domestic political opponent as an existential enemy rather than merely disagreeing on policy.","post_text":".@GOPMajorityWhip Tom Emmer (R-MN) sounds off on the \"terrorist wing of the Democrat Party\" as the shutdown continues.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/AmericaRpts/status/1975979426077950286","db_post_id":"87456","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-18","post_timestamp_utc":"2025-10-18T12:15:36.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels domestic political opponents ('No Kings March' organizers) with totalitarian-regime identity labels ('Communist Party', 'Marxist Movement') as defining characteristic.","post_text":"In case you were wondering who is behind the No Kings March\u2026it\u2019s the Communist Party and the Marxist Movement. They don\u2019t even hide it\u2026","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/RepNicole/status/1979521744802087109","db_post_id":"87376","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-24","post_timestamp_utc":"2025-10-24T19:39:11.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'scumbags' as class-identity attribute to immigrants ('illegal'), meeting EC-07 dehumanizing language pattern.","post_text":"Just so everyone is clear, these are the types of criminal illegal scumbags Little @Jacob_Frey is protecting \u2014 both taken off the streets of Minneapolis thanks to the heroic work of @ICEgov.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/RapidResponse47/status/1981807703845712210","db_post_id":"87335","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-24","post_timestamp_utc":"2025-10-24T20:09:26.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal criminals' applies a criminal-identity noun as an identity attribute to the immigration-status class 'illegal,' meeting EC-07 dehumanizing language criteria.","post_text":"Minneapolis @MayorFrey made a SICK video pledging his city will be a sanctuary for illegal criminals after he heard @Sec_Noem was coming to town. \n\nThank you, @Sec_Noem, for all your hard work making our cities SAFE again. \n\nYou are always welcome in Minnesota, don\u2019t listen to https://t.co/AgJT2imNpN","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1981815315014025218","db_post_id":"87333","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-27","post_timestamp_utc":"2025-10-27T13:41:24.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity nouns (murderers, human traffickers, sexual assailants) as identity attributes to 'illegal aliens' as a class, meeting EC-07 dehumanizing language criteria.","post_text":".@GOPMajorityWhip: \"God bless Donald J. Trump and @Sec_Noem for what they're doing... 4,300 illegal aliens [arrested in Minneapolis] since just January... these are murderers, these are human traffickers, and these are people who have committed sexual assault.\"","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/RapidResponse47/status/1982804827328364700","db_post_id":"87329","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-27","post_timestamp_utc":"2025-10-27T16:45:08.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07: 'illegal criminals' applies criminal-identity noun as class attribute to immigration-status class (illegal immigrants), functioning as dehumanizing identity framing","post_text":"Let me translate this lie for you! \n\n@Tim_Walz and radical Democrats shut down the government because:\n\n1) They have SEVERE Trump Derangement syndrome \n2) They care more about illegal criminals than law abiding citizens\n3) They want hard working Americans to suffer https://t.co/jokNBtTh3G","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1982851067483508910","db_post_id":"87323","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-30","post_timestamp_utc":"2025-10-30T15:48:26.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'lunatic' functions as a criminal/subhuman-identity attribute applied to Omar Fatah as a named individual in a class-identity frame ('puts America last', 'hates our country'), establishing him as an exemplar of disloyalty class-identity.","post_text":"In case you needed more evidence that Omar Fatah puts America last, here he is waving a foreign flag and pledging his support to Somalia.\n\nMinneapolis: You can\u2019t let this lunatic run your city!\n\nHe hates our country. https://t.co/IZ6i5E6lff","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1983923960543674862","db_post_id":"87279","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-10-30","post_timestamp_utc":"2025-10-30T16:56:46.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'Commie Mamdani' \u2014 applying totalitarian-regime identity label (Communist) to a named individual as an identity attribute.","post_text":"Democrats are still refusing to reopen the government. And for what? To appease people like Commie Mamdani?\n\nAmericans are literally struggling to put food on the table, but Democrats are too busy playing politics to do anything about it.\n\nIt\u2019s disgusting, and it needs to end.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1983941156485439686","db_post_id":"87278","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-03","post_timestamp_utc":"2025-11-03T22:00:29.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Commie Mamdani wing' applies the totalitarian movement identity label 'Commie' to a current political figure/faction, labeling them as communist movement members rather than describing ideology.","post_text":"Chuck Schumer and the Democrats have caused serious pain and suffering with their needless government shutdown, and it\u2019s all because they\u2019re terrified of the Commie Mamdani wing of their party.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1985467143706816756","db_post_id":"87242","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-03","post_timestamp_utc":"2025-11-03T23:27:52.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Democrats/Mamdani with totalitarian-movement identity ('Communists and marxists have taken over the Democrat party'), applying communist/Marxist identity to current political opponents as movement members rather than describing ideology.","post_text":"Communists and marxists have taken over the Democrat party\u2014look no further than Zohran Mamdani in NYC.\u00a0 They hate America and are trying to undermine the great constitutional republic that our founders gave us.\n\nIt was great to join @ROARNetworkUS's The Source last week.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1985489132970275133","db_post_id":"87241","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-05","post_timestamp_utc":"2025-11-05T15:55:06.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels a named political figure ('Commie Mamdani') and political opponents ('Democrats', 'Pro-terrorist leftists') with totalitarian-movement identity terms ('Commie', 'Marxist', 'pro-terrorist'), applying ideological identity labels as political delegitimization.","post_text":"NYC just elected \u201cCommie Mamdani\u201d \u2013 signaling the death of the old Democrat Party. \n\nHis Marxist agenda will tank the city and the worst part is Democrats will refuse to condemn him because they are scared of their radical base. \n\nPro-terrorist leftists are now the mainstream! https://t.co/4QgnbbCjTA","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1986099967514366291","db_post_id":"87226","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-06","post_timestamp_utc":"2025-11-06T15:58:58.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels @ZohranKMamdani with the totalitarian-movement identity 'Marxist' as a current political actor, applying ideological/totalitarian classification to a named individual in office.","post_text":"Is it coincidental that @SpeakerPelosi is leaving the day after Marxist @ZohranKMamdani took over NYC?\n\nOf course not. She created this chaos and is leaving as soon it got messy!\n\nGROSS! https://t.co/zENXvJUp3T","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1986463326839447618","db_post_id":"87212","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-06","post_timestamp_utc":"2025-11-06T17:28:38.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies the identity label 'Marxist' to a named individual (Mamdani) as a totalitarian movement member, not as a policy descriptor.","post_text":"BREAKING \u2014> I\u2019m the only Member of Congress born in #Cuba.\n\nMy family was forced from home after the Communist takeover \u2014 I recognize the extremists when I see them.\n\nMamdani is a Marxist & we need to fight that much harder to stop this fringe Democrat experiment for America!","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/RepCarlos/status/1986485893440454870","db_post_id":"87208","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-07","post_timestamp_utc":"2025-11-07T14:42:40.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels Zohran Mamdani as a 'COMMUNIST' (totalitarian-regime identity label applied to current political opponent) and frames the Democratic Party as 'dangerous, anti-American left,' asserting ideological illegitimacy rather than policy disagreement.","post_text":"This is the future of the Democrat Party. \n\n Zohran Mamdani\u2014a self-proclaimed COMMUNIST\u2014as NYC Mayor, and Jay Jones as Virginia AG, the same radical who fantasized about putting bullets in his political opponent\u2019s head! \n\nThis is the dangerous, anti-American left on full display. https://t.co/PQHTgUKY6U","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1986806513986343169","db_post_id":"87198","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-20","post_timestamp_utc":"2025-11-20T16:23:06.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'terrorists' as class-identity attribute to Somali people ('Somali Al-Shabaab terrorists'), fitting EC-07 dehumanizing language pattern.","post_text":"Under Tim Walz, Minnesota taxpayers are allegedly bankrolling Somali Al-Shabaab terrorists.\n\nHundreds of millions of taxpayer dollars have been stolen and sent to who knows where else.\n\nThis report is a bombshell. This demands action.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1991542829869592909","db_post_id":"87107","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-21","post_timestamp_utc":"2025-11-21T17:16:29.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels the Democratic Party as having been 'hijacked by Marxism,' applying totalitarian-ideology identity label to current political opponents.","post_text":"President Trump\u2014who built much of the skyline that Zohran Mamdani is now in charge of\u2014is truly our only hope to make NYC great again.\n\nThe Democratic Party has been hijacked by Marxism, and it\u2019s about time they learned a few things about free enterprise.\n\nMamdani, AOC, and Bernie https://t.co/h8suXj2mCb","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1991918650643644815","db_post_id":"87094","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-21","post_timestamp_utc":"2025-11-21T18:24:32.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'terrorists' and fraud implication to Somalis as a class (EC-07: class-identity criminal framing), attributing fraudulent and terrorist identities to an ethnic group.","post_text":"INSANE: Somalis in Minnesota seem to have been over-diagnosing their children with autism so they can swindle millions from taxpayers to funnel to Al-Shabaab terrorists.\n\nSounds crazy? It is. And it\u2019s all been enabled by Tim Walz.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1991935776645697975","db_post_id":"87093","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-11-29","post_timestamp_utc":"2025-11-29T14:42:32.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('Welfare-Fraud') as class-identity attribute to ethnic group ('Somali'), meeting EC-07 dehumanizing language criterion.","post_text":"RT @newtgingrich: Massive Somali Welfare-Fraud Cases in Minnesota\nhttps://t.co/JZ5MpuzkIK","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1994779013538005333","db_post_id":"87063","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-01","post_timestamp_utc":"2025-12-01T14:21:47.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The headline attributes 'Fraud' (criminal-identity noun) to 'members of the Somali diaspora' (ethnic-national class), exemplifying EC-07 dehumanizing class-identity framing.","post_text":"How Fraud Swamped Minnesota\u2019s Social Services System on Tim Walz\u2019s Watch\n\n\"Prosecutors say members of the Somali diaspora, a group with growing political power, were largely responsible.\"","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/PressSec/status/1995498568665415834","db_post_id":"87061","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-01","post_timestamp_utc":"2025-12-01T21:30:22.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as class-identity attribute to Somali immigrants ('Somali immigrants' + fraud/criminal conduct framed as group identity), meeting EC-07 standard.","post_text":"Press Secretary Karoline Leavitt lays out claims of massive fraud in Minnesota:\n\n-86 people charged in widespread Minnesota fraud schemes; 78 are Somali immigrants\n-59 individuals convicted so far for participating in plots that stole roughly $1 billion from taxpayers across","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/FoxNews/status/1995606423468741102","db_post_id":"87057","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-03","post_timestamp_utc":"2025-12-03T18:50:03.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Somali man' combined with 'sexual assault' convictions and the framing within a post about 'Somali gang activity and illegal criminals from Somalia' applies criminal-identity attribution to Somali nationals as a class (EC-07 pattern: Somali-as-class + criminal-identity descriptor).","post_text":"Hennepin County Attorney Mary Moriarty is furious over President Trump's push to target Somali gang activity and illegal criminals from Somalia. \n\nShe's the same prosecutor who previously let a Somali man\u2014with two prior convictions for sexual assault\u2014walk free without serving https://t.co/NFuuxgUOkp","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/1996290852512251914","db_post_id":"87033","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-03","post_timestamp_utc":"2025-12-03T20:24:32.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'Somalians' (national-origin class) + 'stolen' (criminal-identity verb applied as class attribute) frames an ethnic group as inherently criminal.","post_text":"Over $1 billion in tax dollars have been stolen by Somalians in Minnesota.\n\nMSNBC: Zero headline news coverage\nCBS News: Zero headline news coverage\nABC News: Zero headline news coverage\n\nImagine what they\u2019d cover up if Tim Walz became vice president.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/Lancegooden/status/1996314632848585114","db_post_id":"87031","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-05","post_timestamp_utc":"2025-12-05T15:18:22.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Phrase 'criminal illegal aliens' and specifically 'Somalis' applies criminal-identity noun to immigration-status and ethnic class (EC-07), and 'Somalis' as ethnic class modifier paired with 'criminal' functions as class-identity framing.","post_text":"ICE operation in Minneapolis nabs a dozen 'worst of the worst' criminal illegal aliens, including Somalis","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/PressSec/status/1996962357768016263","db_post_id":"87011","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-05","post_timestamp_utc":"2025-12-05T18:52:57.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('criminal') as identity attribute to immigration-status class ('illegal aliens'), meeting EC-07 dehumanizing language standard.","post_text":"Tim Walz and Jacob Frey may be okay with letting these criminal illegal aliens roam free in Minnesota, but the American people are NOT. Thank you, @DHSgov!","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/1997016359335555094","db_post_id":"87005","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-12","post_timestamp_utc":"2025-12-12T14:38:36.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'Minnesota fraudsters, many of Somali descent' applies criminal-identity noun (fraudsters) as an identity attribute to an ethnic class (Somali), creating a class-identity claim that dehumanizes the group.","post_text":" One of the largest COVID fraud schemes happened on Tim Walz's watch.\n\nMinnesota fraudsters, many of Somali descent, stole hundreds of millions meant for hungry kids and spent it on Porsches, private villas, and luxury travel.\n\nWe're going to hold Governor Walz accountable.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPoversight/status/1999489063569813960","db_post_id":"86959","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-17","post_timestamp_utc":"2025-12-17T02:30:29.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'monsters' to MS-13 gang members as a class (EC-07: gang-affiliation-as-class + monster-as-identity), which meets CAT 2 dehumanizing language criteria.","post_text":"Biden\u2019s open border allowed dangerous MS-13 gang members into our nation. Tragically, Kayla Hamilton was murdered by one of these monsters.\n\nThe @HouseGOP passed @RepRussellFry's Kayla Hamilton Act to ensure this never happens again. Read Kayla's story:","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2001117769450803305","db_post_id":"86915","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-20","post_timestamp_utc":"2025-12-20T17:33:37.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'Somali fraud' attributes fraud-identity to Somalis as a class, functioning as a class-identity criminal noun.","post_text":"Failed Governor Tim Walz sat idly by while fraudsters stole BILLIONS from hardworking taxpayers.\n\nNow, @POTUS and his all-star administration are going after Somali fraud in Minnesota like a dog on a bone. :","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2002432210818023506","db_post_id":"86873","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-28","post_timestamp_utc":"2025-12-28T16:49:58.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Somali fraud' attributes a criminal-identity noun (fraud) to an ethnic class (Somali), meeting EC-07 criteria for dehumanizing class-identity framing.","post_text":"RT @MatthewFoldi: How fitting \u2014 zero coverage of rampant Somali fraud in the final edition that\u2019s printed in Minnesota of the Star Tribune\u2026","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/2005320332136321385","db_post_id":"86843","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-28","post_timestamp_utc":"2025-12-28T19:13:29.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07: 'Somalian fraud ring' applies criminal-identity noun (fraud ring) as class-identity attribute to Somali national group, framing an ethnic class by criminal identity.","post_text":"This is OUTRAGEOUS.\n\nTim Walz let FOREIGN CRIMINALS exploit American taxpayer dollars and seems to have looked the other way.\n\nWe\u2019re investigating the Somalian fraud ring in Minnesota.\n\nThe truth will come out.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPoversight/status/2005356449090949626","db_post_id":"86841","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-29","post_timestamp_utc":"2025-12-29T00:56:28.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'Somali fraud' attributes criminal-identity (fraud) to an ethnic-national class (Somali), framing Somalis as a class-identity characterized by fraudulent behavior.","post_text":"Tim Walz and Keith Ellison have done NOTHING over SEVEN YEARS to stop the Somali fraud in Minnesota. \n\nAnd instead of taking any action regarding the bombshell daycare fraud reporting from over the weekend, Walz posted \u201chappy caturday\u201d with a photo of a cat. \n\nWHAT A JOKE!","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2005442764184690745","db_post_id":"86838","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-29","post_timestamp_utc":"2025-12-29T21:32:52.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'Somali criminals' attributes criminal identity to Somali people as a class, functioning as a class-identity criminal noun.","post_text":"NEW: Following @nickshirleyy\u2019s bombshell reporting, I\u2019m pressing Tim Walz over his incompetence and lack of leadership. He must answer for the millions of dollars he\u2019s allowed to be stolen by Somali criminals. \n\nWhile the world is just waking up to the chaos in Minnesota, we\u2019ve","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2005753911265701905","db_post_id":"86829","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-30","post_timestamp_utc":"2025-12-30T02:56:10.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as class-identity attribute to Somalis as an ethnic group (EC-07 pattern: 'Somali fraudsters'), which constitutes dehumanizing language under CAT 2.","post_text":"BREAKING: I\u2019m calling for the denaturalization and deportation of every Somali engaged in fraud in Minnesota. Read my full statement below:\n\n\u201cI have three words regarding Somalis who have committed fraud against American taxpayers: Send them home. If they\u2019re here illegally,","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2005835275612697059","db_post_id":"86824","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-30","post_timestamp_utc":"2025-12-30T03:23:47.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07: 'Somali fraudsters' applies criminal-identity noun (fraudsters) as an identity attribute to a national-origin class (Somali), meeting the dehumanizing language category.","post_text":"Unassimilable foreigners have been looting and pillaging the American people for too long.\n\nJustice demands the Somali fraudsters be denaturalized and deported.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/RepBrandonGill/status/2005842224093831308","db_post_id":"86823","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-30","post_timestamp_utc":"2025-12-30T14:34:57.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'culture of fraud in the Somali community' applies a criminal-identity attribute (fraud/fraudsters) to an ethnic class (Somali), meeting EC-07 dehumanizing language criteria.","post_text":"Thanks to @POTUS, the issue of Somali fraud has been raised to the national level, Tim Walz is finally being held accountable, and something is being done to address the culture of fraud in the Somali community.\n\nWe have been working for years to highlight this and have been met","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2006011127780557192","db_post_id":"86821","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-30","post_timestamp_utc":"2025-12-30T18:22:17.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'thief' (via STOLE) to Somali as an ethnic class, creating dehumanizing class-identity framing (EC-07: Somali-as-class + criminal-identity attribute).","post_text":"I am doubling down on this: Any Somali who STOLE money from American taxpayers should be sent home immediately.\n\nThis shouldn\u2019t be up for debate! https://t.co/ofozUPaq53","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/2006068340372938926","db_post_id":"86818","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-30","post_timestamp_utc":"2025-12-30T19:41:52.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('fraudsters') as class-identity attribute to ethnic group (Somali), exemplified by phrase 'every Somali involved in the Minnesota fraud scheme' which frames Somali ethnicity as identity marker for fraud, meeting EC-07 criteria.","post_text":"Commit fraud, steal from hardworking American taxpayers, and get a one-way ticket back to Somalia. \n\nI fully back @GOPMajorityWhip\u2019s call to denaturalize and deport every Somali involved in the Minnesota fraud scheme.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/Lancegooden/status/2006088368271270193","db_post_id":"86815","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-31","post_timestamp_utc":"2025-12-31T15:02:45.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as an identity attribute to Somali people as a class (EC-07), framing an ethnic group by criminal identity.","post_text":".@POTUS and his all-star administration are working around the clock to investigate, prosecute, and remove Somali fraudsters from the U.S. \n\nPresident Trump agrees: send them home.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2006380514093973925","db_post_id":"86812","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2025-12-31","post_timestamp_utc":"2025-12-31T15:41:19.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Somali \"learing\" centers' applies a criminal-identity frame (\"learing\"/fraud) to Somalis as a class, meeting EC-07 dehumanizing language criterion.","post_text":"No President cares more about the American people\u2014which is why President Trump has @ICEgov on the ground investigating the 9 BILLION dollars of fraud you lost.\n\nHave you visited any Somali \u201clearing\u201d centers yet?\n\nOf course not. You are too busy playing the victim here. https://t.co/HavNmF90N3","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/tomemmer/status/2006390217402433909","db_post_id":"86811","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-03","post_timestamp_utc":"2026-01-03T01:51:15.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as class-identity attribute to ethnic group 'Somalis,' meeting EC-07 dehumanizing language standard regardless of actual fraud cases.","post_text":"I've got three words for the Somalis who came to our country and committed fraud: SEND THEM HOME.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2007268488692543655","db_post_id":"86799","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-07","post_timestamp_utc":"2026-01-07T16:59:03.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"\"Somali fraud\" applies criminal-identity (fraud) as a class attribute to Somalis, meeting EC-07 dehumanizing language criteria.","post_text":"House Majority Whip Tom Emmer calls out Tim Walz, Ilhan Omar, the Fake News, and Democrats DIRECTLY for their COMPLICITY in covering up Somali fraud in Minnesota.\n\n\u201cWhere the hell has the Twin Cities media been?! The Star Tribune is complicit. They have had this story for years,","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/bennyjohnson/status/2008946495337451560","db_post_id":"86766","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-07","post_timestamp_utc":"2026-01-07T17:28:41.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as class-identity attribute to Somali-descent individuals, exemplifying EC-07 dehumanizing rhetoric pattern.","post_text":"MN State Rep. @WalterHudson confirms the facts:\n\n#1: 90% of the individuals charged with fraud in Minnesota are of Somali descent.\n\n#2: Keith Ellison is on tape promising to obstruct his own agencies in their investigations of Somali fraud.\n\nIt's clear that Walz and Ellison have","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2008953952864289272","db_post_id":"86765","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-10","post_timestamp_utc":"2026-01-10T13:13:53.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Somali fraudsters' applies the criminal-identity noun 'fraudsters' as an identity attribute to the ethnic class 'Somali,' matching EC-07 dehumanizing language.","post_text":"Thank you, @SecScottBessent, for coming to Minnesota and holding Tim Walz and Somali fraudsters accountable.","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2009976995208409509","db_post_id":"86745","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-10","post_timestamp_utc":"2026-01-10T22:00:35.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'let these animals roam free' applies dehumanizing animal metaphor to human beings (people subject to sanctuary policies), meeting CAT 2 criteria for dehumanizing language.","post_text":".@ICEgov is truly getting the worst of the worst off the streets of Minnesota. Meanwhile, Tim Walz and Jacob Frey continue to instigate lawlessness.\n\nThey let these animals roam free with their sanctuary policies, and they\u2019re still trying to protect these disgusting criminals","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2010109541510181085","db_post_id":"86743","ec07_reclassified":false},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-12","post_timestamp_utc":"2026-01-12T19:32:44.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07: 'Somalis' (national-origin class) + 'steal' (criminal-identity verb functioning as class attribute) applies criminal-identity framing to an ethnic group as a class.","post_text":"Tim Walz doesn't support law and order.\n\nHe let Minnesota burn in 2020 and allowed Somalis to steal BILLIONS from taxpayer dollars.\n\n Watch @GOPMajorityWhip call out Governor Walz during our hearing last June over his inflammatory comments.\n\nWe will see him again on Feb. 10 ","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPoversight/status/2010797110871146569","db_post_id":"86738","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-16","post_timestamp_utc":"2026-01-16T17:02:05.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07: 'criminal punks' + 'illegal aliens' applies criminal-identity noun to immigration-status class as an identity attribute.","post_text":"The criminal punks who used snow shovels and brooms to beat an ICE agent in Minneapolis the other night are all illegal aliens that the Biden administration let into our country.\n\nNo doubt they were attracted to Minneapolis because of its sanctuary policies.\n\nTim Walz should be","has_media":"no","likes":0,"reposts":0,"replies":0,"direct_url":"https://x.com/GOPMajorityWhip/status/2012208750535299578","db_post_id":"86711","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-01-29","post_timestamp_utc":"2026-01-29T20:12:04.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'criminal' as an identity attribute to an immigration-status class ('illegal alien'), meeting EC-07 dehumanizing language pattern.","post_text":"Ian Mwangi Irungu, a criminal illegal alien from Kenya, convicted of selling heroine and dangerous drugs.","has_media":"no","likes":13,"reposts":1,"replies":7,"direct_url":"https://x.com/GOPMajorityWhip/status/2016967603835589030","db_post_id":"1471028","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-02-06","post_timestamp_utc":"2026-02-06T22:15:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'monster' as identity attribute to immigration-status class 'illegal', matching EC-07 dehumanizing pattern.","post_text":"An illegal monster from Honduras killed two innocent MN teenagers while driving under the influence in July.\n\nHallie Helgeson and Brady Heiling should still be here. \n\nAll Americans should support @ICEgov so no other family has to endure this heartbreak. https://t.co/SgoSkDWM9P","has_media":"no","likes":449,"reposts":154,"replies":69,"direct_url":"https://x.com/tomemmer/status/2019897772103631200","db_post_id":"86570","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T22:53:50.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('criminal') as an identity attribute to an immigration-status class ('illegals'), fitting EC-07 pattern of class-identity dehumanization.","post_text":"Violent, criminal illegals have no right to be in the United States.\n\nThey also have no right to vote in American elections. https://t.co/xSovHHtV5A","has_media":"no","likes":633,"reposts":123,"replies":129,"direct_url":"https://x.com/GOPMajorityWhip/status/2021356967734935559","db_post_id":"100505","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-02-25","post_timestamp_utc":"2026-02-25T03:10:17.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as an identity attribute to an ethnic class (Somali-as-class + fraudster-as-identity), meeting EC-07 dehumanizing language criteria.","post_text":"And the law-abiding taxpayers in Minnesota are PISSED we\u2019ve been taken advantage of by Somali fraudsters! https://t.co/3Atybbv3bK","has_media":"no","likes":106,"reposts":21,"replies":8,"direct_url":"https://x.com/TomEmmer/status/2026494934455333052","db_post_id":"1448652","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-02-25","post_timestamp_utc":"2026-02-25T21:52:47.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as an identity attribute to 'Somali' as a class (EC-07 pattern), not describing specific individuals' actions.","post_text":"The war on fraud has begun. And Somali fraudsters in my home state are about to find out. https://t.co/ItexQ2JlNY","has_media":"no","likes":4935,"reposts":732,"replies":362,"direct_url":"https://x.com/GOPMajorityWhip/status/2026777419806310879","db_post_id":"1452219","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-03-04","post_timestamp_utc":"2026-03-04T17:08:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Somali fraudsters' applies the criminal-identity noun 'fraudsters' as an identity attribute to the ethnic class 'Somali,' fitting EC-07 dehumanizing language regardless of whether individuals committed documented crimes.","post_text":"Keith Ellison\u2019s meeting with now-convicted Somali fraudsters stinks to high heaven.\n\nIf it proves true that he actively obstructed the Feeding Our Future fraud investigation in exchange for campaign donations, he should be DISBARRED and thrown in JAIL.","has_media":"no","likes":2620,"reposts":573,"replies":208,"direct_url":"https://x.com/GOPMajorityWhip/status/2029242598984990944","db_post_id":"1590471","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-03-23","post_timestamp_utc":"2026-03-23T14:58:40.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'monster' as identity attribute to 'violent illegals' as a class (EC-07 pattern: immigration-status class + monster-identity).","post_text":"Horrific and infuriating. Our prayers are with this young woman\u2019s family.\n\nIf Democrats had their way, this would be every city in America. Democrats shut down DHS, protecting violent illegals like this monster instead of Americans like Sheridan Gorman.\n\nLet that sink in.","has_media":"no","likes":240,"reposts":94,"replies":44,"direct_url":"https://x.com/GOPMajorityWhip/status/2036095288348156257","db_post_id":"1718784","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-03-25","post_timestamp_utc":"2026-03-25T14:58:00.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal monster' applies the criminal/dehumanizing identity noun 'monster' to the immigration-status class 'illegal,' meeting EC-07 criteria for class-identity dehumanization.","post_text":"Here is the bottom line:\n\nDemocrats are shutting down DHS because they care more about illegal criminals than victims.\n\nThey don\u2019t care about Sheridan Gorman, a Loyola student recently shot dead by an illegal monster.\n\nThey don\u2019t care about Laken Riley, who was BRUTALLY murdered","has_media":"no","likes":262,"reposts":77,"replies":26,"direct_url":"https://x.com/tomemmer/status/2036819898165346334","db_post_id":"1717421","ec07_reclassified":true},{"rank":1,"member_name":"Tom Emmer","party":"R","chamber":"House","district":"MN-06","post_date":"2026-03-30","post_timestamp_utc":"2026-03-30T19:13:03.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The tweet applies the class-identity criminal noun 'criminal' to an immigration-status class ('illegal alien'), exemplifying EC-07 dehumanizing language pattern.","post_text":"Sheridan Gorman was not at the wrong place at the wrong time. She was exactly where she should have been, making memories with her friends. \n\nThe only person who was in the wrong place was the criminal illegal alien who killed her and who should have never been here in the first","has_media":"no","likes":105,"reposts":26,"replies":13,"direct_url":"https://x.com/GOPMajorityWhip/status/2038696023095177267","db_post_id":"1733507","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-06-12","post_timestamp_utc":"2025-06-12T20:05:39.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies the totalitarian-regime label 'fascist regime' to current U.S. government actors/institutions, labeling present political opponents as members of a fascist movement rather than describing ideology or making historical reference.","post_text":"What happened to Sen. Padilla is a disgrace.\nElected officials are supposed to speak for the people.\n\nWhen the government starts throwing Senators to the ground for doing that, we\u2019ve left democracy behind.\n\nYou don\u2019t have to wonder what a fascist regime looks like. This is it. https://t.co/FWBMMq8Bi9","has_media":"no","likes":2150,"reposts":346,"replies":648,"direct_url":"https://x.com/Ilhan/status/1933254389591855116","db_post_id":"81565","ec07_reclassified":false},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-07-01","post_timestamp_utc":"2025-07-01T20:48:31.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies totalitarian-regime label 'Fascism' to describe current political situation and Trump administration as a class/movement identity, not as historical reference or policy descriptor.","post_text":"Fascism in full swing. Mamdani won with a mandate and Trump is losing his mind.\n\nSorry, Mr. President, Mamdani is here to stay. https://t.co/MjR0IuexnD","has_media":"no","likes":28505,"reposts":2969,"replies":3093,"direct_url":"https://x.com/IlhanMN/status/1940150546217968099","db_post_id":"80021","ec07_reclassified":false},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-07-22","post_timestamp_utc":"2025-07-22T21:16:59.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'pedophile' as class-identity attribute to political group ('the pedophile protection party'), meeting EC-07 dehumanizing language standard.","post_text":"The pedophile protection party is shutting down Congress just to avoid voting on the release of the Epstein files. https://t.co/SPxBecovkL","has_media":"no","likes":57028,"reposts":8217,"replies":3973,"direct_url":"https://x.com/IlhanMN/status/1947767855396577522","db_post_id":"79989","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-07-23","post_timestamp_utc":"2025-07-23T17:26:31.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'Pedophile Protection Party' applies a criminal-identity label ('pedophile') to a political group (Republicans) as a class-identity attribute, fitting EC-07 dehumanizing language pattern.","post_text":"The Epstein files have Republicans in chaos. \n\nEducation &amp; Workforce Committee pulled down a vote on a human trafficking bill because the Pedophile Protection Party refuses to even consider an amendment on the files. https://t.co/zbj2Y6T0lE","has_media":"no","likes":6830,"reposts":992,"replies":1132,"direct_url":"https://x.com/Ilhan/status/1948072247735845362","db_post_id":"81459","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-08-06","post_timestamp_utc":"2025-08-06T18:47:20.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies totalitarian-regime criminal identity label ('pedophile protection party') to current political officials as a class-identity attribute, functioning similarly to 'fascist' or 'commie' designations.","post_text":"JD Vance and other pedophile protection party officials are holding an emergency meeting tonight over their strategy on the Epstein files. \n\nThis cover-up is a disgrace to Epstein\u2019s victims. The American people deserve transparency and accountability. \n\nRelease the Epstein files.","has_media":"no","likes":34170,"reposts":5027,"replies":10342,"direct_url":"https://x.com/IlhanMN/status/1953166014922781155","db_post_id":"79975","ec07_reclassified":false},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-09-09","post_timestamp_utc":"2025-09-09T17:04:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('pedophile') as class-identity attribute to a political group ('the party'), meeting EC-07 dehumanizing language standard.","post_text":"The pedophile protection party at it again. https://t.co/GjR7bH5Xa4","has_media":"no","likes":10125,"reposts":1027,"replies":754,"direct_url":"https://x.com/IlhanMN/status/1965461324844114337","db_post_id":"79954","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-10-30","post_timestamp_utc":"2025-10-30T20:44:33.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'pedophiles' as class-identity attribute to Republicans as a political group ('pedophile protection party'), meeting EC-07 pattern of class + criminal-identity.","post_text":"Reminder: Republicans are more concerned with protecting pedophiles than protecting the American people. \n\nDay 30 of the shutdown and the pedophile protection party only cares about ensuring the Epstein files are not released.","has_media":"no","likes":974,"reposts":157,"replies":873,"direct_url":"https://x.com/IlhanMN/status/1983998482882163029","db_post_id":"79890","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-11-12","post_timestamp_utc":"2025-11-12T18:11:22.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'pedophile' as class-identity attribute to a political party, meeting EC-07 dehumanizing language standard.","post_text":"Pedophile protection party. https://t.co/NG1grG1Kqv","has_media":"no","likes":33417,"reposts":3874,"replies":5476,"direct_url":"https://x.com/IlhanMN/status/1988670973076459610","db_post_id":"79868","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2025-11-19","post_timestamp_utc":"2025-11-19T23:56:53.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'Pedophile Protection Party' applies a criminal-identity noun ('pedophile') as an identity attribute to a political-affiliation class (Republican Party), meeting the EC-07 Cat 2 criterion. Reclassified from OUT on 2026-04-28 during parse-error correction sweep.","post_text":"The Pedophile Protection Party tried everything to keep the Epstein Files from coming out. \n\nThat's why we needed to pass a discharge petition to get a vote on the House Floor to get the truth out because GOP leadership refused to act. \n\nIt's time for answers and transparency.","has_media":"no","likes":2696,"reposts":487,"replies":9064,"direct_url":"https://x.com/Ilhan/status/1991294641719689332","db_post_id":"81253","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2026-01-22","post_timestamp_utc":"2026-01-22T17:02:41.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 applies: 'ICE' (institutional class-identity) + 'terror' (criminal-violence identity noun) attributes terroristic identity to an institution as a class, meeting the dehumanizing language category.","post_text":"Deporting children with cancer.\nUsing a 5-year-old as bait. \nShooting moms.\n\nICE is beyond reform. And today the House is voting to bankroll more terror. Hell no.","has_media":"no","likes":28206,"reposts":4392,"replies":7935,"direct_url":"https://x.com/IlhanMN/status/2014383229353034007","db_post_id":"79818","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2026-01-25","post_timestamp_utc":"2026-01-25T04:56:21.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'Somalis' (national-origin class) + 'illegal' (immigration-status class) applied as identity attribute in context of criminal conduct ('killing white citizens'), creating class-identity framing of Somalis as inherently lawless.","post_text":"Almost all Somalis in Minnesota are citizens! \n\nThat\u2019s why ICE is angry and is killing white citizens who want to document their illegal stops asking for proof of papers. None of this is normal and you all should be ashamed for supporting them. https://t.co/jOki3M18Oz","has_media":"no","likes":20476,"reposts":1886,"replies":4124,"direct_url":"https://x.com/IlhanMN/status/2015287603327607215","db_post_id":"79812","ec07_reclassified":true},{"rank":2,"member_name":"Ilhan Omar","party":"D","chamber":"House","district":"MN-05","post_date":"2026-02-10","post_timestamp_utc":"2026-02-10T23:54:10.000Z","category":6,"category_label":"Totalitarian-regime labels as identity","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Labels a political opponent with a totalitarian-movement identity ('Pedophile Protection Party') and invokes execution comparisons, applying a delegitimizing categorical label to current political actors rather than describing ideology or policy.","post_text":"The leader of the Pedophile Protection Party is trying to deflect attention from his name being all over the Epstein files. \n\nAt least in Somalia they execute pedophiles not elect them. https://t.co/xC3Ype3zXI","has_media":"no","likes":33764,"reposts":5055,"replies":1,"direct_url":"https://x.com/IlhanMN/status/2021372148896682175","db_post_id":"100508","ec07_reclassified":false},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2025-05-19","post_timestamp_utc":"2025-05-19T20:57:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Phrase 'illegal criminals' applies the criminal-identity noun 'criminals' as an identity attribute to the immigration-status class 'illegal,' meeting EC-07 criteria for dehumanizing class-identity framing.","post_text":"ICE is doing excellent work to keep our communities in Minnesota safe. \n\nThis week, the House will pass our big, beautiful bill to give ICE more resources to arrest and deport illegal criminals like Llangari Inga.\n\nhttps://t.co/snfBPtJdYO","has_media":"no","likes":7,"reposts":1,"replies":8,"direct_url":"https://x.com/RepPeteStauber/status/1924570133785202730","db_post_id":"66366","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-01-11","post_timestamp_utc":"2026-01-11T00:46:38.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies dehumanizing animal metaphor ('these animals') to criminals as a class, and frames Democrats/Walz as standing with this dehumanized group, creating class-identity attachment to political opponents.","post_text":"Federal law enforcement is cleaning up Minnesota\u2019s streets of these vile criminals and it\u2019s telling that Tim Walz and Democrats are standing with these animals while villainizing ICE for doing the job they refuse to do.","has_media":"no","likes":71,"reposts":15,"replies":19,"direct_url":"https://x.com/PeteStauber/status/2010151329407349178","db_post_id":"1480547","ec07_reclassified":false},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-01-14","post_timestamp_utc":"2026-01-14T17:25:31.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Uses 'criminal illegals' as a class-identity attribute, combining immigration-status class with criminal-identity noun per EC-07 definition.","post_text":"That's nearly 500 criminal illegals Walz/ Ellison/ Frey/ Moriarty are sending back onto our streets. When you wonder whose side they're on, just listen to them.","has_media":"no","likes":45,"reposts":16,"replies":20,"direct_url":"https://x.com/PeteStauber/status/2011489871659942169","db_post_id":"1478703","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-12","post_timestamp_utc":"2026-03-12T17:06:30.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as identity attribute to ethnic class 'Somali', meeting EC-07 dehumanizing language standard regardless of documented fraud cases.","post_text":"Taxpayers deserve to know their hard-earned dollars are supporting legitimate services and not lining the pockets of Somali fraudsters.\n\nI introduced the Stop Fraud by SOMALIA Act to strengthen penalties for those who exploit childcare assistance programs.\n\nLearn more:","has_media":"no","likes":277,"reposts":98,"replies":75,"direct_url":"https://x.com/RepPeteStauber/status/2032141194885488753","db_post_id":"1666510","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-13","post_timestamp_utc":"2026-03-13T14:59:40.000Z","category":3,"category_label":"Eliminationist framing","counting_rule":"Rule A","classifier_confidence":"high","classifier_reasoning":"Asserts that a group (people convicted of supporting terrorists) has no legitimate place in society and must be denaturalized and deported as an end goal, framing their elimination from the political/national community.","post_text":"This terrorist should have been sent back to Sierra Leone. \n\nInstead he was released from federal prison by Biden's DOJ. \n\nNow an American is dead. \n\nCongress needs to pass a law to DENATURALIZE and DEPORT anyone convicted of supporting terrorists. Let's make America safe again.","has_media":"no","likes":20,"reposts":2,"replies":10,"direct_url":"https://x.com/RepPeteStauber/status/2032471661035839917","db_post_id":"1665925","ec07_reclassified":false},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-13","post_timestamp_utc":"2026-03-13T18:44:54.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as an identity attribute to Somali as a class (EC-07 pattern), creating dehumanizing class-identity rhetoric.","post_text":"Minnesota taxpayers and folks across the country deserve to know their hard-earned dollars are supporting legitimate services and not lining the pockets of Somali fraudsters.","has_media":"no","likes":32,"reposts":11,"replies":4,"direct_url":"https://x.com/PeteStauber/status/2032528344353300669","db_post_id":"1665710","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-21","post_timestamp_utc":"2026-03-21T16:19:00.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"\"Criminal illegals\" applies the criminal-identity noun \"criminal\" as an identity attribute to the immigration-status class \"illegals,\" matching EC-07 dehumanizing language pattern.","post_text":"Criminal illegals are fleecing our country because politicians in Democrat run states are allowing and enabling it.","has_media":"no","likes":20,"reposts":5,"replies":9,"direct_url":"https://x.com/PeteStauber/status/2035390729355174050","db_post_id":"1706234","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-24","post_timestamp_utc":"2026-03-24T15:27:00.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'criminal illegal aliens' applies criminal-identity noun to immigration-status class, attributing criminality as an identity characteristic to the group.","post_text":"Given the choice between standing with criminal illegal aliens or fighting for America's law-abiding taxpayers, you never have to guess who the Left is fighting for. Spoiler alert: NOT you.","has_media":"no","likes":12,"reposts":3,"replies":4,"direct_url":"https://x.com/PeteStauber/status/2036464806757032352","db_post_id":"1718064","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-03-27","post_timestamp_utc":"2026-03-27T18:23:42.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'criminal illegals' applies the criminal-identity noun 'criminal' as an identity attribute to the immigration-status class 'illegals,' creating a class-identity criminal designation.","post_text":"We're moving on from Tim Walz, but let's be clear: Amy Klobuchar is a Walz third term that will waste billions of taxpayer money, raise taxes even higher, allow and enable fraudsters to continue stealing from working families, and cater at all costs to criminal illegals.","has_media":"no","likes":513,"reposts":134,"replies":58,"direct_url":"https://x.com/PeteStauber/status/2037596438872420496","db_post_id":"1727251","ec07_reclassified":true},{"rank":3,"member_name":"Pete Stauber","party":"R","chamber":"House","district":"MN-08","post_date":"2026-04-24","post_timestamp_utc":"2026-04-24T16:33:21.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun 'fraudsters' as an identity attribute to ethnic class 'Somali,' meeting EC-07 dehumanizing language pattern regardless of whether individual fraud cases exist.","post_text":"Taxpayers in Minnesota and across the country deserve to know their hard-earned dollars are supporting legitimate services, not lining the pockets of Somali fraudsters. Let's get tough on fraud and impose serious penalties for those exploiting our public programs, including","has_media":"no","likes":21,"reposts":8,"replies":13,"direct_url":"https://x.com/PeteStauber/status/2047715529050169437","db_post_id":"1857424","ec07_reclassified":true},{"rank":4,"member_name":"Michelle Fischbach","party":"R","chamber":"House","district":"MN-07","post_date":"2026-01-08","post_timestamp_utc":"2026-01-08T17:06:34.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'illegal criminals' applies the criminal-identity noun 'criminals' as an identity attribute to the immigration-status class 'illegal,' meeting EC-07 dehumanizing language criteria.","post_text":"Governor Walz and Mayor Frey are more upset with ICE than the illegal criminals they\u2019ve allowed to flood our streets. If they had enforced the law from the start, ICE wouldn't have to clean up their mess. Their rhetoric is dangerous! https://t.co/3UH615wnfH","has_media":"no","likes":523,"reposts":125,"replies":69,"direct_url":"https://x.com/RepFischbach/status/2009310773739229202","db_post_id":"64873","ec07_reclassified":true},{"rank":4,"member_name":"Michelle Fischbach","party":"R","chamber":"House","district":"MN-07","post_date":"2026-01-12","post_timestamp_utc":"2026-01-12T21:52:43.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Combines 'illegal alien' (immigration-status class) with 'charged with lewd acts' (criminal-identity framing) to attribute criminal identity to the class, meeting EC-07 dehumanizing language criteria.","post_text":"Jozia Natanael Carmona-Pena: Illegal alien from El Salvador, charged with lewd acts with a minor. https://t.co/bCLGnKHDT3","has_media":"no","likes":0,"reposts":1,"replies":2,"direct_url":"https://x.com/RepFischbach/status/2010832339174126045","db_post_id":"64860","ec07_reclassified":true},{"rank":4,"member_name":"Michelle Fischbach","party":"R","chamber":"House","district":"MN-07","post_date":"2026-01-12","post_timestamp_utc":"2026-01-12T21:52:43.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('alien') as class-identity attribute to a named individual in series-frame context that attributes immigration status + criminal identity to the person as a class exemplar, meeting EC-07 criteria.","post_text":"Hoang Xuan Nguyen: Alien from Vietnam convicted of rape, second-degree criminal sexual conduct with a victim under 13, and driving under the influence of liquor. https://t.co/ysaRnqHeuJ","has_media":"no","likes":0,"reposts":0,"replies":3,"direct_url":"https://x.com/RepFischbach/status/2010832337320239416","db_post_id":"64861","ec07_reclassified":true},{"rank":4,"member_name":"Michelle Fischbach","party":"R","chamber":"House","district":"MN-07","post_date":"2026-01-12","post_timestamp_utc":"2026-01-12T21:52:45.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"Applies criminal-identity noun ('illegal alien') as class-identity attribute to an individual presented as exemplar of immigration-status class, meeting EC-07 dehumanizing language standard.","post_text":"Tomas Espin Tapia: Illegal alien from Ecuador, wanted for murder, sexual assault, robbery, and extortion. https://t.co/bOlO9xcujq","has_media":"no","likes":0,"reposts":1,"replies":5,"direct_url":"https://x.com/RepFischbach/status/2010832347277476013","db_post_id":"64856","ec07_reclassified":true},{"rank":5,"member_name":"Brad Finstad","party":"R","chamber":"House","district":"MN-01","post_date":"2026-01-13","post_timestamp_utc":"2026-01-13T21:50:03.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"EC-07 violation: 'criminal illegal aliens' applies criminal-identity noun to an immigration-status class as an identity attribute.","post_text":"MN Democrats have created a mess in our state by allowing these dangerous criminal illegal aliens to run loose on our streets. Thank you to the brave @DHSgov agents who are putting the safety of American citizens FIRST.","has_media":"no","likes":45,"reposts":11,"replies":18,"direct_url":"https://x.com/RepFinstad/status/2011194054101389680","db_post_id":"1479143","ec07_reclassified":true},{"rank":5,"member_name":"Brad Finstad","party":"R","chamber":"House","district":"MN-01","post_date":"2026-02-05","post_timestamp_utc":"2026-02-05T00:57:37.000Z","category":2,"category_label":"Dehumanizing language","counting_rule":"Rule C (cap 3)","classifier_confidence":"high","classifier_reasoning":"The phrase 'criminal illegal immigrants' and 'low-lifes' applies criminal-identity nouns as class attributes to an immigration-status group, meeting EC-07 dehumanizing language criteria.","post_text":"These criminal illegal immigrants were convicted of money laundering, drug possession, committing sex crimes, and more. Enforcing our immigration laws is essential to protecting southern Minnesota and I stand behind our brave ICE officers who are getting these low-lifes off the","has_media":"no","likes":54,"reposts":19,"replies":20,"direct_url":"https://x.com/RepFinstad/status/2019213788872900650","db_post_id":"1468071","ec07_reclassified":true}];
+
+const state = {
+  search: '',
+  member: '',
+  party: '',
+  categories: new Set(),
+  sort: 'rank-date',
+  expanded: new Set()
+};
+
+// ---- POPULATE FILTERS ----
+const memberFilter = document.getElementById('memberFilter');
+const memberOrder = ['Tom Emmer', 'Ilhan Omar', 'Pete Stauber', 'Michelle Fischbach', 'Brad Finstad'];
+memberOrder.forEach(name => {
+  const r = DATA.find(d => d.member_name === name);
+  if (!r) return;
+  const opt = document.createElement('option');
+  opt.value = name;
+  opt.textContent = `${name} (${r.party} · ${r.district})`;
+  memberFilter.appendChild(opt);
+});
+
+const catChipsEl = document.getElementById('catChips');
+const catCounts = {};
+DATA.forEach(r => { catCounts[r.category] = (catCounts[r.category] || 0) + 1; });
+const catLabels = {
+  1: 'Calls to violence',
+  2: 'Dehumanizing language',
+  3: 'Eliminationist framing',
+  4: 'Named-individual threats',
+  5: 'Enemy-of-the-people',
+  6: 'Totalitarian-regime labels'
+};
+[2,3,5,6].forEach(c => {
+  if (!catCounts[c]) return;
+  const chip = document.createElement('button');
+  chip.className = 'chip';
+  chip.dataset.cat = c;
+  chip.innerHTML = `Cat ${c} &middot; ${catLabels[c]} <span class="chip-num">${catCounts[c]}</span>`;
+  chip.addEventListener('click', () => {
+    if (state.categories.has(c)) state.categories.delete(c);
+    else state.categories.add(c);
+    chip.classList.toggle('active');
+    render();
+  });
+  catChipsEl.appendChild(chip);
+});
+
+// ---- WIRE UP CONTROLS ----
+document.getElementById('searchInput').addEventListener('input', e => {
+  state.search = e.target.value.toLowerCase().trim();
+  render();
+});
+memberFilter.addEventListener('change', e => { state.member = e.target.value; render(); });
+document.getElementById('partyFilter').addEventListener('change', e => { state.party = e.target.value; render(); });
+document.getElementById('sortSelect').addEventListener('change', e => { state.sort = e.target.value; render(); });
+
+// ---- FILTER + SORT ----
+function getFiltered() {
+  let rows = DATA;
+  if (state.search) {
+    rows = rows.filter(r =>
+      r.post_text.toLowerCase().includes(state.search) ||
+      r.member_name.toLowerCase().includes(state.search) ||
+      r.classifier_reasoning.toLowerCase().includes(state.search)
+    );
+  }
+  if (state.member) rows = rows.filter(r => r.member_name === state.member);
+  if (state.party) rows = rows.filter(r => r.party === state.party);
+  if (state.categories.size > 0) rows = rows.filter(r => state.categories.has(r.category));
+
+  rows = [...rows];
+  switch (state.sort) {
+    case 'rank-date':
+      rows.sort((a, b) => a.rank - b.rank || a.post_date.localeCompare(b.post_date));
+      break;
+    case 'date-desc':
+      rows.sort((a, b) => b.post_date.localeCompare(a.post_date));
+      break;
+    case 'date-asc':
+      rows.sort((a, b) => a.post_date.localeCompare(b.post_date));
+      break;
+    case 'likes-desc':
+      rows.sort((a, b) => b.likes - a.likes);
+      break;
+    case 'category':
+      rows.sort((a, b) => a.category - b.category || a.rank - b.rank);
+      break;
+  }
+  return rows;
+}
+
+// ---- RENDER ----
+const rowsWrap = document.getElementById('rowsWrap');
+const resultsCount = document.getElementById('resultsCount');
+
+function fmtNum(n) { return n.toLocaleString('en-US'); }
+function fmtDate(d) {
+  const dt = new Date(d + 'T00:00:00Z');
+  return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+}
+function escapeHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function render() {
+  const rows = getFiltered();
+  resultsCount.textContent = rows.length;
+
+  if (rows.length === 0) {
+    rowsWrap.innerHTML = '<div class="empty-state">No flagged posts match these filters.</div>';
+    return;
+  }
+
+  rowsWrap.innerHTML = rows.map(r => {
+    const isExpanded = state.expanded.has(r.db_post_id);
+    return `
+      <div class="row${isExpanded ? ' expanded' : ''}" data-id="${r.db_post_id}">
+        <div>
+          <div class="row-rank">#${r.rank}</div>
+          <div class="row-rank-tag">Rank</div>
+        </div>
+        <div class="row-content">
+          <div class="row-meta-line">
+            <span class="row-member">${escapeHtml(r.member_name)}</span>
+            <span class="party-tag ${r.party.toLowerCase()}">${r.party}</span>
+            <span>${escapeHtml(r.chamber)} &middot; ${escapeHtml(r.district)}</span>
+            <span>&middot;</span>
+            <span>${fmtDate(r.post_date)}</span>
+            <span>&middot;</span>
+            <span class="cat-tag"><span class="cat-num-prefix">CAT ${r.category}</span>${escapeHtml(r.category_label)}</span>
+          </div>
+          <div class="row-text${isExpanded ? '' : ' truncated'}">${escapeHtml(r.post_text)}</div>
+          ${isExpanded ? renderDetail(r) : ''}
+        </div>
+        <div class="row-cat">
+          ${escapeHtml(r.counting_rule)}<br>
+          <span style="font-size:10px;color:var(--gray-300);">${r.classifier_confidence} conf.</span>
+        </div>
+        <div class="row-engagement">
+          <strong>${fmtNum(r.likes)}</strong> likes
+          <div class="eng-secondary">${fmtNum(r.reposts)} reposts</div>
+          <div class="eng-secondary">${fmtNum(r.replies)} replies</div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  rowsWrap.querySelectorAll('.row').forEach(rowEl => {
+    rowEl.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      const id = rowEl.dataset.id;
+      if (state.expanded.has(id)) state.expanded.delete(id);
+      else state.expanded.add(id);
+      render();
+    });
+  });
+}
+
+function renderDetail(r) {
+  const ec07Badge = r.ec07_reclassified
+    ? '<span style="display:inline-block;padding:2px 6px;background:var(--gold-deep);color:white;font-size:10px;font-weight:700;letter-spacing:0.05em;border-radius:3px;margin-left:6px;">EC-07</span>'
+    : '';
+  return `
+    <div class="row-detail">
+      <div class="detail-section">
+        <div class="detail-label">Classifier reasoning ${ec07Badge}</div>
+        <div class="detail-value">${escapeHtml(r.classifier_reasoning)}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Posted (UTC)</div>
+        <div class="detail-value mono">${escapeHtml(r.post_timestamp_utc)}</div>
+      </div>
+      <div class="detail-actions">
+        <a class="detail-link" href="${escapeHtml(r.direct_url)}" target="_blank" rel="noopener">View original on X &#8594;</a>
+        <a class="detail-link secondary" href="https://mn06watch.com/articles/whcd-2026/methodology/#cat${r.category}">Category ${r.category} criteria</a>
+      </div>
+    </div>
+  `;
+}
+
+render();
+</script>
+
+</body>
+</html>
