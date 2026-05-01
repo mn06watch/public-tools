@@ -179,7 +179,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
   border-bottom: 1px solid var(--gray-100);
   padding: 18px 22px;
   display: grid;
-  grid-template-columns: 50px 1fr 100px 110px;
+  grid-template-columns: 50px 1fr 100px;
   gap: 16px;
   align-items: start;
   cursor: pointer;
@@ -397,7 +397,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
     grid-template-columns: 36px 1fr;
     gap: 12px;
   }
-  .row-cat, .row-engagement { display: none; }
+  .row-cat { display: none; }
   .row-rank { font-size: 18px; }
   .nav-links { display: none; }
   .row-text { font-size: 15px; }
@@ -482,7 +482,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
       <option value="rank-date">By member (flag count), then date</option>
       <option value="date-desc">Date (newest first)</option>
       <option value="date-asc">Date (oldest first)</option>
-      <option value="likes-desc">Engagement (most liked)</option>
       <option value="category">Category number</option>
     </select>
   </div>
@@ -588,9 +587,6 @@ function getFiltered() {
     case 'date-asc':
       rows.sort((a, b) => a.post_date.localeCompare(b.post_date));
       break;
-    case 'likes-desc':
-      rows.sort((a, b) => b.likes - a.likes);
-      break;
     case 'category':
       rows.sort((a, b) => a.category - b.category || a.rank - b.rank);
       break;
@@ -645,11 +641,6 @@ function render() {
         <div class="row-cat">
           ${escapeHtml(r.counting_rule)}<br>
           <span style="font-size:10px;color:var(--gray-300);">${r.classifier_confidence} conf.</span>
-        </div>
-        <div class="row-engagement">
-          <strong>${fmtNum(r.likes)}</strong> likes
-          <div class="eng-secondary">${fmtNum(r.reposts)} reposts</div>
-          <div class="eng-secondary">${fmtNum(r.replies)} replies</div>
         </div>
       </div>
     `;
