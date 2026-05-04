@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Follow the Money #2: $9.2 Million, $1 Million, and the Gap Between — MN06Watch</title>
+<meta name="description" content="Tom Emmer announced $9.2 million in Q1 2026 fundraising. The FEC filing two days later showed $1.0 million in his campaign account. The gap is a structure — and a strategy.">
+<meta property="og:title" content="$9.2 Million. $1.0 Million. The Gap Between.">
+<meta property="og:description" content="What Tom Emmer's office announced. What the FEC actually shows. A Follow the Money quarterly update.">
+<meta property="og:image" content="https://mn06watch.com/articles/follow-the-money-q1-2026/og.png">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #1B3A5C;
+    --navy-dark: #0F2640;
+    --gold: #C8922A;
+    --gold-light: #E5B458;
+    --red: #C0392B;
+    --red-dark: #A1281A;
+    --paper: #FAF8F5;
+    --white: #FFFFFF;
+    --ink: #1B1B1B;
+    --muted: #6B6B6B;
+    --light: #E8E2D6;
+    --border: #D9D2C2;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* SITE NAV */
+  .site-nav {
+    background: var(--navy);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .site-nav-left { display: flex; align-items: baseline; gap: 12px; }
+  .site-nav .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .site-nav .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.72rem;
+  }
+  .nav-links { display: flex; gap: 18px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.78);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color: var(--white);
+    padding: 64px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; max-width: 880px; margin: 0 auto; }
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 4.2vw, 2.9rem);
+    font-weight: 700;
+    line-height: 1.18;
+    margin-bottom: 18px;
+  }
+  .hero h1 .gap { color: var(--gold); }
+  .hero .subtitle {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: rgba(255,255,255,0.78);
+    max-width: 640px;
+    margin: 0 auto 28px;
+    line-height: 1.5;
+  }
+  .hero-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.76rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+  }
+  .hero-meta a { color: var(--gold-light); text-decoration: none; }
+
+  /* TWO NUMBERS HERO */
+  .two-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(40px, 8vw, 100px);
+    margin: 36px 0 12px;
+    flex-wrap: wrap;
+  }
+  .num-block { text-align: center; min-width: 140px; }
+  .num-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+  .num-label.announced { color: rgba(255,255,255,0.55); }
+  .num-label.filed { color: var(--gold); }
+  .num-big {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.6rem, 9vw, 5.8rem);
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+  }
+  .num-big.struck { color: rgba(255,255,255,0.5); }
+  .num-big.struck::after {
+    content: "";
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    top: 52%;
+    height: 5px;
+    background: var(--red);
+    transform: rotate(-2deg);
+  }
+  .num-big.kept { color: var(--white); border-bottom: 4px solid var(--gold); padding-bottom: 4px; }
+  .num-cap {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 14px;
+    line-height: 1.4;
+  }
+  .num-cap strong { color: var(--white); }
+
+  /* CONTAINER */
+  .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  .container-wide { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* SECTION */
+  .section { padding: 64px 0; border-bottom: 1px solid var(--border); }
+  .section.section-tight { padding: 36px 0; }
+  .section.section-alt { background: var(--white); }
+  .section.section-navy { background: var(--navy); color: var(--white); border-bottom: none; }
+  .section.section-navy .section-label { color: var(--gold-light); }
+  .section.section-navy h2 { color: var(--white); }
+  .section.section-navy p { color: rgba(255,255,255,0.85); }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--navy);
+    margin-bottom: 20px;
+    line-height: 1.25;
+    font-weight: 700;
+  }
+  .section p {
+    font-size: 1.02rem;
+    margin-bottom: 16px;
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .section p strong { color: var(--navy); font-weight: 700; }
+  .section ul { margin: 12px 0 20px 24px; }
+  .section ul li { margin-bottom: 8px; line-height: 1.65; }
+
+  /* THREE BUCKETS */
+  .buckets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0 8px;
+  }
+  .bucket {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .bucket-top {
+    height: 6px;
+    background: var(--navy);
+  }
+  .bucket-top.gold { background: var(--gold); }
+  .bucket-top.red { background: var(--red); }
+  .bucket-body { padding: 22px 20px 24px; flex-grow: 1; display: flex; flex-direction: column; }
+  .bucket-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-align: center;
+    font-weight: 700;
+  }
+  .bucket-tag.navy { color: var(--navy); }
+  .bucket-tag.red { color: var(--red); }
+  .bucket-tag.gold { color: var(--gold); }
+  .bucket-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    min-height: 56px;
+  }
+  .bucket-q1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+  }
+  .bucket-q1.navy { color: var(--navy); }
+  .bucket-q1.red { color: var(--red); }
+  .bucket-q1.gold { color: var(--gold); }
+  .bucket-q1-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 6px;
+  }
+  .bucket-divider { height: 1px; background: var(--border); margin: 16px 0; }
+  .bucket-cash-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.66rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .bucket-cash {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--ink);
+  }
+  .bucket-pill {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 18px auto 12px;
+    align-self: center;
+    letter-spacing: 0.05em;
+  }
+  .bucket-pill.navy { background: var(--navy); }
+  .bucket-pill.red { background: var(--red); }
+  .bucket-pill.gold { background: var(--gold); }
+  .bucket-rule {
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .bucket-detail {
+    text-align: center;
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* GEOGRAPHY COMPARE */
+  .geo-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+    align-items: stretch;
+    position: relative;
+  }
+  .geo-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 20px 26px;
+    text-align: center;
+  }
+  .geo-panel.then { border-top: 4px solid var(--navy); }
+  .geo-panel.now { border-top: 4px solid var(--gold); }
+  .geo-panel-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .geo-panel.then .geo-panel-label { color: var(--navy); }
+  .geo-panel.now .geo-panel-label { color: var(--gold); }
+  .geo-panel-sub { font-size: 0.92rem; color: var(--ink); margin-bottom: 16px; }
+  .geo-pct {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 14px;
+  }
+  .geo-panel.then .geo-pct { color: var(--navy); }
+  .geo-panel.now .geo-pct { color: var(--gold); }
+  .geo-pct-label {
+    font-size: 0.86rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .geo-divider { height: 1px; background: var(--border); margin: 16px 30px; }
+  .geo-zip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* TOP ZIPS BAR CHART */
+  .ziplist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 24px 0;
+  }
+  .ziprow {
+    display: grid;
+    grid-template-columns: 32px 56px 140px 1fr 90px;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+  .zip-rank { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-size: 0.78rem; }
+  .zip-code { font-family: 'JetBrains Mono', monospace; color: var(--ink); font-weight: 700; }
+  .zip-loc { color: var(--muted); }
+  .zip-bar-wrap { background: transparent; height: 22px; position: relative; }
+  .zip-bar {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--red);
+  }
+  .zip-bar.gold { background: var(--gold); }
+  .zip-bar.gold-dark { background: #9B7B30; }
+  .zip-bar.navy { background: var(--navy); }
+  .zip-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 0.85rem;
+    text-align: right;
+  }
+
+  .legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 16px 0 8px;
+    font-size: 0.85rem;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-swatch { width: 16px; height: 14px; border-radius: 2px; }
+  .legend-swatch.gold { background: var(--gold); }
+  .legend-swatch.navy { background: var(--navy); }
+  .legend-swatch.red { background: var(--red); }
+  .legend-note {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* COVERAGE VS FILING */
+  .coverage-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+    position: relative;
+  }
+  .cov-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 26px 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .cov-panel.left { border-top: 4px solid var(--navy); }
+  .cov-panel.right { border-top: 4px solid var(--gold); }
+  .cov-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .cov-panel.left .cov-date { color: var(--navy); }
+  .cov-panel.right .cov-date { color: var(--gold); }
+  .cov-kind { font-style: italic; color: var(--muted); font-size: 0.84rem; margin-bottom: 8px; }
+  .cov-outlet {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .cov-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 18px;
+    flex-grow: 1;
+    font-style: italic;
+  }
+  .cov-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 4px;
+    align-self: center;
+    letter-spacing: 0.06em;
+  }
+  .cov-tag.navy { background: var(--navy); }
+  .cov-tag.gold { background: var(--gold); }
+
+  /* BLOCKQUOTE-STYLE CALLOUT */
+  .pullquote {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    padding: 22px 28px;
+    margin: 28px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.18rem;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.45;
+  }
+
+  /* TRAJECTORY */
+  .trajectory {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 26px 24px;
+    margin: 20px 0;
+  }
+  .traj-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .traj-rows { display: flex; flex-direction: column; gap: 10px; }
+  .traj-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 90px;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+  .traj-cycle { font-family: 'JetBrains Mono', monospace; color: var(--muted); font-weight: 600; }
+  .traj-bar-wrap { background: transparent; height: 20px; }
+  .traj-bar {
+    height: 100%;
+    background: var(--navy);
+    border-radius: 3px;
+  }
+  .traj-bar.current { background: var(--gold); }
+  .traj-amount {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    text-align: right;
+    color: var(--ink);
+  }
+
+  /* QUESTIONS */
+  .questions { display: flex; flex-direction: column; gap: 22px; margin-top: 24px; }
+  .question {
+    background: var(--white);
+    border-left: 4px solid var(--navy);
+    padding: 20px 24px;
+    border-radius: 0 6px 6px 0;
+  }
+  .question:nth-child(2) { border-left-color: var(--gold); }
+  .question:nth-child(3) { border-left-color: var(--red); }
+  .question-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--muted);
+    letter-spacing: 0.14em;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .question h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .question p { font-size: 0.97rem; line-height: 1.65; }
+  .question p strong { color: var(--navy); }
+
+  /* KICKER */
+  .kicker {
+    text-align: center;
+    padding: 48px 24px;
+    background: var(--navy);
+    color: var(--white);
+  }
+  .kicker-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+    font-style: italic;
+    color: var(--gold);
+    max-width: 700px;
+    margin: 0 auto 18px;
+    line-height: 1.4;
+  }
+  .kicker-sub { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
+
+  /* SOURCES */
+  .sources {
+    background: var(--white);
+    padding: 36px 0;
+    border-top: 1px solid var(--border);
+  }
+  .sources h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .sources ul { list-style: none; margin: 0; padding: 0; }
+  .sources li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+  }
+  .sources li::before {
+    content: "·";
+    position: absolute;
+    left: 4px;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.6);
+    padding: 36px 24px;
+    text-align: center;
+  }
+  .footer-logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; }
+  .footer-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.74rem; color: rgba(255,255,255,0.5); margin: 6px 0 16px; }
+  .footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.84rem;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* SUBSCRIBE CTAs */
+  .subscribe-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.04em;
+    transition: all 0.15s;
+    border: 2px solid var(--gold);
+  }
+  .subscribe-cta:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+  }
+  .subscribe-cta.outline {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+  }
+  .subscribe-cta.outline:hover {
+    background: var(--gold);
+    color: var(--navy);
+  }
+  .subscribe-cta.large {
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  /* MID-PAGE CTA BLOCK */
+  .midpage-cta {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 32px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .midpage-cta-text {
+    flex: 1;
+    min-width: 240px;
+  }
+  .midpage-cta-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .midpage-cta-sub {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  /* KICKER SUBSCRIBE */
+  .kicker-actions {
+    margin-top: 28px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+    .buckets { grid-template-columns: 1fr; gap: 12px; }
+    .geo-compare, .coverage-compare { grid-template-columns: 1fr; }
+    .ziprow {
+      grid-template-columns: 28px 50px 1fr 78px;
+      font-size: 0.78rem;
+      gap: 6px;
+    }
+    .zip-loc { display: none; }
+    .ziprow .zip-bar-wrap { grid-column: span 1; }
+    .num-big { font-size: 3.4rem; }
+    .two-numbers { gap: 24px; }
+    .section { padding: 48px 0; }
+    .question { padding: 16px 18px; }
+    .midpage-cta { padding: 22px 24px; flex-direction: column; align-items: stretch; text-align: center; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions a { width: 100%; max-width: 280px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SITE NAV -->
+<nav class="site-nav">
+  <div class="site-nav-left">
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <span class="tagline">Receipts, not rage.</span>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+    <a href="https://mn06watch.com/tweets/">Tweets</a>
+    <a href="https://mn06watch.com/sponsorships/">Bills</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Follow the Money #2 · Q1 2026 Update</div>
+    <h1>$9.2 Million. $1.0 Million.<br><span class="gap">The Gap Between.</span></h1>
+    <p class="subtitle">What Tom Emmer's office announced. What the FEC actually shows. A quarterly update on Rep. Tom Emmer's fundraising structure.</p>
+
+    <div class="two-numbers">
+      <div class="num-block">
+        <div class="num-label announced">Announced</div>
+        <div class="num-big struck">$9.2M</div>
+        <div class="num-cap">Press release figure<br>(campaign + JFC + leadership PAC<br>+ NRCC allocations)</div>
+      </div>
+      <div class="num-block">
+        <div class="num-label filed">Filed</div>
+        <div class="num-big kept">$1.0M</div>
+        <div class="num-cap"><strong>Emmer for Congress</strong><br>Q1 2026 receipts<br>(the campaign account)</div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://mn06watch.substack.com/subscribe" class="subscribe-cta">Subscribe to MN06Watch</a>
+      <a href="https://www.fec.gov/data/committee/C00545749/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;">Source: FEC.gov filings, April 15, 2026 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- THE TWO NUMBERS -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="section-label">The Two Numbers</div>
+    <h2>What was announced. What was filed.</h2>
+    <p>On April 13, Rep. Tom Emmer's campaign announced a record. The House Majority Whip had raised <strong>$9.2 million in the first quarter of 2026</strong>, bringing his cycle total to $38 million and his career-as-Whip total to $71 million. Punchbowl News framed it the same day as positioning Emmer "as an heir apparent to the top rung of GOP leadership." The campaign press release thanked "thousands of grassroots donors from Minnesota and across the country."</p>
+    <p>Two days later, the actual FEC filings dropped.</p>
+    <p>Emmer for Congress — the campaign committee with his name on it, the one that pays for his MN-06 re-election — reported <strong>$1.0 million</strong> in Q1 receipts. Not $9.2 million. One million.</p>
+    <p>That isn't a contradiction. It's a structure. And it's worth understanding what that structure does, because the headline number on April 13 measures something very different from what the headline appears to measure.</p>
+  </div>
+</div>
+
+<!-- THE THREE BUCKETS -->
+<div class="section">
+  <div class="container">
+    <div class="section-label">Where the $9.2 Million Lives</div>
+    <h2>Three committees. Three sets of rules.</h2>
+    <p>Emmer's political operation runs through three federal committees. The April 15 quarterly filings show what each one took in.</p>
+
+    <div class="buckets">
+      <div class="bucket">
+        <div class="bucket-top"></div>
+        <div class="bucket-body">
+          <div class="bucket-tag navy">Campaign Committee</div>
+          <div class="bucket-name">Emmer for<br>Congress</div>
+          <div class="bucket-q1 navy">$1.55M</div>
+          <div class="bucket-q1-label">Q1 2026 receipts</div>
+          <div class="bucket-divider"></div>
+          <div class="bucket-cash-label">Cash on hand</div>
+          <div class="bucket-cash">$4.59M</div>
+          <div class="bucket-pill navy">YES</div>
+          <div class="bucket-rule">Can pay for re-election</div>
+          <div class="bucket-detail">TV ads, mailers, staff,<br>polling — anything for<br>the MN-06 race.</div>
+        </div>
+      </div>
+
+      <div class="bucket">
+        <div class="bucket-top red"></div>
+        <div class="bucket-body">
+          <div class="bucket-tag red">Leadership PAC</div>
+          <div class="bucket-name">Electing Majority<br>Making Effective<br>Republicans</div>
+          <div class="bucket-q1 red">$0.49M</div>
+          <div class="bucket-q1-label">Q1 2026 receipts</div>
+          <div class="bucket-divider"></div>
+          <div class="bucket-cash-label">Cash on hand</div>
+          <div class="bucket-cash">$0.91M</div>
+          <div class="bucket-pill red">NO</div>
+          <div class="bucket-rule">Cannot pay for re-election</div>
+          <div class="bucket-detail">Federal law prohibits.<br>Funds go to other GOP<br>candidates and party.</div>
+        </div>
+      </div>
+
+      <div class="bucket">
+        <div class="bucket-top gold"></div>
+        <div class="bucket-body">
+          <div class="bucket-tag gold">Joint Fundraising Committee</div>
+          <div class="bucket-name">Emmer<br>Majority Builders</div>
+          <div class="bucket-q1 gold">$5.26M</div>
+          <div class="bucket-q1-label">Q1 2026 receipts</div>
+          <div class="bucket-divider"></div>
+          <div class="bucket-cash-label">(pass-through)</div>
+          <div class="bucket-cash">—</div>
+          <div class="bucket-pill gold">PASS</div>
+          <div class="bucket-rule">Splits to 51 committees</div>
+          <div class="bucket-detail">NRCC, CLF, vulnerable<br>GOP House campaigns —<br>including Emmer's.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 32px;"><strong>Emmer for Congress</strong> raised <strong>$1.55 million in Q1 2026</strong>. That account has $4.59 million cash on hand. This is the only money that can buy a TV ad in St. Cloud, mail a flyer to Blaine, or pay a campaign staffer in Anoka County. It's the war chest that matters for beating Doug Chapin in November.</p>
+
+    <p><strong>Electing Majority Making Effective Republicans</strong> — his leadership PAC — raised <strong>$493,000 in Q1</strong>, with $906,000 cash on hand. Federal law prohibits leadership PACs from spending on the sponsoring member's own campaign. That money cannot legally buy a single ad in MN-06. What it can do is cut checks to other House Republicans, fund the NRCC, pay for political travel, and underwrite the kind of conference-wide influence operation that keeps a Whip a Whip.</p>
+
+    <p><strong>Emmer Majority Builders</strong> — his joint fundraising committee, registered with the FEC in December 2023 — raised <strong>$5.26 million in Q1</strong>, the largest of the three. A JFC isn't a pile of money sitting somewhere. It's a pass-through. A single donor writes one check, and it gets split across the participating committees per a pre-disclosed allocation formula. The committee currently has 51 listed participants — including the NRCC, Congressional Leadership Fund, both of Emmer's own committees, and dozens of vulnerable House Republican incumbents and challengers (Bacon, Lawler, Kean, Valadao, Kiggans, Van Orden, Anna Paulina Luna, plus thirteen "EMB Nominee Funds" set up for specific competitive races from Nevada to Maine).</p>
+
+    <p>Sum the three Q1 receipts: $7.29 million. Add another $1.9 million in NRCC-allocated dollars and other affiliate flows, and you arrive at the $9.2 million headline.</p>
+
+    <p>This isn't hidden. A spokesperson for Emmer told Alpha News last cycle, when his office announced a similar combined $10 million Q1 figure, that the number came from "a combination of fundraising mechanisms that include Emmer's congressional campaign account, joint fundraising committees, and his leadership PAC." Same machinery, same combination, one year later.</p>
+  </div>
+</div>
+
+<!-- WHAT HE CAN ACTUALLY SPEND -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="section-label">What He Can Actually Spend</div>
+    <h2>One dollar in six.</h2>
+    <p>Of the $9.2 million Emmer announced for Q1:</p>
+    <ul>
+      <li><strong>$1.55 million</strong> flowed into the account that can pay for his re-election</li>
+      <li><strong>$493,000</strong> flowed into the leadership PAC, which by law cannot pay for his re-election</li>
+      <li>The rest moved through the JFC and out to other Republican committees, the NRCC, and the GOP House conference</li>
+    </ul>
+
+    <p>Of the $14.1 million the JFC has transferred to affiliated committees over the cycle, $4.33 million ended up in Emmer for Congress as "transfers from other authorized committees" — meaning JFC pass-throughs are now the single largest source funding the campaign account, larger than direct individual contributions or PAC donations. The JFC machinery isn't beside the campaign. It's the dominant feeder into it.</p>
+
+    <p>The campaign committee has built up a real war chest along the way: <strong>$4.59 million cash on hand</strong> at the end of Q1. That's substantial — enough for an aggressive race in MN-06, and roughly five times what challenger Doug Chapin has reported raising in total. The cash position is the part of the headline that's actually defensible. What isn't defensible is the implication that $9.2 million was raised for the MN-06 race. Roughly one dollar in six of the announced figure ended up in the account that fights that race; the other five went to the leadership operation, the conference, and the party.</p>
+
+    <div class="pullquote">
+      Emmer raised $9.2 million for the Republican political ecosystem in Q1. The campaign committee that defends MN-06 took in $1.55 million of it and now sits on a $4.59 million war chest. Both halves are true. The press release led with the larger one.
+    </div>
+
+    <div class="midpage-cta">
+      <div class="midpage-cta-text">
+        <div class="midpage-cta-headline">Get the next "Follow the Money" in your inbox.</div>
+        <div class="midpage-cta-sub">Quarterly donor analysis. Daily accountability coverage. No ads. No party affiliation. Just the receipts.</div>
+      </div>
+      <a href="https://mn06watch.substack.com/subscribe" class="subscribe-cta">Subscribe Free</a>
+    </div>
+  </div>
+</div>
+
+<!-- GEOGRAPHY -->
+<div class="section">
+  <div class="container">
+    <div class="section-label">The Geography Hasn't Changed</div>
+    <h2>Different quarter. Same pattern.</h2>
+    <p>January's <a href="https://mn06watch.substack.com/p/follow-the-money-who-funds-tom-emmer" style="color: var(--navy); font-weight: 600;">first Follow the Money</a> established the pattern: only <strong>2.7% of Emmer's contributions came from his own district</strong>, with Palm Beach, Florida as his top zip code. Wall Street, Silicon Valley, and Florida retirement communities funded his campaigns more than his constituents did.</p>
+
+    <div class="geo-compare">
+      <div class="geo-panel then">
+        <div class="geo-panel-label">January 2026</div>
+        <div class="geo-panel-sub">Follow the Money #1</div>
+        <div class="geo-pct">2.7%</div>
+        <div class="geo-pct-label">In-District</div>
+        <div class="geo-divider"></div>
+        <div class="geo-zip">Top zip: 33480 PALM BEACH, FL</div>
+      </div>
+      <div class="geo-panel now">
+        <div class="geo-panel-label">April 2026</div>
+        <div class="geo-panel-sub">Follow the Money #2</div>
+        <div class="geo-pct">2.56%</div>
+        <div class="geo-pct-label">In-District</div>
+        <div class="geo-divider"></div>
+        <div class="geo-zip">Top zip: 33480 PALM BEACH, FL</div>
+      </div>
+    </div>
+
+    <p>Q1 2026 itemized data, broken down against the Minnesota Legislative Coordinating Commission's authoritative zip-to-district mapping, confirms the pattern. <strong>In-district contributions: 2.56%</strong> under a strict definition (excluding eight zip codes that overlap with MN-03), or 3.24% if you include those border zips. <strong>Out of state: 90.37%.</strong> Minnesota total: 9.63%, of which two-thirds comes from districts other than MN-06.</p>
+
+    <p>The top zip code is <strong>33480 — Palm Beach, Florida</strong> — same as last time, at $64,732. The first Minnesota zip is Wayzata (55391), in MN-03, at $51,857. The first MN-06 zip is St. Cloud, at #5, with $40,148.</p>
+
+    <h2 style="margin-top: 36px; font-size: 1.4rem;">Top 20 zip codes</h2>
+    <p style="font-size: 0.92rem; color: var(--muted);">Itemized contributions to Emmer for Congress, 2026 cycle through Q1.</p>
+
+    <div class="ziplist" id="ziplist"></div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch gold"></div><span>MN-06 (Emmer's district)</span></div>
+      <div class="legend-item"><div class="legend-swatch navy"></div><span>Other Minnesota districts</span></div>
+      <div class="legend-item"><div class="legend-swatch red"></div><span>Out of state</span></div>
+    </div>
+    <div class="legend-note">Excelsior (55331) is a boundary zip — partially MN-03, partially MN-06.</div>
+
+    <p style="margin-top: 28px;">Three states — Florida ($1.0M), Texas ($865K), and California ($788K) — each contributed more than the entire state of Minnesota.</p>
+
+    <p>The donor profile is consistent with FTM #1's findings. The top reported employers among individual contributors include <strong>Coinbase, Paradigm, Andreessen Horowitz, and Winklevoss Capital Management</strong> — all crypto firms with active legislative interests before the House Financial Services Committee, where Emmer sits. Apollo, Boeing, and BGR Group also appear. The single largest occupation category is "Retired," at $3.8 million — consistent with Palm Beach and Naples leading the geography.</p>
+  </div>
+</div>
+
+<!-- COVERAGE VS FILING -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="section-label">What the Coverage Said vs. What the Filings Show</div>
+    <h2>Same Whip. Same quarter.</h2>
+    <p>Two summaries of Emmer's Q1 2026 fundraising, published two days apart.</p>
+
+    <div class="coverage-compare">
+      <div class="cov-panel left">
+        <div class="cov-date">April 13, 2026</div>
+        <div class="cov-kind">Coverage — press release framing</div>
+        <div class="cov-outlet">PUNCHBOWL NEWS</div>
+        <div class="cov-quote">$9.2 million in Q1 fundraising, positioning Emmer as "an heir apparent to the top rung of GOP leadership."</div>
+        <div class="cov-tag navy">RECORD-BREAKING</div>
+      </div>
+      <div class="cov-panel right">
+        <div class="cov-date">April 15, 2026</div>
+        <div class="cov-kind">FEC filing — actual disclosure</div>
+        <div class="cov-outlet">QUIVER QUANTITATIVE</div>
+        <div class="cov-quote">"Tom Emmer recently disclosed $1.0M of fundraising in a Q1 FEC disclosure. This was the 73rd most from all Q1 reports."</div>
+        <div class="cov-tag gold">73rd MOST</div>
+      </div>
+    </div>
+
+    <p>Same Whip. Same quarter. The first sentence is what most readers absorbed. The second sentence is what the campaign committee actually filed.</p>
+
+    <p>Punchbowl's framing wasn't accidental — it's what the campaign was reaching for. The $9.2 million number is built to demonstrate the ability to convene large donors across Florida, Texas, California, and New York, route their money across the conference, and prove indispensability to whoever holds the Speaker's gavel next. <strong>It's a job application written in receipts.</strong> The 90.4% out-of-state share isn't just trivia — it's what makes that application credible.</p>
+
+    <p>Both numbers are real. They measure different things. The $9.2 million measures Emmer's value to the Republican political ecosystem — his ability to convene large donors and route their money across the conference. The $1.0 million measures what flowed into the account that pays for him to be the congressman from MN-06.</p>
+
+    <p>When a Whip's press release leads with the larger number and the press repeats it without unpacking, what gets reported is the influence figure. What doesn't get reported is the fact that 84% of those headline dollars are not available to defend the seat the headline is ostensibly about.</p>
+  </div>
+</div>
+
+<!-- TRAJECTORY -->
+<div class="section">
+  <div class="container">
+    <div class="section-label">The Trajectory</div>
+    <h2>The campaign account, cycle by cycle.</h2>
+    <p>Total receipts in Emmer for Congress, by election cycle.</p>
+
+    <div class="trajectory">
+      <div class="traj-rows" id="trajRows"></div>
+    </div>
+
+    <p>The campaign committee has already exceeded its full 2024 cycle total — with six months still left until Election Day. The growth curve since Emmer joined leadership is real. The campaign account is substantial. So is the JFC infrastructure that now feeds it.</p>
+
+    <p>What hasn't grown, in the two years since FTM #1's baseline data, is the share that comes from the people he represents.</p>
+  </div>
+</div>
+
+<!-- THREE QUESTIONS -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="section-label">Three Questions for MN-06 Voters</div>
+    <h2>You decide what it means.</h2>
+
+    <div class="questions">
+      <div class="question">
+        <div class="question-num">QUESTION 01</div>
+        <h3>Whose money is it?</h3>
+        <p>Of the $9.2 million Emmer announced for Q1, $1.55 million entered the account that can pay for his re-election. The rest belongs to the Republican leadership operation — for the conference, for vulnerable colleagues, for the Whip's standing, for the next promotion. Punchbowl described him as "an heir apparent to the top rung of GOP leadership." That's what the $9.2 million is buying. <strong>Whether MN-06 hired him to write that job application is a separate question.</strong></p>
+      </div>
+
+      <div class="question">
+        <div class="question-num">QUESTION 02</div>
+        <h3>Who's funding the part that is his?</h3>
+        <p>Palm Beach, Florida is still the top zip. Naples is third. <strong>Three states each give him more than Minnesota does.</strong> 2.56% comes from his own district. The crypto firms his Financial Services Committee oversees are still among his largest itemized employers.</p>
+      </div>
+
+      <div class="question">
+        <div class="question-num">QUESTION 03</div>
+        <h3>What does the gap mean?</h3>
+        <p>When a press release leads with $9.2 million and the FEC filing shows $1.0 million, the gap isn't a deception — it's a structure. But structures have purposes. <strong>This one converts a member's leadership position into a fundraising platform that benefits the party first, the conference second, and the home district as a measurable but small fraction.</strong></p>
+        <p style="margin-top: 12px;">The headline measures influence. The filing measures the campaign.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KICKER -->
+<div class="kicker">
+  <div class="kicker-quote">If 2.7% bothered you in January,<br>2.56% should bother you now.</div>
+  <div class="kicker-sub">The next "Follow the Money" drops in July, when Q2 2026 reports are filed.</div>
+  <div class="kicker-actions">
+    <a href="https://mn06watch.substack.com/subscribe" class="subscribe-cta large">Subscribe to MN06Watch</a>
+    <a href="https://mn06watch.substack.com/p/follow-the-money-who-funds-tom-emmer" class="subscribe-cta outline large">Read FTM #1</a>
+  </div>
+</div>
+
+<!-- SOURCES -->
+<div class="sources">
+  <div class="container">
+    <h3>Sources</h3>
+    <ul>
+      <li>FEC OpenFEC API: Emmer for Congress (C00545749), Emmer Majority Builders (C00859058), Electing Majority Making Effective Republicans PAC (C00592089) — committee summaries, totals, and Schedule A by-state / by-zip / by-employer aggregations, all data through April Quarterly filings (period ending 3/31/2026).</li>
+      <li>Minnesota Legislative Coordinating Commission Geospatial Information Office — authoritative zip-to-district mapping post-2022 redistricting.</li>
+      <li>Quiver Quantitative — automated FEC disclosure summary, April 15, 2026.</li>
+      <li>Punchbowl News — April 13, 2026.</li>
+      <li>Alpha News — April 9, 2025 (on-the-record statement from Emmer spokesperson confirming combined-buckets methodology).</li>
+      <li>52 U.S.C. §30125 / 11 CFR §300.10 — leadership PAC restrictions.</li>
+      <li><a href="https://mn06watch.substack.com/p/follow-the-money-who-funds-tom-emmer" style="color: var(--navy); font-weight: 600;">Follow the Money: Who Funds Tom Emmer?</a> — MN06 Watch, January 23, 2026.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">MN06Watch</div>
+  <div class="footer-tag">Receipts, not rage.</div>
+  <div class="footer-links">
+    <a href="https://mn06watch.com">Home</a>
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+    <a href="https://mn06watch.com/sponsorships/">Bills</a>
+    <a href="https://mn06watch.com/transcripts/">Transcripts</a>
+    <a href="https://mn06watch.com/tweets/">Tweets</a>
+  </div>
+  <div style="margin-top: 18px; font-size: 0.78rem; color: rgba(255,255,255,0.4);">Independent accountability journalism · No ads · No corporate sponsors · No party affiliation</div>
+</div>
+
+<script>
+  // Top 20 zip codes data
+  const zips = [
+    [1,  "33480", "Palm Beach, FL",      64732, "red"],
+    [2,  "55391", "Wayzata, MN",         51857, "navy"],
+    [3,  "34102", "Naples, FL",          51405, "red"],
+    [4,  "55436", "Edina, MN",           49650, "navy"],
+    [5,  "56301", "St. Cloud, MN",       40148, "gold"],
+    [6,  "55331", "Excelsior, MN",       39894, "gold-dark"],
+    [7,  "22101", "McLean, VA",          35075, "red"],
+    [8,  "10021", "Manhattan, NY",       32700, "red"],
+    [9,  "55317", "Chanhassen, MN",      30139, "gold"],
+    [10, "75093", "Plano, TX",           29647, "red"],
+    [11, "22207", "Arlington, VA",       28798, "red"],
+    [12, "44122", "Beachwood, OH",       27750, "red"],
+    [13, "55416", "St. Louis Park, MN",  26500, "navy"],
+    [14, "33418", "Palm Beach Gdns, FL", 25165, "red"],
+    [15, "10019", "Manhattan, NY",       25150, "red"],
+    [16, "94104", "SF Financial, CA",    24300, "red"],
+    [17, "22302", "Alexandria, VA",      24200, "red"],
+    [18, "10022", "Manhattan, NY",       23949, "red"],
+    [19, "76107", "Fort Worth, TX",      23719, "red"],
+    [20, "10010", "Manhattan, NY",       21818, "red"]
+  ];
+  const maxAmount = Math.max(...zips.map(z => z[3]));
+  const ziplist = document.getElementById('ziplist');
+  zips.forEach(([rank, zip, loc, amt, cls]) => {
+    const pct = (amt / maxAmount) * 100;
+    const row = document.createElement('div');
+    row.className = 'ziprow';
+    row.innerHTML = `
+      <div class="zip-rank">#${rank}</div>
+      <div class="zip-code">${zip}</div>
+      <div class="zip-loc">${loc}</div>
+      <div class="zip-bar-wrap"><div class="zip-bar ${cls}" style="width: ${pct}%"></div></div>
+      <div class="zip-amount">$${amt.toLocaleString()}</div>
+    `;
+    ziplist.appendChild(row);
+  });
+
+  // Trajectory data
+  const traj = [
+    [2014, 2049150, false],
+    [2016, 1887294, false],
+    [2018, 2216247, false],
+    [2020, 2845770, false],
+    [2022, 4431685, false],
+    [2024, 8158685, false],
+    ["2026*", 8309786, true]
+  ];
+  const trajMax = Math.max(...traj.map(t => t[1]));
+  const trajRows = document.getElementById('trajRows');
+  traj.forEach(([cycle, amt, current]) => {
+    const pct = (amt / trajMax) * 100;
+    const row = document.createElement('div');
+    row.className = 'traj-row';
+    row.innerHTML = `
+      <div class="traj-cycle">${cycle}</div>
+      <div class="traj-bar-wrap"><div class="traj-bar ${current ? 'current' : ''}" style="width: ${pct}%"></div></div>
+      <div class="traj-amount">$${(amt/1000000).toFixed(1)}M</div>
+    `;
+    trajRows.appendChild(row);
+  });
+  // Add note
+  const note = document.createElement('div');
+  note.style.cssText = 'font-size: 0.78rem; color: var(--muted); margin-top: 12px; font-style: italic;';
+  note.textContent = '* 2026 cycle is in progress; figure shown is through Q1 (5 quarters of 8). Already exceeds 2024 full-cycle total.';
+  trajRows.parentElement.appendChild(note);
+</script>
+
+</body>
+</html>
