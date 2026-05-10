@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Carter-Baker Inversion: How a Bipartisan Report Became Cover for Its Opposite | MN06Watch</title>
+<meta name="description" content="The 2005 Carter-Baker Commission report is cited constantly to support the SAVE Act and the destruction of ERIC. Here's what the report actually says — and what its own authors warned against, twenty years ago.">
+<meta property="og:title" content="The Carter-Baker Inversion">
+<meta property="og:description" content="The 2005 Carter-Baker Commission report is cited constantly to support the SAVE Act and the destruction of ERIC. Here's what the report actually says.">
+<meta property="og:type" content="article">
+<style>
+:root {
+  /* Brand palette */
+  --navy: #1a365d;
+  --gold: #d69e2e;
+  --white: #ffffff;
+  --gray-bg: #f7fafc;
+
+  /* Derived tokens */
+  --ink: #1a202c;
+  --paper: var(--white);
+  --rule: #cbd5e0;
+  --rule-soft: #e2e8f0;
+  --navy-deep: #0f2540;
+  --navy-soft: #2d4a73;
+  --gold-deep: #a87a1f;
+  --gold-soft: #f6e8c4;
+  --muted: #4a5568;
+
+  /* Section colors */
+  --report: var(--navy);
+  --network: var(--gold-deep);
+  --report-bg: #edf2f9;
+  --network-bg: #fdf6e3;
+  --dissent-bg: var(--gold-soft);
+
+  /* Typography */
+  --serif: 'Charter', 'Iowan Old Style', 'Sitka Text', 'Palatino Linotype', Georgia, serif;
+  --display: 'Bodoni 72', 'Didot', 'Bodoni Moda', Georgia, serif;
+  --sans: 'Söhne', 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============ NAVIGATION ============ */
+.site-nav {
+  border-bottom: 1px solid var(--rule);
+  background: var(--white);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.95);
+}
+.site-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  margin-left: 20px;
+}
+.site-nav a:hover { color: var(--navy); }
+.site-nav .brand {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+}
+.site-nav .brand a { color: var(--navy) !important; }
+.site-nav .brand .tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 400;
+  margin-left: 8px;
+}
+.nav-links { display: flex; align-items: baseline; }
+
+/* ============ ARTICLE HEADER ============ */
+.article-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 24px 48px;
+  text-align: left;
+}
+
+.kicker {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+h1.title {
+  font-family: var(--display);
+  font-size: clamp(36px, 5.5vw, 58px);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+  color: var(--navy);
+}
+
+.deck {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.4vw, 24px);
+  line-height: 1.4;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.byline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.byline { color: var(--ink); font-weight: 600; }
+.byline a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+
+/* ============ ARTICLE BODY ============ */
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.article p {
+  margin-bottom: 1.4em;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.article p.lede::first-letter {
+  font-family: var(--display);
+  font-size: 5.2em;
+  line-height: 0.85;
+  float: left;
+  margin: 8px 12px -4px 0;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.article h2 {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 700;
+  margin: 56px 0 20px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  padding-top: 24px;
+  border-top: 2px solid var(--navy);
+  color: var(--navy);
+  max-width: 100%;
+}
+
+.article h3 {
+  font-family: var(--sans);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin: 36px 0 14px;
+  color: var(--ink);
+}
+
+.article a {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 53, 86, 0.3);
+  transition: border-color 0.2s;
+}
+.article a:hover { border-bottom-color: var(--navy); }
+
+.article em { font-style: italic; }
+.article strong { font-weight: 600; }
+
+/* ============ PULL QUOTE ============ */
+.pull-quote {
+  font-family: var(--display);
+  font-size: clamp(24px, 3.2vw, 32px);
+  line-height: 1.25;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--navy);
+  margin: 48px 0;
+  padding: 32px 0 32px 32px;
+  border-left: 4px solid var(--gold);
+}
+
+.pull-quote-attr {
+  display: block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-deep);
+  margin-top: 16px;
+  font-weight: 700;
+}
+
+/* ============ BLOCKQUOTE ============ */
+blockquote.report-quote {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  background: var(--report-bg);
+  border-left: 3px solid var(--navy);
+  padding: 22px 28px;
+  margin: 28px 0;
+  font-style: italic;
+  color: var(--navy-deep);
+}
+
+blockquote.report-quote .source {
+  display: block;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+blockquote.dissent-quote {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.55;
+  background: var(--dissent-bg);
+  border-left: 3px solid var(--gold);
+  padding: 22px 28px;
+  margin: 28px 0;
+  font-style: italic;
+  color: #5a4419;
+}
+
+blockquote.dissent-quote .source {
+  display: block;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+/* ============ SIDE-BY-SIDE COMPARISON ============ */
+.comparison {
+  margin: 36px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+
+.comparison-side {
+  padding: 24px;
+}
+
+.comparison-side.report {
+  background: var(--report-bg);
+  border-right: 1px solid var(--rule);
+}
+
+.comparison-side.network {
+  background: var(--network-bg);
+}
+
+.comparison-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+}
+
+.comparison-side.report .comparison-label {
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.comparison-side.network .comparison-label {
+  color: var(--gold-deep);
+  border-color: var(--gold);
+}
+
+.comparison-content {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.comparison-content p { margin-bottom: 12px; font-size: 16px; }
+.comparison-content p:last-child { margin-bottom: 0; }
+.comparison-content ul {
+  list-style: none;
+  padding: 0;
+}
+.comparison-content ul li {
+  padding-left: 18px;
+  position: relative;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.comparison-content ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .comparison { grid-template-columns: 1fr; }
+  .comparison-side.report {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+  }
+}
+
+/* ============ CONDITIONS LIST ============ */
+.conditions-list {
+  background: var(--gray-bg);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--gold);
+  padding: 28px 32px;
+  margin: 28px 0;
+}
+
+.conditions-list h4 {
+  font-family: var(--sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+
+.conditions-list ol {
+  list-style: none;
+  counter-reset: condition;
+  padding: 0;
+}
+
+.conditions-list ol li {
+  counter-increment: condition;
+  padding: 12px 0 12px 50px;
+  position: relative;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.conditions-list ol li:last-child { border-bottom: none; }
+
+.conditions-list ol li::before {
+  content: counter(condition);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold-deep);
+  width: 36px;
+  text-align: center;
+}
+
+/* ============ PATTERN SUMMARY ============ */
+.pattern {
+  margin: 40px 0;
+  border-top: 3px solid var(--navy);
+  padding-top: 24px;
+}
+
+.pattern-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+
+.pattern-row:last-child { border-bottom: none; }
+
+.pattern-topic {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.pattern-content {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  color: #2a2a2a;
+}
+
+@media (max-width: 640px) {
+  .pattern-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* ============ END NOTE ============ */
+.end-note {
+  margin: 64px 0 0;
+  padding: 32px 0 0;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.end-note p { font-size: 14px; margin-bottom: 12px; }
+.end-note strong { color: var(--ink); }
+
+/* ============ FOOTER ============ */
+.article-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.article-footer a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--muted);
+  margin: 0 8px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .article p { font-size: 17px; }
+  .article-header { padding: 48px 20px 32px; }
+  .article { padding: 0 20px 60px; }
+  .pull-quote { padding-left: 20px; margin: 32px 0; }
+  blockquote.report-quote, blockquote.dissent-quote { padding: 18px 22px; }
+  .conditions-list { padding: 22px 24px; }
+  .site-nav { padding: 12px 16px; }
+  .site-nav .nav-links a { margin-left: 12px; font-size: 12px; }
+  .site-nav .brand .tagline { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">
+    <a href="https://mn06watch.com" style="text-decoration:none;color:inherit;">MN06Watch</a>
+    <span class="tagline">Receipts, not rage.</span>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="kicker">Investigation · Receipts</div>
+  <h1 class="title">The Carter-Baker Inversion</h1>
+  <p class="deck">A bipartisan commission warned twenty years ago about systemic efforts to deceive voters about election procedures. The same commission's report is now being cited as authority for legislation that does what the report's own recommendations were written to prevent. Here is what the report actually says.</p>
+  <div class="byline-row">
+    <span class="byline">By <a href="https://mn06watch.com">Chad Maschke</a></span>
+    <span>May 10, 2026</span>
+  </div>
+</header>
+
+<article class="article">
+
+<p class="lede">The Election Integrity Network and its allied organizations cite the 2005 Carter-Baker Commission report constantly. It appears in EIN tweets pushing the SAVE America Act. It appears in Election Transparency Initiative press releases. It anchors the stated methodology of the Meyers Report, the "international voting survey" now being used as evidence the United States needs the SAVE Act. It is the most-cited document in the rhetorical infrastructure built around the bill.</p>
+
+<p>The pitch works as rhetoric because Carter-Baker is real, bipartisan, and substantive — a commission led by a Democratic former president and a Republican former secretary of state, organized through American University, funded by Carnegie and Ford and Knight. It works as advocacy because almost nobody reads ninety-two pages of election administration recommendations from 2005.</p>
+
+<p>The actual report is not what the network claims it is. On voter ID, registration, ballot integrity, and election administration, Carter-Baker's specific recommendations either contradict the network's deployments outright or attach safeguards that the network strips away. The report being cited and the report the commission published are different documents.</p>
+
+<p>This is what each looks like, side by side.</p>
+
+<h2>What the report actually said about fraud</h2>
+
+<p>The single most-cited Carter-Baker line in the network's rhetorical universe is some version of <em>the commission warned that absentee ballots are the largest source of voter fraud.</em> It appears in EIN posts, ETI press releases, and op-eds promoting the SAVE Act. The actual sentence from the report, on page 46:</p>
+
+<blockquote class="report-quote">
+"Fraud occurs in several ways. Absentee ballots remain the largest source of potential voter fraud."
+<span class="source">Carter-Baker Commission, p. 46</span>
+</blockquote>
+
+<p>"Potential" is doing significant work in that sentence. The network drops it.</p>
+
+<p>The report's broader framing of fraud is more direct. From page 18, in the discussion that introduces the commission's voter ID recommendation:</p>
+
+<blockquote class="report-quote">
+"There is no evidence of extensive fraud in U.S. elections or of multiple voting, but both occur, and it could affect the outcome of a close election."
+<span class="source">Carter-Baker Commission, p. 18</span>
+</blockquote>
+
+<p>The structure of that sentence is not optional. The commission found <em>no evidence</em> that fraud was extensive. It acknowledged fraud occurs. It justified its ID recommendation on the premise that even rare fraud could matter in a close election — not on the premise that fraud was widespread.</p>
+
+<p>The network's deployments invert this. They treat the recommendation as proof of widespread fraud, when the commission specifically said the evidence did not show that. This is the foundational inversion. Almost every other distortion in the network's use of Carter-Baker descends from it.</p>
+
+<h2>Voter ID: a recommendation with five conditions</h2>
+
+<p>Carter-Baker's voter ID recommendation is the most heavily cited and most heavily distorted part of the report. The commission did recommend a photo ID system. The network repeats this accurately. The recommendation came packaged with five conditions the network systematically removes.</p>
+
+<p>From Recommendation 2.5.1, page 21:</p>
+
+<blockquote class="report-quote">
+"To ensure that persons presenting themselves at the polling place are the ones on the registration list, the Commission recommends that states require voters to use the REAL ID card... This card should be modestly adapted for voting purposes to indicate on the front or back whether the individual is a U.S. citizen. <strong>States should provide an EAC-template ID with a photo to non-drivers free of charge.</strong>"
+<span class="source">Recommendation 2.5.1</span>
+</blockquote>
+
+<p>The report then immediately built in safeguards. From the surrounding section:</p>
+
+<blockquote class="report-quote">
+"To prevent the ID from being a barrier to voting, we recommend that states use the registration and ID process to enfranchise more voters than ever. <strong>States should play an affirmative role in reaching out to non-drivers by providing more offices, including mobile ones, to register voters and provide photo IDs free of charge.</strong>"
+<span class="source">Carter-Baker Commission, pp. 19–20</span>
+</blockquote>
+
+<p>Read as a package, the Carter-Baker ID recommendation attached five conditions:</p>
+
+<div class="conditions-list">
+  <h4>The Five Conditions Carter-Baker Attached to Voter ID</h4>
+  <ol>
+    <li>The ID is <strong>free of charge</strong>.</li>
+    <li>The state <strong>affirmatively reaches out</strong> to non-drivers — including mobile offices to find them.</li>
+    <li>Voters without ID can use a <strong>provisional ballot verified by signature</strong> during the transition period.</li>
+    <li>The state establishes <strong>ombudsman institutions</strong> to address citizen complaints about misuse of data or mistaken purges.</li>
+    <li>Legal protections <strong>prohibit any commercial use of voter data</strong> and impose penalties for abuse.</li>
+  </ol>
+</div>
+
+<p>The SAVE America Act requires documentary proof of citizenship — a passport, birth certificate, or naturalization papers — at the registration desk.</p>
+
+<div class="comparison">
+  <div class="comparison-side report">
+    <div class="comparison-label">Carter-Baker Recommended</div>
+    <div class="comparison-content">
+      <ul>
+        <li>Free IDs provided by the state</li>
+        <li>Affirmative outreach to non-drivers</li>
+        <li>Mobile offices to reach voters</li>
+        <li>Provisional-ballot pathway during transition</li>
+        <li>Ombudsman institutions for complaints</li>
+        <li>Prohibition on commercial use of voter data</li>
+        <li>State does verification through database matching</li>
+      </ul>
+    </div>
+  </div>
+  <div class="comparison-side network">
+    <div class="comparison-label">SAVE America Act Imposes</div>
+    <div class="comparison-content">
+      <ul>
+        <li>Documentary proof at the registration desk</li>
+        <li>No requirement that documents be free</li>
+        <li>No affirmative outreach mandate</li>
+        <li>No transitional provisional pathway</li>
+        <li>No ombudsman institutions</li>
+        <li>Voter rolls shared with DHS without use restrictions</li>
+        <li>Documentation burden pushed onto the voter</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<p>The SAVE Act also imposes a documentary requirement Carter-Baker did not recommend. The Carter-Baker proposal was that REAL ID — already required for boarding planes and entering federal buildings — be modestly adapted to indicate citizenship, with the state doing the verification work behind the scenes. SAVE pushes the documentation burden onto the voter at the point of registration.</p>
+
+<p>Three members of the commission warned about exactly this in 2005. From the additional statement of Tom Daschle, joined by Spencer Overton and Raul Yzaguirre:</p>
+
+<blockquote class="dissent-quote">
+"The documents required by REAL ID to secure a driver's license, and consequently a photo ID to vote under this recommendation, include a birth certificate, passport or naturalization papers, a photo identity document, and proof of Social Security number. Obtaining such documents can be difficult, even for those not displaced by the devastation of Hurricane Katrina. <strong>For some, the Commission's ID proposal constitutes nothing short of a modern day poll tax.</strong>"
+<span class="source">Daschle, Overton, Yzaguirre — additional statement, p. 88</span>
+</blockquote>
+
+<p class="pull-quote">
+Three members of the bipartisan commission warned in 2005 that the documentation burden the network is now imposing through SAVE looked like a poll tax.
+<span class="pull-quote-attr">— Carter-Baker Commission, additional statements</span>
+</p>
+
+<p>The network does not cite this part of the report.</p>
+
+<h2>Voter registration: the system the network destroyed</h2>
+
+<p>The network's case against ERIC — the Electronic Registration Information Center, the bipartisan multi-state voter roll maintenance compact — was that the system was unreliable, partisan, or exposed voter data to misuse. The Carter-Baker recommendation on registration list maintenance was, almost word for word, the system the network destroyed.</p>
+
+<p>From Section 2.2, "Interoperability Among States":</p>
+
+<blockquote class="report-quote">
+"With assistance and supervision by the EAC, a distributed database system should be established to make sure that the state lists remain current and accurate to take into account citizens moving between states. Congress should also pass a law mandating that states cooperate with this system to ensure that citizens do not vote in two states."
+<span class="source">Recommendation 2.2.3</span>
+</blockquote>
+
+<blockquote class="report-quote">
+"With interoperability, citizens should need to register only once in their lifetime and updating their registration will be facilitated when they move."
+<span class="source">Recommendation 2.2.6</span>
+</blockquote>
+
+<p>The commission was explicit. States should share data — full legal name, date of birth, signature image, Social Security number — across a distributed system supervised by the federal Election Assistance Commission. This is, in operational terms, the architecture ERIC implemented. ERIC is not a perfect match — it is a multi-state nonprofit rather than under EAC supervision — but it is the closest operational implementation of Carter-Baker's interoperability recommendation that the United States produced.</p>
+
+<p>Beginning in 2022, the network organized state-by-state withdrawal campaigns from ERIC. Nine states pulled out. The network then promoted replacement systems with narrower data-sharing scope. The network's destruction of ERIC and citation of Carter-Baker in the same rhetorical breath are not reconcilable.</p>
+
+<h2>Vote by mail: one sentence, selectively quoted</h2>
+
+<p>The network's deployments treat Carter-Baker as having warned against vote by mail. The actual treatment of vote by mail in the report is more ambivalent than either side typically acknowledges, and the network's selective quotation is the cleanest example of the technique in the document.</p>
+
+<p>The vote-by-mail discussion runs from pages 35 to 36. The report acknowledges the practice is expanding, identifies legitimate fraud risks, and notes specific vulnerabilities — interception of blank ballots, vote buying, pressure on voters at home or in nursing homes. But the report's actual recommendation is one sentence:</p>
+
+<blockquote class="report-quote">
+"The Commission encourages further research on the pros and cons of vote by mail and of early voting."
+<span class="source">Recommendation 4.2.1</span>
+</blockquote>
+
+<p>That is the entire recommendation. Not a prohibition. Not a list of safeguards required before adoption. A call for further research.</p>
+
+<p>The report also explicitly notes Oregon's success:</p>
+
+<blockquote class="report-quote">
+"Oregon appears to have avoided significant fraud in its vote-by-mail elections by introducing safeguards to protect ballot integrity, including signature verification."
+<span class="source">Carter-Baker Commission, p. 35</span>
+</blockquote>
+
+<p>The report's actual position is that vote by mail can work with proper safeguards — signature verification was the example given — and that fraud risks are higher in states with weaker safeguards. The network's deployment converts this into a generalized warning against mail voting itself. The Carter Center has publicly distanced itself from this exact misuse; AP and CBS reported in March 2026 on the Trump administration's mischaracterization of the report on mail voting.</p>
+
+<h2>Election administration: the recommendation that goes uncited</h2>
+
+<p>The single Carter-Baker recommendation least compatible with the network's project sits on page 50. It addresses the institution that conducts elections.</p>
+
+<blockquote class="report-quote">
+"To minimize the chance of election meltdown and to build public trust in the electoral process, <strong>nonpartisan structures of election administration are very important, and election administrators should be neutral, professional, and impartial.</strong> ... States should consider transferring the authority for conducting elections from the secretary of state to a chief election officer, who would serve as a nonpartisan official."
+<span class="source">Carter-Baker Commission, p. 50</span>
+</blockquote>
+
+<p>And from the letter from co-chairs Carter and Baker:</p>
+
+<blockquote class="report-quote">
+"We cannot build confidence in elections if secretaries of state responsible for certifying votes are simultaneously chairing political campaigns."
+<span class="source">Letter from Co-Chairs, p. ii</span>
+</blockquote>
+
+<p>The network's organizational architecture is the inverse. EIN, ETI, the Honest Elections Project, and the principals at Heritage overlap personally and organizationally with Republican Party operations, Republican attorneys general, Trump administration personnel decisions, and partisan political campaigns. Cleta Mitchell sits across this entire structure. Ken Cuccinelli at ETI is a former Trump DHS official. Heather Honey is now a Department of Homeland Security deputy assistant secretary while remaining personally and publicly aligned with the network.</p>
+
+<p>The network cites Carter-Baker for authority while building precisely the partisan-aligned election infrastructure Carter-Baker said could not produce public confidence in elections.</p>
+
+<p>This is the recommendation that gets the least airplay. There is no public EIN tweet citing Carter-Baker's call for nonpartisan election administration. There is no ETI press release citing the line about secretaries of state and political campaigns. The recommendation exists in the document the network claims to be defending. It is not a recommendation the network defends.</p>
+
+<h2>The recommendation that names the technique</h2>
+
+<p>The report's structural recommendations are not the only ones the network's deployments contradict. The report also anticipated, and named, the rhetorical conduct itself. Recommendation 5.1.4, on page 46:</p>
+
+<blockquote class="report-quote">
+"To deter systemic efforts to deceive or intimidate voters, the Commission recommends federal legislation to prohibit any individual or group from <strong>deliberately providing the public with incorrect information about election procedures for the purpose of preventing voters from going to the polls.</strong>"
+<span class="source">Recommendation 5.1.4</span>
+</blockquote>
+
+<p>The commission did not propose this recommendation in the abstract. It identified <em>systemic efforts to deceive</em> as a category of conduct serious enough to warrant new federal legislation — alongside violence, property destruction, and intimidation, which 5.1.3 made felonies.</p>
+
+<p>What the network has produced, in public, is documentable. The Meyers Report — presented as an independent international benchmark, cited by allied organizations as third-party validation for the SAVE Act — was credited on its own homepage to Cleta Mitchell and acknowledged EagleAI Network in its production. The "independent" report is internally produced. Its scoring methodology penalizes same-day registration, early voting, and mail-in ballots — practices associated with the highest U.S. participation rates and the lowest documented fraud. It scored Russia higher than thirty-three U.S. states. It scored Minnesota, ranked first in the nation by the peer-reviewed MIT Election Performance Index, at forty-eight.</p>
+
+<p>The Election Transparency Initiative, chaired by a former Trump DHS official, cited the Meyers Report as evidence the United States needs the SAVE Act. The Election Integrity Network cited the ETI press release. The chain is closed: a report produced inside the network, laundered through an allied organization, presented to the public as international validation.</p>
+
+<p>EIN's public communications consistently conflate concept polling with bill support. Eighty percent of Americans support voter ID; twenty-eight percent support the SAVE America Act. EIN cites the first number to defend the second. When confronted with the gap, the network's response — posted publicly — was: <em>"At this point, we don't need another poll."</em></p>
+
+<p>The Trump administration's mischaracterization of Carter-Baker on mail voting was significant enough that AP and CBS published fact-checks correcting it in March 2026. The Carter Center has objected to this exact misuse of the report. The network's deployments of Carter-Baker continue regardless.</p>
+
+<p>The report being cited as authority for the SAVE Act contains a recommendation calling for federal legislation against systemic efforts to deliberately give the public incorrect information about election procedures for the purpose of preventing voters from going to the polls. That is what 5.1.4 says. The reader can compare it to the public record.</p>
+
+<h2>The title of the report</h2>
+
+<p>There is a deeper inversion still. The report being cited is titled <em>Building Confidence in U.S. Elections.</em> Its opening line, from co-chairs Jimmy Carter and James Baker:</p>
+
+<blockquote class="report-quote">
+"Americans are losing confidence in the fairness of elections, and while we do not face a crisis today, we need to address the problems of our electoral system... Our Commission on Federal Election Reform was formed to recommend ways to raise confidence in the electoral system."
+<span class="source">Letter from Co-Chairs, p. ii</span>
+</blockquote>
+
+<p>The commission's stated purpose was to raise public confidence. Every recommendation in the report is structured around that purpose. The five pillars, the safeguards, the nonpartisan administration, the prohibition on systemic deception — all of it.</p>
+
+<p>The network cites this report as authority for legislation, executive orders, and a state-by-state advocacy campaign. The measurable public effect of that campaign, by every available poll, has been the opposite of the report's stated purpose. Confidence in U.S. elections is lower today than it was in 2005. The institutions Carter-Baker recommended — interoperable databases, nonpartisan administration, signature-verified provisional pathways, ombudsman structures — have either been dismantled or never built.</p>
+
+<p class="pull-quote">
+The report being cited claims authority. Its purpose was to raise public confidence in elections. The campaign citing it has produced the opposite outcome on the only metric the report itself defined.
+</p>
+
+<h2>The pattern</h2>
+
+<p>Across every major recommendation area, the same pattern repeats.</p>
+
+<div class="pattern">
+
+  <div class="pattern-row">
+    <div class="pattern-topic">Voter ID</div>
+    <div class="pattern-content">Carter-Baker recommended free IDs, affirmative outreach, provisional-ballot pathways, and ombudsman protections. SAVE imposes documentation requirements without these safeguards. Three commissioners called the network's eventual approach a "modern day poll tax" in 2005.</div>
+  </div>
+
+  <div class="pattern-row">
+    <div class="pattern-topic">Registration Lists</div>
+    <div class="pattern-content">Carter-Baker recommended state-controlled, EAC-supervised database interoperability with single-lifetime registration. The network destroyed ERIC, the system that most closely implemented this recommendation, and now cites Carter-Baker as authority for replacement legislation.</div>
+  </div>
+
+  <div class="pattern-row">
+    <div class="pattern-topic">Vote by Mail</div>
+    <div class="pattern-content">Carter-Baker recommended further research and noted Oregon's success with proper safeguards. The network deploys the report as a generalized warning against mail voting. The Carter Center has publicly objected.</div>
+  </div>
+
+  <div class="pattern-row">
+    <div class="pattern-topic">Ballot Integrity</div>
+    <div class="pattern-content">Carter-Baker recommended routine public reporting by prosecutors on actual fraud prevalence, federal anti-deception legislation, and protection of legal voter assistance. The network omits these recommendations from its citation pattern.</div>
+  </div>
+
+  <div class="pattern-row">
+    <div class="pattern-topic">Administration</div>
+    <div class="pattern-content">Carter-Baker recommended nonpartisan administration and explicitly criticized partisan secretaries of state running campaigns. The network is built on the opposite premise and does not cite this recommendation.</div>
+  </div>
+
+</div>
+
+<p>The deployment is selective at every step. The selections favor the network's preexisting policy preferences. The safeguards Carter-Baker built into its recommendations to protect access — free IDs, affirmative outreach, ombudsman institutions, provisional-ballot pathways, prohibitions on commercial data use — are absent from the network's legislative output. The recommendations Carter-Baker made that constrain partisan election infrastructure are absent from the network's citation pattern entirely.</p>
+
+<p class="pull-quote">
+Carter-Baker is being used, not followed.
+</p>
+
+<p>The report is a real document. Its recommendations were a package. The package included safeguards designed to protect access, conditions designed to protect voters who lack documents, and structural reforms designed to prevent partisan capture of election administration. The legislation and the rhetorical infrastructure now being justified by reference to the report contain none of this.</p>
+
+<p>Twenty years ago, three commissioners on this same body warned that a documentation requirement of the kind now being imposed could function as a modern poll tax. They wrote it down. It is on page 88 of the report being cited as authority for imposing it.</p>
+
+<div class="end-note">
+<p><strong>About the sources.</strong> Every quotation in this piece is taken directly from <em>Building Confidence in U.S. Elections: Report of the Commission on Federal Election Reform</em> (September 2005). A clean copy of the report is hosted at the Capital Research Center: <a href="https://capitalresearch.org/app/uploads/baker-carter-commission-2005-election-doc.pdf">capitalresearch.org/app/uploads/baker-carter-commission-2005-election-doc.pdf</a>. Both American University and the Carter Center took down their original copies when the report was reframed in 2021. AP's March 11, 2026 fact check ("FACT FOCUS: The Trump administration is falsely claiming Jimmy Carter was against mail-in voting") and CBS Atlanta's March 12, 2026 coverage document the Carter Center's public objection to the network's use of the report.</p>
+
+<p><strong>What this piece does and does not claim.</strong> Carter-Baker did recommend a photo ID system. The argument here is about the conditions and safeguards attached to that recommendation, which the network strips when citing it. Carter-Baker did not endorse mail voting; it called for further research. Three commissioners signed the dissent quoted above; the full commission endorsed the report. This piece is a journalistic comparison of public legislative text and a public commission report. It is not a legal analysis.</p>
+</div>
+
+</article>
+
+<footer class="article-footer">
+  <p>
+    <a href="https://mn06watch.com">mn06watch.com</a> ·
+    <a href="https://mn06watch.substack.com">Substack</a> ·
+    <a href="https://twitter.com/MN6Watch">@MN6Watch</a>
+  </p>
+  <p style="margin-top:12px;">MN06Watch · Independent accountability journalism · Receipts, not rage.</p>
+</footer>
+
+</body>
+</html>
