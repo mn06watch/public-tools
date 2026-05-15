@@ -709,6 +709,105 @@ blockquote cite {
 /* selection */
 ::selection { background: var(--gold-soft); color: var(--navy); }
 
+/* ----- Subscribe block (after closer, before sources) ----- */
+.subscribe-block {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  border-top: 3px solid var(--gold);
+  border-radius: 6px;
+  padding: 40px 32px 44px;
+  margin: 56px 0 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(26, 54, 93, 0.12);
+}
+
+.subscribe-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(214, 158, 46, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(214, 158, 46, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.subscribe-block-inner {
+  max-width: 540px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-block-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.subscribe-block-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 3.5vw, 28px);
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.subscribe-block-headline em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.subscribe-block-sub {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 16px;
+  color: rgba(250, 247, 239, 0.78);
+  line-height: 1.55;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.subscribe-block-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 15px 36px;
+  border-radius: 4px;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.subscribe-block-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(214, 158, 46, 0.4);
+}
+
+.subscribe-block-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(250, 247, 239, 0.45);
+  margin-top: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .subscribe-block { padding: 32px 22px 36px; }
+  .subscribe-block-btn { padding: 13px 28px; font-size: 12px; }
+}
+
 /* ============================================ */
 /* ===== ADDITIONAL VISUAL COMPONENTS ========= */
 /* ============================================ */
@@ -1926,6 +2025,17 @@ blockquote cite {
     <div class="closer-question-text">If the handbook is the actual position, will EIN now advocate for it — pushing amendments to the SAVE America Act that incorporate the handbook's free-ID, notice-and-cure, multi-database, pending-status, and good-faith provisions?</div>
   </div>
 </div>
+
+<!-- ===== Subscribe block ===== -->
+<aside class="subscribe-block">
+  <div class="subscribe-block-inner">
+    <div class="subscribe-block-eyebrow">◆ If you read this far</div>
+    <h2 class="subscribe-block-headline">Get the next one <em>in your inbox</em>.</h2>
+    <p class="subscribe-block-sub">MN-06 Watch publishes daily accountability journalism — investigations, primary sources, and document-by-document receipts. Free. No ads.</p>
+    <a href="https://mn06watch.substack.com/subscribe" class="subscribe-block-btn">Subscribe on Substack →</a>
+    <div class="subscribe-block-meta">Free · Unsubscribe anytime · No spam</div>
+  </div>
+</aside>
 
 <!-- ===== Sources ===== -->
 <section class="sources">
