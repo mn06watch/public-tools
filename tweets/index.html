@@ -247,6 +247,7 @@
         .account-badge.rep { background: rgba(29, 155, 240, 0.2); color: var(--twitter-blue); }
         .account-badge.whip { background: rgba(212, 168, 75, 0.2); color: var(--gold); }
         .account-badge.personal { background: rgba(139, 148, 158, 0.2); color: var(--text-secondary); }
+        .account-badge.retweet { background: rgba(35, 134, 54, 0.2); color: var(--green-light); }
         
         .tweet-date { color: var(--text-secondary); font-size: 0.85rem; }
         
@@ -419,7 +420,26 @@
         let displayCount = 25;
         let charts = {};
         let topicCounts = {};
-        
+
+        // Emmer's own handles (case-insensitive). A tweet whose status-URL author
+        // is NOT one of these is a retweet of that author.
+        const EMMER_HANDLES = new Set(['reptomemmer', 'gopmajoritywhip', 'tomemmer']);
+
+        // Extract the author handle from a tweet's status URL: the path segment
+        // between the host and "/status/", for both x.com and twitter.com links.
+        // Normalizes to lowercase and strips a leading @. Returns null when the
+        // URL is missing or unparseable (caller treats that as not-a-retweet).
+        //
+        // NOTE: This detects PURE retweets only, not quote tweets. A quote tweet
+        // carries Emmer's own status URL, so its URL author is one of
+        // EMMER_HANDLES and it reads as an original by design.
+        function extractUrlAuthor(url) {
+            if (!url) return null;
+            const match = url.match(/^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/([^/?#]+)\/status\//i);
+            if (!match) return null;
+            return match[1].replace(/^@/, '').toLowerCase();
+        }
+
         async function loadData() {
             try {
                 const response = await fetch('https://pub-19f43b48149546699964c5a800800a2f.r2.dev/tweets_data.json');
@@ -874,11 +894,20 @@
                 ).join('');
                 
                 const tweetUrl = tweet.url || `https://x.com/${tweet.source_handle}/status/${tweet.id}`;
-                
+
+                // Retweet flag: URL author outside Emmer's own handles. Pure
+                // retweets only — quote tweets read as originals (see extractUrlAuthor).
+                const urlAuthor = extractUrlAuthor(tweet.url);
+                const isRetweet = urlAuthor !== null && !EMMER_HANDLES.has(urlAuthor);
+                const retweetBadge = isRetweet
+                    ? `<span class="account-badge retweet">RT @${escapeHtml(urlAuthor)}</span>`
+                    : '';
+
                 return `<div class="tweet-card">
                     <div class="tweet-header">
                         <div class="tweet-account">
                             <span class="account-badge ${accountClass}">${accountLabel}</span>
+                            ${retweetBadge}
                         </div>
                         <span class="tweet-date">${dateStr}</span>
                     </div>
