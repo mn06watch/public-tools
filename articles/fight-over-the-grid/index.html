@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Fight Over the Grid Comes Home — MN-06 Watch</title>
+<meta name="description" content="Two data centers, a county moratorium, and the same question in every hearing: who pays for the grid these facilities need? An MN-06 Watch special report.">
+<!-- OG: place a 1200x630 card at ./og.png before publishing -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Fight Over the Grid Comes Home">
+<meta property="og:description" content="Data centers are coming to Minnesota's 6th District. What they cost — and who pays — depends on rules being written right now.">
+<meta property="og:image" content="./og.png">
+<meta property="og:site_name" content="MN-06 Watch">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --navy:#1B3A5C; --gold:#C8922A; --red:#C0392B; --cream:#FAF8F5;
+    --ink:#23282D; --mute:#6E6A64; --line:#E2DAD0;
+    --navy-tint:#EAF0F5; --red-tint:#F7EAE7; --gold-tint:#F6ECD8;
+    --pan-for:#EAF0F5; --pan-against:#F7EAE7;
+    --serif:"Iowan Old Style",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:var(--sans);font-size:18px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--navy)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+  /* ---- sticky nav ---- */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(250,248,245,.93);
+    backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{max-width:1040px;margin:0 auto;padding:11px 22px;display:flex;
+    align-items:center;justify-content:space-between;gap:14px}
+  .brand{font-family:var(--sans);font-weight:800;letter-spacing:.04em;
+    font-size:14px;color:var(--gold);text-decoration:none;white-space:nowrap}
+  .brand span{color:var(--navy)}
+  .nav-links{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
+  .nav-links a{font-size:13px;font-weight:600;color:var(--mute);text-decoration:none;
+    white-space:nowrap;padding:4px 0;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+  .nav-links a:hover{color:var(--navy)}
+  .nav-links a.active{color:var(--navy);border-color:var(--gold)}
+  @media (max-width:760px){.nav-links{display:none}}
+
+  /* ---- hero ---- */
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#fff 0%,var(--cream) 100%)}
+  .grid-motif{position:absolute;inset:0;pointer-events:none;opacity:.5}
+  .grid-motif line{stroke:var(--navy);stroke-width:1;opacity:.07}
+  .grid-motif .live{stroke:var(--gold);stroke-width:2;opacity:.45;
+    stroke-dasharray:6 220;animation:flow 7s linear infinite}
+  @keyframes flow{to{stroke-dashoffset:-452}}
+  @media (prefers-reduced-motion:reduce){.grid-motif .live{animation:none;opacity:.25;stroke-dasharray:none}}
+  .hero-inner{position:relative;max-width:var(--maxw);margin:0 auto;padding:64px 22px 54px}
+  .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;color:var(--red);
+    text-transform:uppercase;margin:0 0 18px}
+  .eyebrow::before{content:"";display:inline-block;width:26px;height:2px;
+    background:var(--gold);vertical-align:middle;margin-right:10px}
+  h1{font-family:var(--serif);font-weight:700;color:var(--navy);
+    font-size:clamp(2.3rem,6.4vw,3.7rem);line-height:1.04;margin:0 0 18px;letter-spacing:-.01em}
+  .dek{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.6vw,1.4rem);
+    color:var(--ink);line-height:1.45;margin:0 0 26px;max-width:38em}
+  .peg{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;
+    font-size:13.5px;font-weight:700;letter-spacing:.02em;padding:9px 16px;border-radius:999px}
+  .peg b{color:var(--gold)}
+
+  /* ---- generic section ---- */
+  section{padding:54px 0}
+  .sec-eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 10px}
+  h2{font-family:var(--serif);font-weight:700;color:var(--navy);
+    font-size:clamp(1.7rem,4.4vw,2.2rem);line-height:1.12;margin:0 0 22px;letter-spacing:-.01em}
+  h3{font-family:var(--serif);font-weight:700;color:var(--navy);font-size:1.28rem;margin:30px 0 10px}
+  p{margin:0 0 18px}
+  .lede-p{font-size:19.5px}
+  .divider{height:1px;background:var(--line);border:0;margin:0}
+
+  /* ---- two projects ---- */
+  .projects{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:680px){.projects{grid-template-columns:1fr}}
+  .proj{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;
+    border-top:5px solid var(--navy)}
+  .proj.mont{border-top-color:var(--gold)}
+  .proj h3{margin:0 0 4px;font-size:1.34rem}
+  .proj .loc{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--mute);margin:0 0 16px}
+  .spec{display:flex;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:15.5px}
+  .spec:first-of-type{border-top:0}
+  .spec .k{flex:0 0 92px;color:var(--mute);font-weight:600}
+  .spec .v{flex:1;color:var(--ink)}
+  .undis{color:var(--red);font-weight:700}
+  .proj-note{font-size:14px;color:var(--mute);font-style:italic;margin-top:16px}
+
+  /* ---- steelman ledger (signature) ---- */
+  .ledger-intro{max-width:var(--maxw);margin:0 auto 30px}
+  .weigh{max-width:880px;margin:0 auto}
+  .row{margin:0 0 28px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+  .row-q{padding:18px 22px;background:var(--navy);color:#fff;display:flex;gap:14px;align-items:baseline}
+  .row-q .num{font-family:var(--serif);font-weight:700;color:var(--gold);font-size:1.2rem;flex:0 0 auto}
+  .row-q .qt{font-family:var(--serif);font-size:1.18rem;line-height:1.3;font-weight:700}
+  .pans{display:grid;grid-template-columns:1fr 1fr}
+  @media (max-width:620px){.pans{grid-template-columns:1fr}}
+  .pan{padding:20px 22px}
+  .pan.for{background:var(--pan-for)}
+  .pan.against{background:var(--pan-against);border-left:1px solid var(--line)}
+  @media (max-width:620px){.pan.against{border-left:0;border-top:1px solid var(--line)}}
+  .pan .tag{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:.13em;
+    text-transform:uppercase;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+  .pan.for .tag{background:var(--navy);color:#fff}
+  .pan.against .tag{background:var(--red);color:#fff}
+  .pan p{font-size:15.5px;line-height:1.62;margin:0}
+
+  /* ---- animated stat bars ---- */
+  .statbar{margin:18px 0 4px}
+  .statbar .lab{display:flex;justify-content:space-between;font-size:13px;font-weight:600;
+    color:var(--ink);margin-bottom:5px}
+  .statbar .lab .num{color:var(--navy);font-weight:800}
+  .track{height:13px;background:#e7e0d6;border-radius:7px;overflow:hidden}
+  .fill{height:100%;width:0;border-radius:7px;background:var(--navy);transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+  .fill.gold{background:var(--gold)}
+  .fill.red{background:var(--red)}
+  .statbar .cap{font-size:12.5px;color:var(--mute);margin-top:6px}
+
+  /* ---- pull / federal ---- */
+  .federal{background:var(--navy);color:#f3efe9}
+  .federal h2{color:#fff}
+  .federal .sec-eyebrow{color:var(--gold)}
+  .federal p{color:#e7e2da}
+  .federal a{color:var(--gold)}
+  .pull{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.4;
+    color:#fff;border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:26px 0}
+  .careful{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+    border-radius:12px;padding:18px 20px;font-size:15.5px;color:#e7e2da;margin:24px 0}
+  .careful b{color:#fff}
+
+  /* ---- rules callouts ---- */
+  .rulebox{background:var(--gold-tint);border:1px solid #e7d3a6;border-radius:12px;
+    padding:18px 20px;margin:22px 0}
+  .rulebox h3{margin:0 0 6px;font-size:1.1rem}
+  .rulebox p{font-size:15.5px;margin:0}
+
+  /* ---- closing questions ---- */
+  .questions{background:#fff;border-top:3px solid var(--gold)}
+  .qlist{counter-reset:q;list-style:none;padding:0;margin:8px 0 0}
+  .qlist li{counter-increment:q;position:relative;padding:18px 0 18px 52px;border-top:1px solid var(--line);
+    font-family:var(--serif);font-size:1.18rem;line-height:1.4;color:var(--ink)}
+  .qlist li::before{content:counter(q);position:absolute;left:0;top:16px;
+    font-family:var(--sans);font-weight:800;font-size:14px;color:#fff;background:var(--navy);
+    width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+  /* ---- sources accordion ---- */
+  .acc{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden}
+  .acc summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:700;color:var(--navy);
+    display:flex;justify-content:space-between;align-items:center}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary .chev{transition:transform .25s}
+  .acc[open] summary .chev{transform:rotate(90deg)}
+  .acc .body{padding:0 20px 18px}
+  .acc ul{margin:0;padding-left:20px}
+  .acc li{font-size:14.5px;color:var(--ink);margin:7px 0;line-height:1.5}
+
+  /* ---- footer ---- */
+  footer{background:var(--navy);color:#cdd7e2;padding:40px 0 48px;text-align:center}
+  footer .tag{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem;margin:0 0 6px}
+  footer .mark{font-weight:800;letter-spacing:.04em;color:#fff;margin:0 0 18px}
+  .btn{display:inline-block;background:var(--gold);color:#1c1c1c;font-weight:800;
+    text-decoration:none;padding:12px 24px;border-radius:999px;font-size:15px}
+  footer .back{display:block;margin-top:20px;font-size:13.5px;color:#9fb1c4}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  .ai-note{font-size:13px;color:var(--mute);font-style:italic;margin-top:18px}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Section navigation">
+  <div class="nav-inner">
+    <a class="brand" href="#top">MN06<span>Watch</span></a>
+    <ul class="nav-links">
+      <li><a href="#projects">The Projects</a></li>
+      <li><a href="#stakes">What's at Stake</a></li>
+      <li><a href="#federal">The Federal Question</a></li>
+      <li><a href="#rules">The Rules</a></li>
+      <li><a href="#questions">Questions</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="grid-motif" preserveAspectRatio="none" viewBox="0 0 800 400" aria-hidden="true">
+    <line x1="0" y1="80" x2="800" y2="80"/><line x1="0" y1="160" x2="800" y2="160"/>
+    <line x1="0" y1="240" x2="800" y2="240"/><line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="130" y1="0" x2="130" y2="400"/><line x1="330" y1="0" x2="330" y2="400"/>
+    <line x1="530" y1="0" x2="530" y2="400"/><line x1="690" y1="0" x2="690" y2="400"/>
+    <line class="live" x1="0" y1="160" x2="800" y2="160"/>
+    <line class="live" x1="530" y1="0" x2="530" y2="400" style="animation-delay:-3s"/>
+  </svg>
+  <div class="hero-inner">
+    <p class="eyebrow">Special Report</p>
+    <h1>The Fight Over the Grid Comes Home</h1>
+    <p class="dek">Two data centers, a county moratorium, and the same question in every hearing: who pays for the grid these facilities need?</p>
+    <span class="peg">Elk River City Council votes <b>July&nbsp;6</b></span>
+  </div>
+</header>
+
+<section id="intro">
+  <div class="wrap">
+    <p class="lede-p reveal">On the evening of June 15, the Elk River City Council chamber filled past its seats. The draw was not a tax levy or a school boundary. It was a proposal to convert a vacant building on Industrial Boulevard into a 33-megawatt data center — a windowless hall of servers that would raise the city utility's total electricity use by more than half.</p>
+    <p class="reveal">Sixty miles southwest, in Wright County, commissioners had already hit pause. On May 19 the county board enacted a one-year moratorium on data center applications in its townships, buying time to write rules before the next proposal arrived. And in Monticello, a roughly 550-acre campus code-named "Project Groundhog" is advancing toward an undisclosed tech tenant, an undisclosed power draw, and an estimated multi-billion-dollar build — a project so large the county's moratorium does not even reach it.</p>
+    <p class="reveal">The data center boom that reshaped Northern Virginia and stressed the Texas grid has arrived in Minnesota's 6th District. And the fights it has set off turn on a single, stubborn question that no glossy site rendering answers: when a facility this hungry plugs into the grid and the water table, who pays for it?</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="projects">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">Two potential projects</p>
+    <h2 class="reveal">Different scale. Different disclosure.</h2>
+    <p class="reveal">The first thing to get right is that the two MN-06 projects are not the same in specifics or scope.</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="projects">
+      <div class="proj elk">
+        <h3>Elk River</h3>
+        <p class="loc">Sherburne County</p>
+        <div class="spec"><span class="k">Developer</span><span class="v">Ned Abdul / Swervo / Elk River Capital LLC</span></div>
+        <div class="spec"><span class="k">Size</span><span class="v">33 MW; ~60,000 sq ft converted</span></div>
+        <div class="spec"><span class="k">To the city</span><span class="v">Up to ~$800K/yr; ~40 full-time jobs</span></div>
+        <div class="spec"><span class="k">Power</span><span class="v">Municipal utility (ERMU) has excess capacity; developer covers 100% of connection costs</span></div>
+        <div class="spec"><span class="k">Cooling</span><span class="v">Closed-loop; filled once, off-site disposal</span></div>
+        <div class="spec"><span class="k">Vote</span><span class="v"><b>City Council — July 6</b></span></div>
+      </div>
+      <div class="proj mont">
+        <h3>Monticello</h3>
+        <p class="loc">Wright County</p>
+        <div class="spec"><span class="k">Developer</span><span class="v">Monticello Tech LLC (Nick Frattalone)</span></div>
+        <div class="spec"><span class="k">Size</span><span class="v">~550 acres / ~3M sq ft; up to ~$5B</span></div>
+        <div class="spec"><span class="k">End user</span><span class="v"><span class="undis">Undisclosed</span> — 3 firms under NDA, "Project Groundhog"</span></div>
+        <div class="spec"><span class="k">Power draw</span><span class="v"><span class="undis">Undisclosed</span>, pending Xcel study</span></div>
+        <div class="spec"><span class="k">Path</span><span class="v">Via annexation — not reached by county moratorium</span></div>
+        <div class="spec"><span class="k">Status</span><span class="v">MCEA suing over environmental review; nothing built before Q2 2027</span></div>
+      </div>
+    </div>
+    <p class="proj-note">A separate, unaffiliated Scannell Properties proposal near the Bertram Chain of Lakes is also in the area. It is a different development and should not be confused with Monticello Tech. Neither MN-06 project is a cryptocurrency mine — both are general or AI-capable data centers, a distinction that matters below.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="stakes">
+  <div class="wrap ledger-intro">
+    <p class="sec-eyebrow reveal">What's at stake</p>
+    <h2 class="reveal">Weigh it yourself</h2>
+    <p class="reveal">Strip away the rhetoric and the data center debate comes down to a handful of contested questions. Here is the honest version of each — the strongest case for the projects, and the strongest case against. We lay the record down; you decide where it lands.</p>
+  </div>
+
+  <div class="wrap weigh">
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">01</span><span class="qt">Do they create real jobs?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>A Brookings analysis of ~770 facilities found counties landing their first large data center saw private employment rise 4–5% over five to six years, with gains in construction and information jobs and modest wage growth — no hit to home prices. Construction employs hundreds for a year or more; the permanent jobs pay from the mid-$50,000s into six figures.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>The facilities run on few people — roughly 25–40 per 100 MW. Independent analyses find one permanent job per $13M–$33M invested, far costlier than ordinary development. Brookings warns industry comparisons overstate the effect threefold. When Minnesota rewrote its data center tax law in 2025, it removed job creation as a stated purpose.</p></div>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">02</span><span class="qt">Is the tax revenue worth what's given up?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>Where they cluster, the revenue is enormous. Loudoun County, Virginia now draws close to half its tax revenue from data centers and has cut its residential property tax rate every year for nearly a decade. For a small city, even one facility is a meaningful new line — Elk River estimates up to $800,000 a year.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>Those revenues follow large tax breaks. Minnesota's 2025 law created a "large-scale" exemption tier, extended the window from 20 to 35 years, and removed a sunset. Virginia is the warning: its exemption, projected at $1.5M/yr in 2008, cost about $1.94B in a recent year — and the state's auditors found it loses ~52¢ for every dollar abated.</p>
+          <div class="statbar" data-fill="0.08">
+            <div class="lab"><span>Virginia exemption — projected, 2008</span><span class="num">$1.5M/yr</span></div>
+            <div class="track"><div class="fill"></div></div>
+          </div>
+          <div class="statbar" data-fill="1">
+            <div class="lab"><span>Virginia exemption — actual, recent year</span><span class="num">~$1.94B/yr</span></div>
+            <div class="track"><div class="fill red"></div></div>
+            <div class="cap">More than 100,000% above the original estimate.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">03</span><span class="qt">Can the grid take it?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>Data centers can be built to flex. A Duke study found that if large loads curtail during the rare peak hours — a fraction of a percent of annual operation — the existing grid could absorb a great deal of new demand with little new generation; in the Midwest grid serving Minnesota, about 15 gigawatts. Tech firms are also among the largest buyers of new wind and solar.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>In the mid-Atlantic grid the strain is visible: record capacity prices three auctions running, and the first-ever reliability shortfall — which the grid's own monitor blamed primarily on data center load. The IEA and DOE project U.S. data centers will account for close to half of all growth in national electricity demand through 2030.</p>
+          <div class="statbar" data-fill="0.29">
+            <div class="lab"><span>U.S. electricity used by data centers — 2023</span><span class="num">4.4%</span></div>
+            <div class="track"><div class="fill"></div></div>
+          </div>
+          <div class="statbar" data-fill="0.8">
+            <div class="lab"><span>Projected by 2028</span><span class="num">up to 12%</span></div>
+            <div class="track"><div class="fill gold"></div></div>
+            <div class="cap">Share of total U.S. electricity consumption (axis 0–15%).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">04</span><span class="qt">Who pays the electric bill?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>An Amazon-commissioned study concluded its data centers fully cover their own electricity costs and leave a surplus for grid upgrades. PG&E has projected large loads could slightly <em>lower</em> average bills by spreading fixed costs. And the viral "267% more" figure was found by PolitiFact to misrepresent its source — wholesale pricing points, not residential bills.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>Harvard's Ari Peskoe argues data centers are driving tens of billions in higher wholesale prices and grid spending, generally spread across all ratepayers. The mid-Atlantic grid's monitor found data center load alone drove a 174% — about $9.3 billion — jump in one capacity auction. Utilities sought a record level of rate increases in 2025, more than double the prior year.</p></div>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">05</span><span class="qt">What about the water?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>Cooling design is the whole ballgame. A closed-loop or direct-to-chip system recirculates a sealed fluid and uses a tiny fraction of an evaporative campus's draw. Elk River's developer says its system would be filled once and disposed of off-site, not drawn continuously from city water. Major operators are moving toward closed-loop and recycled-water designs.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>Many existing data centers still use evaporative cooling — millions of gallons a day, concentrated locally. In Monticello, residents cite the Prairie du Chien and Jordan aquifers and a neighborhood where a mobile home park already relies on bottled water. Minnesota's 2025 law added water-permit review above 100 million gallons a year for a reason.</p></div>
+      </div>
+    </div>
+
+    <div class="row reveal">
+      <div class="row-q"><span class="num">06</span><span class="qt">And the noise?</span></div>
+      <div class="pans">
+        <div class="pan for"><span class="tag">The case for</span>
+          <p>Noise is an engineering problem with engineering answers — setbacks, orientation, acoustic walls, quieter variable-speed fans. Elk River's developer commissioned a noise study, placed servers and cooling at the rear behind sound treatment, and points to roughly 1,000 feet of separation from the nearest home.</p></div>
+        <div class="pan against"><span class="tag">The case against</span>
+          <p>Operating data centers have generated sustained complaints elsewhere — a low, constant hum residents in Chandler, Arizona compared to a jet engine that never stops, severe enough the city wrote a data-center noise ordinance. In Elk River, a nearby brewery owner worried a constant hum could cost him the outdoor-seating customers his business depends on.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="federal" class="federal">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">The federal question</p>
+    <h2 class="reveal">A record on the energy — and silence on the district</h2>
+    <p class="reveal">So far this is a local-government story. What makes it a question for a member of Congress runs through the distinction this report has flagged twice: crypto mining versus the kind of data centers proposed here.</p>
+    <p class="reveal">Cryptocurrency mining accounts for roughly a third of data centers' global energy use. It creates few lasting jobs, produces no broader digital service, and can switch off in seconds when power gets expensive. AI and cloud data centers — the category the Elk River and Monticello projects fall into — demand continuous, stable power. The two are often lumped together; their energy and economic profiles differ sharply.</p>
+    <p class="reveal">That matters because Rep. Tom Emmer, who represents this district and serves as House Majority Whip, has a documented federal record on the energy appetite of data-center-class facilities — specifically on the crypto-mining end.</p>
+    <p class="pull reveal">In February 2024, when a federal agency moved to survey large bitcoin miners about their electricity use, Emmer called the order "an abuse of power."</p>
+    <p class="reveal">He argued the miners posed no threat to public safety, cast the energy-data collection as a regressive posture toward energy use, and stressed that crypto miners can curtail their load during peak hours. He has been the House's leading advocate for the cryptocurrency industry.</p>
+    <p class="reveal">His federal portfolio sits close to this terrain in another way. Emmer co-chairs the Congressional Crypto Caucus and serves as vice chairman of the House Financial Services subcommittee whose jurisdiction explicitly spans digital assets, financial technology, and artificial intelligence — the two industries, crypto and AI, now drawing on the same grid. His legislative work there has centered on crypto market structure: the Securities Clarity Act and the Blockchain Regulatory Certainty Act, both his, folded into the CLARITY Act he cosponsored and championed. On the federal bills aimed at the data-center energy buildout itself — the permitting-reform measures moving through his chamber — MN-06 Watch found none he authored or led.</p>
+    <div class="careful reveal">
+      <p>Emmer's record is about crypto mining — not the general and AI data centers proposed in Elk River and Monticello. <b>No causal line runs from his federal advocacy to those local projects, and this report draws none.</b> What the record shows is a representative who, on whether the public should even <em>measure</em> the electricity appetite of this class of facility, came down on the side of less scrutiny.</p>
+    </div>
+    <p class="reveal">And on the projects in his own district — the hearings, the moratorium, the undisclosed tenant drawing power from the same grid his constituents pay into — MN-06 Watch found no public statement from Emmer at all. Not in support, not in opposition. The fights are local, and the formal levers are state and municipal. But the silence is on the record, next to a federal energy posture that is anything but silent.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">The rules</p>
+    <h2 class="reveal">Minnesota is writing them in real time</h2>
+    <p class="reveal">If the costs and benefits of a data center depend on the rules, then that's where this story is actually being decided — and Minnesota has moved faster than most states.</p>
+    <div class="rulebox reveal">
+      <h3>The "very large customer" law (2025)</h3>
+      <p>Creates a class for electricity users above 100 MW and requires their service agreements to cover the full cost of serving them, avoid shifting costs onto other customers if a facility shrinks or closes, and comply with the state's carbon-free standard.</p>
+    </div>
+    <div class="rulebox reveal">
+      <h3>Xcel's large-load tariff</h3>
+      <p>Built around an "incremental cost test" meant to ensure big customers' payments exceed the costs they impose. Consumer and clean-energy groups largely back it; the Minnesota Attorney General's office has pressed Xcel on what it called an "opaque" forecasting process.</p>
+    </div>
+    <div class="rulebox reveal">
+      <h3>The local tools — and their limit</h3>
+      <p>A community generally cannot ban data centers outright; Wright County's board chair warned a flat prohibition would invite a lawsuit the county would lose. A moratorium buys time to write zoning standards. The Minnesota Center for Environmental Advocacy has gone to court over several projects, arguing the environmental reviews used were too thin.</p>
+    </div>
+    <p class="reveal">Whether those guardrails hold — whether cost-coverage is enforced, whether disclosure is real, whether the reviews are adequate — is the whole question. A data center built under strong rules and one built under weak ones are different facilities with the same footprint.</p>
+  </div>
+</section>
+
+<section id="questions" class="questions">
+  <div class="wrap">
+    <p class="sec-eyebrow reveal">What a resident is left with</p>
+    <h2 class="reveal">The questions worth carrying into the next hearing</h2>
+    <p class="reveal">The vote in Elk River is July 6. The end user in Monticello is still a code name. The county's moratorium clock is running. None of it resolves cleanly, and we do not pretend to know how you should weigh a new revenue line against a constant hum, or a tax base against an aquifer.</p>
+    <ol class="qlist reveal">
+      <li>Before your city or county votes, how much should it be required to tell you — the end user, the power draw, the water draw, the cost-coverage terms — and is "under NDA" an acceptable answer?</li>
+      <li>If a facility this large plugs into your grid, who should be on the hook when the bill for new generation and transmission comes due — the company, or every household on the line?</li>
+      <li>If one of these facilities is built and then shrinks or shuts down, who is left holding the cost of the generation and grid upgrades made to serve it — the company that asked for them, or every ratepayer on the line? Minnesota's new rules say the company. Whether the contracts deliver that is the part worth watching.</li>
+      <li>And where is your representative on the energy appetite of an industry he has spent years championing — would you like to know before August 11?</li>
+    </ol>
+    <p class="ai-note">MN-06 Watch uses AI tools to assist with research and editing. Facts are verified against primary sources; editorial judgments are the author's.</p>
+  </div>
+</section>
+
+<section id="sources" style="padding-top:0">
+  <div class="wrap reveal">
+    <details class="acc">
+      <summary>Sources <span class="chev">›</span></summary>
+      <div class="body">
+        <ul>
+          <li>Elk River Star News / Hometown Source — Elk River data center proposal, hearings, council schedule, 2026.</li>
+          <li>Monticello Times / Hometown Source — Monticello Tech LLC, "Project Groundhog," Wright County moratorium, 2026.</li>
+          <li>CBS News Minnesota — Elk River opposition; MCEA tracking of Minnesota proposals, June 2026.</li>
+          <li>Minnesota Center for Environmental Advocacy — statewide proposal tracking and litigation, 2026.</li>
+          <li>Minn. Stat. 297A.68 subd. 42; 2025 1st Special Session Ch. 12 — data center sales-tax exemption and 2025 revisions.</li>
+          <li>Minn. Stat. 216B (2025) — "very large customer" provisions; Minnesota PUC docket — Xcel large-load tariff and AG comments.</li>
+          <li>Brookings Institution — county-level employment effects of data centers, 2026.</li>
+          <li>Good Jobs First — data center subsidy analysis.</li>
+          <li>Duke University, Nicholas Institute — large-load flexibility study, 2025.</li>
+          <li>PJM / Monitoring Analytics — capacity auction results and data center load analysis, 2025.</li>
+          <li>Harvard Electricity Law Initiative (Ari Peskoe) — cost-allocation analysis.</li>
+          <li>PolitiFact — fact-check of the "267%" residential-bill claim, June 2026.</li>
+          <li>International Energy Agency, "Energy and AI," 2025; U.S. DOE / Lawrence Berkeley National Laboratory — data center electricity projections.</li>
+          <li>Rep. Tom Emmer, letter to the Office of Management and Budget on the EIA bitcoin-miner energy survey, February 2024 (The Block; Blockworks).</li>
+          <li>Rep. Tom Emmer — co-chair, Congressional Crypto Caucus; vice chairman, House Financial Services Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence; CLARITY Act (H.R. 3633), Securities Clarity Act, Blockchain Regulatory Certainty Act (emmer.house.gov, 2025).</li>
+          <li>MN-06 Watch tweet and transcript archive — reviewed for Emmer statements on Minnesota data center proposals (none found as of publication).</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="tag">Receipts, not rage.</p>
+    <p class="mark">MN06Watch</p>
+    <a class="btn" href="https://mn06watch.substack.com/subscribe">Subscribe to MN-06 Watch</a>
+    <!-- STITCH: cross-link to the 6/19 Daily goes here, e.g. ../huge-savings/ -->
+    <a class="back" href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var mq = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // reveal on scroll
+  var revs = document.querySelectorAll('.reveal');
+  if (mq || !('IntersectionObserver' in window)) {
+    revs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var ro = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, {threshold:0.12});
+    revs.forEach(function(el){ ro.observe(el); });
+  }
+
+  // animated stat bars
+  var bars = document.querySelectorAll('.statbar');
+  var bo = ('IntersectionObserver' in window) ? new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        var f = e.target.querySelector('.fill');
+        var pct = parseFloat(e.target.getAttribute('data-fill')) * 100;
+        f.style.width = pct + '%';
+        bo.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.5}) : null;
+  bars.forEach(function(b){
+    var f = b.querySelector('.fill');
+    var pct = parseFloat(b.getAttribute('data-fill')) * 100;
+    if (mq || !bo) { f.style.transition='none'; f.style.width = pct + '%'; }
+    else bo.observe(b);
+  });
+
+  // scroll-spy nav
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+  var ids = links.map(function(a){ return a.getAttribute('href').slice(1); });
+  var secs = ids.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          var active = links.filter(function(l){ return l.getAttribute('href') === '#'+e.target.id; })[0];
+          if(active) active.classList.add('active');
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){ so.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
