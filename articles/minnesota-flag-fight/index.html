@@ -35,9 +35,11 @@
   .nav-links a { color:rgba(255,255,255,0.8); text-decoration:none; font-size:0.85rem; margin-left:20px; font-family:'JetBrains Mono',monospace; }
   .nav-links a:hover { color:var(--gold); }
 
-  .sticky-nav { background:var(--navy); border-top:1px solid rgba(255,255,255,0.1); position:sticky; top:49px; z-index:99; overflow-x:auto; white-space:nowrap; }
+  .sticky-nav { background:var(--navy); border-top:1px solid rgba(255,255,255,0.1); position:sticky; top:75px; z-index:99; overflow-x:auto; white-space:nowrap; }
   .sticky-nav a { display:inline-block; color:rgba(255,255,255,0.75); text-decoration:none; font-size:0.78rem; font-family:'JetBrains Mono',monospace; padding:10px 16px; border-bottom:3px solid transparent; transition:all 0.2s; }
   .sticky-nav a:hover { color:var(--gold); border-bottom-color:var(--gold); background:rgba(255,255,255,0.05); }
+  /* clear site nav + section nav when jumping to an anchor */
+  html { scroll-padding-top:120px; }
 
   .hero { background:linear-gradient(135deg,var(--navy) 0%,#2a4a7f 100%); color:var(--white); padding:64px 24px 48px; text-align:center; }
   .hero-label { font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--gold); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; }
