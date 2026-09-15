@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Isn't Anyone Covering This Race? — MN06Watch</title>
+<meta name="description" content="Minnesota's largest and fastest-growing congressional district has produced eighteen news stories naming both candidates. A district eight points safer produced the same number. Five explanations, tested.">
+<meta property="og:title" content="Why Isn't Anyone Covering This Race?">
+<meta property="og:description" content="Minnesota's largest and fastest-growing congressional district has produced eighteen news stories naming both candidates. A district eight points safer produced the same number. Five explanations, tested.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://mn06watch.com/articles/why-isnt-anyone-covering-this-race/">
+<meta property="og:image" content="https://mn06watch.com/articles/why-isnt-anyone-covering-this-race/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Isn't Anyone Covering This Race?">
+<meta name="twitter:description" content="Eighteen stories name both candidates. A district eight points safer produced the same number. Five explanations, tested.">
+<meta name="twitter:image" content="https://mn06watch.com/articles/why-isnt-anyone-covering-this-race/og-image.png">
+<style>
+  :root {
+    --navy: #1a365d;
+    --gold: #d69e2e;
+    --white: #ffffff;
+    --light: #f7fafc;
+    --gray: #718096;
+    --dark: #2d3748;
+    --green: #276749;
+    --red: #9b2335;
+    --border: #e2e8f0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Serif 4', 'Georgia', serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  .site-nav {
+    background: var(--navy);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .site-nav .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .site-nav .tagline {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* STICKY SECTION NAV */
+  .sticky-nav {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0;
+    position: sticky;
+    top: 75px;
+    z-index: 99;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .sticky-nav a {
+    display: inline-block;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 10px 16px;
+    transition: all 0.2s;
+    border-bottom: 3px solid transparent;
+  }
+  .sticky-nav a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(255,255,255,0.05);
+  }
+  /* clear site nav + section nav when jumping to an anchor */
+  .wrap h2[id], .docs { scroll-margin-top: 150px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #2a4a7f 100%);
+    color: var(--white);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .hero .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    line-height: 1.15;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-weight: 700;
+  }
+  .hero .standfirst {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 660px;
+    margin: 0 auto;
+  }
+  .hero .byline {
+    margin-top: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.6);
+  }
+  @media (max-width: 640px) {
+    .hero { padding: 42px 18px 38px; }
+    .hero h1 { font-size: 1.8rem; }
+  }
+
+  /* ARTICLE */
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+  .wrap p { margin-bottom: 20px; font-size: 1.08rem; }
+  .wrap h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin: 48px 0 18px;
+    padding-top: 28px;
+    border-top: 3px solid var(--gold);
+    line-height: 1.25;
+  }
+  .wrap h2 .num {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .wrap h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin: 36px 0 14px;
+  }
+
+  /* DISCLOSURE */
+  .disclosure {
+    background: #fffaf0;
+    border-left: 4px solid var(--gold);
+    padding: 20px 22px;
+    margin: 32px 0;
+    font-size: 0.98rem;
+    color: #5a4a2a;
+  }
+  .disclosure strong {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .disclosure p { margin-bottom: 0; font-size: 0.98rem; }
+
+  /* TABLE */
+  .table-wrap {
+    margin: 32px 0;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--white);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--white);
+    text-align: left;
+    padding: 11px 12px;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.highlight { background: #fffaf0; }
+  tbody tr.highlight td { font-weight: 700; color: var(--navy); }
+  td.num { text-align: right; }
+  .table-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gray);
+    padding: 10px 12px;
+    background: var(--light);
+    border-top: 1px solid var(--border);
+    line-height: 1.5;
+  }
+
+  /* PULL */
+  .pull {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    color: var(--navy);
+    border-left: 4px solid var(--gold);
+    padding: 6px 0 6px 22px;
+    margin: 34px 0;
+  }
+
+  /* DOCS BOX */
+  .docs {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--navy);
+    padding: 24px 24px 20px;
+    margin: 40px 0;
+  }
+  .docs h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .docs a {
+    display: block;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 0.95rem;
+    transition: all 0.15s;
+  }
+  .docs a:hover { border-color: var(--gold); background: #fffaf0; }
+  .docs a .label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gray);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 3px;
+  }
+
+  /* METHOD */
+  .method {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin: 44px 0 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.65;
+  }
+  .method strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .method p { font-size: 0.9rem; margin-bottom: 0; }
+
+  /* CTA */
+  .cta {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 44px 24px;
+  }
+  .cta h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .cta p { color: rgba(255,255,255,0.75); margin-bottom: 20px; font-size: 0.98rem; }
+  .btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 12px 26px;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 3px;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: #0f2440;
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 0.82rem;
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<div class="sticky-nav">
+  <a href="#close">1. Not Close Enough</a>
+  <a href="#newspaper">2. The Newspaper</a>
+  <a href="#market">3. The TV Market</a>
+  <a href="#events">4. Nothing to Cover</a>
+  <a href="#money">5. The Money</a>
+  <a href="#left">What's Left</a>
+  <a href="#docs">Documents</a>
+</div>
+
+<div class="hero">
+  <div class="kicker">Investigation · September 2026</div>
+  <h1>Why Isn't Anyone Covering This Race?</h1>
+  <p class="standfirst">Minnesota's largest and fastest-growing congressional district has produced eighteen news stories naming both candidates. A district eight points safer produced the same number. Five explanations, tested.</p>
+  <div class="byline">MN-06 Watch · Published September 14, 2026</div>
+</div>
+
+<div class="wrap">
+
+<p>Minnesota's Sixth Congressional District is the largest in the state and the fastest growing. It has more people in it than any other district Minnesota sends to Washington. Its congressman is the third-ranking Republican in the U.S. House.</p>
+
+<p>Since Doug Chapin, the DFL nominee, entered the race in July 2025, eighteen news stories have appeared anywhere that name both him and Rep. Tom Emmer. Nine of those were triggered by a calendar event — an endorsement, a filing deadline, a fundraising report, or a primary night. Four were generated by the challenger's own events and four came from a day the congressman didn't show up somewhere. Two were columns.</p>
+
+<p>Not one was prompted by the two candidates appearing together. They have never shared a stage.</p>
+
+<p>Minnesota's Seventh District, which is eight points more Republican by Cook's measure and which no one considers competitive, produced the same number of articles. The Eighth district produced more. The First produced more than twice as many.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>District</th><th>Lean</th><th>Incumbent</th><th>Challenger</th><th class="num">Stories</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>MN-02</td><td>D+3</td><td><em>Open seat</em></td><td>Eric Pratt (R) v. Matt Little (DFL)</td><td class="num">66</td></tr>
+    <tr><td>MN-01</td><td>R+6</td><td>Brad Finstad (R)</td><td>Jake Johnson (DFL)</td><td class="num">43</td></tr>
+    <tr><td>MN-08</td><td>R+7</td><td>Pete Stauber (R)</td><td>Trina Swanson (DFL)</td><td class="num">21</td></tr>
+    <tr class="highlight"><td>MN-06</td><td>R+10</td><td>Tom Emmer (R)</td><td>Doug Chapin (DFL)</td><td class="num">18</td></tr>
+    <tr><td>MN-07</td><td>R+18</td><td>Michelle Fischbach (R)</td><td>Erik Osberg (DFL)</td><td class="num">18</td></tr>
+    <tr><td>MN-05</td><td>D+32</td><td>Ilhan Omar (DFL)</td><td>John Nagel (R)</td><td class="num">11</td></tr>
+    <tr><td>MN-04</td><td>D+18</td><td>Betty McCollum (DFL)</td><td>Paul Wikstrom (R)</td><td class="num">7</td></tr>
+    <tr><td>MN-03</td><td>D+11</td><td>Kelly Morrison (DFL)</td><td>Tyler Bass (R)</td><td class="num">4</td></tr>
+  </tbody>
+</table>
+<div class="table-caption">Indexed news stories naming both candidates in each race, July 2025 – September 14, 2026. Lean is Cook Partisan Voting Index. <a href="corpus.html" style="color:var(--navy)">Full MN-06 item list →</a></div>
+</div>
+
+<p>So the question is worth asking directly: why isn't anyone covering this race?</p>
+
+<div class="disclosure">
+  <strong>A word about where we sit</strong>
+  <p>MN-06 Watch covers this district. We have written to the congressman's office repeatedly and have not received a response, let alone a substantive response. The closest we have come was when Jon Justice asked Emmer about a Substack that was obsessed with him and he said he wasn't aware. We have an examination of his voting record in progress. In a piece about who covers this race and who doesn't, we are one of the parties covering this race.</p>
+</div>
+
+<p>There are five plausible explanations for why it's not receiving coverage.</p>
+
+<h2 id="close"><span class="num">Explanation One</span>The race isn't close enough to cover</h2>
+
+<p>This is the explanation most editors would offer, and it deserves to be taken seriously rather than waved off.</p>
+
+<p>Newsrooms in Minnesota are smaller than they were a decade ago. Every reporter assigned to a foregone conclusion is a reporter not assigned to something contested. Cook rates this district R+10 and the race Solid Republican. There is no independent public polling showing it close. The only poll that exists was commissioned by the challenger's own campaign; it showed the incumbent ahead by ten. Buried inside it: among voters who already knew who Chapin was, the race was tied. The subgroup is small and self-selecting, so it proves nothing about the outcome. It does suggest the race is unsettled in a way no one has independently tested.</p>
+
+<p>Triage under those conditions isn't laziness. It's arithmetic, and the scholarship on congressional campaign coverage has found for decades that coverage volume tracks competitiveness. Editors who send their limited people to the races that might actually turn are doing their jobs, but that is a human decision and humans make errors.</p>
+
+<p>The problem is that the pattern doesn't hold in Minnesota.</p>
+
+<p>Minnesota's Seventh is R+18. By any competitiveness logic it should receive less attention than the Sixth, and it receives the same. The Eighth is R+7, three points closer than the Sixth, and receives only modestly more. Meanwhile the Star Tribune published a standalone profile of Trina Swanson, the Eighth District challenger to Rep. Pete Stauber, in August. MPR published a standalone profile of Jake Johnson, the First District challenger to Rep. Brad Finstad, in September. MinnPost published a full analysis of the Seventh District race between Rep. Michelle Fischbach and Erik Osberg in April.</p>
+
+<p>Across eleven statewide outlets — the Star Tribune, MPR News, MinnPost, the Minnesota Reformer, the Pioneer Press, KARE 11, WCCO, KSTP, FOX 9, Axios Twin Cities and Bring Me The News — we could not locate a single standalone news story about the Sixth District race. Outside of four occasions, the statewide press has not named the challenger at all. Those four: a single day's coverage of the congressman's foot injury after Farmfest, which several outlets wrote at once; an opinion columnist's weekly roundup; a State Fair feature about long-shot candidates generally; and a listing in an election primer. None of the four is a story about this race.</p>
+
+<p>Competitiveness explains a great deal about Minnesota's coverage map. It does not explain the lack of coverage the Sixth district gets.</p>
+
+<h2 id="newspaper"><span class="num">Explanation Two</span>The district lost its newspaper</h2>
+
+<p>In 2014 the St. Cloud Times had thirty-six people in its newsroom. By February 2023, under Gannett ownership, it had none. Not a reduced staff. Zero reporters.</p>
+
+<p>Forum Communications launched St. Cloud LIVE that same month, hiring two of the survivors. That outlet is now doing much of the journalism about this congressional race. Five of the eighteen stories are theirs directly; two more are their work syndicated to the West Central Tribune and InForum. Close to forty percent of everything published about this race traces to one newsroom, and much of it to one reporter.</p>
+
+<div class="pull">When the district's Democratic candidates debated in January, the moderator was Mike Knaak — the retired managing editor of the St. Cloud Times. The paper is gone. Its people are still showing up.</div>
+
+<p>Compare what the neighboring districts have. The First District has the Rochester Post Bulletin, which has published at least nine pieces on its congressional race, including two separate analyses of whether the challenger can pull an upset. The Eighth has the Duluth News Tribune. Those are mid-sized daily newspapers with a reason to care about one congressional district in particular.</p>
+
+<p>The Sixth still has community weeklies — the Monticello Times, the Elk River Star News and their sister papers under Adams Publishing Group have covered the endorsement, the filing deadline and the primary. This is not a vacuum. But a weekly covering a dozen towns is not a substitute for a daily covering a district, and a startup is now carrying 755,000 people.</p>
+
+<h2 id="market"><span class="num">Explanation Three</span>The district is in the wrong television market</h2>
+
+<p>This is the part almost nobody notices, and it compounds everything above.</p>
+
+<p>The large majority of the Sixth District lives in the Minneapolis–St. Paul television market. The district takes in all of Carver, Sherburne and Wright counties, fifteen Anoka County communities including Blaine, its largest city, and two Hennepin County towns — all Twin Cities market. Its St. Cloud market share is Benton County, with about 41,600 people, plus twelve Stearns County communities including St. Cloud itself, together roughly 165,000. That is about a fifth of a district of 755,084.</p>
+
+<p>Nearly all of the coverage comes from the smaller share.</p>
+
+<p>The Seventh District is covered by Fargo-market stations — KVRR, Valley News Live, WDAY, KFGO, Lakeland PBS. The Eighth is covered by Duluth-market outlets — WDIO, Northern News Now, FOX21, WTIP, KAXE, plus the News Tribune. Those districts are the dominant political story in their markets. A congressional race in Duluth is <em>the</em> congressional race.</p>
+
+<p>The Sixth sits inside a market where four network affiliates, the Star Tribune, MPR, MinnPost, the Reformer and the Pioneer Press all operate — and where five congressional districts compete for the same attention. Researchers who have studied this across every U.S. House district found exactly this effect: districts served by large metropolitan outlets receive systematically less coverage, because the big outlet divides its attention.</p>
+
+<p>The Sixth District is too suburban for St. Cloud and too far out for the Twin Cities. It falls between two markets, and it has no paper of its own to catch it.</p>
+
+<h2 id="events"><span class="num">Explanation Four</span>The race hasn't produced anything to cover</h2>
+
+<p>Campaign journalism runs on events. Two candidates in a room, disagreeing about something, in front of a reporter. That is the raw material to cover.</p>
+
+<p>This race has not produced one because one candidate has not shown up in the district.</p>
+
+<p>On August 4 at Farmfest, the congressional forums went ahead as they do every year. Rep. Michelle Fischbach appeared alongside her opponent and defended tariffs and the USDA reorganization while he pushed back. Agweek wrote it up as a policy story naming both candidates. That is an ordinary day in an ordinary congressional race.</p>
+
+<p>Rep. Tom Emmer did not attend. He was advertised and has attended in the past. His absence was attributed to recovery from a series of foot surgeries. What followed was four stories in twenty-four hours — MPR, the Star Tribune, KSTP and Mediaite — about his health, prompted by Rep. Pete Stauber's remark that Emmer was "fighting for his damn life," which Stauber's office corrected within hours.</p>
+
+<p>Comparing Fischbach and Emmer's decision to attend is the point. Same event. Same day. Same reporters. One incumbent showed up and generated a story about farm policy and their race. The other didn't, instead generating a story about his foot and not discussing the issues that matter to his district.</p>
+
+<p>That is the clearest available evidence that engagement drives coverage, and it sits alongside a broader pattern. Stauber has agreed to a televised debate on WDIO on October 6 and a Duluth Chamber forum on September 29. Rep. Brad Finstad has agreed to a KAAL debate on October 13. Fischbach joined a candidate forum with her opponent in Wadena on August 27. In the Sixth District there is no scheduled debate and no joint appearance of any kind, and the congressman has not held an open in-person town hall in over a thousand days. The last was in Hamburg on August 16, 2023, confirmed against his own office's announcement. He has held telephone town halls since, including two in 2025; this count refers only to public, in-person events open to any constituent.</p>
+
+<p>Unfortunately, declining to debate is no longer unusual. FiveThirtyEight counted nineteen debates across fifteen of thirty-six Senate contests by October 18, 2022, meaning most races had held none. A Washington Examiner analysis found fewer than half of 2024 Senate races were scheduled for a general-election debate. Brookings tracked the five most competitive Senate races falling from seventeen debates in 2010 to six in 2022. Front-runners have concluded there is no penalty, and the evidence suggests they're right. A House Majority Whip's floor schedule is a genuine constraint that a rank-and-file member doesn't face. The foot surgeries were real. And this is not a partisan pattern: Reps. Betty McCollum, Ilhan Omar and Kelly Morrison have no scheduled general-election debates either. Whatever is happening here is happening across both parties.</p>
+
+<p>But two things survive that defense. Fischbach sits in a safer seat than Emmer and showed up anyway, which means seat safety does not by itself explain who engages. And an absence only stays invisible if newsrooms decline to write about it. When the format of a town hall became a dispute in the First District, KTTC made that the story on September 2. In the Sixth, with a longer and better-documented record of absence, no statewide outlet has brought that up.</p>
+
+<p>That is a choice on both sides of the newspaper.</p>
+
+<h2 id="money"><span class="num">Explanation Five</span>The money</h2>
+
+<p>Below is what the campaign finance record shows, but I want to be clear that we stop short of the conclusion some readers will want us to draw.</p>
+
+<p>Among Minnesota media companies, almost no political money moves at all. Gannett employees filed 1,706 itemized federal contributions nationally this cycle and not one came from Minnesota. TEGNA, which owns KARE 11, had none from Minnesota. Audacy, none. iHeartMedia's thirty-eight Minnesota records total $3,440 in payroll-deduction giving to the company's own PAC, averaging about ninety dollars apiece. The largest contribution from anyone listing the Star Tribune as an employer came from a Texas-based chairman giving to the Forward Party.</p>
+
+<p>The exception is Hubbard Broadcasting, which owns KSTP.</p>
+
+<p>Members of the Hubbard family gave $7,800 to Emmer-affiliated committees in the 2022 cycle, $95,600 in 2024, and $148,500 in the current cycle — a nineteenfold increase across three cycles. Other Hubbard Broadcasting employees gave separately and in small amounts, roughly $16,000 to $19,000 per cycle across scores of transactions, a figure that has not moved. Most of the current-cycle figure went to Emmer Majority Builders, a joint fundraising committee that distributes money among participating committees — this cycle it has sent $4.8 million to the NRCC, $2.2 million to Emmer's campaign, and $1.2 million to his leadership PAC. The share of any individual contribution reaching Emmer's own campaign is set by the committee's allocation formula. Separately, the family gave $12,000 directly to Emmer for Congress and $10,000 to his leadership PAC. Stanley Hubbard also gave $25,500 to the NRCC and $10,000 to the Minnesota Republican Party. The National Association of Broadcasters' PAC, which Hubbard executives fund heavily, contributed $30,000 to the joint fundraising committee.</p>
+
+<p>The challenger's campaign has reported 1,485 itemized contributions. None came from anyone employed by a media company.</p>
+
+<p><a href="hubbard-emmer-fec-transactions.csv">Every transaction behind these figures is published here</a>, with FEC transaction identifiers and filing image numbers.</p>
+
+<h3>Now the necessary qualifications.</h3>
+
+<p>These are contributions from individuals. Corporate money to federal candidates is illegal, and Hubbard Broadcasting the company has not given Tom Emmer anything. Stanley Hubbard's Republican giving is decades old and thoroughly documented; nobody is discovering it here. American newsrooms are supposed to operate independently of their owners' politics, and most do.</p>
+
+<p>And KSTP is not protecting Emmer. The station has covered him dozens of times over the past two years, including a June story built around his telling immigrants to assimilate or "go the hell back." That is not the behavior of a newsroom shielding a benefactor.</p>
+
+<p>What KSTP has not done is cover the race. The challenger appears in two KSTP items, both multi-race roundups. The station also conducts its own polling with SurveyUSA — it has polled the governor's race, the Senate primaries, and in December it polled Tom Emmer's statewide job approval. It has not polled the contest Tom Emmer is standing in.</p>
+
+<p>We have no evidence that the ownership's contributions influenced any editorial decision, and we are not asserting that they did. We are reporting that both facts are true at once. KSTP was asked for comment on its coverage decisions and its polling choices.</p>
+
+<h2 id="left"><span class="num">Conclusion</span>What's left</h2>
+
+<p>Four of the five explanations hold up. The district lost its newspaper. It sits between television markets meaning the district doesn't get a dedicated newsroom to cover it. Its incumbent has not appeared beside his opponent once. And the competitiveness logic that would justify all of it collapses the moment you notice that a district eight points safer gets the same attention.</p>
+
+<p>Which leaves something more uncomfortable than any of them individually.</p>
+
+<p>A race with no coverage attracts no independent polling. With no polling, the national handicappers have nothing to move. With no ratings change, editors have no reason to reassign anyone. And so the race stays uncovered. When Cook moved the First District from Solid to Likely Republican in June, coverage followed within weeks — CBS, Fox News, the Guardian, a scheduled televised debate. The system works when something jostles it.</p>
+
+<div class="pull">Nothing has jostled the Sixth.</div>
+
+<p>Zooming out, what this means is that the editorial decisions may be a self-fulfilling reason that it seems like there's nothing to cover. But the Chapin campaign's polling showing a tie amongst people that know Doug Chapin's name and those that don't, indicates there is reason to cover this race. If the thing holding this race back from being competitive is the same reason that the race isn't being covered, someone needs to break the stasis.</p>
+
+<p>Seven hundred fifty-five thousand people live in this district, more than in any other in Minnesota. It has grown faster than any other since the lines were drawn. Its congressman holds one of the most powerful positions in the House. In seven weeks its voters will decide whether to return him.</p>
+
+<p>If a race this large can go this quiet, the question isn't really about one district. It's about what has to happen before a congressional election is considered worth covering — and who is supposed to decide.</p>
+
+<div class="docs" id="docs">
+  <h4>Documents published with this piece</h4>
+  <a href="corpus.html">The full coverage corpus
+    <span class="label">All 18 items · date, outlet, headline · MN-06, July 2025 – September 2026</span></a>
+  <a href="hubbard-emmer-fec-transactions.csv">Hubbard–Emmer FEC transactions (CSV)
+    <span class="label">234 records · 2022, 2024, 2026 cycles · with FEC transaction IDs and image numbers</span></a>
+</div>
+
+<div class="method">
+  <strong>Sources and method</strong>
+  <p>The full list of all eighteen items — date, outlet and headline — is published alongside this piece. Counts were compiled from indexed news results between July 2025 and September 2026, using queries pairing each challenger's name with the incumbent's to exclude unrelated coverage; an index is not a census, and community-weekly coverage is likely undercounted. Population figures are from the 2024 American Community Survey, compared against the roughly 713,700-person baseline used when Minnesota's districts were drawn in 2021. Measured that way the Sixth has grown 5.8 percent, ahead of the Second at 4.5 percent and the Eighth at 1.9 percent; the Third, Fourth and Fifth have shrunk. Campaign finance figures are from FEC Schedule A filings for the 2022, 2024 and 2026 cycles; a transaction-level spreadsheet with FEC identifiers is published alongside this piece. Town hall dates are confirmed against the congressman's own press releases. Partisan lean figures are Cook Partisan Voting Index. Where we report that no coverage was found, we have listed the outlets searched; an absence of indexed coverage is not proof that none exists, and we will correct the record on notice.</p>
+</div>
+
+</div>
+
+<div class="cta">
+  <h3>Daily accountability journalism, direct to your inbox.</h3>
+  <p>MN-06 Watch publishes daily coverage of Rep. Tom Emmer and Minnesota's 6th Congressional District. Free. No ads.</p>
+  <a href="https://mn06watch.substack.com/subscribe" class="btn">Subscribe on Substack →</a>
+</div>
+
+<footer class="footer">
+  <div>MN06Watch · <a href="https://mn06watch.com">mn06watch.com</a> · <a href="https://mn06watch.substack.com">Substack</a></div>
+  <div style="margin-top: 8px; color: rgba(255,255,255,0.4);">Receipts, not rage. · This is a citizen journalism project.</div>
+</footer>
+
+</body>
+</html>
