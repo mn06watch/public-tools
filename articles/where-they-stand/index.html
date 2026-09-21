@@ -75,9 +75,26 @@ footer .tag{font-style:italic;color:var(--navy)}
   .cell::before{content:attr(data-cand);display:block;font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--light);margin-bottom:4px}
 }
 @media print{details{display:block} details summary{display:none} details>*{display:block} .flag{display:none} .topic{break-inside:avoid}}
+/* SITE NAV (matches other MN06Watch articles) */
+.site-nav{background:#1a365d;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.site-nav .logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;font-weight:700;text-decoration:none}
+.site-nav .tagline{color:#d69e2e;font-size:0.8rem;font-style:italic}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;margin-left:20px;font-family:'JetBrains Mono',monospace}
+.nav-links a:hover{color:#d69e2e}
 </style>
 </head>
 <body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
 <div class="wrap">
 <header>
   <div class="kicker">MN-06 Watch · Special Report</div>
