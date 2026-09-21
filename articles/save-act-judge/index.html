@@ -188,6 +188,32 @@
 
 </main>
 
+<div style="max-width:1080px;margin:0 auto;padding:0 20px 40px">
+<!-- MN-06 Watch "Keep going" tools strip. Self-contained: scoped classes, hard-coded house colors, no dependency on the page's CSS variables. Insert immediately before the article's closing footer (or before </main> / the last </div> of the content wrapper if the page has no <footer>). -->
+<style>
+.mw-tools{margin-top:44px;border-top:3px solid #1B3A5C;padding-top:14px;font-family:Georgia,"Liberation Serif","Times New Roman",serif;color:#2C2C2C}
+.mw-tools h2{font:700 13px Arial,"Liberation Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#1B3A5C;margin:0 0 4px}
+.mw-tools>p{font-size:15px;color:#555;margin:0 0 12px}
+.mw-toolgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mw-toolgrid a{display:block;background:#fff;border:1px solid #E0DCD7;border-left:4px solid #C8922A;padding:12px 14px;text-decoration:none;color:#2C2C2C}
+.mw-toolgrid a:hover{border-left-color:#1B3A5C;background:#F0F4F8}
+.mw-toolgrid b{display:block;font:700 15px Arial,"Liberation Sans",sans-serif;color:#1B3A5C;margin-bottom:3px}
+.mw-toolgrid span{font:13px/1.4 Arial,"Liberation Sans",sans-serif;color:#555}
+@media (max-width:760px){.mw-toolgrid{grid-template-columns:1fr}}
+</style>
+<section class="mw-tools">
+  <h2>Keep going</h2>
+  <p>Everything on this page comes from the same public record MN-06 Watch tracks every day. The tools:</p>
+  <div class="mw-toolgrid">
+    <a href="https://mn06watch.com/"><b>Vote Tracker</b><span>Every recorded House vote Rep. Emmer has cast, with roll-call numbers and how he voted.</span></a>
+    <a href="https://mn06watch.com/sponsorships/"><b>Bills</b><span>Every bill he has sponsored or cosponsored, from congress.gov.</span></a>
+    <a href="https://mn06watch.com/transcripts/"><b>Transcripts</b><span>His TV, radio, and podcast appearances, transcribed and searchable.</span></a>
+    <a href="https://mn06watch.com/tweets/"><b>Tweets</b><span>What he posts, archived.</span></a>
+    <a href="https://mn06watch.com/articles/"><b>Articles</b><span>Explainers and special reports, including &ldquo;Who Wants This Job?&rdquo; and the SAVE Act Explainer.</span></a>
+    <a href="https://mn06watch.substack.com/subscribe"><b>Daily Substack</b><span>The daily accountability summary, free. Rhetoric vs. Reality every Sunday.</span></a>
+  </div>
+</section>
+</div>
 <footer class="footer">
   Sources: H.R. 7296 / H.R. 22 bill text · Congressional Record (Mar 19, 2026) · ProPublica / Texas Tribune · Utah SOS · Travis County TX · U.S. Vote Foundation · USCIS SAVE Fact Sheet (Feb 2026)
   <br><br>
