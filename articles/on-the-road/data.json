@@ -1,0 +1,1020 @@
+{
+ "updated": "2026-09-29",
+ "pledge": {
+  "date": "2026-09-27",
+  "count": 56,
+  "quote": "I'm going to hit another 56 districts between now and Election Day.",
+  "source": "Fox News Live, Sept. 27, 2026"
+ },
+ "election": "2026-11-03",
+ "stops": [
+  {
+   "date": "2026-09-29",
+   "district": "ME-02",
+   "place": "Lewiston, Maine",
+   "candidate": "Paul LePage",
+   "party": "R",
+   "role": "Former governor; nominee for an open seat",
+   "opponent": "Matt Dunlap (D), state auditor. Rep. Jared Golden (D) is retiring.",
+   "type": "Campaign",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Sept. 29",
+     "text": "My friend and the next Congressman for Maine's Second Congressional District, @MainePaulLePage, and I are on the ground in Lewiston today discussing the millions of dollars in FRAUD stolen from the good people of Maine. Here we are outside the former Gateway Community Services building - a crooked organization that is responsible for nearly $2 MILLION in Medicaid fraud. Maine, we need you to send Paul to Congress to help us fight back against fraudsters and hold corrupt Democrats accountable once and for all!",
+     "url": "https://x.com/tomemmer/status/2104979597234151857"
+    },
+    {
+     "acct": "tomemmer",
+     "date": "Sept. 29",
+     "text": "Proud to stand with @MainePaulLePage in Maine! You don't come here to take advantage of America's generosity or live off handouts. You come here to contribute. Paul has spent his career fighting for that, and fighting the fraudsters ripping off taxpayers.",
+     "url": "https://x.com/tomemmer/status/2105006511793840476"
+    }
+   ],
+   "context": {
+    "html": "<b>The record on Gateway:</b> Maine DHHS suspended the provider's MaineCare payments in December 2025, citing a \"credible allegation of fraud,\" and upheld the suspension in May 2026. State audits found more than $1.7 million in overpayments between 2015 and 2022. Gateway denies the allegations and has appealed. Neither report mentions criminal charges.",
+    "sources": [
+     {
+      "label": "Bangor Daily News, Dec. 23, 2025",
+      "url": "https://bangordailynews.com/2025/12/23/mainefocus/mainefocus-government/mainecare-payments-gateway-community-services-fraud-probe/"
+     },
+     {
+      "label": "WGME, May 22, 2026",
+      "url": "https://wgme.com/news/waste-watch/decision-upheld-to-suspend-medicaid-payments-to-gateway-community-services-maine-department-of-health-and-human-services-credible-allegation-of-fraud"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Likely R",
+    "prev": "Toss Up",
+    "rated": "Nov. 6, 2025",
+    "pvi": "R+4",
+    "checked": "Sept. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483191"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 170814.68,
+    "jfc_n": 4,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LEPAGE"
+   },
+   "home": [
+    {
+     "html": "Also posted today: Emmer says he met with community bankers in Buffalo \"last week.\"",
+     "url": "https://x.com/GOPMajorityWhip/status/2104994317630845320",
+     "label": "@GOPMajorityWhip"
+    },
+    {
+     "html": "Doug Chapin, Emmer's DFL challenger, had an open town hall listed in St. Michael on Sept. 29.",
+     "url": "https://www.mobilize.us/chapinforcongress/event/990984/",
+     "label": "Chapin campaign event listing",
+     "showAfter": "2026-09-29T20:00:00-05:00"
+    }
+   ],
+   "lat": 45.45,
+   "lon": -69.2,
+   "candidates": [
+    {
+     "name": "Paul LePage",
+     "party": "R",
+     "note": "Former Maine governor (2011–2019). Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://lepageforcongress.com/#issues"
+     },
+     "record": null,
+     "photo": "photos/paul-lepage.jpg",
+     "photoCredit": "Photo from the campaign's website"
+    },
+    {
+     "name": "Matt Dunlap",
+     "party": "D",
+     "note": "Maine state auditor. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://www.mattdunlapforuscongress.com/issues"
+     },
+     "record": null,
+     "photo": "photos/matt-dunlap.jpg",
+     "photoCredit": "Photo from the campaign's website"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-23",
+   "district": "MN-01",
+   "place": "Southern Minnesota",
+   "candidate": "Rep. Brad Finstad",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Jake Johnson (D)",
+   "type": "Joint appearance",
+   "typeNote": "Posted from his leadership account and described as a meeting with emergency services personnel, not a campaign event.",
+   "posts": [
+    {
+     "acct": "GOPMajorityWhip",
+     "date": "Sept. 23",
+     "text": "It's a great day to visit Southern Minnesota! I had the chance to join my friend, Congressman Finstad to meet with emergency services personnel in the First District and thank them for their important work. They face uphill battles every day, and we are here to help them any way we can.",
+     "url": "https://x.com/GOPMajorityWhip/status/2102834552003609001"
+    }
+   ],
+   "race": {
+    "rating": "Likely R",
+    "prev": "Solid R",
+    "rated": "June 18, 2026",
+    "pvi": "R+6",
+    "checked": "Sept. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483346"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 33415.22,
+    "jfc_n": 2,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=FINSTAD"
+   },
+   "home": [
+    {
+     "html": "The same week, Emmer posted about a roundtable with fire chiefs in Chanhassen and a meeting with the I-94 West Corridor Coalition in Wright County. Both were meetings with invited officials.",
+     "links": [
+      {
+       "label": "fire chiefs post",
+       "url": "https://x.com/GOPMajorityWhip/status/2104664527031681110"
+      },
+      {
+       "label": "I-94 post",
+       "url": "https://x.com/GOPMajorityWhip/status/2103926895934943361"
+      }
+     ]
+    }
+   ],
+   "lat": 43.95,
+   "lon": -94.3,
+   "candidates": [
+    {
+     "name": "Rep. Brad Finstad",
+     "party": "R",
+     "note": "Incumbent since 2022.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://finstadforcongress.com/issues/"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 117,
+        "v": 0.548,
+        "n": "Partial term (115 votes after a 2022 special election)"
+       },
+       {
+        "c": 118,
+        "v": 0.553,
+        "n": "Right of the House Republican median (0.506)"
+       },
+       {
+        "c": 119,
+        "v": 0.631,
+        "n": "60th most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.558,
+      "dwUrl": "https://voteview.com/person/22167",
+      "gt": 0.79,
+      "gtLabel": "conservative Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/456869",
+      "ha": {
+       "life": 91,
+       "sess": {
+        "117": 92,
+        "118": 93,
+        "119": 89
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/F000475",
+      "pp": {
+       "life": 1.54,
+       "recent": 0.42,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/brad-finstad.jpg",
+     "photoCredit": "Official congressional portrait"
+    },
+    {
+     "name": "Jake Johnson",
+     "party": "D",
+     "note": "First-time candidate. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://www.jakejohnsonforcongress.com/priorities"
+     },
+     "record": null,
+     "photo": "photos/jake-johnson.jpg",
+     "photoCredit": "Photo from the campaign's website"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-18",
+   "district": "VA-02",
+   "place": "Virginia",
+   "candidate": "Rep. Jen Kiggans",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Former Rep. Elaine Luria (D), a 2022 rematch",
+   "type": "Campaign",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Sept. 19",
+     "text": "INCREDIBLE energy at last night's rally for my friend, @JenKiggans. #VA02 is FIRED up! Early voting has begun, so grab your friends and family and VOTE for Jen Kiggans",
+     "url": "https://x.com/tomemmer/status/2101360892558430262"
+    }
+   ],
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean D",
+    "rated": "May 8, 2026",
+    "pvi": "D+0",
+    "checked": "Sept. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485441"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 293815.28,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=KIGGANS"
+   },
+   "home": [
+    {
+     "html": "Early voting opened in Minnesota the same day. Emmer's campaign account posted a statewide get-out-the-vote message.",
+     "url": "https://x.com/tomemmer/status/2101046697358991723",
+     "label": "@tomemmer, Sept. 18"
+    }
+   ],
+   "lat": 36.95,
+   "lon": -76.15,
+   "candidates": [
+    {
+     "name": "Rep. Jen Kiggans",
+     "party": "R",
+     "note": "Incumbent since 2023.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://jenforcongress.com/issues/"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.259,
+        "n": "15th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.274,
+        "n": "15th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.264,
+      "dwUrl": "https://voteview.com/person/22335",
+      "gt": 0.617,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/456947",
+      "ha": {
+       "life": 65,
+       "sess": {
+        "118": 58,
+        "119": 72
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/K000399",
+      "pp": {
+       "life": 14.0,
+       "recent": 4.78,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/jen-kiggans.jpg",
+     "photoCredit": "Official congressional portrait"
+    },
+    {
+     "name": "Elaine Luria",
+     "party": "D",
+     "note": "Represented VA-02 from 2019 to 2023.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://elaineforcongress.com/issues/"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 116,
+        "v": -0.177,
+        "n": "15th most moderate of 241 House Democrats"
+       },
+       {
+        "c": 117,
+        "v": -0.401,
+        "n": "About at the House Democratic median (−0.390)"
+       }
+      ],
+      "dw": -0.206,
+      "dwUrl": "https://voteview.com/person/21941",
+      "gt": 0.343,
+      "gtLabel": "centrist Democrat",
+      "gtNote": "2021–22",
+      "gtUrl": "https://www.govtrack.us/congress/members/elaine_luria/412830",
+      "ha": {
+       "life": 3,
+       "sess": {
+        "116": 5,
+        "117": 0
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/L000591",
+      "pp": {
+       "life": 90.66,
+       "recent": 92.82,
+       "recentLabel": "2021–22",
+       "asOf": "archived Nov. 2022",
+       "url": "https://web.archive.org/web/20221127040427/https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/elaine-luria.jpg",
+     "photoCredit": "Official congressional portrait (2019–2023)"
+    }
+   ]
+  }
+ ],
+ "home": {
+  "district": "MN-06",
+  "lat": 45.35,
+  "lon": -93.75
+ },
+ "medians": {
+  "R": 0.53,
+  "D": -0.395
+ },
+ "npMedians": {
+  "114": {
+   "R": 0.49,
+   "D": -0.401
+  },
+  "115": {
+   "R": 0.492,
+   "D": -0.391
+  },
+  "116": {
+   "R": 0.508,
+   "D": -0.386
+  },
+  "117": {
+   "R": 0.495,
+   "D": -0.39
+  },
+  "118": {
+   "R": 0.506,
+   "D": -0.406
+  },
+  "119": {
+   "R": 0.544,
+   "D": -0.401
+  }
+ },
+ "homeRace": {
+  "district": "MN-06",
+  "rating": "Solid R",
+  "rated": "Feb. 6, 2025",
+  "pvi": "R+10",
+  "checked": "Sept. 29, 2026",
+  "cookUrl": "https://www.cookpolitical.com/house/race/483371",
+  "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
+  "candidates": [
+   {
+    "name": "Rep. Tom Emmer",
+    "party": "R",
+    "note": "Incumbent since 2015; House Majority Whip.",
+    "photo": "photos/tom-emmer.jpg",
+    "photoCredit": "Official congressional portrait",
+    "issues": {
+     "label": "Where They Stand: his record on 13 issues",
+     "url": "https://mn06watch.com/articles/where-they-stand/"
+    },
+    "record": {
+     "np": [
+      {
+       "c": 114,
+       "v": 0.423,
+       "n": "63% of House Republicans more conservative"
+      },
+      {
+       "c": 115,
+       "v": 0.456,
+       "n": "59% of House Republicans more conservative"
+      },
+      {
+       "c": 116,
+       "v": 0.489,
+       "n": "55% of House Republicans more conservative"
+      },
+      {
+       "c": 117,
+       "v": 0.443,
+       "n": "62% of House Republicans more conservative"
+      },
+      {
+       "c": 118,
+       "v": 0.531,
+       "n": "44% of House Republicans more conservative"
+      },
+      {
+       "c": 119,
+       "v": 0.564,
+       "n": "45% of House Republicans more conservative (right of the median)"
+      }
+     ],
+     "dw": 0.468,
+     "dwUrl": "https://voteview.com/person/21531",
+     "gt": 0.615,
+     "gtLabel": "rank-and-file Republican",
+     "gtNote": "2025–26",
+     "gtUrl": "https://www.govtrack.us/congress/members/tom_emmer/412639",
+     "gtHist": {
+      "114": 0.707,
+      "115": 0.787,
+      "116": 0.806,
+      "117": 0.744,
+      "118": 0.663,
+      "119": 0.615
+     },
+     "gtMedR": {
+      "114": 0.776,
+      "115": 0.767,
+      "116": 0.711,
+      "117": 0.639,
+      "118": 0.658,
+      "119": 0.672
+     },
+     "ha": {
+      "life": 79,
+      "sess": {
+       "114": 66,
+       "115": 72,
+       "116": 92,
+       "117": 85,
+       "118": 64,
+       "119": 92
+      }
+     },
+     "haUrl": "https://heritageaction.com/scorecard/members/E000294",
+     "pp": {
+      "life": 4.02,
+      "recent": 0.42,
+      "recentLabel": "2025–26",
+      "url": "https://progressivepunch.org/scores.htm?house=house"
+     }
+    },
+    "campaignIssues": {
+     "label": "His campaign site: Principles & Key Issues",
+     "url": "https://emmerforcongress.com/principles-key-issues/"
+    }
+   },
+   {
+    "name": "Doug Chapin",
+    "party": "D",
+    "partyLabel": "DFL",
+    "note": "Election-administration expert; DFL nominee. Has not served in Congress.",
+    "photo": "photos/doug-chapin.jpg",
+    "photoCredit": "Photo provided by the campaign",
+    "issues": {
+     "label": "Where They Stand: his answers on 13 issues",
+     "url": "https://mn06watch.com/articles/where-they-stand/"
+    },
+    "record": null,
+    "campaignIssues": {
+     "label": "His campaign site: Issues",
+     "url": "https://www.chapinforcongress.com/issues"
+    }
+   }
+  ]
+ },
+ "ledger": {
+  "start": "2026-09-17",
+  "rows": [
+   {
+    "label": "Open town halls",
+    "def": "In person, anyone can attend, candidate takes questions",
+    "emmer": {
+     "items": [],
+     "none": "None found in this window.",
+     "note": "Searched his official and campaign accounts, emmer.house.gov releases and local press. Full history below.",
+     "suffix": "last one Aug. 2023"
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Sept. 19",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Elk River, hosted by Indivisible North Metro. He posted that 85+ people attended and called it his 18th town hall since the campaign began.",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Ddgk2yKkZK_",
+       "label": "his post"
+      },
+      {
+       "date": "Sept. 29",
+       "html": "St. Michael town hall, listed as open to the public",
+       "url": "https://www.mobilize.us/chapinforcongress/event/990984/",
+       "label": "campaign event page",
+       "tag": "listed",
+       "tagText": "Listed",
+       "showAfter": "2026-09-29T20:00:00-05:00"
+      }
+     ],
+     "none": "None found.",
+     "note": "His Sept. 27 post called St. Michael \"our next town hall.\" Full history below.",
+     "suffix": "18 total since his campaign began"
+    }
+   },
+   {
+    "label": "Debates",
+    "def": "Scheduled debates, and what each candidate has said",
+    "count": false,
+    "emmer": {
+     "items": [
+      {
+       "html": "No debate is scheduled. We found no public statement from Rep. Emmer or his campaign about debating Chapin."
+      },
+      {
+       "tag": "listed",
+       "tagText": "Confirmed by MN-06 Watch",
+       "html": "MN-06 Watch has confirmed that the Emmer campaign has been offered a debate. No debate has been scheduled."
+      }
+     ],
+     "note": "Searched St. Cloud Times, West Central Tribune, KSTP, hometownsource and MinnPost for a scheduled debate.",
+     "short": "<span class=\"none\">Offered one; none scheduled</span>"
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Sept. 19",
+       "tag": "yes",
+       "tagText": "Wants a debate",
+       "html": "Called for a debate on The Politics Chicks podcast, and said an outlet that wanted to host one couldn't get Emmer's campaign to respond",
+       "url": "https://thepoliticschicks.substack.com/p/doug-chapin-to-tom-emmer-you-dont",
+       "label": "episode"
+      },
+      {
+       "date": "Sept. 21",
+       "html": "\"Until Emmer stops hiding and the media decides to cover the race, this is the only debate you'll get,\" sharing Where They Stand",
+       "url": "https://x.com/ChapinForMN6/status/2102126166123397303",
+       "label": "post"
+      }
+     ],
+     "short": "<span class=\"none\">Has called for one; none scheduled</span>"
+    }
+   },
+   {
+    "label": "Local TV, radio and podcast interviews",
+    "def": "Minnesota outlets, in this window",
+    "emmer": {
+     "items": [],
+     "none": "None found in this window.",
+     "note": "Most recent: The Jon Justice Show (Twin Cities talk radio), Sept. 14. Source: <a href=\"https://mn06watch.com/transcripts/\">MN-06 Watch transcript archive</a>."
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Sept. 27",
+       "html": "KSTP, \"At Issue with Tom Hauser\"",
+       "url": "https://kstp.com/kstp-news/top-news/chapin-faces-tough-campaign-against-emmer-in-6th-district/",
+       "label": "KSTP"
+      },
+      {
+       "date": "Sept. 19",
+       "html": "The Politics Chicks podcast",
+       "url": "https://thepoliticschicks.substack.com/p/doug-chapin-to-tom-emmer-you-dont",
+       "label": "episode"
+      }
+     ]
+    }
+   },
+   {
+    "label": "Local press requests",
+    "def": "Questionnaires, interview requests and race coverage",
+    "count": false,
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 18",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "Sun Patriot candidate questionnaire",
+       "url": "https://www.hometownsource.com/sun_patriot/community/meet-the-candidates-minnesota-sixth-congressional-district/article_02044c68-9c80-4823-b8b4-60f1449cce94.html",
+       "label": "Sun Patriot"
+      },
+      {
+       "date": "Sept. 25",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "KSTP interview request, as of publication",
+       "url": "https://kstp.com/kstp-news/top-news/chapin-faces-tough-campaign-against-emmer-in-6th-district/",
+       "label": "KSTP"
+      },
+      {
+       "date": "Sept. 28",
+       "tag": "listed",
+       "tagText": "Not quoted",
+       "html": "St. Cloud Times race profile, written from the campaigns' websites. Neither candidate is quoted.",
+       "url": "https://www.yahoo.com/news/politics/articles/key-races-st-cloud-area-093051194.html",
+       "label": "St. Cloud Times"
+      },
+      {
+       "date": "Sept. 18",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "MN-06 Watch \"Where They Stand\" questionnaire (follow-up sent Sept. 18; we are the requester)",
+       "url": "https://mn06watch.com/articles/where-they-stand/",
+       "label": "Where They Stand"
+      }
+     ]
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Sept. 18",
+       "tag": "yes",
+       "tagText": "Answered",
+       "html": "Sun Patriot candidate questionnaire",
+       "url": "https://www.hometownsource.com/sun_patriot/community/meet-the-candidates-minnesota-sixth-congressional-district/article_02044c68-9c80-4823-b8b4-60f1449cce94.html",
+       "label": "Sun Patriot"
+      },
+      {
+       "date": "Sept. 25",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "KSTP race story",
+       "url": "https://kstp.com/kstp-news/top-news/chapin-faces-tough-campaign-against-emmer-in-6th-district/",
+       "label": "KSTP"
+      },
+      {
+       "date": "Sept. 28",
+       "tag": "listed",
+       "tagText": "Not quoted",
+       "html": "St. Cloud Times race profile, written from the campaigns' websites. Neither candidate is quoted.",
+       "url": "https://www.yahoo.com/news/politics/articles/key-races-st-cloud-area-093051194.html",
+       "label": "St. Cloud Times"
+      },
+      {
+       "date": "Sept. 20",
+       "tag": "yes",
+       "tagText": "Answered",
+       "html": "MN-06 Watch \"Where They Stand\" questionnaire (we are the requester)",
+       "url": "https://mn06watch.com/articles/where-they-stand/",
+       "label": "Where They Stand"
+      }
+     ]
+    },
+    "tally": true
+   },
+   {
+    "label": "Other public appearances",
+    "def": "Public events without a Q&A",
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 23",
+       "html": "Monticello water treatment plant ribbon cutting. His release doesn't say whether it was open to the public.",
+       "url": "https://emmer.house.gov/media-center/press-releases/emmer-attends-monticello-water-treatment-plant-ribbon-cutting",
+       "label": "release"
+      }
+     ]
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Sept. 19",
+       "html": "Weekly rally in Otsego",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Ddgk2yKkZK_",
+       "label": "his post"
+      },
+      {
+       "date": "Sept. 19",
+       "html": "Weekly rally in Chaska, handing out lawn signs",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Ddgk2yKkZK_",
+       "label": "his post"
+      },
+      {
+       "date": "Sept. 19",
+       "html": "St. Cloud Pride Festival at Lake George",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Ddgk2yKkZK_",
+       "label": "his post"
+      },
+      {
+       "date": "Sept. 27",
+       "html": "Montrose Home Town Days parade",
+       "url": "https://www.mobilize.us/chapinforcongress/event/1011806/",
+       "label": "campaign event page",
+       "tag": "listed",
+       "tagText": "Listed"
+      },
+      {
+       "date": "Sept. 26",
+       "count": false,
+       "tag": "listed",
+       "tagText": "Outside MN-06",
+       "html": "Minnesota DFL Farmer-Labor Picnic at the State Fairgrounds, a statewide party event. His campaign posted that it attended and talked with \"hundreds of DFLers.\" Not counted here, since it's outside the district.",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Ddyj2B3Ea5L",
+       "label": "campaign post"
+      }
+     ]
+    }
+   },
+   {
+    "label": "Meetings with invited groups",
+    "def": "Roundtables and meetings not advertised to the public",
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 23",
+       "html": "Roundtable with firefighters and mayors, Chanhassen",
+       "url": "https://emmer.house.gov/media-center/press-releases/emmer-hosts-firefighter-roundtable-in-carver-county",
+       "label": "release"
+      },
+      {
+       "date": "Week of Sept. 21",
+       "html": "I-94 West Corridor Coalition, Wright County",
+       "url": "https://x.com/GOPMajorityWhip/status/2103926895934943361",
+       "label": "post"
+      },
+      {
+       "date": "Week of Sept. 21",
+       "html": "Community bankers, Buffalo",
+       "url": "https://x.com/GOPMajorityWhip/status/2104994317630845320",
+       "label": "post"
+      }
+     ]
+    },
+    "chapin": {
+     "items": [],
+     "none": "None found.",
+     "note": "Searched his campaign event listings, X account and newsletter."
+    }
+   },
+   {
+    "label": "Official actions on Minnesota issues",
+    "def": "Bills and official releases about Minnesota, in this window",
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 28",
+       "html": "Cosponsored Rep. Pete Stauber's Voter Vouching Transparency Act, which would require states that allow voter vouching, including Minnesota, to report on its use in federal elections to the U.S. Election Assistance Commission",
+       "url": "https://emmer.house.gov/media-center/press-releases/emmer-cosponsors-election-integrity-legislation",
+       "label": "release"
+      },
+      {
+       "date": "Sept. 17",
+       "html": "Introduced the Reclaim Local Control Act, which would end the exemption that lets the Metropolitan Council operate with only governor-appointed members and no local elected officials",
+       "url": "https://emmer.house.gov/media-center/press-releases/emmer-introduces-legislation-to-reclaim-local-control",
+       "label": "release"
+      }
+     ],
+     "note": "Both releases are datelined Washington."
+    },
+    "chapin": {
+     "na": "Not applicable; he doesn't hold office. His positions are in <a href=\"https://mn06watch.com/articles/where-they-stand/\">Where They Stand</a>.",
+     "naShort": "Not in office"
+    }
+   },
+   {
+    "label": "Door knocking and volunteer events",
+    "def": "Campaign-organized canvassing, phone banks and postcard events",
+    "count": false,
+    "emmer": {
+     "items": [],
+     "none": "No public listings found.",
+     "note": "His campaign site has a volunteer sign-up form (door knocking, phone calls, parades) but no public event calendar. <a href=\"https://emmerforcongress.com/election-center/volunteer-corner/\">Volunteer page</a>.",
+     "short": "<span class=\"none\">No public listings</span>"
+    },
+    "chapin": {
+     "items": [
+      {
+       "html": "<b>70</b> public volunteer events listed: 55 door knocks, 6 phone banks and 9 postcard events, in 13 cities (Albertville, Andover, Annandale, Blaine, Chaska, Delano, Elk River, Foley, Monticello, Ramsey, St. Cloud, White Bear Lake, Zimmerman). The listings don't say whether Chapin attended each one.",
+       "url": "https://www.mobilize.us/chapinforcongress/",
+       "label": "campaign event page"
+      }
+     ],
+     "short": "<b>70</b> <span class=\"none\">volunteer events listed</span>"
+    }
+   },
+   {
+    "label": "National TV and radio interviews",
+    "def": "National outlets, in this window",
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 18",
+       "html": "Fox News, America's Newsroom"
+      },
+      {
+       "date": "Sept. 18",
+       "html": "Fox Business, Varney &amp; Co."
+      },
+      {
+       "date": "Sept. 18",
+       "html": "Sid &amp; Friends in the Morning (New York talk radio)"
+      },
+      {
+       "date": "Sept. 25",
+       "html": "Fox Business"
+      },
+      {
+       "date": "Sept. 27",
+       "html": "Fox News Live"
+      }
+     ],
+     "note": "Source: <a href=\"https://mn06watch.com/transcripts/\">MN-06 Watch transcript archive</a>."
+    },
+    "chapin": {
+     "na": "Not comparable. National networks rarely book House challengers, so this row is shown for Rep. Emmer only.",
+     "naShort": "Not comparable"
+    }
+   },
+   {
+    "label": "Campaign stops in other districts",
+    "def": "For other candidates, logged on this page",
+    "emmer": {
+     "items": [
+      {
+       "date": "Sept. 29",
+       "html": "<a href=\"#me-02-2026-09-29\">ME-02</a>, LePage"
+      },
+      {
+       "date": "Sept. 23",
+       "html": "<a href=\"#mn-01-2026-09-23\">MN-01</a>, Finstad (joint appearance)"
+      },
+      {
+       "date": "Sept. 18",
+       "html": "<a href=\"#va-02-2026-09-18\">VA-02</a>, Kiggans"
+      }
+     ]
+    },
+    "chapin": {
+     "na": "Not applicable.",
+     "naShort": "n/a"
+    }
+   }
+  ],
+  "history": {
+   "emmer": {
+    "intro": "His last in-person town halls, and the telephone town halls since.",
+    "items": [
+     {
+      "date": "Aug. 7, 2023",
+      "html": "Big Lake (in person)"
+     },
+     {
+      "date": "Aug. 16, 2023",
+      "html": "Hamburg (in person)"
+     },
+     {
+      "date": "Aug. 21, 2023",
+      "html": "Lexington (in person). His most recent in-person town hall.",
+      "url": "https://www.lexingtonmn.gov/page/open/1530/0/September%207%202023%20Minutes.pdf",
+      "label": "Lexington council minutes"
+     },
+     {
+      "date": "Apr. 2, 2025",
+      "html": "Telephone town hall",
+      "url": "https://emmer.house.gov/media-center/press-releases/congressman-emmer-announces-constituent-telephone-town-hall",
+      "label": "release"
+     },
+     {
+      "date": "June 4, 2025",
+      "html": "Telephone town hall. The most recent we found.",
+      "url": "https://emmer.house.gov/media-center/press-releases/congressman-emmer-announces-second-constituent-telephone-town-hall",
+      "label": "release"
+     }
+    ],
+    "note": "No in-person or telephone town hall found after June 4, 2025. Searched emmer.house.gov releases, KNSI, St. Cloud LIVE and his social accounts. In February 2025, constituents held a town hall in Monticello and invited him to join by Zoom. He didn't attend (hometownsource, Mar. 4, 2025)."
+   },
+   "chapin": {
+    "intro": "Town halls as a candidate. \"Listed\" means it appears on his campaign's public event page; \"Reported\" means news coverage or his own account confirms it happened.",
+    "items": [
+     {
+      "date": "Nov. 17, 2025",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "St. Cloud Public Library. St. Cloud LIVE called it his fourth town hall since launching in March 2025.",
+      "url": "https://www.stcloudlive.com/news/local/potential-emmer-challenger-talks-connecting-with-voters-health-care",
+      "label": "St. Cloud LIVE"
+     },
+     {
+      "date": "Mar. 26, 2026",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Waconia",
+      "url": "https://www.hometownsource.com/sun_patriot/community/candidate-holds-town-hall-in-waconia/article_0bfd21b5-1adf-427f-a81c-fb3429694fc7.html",
+      "label": "Sun Patriot"
+     },
+     {
+      "date": "May 19, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Howard Lake",
+      "url": "https://www.mobilize.us/chapinforcongress/event/950928/",
+      "label": "listing"
+     },
+     {
+      "date": "June 2, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Ramsey",
+      "url": "https://www.mobilize.us/chapinforcongress/event/951104/",
+      "label": "listing"
+     },
+     {
+      "date": "June 16, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Delano (Gen Z town hall)",
+      "url": "https://www.mobilize.us/chapinforcongress/event/961737/",
+      "label": "listing"
+     },
+     {
+      "date": "June 30, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "St. Cloud",
+      "url": "https://www.mobilize.us/chapinforcongress/event/951111/",
+      "label": "listing"
+     },
+     {
+      "date": "July 21, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Watertown",
+      "url": "https://www.mobilize.us/chapinforcongress/event/978963/",
+      "label": "listing"
+     },
+     {
+      "date": "Aug. 18, 2026",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Circle Pines, Centennial Library. \"75+ people\"; he called it his 15th town hall.",
+      "url": "https://x.com/ChapinForMN6/status/2090087442032304492",
+      "label": "his post"
+     },
+     {
+      "date": "Sept. 1, 2026",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Buffalo. His newsletter described \"a packed town hall in Buffalo.\"",
+      "url": "https://dougchapinforcongress.substack.com/p/at-the-fair-minnesota-speaks",
+      "label": "newsletter"
+     },
+     {
+      "date": "Sept. 8, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Norwood Young America",
+      "url": "https://www.mobilize.us/chapinforcongress/event/998115/",
+      "label": "listing"
+     },
+     {
+      "date": "Sept. 19, 2026",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Elk River (Indivisible North Metro). His 18th, by his count.",
+      "url": "https://x.com/ChapinForMN6/status/2101675634183327776",
+      "label": "his post"
+     },
+     {
+      "date": "Sept. 29, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "St. Michael",
+      "url": "https://www.mobilize.us/chapinforcongress/event/990984/",
+      "label": "listing",
+      "showAfter": "2026-09-29T20:00:00-05:00"
+     }
+    ],
+    "note": "He counts 18 town halls through Sept. 19. The ones above are those we can document individually; the rest aren't listed publicly. We found no town hall on Tuesday, Sept. 22: his count went from 17 (Sept. 8) to 18 (Sept. 19), and he called St. Michael his next one."
+   }
+  }
+ },
+ "ratingsChecked": "Sept. 29, 2026",
+ "support": {
+  "subscribeUrl": "https://mn06watch.substack.com/subscribe",
+  "subscribeNote": "Daily coverage by email, on Substack",
+  "tipUrl": "https://buy.stripe.com/00wcMZ3dX8Pa5cNekD4ko01",
+  "tipNote": "Any amount, no account needed"
+ },
+ "moneyAsOf": "FEC filings through June 30; new reports due Oct. 15."
+}

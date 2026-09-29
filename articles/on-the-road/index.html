@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>On the Road, and Back Home — MN-06 Watch</title>
+<meta name="description" content="Rep. Tom Emmer says he will campaign in 56 more districts before Election Day. A running log of what he says at each stop, the state of each race, both candidates' records, and what his committees have given.">
+<meta property="og:title" content="On the Road, and Back Home">
+<meta property="og:description" content="He says he'll hit 56 more districts before Election Day. Each stop, logged after it's public: what he said, the race, both candidates' records, and the FEC money.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mn06watch.com/articles/on-the-road/">
+<meta property="og:image" content="https://mn06watch.com/articles/on-the-road/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="On the Road, and Back Home">
+<meta name="twitter:description" content="He says he'll hit 56 more districts before Election Day. Each stop, logged after it's public: what he said, the race, both candidates' records, and the FEC money.">
+<meta name="twitter:image" content="https://mn06watch.com/articles/on-the-road/og-image.png">
+<link rel="canonical" href="https://mn06watch.com/articles/on-the-road/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B3A5C;--gold:#C8922A;--red:#C0392B;--dark:#2C2C2C;--med:#555;--light:#888;--line:#E0DCD7;--bg:#FAF8F5;--navybg:#F0F4F8;--goldbg:#FFFAF0;--redbg:#FFF0EE;--graybg:#F2F0EC;--dem:#2F5D8C;--rep:#B03A2E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--dark);font:16px/1.55 Georgia,"Liberation Serif","Times New Roman",serif}
+a{color:var(--navy)}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+
+.site-nav{background:#1a365d;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.site-nav .logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;font-weight:700;text-decoration:none}
+.site-nav .tagline{color:#d69e2e;font-size:0.8rem;font-style:italic}
+.nav-links a{color:rgba(255,255,255,0.8);text-decoration:none;font-size:0.85rem;margin-left:20px;font-family:'JetBrains Mono',monospace}
+.nav-links a:hover{color:#d69e2e}
+
+header .kicker{font:700 13px/1 Arial,"Liberation Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+header h1{font-size:clamp(28px,4.5vw,42px);line-height:1.15;margin:8px 0 6px;color:var(--navy)}
+header .dek{font-size:19px;color:var(--med);font-style:italic;margin:0 0 6px}
+header .byline{font:13px Arial,sans-serif;color:var(--light)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0 8px}
+.stat{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);padding:14px 14px 12px}
+.stat b{display:block;font:700 30px/1 Arial,sans-serif;color:var(--navy);font-variant-numeric:tabular-nums}
+.stat span{display:block;font:12px/1.35 Arial,sans-serif;color:var(--med);margin-top:6px}
+.stat.gold{border-top-color:var(--gold)}.stat.gold b{color:var(--gold)}
+.stat.red{border-top-color:var(--red)}.stat.red b{color:var(--red)}
+
+.method{background:var(--navybg);border-left:4px solid var(--navy);padding:14px 18px;margin:22px 0;font-size:15px}
+.method h2{margin:0 0 8px;font:700 13px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.method ul{margin:0;padding-left:20px}
+.method li{margin:0 0 6px}
+.method p{margin:8px 0 0}
+
+h2.sec{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-top:3px solid var(--navy);padding-top:12px;margin:40px 0 4px}
+.secnote{font:14px/1.5 Arial,sans-serif;color:var(--med);margin:0 0 16px}
+
+/* map */
+.mapbox{background:#fff;border:1px solid var(--line);padding:10px 10px 6px}
+#map{width:100%;max-width:860px;height:auto;display:block;margin:0 auto}
+#map .state{fill:#F2F0EC;stroke:#fff;stroke-width:.8}
+#map .state.hl{fill:#E8E1D6}
+#map .pin{cursor:pointer}
+#map .pin:focus{outline:none}
+#map .pin:focus circle,#map .pin:hover circle{stroke:var(--dark);stroke-width:2}
+#map text{font:700 12px Arial,sans-serif;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+#map text.d{font-weight:400;fill:var(--med)}
+.maplegend{display:flex;flex-wrap:wrap;gap:6px 18px;font:12px Arial,sans-serif;color:var(--med);padding:6px 4px 2px}
+.maplegend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.mapfallback{font:14px Arial,sans-serif;color:var(--med);padding:10px}
+
+/* stop cards */
+.stop{background:#fff;border:1px solid var(--line);margin:0 0 22px;scroll-margin-top:70px}
+.stop:target{box-shadow:0 0 0 3px var(--gold)}
+.stop-head{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;padding:14px 18px;border-bottom:1px solid var(--line)}
+.stop-date{font:700 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--light)}
+.badge{font:700 14px/1 'DM Mono',monospace;background:var(--navy);color:#fff;padding:5px 8px;letter-spacing:.04em}
+.stop-head h3{margin:0;font-size:22px;color:var(--navy);flex:1 1 280px}
+.stop-head h3 small{display:block;font:13px Arial,sans-serif;color:var(--med);margin-top:3px}
+.type{font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 7px;border:1px solid var(--line);color:var(--med);background:var(--graybg)}
+.type.campaign{border-color:var(--gold);color:#8a6219;background:var(--goldbg)}
+
+.stop-body{display:grid;grid-template-columns:1.55fr 1fr}
+.said{padding:16px 18px;min-width:0}
+.side{padding:16px 18px;background:var(--bg);border-left:1px solid var(--line)}
+.lbl{font:700 11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin:0 0 8px}
+.post{border-left:4px solid var(--red);padding:0 0 0 12px;margin:0 0 16px}
+.post.navy{border-left-color:var(--navy)}
+.post blockquote{margin:0;font-size:16.5px;line-height:1.55}
+.post blockquote p{margin:0}
+.post .twitter-tweet{margin:0 !important}
+.post .src{font:12px Arial,sans-serif;color:var(--light);margin-top:5px}
+.post .src .acct{font-weight:700}
+.post.red .acct{color:var(--red)}.post.navy .acct{color:var(--navy)}
+.context{font:14px/1.5 Arial,sans-serif;color:var(--dark);background:var(--graybg);padding:10px 12px;margin:4px 0 0}
+.context b{color:var(--navy)}
+
+.kv{margin:0 0 16px}
+.kv div{display:flex;justify-content:space-between;gap:10px;font:14px/1.4 Arial,sans-serif;padding:5px 0;border-bottom:1px dotted var(--line)}
+.kv div span:first-child{color:var(--med)}
+.kv div span:last-child{text-align:right;font-weight:700}
+.rating{display:inline-block;font:700 12px/1 Arial,sans-serif;padding:4px 7px;color:#fff}
+.r-solid-r{background:#8E2A20}.r-likely-r{background:#C0392B}.r-lean-r{background:#D9776C}.r-toss{background:#6b6b6b}.r-lean-d{background:#6F8FB3}.r-likely-d{background:#1B3A5C}
+.kv .rating{color:#fff}
+.fine{font:12px/1.45 Arial,sans-serif;color:var(--light);margin:4px 0 0}
+.total{font-variant-numeric:tabular-nums}
+
+/* candidates */
+.cands{border-top:1px solid var(--line);padding:16px 18px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cand{border:1px solid var(--line);border-top:4px solid var(--rep);padding:12px 14px;background:#fff}
+.cand.D{border-top-color:var(--dem)}
+.chead{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.cphoto{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid var(--rep);background:#eee}
+.cand.D .cphoto{border-color:var(--dem)}
+.cand .credit{font:11px Arial,sans-serif;color:var(--light)}
+.cand h4{margin:0;font-size:18px;color:var(--dark)}
+.cand .pty{font:700 12px Arial,sans-serif;color:var(--rep)}
+.cand.D .pty{color:var(--dem)}
+.cand .cnote{font:13px/1.4 Arial,sans-serif;color:var(--med);margin:3px 0 2px}
+.cand .issues{font:14px Arial,sans-serif;margin:0 0 10px}
+.cand .issues small{display:block;color:var(--light);font-size:12px}
+.norec{font:13px/1.45 Arial,sans-serif;color:var(--med);background:var(--graybg);padding:8px 10px}
+.meas{font:13px/1.35 Arial,sans-serif;padding:7px 0;border-top:1px dotted var(--line)}
+.meas .mh{display:flex;justify-content:space-between;gap:8px}
+.meas .mh span:first-child{color:var(--med)}
+.meas .mh b{font-variant-numeric:tabular-nums}
+.meas .mn{color:var(--light);font-size:12px;margin-top:2px}
+.scale{position:relative;height:16px;margin:6px 0 2px;background:linear-gradient(90deg,#DCE6F0 0,#F2F0EC 50%,#F3DEDA 100%)}
+.scale .mid{position:absolute;left:50%;top:0;bottom:0;border-left:1px solid #fff}
+.scale .med{position:absolute;top:-2px;bottom:-2px;width:0;border-left:2px dashed #999}
+.scale .dot{position:absolute;top:2px;width:12px;height:12px;border-radius:50%;margin-left:-6px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.scale-ends{display:flex;justify-content:space-between;font:11px Arial,sans-serif;color:var(--light)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+.home{border-top:1px solid var(--line);padding:14px 18px;background:var(--goldbg)}
+.home .lbl{color:#8a6219}
+.home ul{margin:0;padding-left:18px;font:14px/1.5 Arial,sans-serif}
+.home li{margin:0 0 5px}
+
+.summary{width:100%;border-collapse:collapse;font:14px Arial,sans-serif;background:#fff;border:1px solid var(--line)}
+.summary th{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--light);padding:10px 12px;border-bottom:2px solid var(--line)}
+.summary td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.summary td.num,.summary th.num{text-align:right;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto}
+
+.tools{margin-top:44px;border-top:3px solid var(--navy);padding-top:14px}
+.tools h2{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin:0 0 4px}
+.tools p{font-size:15px;color:var(--med);margin:0 0 12px}
+.toolgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.toolgrid a{display:block;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);padding:12px 14px;text-decoration:none;color:var(--dark)}
+.toolgrid a:hover{border-left-color:var(--navy);background:var(--navybg)}
+.toolgrid b{display:block;font:700 15px Arial,sans-serif;color:var(--navy);margin-bottom:3px}
+.toolgrid span{font:13px/1.4 Arial,sans-serif;color:var(--med)}
+footer{margin-top:50px;border-top:1px solid var(--line);padding-top:16px;font:13px Arial,sans-serif;color:var(--light)}
+footer .tag{font-style:italic;color:var(--navy)}
+
+/* passport & postcard theme */
+.airmail{height:7px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 22px,var(--navy) 22px 36px,#fff 36px 44px)}
+.stop{position:relative;overflow:hidden}
+.stop .airmail{margin:0}
+.postmark{position:absolute;right:14px;top:14px;width:92px;height:92px;pointer-events:none}
+.stop-head{padding-right:120px}
+.passport{margin:26px 0 8px;background:#F4EEE2;border:1px solid #D9CFBD;border-radius:6px;padding:18px 20px 16px;
+  background-image:repeating-radial-gradient(circle at 20% 30%,rgba(27,58,92,.035) 0 2px,transparent 2px 9px),repeating-linear-gradient(0deg,rgba(200,146,42,.05) 0 1px,transparent 1px 26px)}
+.passport .ph{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 14px;border-bottom:1px solid #D9CFBD;padding-bottom:8px;margin-bottom:12px}
+.passport .ph h2{margin:0;font:700 13px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.passport .ph span{font:12px Arial,sans-serif;color:var(--med)}
+.pp-stamps{display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 14px}
+.pp-stamps a{display:block;text-decoration:none;text-align:center}
+.pp-stamps a svg{width:104px;height:104px;display:block;transition:transform .15s}
+.pp-stamps a:hover svg,.pp-stamps a:focus-visible svg{transform:scale(1.06)}
+.pp-div{align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;border-left:2px dashed #CDBFA6;padding-left:12px;margin-left:2px;font:700 10px/1.3 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8a6219;max-width:92px}
+.pp-empty{font:13px/1.4 Arial,sans-serif;color:var(--med);font-style:italic;align-self:center}
+.pp-meter{margin-top:14px;border-top:1px solid #D9CFBD;padding-top:10px}
+.pp-meter-lbl{font:13px Arial,sans-serif;color:var(--med);margin-bottom:6px}
+.pp-meter-lbl b{font:700 20px Arial,sans-serif;color:var(--navy);margin-right:2px}
+.ticks{display:grid;grid-template-columns:repeat(56,minmax(0,1fr));gap:2px}
+.ticks span{height:14px;border-radius:2px;background:#E4DACA}
+.ticks span.on{background:var(--red)}
+.ticks span.on.j{background:var(--navy)}
+details.acc{padding:0}
+details.acc summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:14px 44px 14px 18px;position:relative}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary h2{margin:0}
+details.acc summary .acc-hint{font:13px Arial,sans-serif;color:var(--med)}
+details.acc summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font:700 22px/1 Arial,sans-serif;color:var(--navy)}
+details.acc[open] summary::after{content:"\2212"}
+details.acc summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+details.acc > ul, details.acc > p{margin-left:18px;margin-right:18px}
+details.acc > p:last-child{margin-bottom:14px}
+/* this-congress vs career, sparkline, home race */
+.scale .dot.career{background:#fff !important;border:2px solid currentColor;box-shadow:none;width:12px;height:12px}
+.meas .legendline{font-size:11px;color:var(--light);margin-top:2px}
+.spark{display:block;width:100%;max-width:260px;height:54px;margin-top:6px}
+.spark text{font:10px Arial,sans-serif;fill:var(--light)}
+.homerace{background:#fff;border:1px solid var(--line)}
+.homerace .racebar{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font:14px Arial,sans-serif;color:var(--med)}
+.homerace .cands{border-top:0}
+.trend{padding:4px 18px 18px}
+.trend h3{font:700 11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--light);margin:10px 0 4px}
+.trend p.tnote{font:13px/1.5 Arial,sans-serif;color:var(--med);margin:0 0 8px}
+.trend svg{width:100%;height:auto;display:block;max-width:760px}
+.trend svg text{font:12px Arial,sans-serif;fill:var(--med)}
+.trend .tip{position:absolute;pointer-events:none;background:#fff;border:1px solid var(--line);box-shadow:0 2px 8px rgba(0,0,0,.12);padding:6px 9px;font:12px/1.4 Arial,sans-serif;color:var(--dark);display:none;white-space:nowrap}
+.trendtable{width:100%;border-collapse:collapse;font:13px Arial,sans-serif;margin-top:10px}
+.trendtable th{text-align:left;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--light);padding:6px 8px;border-bottom:2px solid var(--line)}
+.trendtable td{padding:6px 8px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.trendtable td.num,.trendtable th.num{text-align:right}
+/* ledger */
+.ledger{margin:22px 0 8px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold)}
+.ledger-head{padding:14px 18px 10px;border-bottom:1px solid var(--line)}
+.ledger-head h2{margin:0 0 3px;font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+.ledger-head span{font:13px Arial,sans-serif;color:var(--med)}
+.lrow{display:grid;grid-template-columns:200px 1fr 1fr;border-bottom:1px solid var(--line)}
+.lrow.hdr{background:var(--navybg);font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
+.lrow.hdr div{padding:8px 14px}
+.lrow .lk{padding:12px 14px;font:600 13px/1.35 Arial,sans-serif;color:var(--dark);background:var(--bg)}
+.lrow .lk small{display:block;font-weight:400;color:var(--light);margin-top:3px}
+.lcell{padding:10px 14px;border-left:1px solid var(--line);font:13px/1.45 Arial,sans-serif}
+.lcell .n{font:700 24px/1 Arial,sans-serif;color:var(--navy);margin-right:6px;vertical-align:-2px}
+.lcell .n.zero{color:var(--light)}
+.lcell ul{margin:6px 0 0;padding-left:16px}
+.lcell li{margin:0 0 4px}
+.lcell .none{color:var(--med)}
+.lcell .tag{display:inline-block;font:700 10px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:2px 5px;border-radius:2px;margin-right:4px}
+.tag.yes{background:#E7F3EA;color:#2D7D46}.tag.conf{background:var(--goldbg);color:#8a6219;border:1px solid #E5CFA0}.tag.no{background:var(--redbg);color:var(--red)}.tag.listed{background:var(--graybg);color:var(--med)}
+.lcell .src{color:var(--light)}
+.lsum{width:100%;border-collapse:collapse;font:14px Arial,sans-serif}
+.lsum th,.lsum td{padding:7px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:baseline}
+.lsum thead th{font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:var(--navybg)}
+.lsum tbody th{font-weight:600;color:var(--dark);width:36%}
+.lsum td{width:32%;color:var(--dark)}
+.lsum td b{font:700 18px Arial,sans-serif;color:var(--navy);margin-right:3px}
+.lsum td b.zero{color:var(--light)}
+.lsum .none{color:var(--med);font-size:13px}
+.ldetail > summary{list-style:none;cursor:pointer;padding:12px 44px 12px 14px;position:relative;background:var(--goldbg);border-bottom:1px solid var(--line)}
+.ldetail > summary::-webkit-details-marker{display:none}
+.ldetail > summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font:700 20px/1 Arial,sans-serif;color:var(--navy)}
+.ldetail[open] > summary::after{content:"\2212"}
+.ldetail .acc-hint{font:13px Arial,sans-serif;color:var(--med)}
+.lhist{border-bottom:1px solid var(--line)}
+.lhist > summary{list-style:none;cursor:pointer;padding:12px 44px 12px 14px;position:relative;background:var(--goldbg)}
+.lhist > summary::-webkit-details-marker{display:none}
+.lhist > summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font:700 20px/1 Arial,sans-serif;color:var(--navy)}
+.lhist[open] > summary::after{content:"\2212"}
+.lhist .acc-hint{font:13px Arial,sans-serif;color:var(--med)}
+.lk-h{font:700 13px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-right:8px}
+.lhist .lrow{border-bottom:0}
+.ledger-acc{border-left:0;margin:0;background:var(--navybg)}
+.ledger-acc summary h2{margin:0;font:700 13px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.ledger-acc ul{margin:0 18px 14px;padding-left:20px;font-size:15px}
+.ledger-acc li{margin:0 0 6px}
+details.candacc > summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;position:relative;padding-right:30px}
+details.candacc > summary::-webkit-details-marker{display:none}
+details.candacc > summary::after{content:"+";position:absolute;right:0;top:-2px;font:700 20px/1 Arial,sans-serif;color:var(--navy)}
+details.candacc[open] > summary::after{content:"\2212"}
+details.candacc[open] > summary{margin-bottom:10px}
+.cand-sum{font:14px Arial,sans-serif;color:var(--navy)}
+#map .route{fill:none;stroke:#1B3A5C;stroke-width:2;stroke-dasharray:6 5;opacity:.8}
+#map .route-arr{fill:none;stroke:none}
+.maplegend i.ln{width:22px;height:0;border-radius:0;border-top:2px dashed var(--navy);vertical-align:3px}
+.odo{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:4px 4px 10px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.odo-n{display:inline-flex;gap:2px}
+.odo-n span{font:500 20px/1 'DM Mono',monospace;background:var(--dark);color:#fff;padding:5px 5px 4px;border-radius:2px;min-width:18px;text-align:center}
+.odo-n span.c{background:none;color:var(--dark);padding:5px 1px 4px;min-width:0}
+.odo-l{font:13px/1.4 Arial,sans-serif;color:var(--med);flex:1 1 260px}
+.odo-l b{color:var(--navy)}
+
+/* split page: two independently scrolling columns on wide screens, stacked on narrow ones */
+.wrap{max-width:1480px}
+header,.stats{max-width:1080px}
+.jump{display:none}
+html{scroll-snap-type:y proximity}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:18px;scroll-snap-align:start;scroll-margin-top:calc(var(--navh,58px) + 10px)}
+.pane{height:calc(100vh - var(--navh,58px) - 24px);overflow-y:auto;background:#fff;border:1px solid var(--line);padding:0 18px 28px;container-type:inline-size;scroll-padding-top:64px}
+.pane:focus{outline:none}.pane:focus-visible{outline:2px solid var(--gold)}
+#road-pane{border-top:5px solid var(--red)}
+#home-pane{border-top:5px solid var(--gold)}
+.pane-h{position:sticky;top:0;z-index:20;background:#fff;margin:0 -18px 0;padding:12px 18px 10px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.pane-h h2{margin:0;font:700 22px/1.1 'Playfair Display',Georgia,serif;color:var(--navy)}
+.pane-h span{font:13px Arial,sans-serif;color:var(--med)}
+.pane .passport{margin-top:16px}
+.pane .ledger{margin-top:16px}
+.pane .stop{scroll-margin-top:64px}
+.pane h2.sec{margin-top:32px}
+@container (max-width:760px){
+  .stop-body{grid-template-columns:1fr}
+  .side{border-left:0;border-top:1px solid var(--line)}
+  .lrow{grid-template-columns:150px 1fr 1fr}
+  .pp-stamps a svg{width:88px;height:88px}
+}
+@media (max-width:1023px){
+  html{scroll-snap-type:none}
+  .split{display:block;margin-top:10px}
+  .pane{height:auto;overflow:visible;border:0;background:none;padding:0}
+  #road-pane,#home-pane{border-top:0}
+  .pane-h{position:static;margin:28px 0 0;padding:10px 0 8px;background:none;border-bottom:3px solid var(--red)}
+  .home-h{border-bottom-color:var(--gold)}
+  .pane{scroll-margin-top:calc(var(--navh,58px) + 48px)}
+  .pane .stop{scroll-margin-top:calc(var(--navh,58px) + 52px)}
+  .jump{display:flex;position:sticky;top:var(--navh,58px);z-index:90;background:var(--bg);border-bottom:1px solid var(--line);margin:14px -20px 0;padding:0 20px}
+  .jump a{flex:1;text-align:center;padding:10px 6px;font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--navy);border-bottom:3px solid transparent}
+  .jump a:first-child{border-bottom-color:var(--red)}
+  .jump a:last-child{border-bottom-color:var(--gold)}
+}
+
+/* support */
+.support{margin-top:44px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;background:var(--goldbg);border:1px solid #E5CFA0;border-left:6px solid var(--gold);padding:20px 22px}
+.support-text{flex:1 1 420px}
+.support h2{margin:0 0 6px;font:700 22px/1.2 'Playfair Display',Georgia,serif;color:var(--navy)}
+.support p{margin:0;font-size:16px;color:var(--dark)}
+.support-btns{display:flex;flex-wrap:wrap;gap:10px}
+.support-btns a{display:inline-block;padding:12px 18px;font:700 14px Arial,sans-serif;text-decoration:none;border-radius:3px;text-align:center}
+.support-btns a.pri{background:var(--navy);color:#fff}
+.support-btns a.pri:hover{background:#12294a}
+.support-btns a.sec{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.support-btns a.sec:hover{background:var(--navybg)}
+.support-btns small{display:block;font:400 12px Arial,sans-serif;opacity:.85;margin-top:2px}
+.support-nudge{margin-top:4px}
+.support-nudge a{color:#8a6219;font-weight:700}
+
+@media (max-width:760px){
+  .site-nav{padding:10px 16px}
+  .nav-links a{margin-left:12px}
+  .wrap{padding:22px 16px 48px}
+  .jump{margin:14px -16px 0;padding:0 16px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stop-body,.cgrid{grid-template-columns:1fr}
+  .trendtable .whr{display:none}
+  .lrow{grid-template-columns:1fr}
+  .lsum th,.lsum td{padding:7px 8px}
+  .lsum tbody th{width:40%;font-size:13px}
+  .lrow.hdr{display:none}
+  .lcell{border-left:0;border-top:1px dashed var(--line)}
+  .lcell::before{content:attr(data-who);display:block;font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--light);margin-bottom:2px}
+  .ticks{grid-template-columns:repeat(28,minmax(0,1fr));row-gap:4px}
+  .pp-stamps a svg{width:84px;height:84px}
+  .postmark{width:70px;height:70px;right:8px;top:12px}
+  .stop-head{padding-right:86px}
+  .side{border-left:0;border-top:1px solid var(--line)}
+  .toolgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<header>
+  <div class="kicker">MN-06 Watch · Running Log</div>
+  <h1>On the Road, and Back Home</h1>
+  <p class="dek">Rep. Tom Emmer says he will campaign in 56 more districts before Election Day. This page tracks two things side by side: where he campaigns for other Republicans, and what public access voters in his own district have had over the same stretch.</p>
+  <div class="byline" id="updated">Last updated September 29, 2026 · Race ratings rechecked with every update · Log begins September 17, when the House left for the campaign recess</div>
+  <div class="byline support-nudge">Reader-funded and independent. <a href="#support">Help keep this page running through Election Day</a></div>
+</header>
+
+<div class="stats" id="stats"></div>
+
+
+<nav class="jump" aria-label="Page sections"><a href="#road-pane">On the Road</a><a href="#home-pane">Back Home</a></nav>
+<div class="split">
+<div class="pane" id="road-pane" tabindex="0" aria-labelledby="road-h">
+<div class="pane-h"><h2 id="road-h">On the Road</h2><span>Where he campaigns for other Republicans</span></div>
+<section class="passport" aria-labelledby="pp-h">
+  <div class="ph"><h2 id="pp-h">Passport · Districts visited</h2><span id="pp-sub"></span></div>
+  <div class="pp-stamps" id="pp-stamps"></div>
+  <div class="pp-meter">
+    <div class="pp-meter-lbl" id="pp-meter-lbl"></div>
+    <div class="ticks" id="ticks" aria-hidden="true"></div>
+  </div>
+</section>
+
+<details class="method acc">
+  <summary><h2>How this page works</h2></summary>
+  <ul>
+    <li><b>After the fact only.</b> A stop is added once Rep. Emmer, the candidate, or the press has posted it publicly. We don't list upcoming stops, even when a campaign has announced them.</li>
+    <li><b>We only see what's published.</b> If he campaigns somewhere and no one posts about it, it won't be here, so the count toward 56 can run low. Know of a stop we missed? Send us the public source.</li>
+    <li><b>District, not location.</b> Map pins sit at the center of each congressional district, not where an event took place. No venues or times. The route line and mileage connect stops only after they've been logged, in the order they happened.</li>
+    <li><b>What's logged is the public message and the public record.</b> His own posts, shown as he published them. Race ratings from the Cook Political Report. Money from FEC filings. Voting-record measures for both candidates in each race, from the same sources for everyone.</li>
+  </ul>
+  <p>This page tracks two things side by side: where Rep. Emmer is campaigning for other Republicans, and what public access his own constituents have had over the same period. Campaigning for colleagues is part of a party leader's job, and leaders in both parties do it. The record here is what he tells voters elsewhere, and what access voters here get.</p>
+</details>
+
+<h2 class="sec">Route map</h2>
+<p class="secnote">Each pin is a district he has campaigned in, labeled with the date. The dashed line connects the logged stops in the order they happened. Pins mark each district's approximate center, not where an event took place. Select a pin to jump to that stop.</p>
+<div class="mapbox">
+  <div class="odo" id="odo"></div>
+  <svg id="map" viewBox="0 0 975 610" role="img" aria-label="Map of the United States with a pin for each congressional district Rep. Emmer has visited, plus his home district, MN-06."></svg>
+  <div class="maplegend">
+    <span><i style="background:var(--red)"></i>Campaign stop</span>
+    <span><i style="background:var(--navy)"></i>Joint appearance</span>
+    <span><i style="background:var(--gold)"></i>Home district (MN-06)</span>
+    <span><i class="ln"></i>Route between logged stops, in order</span>
+  </div>
+</div>
+
+<h2 class="sec">Postcards from the road</h2>
+<p class="secnote">Newest first. Red borders mark his campaign account (@tomemmer); navy marks his leadership account (@GOPMajorityWhip). His photos and videos load from X.</p>
+<div id="log"></div>
+
+
+
+<h2 class="sec">At a glance</h2>
+<p class="secnote">Every district logged so far, with its current Cook rating and combined 2025–26 money from Emmer's three committees.</p>
+<div class="tablewrap"><table class="summary" id="summary"></table></div>
+
+<details class="method acc" id="ratings" style="margin-top:28px">
+  <summary><h2>Reading the voting-record measures</h2><span class="acc-hint">What each score means and who is behind it</span></summary>
+  <p style="margin-top:0">They're shown only for candidates who have served in Congress, and always for both candidates in a race. Someone who hasn't served gets a link to their own positions instead.</p>
+  <ul style="margin-top:8px">
+    <li><b>Voteview (UCLA), this Congress and career.</b> Academic scores built from every roll-call vote a member casts, from −1 (most liberal) to +1 (most conservative). No advocacy group chooses the votes. The headline number is the Nokken-Poole score for the member's most recent Congress, which lets a member's position change from one Congress to the next. The solid dot on the bar is that score. The hollow dot is the member's career DW-NOMINATE score, which averages across every Congress served. The dashed line is the party's median in that Congress. The small line chart shows the score for each Congress served. Scores for the current Congress are based on votes so far, and single-Congress scores move around more than career ones.</li>
+    <li><b>GovTrack ideology score.</b> From 0 (left) to 1 (right). It's based on <i>which bills a member cosponsors and who else signs on</i>, not on votes. It measures legislative alliances, which can differ from voting behavior. Party leaders cosponsor few bills, so their scores are less stable.</li>
+    <li><b>Heritage Action and ProgressivePunch scorecards</b>, always shown as a pair. Both score members across a broad agenda from one side. Heritage Action (conservative) scores agreement with the key votes it selects; we show this Congress and lifetime. ProgressivePunch (progressive) scores the share of votes cast on the progressive side across all the issue areas it tracks; we show its "overall" percentage for this Congress and lifetime. Each group chooses and weighs its own votes, so read the scores as how closely a member matches that group, not as neutral grades. Luria's ProgressivePunch score comes from the group's page as archived in November 2022, since it no longer lists former members.</li>
+  </ul>
+  <p>Rep. Emmer's own scores are in <a href="#home-race">The MN-06 race</a>.</p>
+</details>
+
+<details class="method acc" style="margin-top:22px">
+  <summary><h2>About the money</h2><span class="acc-hint">What the three committees are</span></summary>
+  <p style="margin-top:0">Rep. Emmer runs three federal committees. <b>Emmer for Congress</b> (C00545749) is his own campaign. <b>Electing Majority Making Effective Republicans PAC</b> (C00592089) is his leadership PAC, which can give to other candidates but can't spend on his own race. <b>Emmer Majority Builders</b> (C00859058) is a joint fundraising committee. Donors write one check and the money is split among participating committees, including many of the candidates he visits, under a formula disclosed in advance. A JFC transfer is the candidate's share of money raised jointly, not a gift out of Emmer's own campaign account. Figures are from FEC-processed filings for the 2025–26 cycle. The most recent JFC transfers reported are dated June 30, 2026. Third-quarter reports are due October 15.</p>
+</details>
+</div>
+<div class="pane" id="home-pane" tabindex="0" aria-labelledby="home-h">
+<div class="pane-h home-h"><h2 id="home-h">Back Home</h2><span>Public access in MN-06, both candidates</span></div>
+<section class="ledger" id="ledger" aria-labelledby="ledger-h">
+  <div class="ledger-head"><h2 id="ledger-h">Public access since Sept. 17</h2><span>Both candidates, same categories, same definitions. Every item is sourced.</span></div>
+  <div id="ledger-summary"></div>
+  <details class="ldetail" id="ledger-detail">
+    <summary><span class="lk-h">Every item and source</span></summary>
+    <div id="ledger-rows"></div>
+  </details>
+  <details class="acc ledger-acc">
+    <summary><h2>How we count</h2></summary>
+    <ul>
+      <li><b>Open town hall:</b> an in-person event anyone can attend where the candidate takes questions. Telephone town halls are counted separately if any are announced; none were announced on emmer.house.gov in this window.</li>
+      <li><b>Other public appearance:</b> a public event where the candidate appears but doesn't hold a Q&amp;A, like a parade or ribbon cutting. If the source doesn't say whether it was open to the public, we say so.</li>
+      <li><b>Meeting with invited groups:</b> a roundtable or meeting with local officials, businesses or organizations, not advertised to the public.</li>
+      <li><b>Sources:</b> each candidate's own posts, releases and public event listings, and local press. A campaign's event listing shows an event was scheduled, not that it happened as listed. We note which is which. When we find nothing, we say "none found" and list where we searched.</li>
+      <li><b>"Confirmed by MN-06 Watch":</b> a fact we have verified directly but can't link to a public document. We use this label only for facts we have confirmed, never for characterizations.</li>
+      <li><b>National interviews:</b> shown for Rep. Emmer only. National networks rarely book House challengers, so the comparison wouldn't be fair to Chapin.</li>
+      <li><b>Volunteer events:</b> these are events a campaign organizes and lists publicly. They show campaign activity in the district, not the candidate's personal schedule.</li>
+      <li><b>The other side of it:</b> party leaders campaign for colleagues, and members serve constituents in ways this ledger doesn't count, including casework by district staff and meetings with local officials. Rep. Emmer's office lists mobile office hours on emmer.house.gov. Those are real forms of engagement. This ledger measures one thing: public, in-person access to the candidate.</li>
+    </ul>
+  </details>
+</section>
+
+<h2 class="sec" id="home-race">The MN-06 race</h2>
+<p class="secnote">The race he is on the ballot in, measured the same way as the races in On the Road. For where the two candidates stand issue by issue, see <a href="https://mn06watch.com/articles/where-they-stand/">Where They Stand</a>.</p>
+<div class="homerace" id="homerace"></div>
+</div>
+</div>
+
+<section class="support" id="support" aria-labelledby="support-h">
+  <div class="support-text">
+    <h2 id="support-h">Keep this page running</h2>
+    <p>MN-06 Watch is one person, reader-funded, with no newsroom behind it. Keeping this log current through Election Day means checking every stop, every race rating and every FEC filing by hand, and the data, tools and hosting behind it cost real money. If it's useful to you, you can help pay for it.</p>
+  </div>
+  <div class="support-btns" id="support-btns"></div>
+</section>
+
+<section class="tools">
+  <h2>Keep going</h2>
+  <p>Everything on this page comes from the same public record MN-06 Watch tracks every day. The tools:</p>
+  <div class="toolgrid">
+    <a href="https://mn06watch.com/"><b>Vote Tracker</b><span>Every recorded House vote Rep. Emmer has cast, with roll-call numbers and how he voted.</span></a>
+    <a href="https://mn06watch.com/sponsorships/"><b>Bills</b><span>Every bill he has sponsored or cosponsored, from congress.gov.</span></a>
+    <a href="https://mn06watch.com/transcripts/"><b>Transcripts</b><span>His TV, radio, and podcast appearances, transcribed and searchable.</span></a>
+    <a href="https://mn06watch.com/tweets/"><b>Tweets</b><span>What he posts, archived.</span></a>
+    <a href="https://mn06watch.com/articles/"><b>Articles</b><span>Explainers and special reports, including "Where They Stand."</span></a>
+    <a href="https://mn06watch.substack.com/subscribe"><b>Daily Substack</b><span>The daily accountability summary, free. Rhetoric vs. Reality every Sunday.</span></a>
+  </div>
+</section>
+
+<footer>
+  <p><b>Sources.</b> Posts from @tomemmer and @GOPMajorityWhip on X; Fox News Live, September 27, 2026 (MN-06 Watch transcript archive); Cook Political Report race pages (checked September 29, 2026); FEC disbursement records for committees C00545749, C00592089 and C00859058; Voteview member data (119th and 117th Congresses); GovTrack sponsorship analysis; Heritage Action and ProgressivePunch scorecards (checked September 29, 2026; Luria's ProgressivePunch score via the Internet Archive, Nov. 2022); candidate campaign websites; Bangor Daily News and WGME coverage of Maine DHHS actions. Map: U.S. Census Bureau state boundaries via us-atlas. Each entry links its own sources.</p>
+  <p>Spot an error or a stop we missed? Tell us and we'll correct it with the date noted.</p>
+  <p>We document what your representative does. You decide what it means. <span class="tag">Receipts, not rage.</span></p>
+</footer>
+</div>
+
+<!--
+  ===== THE LOG =====
+  The data lives in data.json next to this file; candidate photos live in photos/. To add a stop: copy one object in "stops" in data.json, edit it, and redeploy. Sorting, map route, odometer, counters and the table update automatically.
+  Rules: add only after it is public; pins use the district's approximate center (lat/lon), never an event location;
+  "posts" = his posts verbatim (emoji stripped) with the X status URL (the embed loads his photos/video, lazily);
+  race = current Cook label and its "last updated" date; recheck every race on every update (top-level "ratingsChecked");
+  money = FEC-processed 2025-26 totals (pac = C00592089, campaign = C00545749, jfc = C00859058); update "moneyAsOf" after each filing;
+  candidates = BOTH candidates, same measures for each. record = null for anyone who hasn't served in Congress. photo = "photos/<name>.jpg".
+  "home" = only what happened in MN-06 that day or that week, each with a link. Durable facts (town hall gap, etc.) live in the ledger, not under stops.
+  Chapin events only after they've happened: use "showAfter" (ISO time the event ends) if you add one the same day.
+-->
+<script type="application/json" id="data">
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+function start(D){
+  function setNav(){var n=document.querySelector('.site-nav'); if(n) document.documentElement.style.setProperty('--navh',n.offsetHeight+'px');}
+  setNav(); window.addEventListener('resize',setNav);
+  var stops = D.stops.slice().sort(function(a,b){return b.date.localeCompare(a.date);});
+  var MONTHS=['Jan.','Feb.','March','April','May','June','July','Aug.','Sept.','Oct.','Nov.','Dec.'];
+  function fmtDate(iso){var p=iso.split('-');return MONTHS[+p[1]-1]+' '+(+p[2])+', '+p[0];}
+  function shortDate(iso){var p=iso.split('-');return MONTHS[+p[1]-1]+' '+(+p[2]);}
+  function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function rclass(r){r=r.toLowerCase();if(r.indexOf('toss')>-1)return 'r-toss';return 'r-'+r.replace(/\s+/g,'-');}
+  function total(m){return (m.campaign||0)+(m.pac||0)+(m.jfc||0);}
+  function anchor(s){return s.district.toLowerCase()+'-'+s.date;}
+  function signed(x,d){return (x>0?'+':x<0?'−':'')+Math.abs(x).toFixed(d);}
+
+  // Odometer: straight-line miles between logged stops, in date order, district center to district center
+  (function(){
+    var asc=stops.slice().reverse(), mi=0, R=3958.8, rad=Math.PI/180;
+    for(var i=1;i<asc.length;i++){
+      var a=asc[i-1], b=asc[i], dl=(b.lat-a.lat)*rad, dn=(b.lon-a.lon)*rad;
+      var h=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a.lat*rad)*Math.cos(b.lat*rad)*Math.sin(dn/2)*Math.sin(dn/2);
+      mi+=2*R*Math.asin(Math.sqrt(h));
+    }
+    var n=(Math.round(mi/10)*10).toLocaleString('en-US');
+    var digits=n.split('').map(function(ch){return '<span'+(ch===','?' class="c"':'')+'>'+ch+'</span>';}).join('');
+    D.routeMiles=mi;
+    document.getElementById('odo').innerHTML='<span class="odo-n" aria-hidden="true">'+digits+'</span><span class="odo-l"><b>About '+n+' miles</b> between the '+asc.length+' logged stops, in order. Straight-line distance between district centers, rounded to the nearest 10. It leaves out trips home to MN-06 and to Washington, so his actual travel is longer.</span>';
+  })();
+
+  // Support buttons (tip button appears only when support.tipUrl is set)
+  (function(){
+    var S=D.support||{}, h='';
+    if(S.subscribeUrl) h+='<a class="pri" href="'+esc(S.subscribeUrl)+'">Become a paid subscriber<small>'+esc(S.subscribeNote||'')+'</small></a>';
+    if(S.tipUrl) h+='<a class="sec" href="'+esc(S.tipUrl)+'">Leave a one-time tip<small>'+esc(S.tipNote||'Any amount')+'</small></a>';
+    document.getElementById('support-btns').innerHTML=h;
+  })();
+
+  // Stats
+  var now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Chicago'}));
+  var today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  var e=D.election.split('-'); var eday=new Date(+e[0],+e[1]-1,+e[2]);
+  var daysLeft=Math.max(0,Math.round((eday-today)/86400000));
+  var sincePledge=stops.filter(function(s){return s.date>=D.pledge.date;}).length;
+  var allMoney=stops.reduce(function(a,s){return a+total(s.money);},0);
+  document.getElementById('stats').innerHTML=
+    '<div class="stat"><b>'+stops.length+'</b><span>stops logged since Sept. 17</span></div>'+
+    '<div class="stat gold"><b>'+sincePledge+' <small style="font-size:16px">of '+D.pledge.count+'</small></b><span>since his Sept. 27 pledge: "'+esc(D.pledge.quote)+'"</span></div>'+
+    '<div class="stat"><b>'+money(allMoney)+'</b><span>from his committees to the candidates he visited, 2025–26 cycle. '+esc(D.moneyAsOf||'')+'</span></div>'+
+    '<div class="stat red"><b>'+daysLeft+'</b><span>days until Election Day, Nov. 3</span></div>';
+
+  // Voting-record block for one candidate
+  var CONG={114:'2015–16',115:'2017–18',116:'2019–20',117:'2021–22',118:'2023–24',119:'2025–26'};
+  function pct(v){return v===null||v===undefined?'n/a':Math.round(v)+'%';}
+  function scaleBar(cur,career,party,congress){
+    var P=function(x){return (x+1)/2*100;};
+    var med=D.npMedians[String(congress)][party];
+    var col=party==='D'?'var(--dem)':'var(--rep)';
+    return '<div class="scale" style="color:'+col+'"><span class="mid"></span><span class="med" style="left:'+P(med)+'%" title="Party median, '+CONG[congress]+': '+signed(med,3)+'"></span>'+
+           '<span class="dot career" style="left:'+P(career)+'%" title="Career DW-NOMINATE: '+signed(career,3)+'"></span>'+
+           '<span class="dot" style="left:'+P(cur)+'%;background:'+col+'" title="'+CONG[congress]+': '+signed(cur,3)+'"></span></div>'+
+           '<div class="scale-ends"><span>−1 liberal</span><span>+1 conservative</span></div>';
+  }
+  function spark(np,party){
+    if(!np||np.length<2) return '';
+    var W=260,H=54,pl=6,pr=6,pt=8,pb=16;
+    var vals=np.map(function(p){return p.v;}).concat(np.map(function(p){return D.npMedians[String(p.c)][party];}));
+    var lo=Math.min.apply(null,vals)-0.03, hi=Math.max.apply(null,vals)+0.03;
+    var x=function(i){return pl+(np.length===1?0:i*(W-pl-pr)/(np.length-1));};
+    var y=function(v){return pt+(hi-v)/(hi-lo)*(H-pt-pb);};
+    var col=party==='D'?'#2F5D8C':'#B03A2E';
+    var med=np.map(function(p,i){return (i?'L':'M')+x(i).toFixed(1)+','+y(D.npMedians[String(p.c)][party]).toFixed(1);}).join('');
+    var line=np.map(function(p,i){return (i?'L':'M')+x(i).toFixed(1)+','+y(p.v).toFixed(1);}).join('');
+    var dots=np.map(function(p,i){return '<circle cx="'+x(i).toFixed(1)+'" cy="'+y(p.v).toFixed(1)+'" r="3.5" fill="'+col+'" stroke="#fff" stroke-width="1.5"><title>'+CONG[p.c]+': '+signed(p.v,3)+'</title></circle>';}).join('');
+    var labs=np.map(function(p,i){return '<text x="'+x(i).toFixed(1)+'" y="'+(H-3)+'" text-anchor="'+(i===0?'start':i===np.length-1?'end':'middle')+'">'+CONG[p.c].slice(0,4)+'</text>';}).join('');
+    return '<svg class="spark" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Voteview score by Congress"><path d="'+med+'" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="4 3"/><path d="'+line+'" fill="none" stroke="'+col+'" stroke-width="2"/>'+dots+labs+'</svg>';
+  }
+  function recordHTML(c){
+    var r=c.record;
+    if(!r) return '<div class="norec">No congressional voting record. For where they stand, see the link above.</div>';
+    var cur=r.np[r.np.length-1];
+    var haKeys=Object.keys(r.ha.sess).sort(), haLast=haKeys[haKeys.length-1];
+    return '<div class="meas"><div class="mh"><span>Voteview, '+CONG[cur.c]+'</span><b>'+signed(cur.v,3)+'</b></div>'+scaleBar(cur.v,r.dw,c.party,cur.c)+
+             '<div class="mn">'+esc(cur.n)+'. Career DW-NOMINATE '+signed(r.dw,3)+' (hollow dot). <a href="'+esc(r.dwUrl)+'">Voteview</a></div>'+spark(r.np,c.party)+
+             (r.np.length>1?'<div class="legendline">Solid line: score each Congress. Dashed: party median.</div>':'')+'</div>'+
+           '<div class="meas"><div class="mh"><span>GovTrack ideology</span><b>'+r.gt.toFixed(2)+'</b></div>'+
+             '<div class="mn">"'+esc(r.gtLabel)+'" ('+esc(r.gtNote)+', from cosponsorships). <a href="'+esc(r.gtUrl)+'">GovTrack</a></div></div>'+
+           '<div class="meas"><div class="pair">'+
+             '<div><div class="mh"><span>Heritage Action</span><b>'+pct(r.ha.sess[haLast])+'</b></div><div class="mn">'+CONG[haLast]+'; lifetime '+pct(r.ha.life)+'. <a href="'+esc(r.haUrl)+'">Scorecard</a></div></div>'+
+             '<div><div class="mh"><span>ProgressivePunch</span><b>'+pct(r.pp.recent)+'</b></div><div class="mn">'+esc(r.pp.recentLabel)+'; lifetime '+pct(r.pp.life)+(r.pp.asOf?' ('+esc(r.pp.asOf)+')':'')+'. <a href="'+esc(r.pp.url)+'">Scorecard</a></div></div>'+
+           '</div></div>';
+  }
+  function candHTML(c){
+    return '<div class="cand '+esc(c.party)+'"><div class="chead">'+(c.photo?'<img class="cphoto" src="'+c.photo+'" alt="'+esc(c.name)+'" width="72" height="72" loading="lazy">':'')+
+      '<div><h4>'+esc(c.name)+' <span class="pty">('+esc(c.partyLabel||c.party)+')</span></h4>'+
+      '<div class="cnote">'+esc(c.note)+'</div>'+(c.photoCredit?'<div class="credit">'+esc(c.photoCredit)+'</div>':'')+'</div></div>'+
+      '<p class="issues"><a href="'+esc(c.issues.url)+'">'+esc(c.issues.label)+'</a>'+(c.campaignIssues?'<br><a href="'+esc(c.campaignIssues.url)+'">'+esc(c.campaignIssues.label)+'</a>':'')+(c.issuesNote?'<small>'+esc(c.issuesNote)+'</small>':'')+'</p>'+
+      recordHTML(c)+'</div>';
+  }
+
+  // Rubber-stamp SVG (district + date), deterministic tilt
+  var TILT=[-8,6,-3,9,-6,4];
+  function stamp(s,i,opts){
+    opts=opts||{};
+    var col=s.type==='Campaign'?'#C0392B':'#1B3A5C', id='sp'+(opts.pfx||'')+i;
+    var p=s.date.split('-'), dstr=(MONTHS[+p[1]-1].replace('.','')+' '+(+p[2])+' '+p[0]).toUpperCase();
+    var top=s.type==='Campaign'?'CAMPAIGN STOP':'JOINT APPEARANCE';
+    return '<svg viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate('+TILT[i%TILT.length]+' 50 50)" fill="none" stroke="'+col+'" opacity=".88">'+
+      '<circle cx="50" cy="50" r="46" stroke-width="3"/><circle cx="50" cy="50" r="40" stroke-width="1.2"/>'+
+      '<defs><path id="'+id+'t" d="M 17 50 A 33 33 0 0 1 83 50"/><path id="'+id+'b" d="M 14 50 A 36 36 0 0 0 86 50"/></defs>'+
+      '<text font-family="Arial" font-weight="700" font-size="8.5" fill="'+col+'" stroke="none"><textPath href="#'+id+'t" startOffset="50%" text-anchor="middle" textLength="'+(top.length>13?94:84)+'" lengthAdjust="spacingAndGlyphs">'+top+'</textPath></text>'+
+      '<text font-family="Arial" font-size="8" letter-spacing=".5" fill="'+col+'" stroke="none"><textPath href="#'+id+'b" startOffset="50%" text-anchor="middle">'+dstr+'</textPath></text>'+
+      '<line x1="22" y1="38" x2="78" y2="38" stroke-width="1"/><line x1="22" y1="62" x2="78" y2="62" stroke-width="1"/>'+
+      '<text x="50" y="57" text-anchor="middle" font-family="DM Mono,Courier New,monospace" font-weight="700" font-size="17" fill="'+col+'" stroke="none">'+esc(s.district)+'</text>'+
+      '</g></svg>';
+  }
+  (function(){
+    var asc=stops.slice().reverse();
+    var after=asc.filter(function(s){return s.date>=D.pledge.date;});
+    document.getElementById('pp-sub').textContent=asc.length+' stamp'+(asc.length===1?'':'s')+' since Sept. 17';
+    var h='', divDone=false;
+    asc.forEach(function(s,i){
+      if(!divDone && s.date>=D.pledge.date){h+='<span class="pp-div">Sept. 27 pledge</span>';divDone=true;}
+      h+='<a href="#'+anchor(s)+'" title="'+esc(s.district+' · '+fmtDate(s.date)+' · '+s.candidate)+'">'+stamp(s,i,{pfx:'p'})+'</a>';
+    });
+    if(!divDone) h+='<span class="pp-div">Sept. 27 pledge</span><span class="pp-empty">No stops logged since the pledge yet.</span>';
+    document.getElementById('pp-stamps').innerHTML=h;
+    document.getElementById('pp-meter-lbl').innerHTML='<b>'+after.length+'</b> of the '+D.pledge.count+' districts he said on Sept. 27 he would visit before Election Day';
+    var th='';
+    for(var k=0;k<D.pledge.count;k++){var s=after[k]; th+='<span'+(s?' class="on'+(s.type==='Campaign'?'':' j')+'" title="'+esc(s.district+' · '+fmtDate(s.date))+'"':'')+'></span>';}
+    document.getElementById('ticks').innerHTML=th;
+  })();
+
+  // Log
+  var html='';
+  stops.forEach(function(s){
+    var m=s.money, r=s.race;
+    html+='<article class="stop" id="'+anchor(s)+'"><div class="airmail"></div><div class="postmark">'+stamp(s,stops.length-1-stops.indexOf(s),{pfx:'c'})+'</div>';
+    html+='<div class="stop-head"><span class="stop-date">'+fmtDate(s.date)+'</span><span class="badge">'+esc(s.district)+'</span>'+
+          '<h3>'+esc(s.candidate)+' ('+esc(s.party)+')<small>'+esc(s.role)+' · '+esc(s.place)+'</small></h3>'+
+          '<span class="type'+(s.type==='Campaign'?' campaign':'')+'">'+esc(s.type)+'</span></div>';
+    html+='<div class="stop-body"><div class="said"><p class="lbl">What he said</p>';
+    s.posts.forEach(function(p){
+      var c=p.acct==='GOPMajorityWhip'?'navy':'red';
+      var tw=p.url.replace('https://x.com/','https://twitter.com/');
+      html+='<div class="post '+c+'"><blockquote class="twitter-tweet-lazy" data-dnt="true" data-conversation="none"><p>'+esc(p.text)+'</p>&mdash; @'+esc(p.acct)+' <a href="'+esc(tw)+'">'+esc(p.date)+'</a></blockquote>'+
+            '<div class="src"><span class="acct">@'+esc(p.acct)+'</span> · '+esc(p.date)+' · <a href="'+esc(p.url)+'">View on X</a></div></div>';
+    });
+    if(s.typeNote) html+='<p class="fine" style="margin-bottom:10px">'+esc(s.typeNote)+'</p>';
+    if(s.context){
+      html+='<div class="context">'+s.context.html+' <span style="color:var(--light)">('+s.context.sources.map(function(x){return '<a href="'+esc(x.url)+'">'+esc(x.label)+'</a>';}).join('; ')+')</span></div>';
+    }
+    html+='</div><div class="side"><p class="lbl">The race</p><div class="kv">'+
+      '<div><span>Cook rating</span><span><span class="rating '+rclass(r.rating)+'">'+esc(r.rating)+'</span></span></div>'+
+      '<div><span>Previously</span><span>'+esc(r.prev)+' (changed '+esc(r.rated)+')</span></div>'+
+      '<div><span>Cook PVI</span><span>'+esc(r.pvi)+'</span></div></div>'+
+      '<p class="fine"><a href="'+esc(r.url)+'">Cook race page</a></p>';
+    html+='<p class="lbl" style="margin-top:16px">The money, 2025–26</p><div class="kv">'+
+      '<div><span>Emmer for Congress</span><span class="total">'+money(m.campaign)+'</span></div>'+
+      '<div><span>Leadership PAC</span><span class="total">'+money(m.pac)+'</span></div>'+
+      '<div><span>Emmer Majority Builders (JFC)</span><span class="total">'+money(m.jfc)+'</span></div>'+
+      '<div><span>Total</span><span class="total">'+money(total(m))+'</span></div></div>'+
+      '<p class="fine">JFC total is '+m.jfc_n+' transfer'+(m.jfc_n===1?'':'s')+' of the candidate\'s share of jointly raised funds. <a href="'+esc(m.url)+'">FEC records</a></p>';
+    html+='</div></div>';
+    if(s.candidates){
+      html+='<details class="cands candacc"><summary><span class="lbl" style="margin:0">More on this race</span> <span class="cand-sum">'+s.candidates.map(function(c){return esc(c.name.replace(/^Rep\. /,''))+' ('+esc(c.partyLabel||c.party)+')';}).join(' vs. ')+' · voting records and positions</span></summary>'+
+            '<p class="fine" style="margin:0 0 10px"><a href="#ratings">How to read these measures</a></p><div class="cgrid">';
+      s.candidates.forEach(function(c){ html+=candHTML(c); });
+      html+='</div></details>';
+    }
+    if(s.home && s.home.length){
+      html+='<div class="home"><p class="lbl">Meanwhile in MN-06</p><ul>';
+      s.home.filter(function(h){return !h.showAfter || Date.now()>=Date.parse(h.showAfter);}).forEach(function(h){
+        var L=(h.links||(h.url?[{label:h.label||'Source',url:h.url}]:[])).map(function(x){return '<a href="'+esc(x.url)+'">'+esc(x.label)+'</a>';});
+        html+='<li>'+h.html+(L.length?' <span style="color:var(--light)">('+L.join(' · ')+')</span>':'')+'</li>';
+      });
+      html+='</ul></div>';
+    }
+    html+='</article>';
+  });
+  document.getElementById('log').innerHTML=html;
+
+  // Summary table
+  var t='<thead><tr><th>Date</th><th>District</th><th>Candidate</th><th>Cook rating</th><th class="num">Committee money</th></tr></thead><tbody>';
+  stops.forEach(function(s){
+    t+='<tr><td>'+fmtDate(s.date)+'</td><td><a href="#'+anchor(s)+'">'+esc(s.district)+'</a></td><td>'+esc(s.candidate)+' ('+esc(s.party)+')</td>'+
+       '<td><span class="rating '+rclass(s.race.rating)+'">'+esc(s.race.rating)+'</span></td><td class="num">'+money(total(s.money))+'</td></tr>';
+  });
+  document.getElementById('summary').innerHTML=t+'</tbody>';
+
+  // Public-access ledger
+  (function(){
+    var L=D.ledger, now=Date.now();
+    function vis(it){return !it.needsSource && (!it.showAfter || now>=Date.parse(it.showAfter));}
+    function cell(side,who,row){
+      var items=(side.items||[]).filter(vis), h='';
+      if(side.na){ return '<div class="lcell" data-who="'+who+'"><span class="none">'+side.na+'</span></div>'; }
+      var count=items.filter(function(i){return i.count!==false;}).length;
+      if(row.count!==false) h+='<span class="n'+(count?'':' zero')+'">'+count+'</span>';
+      if(!items.length) h+='<span class="none">'+(side.none||'None found.')+'</span>';
+      if(items.length){ h+='<ul>'+items.map(function(i){
+        var tag=(i.tag?'<span class="tag '+i.tag+'">'+esc(i.tagText)+'</span>':'')+(i.confidential?'<span class="tag conf">Confidential source</span>':'');
+        return '<li>'+tag+(i.date?'<b>'+esc(i.date)+'</b> · ':'')+i.html+(i.url?' <span class="src">(<a href="'+esc(i.url)+'">'+esc(i.label||'source')+'</a>)</span>':'')+'</li>';}).join('')+'</ul>'; }
+      if(side.note) h+='<div class="src" style="margin-top:4px">'+side.note+'</div>';
+      return '<div class="lcell" data-who="'+who+'">'+h+'</div>';
+    }
+    function short(side,row){
+      if(side.short) return side.short;
+      if(side.na) return '<span class="none">'+(side.naShort||'n/a')+'</span>';
+      var items=(side.items||[]).filter(vis);
+      if(row.tally){ var asked=items.filter(function(i){return i.tag==='yes'||i.tag==='no';}), ok=asked.filter(function(i){return i.tag==='yes';}).length;
+        return '<b class="'+(ok?'':'zero')+'">'+ok+'</b> of '+asked.length+' answered'; }
+      var c=items.filter(function(i){return i.count!==false;}).length;
+      return '<b class="'+(c?'':'zero')+'">'+c+'</b>'+(side.suffix?' <span class="none">'+side.suffix+'</span>':'');
+    }
+    var sh='<table class="lsum"><thead><tr><th></th><th>Rep. Tom Emmer (R)</th><th>Doug Chapin (DFL)</th></tr></thead><tbody>';
+    L.rows.forEach(function(r){ sh+='<tr><th scope="row">'+esc(r.label)+'</th><td>'+short(r.emmer,r)+'</td><td>'+short(r.chapin,r)+'</td></tr>'; });
+    document.getElementById('ledger-summary').innerHTML=sh+'</tbody></table>';
+    var h='<div class="lrow hdr"><div></div><div>Rep. Tom Emmer (R)</div><div>Doug Chapin (DFL)</div></div>';
+    L.rows.forEach(function(r){
+      h+='<div class="lrow"><div class="lk">'+esc(r.label)+(r.def?'<small>'+esc(r.def)+'</small>':'')+'</div>'+cell(r.emmer,'Rep. Tom Emmer (R)',r)+cell(r.chapin,'Doug Chapin (DFL)',r)+'</div>';
+    });
+    var H=L.history;
+    if(H){
+      function hcol(side,who){
+        var it=side.items.filter(vis);
+        return '<div class="lcell" data-who="'+who+'"><div class="src" style="margin-bottom:4px">'+esc(side.intro)+'</div><ul>'+it.map(function(i){
+          var tag=i.tag?'<span class="tag '+i.tag+'">'+esc(i.tagText)+'</span>':'';
+          return '<li>'+tag+'<b>'+esc(i.date)+'</b> · '+i.html+(i.url?' <span class="src">(<a href="'+esc(i.url)+'">'+esc(i.label||'source')+'</a>)</span>':'')+'</li>';}).join('')+'</ul>'+(side.note?'<div class="src" style="margin-top:4px">'+side.note+'</div>':'')+'</div>';
+      }
+      h+='<details class="lhist"><summary><span class="lk-h">Town hall history</span> <span class="acc-hint">Every town hall we can document, for both candidates</span></summary><div class="lrow">'+
+         '<div class="lk">Town halls, full history<small>Before this window</small></div>'+hcol(H.emmer,'Rep. Tom Emmer (R)')+hcol(H.chapin,'Doug Chapin (DFL)')+'</div></details>';
+    }
+    document.getElementById('ledger-rows').innerHTML=h;
+  })();
+
+  // Back home: MN-06
+  (function(){
+    var H=D.homeRace, em=H.candidates[0].record;
+    var h='<div class="racebar"><span class="badge">'+esc(H.district)+'</span><span>Cook rating <span class="rating '+rclass(H.rating)+'">'+esc(H.rating)+'</span> (since '+esc(H.rated)+')</span><span>Cook PVI '+esc(H.pvi)+'</span><span><a href="'+esc(H.cookUrl)+'">Cook race page</a></span></div>';
+    h+='<div class="cands"><div class="cgrid">'+H.candidates.map(candHTML).join('')+'</div></div>';
+    // Emmer trend chart: Voteview by Congress vs House Republican median
+    var cs=em.np.map(function(p){return p.c;});
+    var W=760,Ht=260,ml=46,mr=160,mt=16,mb=34;
+    var vals=em.np.map(function(p){return p.v;}).concat(cs.map(function(c){return D.npMedians[String(c)].R;}));
+    var lo=Math.floor((Math.min.apply(null,vals)-0.02)*20)/20, hi=Math.ceil((Math.max.apply(null,vals)+0.02)*20)/20;
+    var X=function(i){return ml+i*(W-ml-mr)/(cs.length-1);}, Y=function(v){return mt+(hi-v)/(hi-lo)*(Ht-mt-mb);};
+    var g='';
+    for(var v=lo; v<=hi+1e-9; v+=0.05){ g+='<line x1="'+ml+'" x2="'+(W-mr)+'" y1="'+Y(v).toFixed(1)+'" y2="'+Y(v).toFixed(1)+'" stroke="#EEE9E2"/><text x="'+(ml-8)+'" y="'+(Y(v)+4).toFixed(1)+'" text-anchor="end">'+v.toFixed(2)+'</text>'; }
+    cs.forEach(function(c,i){ g+='<text x="'+X(i).toFixed(1)+'" y="'+(Ht-10)+'" text-anchor="middle">'+CONG[c]+'</text>'; });
+    var medPath=cs.map(function(c,i){return (i?'L':'M')+X(i).toFixed(1)+','+Y(D.npMedians[String(c)].R).toFixed(1);}).join('');
+    var emPath=em.np.map(function(p,i){return (i?'L':'M')+X(i).toFixed(1)+','+Y(p.v).toFixed(1);}).join('');
+    g+='<path d="'+medPath+'" fill="none" stroke="#8C8C8C" stroke-width="2" stroke-dasharray="6 4"/>';
+    g+='<path d="'+emPath+'" fill="none" stroke="#B03A2E" stroke-width="2"/>';
+    em.np.forEach(function(p,i){ g+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="5" fill="#B03A2E" stroke="#fff" stroke-width="2"/>'; });
+    var li=cs.length-1;
+    g+='<text x="'+(X(li)+10)+'" y="'+(Y(em.np[li].v)-2).toFixed(1)+'" style="font-weight:700;fill:#B03A2E">Emmer '+signed(em.np[li].v,3)+'</text>';
+    g+='<text x="'+(X(li)+10)+'" y="'+(Y(D.npMedians[String(cs[li])].R)+14).toFixed(1)+'">GOP median '+signed(D.npMedians[String(cs[li])].R,3)+'</text>';
+    cs.forEach(function(c,i){ var x0=i===0?ml:(X(i-1)+X(i))/2, x1=i===li?W-mr:(X(i)+X(i+1))/2; g+='<rect class="hit" data-i="'+i+'" x="'+x0.toFixed(1)+'" y="'+mt+'" width="'+(x1-x0).toFixed(1)+'" height="'+(Ht-mt-mb)+'" fill="transparent"/>'; });
+    h+='<div class="trend"><h3>Rep. Emmer by Congress</h3><p class="tnote">Voteview score for each Congress he has served (red), against the median House Republican in the same Congress (dashed). Higher is more conservative. Through 2021–22 he voted to the left of the typical House Republican. In 2023–24 and 2025–26 he voted to the right of it. His career DW-NOMINATE score ('+signed(em.dw,3)+') averages across all six Congresses, which is why it reads as moderate.</p>'+
+       '<div style="overflow-x:auto"><div style="position:relative;min-width:560px"><svg id="emtrend" viewBox="0 0 '+W+' '+Ht+'" role="img" aria-label="Line chart of Rep. Emmer\'s Voteview score by Congress compared with the House Republican median">'+g+'</svg><div class="tip" id="emtip"></div></div></div>';
+    var rows=cs.map(function(c,i){var p=em.np[i];return '<tr><td>'+CONG[c]+' ('+c+'th)</td><td class="num">'+signed(p.v,3)+'</td><td class="num">'+signed(D.npMedians[String(c)].R,3)+'</td><td class="whr">'+esc(p.n)+'</td><td class="num">'+(em.ha.sess[String(c)]!==undefined?em.ha.sess[String(c)]+'%':'n/a')+'</td><td class="num">'+(em.gtHist[String(c)]!==undefined?em.gtHist[String(c)].toFixed(2):'n/a')+'</td></tr>';}).join('');
+    h+='<div class="tablewrap"><table class="trendtable"><thead><tr><th>Congress</th><th class="num">Voteview</th><th class="num">GOP median</th><th class="whr">Where that puts him</th><th class="num">Heritage Action</th><th class="num">GovTrack</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
+       '<p class="fine">Voteview Nokken-Poole scores (2025–26 based on votes cast so far). Heritage Action session scores. GovTrack cosponsorship-based scores; his GovTrack score fell as his cosponsorships dropped after he joined leadership, so it moves differently from his votes. ProgressivePunch: '+pct(em.pp.recent)+' in 2025–26, '+pct(em.pp.life)+' lifetime.</p></div>';
+    document.getElementById('homerace').innerHTML=h;
+    // hover
+    var svg=document.getElementById('emtrend'), tip=document.getElementById('emtip');
+    svg.querySelectorAll('.hit').forEach(function(r){
+      r.addEventListener('mousemove',function(ev){
+        var i=+r.getAttribute('data-i'), c=cs[i], p=em.np[i];
+        tip.innerHTML='<b>'+CONG[c]+'</b><br>Emmer '+signed(p.v,3)+'<br>GOP median '+signed(D.npMedians[String(c)].R,3)+(em.ha.sess[String(c)]!==undefined?'<br>Heritage Action '+em.ha.sess[String(c)]+'%':'');
+        var box=svg.getBoundingClientRect(); tip.style.display='block';
+        var left=ev.clientX-box.left+12; if(left>box.width-150) left=ev.clientX-box.left-150;
+        tip.style.left=left+'px'; tip.style.top=(ev.clientY-box.top-10)+'px';
+      });
+      r.addEventListener('mouseleave',function(){tip.style.display='none';});
+    });
+  })();
+
+  // X embeds: official widget, do-not-track on
+  // Lazy: a stop's posts turn into X embeds only as the card nears the screen
+  var twP=null;
+  function loadTw(){ if(twP) return twP; twP=new Promise(function(res){ var w=document.createElement('script'); w.async=true; w.charset='utf-8'; w.src='https://platform.twitter.com/widgets.js'; w.onload=function(){res(window.twttr);}; document.body.appendChild(w); }); return twP; }
+  function embed(stopEl){
+    stopEl.querySelectorAll('blockquote.twitter-tweet-lazy').forEach(function(b){b.className='twitter-tweet';});
+    loadTw().then(function(tw){ if(tw&&tw.widgets) tw.widgets.load(stopEl); });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ io.unobserve(e.target); embed(e.target); } }); },{rootMargin:'800px 0px'});
+    document.querySelectorAll('.stop').forEach(function(s){ io.observe(s); });
+  } else { document.querySelectorAll('.stop').forEach(embed); }
+
+  // Map
+  function drawMap(){
+    var svg=d3.select('#map');
+    if(typeof d3==='undefined'||typeof topojson==='undefined') throw new Error('map libs');
+    return fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(function(r){return r.json();}).then(function(us){
+      var proj=d3.geoAlbersUsa().scale(1300).translate([487.5,305]);
+      var path=d3.geoPath(proj);
+      var states=topojson.feature(us,us.objects.states).features;
+      var hlStates={'23':1,'51':1,'27':1};
+      svg.append('g').selectAll('path').data(states).join('path')
+        .attr('class',function(d){return 'state'+(hlStates[d.id]?' hl':'');}).attr('d',path);
+      svg.append('path').datum(topojson.mesh(us,us.objects.states,function(a,b){return a!==b;}))
+        .attr('fill','none').attr('stroke','#fff').attr('stroke-width',1).attr('d',path);
+      var hp=proj([D.home.lon,D.home.lat]);
+      // route: logged stops in date order (oldest first), district center to district center
+      var asc=stops.slice().reverse(), pts=asc.map(function(s){return proj([s.lon,s.lat]);});
+      var defs=svg.append('defs');
+      defs.append('marker').attr('id','arr').attr('viewBox','0 0 10 10').attr('refX',5).attr('refY',5).attr('markerUnits','userSpaceOnUse').attr('markerWidth',14).attr('markerHeight',14).attr('orient','auto')
+        .append('path').attr('d','M0,1 L9,5 L0,9 z').attr('fill','#1B3A5C');
+      for(var i=1;i<pts.length;i++){
+        var a=pts[i-1], b=pts[i]; if(!a||!b) continue;
+        var mx=(a[0]+b[0])/2, my=(a[1]+b[1])/2, dx=b[0]-a[0], dy=b[1]-a[1];
+        var cx=mx+dy*0.18, cy=my-dx*0.18;
+        svg.append('path').attr('class','route').attr('d','M'+a[0]+','+a[1]+' Q'+cx+','+cy+' '+b[0]+','+b[1]);
+        // arrow at the midpoint of the curve, pointing along it
+        var qx=0.25*a[0]+0.5*cx+0.25*b[0], qy=0.25*a[1]+0.5*cy+0.25*b[1], tx=b[0]-a[0], ty=b[1]-a[1];
+        svg.append('path').attr('class','route-arr').attr('d','M'+(qx-tx*0.001)+','+(qy-ty*0.001)+' L'+qx+','+qy).attr('marker-end','url(#arr)');
+      }
+      // home
+      var hg=svg.append('g');
+      hg.append('path').attr('d',d3.symbol(d3.symbolStar,260)()).attr('transform','translate('+hp[0]+','+hp[1]+')').attr('fill','var(--gold)').attr('stroke','#fff').attr('stroke-width',1.5);
+      hg.append('text').attr('x',hp[0]-12).attr('y',hp[1]-10).attr('text-anchor','end').attr('fill','#8a6219').text('MN-06 (home)');
+      // stops, oldest drawn first
+      var bySouth=stops.slice().reverse();
+      bySouth.forEach(function(s){
+        var p=proj([s.lon,s.lat]); if(!p) return;
+        var col=s.type==='Campaign'?'var(--red)':'var(--navy)';
+        var g=svg.append('a').attr('href','#'+anchor(s)).attr('class','pin').attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
+        g.append('circle').attr('cx',p[0]).attr('cy',p[1]).attr('r',8).attr('fill',col).attr('stroke','#fff').attr('stroke-width',2);
+        var right=p[0]<800; var below=s.district==='MN-01';
+        var tx=right?p[0]+13:p[0]-13, ty=below?p[1]+18:p[1]+4, anc=right?'start':'end';
+        g.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.district);
+        g.append('text').attr('class','d').attr('x',tx).attr('y',ty+14).attr('text-anchor',anc).text(shortDate(s.date));
+        g.append('title').text(s.district+' · '+fmtDate(s.date)+' · '+s.candidate);
+      });
+    });
+  }
+  try{ drawMap().catch(fallback); }catch(err){ fallback(); }
+  function fallback(){
+    var box=document.querySelector('.mapbox');
+    var odo=document.getElementById('odo'); box.innerHTML=(odo?odo.outerHTML:'')+'<div class="mapfallback">The map couldn\'t load. Districts visited: '+stops.map(function(s){return '<a href="#'+anchor(s)+'">'+esc(s.district)+' ('+shortDate(s.date)+')</a>';}).join(', ')+'.</div>';
+  }
+}
+(function(){
+  var el=document.getElementById('data'), txt=(el&&el.textContent||'').trim();
+  if(txt.charAt(0)==='{') start(JSON.parse(txt));
+  else fetch('data.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(start).catch(function(){
+    var s=document.getElementById('stats'); if(s) s.outerHTML='<p class="secnote">The log couldn\'t load. Please refresh the page.</p>';
+  });
+})();
+</script>
+</body>
+</html>
