@@ -9,6 +9,103 @@
  "election": "2026-11-03",
  "stops": [
   {
+   "date": "2026-09-30",
+   "district": "KY-04",
+   "place": "Kentucky",
+   "candidate": "Ed Gallrein",
+   "party": "R",
+   "role": "Nominee for an open seat; defeated Rep. Thomas Massie in the May 19 primary",
+   "opponent": "Melissa Strange (D)",
+   "type": "Campaign",
+   "typeNote": "Joint appearance with Reps. Julie Fedorchak (N.D.), Erin Houchin (Ind.) and Ronny Jackson (Texas), per his post.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Sept. 30",
+     "text": "Awesome day in Kentucky with @fedorchak4ND, @Erin_Houchin, and @RonnyJacksonTX supporting an America First Patriot and the next congressman for #KY04, @EdGallrein!",
+     "url": "https://x.com/tomemmer/status/2105427671304016207"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Gallrein, a retired Navy SEAL officer and farmer, won the Republican nomination on May 19 by defeating Rep. Thomas Massie, who had held the seat since 2012. It was the only House primary this cycle in which President Trump endorsed a challenger to a sitting Republican. Emmer's campaign and leadership PAC gave Gallrein's campaign $7,000 on June 26, after the primary. FEC records show no contributions from his three committees to Massie this cycle.",
+    "sources": [
+     {
+      "label": "Ballotpedia, May 20, 2026",
+      "url": "https://news.ballotpedia.org/2026/05/20/ed-gallrein-defeated-incumbent-rep-thomas-massie-in-the-republican-primary-for-kentuckys-4th-congressional-district-on-may-19-2026/"
+     },
+     {
+      "label": "FEC records, Gallrein",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=GALLREIN"
+     },
+     {
+      "label": "FEC records, Massie",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MASSIE"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+18",
+    "checked": "Sept. 30, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483141"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=GALLREIN"
+   },
+   "candidates": [
+    {
+     "name": "Ed Gallrein",
+     "party": "R",
+     "note": "Retired Navy SEAL officer (1984–2014) and farmer. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://www.edgallrein.com/#section-priorities"
+     },
+     "photo": "photos/ed-gallrein.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    },
+    {
+     "name": "Melissa Strange",
+     "party": "D",
+     "note": "Supply chain director in the agribusiness industry; from Villa Hills. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://strangeforky.com/issues/"
+     },
+     "photo": "photos/melissa-strange.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "home": [
+    {
+     "html": "St. Cloud LIVE published profiles of both candidates. Both sat for interviews.",
+     "links": [
+      {
+       "label": "Emmer profile",
+       "url": "https://www.stcloudlive.com/news/local/tom-emmer-2026-campaign-affordability-economy"
+      },
+      {
+       "label": "Chapin profile",
+       "url": "https://www.stcloudlive.com/news/local/doug-chapin-2026-campaign-sixth-district"
+      }
+     ]
+    },
+    {
+     "html": "MN-06 Watch checked every claim in both profiles against the public record: <a href=\"https://mn06watch.com/articles/press-check/\">Press Check</a>."
+    }
+   ],
+   "lat": 38.6,
+   "lon": -84.55
+  },
+  {
    "date": "2026-09-29",
    "district": "ME-02",
    "place": "Lewiston, Maine",
@@ -871,6 +968,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Sept. 30",
+       "html": "<a href=\"#ky-04-2026-09-30\">KY-04</a>, Gallrein"
+      },
       {
        "date": "Sept. 29",
        "html": "<a href=\"#me-02-2026-09-29\">ME-02</a>, LePage"
