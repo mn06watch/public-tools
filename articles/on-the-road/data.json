@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29",
+ "updated": "2026-09-30",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -32,7 +32,7 @@
     }
    ],
    "context": {
-    "html": "<b>The record on Gateway:</b> Maine DHHS suspended the provider's MaineCare payments in December 2025, citing a \"credible allegation of fraud,\" and upheld the suspension in May 2026. State audits found more than $1.7 million in overpayments between 2015 and 2022. Gateway denies the allegations and has appealed. Neither report mentions criminal charges.",
+    "html": "<b>The record on Gateway:</b> Maine DHHS suspended the provider's MaineCare payments in December 2025, citing a \"credible allegation of fraud,\" and upheld the suspension in May 2026. State audits found more than $1.7 million in overpayments between 2015 and 2022. Gateway denies the allegations and has appealed. Neither report mentions criminal charges. <b>Follow-up:</b> In a Fox News interview from the Lewiston stop, Emmer said, \"Fraud in Minnesota is the number one issue.\"",
     "sources": [
      {
       "label": "Bangor Daily News, Dec. 23, 2025",
@@ -41,6 +41,10 @@
      {
       "label": "WGME, May 22, 2026",
       "url": "https://wgme.com/news/waste-watch/decision-upheld-to-suspend-medicaid-payments-to-gateway-community-services-maine-department-of-health-and-human-services-credible-allegation-of-fraud"
+     },
+     {
+      "label": "Fox News, Sept. 30, 2026",
+      "url": "https://www.foxnews.com/politics/explosive-sleeper-issue-could-fuel-midterm-shakeups-top-republican-predicts-youre-gonna-see-surprises"
      }
     ]
    },
@@ -49,7 +53,7 @@
     "prev": "Toss Up",
     "rated": "Nov. 6, 2025",
     "pvi": "R+4",
-    "checked": "Sept. 29, 2026",
+    "checked": "Sept. 30, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -124,7 +128,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Sept. 29, 2026",
+    "checked": "Sept. 30, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -239,7 +243,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Sept. 29, 2026",
+    "checked": "Sept. 30, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -393,7 +397,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Sept. 29, 2026",
+  "checked": "Sept. 30, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -530,16 +534,16 @@
       {
        "date": "Sept. 29",
        "html": "St. Michael town hall, listed as open to the public",
-       "url": "https://www.mobilize.us/chapinforcongress/event/990984/",
-       "label": "campaign event page",
-       "tag": "listed",
-       "tagText": "Listed",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/Dd6TxUJEYiY",
+       "label": "Threads",
+       "tag": "yes",
+       "tagText": "Reported",
        "showAfter": "2026-09-29T20:00:00-05:00"
       }
      ],
      "none": "None found.",
      "note": "His Sept. 27 post called St. Michael \"our next town hall.\" Full history below.",
-     "suffix": "18 total since his campaign began"
+     "suffix": "19 total since his campaign began"
     }
    },
    {
@@ -636,6 +640,14 @@
        "label": "St. Cloud Times"
       },
       {
+       "date": "Sept. 30",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "St. Cloud LIVE profile interview",
+       "url": "https://www.stcloudlive.com/news/local/tom-emmer-2026-campaign-affordability-economy",
+       "label": "St. Cloud LIVE"
+      },
+      {
        "date": "Sept. 18",
        "tag": "no",
        "tagText": "No response",
@@ -670,6 +682,14 @@
        "html": "St. Cloud Times race profile, written from the campaigns' websites. Neither candidate is quoted.",
        "url": "https://www.yahoo.com/news/politics/articles/key-races-st-cloud-area-093051194.html",
        "label": "St. Cloud Times"
+      },
+      {
+       "date": "Sept. 30",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "St. Cloud LIVE profile interview",
+       "url": "https://www.stcloudlive.com/news/local/doug-chapin-2026-campaign-sixth-district",
+       "label": "St. Cloud LIVE"
       },
       {
        "date": "Sept. 20",
@@ -997,11 +1017,11 @@
      },
      {
       "date": "Sept. 29, 2026",
-      "tag": "listed",
-      "tagText": "Listed",
+      "tag": "yes",
+      "tagText": "Reported",
       "html": "St. Michael",
-      "url": "https://www.mobilize.us/chapinforcongress/event/990984/",
-      "label": "listing",
+      "url": "https://www.threads.com/@dougchapinforcongress/post/Dd6TxUJEYiY",
+      "label": "Threads",
       "showAfter": "2026-09-29T20:00:00-05:00"
      }
     ],
@@ -1009,7 +1029,7 @@
    }
   }
  },
- "ratingsChecked": "Sept. 29, 2026",
+ "ratingsChecked": "Sept. 30, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
