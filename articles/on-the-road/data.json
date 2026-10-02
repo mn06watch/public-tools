@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30",
+ "updated": "2026-10-01",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,137 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-01",
+   "district": "VA-01",
+   "place": "Virginia",
+   "candidate": "Rep. Rob Wittman",
+   "party": "R",
+   "role": "Incumbent since 2007",
+   "opponent": "Shannon Taylor (D), Henrico County prosecutor",
+   "type": "Campaign",
+   "typeNote": "Joint appearance with Rep. Austin Scott (Ga.) and Ed Gallrein, the KY-04 nominee from the day before, per his post.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 1",
+     "text": "A great night in Virginia with @AustinScott4GA and @EdGallrein supporting our friend and Republican teammate, @ReElectWittman. 33 days to go until Election Day and Virginians are FIRED UP!",
+     "url": "https://x.com/tomemmer/status/2105797684934447133"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates VA-01 Lean R. Its earlier Solid D rating was for a redrawn map that the Virginia Supreme Court struck down on May 8, so the race is running on the old district lines. Cook's summary: Taylor \"benefits from a district that's clearly trending left, but Wittman has a history of overperforming electorally.\" A Washington Post-Schar School poll released Oct. 1 found Taylor at 50% and Wittman at 46% among likely voters, within the poll's 4.5-point margin of error.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485436"
+     },
+     {
+      "label": "Cook redistricting tracker",
+      "url": "https://www.cookpolitical.com/analysis/house/redistricting/2025-2026-redistricting-tracker-how-many-seats-could-flip-0"
+     },
+     {
+      "label": "Washington Post, Oct. 1, 2026",
+      "url": "https://www.washingtonpost.com/politics/2026/10/01/shannon-taylor-has-edge-over-rob-wittman-virginia-house-district-post-poll-finds/"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean R",
+    "prev": "Solid D",
+    "rated": "May 8, 2026",
+    "pvi": "R+3",
+    "checked": "Oct. 1, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485436"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=WITTMAN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Rob Wittman",
+     "party": "R",
+     "note": "Incumbent since 2007.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://robwittman.com/issues/"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 114,
+        "v": 0.555,
+        "n": "36% of House Republicans more conservative"
+       },
+       {
+        "c": 115,
+        "v": 0.588,
+        "n": "26% of House Republicans more conservative"
+       },
+       {
+        "c": 116,
+        "v": 0.528,
+        "n": "44% of House Republicans more conservative"
+       },
+       {
+        "c": 117,
+        "v": 0.463,
+        "n": "58% of House Republicans more conservative"
+       },
+       {
+        "c": 118,
+        "v": 0.506,
+        "n": "50% of House Republicans more conservative"
+       },
+       {
+        "c": 119,
+        "v": 0.411,
+        "n": "78% of House Republicans more conservative (left of the median)"
+       }
+      ],
+      "dw": 0.446,
+      "dwUrl": "https://voteview.com/person/20756",
+      "gt": 0.698,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/rob_wittman/412255",
+      "ha": {
+       "life": 75,
+       "sess": {
+        "119": 72
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/W000804",
+      "pp": {
+       "life": 4.52,
+       "recent": 2.31,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/rob-wittman.jpg",
+     "photoCredit": "Official congressional portrait"
+    },
+    {
+     "name": "Shannon Taylor",
+     "party": "D",
+     "note": "Henrico County Commonwealth's Attorney (prosecutor). Has not served in Congress.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://shannontaylorva.com/priorities/"
+     },
+     "photo": "photos/shannon-taylor.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 37.75,
+   "lon": -77.0
+  },
   {
    "date": "2026-09-30",
    "district": "KY-04",
@@ -48,7 +179,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Sept. 30, 2026",
+    "checked": "Oct. 1, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -150,7 +281,7 @@
     "prev": "Toss Up",
     "rated": "Nov. 6, 2025",
     "pvi": "R+4",
-    "checked": "Sept. 30, 2026",
+    "checked": "Oct. 1, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -225,7 +356,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Sept. 30, 2026",
+    "checked": "Oct. 1, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -340,7 +471,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Sept. 30, 2026",
+    "checked": "Oct. 1, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -494,7 +625,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Sept. 30, 2026",
+  "checked": "Oct. 1, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -969,6 +1100,10 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 1",
+       "html": "<a href=\"#va-01-2026-10-01\">VA-01</a>, Wittman"
+      },
+      {
        "date": "Sept. 30",
        "html": "<a href=\"#ky-04-2026-09-30\">KY-04</a>, Gallrein"
       },
@@ -1130,12 +1265,12 @@
    }
   }
  },
- "ratingsChecked": "Sept. 30, 2026",
+ "ratingsChecked": "Oct. 1, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
   "tipUrl": "https://buy.stripe.com/00wcMZ3dX8Pa5cNekD4ko01",
   "tipNote": "Any amount, no account needed"
  },
- "moneyAsOf": "FEC filings through June 30; new reports due Oct. 15."
+ "moneyAsOf": "Latest FEC-processed filings; third-quarter reports due Oct. 15."
 }

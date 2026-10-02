@@ -842,13 +842,27 @@ function start(D){
       hg.append('text').attr('x',hp[0]-12).attr('y',hp[1]-10).attr('text-anchor','end').attr('fill','#8a6219').text('MN-06 (home)');
       // stops, oldest drawn first
       var bySouth=stops.slice().reverse();
+      // Label placement: try spots around each pin and take the first that doesn't overlap a pin, the home label or another label
+      var pins=bySouth.map(function(s){return proj([s.lon,s.lat]);}).filter(Boolean);
+      var taken=[{x0:hp[0]-110,x1:hp[0],y0:hp[1]-22,y1:hp[1]-4}];
+      pins.forEach(function(p){taken.push({x0:p[0]-10,x1:p[0]+10,y0:p[1]-10,y1:p[1]+10});});
+      function hits(b){return taken.some(function(o){return b.x0<o.x1&&b.x1>o.x0&&b.y0<o.y1&&b.y1>o.y0;});}
+      function place(p){
+        var W=52,spots=[[1,4],[-1,4],[1,-18],[-1,-18],[1,24],[-1,24],[1,-32],[-1,-32]];
+        for(var i=0;i<spots.length;i++){
+          var sx=spots[i][0], ty=p[1]+spots[i][1], tx=p[0]+13*sx;
+          var b=sx>0?{x0:tx,x1:tx+W,y0:ty-11,y1:ty+17}:{x0:tx-W,x1:tx,y0:ty-11,y1:ty+17};
+          if(b.x1>975||b.x0<0) continue;
+          if(!hits(b)){taken.push(b);return {tx:tx,ty:ty,anc:sx>0?'start':'end'};}
+        }
+        return {tx:p[0]+13,ty:p[1]+4,anc:'start'};
+      }
       bySouth.forEach(function(s){
         var p=proj([s.lon,s.lat]); if(!p) return;
         var col=s.type==='Campaign'?'var(--red)':'var(--navy)';
         var g=svg.append('a').attr('href','#'+anchor(s)).attr('class','pin').attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
         g.append('circle').attr('cx',p[0]).attr('cy',p[1]).attr('r',8).attr('fill',col).attr('stroke','#fff').attr('stroke-width',2);
-        var right=p[0]<800; var below=s.district==='MN-01';
-        var tx=right?p[0]+13:p[0]-13, ty=below?p[1]+18:p[1]+4, anc=right?'start':'end';
+        var L=place(p), tx=L.tx, ty=L.ty, anc=L.anc;
         g.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.district);
         g.append('text').attr('class','d').attr('x',tx).attr('y',ty+14).attr('text-anchor',anc).text(shortDate(s.date));
         g.append('title').text(s.district+' · '+fmtDate(s.date)+' · '+s.candidate);
