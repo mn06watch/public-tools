@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01",
+ "updated": "2026-10-02",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,85 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-02",
+   "district": "SC-01",
+   "place": "South Carolina Lowcountry",
+   "candidate": "Jenny Costa Honeycutt",
+   "party": "R",
+   "role": "Nominee for an open seat; Rep. Nancy Mace ran for governor",
+   "opponent": "Nancy Lacore (D), retired Navy vice admiral",
+   "type": "Campaign",
+   "typeNote": "Joint appearance with Reps. Brandon Gill (Texas) and Austin Scott (Ga.) and Ed Gallrein, the KY-04 nominee, per his post.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 2",
+     "text": "Started off the day in Lowcountry supporting our friend, @JennyHoneycutt. South Carolina knows what's at stake in 32 days: COMMON SENSE vs COMMUNISM! Glad to have @realBrandonGill, @AustinScott4GA, and @EdGallrein on the road with us!",
+     "url": "https://x.com/tomemmer/status/2106025661198442607"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> The seat is open because Rep. Nancy Mace ran for governor; she finished fifth in the June 9 primary. Honeycutt, a Charleston County Council member and attorney, won the June 23 Republican runoff with about 54%. Lacore, a retired Navy vice admiral who led the Navy Reserve, won the Democratic runoff with 52%. Emmer's campaign and leadership PAC gave Honeycutt's campaign $7,000 on June 25, two days after the runoff. <b>The phrase:</b> In his Sept. 9 speech to the Republican midterm convention, he called this \"an election between common sense and communism.\"",
+    "sources": [
+     {
+      "label": "SC Daily Gazette, June 23, 2026",
+      "url": "https://scdailygazette.com/2026/06/23/retired-navy-admiral-charleston-attorney-advance-in-scs-1st-district-contest/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JENNY"
+     },
+     {
+      "label": "Sept. 9 speech transcript",
+      "url": "https://mn06watch.com/transcripts/emmer-tom-emmer-speech-at-midterm-convention-blasts-democrats-as-radicals-with-broad-brush-narrative-20260909.pdf"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Likely R",
+    "prev": "Solid R",
+    "rated": "June 18, 2026",
+    "pvi": "R+6",
+    "checked": "Oct. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485136"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JENNY"
+   },
+   "candidates": [
+    {
+     "name": "Jenny Costa Honeycutt",
+     "party": "R",
+     "note": "Attorney; Charleston County Council since 2018. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign platform page",
+      "url": "https://www.jennycostahoneycutt.com/platform"
+     },
+     "photo": "photos/jenny-honeycutt.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    },
+    {
+     "name": "Nancy Lacore",
+     "party": "D",
+     "note": "Retired Navy vice admiral; former chief of the Navy Reserve. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign priorities page",
+      "url": "https://www.nancylacore.com/priorities"
+     },
+     "photo": "photos/nancy-lacore.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 32.75,
+   "lon": -80.2
+  },
   {
    "date": "2026-10-01",
    "district": "VA-01",
@@ -48,7 +127,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 1, 2026",
+    "checked": "Oct. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -179,7 +258,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 1, 2026",
+    "checked": "Oct. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -281,7 +360,7 @@
     "prev": "Toss Up",
     "rated": "Nov. 6, 2025",
     "pvi": "R+4",
-    "checked": "Oct. 1, 2026",
+    "checked": "Oct. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -356,7 +435,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 1, 2026",
+    "checked": "Oct. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -471,7 +550,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 1, 2026",
+    "checked": "Oct. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -625,7 +704,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 1, 2026",
+  "checked": "Oct. 2, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -1100,6 +1179,10 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 2",
+       "html": "<a href=\"#sc-01-2026-10-02\">SC-01</a>, Honeycutt"
+      },
+      {
        "date": "Oct. 1",
        "html": "<a href=\"#va-01-2026-10-01\">VA-01</a>, Wittman"
       },
@@ -1265,7 +1348,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 1, 2026",
+ "ratingsChecked": "Oct. 2, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
