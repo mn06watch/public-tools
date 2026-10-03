@@ -10,6 +10,124 @@
  "stops": [
   {
    "date": "2026-10-02",
+   "district": "NC-01",
+   "place": "Rocky Mount, N.C.",
+   "candidate": "Laurie Buckhout",
+   "party": "R",
+   "role": "Challenger; 2024 Republican nominee here",
+   "opponent": "Rep. Don Davis (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "Evening rally. His post went up Oct. 3; the Buckhout campaign had advertised the rally for Friday, Oct. 2. His photo tags Rep. Addison McDowell and two others.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 3",
+     "text": "Rocky Mount was FIRED UP for @lauriebuckhout! Laurie is a retired Army Colonel, combat commander, and business leader who will put COMMON SENSE before crazy. #NC01, in just one month, you have the opportunity to RETIRE Don Davis and ELECT LAURIE BUCKHOUT!",
+     "url": "https://x.com/tomemmer/status/2106463064430166187"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> A rematch. Davis beat Buckhout by 1.7 points in 2024. Cook rates it Lean R and calls Davis \"the most vulnerable House Democrat in the country.\" <b>The announcement:</b> The Buckhout campaign advertised the rally in advance on its website, naming \"Majority Whip Tom Emmer\" as a special guest, with a public RSVP form.",
+    "sources": [
+     {
+      "label": "Ballotpedia, Aug. 11, 2026",
+      "url": "https://news.ballotpedia.org/2026/08/11/davis-d-and-buckhout-r-meet-in-nc-01-rematch-after-2024-election-decided-by-1-7-points/"
+     },
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483706"
+     },
+     {
+      "label": "Buckhout rally page",
+      "url": "https://www.lauriebuckhoutforcongress.com/emmerrally"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean R",
+    "prev": "Likely R",
+    "rated": "Dec. 1, 2025",
+    "pvi": "R+5",
+    "checked": "Oct. 3, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483706"
+   },
+   "money": {
+    "campaign": 4000,
+    "pac": 10000,
+    "jfc": 43909.39,
+    "jfc_n": 3,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BUCKHOUT"
+   },
+   "candidates": [
+    {
+     "name": "Laurie Buckhout",
+     "party": "R",
+     "note": "Retired Army colonel and business owner. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://www.lauriebuckhoutforcongress.com/issues"
+     },
+     "photo": "photos/laurie-buckhout.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    },
+    {
+     "name": "Rep. Don Davis",
+     "party": "D",
+     "note": "Incumbent since 2023.",
+     "issues": {
+      "label": "Campaign site",
+      "url": "https://www.votedondavis.com/"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": -0.259,
+        "n": "24th most moderate of 221 House Democrats"
+       },
+       {
+        "c": 119,
+        "v": -0.209,
+        "n": "16th most moderate of 224 House Democrats"
+       }
+      ],
+      "dw": -0.241,
+      "dwUrl": "https://voteview.com/person/22314",
+      "gt": 0.658,
+      "gtLabel": "centrist Democrat",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/don_davis/456912",
+      "ha": {
+       "life": 12,
+       "sess": {
+        "119": 7
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/D000230",
+      "pp": {
+       "life": 71.83,
+       "recent": 66.6,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/don-davis.jpg",
+     "photoCredit": "Official congressional portrait"
+    }
+   ],
+   "home": [
+    {
+     "html": "KARE 11 posted its full \"On the Record\" interview with Doug Chapin. KARE says it invited both candidates; Emmer did not appear. MN-06 Watch checked the claims in it: <a href=\"https://mn06watch.com/articles/press-check/\">Press Check</a>.",
+     "url": "https://www.kare11.com/video/news/local/on-the-record/on-the-record-doug-chapin-looks-to-unseat-tom-emmer-keith-ellison-ron-schutz-debate-highlights/89-af45f36a-07d5-409b-b71e-de8c36f164d9",
+     "label": "KARE 11, Oct. 3"
+    }
+   ],
+   "lat": 36.1,
+   "lon": -77.3
+  },
+  {
+   "date": "2026-10-02",
    "district": "NC-06",
    "place": "High Point, N.C.",
    "candidate": "Rep. Addison McDowell",
@@ -44,7 +162,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -149,7 +267,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -255,7 +373,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -334,7 +452,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -465,7 +583,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -567,7 +685,7 @@
     "prev": "Toss Up",
     "rated": "Nov. 6, 2025",
     "pvi": "R+4",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -642,7 +760,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -757,7 +875,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 2, 2026",
+    "checked": "Oct. 3, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -911,7 +1029,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 2, 2026",
+  "checked": "Oct. 3, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -1411,6 +1529,10 @@
      "items": [
       {
        "date": "Oct. 2",
+       "html": "<a href=\"#nc-01-2026-10-02\">NC-01</a>, Buckhout"
+      },
+      {
+       "date": "Oct. 2",
        "html": "<a href=\"#nc-06-2026-10-02\">NC-06</a>, McDowell"
       },
       {
@@ -1587,7 +1709,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 2, 2026",
+ "ratingsChecked": "Oct. 3, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
