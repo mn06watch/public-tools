@@ -10,6 +10,213 @@
  "stops": [
   {
    "date": "2026-10-02",
+   "district": "NC-06",
+   "place": "High Point, N.C.",
+   "candidate": "Rep. Addison McDowell",
+   "party": "R",
+   "role": "Incumbent since 2025",
+   "opponent": "Cyril Jefferson (D), mayor of High Point",
+   "type": "Campaign",
+   "typeNote": "Same post as the NC-10 stop: joint appearance with Reps. Brandon Gill and Austin Scott and five North Carolina Republicans.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 2",
+     "text": ".@realBrandonGill, @AustinScott4GA, and I had a great time in Tobaccoville and High Point with our colleagues from North Carolina. Proud to support these House Republican teammates who are working hard to protect the American Dream and make life better for every American! @virginiafoxx @Addison_McD @DavidRouzer @PatHarriganNC @MarkHarrisNC8",
+     "url": "https://x.com/tomemmer/status/2106141059260485780"
+    }
+   ],
+   "context": {
+    "html": "<b>How we logged it:</b> One post covers two towns and tags five North Carolina Republicans: Reps. Virginia Foxx, Addison McDowell, David Rouzer, Pat Harrigan and Mark Harris. We log the districts the towns are in, per the Census Bureau's geocoder: Tobaccoville is in NC-10 (Harrigan) and High Point in NC-06 (McDowell). Foxx, Rouzer and Harris appeared, but the events weren't in their districts, so they aren't logged as separate stops. <b>The race:</b> McDowell's Democratic opponent, Cyril Jefferson, has been High Point's mayor since 2023.",
+    "sources": [
+     {
+      "label": "Census geocoder",
+      "url": "https://geocoding.geo.census.gov/geocoder/"
+     },
+     {
+      "label": "WUNC, Aug. 6, 2025",
+      "url": "https://www.wunc.org/2025-08-06/high-point-mayor-cyril-jefferson-announces-bid-for-congress"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+9",
+    "checked": "Oct. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483731"
+   },
+   "money": {
+    "campaign": 4000,
+    "pac": 10000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MCDOWELL"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Addison McDowell",
+     "party": "R",
+     "note": "Incumbent since 2025.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://www.mcdowellfornc.com/issues"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.56,
+        "n": "47% of House Republicans more conservative (right of the median)"
+       }
+      ],
+      "dw": 0.56,
+      "dwUrl": "https://voteview.com/person/22538",
+      "gt": 0.645,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/addison_mcdowell/457001",
+      "ha": {
+       "life": 100,
+       "sess": {
+        "119": 100
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/M001240",
+      "pp": {
+       "life": 1.46,
+       "recent": 1.46,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/addison-mcdowell.jpg",
+     "photoCredit": "Official congressional portrait"
+    },
+    {
+     "name": "Cyril Jefferson",
+     "party": "D",
+     "note": "Mayor of High Point since 2023. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://www.cyrilforcongress.com/issues"
+     },
+     "photo": "photos/cyril-jefferson.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 35.85,
+   "lon": -80.1,
+   "home": [
+    {
+     "html": "KARE 11 published a profile of the MN-06 race. It requested interviews with both candidates for \"On the Record\": Chapin sat down for one, airing Sunday; the Emmer campaign had not responded by publication. KARE noted Emmer gave it an extensive interview in November 2025.",
+     "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+     "label": "KARE 11, Oct. 2"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "district": "NC-10",
+   "place": "Tobaccoville, N.C.",
+   "candidate": "Rep. Pat Harrigan",
+   "party": "R",
+   "role": "Incumbent since 2025",
+   "opponent": "Ashley Bell (D), physician assistant; Steven Feldman (L)",
+   "type": "Campaign",
+   "typeNote": "Joint appearance with Reps. Brandon Gill (Texas) and Austin Scott (Ga.) and five North Carolina Republicans, per his post.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 2",
+     "text": ".@realBrandonGill, @AustinScott4GA, and I had a great time in Tobaccoville and High Point with our colleagues from North Carolina. Proud to support these House Republican teammates who are working hard to protect the American Dream and make life better for every American! @virginiafoxx @Addison_McD @DavidRouzer @PatHarriganNC @MarkHarrisNC8",
+     "url": "https://x.com/tomemmer/status/2106141059260485780"
+    }
+   ],
+   "context": {
+    "html": "<b>How we logged it:</b> One post covers two towns and tags five North Carolina Republicans: Reps. Virginia Foxx, Addison McDowell, David Rouzer, Pat Harrigan and Mark Harris. We log the districts the towns are in, per the Census Bureau's geocoder: Tobaccoville is in NC-10 (Harrigan) and High Point in NC-06 (McDowell). Foxx, Rouzer and Harris appeared, but the events weren't in their districts, so they aren't logged as separate stops.",
+    "sources": [
+     {
+      "label": "Census geocoder",
+      "url": "https://geocoding.geo.census.gov/geocoder/"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+9",
+    "checked": "Oct. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483751"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=HARRIGAN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Pat Harrigan",
+     "party": "R",
+     "note": "Incumbent since 2025.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://www.harriganforcongressnc.com/issues"
+     },
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.972,
+        "n": "Most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.972,
+      "dwUrl": "https://voteview.com/person/22524",
+      "gt": 0.649,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/pat_harrigan/457003",
+      "ha": {
+       "life": 98,
+       "sess": {
+        "119": 98
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/H001101",
+      "pp": {
+       "life": 1.46,
+       "recent": 1.46,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     },
+     "photo": "photos/pat-harrigan.jpg",
+     "photoCredit": "Official congressional portrait"
+    },
+    {
+     "name": "Ashley Bell",
+     "party": "D",
+     "note": "Physician assistant. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://ashleybellforcongress.com/issues"
+     },
+     "photo": "photos/ashley-bell.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 36.0,
+   "lon": -80.85
+  },
+  {
+   "date": "2026-10-02",
    "district": "SC-01",
    "place": "South Carolina Lowcountry",
    "candidate": "Jenny Costa Honeycutt",
@@ -902,6 +1109,12 @@
     "chapin": {
      "items": [
       {
+       "date": "Oct. 2",
+       "html": "KARE 11, \"On the Record\" (interview recorded; airs Sunday, Oct. 4)",
+       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "label": "KARE 11"
+      },
+      {
        "date": "Sept. 27",
        "html": "KSTP, \"At Issue with Tom Hauser\"",
        "url": "https://kstp.com/kstp-news/top-news/chapin-faces-tough-campaign-against-emmer-in-6th-district/",
@@ -955,6 +1168,14 @@
        "label": "St. Cloud LIVE"
       },
       {
+       "date": "Oct. 2",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "KARE 11 \"On the Record\" interview request, as of publication. KARE noted he sat for an extensive interview with it in November 2025.",
+       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "label": "KARE 11"
+      },
+      {
        "date": "Sept. 18",
        "tag": "no",
        "tagText": "No response",
@@ -997,6 +1218,14 @@
        "html": "St. Cloud LIVE profile interview",
        "url": "https://www.stcloudlive.com/news/local/doug-chapin-2026-campaign-sixth-district",
        "label": "St. Cloud LIVE"
+      },
+      {
+       "date": "Oct. 2",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "KARE 11 \"On the Record\" interview request",
+       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "label": "KARE 11"
       },
       {
        "date": "Sept. 20",
@@ -1178,6 +1407,14 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 2",
+       "html": "<a href=\"#nc-06-2026-10-02\">NC-06</a>, McDowell"
+      },
+      {
+       "date": "Oct. 2",
+       "html": "<a href=\"#nc-10-2026-10-02\">NC-10</a>, Harrigan"
+      },
       {
        "date": "Oct. 2",
        "html": "<a href=\"#sc-01-2026-10-02\">SC-01</a>, Honeycutt"
