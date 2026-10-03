@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02",
+ "updated": "2026-10-03",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -1109,9 +1109,11 @@
     "chapin": {
      "items": [
       {
-       "date": "Oct. 2",
-       "html": "KARE 11, \"On the Record\" (interview recorded; airs Sunday, Oct. 4)",
-       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "date": "Oct. 3",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "KARE 11 \"On the Record\" interview",
+       "url": "https://www.kare11.com/video/news/local/on-the-record/on-the-record-doug-chapin-looks-to-unseat-tom-emmer-keith-ellison-ron-schutz-debate-highlights/89-af45f36a-07d5-409b-b71e-de8c36f164d9",
        "label": "KARE 11"
       },
       {
@@ -1168,11 +1170,11 @@
        "label": "St. Cloud LIVE"
       },
       {
-       "date": "Oct. 2",
+       "date": "Oct. 3",
        "tag": "no",
        "tagText": "No response",
-       "html": "KARE 11 \"On the Record\" interview request, as of publication. KARE noted he sat for an extensive interview with it in November 2025.",
-       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "html": "KARE 11 \"On the Record\": invited, did not appear. KARE 11 says it invited both candidates; it noted he sat for an extensive interview with the station in November 2025.",
+       "url": "https://www.kare11.com/video/news/local/on-the-record/on-the-record-doug-chapin-looks-to-unseat-tom-emmer-keith-ellison-ron-schutz-debate-highlights/89-af45f36a-07d5-409b-b71e-de8c36f164d9",
        "label": "KARE 11"
       },
       {
@@ -1220,11 +1222,11 @@
        "label": "St. Cloud LIVE"
       },
       {
-       "date": "Oct. 2",
+       "date": "Oct. 3",
        "tag": "yes",
        "tagText": "Interviewed",
-       "html": "KARE 11 \"On the Record\" interview request",
-       "url": "https://www.kare11.com/article/news/politics/elections/rep-tom-emmer-faces-off-with-doug-chapin-in-minnesotas-sixth-congressional-district-mn/89-08bb8532-68b2-4f88-92b5-00cb1caabfce",
+       "html": "KARE 11 \"On the Record\" interview",
+       "url": "https://www.kare11.com/video/news/local/on-the-record/on-the-record-doug-chapin-looks-to-unseat-tom-emmer-keith-ellison-ron-schutz-debate-highlights/89-af45f36a-07d5-409b-b71e-de8c36f164d9",
        "label": "KARE 11"
       },
       {
