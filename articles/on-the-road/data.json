@@ -1090,6 +1090,118 @@
    "lon": -77.0
   },
   {
+   "date": "2026-10-01",
+   "district": "NC-08",
+   "place": "Charlotte area, N.C.",
+   "candidate": "Rep. Mark Harris",
+   "party": "R",
+   "role": "Incumbent since 2025",
+   "opponent": "Colby Watson (D)",
+   "type": "Campaign",
+   "found": "Found through news coverage, not his social media",
+   "typeNote": "Emmer didn't post about this stop; we found it in Axios, which rode along on his Charlotte-to-Richmond trip visiting Reps. Mark Harris and Rob Wittman. Axios didn't give a date. Oct. 1 is our best read: Charlotte's WBT aired interviews with both Harris and Emmer that day, and he posted from Virginia that evening.",
+   "posts": [],
+   "said": [
+    {
+     "text": "It really is a business, and you're looking at a balance sheet, and you're putting your money where you're gonna get your biggest return.",
+     "src": "To Axios, between campaign stops",
+     "url": "https://www.axios.com/2026/10/05/redistricting-house-republicans-midterms-tom-emmer"
+    },
+    {
+     "text": "We expanded the map when we should have kept it narrow. We should have been conservative about what we were going after.",
+     "src": "To donors in Charlotte, per Axios",
+     "url": "https://www.axios.com/2026/10/05/redistricting-house-republicans-midterms-tom-emmer"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it Solid R, and Harris won with 60% in 2024. <b>The trip:</b> Axios reported Emmer's case for concentrating money in winnable races. On the same trip he said Democrat Roy Cooper's lead in the North Carolina Senate race has a \"large impact\" on the state's 1st and 11th districts. He rallied in the 1st for Laurie Buckhout the next day.",
+    "sources": [
+     {
+      "label": "Axios, Oct. 5, 2026",
+      "url": "https://www.axios.com/2026/10/05/redistricting-house-republicans-midterms-tom-emmer"
+     },
+     {
+      "label": "WBT, Oct. 1, 2026",
+      "url": "https://wbt.com/1650907/10-1-26-interviews-w-enes-kanter-reps-harris-emmer/"
+     },
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483741"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+10",
+    "checked": "Oct. 5, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483741"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MARK+HARRIS"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Mark Harris",
+     "party": "R",
+     "note": "Incumbent since 2025. Baptist pastor.",
+     "issues": {
+      "label": "House website",
+      "url": "https://markharris.house.gov/"
+     },
+     "photo": "photos/mark-harris.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.812,
+        "n": "9th most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.8,
+      "dwUrl": "https://voteview.com/person/22525",
+      "gt": 0.587,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/mark_harris/457002",
+      "ha": {
+       "life": 91,
+       "sess": {
+        "119": 91
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/H001102",
+      "pp": {
+       "life": 1.24,
+       "recent": 1.24,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Colby Watson",
+     "party": "D",
+     "note": "Owner of a construction contracting company in Monroe. Has not held office.",
+     "issues": {
+      "label": "Campaign site",
+      "url": "https://www.colbyforcongress.com/"
+     },
+     "photo": "photos/colby-watson.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 35.04,
+   "lon": -79.98
+  },
+  {
    "date": "2026-09-30",
    "district": "KY-04",
    "place": "Kentucky",

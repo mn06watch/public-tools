@@ -58,6 +58,9 @@ h2.sec{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:upperc
 #map .state{fill:#F2F0EC;stroke:#fff;stroke-width:.8}
 #map .state.hl{fill:#E8E1D6}
 #map .pin{cursor:pointer}
+.type.found{margin-left:6px;color:var(--med);border-color:var(--line);background:var(--graybg)}
+blockquote.said-q{margin:0;font-size:17px;line-height:1.5}
+blockquote.said-q p{margin:0 0 6px}
 #map .pin.approx circle{stroke-dasharray:3 2;fill-opacity:.55}
 .rlist{margin:0 0 6px}
 .rlist div span:first-child b{font-family:"DM Mono","Courier New",monospace;color:var(--dark);margin-right:4px}
@@ -691,13 +694,16 @@ function start(D){
     html+='<article class="stop" id="'+anchor(s)+'"><div class="airmail"></div><div class="postmark">'+stamp(s,stops.length-1-stops.indexOf(s),{pfx:'c'})+'</div>';
     html+='<div class="stop-head"><span class="stop-date">'+fmtDate(s.date)+'</span><span class="badge">'+esc(s.district)+'</span>'+
           '<h3>'+esc(s.candidate)+' ('+esc(s.party)+')<small>'+esc(s.role)+' · '+esc(s.place)+'</small></h3>'+
-          '<span class="type'+(s.type==='Campaign'?' campaign':'')+'">'+esc(s.type)+'</span></div>';
+          '<span class="type'+(s.type==='Campaign'?' campaign':'')+'">'+esc(s.type)+'</span>'+(s.found?'<span class="type found">'+esc(s.found)+'</span>':'')+'</div>';
     html+='<div class="stop-body"><div class="said"><p class="lbl">What he said</p>';
     s.posts.forEach(function(p){
       var c=p.acct==='GOPMajorityWhip'?'navy':'red';
       var tw=p.url.replace('https://x.com/','https://twitter.com/');
       html+='<div class="post '+c+'"><blockquote class="twitter-tweet-lazy" data-dnt="true" data-conversation="none"><p>'+esc(p.text)+'</p>&mdash; @'+esc(p.acct)+' <a href="'+esc(tw)+'">'+esc(p.date)+'</a></blockquote>'+
             '<div class="src"><span class="acct">@'+esc(p.acct)+'</span> · '+esc(p.date)+' · <a href="'+esc(p.url)+'">View on X</a></div></div>';
+    });
+    (s.said||[]).forEach(function(q){
+      html+='<div class="post navy"><blockquote class="said-q"><p>'+esc(q.text)+'</p></blockquote><div class="src">'+esc(q.src)+' · <a href="'+esc(q.url)+'">Source</a></div></div>';
     });
     if(s.typeNote) html+='<p class="fine" style="margin-bottom:10px">'+esc(s.typeNote)+'</p>';
     if(s.context){
