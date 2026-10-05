@@ -58,6 +58,15 @@ h2.sec{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:upperc
 #map .state{fill:#F2F0EC;stroke:#fff;stroke-width:.8}
 #map .state.hl{fill:#E8E1D6}
 #map .pin{cursor:pointer}
+#map .pin.approx circle{stroke-dasharray:3 2;fill-opacity:.55}
+.rlist{margin:0 0 6px}
+.rlist div span:first-child b{font-family:"DM Mono","Courier New",monospace;color:var(--dark);margin-right:4px}
+.rlist div span:last-child{white-space:nowrap}
+.rlist .rating{margin-right:6px}
+.rsec{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.rsec:first-of-type{border-top:0;margin-top:4px;padding-top:0}
+.rsec h4.rh{font:700 15px/1.3 Arial,sans-serif;color:var(--navy);margin:0 0 4px}
+.rsec .rmeta{font:13px/1.45 Arial,sans-serif;color:var(--med);margin:0 0 10px}
 #map .pin:focus{outline:none}
 #map .pin:focus circle,#map .pin:hover circle{stroke:var(--dark);stroke-width:2}
 #map text{font:700 12px Arial,sans-serif;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
@@ -382,7 +391,7 @@ header,.stats{max-width:1080px}
   <ul>
     <li><b>After the fact only.</b> A stop is added once Rep. Emmer, the candidate, or the press has posted it publicly. We don't list upcoming stops, even when a campaign has announced them.</li>
     <li><b>We only see what's published.</b> If he campaigns somewhere and no one posts about it, it won't be here, so the count toward 56 can run low. Know of a stop we missed? Send us the public source.</li>
-    <li><b>District, not location.</b> Map pins sit at the center of each congressional district, not where an event took place. No venues or times. The route line and mileage connect stops only after they've been logged, in the order they happened.</li>
+    <li><b>District, not location.</b> Map pins sit at the center of each congressional district, not where an event took place. No venues or times. The route line and mileage connect stops only after they've been logged, in the order they happened. One exception: on Oct. 5 he appeared with nine Texas nominees at an undisclosed spot on the border. That stop counts once, its pin (dashed) is our estimate, and we'll move it when the location is confirmed.</li>
     <li><b>What's logged is the public message and the public record.</b> His own posts, shown as he published them. Race ratings from the Cook Political Report. Money from FEC filings. Voting-record measures for both candidates in each race, from the same sources for everyone.</li>
   </ul>
   <p>This page tracks two things side by side: where Rep. Emmer is campaigning for other Republicans, and what public access his own constituents have had over the same period. Campaigning for colleagues is part of a party leader's job, and leaders in both parties do it. The record here is what he tells voters elsewhere, and what access voters here get.</p>
@@ -528,6 +537,7 @@ function start(D){
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function rclass(r){r=r.toLowerCase();if(r.indexOf('toss')>-1)return 'r-toss';return 'r-'+r.replace(/\s+/g,'-');}
   function total(m){return (m.campaign||0)+(m.pac||0)+(m.jfc||0);}
+  function stopTotal(s){return s.races?s.races.reduce(function(a,r){return a+total(r.money);},0):total(s.money);}
   function anchor(s){return s.district.toLowerCase()+'-'+s.date;}
   function signed(x,d){return (x>0?'+':x<0?'−':'')+Math.abs(x).toFixed(d);}
 
@@ -542,7 +552,7 @@ function start(D){
     var n=(Math.round(mi/10)*10).toLocaleString('en-US');
     var digits=n.split('').map(function(ch){return '<span'+(ch===','?' class="c"':'')+'>'+ch+'</span>';}).join('');
     D.routeMiles=mi;
-    document.getElementById('odo').innerHTML='<span class="odo-n" aria-hidden="true">'+digits+'</span><span class="odo-l"><b>About '+n+' miles</b> between the '+asc.length+' logged stops, in order. Straight-line distance between district centers, rounded to the nearest 10. It leaves out trips home to MN-06 and to Washington, so his actual travel is longer.</span>';
+    document.getElementById('odo').innerHTML='<span class="odo-n" aria-hidden="true">'+digits+'</span><span class="odo-l"><b>About '+n+' miles</b> between the '+asc.length+' logged stops, in order. Straight-line distance between district centers, rounded to the nearest 10. It leaves out trips home to MN-06 and to Washington, so his actual travel is longer.'+(stops.some(function(s){return s.approx;})?' One location is our estimate (dashed pin on the map), so the total is approximate.':'')+'</span>';
   })();
 
   // Support buttons (tip button appears only when support.tipUrl is set)
@@ -559,7 +569,7 @@ function start(D){
   var e=D.election.split('-'); var eday=new Date(+e[0],+e[1]-1,+e[2]);
   var daysLeft=Math.max(0,Math.round((eday-today)/86400000));
   var sincePledge=stops.filter(function(s){return s.date>=D.pledge.date;}).length;
-  var allMoney=stops.reduce(function(a,s){return a+total(s.money);},0);
+  var allMoney=stops.reduce(function(a,s){return a+stopTotal(s);},0);
   document.getElementById('stats').innerHTML=
     '<div class="stat"><b>'+stops.length+'</b><span>stops logged since Sept. 17</span></div>'+
     '<div class="stat gold"><b>'+sincePledge+' <small style="font-size:16px">of '+D.pledge.count+'</small></b><span>since his Sept. 27 pledge: "'+esc(D.pledge.quote)+'"</span></div>'+
@@ -628,7 +638,7 @@ function start(D){
       '<text font-family="Arial" font-weight="700" font-size="8.5" fill="'+col+'" stroke="none"><textPath href="#'+id+'t" startOffset="50%" text-anchor="middle" textLength="'+(top.length>13?94:84)+'" lengthAdjust="spacingAndGlyphs">'+top+'</textPath></text>'+
       '<text font-family="Arial" font-size="8" letter-spacing=".5" fill="'+col+'" stroke="none"><textPath href="#'+id+'b" startOffset="50%" text-anchor="middle">'+dstr+'</textPath></text>'+
       '<line x1="22" y1="38" x2="78" y2="38" stroke-width="1"/><line x1="22" y1="62" x2="78" y2="62" stroke-width="1"/>'+
-      '<text x="50" y="57" text-anchor="middle" font-family="DM Mono,Courier New,monospace" font-weight="700" font-size="17" fill="'+col+'" stroke="none">'+esc(s.district)+'</text>'+
+      '<text x="50" y="57" text-anchor="middle" font-family="DM Mono,Courier New,monospace" font-weight="700" font-size="17" fill="'+col+'" stroke="none">'+esc(s.stampText||s.district)+'</text>'+
       '</g></svg>';
   }
   (function(){
@@ -647,6 +657,32 @@ function start(D){
     for(var k=0;k<D.pledge.count;k++){var s=after[k]; th+='<span'+(s?' class="on'+(s.type==='Campaign'?'':' j')+'" title="'+esc(s.district+' · '+fmtDate(s.date))+'"':'')+'></span>';}
     document.getElementById('ticks').innerHTML=th;
   })();
+
+  function moneyLine(m){
+    return 'Campaign '+money(m.campaign)+' · Leadership PAC '+money(m.pac)+' · JFC '+money(m.jfc)+(m.jfc_n?' ('+m.jfc_n+' transfer'+(m.jfc_n===1?'':'s')+')':'')+' · <b>Total '+money(total(m))+'</b>. <a href="'+esc(m.url)+'">FEC records</a>';
+  }
+  function multiSide(s){
+    var h='</div><div class="side"><p class="lbl">The races</p><div class="kv rlist">';
+    s.races.forEach(function(r){
+      h+='<div><span><b>'+esc(r.district)+'</b>'+esc(r.short||r.candidate.split(' ').slice(-1)[0])+'</span><span><span class="rating '+rclass(r.race.rating)+'">'+esc(r.race.rating)+'</span>'+money(total(r.money))+'</span></div>';
+    });
+    h+='<div><span>Total from his committees</span><span class="total">'+money(stopTotal(s))+'</span></div></div>';
+    h+='<p class="fine">Cook ratings and money from his campaign, leadership PAC and JFC, 2025–26. Details for each race below.</p></div></div>';
+    return h;
+  }
+  function multiMore(s){
+    var h='<details class="cands candacc"><summary><span class="lbl" style="margin:0">More on these races</span> <span class="cand-sum">'+s.races.length+' races · ratings, money, candidates and records</span></summary>'+
+          '<p class="fine" style="margin:0 0 10px"><a href="#ratings">How to read these measures</a></p>';
+    s.races.forEach(function(r){
+      var c=r.race;
+      h+='<div class="rsec" id="'+esc(r.district.toLowerCase())+'-'+s.date+'"><h4 class="rh">'+esc(r.district)+': '+esc(r.candidate)+' (R) vs. '+esc(r.opponent)+'</h4>'+
+         '<p class="rmeta">'+esc(r.role)+'. Cook: <span class="rating '+rclass(c.rating)+'" style="color:#fff">'+esc(c.rating)+'</span> '+(c.prev?'(was '+esc(c.prev)+', changed '+esc(c.rated)+')':'(since '+esc(c.rated)+')')+', PVI '+esc(c.pvi)+'. <a href="'+esc(c.url)+'">Cook race page</a><br>'+
+         'Money: '+moneyLine(r.money)+(r.note?'<br>'+esc(r.note):'')+'</p><div class="cgrid">';
+      r.candidates.forEach(function(x){ h+=candHTML(x); });
+      h+='</div></div>';
+    });
+    return h+'</details>';
+  }
 
   // Log
   var html='';
@@ -667,6 +703,7 @@ function start(D){
     if(s.context){
       html+='<div class="context">'+s.context.html+' <span style="color:var(--light)">('+s.context.sources.map(function(x){return '<a href="'+esc(x.url)+'">'+esc(x.label)+'</a>';}).join('; ')+')</span></div>';
     }
+    if(s.races){ html+=multiSide(s); } else {
     html+='</div><div class="side"><p class="lbl">The race</p><div class="kv">'+
       '<div><span>Cook rating</span><span><span class="rating '+rclass(r.rating)+'">'+esc(r.rating)+'</span></span></div>'+
       (r.prev?'<div><span>Previously</span><span>'+esc(r.prev)+' (changed '+esc(r.rated)+')</span></div>':'<div><span>Rated since</span><span>'+esc(r.rated)+'</span></div>')+
@@ -679,6 +716,8 @@ function start(D){
       '<div><span>Total</span><span class="total">'+money(total(m))+'</span></div></div>'+
       '<p class="fine">'+(m.jfc_n?'JFC total is '+m.jfc_n+' transfer'+(m.jfc_n===1?'':'s')+' of the candidate\'s share of jointly raised funds.':'No JFC transfers to this candidate reported.')+' <a href="'+esc(m.url)+'">FEC records</a></p>';
     html+='</div></div>';
+    }
+    if(s.races){ html+=multiMore(s); }
     if(s.candidates){
       html+='<details class="cands candacc"><summary><span class="lbl" style="margin:0">More on this race</span> <span class="cand-sum">'+s.candidates.map(function(c){return esc(c.name.replace(/^Rep\. /,''))+' ('+esc(c.partyLabel||c.party)+')';}).join(' vs. ')+' · voting records and positions</span></summary>'+
             '<p class="fine" style="margin:0 0 10px"><a href="#ratings">How to read these measures</a></p><div class="cgrid">';
@@ -700,6 +739,10 @@ function start(D){
   // Summary table
   var t='<thead><tr><th>Date</th><th>District</th><th>Candidate</th><th>Cook rating</th><th class="num">Committee money</th></tr></thead><tbody>';
   stops.forEach(function(s){
+    if(s.races){ s.races.forEach(function(r){
+      t+='<tr><td>'+fmtDate(s.date)+'</td><td><a href="#'+esc(r.district.toLowerCase())+'-'+s.date+'">'+esc(r.district)+'</a></td><td>'+esc(r.candidate)+' (R)</td>'+
+         '<td><span class="rating '+rclass(r.race.rating)+'">'+esc(r.race.rating)+'</span></td><td class="num">'+money(total(r.money))+'</td></tr>';
+    }); return; }
     t+='<tr><td>'+fmtDate(s.date)+'</td><td><a href="#'+anchor(s)+'">'+esc(s.district)+'</a></td><td>'+esc(s.candidate)+' ('+esc(s.party)+')</td>'+
        '<td><span class="rating '+rclass(s.race.rating)+'">'+esc(s.race.rating)+'</span></td><td class="num">'+money(total(s.money))+'</td></tr>';
   });
@@ -860,12 +903,12 @@ function start(D){
       bySouth.forEach(function(s){
         var p=proj([s.lon,s.lat]); if(!p) return;
         var col=s.type==='Campaign'?'var(--red)':'var(--navy)';
-        var g=svg.append('a').attr('href','#'+anchor(s)).attr('class','pin').attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
+        var g=svg.append('a').attr('href','#'+anchor(s)).attr('class','pin'+(s.approx?' approx':'')).attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
         g.append('circle').attr('cx',p[0]).attr('cy',p[1]).attr('r',8).attr('fill',col).attr('stroke','#fff').attr('stroke-width',2);
         var L=place(p), tx=L.tx, ty=L.ty, anc=L.anc;
-        g.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.district);
+        g.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.mapLabel||s.district);
         g.append('text').attr('class','d').attr('x',tx).attr('y',ty+14).attr('text-anchor',anc).text(shortDate(s.date));
-        g.append('title').text(s.district+' · '+fmtDate(s.date)+' · '+s.candidate);
+        g.append('title').text((s.mapLabel||s.district)+' · '+fmtDate(s.date)+' · '+s.candidate+(s.approx?' · location estimated':''));
       });
     });
   }

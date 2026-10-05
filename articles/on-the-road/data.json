@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03",
+ "updated": "2026-10-05",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,552 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-05",
+   "district": "TX",
+   "stampText": "TEXAS",
+   "mapLabel": "TX border",
+   "approx": true,
+   "place": "Texas–Mexico border (location not disclosed)",
+   "candidate": "Nine Texas House nominees",
+   "party": "R",
+   "role": "Group visit with National Border Patrol Council president Paul Perez",
+   "type": "Campaign",
+   "typeNote": "Reese Gorman of NOTUS listed the nine candidates. Emmer's post tags Mark Teixeira and Brandon Herrera. Neither Emmer nor the candidates said where they were.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 5",
+     "text": "I’m here at our southern border. Thanks to President Trump and House Republicans, THE BORDER IS CLOSED! President Trump was right: We didn’t need new laws, we just needed a new president!",
+     "url": "https://x.com/tomemmer/status/2107187225632895381"
+    },
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 5",
+     "text": "Spent the afternoon at the southern border with some of our GREAT Texas Republican congressional candidates and @BPUnion President Paul Perez. Thanks to President Trump and House Republicans, our border is SEALED - another promise made, promise kept! @teixeiramark25 @TheAKGuy",
+     "url": "https://x.com/tomemmer/status/2107193714774786171"
+    }
+   ],
+   "context": {
+    "html": "<b>Where:</b> Not disclosed. His photos and Alex Mealer's show the Rio Grande, a riverside pump station, Texas National Guard and Coast Guard personnel, and a stretch of border wall. The map pin is our estimate, in the Rio Grande Valley; we'll move it when the location is confirmed. <b>\"CLOSED\" and \"SEALED\":</b> CBP reported 8,870 Border Patrol apprehensions at the southwest border in August, 5% fewer than in July and 94% below the Biden administration's monthly average. Crossings are at historic lows; they are not zero. <b>The primaries:</b> In two of these races, his committees had backed the Republican incumbent in the primary. His campaign and leadership PAC gave Rep. Dan Crenshaw $7,000 in February; Steve Toth beat Crenshaw in March. His committees gave Rep. Tony Gonzales $12,000 this cycle; Gonzales quit the TX-23 race in March, and Brandon Herrera became the nominee.",
+    "sources": [
+     {
+      "label": "Reese Gorman (NOTUS) on X",
+      "url": "https://x.com/reesejgorman/status/2107177712259391572"
+     },
+     {
+      "label": "Alex Mealer on X",
+      "url": "https://x.com/AlexMealerTX/status/2107187345640268077"
+     },
+     {
+      "label": "CBP, Sept. 16, 2026",
+      "url": "https://www.cbp.gov/newsroom/national-media-release/trump-administration-delivers-16-straight-months-zero-releases"
+     },
+     {
+      "label": "FEC: Crenshaw, Gonzales",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CRENSHAW&recipient_name=GONZALES"
+     },
+     {
+      "label": "Texas Tribune on TX-23",
+      "url": "https://www.texastribune.org/2026/03/05/tony-gonzales-drops-out-republican-primary-texas-23rd-district-congress/"
+     }
+    ]
+   },
+   "races": [
+    {
+     "district": "TX-28",
+     "candidate": "Tano Tijerina",
+     "role": "Challenger; Webb County judge",
+     "opponent": "Rep. Henry Cuellar (D), incumbent",
+     "note": "The only one of the nine races with an incumbent on the ballot, and the only one Cook rates competitive for Democrats. Trump pardoned Cuellar in December 2025, before his bribery trial.",
+     "race": {
+      "rating": "Lean D",
+      "prev": "Toss Up",
+      "rated": "Dec. 9, 2025",
+      "pvi": "R+3",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485356"
+     },
+     "money": {
+      "campaign": 2000,
+      "pac": 5000,
+      "jfc": 115370.91,
+      "jfc_n": 4,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=TIJERINA"
+     },
+     "candidates": [
+      {
+       "name": "Tano Tijerina",
+       "party": "R",
+       "note": "Webb County judge since 2015. Elected as a Democrat; became a Republican in December 2024. Has not served in Congress.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.tanoforcongress.com/issues"
+       },
+       "record": null,
+       "photo": "photos/tano-tijerina.jpg",
+       "photoCredit": "Photo via Branch.vote"
+      },
+      {
+       "name": "Rep. Henry Cuellar",
+       "party": "D",
+       "note": "Incumbent since 2005. Indicted in 2024 on bribery charges, which he denied; pardoned by Trump in December 2025.",
+       "issues": {
+        "label": "Campaign site",
+        "url": "https://henrycuellar.com/"
+       },
+       "record": {
+        "np": [
+         {
+          "c": 118,
+          "v": -0.193,
+          "n": "4th most moderate of 221 House Democrats"
+         },
+         {
+          "c": 119,
+          "v": -0.192,
+          "n": "7th most moderate of 224 House Democrats"
+         }
+        ],
+        "dw": -0.225,
+        "dwUrl": "https://voteview.com/person/20533",
+        "gt": 0.525,
+        "gtLabel": "centrist Democrat",
+        "gtNote": "2025–26",
+        "gtUrl": "https://www.govtrack.us/congress/members/henry_cuellar/400657",
+        "ha": {
+         "life": 16,
+         "sess": {
+          "119": 13
+         }
+        },
+        "haUrl": "https://heritageaction.com/scorecard/members/C001063",
+        "pp": {
+         "life": 74.79,
+         "recent": 62.24,
+         "recentLabel": "2025–26",
+         "url": "https://progressivepunch.org/scores.htm?house=house"
+        }
+       },
+       "photo": "photos/henry-cuellar.jpg",
+       "photoCredit": "Official congressional portrait"
+      },
+      {
+       "name": "Marlón Durán",
+       "party": "G",
+       "note": "Green Party nominee. Translator and community organizer from McAllen.",
+       "issues": {
+        "label": "Campaign site",
+        "url": "https://marlonduran.com/"
+       },
+       "record": null
+      }
+     ]
+    },
+    {
+     "district": "TX-35",
+     "candidate": "Carlos De La Cruz",
+     "role": "Open seat (Rep. Greg Casar ran in TX-37)",
+     "opponent": "Johnny Garcia (D)",
+     "note": "Redrawn in 2025 to lean Republican.",
+     "race": {
+      "rating": "Lean R",
+      "prev": "Likely R",
+      "rated": "Sept. 25, 2026",
+      "pvi": "R+4",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485391"
+     },
+     "money": {
+      "campaign": 4000,
+      "pac": 10000,
+      "jfc": 6458.99,
+      "jfc_n": 1,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CARLOS+FOR+CONGRESS"
+     },
+     "candidates": [
+      {
+       "name": "Carlos De La Cruz",
+       "party": "R",
+       "note": "Air Force veteran and security specialist. Brother of Rep. Monica De La Cruz (TX-15). Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.carlosforcongress.com/mission"
+       },
+       "record": null,
+       "photo": "photos/carlos-de-la-cruz.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Johnny Garcia",
+       "party": "D",
+       "note": "Bexar County Sheriff's Office spokesman and former deputy. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.votejohnnygarcia.com/general-5"
+       },
+       "record": null,
+       "photo": "photos/johnny-garcia.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ],
+     "short": "De La Cruz"
+    },
+    {
+     "district": "TX-09",
+     "candidate": "Alex Mealer",
+     "role": "Open seat (redrawn in 2025)",
+     "opponent": "Leticia Gutierrez (D)",
+     "note": "A new Republican-leaning seat in east Harris County.",
+     "race": {
+      "rating": "Likely R",
+      "prev": "Solid R",
+      "rated": "Sept. 25, 2026",
+      "pvi": "R+9",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485261"
+     },
+     "money": {
+      "campaign": 4000,
+      "pac": 10000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MEALER"
+     },
+     "candidates": [
+      {
+       "name": "Alex Mealer",
+       "party": "R",
+       "note": "Former Army bomb-disposal officer and energy-finance executive. 2022 Republican nominee for Harris County judge. Has not held office.",
+       "issues": {
+        "label": "Campaign site",
+        "url": "https://alexandramealer.com/about/"
+       },
+       "record": null,
+       "photo": "photos/alex-mealer.jpg",
+       "photoCredit": "Photo via Branch.vote"
+      },
+      {
+       "name": "Leticia Gutierrez",
+       "party": "D",
+       "note": "East Houston community advocate. Has not held office.",
+       "issues": {
+        "label": "Campaign priorities page",
+        "url": "https://www.leticiaforcongress.com/priorities"
+       },
+       "record": null,
+       "photo": "photos/letty-gutierrez.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ]
+    },
+    {
+     "district": "TX-23",
+     "candidate": "Brandon Herrera",
+     "role": "Open seat (vacant since Rep. Tony Gonzales resigned in April)",
+     "opponent": "Katy Padilla Stout (D)",
+     "note": "Herrera became the nominee after Gonzales ended his campaign in March. Emmer's committees had given Gonzales $12,000 this cycle.",
+     "race": {
+      "rating": "Likely R",
+      "prev": "Solid R",
+      "rated": "March 12, 2026",
+      "pvi": "R+7",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485331"
+     },
+     "money": {
+      "campaign": 4000,
+      "pac": 10000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=HERRERA"
+     },
+     "candidates": [
+      {
+       "name": "Brandon Herrera",
+       "party": "R",
+       "note": "Firearms manufacturer and YouTuber. Lost the 2024 GOP runoff here by fewer than 400 votes. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://brandonherreraforcongress.com/issues/"
+       },
+       "record": null,
+       "photo": "photos/brandon-herrera.jpg",
+       "photoCredit": "Photo via Wikimedia Commons (cropped)"
+      },
+      {
+       "name": "Katy Padilla Stout",
+       "party": "D",
+       "note": "San Antonio attorney in child-welfare and education law; former elementary teacher. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.katyforcongress.com/issues/"
+       },
+       "record": null,
+       "photo": "photos/katy-padilla-stout.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ]
+    },
+    {
+     "district": "TX-32",
+     "candidate": "Jace Yarbrough",
+     "role": "Open seat (Rep. Julie Johnson ran in TX-33)",
+     "opponent": "Dan Barrios (D)",
+     "note": "Redrawn in 2025 from a Democratic seat into a Republican one.",
+     "race": {
+      "rating": "Solid R",
+      "prev": "Solid D",
+      "rated": "Aug. 23, 2025",
+      "pvi": "R+8",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485376"
+     },
+     "money": {
+      "campaign": 4000,
+      "pac": 10000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=YARBROUGH"
+     },
+     "candidates": [
+      {
+       "name": "Jace Yarbrough",
+       "party": "R",
+       "note": "Attorney and Air Force Reserve officer. Has not held office.",
+       "issues": {
+        "label": "Campaign priorities page",
+        "url": "https://www.jaceforcongress.com/priorities"
+       },
+       "record": null,
+       "photo": "photos/jace-yarbrough.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Dan Barrios",
+       "party": "D",
+       "note": "Richardson City Council member since 2023.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.danbarriosforcongress.com/issues"
+       },
+       "record": null,
+       "photo": "photos/dan-barrios.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ]
+    },
+    {
+     "district": "TX-02",
+     "candidate": "Steve Toth",
+     "role": "Open seat (beat Rep. Dan Crenshaw in the March primary)",
+     "opponent": "Shaun Finnie (D)",
+     "note": "Emmer's campaign and leadership PAC gave Crenshaw $7,000 in February, before Toth beat him in the primary. FEC records show nothing yet from Emmer's committees to Toth.",
+     "race": {
+      "rating": "Solid R",
+      "prev": "",
+      "rated": "Feb. 6, 2025",
+      "pvi": "R+11",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485226"
+     },
+     "money": {
+      "campaign": 0,
+      "pac": 0,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=TOTH"
+     },
+     "candidates": [
+      {
+       "name": "Steve Toth",
+       "party": "R",
+       "note": "Texas state representative. Has not served in Congress.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://stevetothforcongress.com/issues/"
+       },
+       "record": null,
+       "photo": "photos/steve-toth.jpg",
+       "photoCredit": "Photo via Branch.vote"
+      },
+      {
+       "name": "Shaun Finnie",
+       "party": "D",
+       "note": "Investment banker and former oil-and-gas lawyer. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://shaunfinnieforcongress.com/issues/"
+       },
+       "record": null,
+       "photo": "photos/shaun-finnie.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ]
+    },
+    {
+     "district": "TX-10",
+     "candidate": "Chris Gober",
+     "role": "Open seat (Rep. Michael McCaul is retiring)",
+     "opponent": "Caitlin Rourk (D)",
+     "note": "Gober was director and chief lawyer of Elon Musk's America PAC in 2024.",
+     "race": {
+      "rating": "Solid R",
+      "prev": "",
+      "rated": "Feb. 6, 2025",
+      "pvi": "R+10",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485266"
+     },
+     "money": {
+      "campaign": 2000,
+      "pac": 5000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=GOBER"
+     },
+     "candidates": [
+      {
+       "name": "Chris Gober",
+       "party": "R",
+       "note": "Election lawyer. Has not held office.",
+       "issues": {
+        "label": "Campaign site (issues)",
+        "url": "https://chrisgober.com/#issues"
+       },
+       "record": null,
+       "photo": "photos/chris-gober.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Caitlin Rourk",
+       "party": "D",
+       "note": "Army intelligence officer in the Guard and Reserve; former Dell communications lead. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.caitlinrourk.com/issues"
+       },
+       "record": null,
+       "photo": "photos/caitlin-rourk.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      }
+     ]
+    },
+    {
+     "district": "TX-21",
+     "candidate": "Mark Teixeira",
+     "role": "Open seat (Rep. Chip Roy ran for attorney general)",
+     "opponent": "Kristin Hook (D)",
+     "note": "Teixeira is a former Major League Baseball first baseman. Hook was also the 2024 Democratic nominee here.",
+     "race": {
+      "rating": "Solid R",
+      "prev": "",
+      "rated": "Feb. 6, 2025",
+      "pvi": "R+10",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485321"
+     },
+     "money": {
+      "campaign": 2000,
+      "pac": 5000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=TEIXEIRA"
+     },
+     "candidates": [
+      {
+       "name": "Mark Teixeira",
+       "party": "R",
+       "note": "Former MLB first baseman. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://teixeiraforcongress.com/issues"
+       },
+       "record": null,
+       "photo": "photos/mark-teixeira.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Kristin Hook",
+       "party": "D",
+       "note": "Biologist who worked in federal science policy. Has not held office.",
+       "issues": {
+        "label": "Campaign issues page",
+        "url": "https://www.drkristinhook.org/issues"
+       },
+       "record": null
+      }
+     ]
+    },
+    {
+     "district": "TX-38",
+     "candidate": "Jon Bonck",
+     "role": "Open seat (Rep. Wesley Hunt ran for Senate)",
+     "opponent": "Melissa McDonough (D)",
+     "note": "McDonough was also the 2024 Democratic nominee here.",
+     "race": {
+      "rating": "Solid R",
+      "prev": "",
+      "rated": "Feb. 6, 2025",
+      "pvi": "R+10",
+      "checked": "Oct. 5, 2026",
+      "url": "https://www.cookpolitical.com/house/race/485406"
+     },
+     "money": {
+      "campaign": 4000,
+      "pac": 10000,
+      "jfc": 0,
+      "jfc_n": 0,
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BONCK"
+     },
+     "candidates": [
+      {
+       "name": "Jon Bonck",
+       "party": "R",
+       "note": "Mortgage company sales manager. Has not held office.",
+       "issues": {
+        "label": "Campaign site (issues)",
+        "url": "https://www.jonbonck.com/#Issues"
+       },
+       "record": null,
+       "photo": "photos/jon-bonck.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Melissa McDonough",
+       "party": "D",
+       "note": "Real-estate broker. Has not held office.",
+       "issues": {
+        "label": "Campaign platform page",
+        "url": "https://melissaforcongress.com/platform"
+       },
+       "record": null,
+       "photo": "photos/melissa-mcdonough.jpg",
+       "photoCredit": "Photo from the campaign's website"
+      },
+      {
+       "name": "Alex McMenemy",
+       "party": "G",
+       "note": "Green Party nominee. Community organizer from Tomball.",
+       "issues": {
+        "label": "Campaign platform page",
+        "url": "https://alexforthepeople.org/our-platform/"
+       },
+       "record": null
+      }
+     ]
+    }
+   ],
+   "home": [
+    {
+     "html": "Doug Chapin's campaign lists an open, livestreamed town hall in Monticello on Oct. 5. It goes on the ledger once it has happened.",
+     "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
+     "label": "Listing"
+    }
+   ],
+   "lat": 26.2,
+   "lon": -98.23
+  },
   {
    "date": "2026-10-02",
    "district": "NC-01",
@@ -48,7 +594,7 @@
     "prev": "Likely R",
     "rated": "Dec. 1, 2025",
     "pvi": "R+5",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -162,7 +708,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -267,7 +813,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -373,7 +919,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -452,7 +998,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -583,7 +1129,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -685,7 +1231,7 @@
     "prev": "Toss Up",
     "rated": "Nov. 6, 2025",
     "pvi": "R+4",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -760,7 +1306,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -875,7 +1421,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 3, 2026",
+    "checked": "Oct. 5, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -1029,7 +1575,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 3, 2026",
+  "checked": "Oct. 5, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -1171,11 +1717,29 @@
        "tag": "yes",
        "tagText": "Reported",
        "showAfter": "2026-09-29T20:00:00-05:00"
+      },
+      {
+       "date": "Oct. 5",
+       "tag": "listed",
+       "tagText": "Listed",
+       "html": "Monticello Community Center town hall, listed as open to the public and livestreamed",
+       "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
+       "label": "listing",
+       "showAfter": "2026-10-05T19:30:00-05:00"
+      },
+      {
+       "date": "Oct. 6",
+       "tag": "listed",
+       "tagText": "Listed",
+       "html": "Chanhassen Library health care town hall, listed as open to the public",
+       "url": "https://www.mobilize.us/chapinforcongress/event/998118/",
+       "label": "listing",
+       "showAfter": "2026-10-06T19:45:00-05:00"
       }
      ],
      "none": "None found.",
-     "note": "His Sept. 27 post called St. Michael \"our next town hall.\" Full history below.",
-     "suffix": "19 total since his campaign began"
+     "note": "His Oct. 1 post called Monticello and Chanhassen town halls #20 and #21. Each is added after it happens. Full history below.",
+     "suffix": "19 total through Sept. 29"
     }
    },
    {
@@ -1210,6 +1774,12 @@
        "date": "Sept. 21",
        "html": "\"Until Emmer stops hiding and the media decides to cover the race, this is the only debate you'll get,\" sharing Where They Stand",
        "url": "https://x.com/ChapinForMN6/status/2102126166123397303",
+       "label": "post"
+      },
+      {
+       "date": "Oct. 2",
+       "html": "\"We've told every single media outlet that we're ready to debate, but none have been scheduled. Unlike other races, there's no ongoing negotiation about venue, format, etc.\"",
+       "url": "https://x.com/ChapinForMN6/status/2106089497482158476",
        "label": "post"
       }
      ],
@@ -1703,13 +2273,31 @@
       "url": "https://www.threads.com/@dougchapinforcongress/post/Dd6TxUJEYiY",
       "label": "Threads",
       "showAfter": "2026-09-29T20:00:00-05:00"
+     },
+     {
+      "date": "Oct. 5, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Monticello (his #20, per his Oct. 1 post)",
+      "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
+      "label": "listing",
+      "showAfter": "2026-10-05T19:30:00-05:00"
+     },
+     {
+      "date": "Oct. 6, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "Chanhassen, on health care (his #21, per his Oct. 1 post)",
+      "url": "https://www.mobilize.us/chapinforcongress/event/998118/",
+      "label": "listing",
+      "showAfter": "2026-10-06T19:45:00-05:00"
      }
     ],
     "note": "He counts 19 town halls through Sept. 29. The ones above are those we can document individually; the rest aren't listed publicly. We found no town hall on Tuesday, Sept. 22: his count went from 17 (Sept. 8) to 18 (Sept. 19), and he called St. Michael, on Sept. 29, his 19th."
    }
   }
  },
- "ratingsChecked": "Oct. 3, 2026",
+ "ratingsChecked": "Oct. 5, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
