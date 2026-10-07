@@ -58,7 +58,7 @@ h2.sec{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:upperc
 #map .state{fill:#F2F0EC;stroke:#fff;stroke-width:.8}
 #map .state.hl{fill:#E8E1D6}
 #map .pin{cursor:pointer}
-.type.found{margin-left:6px;color:var(--med);border-color:var(--line);background:var(--graybg)}
+.type.found{color:var(--med);border-color:var(--line);background:var(--graybg)}
 blockquote.said-q{margin:0;font-size:17px;line-height:1.5}
 blockquote.said-q p{margin:0 0 6px}
 #map .pin.approx circle{stroke-dasharray:3 2;fill-opacity:.55}
@@ -896,24 +896,31 @@ function start(D){
       var taken=[{x0:hp[0]-110,x1:hp[0],y0:hp[1]-22,y1:hp[1]-4}];
       pins.forEach(function(p){taken.push({x0:p[0]-10,x1:p[0]+10,y0:p[1]-10,y1:p[1]+10});});
       function hits(b){return taken.some(function(o){return b.x0<o.x1&&b.x1>o.x0&&b.y0<o.y1&&b.y1>o.y0;});}
+      function overlap(b){return taken.reduce(function(a,o){var w=Math.min(b.x1,o.x1)-Math.max(b.x0,o.x0), h=Math.min(b.y1,o.y1)-Math.max(b.y0,o.y0); return a+(w>0&&h>0?w*h:0);},0);}
       function place(p){
-        var W=52,spots=[[1,4],[-1,4],[1,-18],[-1,-18],[1,24],[-1,24],[1,-32],[-1,-32]];
+        var W=52,spots=[[1,4],[-1,4],[1,-18],[-1,-18],[1,24],[-1,24],[1,-32],[-1,-32],[1,38],[-1,38],[1,-46],[-1,-46]];
+        var best=null;
         for(var i=0;i<spots.length;i++){
           var sx=spots[i][0], ty=p[1]+spots[i][1], tx=p[0]+13*sx;
           var b=sx>0?{x0:tx,x1:tx+W,y0:ty-11,y1:ty+17}:{x0:tx-W,x1:tx,y0:ty-11,y1:ty+17};
           if(b.x1>975||b.x0<0) continue;
           if(!hits(b)){taken.push(b);return {tx:tx,ty:ty,anc:sx>0?'start':'end'};}
+          var ov=overlap(b); if(!best||ov<best.ov) best={ov:ov,b:b,r:{tx:tx,ty:ty,anc:sx>0?'start':'end'}};
         }
+        if(best){taken.push(best.b);return best.r;}
         return {tx:p[0]+13,ty:p[1]+4,anc:'start'};
       }
+      // pins first, labels in a second layer so no pin covers a label
+      var pinLayer=svg.append('g'), labelLayer=svg.append('g');
       bySouth.forEach(function(s){
         var p=proj([s.lon,s.lat]); if(!p) return;
         var col=s.type==='Campaign'?'var(--red)':'var(--navy)';
-        var g=svg.append('a').attr('href','#'+anchor(s)).attr('class','pin'+(s.approx?' approx':'')).attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
+        var g=pinLayer.append('a').attr('href','#'+anchor(s)).attr('class','pin'+(s.approx?' approx':'')).attr('aria-label',s.district+', '+fmtDate(s.date)+', '+s.candidate);
         g.append('circle').attr('cx',p[0]).attr('cy',p[1]).attr('r',8).attr('fill',col).attr('stroke','#fff').attr('stroke-width',2);
         var L=place(p), tx=L.tx, ty=L.ty, anc=L.anc;
-        g.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.mapLabel||s.district);
-        g.append('text').attr('class','d').attr('x',tx).attr('y',ty+14).attr('text-anchor',anc).text(shortDate(s.date));
+        var lg=labelLayer.append('a').attr('href','#'+anchor(s)).attr('class','pin').attr('aria-hidden','true').attr('tabindex','-1');
+        lg.append('text').attr('x',tx).attr('y',ty).attr('text-anchor',anc).attr('fill',col).text(s.mapLabel||s.district);
+        lg.append('text').attr('class','d').attr('x',tx).attr('y',ty+14).attr('text-anchor',anc).text(shortDate(s.date));
         g.append('title').text((s.mapLabel||s.district)+' · '+fmtDate(s.date)+' · '+s.candidate+(s.approx?' · location estimated':''));
       });
     });

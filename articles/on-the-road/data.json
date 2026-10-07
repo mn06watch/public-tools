@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05",
+ "updated": "2026-10-06",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -32,6 +32,12 @@
      "date": "Oct. 5",
      "text": "Spent the afternoon at the southern border with some of our GREAT Texas Republican congressional candidates and @BPUnion President Paul Perez. Thanks to President Trump and House Republicans, our border is SEALED - another promise made, promise kept! @teixeiramark25 @TheAKGuy",
      "url": "https://x.com/tomemmer/status/2107193714774786171"
+    },
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 6",
+     "text": "#TX09, vote for @AlexMealerTX on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2107557011080491507"
     }
    ],
    "context": {
@@ -1099,7 +1105,7 @@
    "opponent": "Colby Watson (D)",
    "type": "Campaign",
    "found": "Found through news coverage, not his social media",
-   "typeNote": "Emmer didn't post about this stop; we found it in Axios, which rode along on his Charlotte-to-Richmond trip visiting Reps. Mark Harris and Rob Wittman. Axios didn't give a date. Oct. 1 is our best read: Charlotte's WBT aired interviews with both Harris and Emmer that day, and he posted from Virginia that evening.",
+   "typeNote": "Emmer didn't post about this stop; we found it in Axios, which rode along on his Charlotte-to-Richmond trip. A second Axios story (Oct. 6) says it was a closed-door fundraiser for Harris. Axios didn't give a date. Oct. 1 is our best read: Charlotte's WBT aired interviews with both Harris and Emmer that day, and he posted from Virginia that evening.",
    "posts": [],
    "said": [
     {
@@ -1111,6 +1117,11 @@
      "text": "We expanded the map when we should have kept it narrow. We should have been conservative about what we were going after.",
      "src": "To donors in Charlotte, per Axios",
      "url": "https://www.axios.com/2026/10/05/redistricting-house-republicans-midterms-tom-emmer"
+    },
+    {
+     "text": "Don't just keep telling me 'Don't have the votes. Don't have the votes.' You suck.",
+     "src": "On Senate Republicans, at the Harris fundraiser, per Axios",
+     "url": "https://www.axios.com/2026/10/06/tom-emmer-senate-republicans-frustration-save-act"
     }
    ],
    "context": {
@@ -1119,6 +1130,10 @@
      {
       "label": "Axios, Oct. 5, 2026",
       "url": "https://www.axios.com/2026/10/05/redistricting-house-republicans-midterms-tom-emmer"
+     },
+     {
+      "label": "Axios, Oct. 6, 2026",
+      "url": "https://www.axios.com/2026/10/06/tom-emmer-senate-republicans-frustration-save-act"
      },
      {
       "label": "WBT, Oct. 1, 2026",
@@ -1832,11 +1847,11 @@
       },
       {
        "date": "Oct. 5",
-       "tag": "listed",
-       "tagText": "Listed",
-       "html": "Monticello Community Center town hall, listed as open to the public and livestreamed",
-       "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
-       "label": "listing",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Monticello Community Center town hall. His Oct. 6 post: \"I was in Monticello last night for a town hall.\"",
+       "url": "https://x.com/ChapinForMN6/status/2107505606399574465",
+       "label": "his post",
        "showAfter": "2026-10-05T19:30:00-05:00"
       },
       {
@@ -1851,7 +1866,7 @@
      ],
      "none": "None found.",
      "note": "His Oct. 1 post called Monticello and Chanhassen town halls #20 and #21. Each is added after it happens. Full history below.",
-     "suffix": "19 total through Sept. 29"
+     "suffix": "20 total through Oct. 5"
     }
    },
    {
@@ -2388,11 +2403,11 @@
      },
      {
       "date": "Oct. 5, 2026",
-      "tag": "listed",
-      "tagText": "Listed",
-      "html": "Monticello (his #20, per his Oct. 1 post)",
-      "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
-      "label": "listing",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Monticello (his #20)",
+      "url": "https://x.com/ChapinForMN6/status/2107505606399574465",
+      "label": "his post",
       "showAfter": "2026-10-05T19:30:00-05:00"
      },
      {
