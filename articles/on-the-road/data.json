@@ -558,7 +558,7 @@
    ],
    "home": [
     {
-     "html": "Doug Chapin's campaign lists an open, livestreamed town hall in Monticello on Oct. 5. It goes on the ledger once it has happened.",
+     "html": "Doug Chapin, Emmer's DFL challenger, held an open town hall in Monticello on Oct. 5.",
      "url": "https://www.mobilize.us/chapinforcongress/event/1028663/",
      "label": "Listing"
     }
@@ -2013,6 +2013,14 @@
        "label": "St. Cloud LIVE"
       },
       {
+       "date": "Oct. 1",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "Monticello Times candidate Q&A. The paper says he \"did not respond by the deadline, despite multiple requests.\"",
+       "url": "https://www.hometownsource.com/abc_newspapers/abc_newspapers/community/andover/q-a-chapin-shares-priorities-in-6th-district-congressional-race/article_6982c788-be31-4369-973a-11757eb004be.html",
+       "label": "Monticello Times"
+      },
+      {
        "date": "Oct. 3",
        "tag": "no",
        "tagText": "No response",
@@ -2071,6 +2079,14 @@
        "html": "St. Cloud LIVE profile interview",
        "url": "https://www.stcloudlive.com/news/local/doug-chapin-2026-campaign-sixth-district",
        "label": "St. Cloud LIVE"
+      },
+      {
+       "date": "Oct. 1",
+       "tag": "yes",
+       "tagText": "Answered",
+       "html": "Monticello Times candidate Q&A",
+       "url": "https://www.hometownsource.com/abc_newspapers/abc_newspapers/community/andover/q-a-chapin-shares-priorities-in-6th-district-congressional-race/article_6982c788-be31-4369-973a-11757eb004be.html",
+       "label": "Monticello Times"
       },
       {
        "date": "Oct. 3",
