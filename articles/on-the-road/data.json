@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06",
+ "updated": "2026-10-08",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -38,6 +38,12 @@
      "date": "Oct. 6",
      "text": "#TX09, vote for @AlexMealerTX on November 3rd!",
      "url": "https://x.com/tomemmer/status/2107557011080491507"
+    },
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 7",
+     "text": ".@TheAKGuy is spot on: Texas can NEVER return to the days of the Biden Border Crisis that allowed more than 10 MILLION illegals into our country. Brandon Herrera is an America First Patriot and fighter for Texans. #TX23, vote for Brandon on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2107886872907165911"
     }
    ],
    "context": {
@@ -1870,6 +1876,28 @@
     }
    },
    {
+    "label": "Online and phone Q&As",
+    "def": "Open question-and-answer sessions held online or by phone. Counted separately from in-person town halls.",
+    "emmer": {
+     "items": [],
+     "none": "None found.",
+     "note": "Most recent: a telephone town hall on June 4, 2025 (<a href=\"https://emmer.house.gov/media-center/press-releases/congressman-emmer-announces-second-constituent-telephone-town-hall\">release</a>). None found since. Searched emmer.house.gov releases and his official and campaign accounts."
+    },
+    "chapin": {
+     "items": [
+      {
+       "date": "Oct. 8",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Reddit \"Ask Me Anything\" on r/Minnesota, open to anyone with questions about MN-06, Congress and the campaign. He posted during the session: \"we're over on Reddit right now!\" (<a href=\"https://www.threads.com/@dougchapinforcongress/post/DePdDYOlGO0\">his post</a>)",
+       "url": "https://www.reddit.com/r/minnesota/comments/1x003u6/",
+       "label": "Reddit thread"
+      }
+     ],
+     "note": "Announced Oct. 7 (<a href=\"https://www.threads.com/@dougchapinforcongress/post/DeNEzi9ksxM\">post</a>)."
+    }
+   },
+   {
     "label": "Debates",
     "def": "Scheduled debates, and what each candidate has said",
     "count": false,
@@ -1991,6 +2019,14 @@
        "html": "KARE 11 \"On the Record\": invited, did not appear. KARE 11 says it invited both candidates; it noted he sat for an extensive interview with the station in November 2025.",
        "url": "https://www.kare11.com/video/news/local/on-the-record/on-the-record-doug-chapin-looks-to-unseat-tom-emmer-keith-ellison-ron-schutz-debate-highlights/89-af45f36a-07d5-409b-b71e-de8c36f164d9",
        "label": "KARE 11"
+      },
+      {
+       "date": "Oct. 8",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "St. Cloud Times interview (James Kling), on H.R. 1, the debt and the Crypto Caucus",
+       "url": "https://www.sctimes.com/story/news/politics/elections/2026/10/08/emmer-aims-to-bring-down-debt-in-reelection-bid-for-u-s-house/92104724007/",
+       "label": "St. Cloud Times"
       },
       {
        "date": "Sept. 18",
@@ -2115,6 +2151,12 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 8",
+       "html": "Minnesota Farm Bureau and Minnesota Cattlemen's Association. His post doesn't say where or when the meeting took place.",
+       "url": "https://x.com/GOPMajorityWhip/status/2108241243901710497",
+       "label": "post"
+      },
+      {
        "date": "Sept. 23",
        "html": "Roundtable with firefighters and mayors, Chanhassen",
        "url": "https://emmer.house.gov/media-center/press-releases/emmer-hosts-firefighter-roundtable-in-carver-county",
@@ -2225,6 +2267,10 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 5",
+       "html": "<a href=\"#tx-2026-10-05\">Texas border</a>, nine House nominees"
+      },
+      {
        "date": "Oct. 2",
        "html": "<a href=\"#nc-01-2026-10-02\">NC-01</a>, Buckhout"
       },
@@ -2239,6 +2285,10 @@
       {
        "date": "Oct. 2",
        "html": "<a href=\"#sc-01-2026-10-02\">SC-01</a>, Honeycutt"
+      },
+      {
+       "date": "Oct. 1",
+       "html": "<a href=\"#nc-08-2026-10-01\">NC-08</a>, Harris (fundraiser; found through Axios)"
       },
       {
        "date": "Oct. 1",
