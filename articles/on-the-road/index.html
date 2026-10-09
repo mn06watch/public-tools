@@ -58,6 +58,12 @@ h2.sec{font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:upperc
 #map .state{fill:#F2F0EC;stroke:#fff;stroke-width:.8}
 #map .state.hl{fill:#E8E1D6}
 #map .pin{cursor:pointer}
+.shift{display:inline-block;font:700 12px/1.3 Arial,sans-serif;white-space:nowrap}
+.shift.to-d{color:var(--dem)}.shift.to-r{color:var(--rep)}
+.shift .sw{font-weight:400;color:var(--med)}
+.kv .shift.to-d{color:var(--dem)}.kv .shift.to-r{color:var(--rep)}.kv .shift .sw{font-weight:400;color:var(--med)}
+.shiftnote{font:14px/1.5 Arial,sans-serif;color:var(--dark);margin:0 0 10px}
+.shiftnote b.to-d{color:var(--dem)}.shiftnote b.to-r{color:var(--rep)}
 .type.found{color:var(--med);border-color:var(--line);background:var(--graybg)}
 blockquote.said-q{margin:0;font-size:17px;line-height:1.5}
 blockquote.said-q p{margin:0 0 6px}
@@ -420,7 +426,8 @@ header,.stats{max-width:1080px}
 
 
 <h2 class="sec">At a glance</h2>
-<p class="secnote">Every district logged so far, with its current Cook rating and combined 2025–26 money from Emmer's three committees.</p>
+<p class="secnote">Every district logged so far, with its current Cook rating, any change Cook has made since his visit, and combined 2025–26 money from Emmer's three committees.</p>
+<p class="shiftnote" id="shiftnote"></p>
 <div class="tablewrap"><table class="summary" id="summary"></table></div>
 
 <details class="method acc" id="ratings" style="margin-top:28px">
@@ -539,6 +546,19 @@ function start(D){
   function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
   function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function rclass(r){r=r.toLowerCase();if(r.indexOf('toss')>-1)return 'r-toss';return 'r-'+r.replace(/\s+/g,'-');}
+  // Rating changes Cook made after the stop date ("since his visit"). Timing only; no cause implied.
+  var RANK={'solid d':0,'likely d':1,'lean d':2,'toss up':3,'lean r':4,'likely r':5,'solid r':6};
+  var MON={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+  function pdate(s){var m=String(s||'').match(/^([A-Za-z]+)\.?\s+(\d+),\s*(\d{4})/); if(!m) return null; var mo=MON[m[1].slice(0,3).toLowerCase()]; if(mo===undefined) return null; return new Date(+m[3],mo,+m[2]);}
+  function shiftOf(race,stopDate){
+    if(!race||!race.prev) return null;
+    var when=pdate(race.rated), p=stopDate.split('-'), sd=new Date(+p[0],+p[1]-1,+p[2]);
+    if(!when||when<=sd) return null;
+    var a=RANK[race.prev.toLowerCase()], b=RANK[race.rating.toLowerCase()];
+    if(a===undefined||b===undefined||a===b) return null;
+    return {dir:b<a?'d':'r', from:race.prev, to:race.rating, when:race.rated.replace(/,\s*\d{4}$/,'')};
+  }
+  function shiftHTML(sh){ if(!sh) return ''; return '<span class="shift to-'+sh.dir+'" title="Cook changed this rating after his visit">'+(sh.dir==='d'?'\u25C0 Toward Dem.':'Toward Rep. \u25B6')+' <span class="sw">from '+esc(sh.from)+', '+esc(sh.when)+'</span></span>'; }
   function total(m){return (m.campaign||0)+(m.pac||0)+(m.jfc||0);}
   function stopTotal(s){return s.races?s.races.reduce(function(a,r){return a+total(r.money);},0):total(s.money);}
   function anchor(s){return s.district.toLowerCase()+'-'+s.date;}
@@ -668,6 +688,7 @@ function start(D){
     var h='</div><div class="side"><p class="lbl">The races</p><div class="kv rlist">';
     s.races.forEach(function(r){
       h+='<div><span><b>'+esc(r.district)+'</b>'+esc(r.short||r.candidate.split(' ').slice(-1)[0])+'</span><span><span class="rating '+rclass(r.race.rating)+'">'+esc(r.race.rating)+'</span>'+money(total(r.money))+'</span></div>';
+      if(shiftOf(r.race,s.date)) h+='<div><span></span><span>'+shiftHTML(shiftOf(r.race,s.date))+'</span></div>';
     });
     h+='<div><span>Total from his committees</span><span class="total">'+money(stopTotal(s))+'</span></div></div>';
     h+='<p class="fine">Cook ratings and money from his campaign, leadership PAC and JFC, 2025–26. Details for each race below.</p></div></div>';
@@ -679,7 +700,7 @@ function start(D){
     s.races.forEach(function(r){
       var c=r.race;
       h+='<div class="rsec" id="'+esc(r.district.toLowerCase())+'-'+s.date+'"><h4 class="rh">'+esc(r.district)+': '+esc(r.candidate)+' (R) vs. '+esc(r.opponent)+'</h4>'+
-         '<p class="rmeta">'+esc(r.role)+'. Cook: <span class="rating '+rclass(c.rating)+'" style="color:#fff">'+esc(c.rating)+'</span> '+(c.prev?'(was '+esc(c.prev)+', changed '+esc(c.rated)+')':'(since '+esc(c.rated)+')')+', PVI '+esc(c.pvi)+'. <a href="'+esc(c.url)+'">Cook race page</a><br>'+
+         '<p class="rmeta">'+esc(r.role)+'. Cook: <span class="rating '+rclass(c.rating)+'" style="color:#fff">'+esc(c.rating)+'</span> '+(c.prev?'(was '+esc(c.prev)+', changed '+esc(c.rated)+')':'(since '+esc(c.rated)+')')+', PVI '+esc(c.pvi)+'. '+(shiftOf(c,s.date)?'Since his visit: '+shiftHTML(shiftOf(c,s.date))+'. ':'')+'<a href="'+esc(c.url)+'">Cook race page</a><br>'+
          'Money: '+moneyLine(r.money)+(r.note?'<br>'+esc(r.note):'')+'</p><div class="cgrid">';
       r.candidates.forEach(function(x){ h+=candHTML(x); });
       h+='</div></div>';
@@ -712,7 +733,8 @@ function start(D){
     if(s.races){ html+=multiSide(s); } else {
     html+='</div><div class="side"><p class="lbl">The race</p><div class="kv">'+
       '<div><span>Cook rating</span><span><span class="rating '+rclass(r.rating)+'">'+esc(r.rating)+'</span></span></div>'+
-      (r.prev?'<div><span>Previously</span><span>'+esc(r.prev)+' (changed '+esc(r.rated)+')</span></div>':'<div><span>Rated since</span><span>'+esc(r.rated)+'</span></div>')+
+      (shiftOf(r,s.date)?'<div><span>Since his visit</span><span>'+shiftHTML(shiftOf(r,s.date))+'</span></div>':'')+
+      (shiftOf(r,s.date)?'':(r.prev?'<div><span>Previously</span><span>'+esc(r.prev)+' (changed '+esc(r.rated)+')</span></div>':'<div><span>Rated since</span><span>'+esc(r.rated)+'</span></div>'))+
       '<div><span>Cook PVI</span><span>'+esc(r.pvi)+'</span></div></div>'+
       '<p class="fine"><a href="'+esc(r.url)+'">Cook race page</a></p>';
     html+='<p class="lbl" style="margin-top:16px">The money, 2025–26</p><div class="kv">'+
@@ -743,15 +765,17 @@ function start(D){
   document.getElementById('log').innerHTML=html;
 
   // Summary table
-  var t='<thead><tr><th>Date</th><th>District</th><th>Candidate</th><th>Cook rating</th><th class="num">Committee money</th></tr></thead><tbody>';
+  var t='<thead><tr><th>Date</th><th>District</th><th>Candidate</th><th>Cook rating</th><th>Since his visit</th><th class="num">Committee money</th></tr></thead><tbody>';
+  var nD=0,nR=0,nAll=0;
   stops.forEach(function(s){
     if(s.races){ s.races.forEach(function(r){
       t+='<tr><td>'+fmtDate(s.date)+'</td><td><a href="#'+esc(r.district.toLowerCase())+'-'+s.date+'">'+esc(r.district)+'</a></td><td>'+esc(r.candidate)+' (R)</td>'+
-         '<td><span class="rating '+rclass(r.race.rating)+'">'+esc(r.race.rating)+'</span></td><td class="num">'+money(total(r.money))+'</td></tr>';
+         '<td><span class="rating '+rclass(r.race.rating)+'">'+esc(r.race.rating)+'</span></td><td>'+(function(sh){nAll++; if(sh){sh.dir==='d'?nD++:nR++;} return sh?shiftHTML(sh):'<span class="sw" style="color:var(--light)">\u2014</span>';})(shiftOf(r.race,s.date))+'</td><td class="num">'+money(total(r.money))+'</td></tr>';
     }); return; }
     t+='<tr><td>'+fmtDate(s.date)+'</td><td><a href="#'+anchor(s)+'">'+esc(s.district)+'</a></td><td>'+esc(s.candidate)+' ('+esc(s.party)+')</td>'+
-       '<td><span class="rating '+rclass(s.race.rating)+'">'+esc(s.race.rating)+'</span></td><td class="num">'+money(total(s.money))+'</td></tr>';
+       '<td><span class="rating '+rclass(s.race.rating)+'">'+esc(s.race.rating)+'</span></td><td>'+(function(sh){nAll++; if(sh){sh.dir==='d'?nD++:nR++;} return sh?shiftHTML(sh):'<span class="sw" style="color:var(--light)">\u2014</span>';})(shiftOf(s.race,s.date))+'</td><td class="num">'+money(total(s.money))+'</td></tr>';
   });
+  document.getElementById('shiftnote').innerHTML='Since his visits, Cook has moved <b class="to-d">'+nD+'</b> of these '+nAll+' races toward Democrats and <b class="to-r">'+nR+'</b> toward Republicans. Cook moves many races at once; a change here shows timing, not cause. <a href="'+(D.cookShiftsUrl||'https://www.cookpolitical.com/ratings/house-race-ratings')+'">Cook ratings</a>';
   document.getElementById('summary').innerHTML=t+'</tbody>';
 
   // Public-access ledger

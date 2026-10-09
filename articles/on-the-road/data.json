@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-09",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,192 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-09",
+   "district": "AZ-06",
+   "place": "Arizona",
+   "candidate": "Rep. Juan Ciscomani",
+   "party": "R",
+   "role": "Incumbent since 2023",
+   "opponent": "JoAnna Mendoza (D)",
+   "type": "Campaign",
+   "typeNote": "He posted Oct. 9 that he was in Arizona \"this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.). His photos show two separate settings, one with Ciscomani and one with Lamb. He didn't give dates or places, so both Arizona stops are logged on the date of his post. We found no news coverage of either.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 9",
+     "text": "It was great being in Arizona this week with Chairman @ElectFrench, @LloydSmuckerPA, and Dr. @JohnJoyceForPA supporting our friend and colleague, @JuanCiscomani, and the soon-to-be Congressman for #AZ05 @sherifflamb1!",
+     "url": "https://x.com/tomemmer/status/2108573909352144961"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it a Toss Up and calls it one of the most evenly divided districts in the country; Trump carried it by less than a point in 2024. Ciscomani and Mendoza debated Sept. 10 in a Citizens Clean Elections Commission debate. Libertarian, Green and write-in candidates are also running. <b>The money:</b> $315,653 from Emmer's committees this cycle, the most to any candidate on this page. Nearly all of it is 15 transfers from his joint fundraising committee.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/481781"
+     },
+     {
+      "label": "KOLD debate video, Sept. 10",
+      "url": "https://www.kold.com/video/2026/09/11/battle-cd6-ciscomani-mendoza-face-off-arizona-debate/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CISCOMANI"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+0",
+    "checked": "Oct. 9, 2026",
+    "url": "https://www.cookpolitical.com/house/race/481781"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 308653.22,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CISCOMANI"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Juan Ciscomani",
+     "party": "R",
+     "note": "Incumbent since 2023. Former senior adviser to Gov. Doug Ducey.",
+     "issues": {
+      "label": "House website",
+      "url": "https://ciscomani.house.gov/"
+     },
+     "photo": "photos/juan-ciscomani.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.288,
+        "n": "18th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.42,
+        "n": "56th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.299,
+      "dwUrl": "https://voteview.com/person/22309",
+      "gt": 0.636,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/juan_ciscomani/456880",
+      "ha": {
+       "life": 75,
+       "sess": {
+        "119": 87
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/C001133",
+      "pp": {
+       "life": 13.25,
+       "recent": 3.15,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "JoAnna Mendoza",
+     "party": "D",
+     "note": "Marine Corps veteran who served combat tours in Iraq and Afghanistan. Has not held office.",
+     "issues": {
+      "label": "Campaign site",
+      "url": "https://www.joannamendoza.com/"
+     },
+     "photo": "photos/joanna-mendoza.jpg",
+     "photoCredit": "Photo from the campaign's website",
+     "record": null
+    }
+   ],
+   "lat": 32.37,
+   "lon": -109.96
+  },
+  {
+   "date": "2026-10-09",
+   "district": "AZ-05",
+   "place": "Arizona",
+   "candidate": "Mark Lamb",
+   "party": "R",
+   "role": "Open seat (Rep. Andy Biggs is running for governor)",
+   "opponent": "Elizabeth Lee (D)",
+   "type": "Campaign",
+   "typeNote": "He posted Oct. 9 that he was in Arizona \"this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.). His photos show two separate settings, one with Ciscomani and one with Lamb. He didn't give dates or places, so both Arizona stops are logged on the date of his post. We found no news coverage of either.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 9",
+     "text": "It was great being in Arizona this week with Chairman @ElectFrench, @LloydSmuckerPA, and Dr. @JohnJoyceForPA supporting our friend and colleague, @JuanCiscomani, and the soon-to-be Congressman for #AZ05 @sherifflamb1!",
+     "url": "https://x.com/tomemmer/status/2108573909352144961"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it Solid R and says Lamb, the former Pinal County sheriff, \"should be in a strong position to hold this seat.\" Biggs gave it up to run for governor. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC, both in March, before the July primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/481776"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LAMB"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+10",
+    "checked": "Oct. 9, 2026",
+    "url": "https://www.cookpolitical.com/house/race/481776"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LAMB"
+   },
+   "candidates": [
+    {
+     "name": "Mark Lamb",
+     "party": "R",
+     "note": "Pinal County sheriff, 2017–2024. Ran for U.S. Senate in 2024. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign site",
+      "url": "https://marklamb.us/"
+     },
+     "photo": "photos/mark-lamb.jpg",
+     "photoCredit": "Photo via Ballotpedia",
+     "record": null
+    },
+    {
+     "name": "Elizabeth Lee",
+     "party": "D",
+     "note": "Nurse from Gilbert. First run for office.",
+     "issues": {
+      "label": "Campaign site",
+      "url": "https://www.nurselee4az.com/"
+     },
+     "photo": "photos/elizabeth-lee.jpg",
+     "photoCredit": "Photo via Ballotpedia",
+     "record": null
+    }
+   ],
+   "lat": 33.29,
+   "lon": -111.64
+  },
   {
    "date": "2026-10-05",
    "district": "TX",
@@ -83,7 +269,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -173,7 +359,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -222,7 +408,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -270,7 +456,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -318,7 +504,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -366,7 +552,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -414,7 +600,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -462,7 +648,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -508,7 +694,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 5, 2026",
+      "checked": "Oct. 9, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -585,7 +771,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> A rematch. Davis beat Buckhout by 1.7 points in 2024. Cook rates it Lean R and calls Davis \"the most vulnerable House Democrat in the country.\" <b>The announcement:</b> The Buckhout campaign advertised the rally in advance on its website, naming \"Majority Whip Tom Emmer\" as a special guest, with a public RSVP form.",
+    "html": "<b>The race:</b> A rematch. Davis beat Buckhout by 1.7 points in 2024. Cook calls Davis \"the most vulnerable House Democrat in the country,\" and on Oct. 9 moved the race from Lean R to Toss Up. <b>The announcement:</b> The Buckhout campaign advertised the rally in advance on its website, naming \"Majority Whip Tom Emmer\" as a special guest, with a public RSVP form.",
     "sources": [
      {
       "label": "Ballotpedia, Aug. 11, 2026",
@@ -598,15 +784,19 @@
      {
       "label": "Buckhout rally page",
       "url": "https://www.lauriebuckhoutforcongress.com/emmerrally"
+     },
+     {
+      "label": "Cook, Oct. 9: 18 ratings move toward Democrats",
+      "url": "https://www.cookpolitical.com/analysis/house/house-overview/eighteen-more-house-race-ratings-move-democrats-favor"
      }
     ]
    },
    "race": {
-    "rating": "Lean R",
-    "prev": "Likely R",
-    "rated": "Dec. 1, 2025",
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -720,7 +910,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -825,7 +1015,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -931,7 +1121,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -989,7 +1179,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook rates VA-01 Lean R. Its earlier Solid D rating was for a redrawn map that the Virginia Supreme Court struck down on May 8, so the race is running on the old district lines. Cook's summary: Taylor \"benefits from a district that's clearly trending left, but Wittman has a history of overperforming electorally.\" A Washington Post-Schar School poll released Oct. 1 found Taylor at 50% and Wittman at 46% among likely voters, within the poll's 4.5-point margin of error.",
+    "html": "<b>The race:</b> Cook moved VA-01 from Lean R to Toss Up on Oct. 9. Its earlier Solid D rating was for a redrawn map that the Virginia Supreme Court struck down on May 8, so the race is running on the old district lines. Cook's summary: Taylor \"benefits from a district that's clearly trending left, but Wittman has a history of overperforming electorally.\" A Washington Post-Schar School poll released Oct. 1 found Taylor at 50% and Wittman at 46% among likely voters, within the poll's 4.5-point margin of error.",
     "sources": [
      {
       "label": "Cook race page",
@@ -1002,15 +1192,19 @@
      {
       "label": "Washington Post, Oct. 1, 2026",
       "url": "https://www.washingtonpost.com/politics/2026/10/01/shannon-taylor-has-edge-over-rob-wittman-virginia-house-district-post-poll-finds/"
+     },
+     {
+      "label": "Cook, Oct. 9: 18 ratings move toward Democrats",
+      "url": "https://www.cookpolitical.com/analysis/house/house-overview/eighteen-more-house-race-ratings-move-democrats-favor"
      }
     ]
    },
    "race": {
-    "rating": "Lean R",
-    "prev": "Solid D",
-    "rated": "May 8, 2026",
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -1156,7 +1350,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -1262,7 +1456,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -1343,7 +1537,7 @@
     }
    ],
    "context": {
-    "html": "<b>The record on Gateway:</b> Maine DHHS suspended the provider's MaineCare payments in December 2025, citing a \"credible allegation of fraud,\" and upheld the suspension in May 2026. State audits found more than $1.7 million in overpayments between 2015 and 2022. Gateway denies the allegations and has appealed. Neither report mentions criminal charges. <b>Follow-up:</b> In a Fox News interview from the Lewiston stop, Emmer said, \"Fraud in Minnesota is the number one issue.\"",
+    "html": "<b>The record on Gateway:</b> Maine DHHS suspended the provider's MaineCare payments in December 2025, citing a \"credible allegation of fraud,\" and upheld the suspension in May 2026. State audits found more than $1.7 million in overpayments between 2015 and 2022. Gateway denies the allegations and has appealed. Neither report mentions criminal charges. <b>Follow-up:</b> In a Fox News interview from the Lewiston stop, Emmer said, \"Fraud in Minnesota is the number one issue.\" <b>The race:</b> Cook moved ME-02 from Likely R to Lean R on Oct. 9.",
     "sources": [
      {
       "label": "Bangor Daily News, Dec. 23, 2025",
@@ -1356,15 +1550,19 @@
      {
       "label": "Fox News, Sept. 30, 2026",
       "url": "https://www.foxnews.com/politics/explosive-sleeper-issue-could-fuel-midterm-shakeups-top-republican-predicts-youre-gonna-see-surprises"
+     },
+     {
+      "label": "Cook, Oct. 9: 18 ratings move toward Democrats",
+      "url": "https://www.cookpolitical.com/analysis/house/house-overview/eighteen-more-house-race-ratings-move-democrats-favor"
      }
     ]
    },
    "race": {
-    "rating": "Likely R",
-    "prev": "Toss Up",
-    "rated": "Nov. 6, 2025",
+    "rating": "Lean R",
+    "prev": "Likely R",
+    "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -1439,7 +1637,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -1554,7 +1752,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 5, 2026",
+    "checked": "Oct. 9, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2283,6 +2481,14 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 9 (posted)",
+       "html": "<a href=\"#az-06-2026-10-09\">AZ-06</a>, Ciscomani"
+      },
+      {
+       "date": "Oct. 9 (posted)",
+       "html": "<a href=\"#az-05-2026-10-09\">AZ-05</a>, Lamb"
+      },
+      {
        "date": "Oct. 5",
        "html": "<a href=\"#tx-2026-10-05\">Texas border</a>, nine House nominees"
       },
@@ -2490,12 +2696,13 @@
    }
   }
  },
- "ratingsChecked": "Oct. 5, 2026",
+ "ratingsChecked": "Oct. 9, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
   "tipUrl": "https://buy.stripe.com/00wcMZ3dX8Pa5cNekD4ko01",
   "tipNote": "Any amount, no account needed"
  },
- "moneyAsOf": "Latest FEC-processed filings; third-quarter reports due Oct. 15."
+ "moneyAsOf": "Latest FEC-processed filings; third-quarter reports due Oct. 15.",
+ "cookShiftsUrl": "https://www.cookpolitical.com/analysis/house/house-overview/eighteen-more-house-race-ratings-move-democrats-favor"
 }
