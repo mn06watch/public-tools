@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -11,19 +11,25 @@
   {
    "date": "2026-10-09",
    "district": "AZ-06",
-   "place": "Arizona",
+   "place": "Quail Creek (Green Valley area), Ariz.",
    "candidate": "Rep. Juan Ciscomani",
    "party": "R",
    "role": "Incumbent since 2023",
    "opponent": "JoAnna Mendoza (D)",
    "type": "Campaign",
-   "typeNote": "He posted Oct. 9 that he was in Arizona \"this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.). His photos show two separate settings, one with Ciscomani and one with Lamb. He didn't give dates or places, so both Arizona stops are logged on the date of his post. We found no news coverage of either.",
+   "typeNote": "An afternoon event with the Quail Creek Republican Club on Oct. 9, per Ciscomani's post that evening, which Emmer reposted. Quail Creek is in the Green Valley area, inside AZ-06. Emmer's own post that morning, \"in Arizona this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.), shows a separate office setting with Ciscomani.",
    "posts": [
     {
      "acct": "tomemmer",
      "date": "Oct. 9",
      "text": "It was great being in Arizona this week with Chairman @ElectFrench, @LloydSmuckerPA, and Dr. @JohnJoyceForPA supporting our friend and colleague, @JuanCiscomani, and the soon-to-be Congressman for #AZ05 @sherifflamb1!",
      "url": "https://x.com/tomemmer/status/2108573909352144961"
+    },
+    {
+     "acct": "JuanCiscomani",
+     "date": "Oct. 9",
+     "text": "WOW — what an electric afternoon with Quail Creek Republican Club and special guest, my friend, Whip Tom Emmer! @tomemmer Quail Creek is FIRED UP to win AZ06 again in November and I am proud to call them friends. 🇺🇸💪",
+     "url": "https://x.com/JuanCiscomani/status/2108765201969619281"
     }
    ],
    "context": {
@@ -48,7 +54,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -128,7 +134,7 @@
    "role": "Open seat (Rep. Andy Biggs is running for governor)",
    "opponent": "Elizabeth Lee (D)",
    "type": "Campaign",
-   "typeNote": "He posted Oct. 9 that he was in Arizona \"this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.). His photos show two separate settings, one with Ciscomani and one with Lamb. He didn't give dates or places, so both Arizona stops are logged on the date of his post. We found no news coverage of either.",
+   "typeNote": "He posted Oct. 9 that he was in Arizona \"this week\" with Reps. French Hill (Ark.), Lloyd Smucker (Pa.) and John Joyce (Pa.). His photo with Lamb is from a separate setting from his Ciscomani photos. He didn't give a date or place for it, so this stop is logged on the date of his post. We found no news coverage.",
    "posts": [
     {
      "acct": "tomemmer",
@@ -155,7 +161,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -193,6 +199,111 @@
    ],
    "lat": 33.29,
    "lon": -111.64
+  },
+  {
+   "date": "2026-10-09",
+   "district": "AZ-02",
+   "place": "Village of Oak Creek (near Sedona), Ariz.",
+   "candidate": "Rep. Eli Crane",
+   "party": "R",
+   "role": "Incumbent since 2023",
+   "opponent": "Jonathan Nez (D)",
+   "type": "Campaign",
+   "found": "Found through an attendee's public post, not his social media",
+   "typeNote": "Neither Emmer nor Crane has posted about this stop. We found it through a public Facebook post by an attendee, who wrote that Emmer spoke at a morning fundraiser for Crane in the Village of Oak Creek on Oct. 9 and shared a photo from the event. We've confirmed the location is in AZ-02. If any of this is wrong, tell us and we'll correct or remove it.",
+   "posts": [],
+   "context": {
+    "html": "<b>The race:</b> A rematch. Crane beat Jonathan Nez, the former Navajo Nation president, by about 9 points in 2024. Cook rates it Likely R and notes that Nez ran well ahead of Kamala Harris in the district. <b>The money:</b> $285,471 from Emmer's committees this cycle, nearly all of it in 12 transfers from his joint fundraising committee.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/481761"
+     },
+     {
+      "label": "Navajo Times on the rematch",
+      "url": "https://navajotimes.com/reznews/nez-crane-set-for-november-rematch-in-arizonas-2nd-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CRANE"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Likely R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+7",
+    "checked": "Oct. 10, 2026",
+    "url": "https://www.cookpolitical.com/house/race/481761"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 278470.69,
+    "jfc_n": 12,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CRANE"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Eli Crane",
+     "party": "R",
+     "note": "Incumbent since 2023. Former Navy SEAL and small-business owner.",
+     "issues": {
+      "label": "House website",
+      "url": "https://crane.house.gov/"
+     },
+     "photo": "photos/eli-crane.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.738,
+        "n": "14th most conservative of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.77,
+        "n": "19th most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.75,
+      "dwUrl": "https://voteview.com/person/22311",
+      "gt": 0.704,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/eli_crane/456879",
+      "ha": {
+       "life": 93,
+       "sess": {
+        "119": 92
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/C001132",
+      "pp": {
+       "life": 5.05,
+       "recent": 4.38,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Jonathan Nez",
+     "party": "D",
+     "note": "Navajo Nation president, 2019–2023. The 2024 Democratic nominee here.",
+     "issues": {
+      "label": "Navajo Times on the race",
+      "url": "https://navajotimes.com/reznews/nez-crane-set-for-november-rematch-in-arizonas-2nd-district/"
+     },
+     "photo": "photos/jonathan-nez.jpg",
+     "photoCredit": "Photo via Wikimedia Commons",
+     "record": null
+    }
+   ],
+   "lat": 35.12,
+   "lon": -111.07
   },
   {
    "date": "2026-10-05",
@@ -269,7 +380,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -359,7 +470,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -408,7 +519,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -456,7 +567,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -504,7 +615,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -552,7 +663,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -600,7 +711,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -648,7 +759,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -694,7 +805,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 9, 2026",
+      "checked": "Oct. 10, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -796,7 +907,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -910,7 +1021,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -1015,7 +1126,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -1121,7 +1232,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -1204,7 +1315,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -1350,7 +1461,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -1456,7 +1567,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -1562,7 +1673,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -1637,7 +1748,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -1752,7 +1863,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 9, 2026",
+    "checked": "Oct. 10, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2481,12 +2592,16 @@
     "emmer": {
      "items": [
       {
-       "date": "Oct. 9 (posted)",
-       "html": "<a href=\"#az-06-2026-10-09\">AZ-06</a>, Ciscomani"
+       "date": "Oct. 9",
+       "html": "<a href=\"#az-06-2026-10-09\">AZ-06</a>, Ciscomani (Quail Creek Republican Club)"
       },
       {
        "date": "Oct. 9 (posted)",
        "html": "<a href=\"#az-05-2026-10-09\">AZ-05</a>, Lamb"
+      },
+      {
+       "date": "Oct. 9",
+       "html": "<a href=\"#az-02-2026-10-09\">AZ-02</a>, Crane (fundraiser; found through an attendee's post)"
       },
       {
        "date": "Oct. 5",
@@ -2696,7 +2811,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 9, 2026",
+ "ratingsChecked": "Oct. 10, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
