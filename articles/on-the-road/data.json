@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-13",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,115 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-13",
+   "district": "TX-34",
+   "place": "Austin, Texas (outside the district)",
+   "candidate": "Eric Flores",
+   "party": "R",
+   "role": "Challenger",
+   "opponent": "Rep. Vicente Gonzalez (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "He posted Oct. 13 about \"a great day on the trail\" in Austin for Flores with Reps. Lisa McClain (Mich.), Monica De La Cruz (Texas), Troy Downing (Mont.) and Adrian Smith (Neb.), and Georgia congressional candidate Houston Gaines. Austin is more than 200 miles from TX-34, which runs along the Rio Grande Valley and the Gulf Coast; the pin sits at the district's center, as on every stop. Logged on the date he posted.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 13",
+     "text": "Great day on the trail with @LisaForCongress, @monica4congress, @TroyDowningMT, @houstongaines, and Adrian Smith in Austin supporting the next Congressman for #TX34, @EricDFloress! 21 days until Election Day. Texas: get out and vote for a commonsense, law and order PATRIOT, Eric Flores! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2110052514728968532"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it a Toss Up, moved from Lean R in January, and calls it \"on track to host one of the most competitive House races in the country.\" Gonzalez won with 51.3% in 2024. <b>The money:</b> $113,367 from Emmer's committees this cycle, most of it in three JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485386"
+     },
+     {
+      "label": "Texas Tribune on Flores",
+      "url": "https://www.texastribune.org/2025/07/21/texas-congress-eric-flores-vicente-gonzalez-34th-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ERIC+FLORES"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Jan. 15, 2026",
+    "pvi": "R+3",
+    "checked": "Oct. 13, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485386"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 106367.14,
+    "jfc_n": 3,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ERIC+FLORES"
+   },
+   "candidates": [
+    {
+     "name": "Eric Flores",
+     "party": "R",
+     "note": "Army veteran and attorney from Mission. Former assistant U.S. attorney in McAllen. Has not served in Congress.",
+     "issues": {
+      "label": "Texas Tribune profile",
+      "url": "https://www.texastribune.org/2025/07/21/texas-congress-eric-flores-vicente-gonzalez-34th-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Rep. Vicente Gonzalez",
+     "party": "D",
+     "note": "Incumbent since 2017.",
+     "issues": {
+      "label": "House website",
+      "url": "https://gonzalez.house.gov/"
+     },
+     "photo": "photos/vicente-gonzalez.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": -0.348,
+        "n": "75th most moderate of 221 House Democrats"
+       },
+       {
+        "c": 119,
+        "v": -0.287,
+        "n": "49th most moderate of 224 House Democrats"
+       }
+      ],
+      "dw": -0.385,
+      "dwUrl": "https://voteview.com/person/21722",
+      "gt": 0.452,
+      "gtLabel": "centrist Democrat",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/vicente_gonzalez/412725",
+      "ha": {
+       "life": 8,
+       "sess": {
+        "119": 13
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/G000581",
+      "pp": {
+       "life": 84.8,
+       "recent": 68.91,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    }
+   ],
+   "lat": 26.9,
+   "lon": -97.6
+  },
   {
    "date": "2026-10-09",
    "district": "AZ-06",
@@ -54,7 +163,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -161,7 +270,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -234,7 +343,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -310,13 +419,12 @@
    "district": "TX",
    "stampText": "TEXAS",
    "mapLabel": "TX border",
-   "approx": true,
-   "place": "Texas–Mexico border (location not disclosed)",
+   "place": "McAllen area, Texas",
    "candidate": "Nine Texas House nominees",
    "party": "R",
    "role": "Group visit with National Border Patrol Council president Paul Perez",
    "type": "Campaign",
-   "typeNote": "Reese Gorman of NOTUS listed the nine candidates. Emmer's post tags Mark Teixeira and Brandon Herrera. Neither Emmer nor the candidates said where they were.",
+   "typeNote": "Reporter Reese Gorman listed the nine candidates. Emmer's post tags Mark Teixeira and Brandon Herrera. Neither Emmer nor the candidates said where they were; the Washington Sun later reported the trip from McAllen.",
    "posts": [
     {
      "acct": "tomemmer",
@@ -344,8 +452,12 @@
     }
    ],
    "context": {
-    "html": "<b>Where:</b> Not disclosed. His photos and Alex Mealer's show the Rio Grande, a riverside pump station, Texas National Guard and Coast Guard personnel, and a stretch of border wall. The map pin is our estimate, in the Rio Grande Valley; we'll move it when the location is confirmed. <b>\"CLOSED\" and \"SEALED\":</b> CBP reported 8,870 Border Patrol apprehensions at the southwest border in August, 5% fewer than in July and 94% below the Biden administration's monthly average. Crossings are at historic lows; they are not zero. <b>The primaries:</b> In two of these races, his committees had backed the Republican incumbent in the primary. His campaign and leadership PAC gave Rep. Dan Crenshaw $7,000 in February; Steve Toth beat Crenshaw in March. His committees gave Rep. Tony Gonzales $12,000 this cycle; Gonzales quit the TX-23 race in March, and Brandon Herrera became the nominee.",
+    "html": "<b>Where:</b> McAllen, in the Rio Grande Valley, per the Washington Sun's Oct. 13 report. Emmer didn't say where; until that report, the pin here was our estimate. The trip included a border tour, a roundtable with local business officials, a meeting with the Border Patrol union and a session with local ranchers, plus fundraisers, the Sun reported. <b>\"CLOSED\" and \"SEALED\":</b> CBP reported 8,870 Border Patrol apprehensions at the southwest border in August, 5% fewer than in July and 94% below the Biden administration's monthly average. Crossings are at historic lows; they are not zero. <b>The primaries:</b> In two of these races, his committees had backed the Republican incumbent in the primary. His campaign and leadership PAC gave Rep. Dan Crenshaw $7,000 in February; Steve Toth beat Crenshaw in March. His committees gave Rep. Tony Gonzales $12,000 this cycle; Gonzales quit the TX-23 race in March, and Brandon Herrera became the nominee.",
     "sources": [
+     {
+      "label": "Washington Sun (Reese Gorman), Oct. 13",
+      "url": "https://www.washingtonsun.com/congress/emmer-republican-candidates-texas-safe-seats-leadership"
+     },
      {
       "label": "Reese Gorman (NOTUS) on X",
       "url": "https://x.com/reesejgorman/status/2107177712259391572"
@@ -380,7 +492,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -470,7 +582,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -519,7 +631,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -567,7 +679,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -615,7 +727,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -663,7 +775,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -711,7 +823,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -759,7 +871,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -805,7 +917,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 12, 2026",
+      "checked": "Oct. 13, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -907,7 +1019,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -1021,7 +1133,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -1126,7 +1238,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -1232,7 +1344,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -1315,7 +1427,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -1461,7 +1573,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -1567,7 +1679,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -1673,7 +1785,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -1748,7 +1860,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -1863,7 +1975,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 12, 2026",
+    "checked": "Oct. 13, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2180,12 +2292,11 @@
       },
       {
        "date": "Oct. 12",
-       "tag": "listed",
-       "tagText": "Listed",
-       "html": "Blaine town hall, listed as open to the public. His post that day called it his 22nd.",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Blaine town hall, open to the public; his 22nd. MN-06 Watch watched the full event.",
        "url": "https://x.com/ChapinForMN6/status/2109726162901430660",
-       "label": "his post",
-       "showAfter": "2026-10-12T21:00:00-05:00"
+       "label": "his post"
       }
      ],
      "none": "None found.",
@@ -2632,6 +2743,10 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 13",
+       "html": "<a href=\"#tx-34-2026-10-13\">TX-34</a>, Flores (event in Austin)"
+      },
+      {
        "date": "Oct. 9",
        "html": "<a href=\"#az-06-2026-10-09\">AZ-06</a>, Ciscomani (Quail Creek Republican Club)"
       },
@@ -2848,19 +2963,18 @@
      },
      {
       "date": "Oct. 12, 2026",
-      "tag": "listed",
-      "tagText": "Listed",
-      "html": "Blaine (his #22, per his Oct. 12 post)",
-      "url": "https://www.mobilize.us/chapinforcongress/event/1041509/",
-      "label": "listing",
-      "showAfter": "2026-10-12T21:00:00-05:00"
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "Blaine (his #22). MN-06 Watch watched it.",
+      "url": "https://x.com/ChapinForMN6/status/2109726162901430660",
+      "label": "his post"
      }
     ],
     "note": "He counts 19 town halls through Sept. 29. The ones above are those we can document individually; the rest aren't listed publicly. We found no town hall on Tuesday, Sept. 22: his count went from 17 (Sept. 8) to 18 (Sept. 19), and he called St. Michael, on Sept. 29, his 19th."
    }
   }
  },
- "ratingsChecked": "Oct. 12, 2026",
+ "ratingsChecked": "Oct. 13, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
