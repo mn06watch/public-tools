@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13",
+ "updated": "2026-10-14",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -2472,6 +2472,14 @@
        "html": "MN-06 Watch \"Where They Stand\" questionnaire (follow-up sent Sept. 18; we are the requester)",
        "url": "https://mn06watch.com/articles/where-they-stand/",
        "label": "Where They Stand"
+      },
+      {
+       "date": "Oct. 13",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "WCCO Election Guide: no 60-second pitch or questionnaire answers, per WCCO",
+       "url": "https://www.cbsnews.com/minnesota/news/tom-emmer-us-house-6th-district-wcco-election-guide/",
+       "label": "WCCO"
       }
      ]
     },
@@ -2540,6 +2548,14 @@
        "html": "MN-06 Watch \"Where They Stand\" questionnaire (we are the requester)",
        "url": "https://mn06watch.com/articles/where-they-stand/",
        "label": "Where They Stand"
+      },
+      {
+       "date": "Oct. 13",
+       "tag": "yes",
+       "tagText": "Answered",
+       "html": "WCCO Election Guide: 60-second pitch and questionnaire",
+       "url": "https://www.cbsnews.com/minnesota/news/doug-chapin-us-house-6th-district-wcco-election-guide/",
+       "label": "WCCO"
       }
      ]
     },
