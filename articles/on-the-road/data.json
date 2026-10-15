@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-15",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,89 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-15",
+   "district": "TX-02",
+   "place": "Spring, Texas",
+   "candidate": "Steve Toth",
+   "party": "R",
+   "role": "Open seat (beat Rep. Dan Crenshaw in the March primary)",
+   "opponent": "Shaun Finnie (D)",
+   "type": "Campaign",
+   "typeNote": "He posted Oct. 15 about \"a great time in Spring, Texas supporting Steve\" with Reps. Mike Bost and Darin LaHood (both Ill.) and Georgia congressional candidate Houston Gaines. The post says \"19 days until Election Day,\" which puts the event on Oct. 15. Spring is in TX-02. Toth was also one of the nine nominees on his Oct. 5 border trip; this is the first stop for Toth alone.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 15",
+     "text": "19 days until Election Day and Texans are FIRED UP to vote for @SteveTothTX! Great time in Spring, Texas supporting Steve with friends @BostForCongress, @DarinLaHoodIL, and @houstongaines.",
+     "url": "https://x.com/tomemmer/status/2110779240849248343"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it Solid R (R+11). It's an open seat because Toth, a state representative, beat Rep. Dan Crenshaw in the March 3 primary. <b>The money:</b> Emmer's campaign and leadership PAC gave Crenshaw $7,000 on Feb. 2, a month before that primary. FEC records processed so far show nothing from Emmer's three committees to Toth; third-quarter reports are due Oct. 15. Through June 30, Finnie had raised $2.73 million and Toth $824,450, per the FEC.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485226"
+     },
+     {
+      "label": "FEC: Emmer's committees to Toth",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=TOTH"
+     },
+     {
+      "label": "FEC: Emmer's committees to Crenshaw",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CRENSHAW"
+     },
+     {
+      "label": "FEC: TX-02 candidates",
+      "url": "https://www.fec.gov/data/elections/house/TX/02/2026/"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+11",
+    "checked": "Oct. 15, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485226"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=TOTH"
+   },
+   "candidates": [
+    {
+     "name": "Steve Toth",
+     "party": "R",
+     "note": "Texas state representative. Has not served in Congress.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://stevetothforcongress.com/issues/"
+     },
+     "record": null,
+     "photo": "photos/steve-toth.jpg",
+     "photoCredit": "Photo via Branch.vote"
+    },
+    {
+     "name": "Shaun Finnie",
+     "party": "D",
+     "note": "Investment banker and former oil-and-gas lawyer. Has not held office.",
+     "issues": {
+      "label": "Campaign issues page",
+      "url": "https://shaunfinnieforcongress.com/issues/"
+     },
+     "record": null,
+     "photo": "photos/shaun-finnie.jpg",
+     "photoCredit": "Photo from the campaign's website"
+    }
+   ],
+   "lat": 30.12,
+   "lon": -95.32
+  },
   {
    "date": "2026-10-13",
    "district": "TX-34",
@@ -48,7 +131,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -163,7 +246,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -270,7 +353,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -343,7 +426,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -424,7 +507,7 @@
    "party": "R",
    "role": "Group visit with National Border Patrol Council president Paul Perez",
    "type": "Campaign",
-   "typeNote": "Reporter Reese Gorman listed the nine candidates. Emmer's post tags Mark Teixeira and Brandon Herrera. Neither Emmer nor the candidates said where they were; the Washington Sun later reported the trip from McAllen.",
+   "typeNote": "Reporter Reese Gorman listed the nine candidates. Emmer's post tags Mark Teixeira and Brandon Herrera. The Washington Sun reported the trip from McAllen on Oct. 13. On Oct. 14 Emmer posted a video of a radio interview in which he says he was \"down on the border in McAllen, Texas.\"",
    "posts": [
     {
      "acct": "tomemmer",
@@ -440,6 +523,12 @@
     },
     {
      "acct": "tomemmer",
+     "date": "Oct. 14",
+     "text": "Joe Biden let 10 MILLION illegal aliens into the USA. Thanks to President Trump and Republicans in Congress, our border is now SEALED! It was amazing to tour the border alongside a group of All-Star GOP candidates running across Texas. When they’re elected to Congress, these Patriots will ensure we ALWAYS protect the American people and NEVER return to the days of the Biden Border Crisis.",
+     "url": "https://x.com/tomemmer/status/2110358093020184781"
+    },
+    {
+     "acct": "tomemmer",
      "date": "Oct. 6",
      "text": "#TX09, vote for @AlexMealerTX on November 3rd!",
      "url": "https://x.com/tomemmer/status/2107557011080491507"
@@ -452,7 +541,7 @@
     }
    ],
    "context": {
-    "html": "<b>Where:</b> McAllen, in the Rio Grande Valley, per the Washington Sun's Oct. 13 report. Emmer didn't say where; until that report, the pin here was our estimate. The trip included a border tour, a roundtable with local business officials, a meeting with the Border Patrol union and a session with local ranchers, plus fundraisers, the Sun reported. <b>\"CLOSED\" and \"SEALED\":</b> CBP reported 8,870 Border Patrol apprehensions at the southwest border in August, 5% fewer than in July and 94% below the Biden administration's monthly average. Crossings are at historic lows; they are not zero. <b>The primaries:</b> In two of these races, his committees had backed the Republican incumbent in the primary. His campaign and leadership PAC gave Rep. Dan Crenshaw $7,000 in February; Steve Toth beat Crenshaw in March. His committees gave Rep. Tony Gonzales $12,000 this cycle; Gonzales quit the TX-23 race in March, and Brandon Herrera became the nominee.",
+    "html": "<b>Where:</b> McAllen, in the Rio Grande Valley, per the Washington Sun's Oct. 13 report. Emmer confirmed it himself in an interview clip he posted Oct. 14. Until the Sun's report, the pin here was our estimate. The trip included a border tour, a roundtable with local business officials, a meeting with the Border Patrol union and a session with local ranchers, plus fundraisers, the Sun reported. <b>\"CLOSED\" and \"SEALED\":</b> CBP reported 8,870 Border Patrol apprehensions at the southwest border in August, 5% fewer than in July and 94% below the Biden administration's monthly average. Crossings are at historic lows; they are not zero. <b>The primaries:</b> In two of these races, his committees had backed the Republican incumbent in the primary. His campaign and leadership PAC gave Rep. Dan Crenshaw $7,000 in February; Steve Toth beat Crenshaw in March. His committees gave Rep. Tony Gonzales $12,000 this cycle; Gonzales quit the TX-23 race in March, and Brandon Herrera became the nominee.",
     "sources": [
      {
       "label": "Washington Sun (Reese Gorman), Oct. 13",
@@ -492,7 +581,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -582,7 +671,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -631,7 +720,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -679,7 +768,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -727,7 +816,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -775,7 +864,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -823,7 +912,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -871,7 +960,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -917,7 +1006,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 13, 2026",
+      "checked": "Oct. 15, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -1019,7 +1108,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -1133,7 +1222,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -1238,7 +1327,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -1344,7 +1433,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -1427,7 +1516,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -1573,7 +1662,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -1679,7 +1768,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -1785,7 +1874,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -1860,7 +1949,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -1975,7 +2064,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 13, 2026",
+    "checked": "Oct. 15, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2129,7 +2218,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 5, 2026",
+  "checked": "Oct. 15, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -2703,6 +2792,18 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 14",
+       "html": "\"Big Money in the Morning\" (radio)",
+       "url": "https://youtu.be/Ka5ZtIvuuP0",
+       "label": "video"
+      },
+      {
+       "date": "Oct. 14",
+       "html": "\"The John Fredericks Show\" (radio)",
+       "url": "https://youtu.be/HTsviDpNSRM",
+       "label": "video"
+      },
+      {
        "date": "Oct. 11",
        "html": "ABC, \"This Week\" with Jonathan Karl",
        "url": "https://abcnews.com/Politics/week-transcript-10-11-26-ukrainian-president-volodymyr/story?id=137165082",
@@ -2758,6 +2859,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 15",
+       "html": "<a href=\"#tx-02-2026-10-15\">TX-02</a>, Toth (event in Spring)"
+      },
       {
        "date": "Oct. 13",
        "html": "<a href=\"#tx-34-2026-10-13\">TX-34</a>, Flores (event in Austin)"
@@ -2990,7 +3095,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 13, 2026",
+ "ratingsChecked": "Oct. 15, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
