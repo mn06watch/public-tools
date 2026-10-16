@@ -54,6 +54,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stage h1{font:900 clamp(44px,7vw,84px)/.95 var(--display);margin:14px 0 14px;letter-spacing:-.01em;text-wrap:balance}
 .stage .dek{font:italic 19px/1.5 var(--serif);color:#dfe7f0;margin:0 0 14px;max-width:34em}
 .stage .byline{font:13px/1.5 var(--sans);color:#aebfd2;margin-bottom:28px}
+.stage .cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:4px 0 18px}
+.stage .cta a.go{display:inline-block;background:var(--gold);color:#fff;font:700 16px/1.2 var(--sans);padding:13px 20px;border-radius:3px;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.stage .cta a.go:hover{background:#b07f22}
+.stage .cta a.go2{color:var(--gold-soft);font:700 15px/1.3 var(--sans);text-decoration:underline;text-underline-offset:3px}
+.stage .cta a.jump{color:#cfdbe8;font:14px/1.3 var(--sans)}
 .stage svg{display:block;width:100%;height:auto;max-width:560px;justify-self:end}
 .stats{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.08)}
 .stats-in{max-width:1120px;margin:0 auto;padding-block:18px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -225,6 +230,7 @@ footer .tag{font-style:italic;color:var(--navy)}
       <div class="kicker">MN-06 Watch · Voter Service · Special Report</div>
       <h1>Who Showed Up</h1>
       <p class="dek">We checked every House, Senate and governor race on the 2026 ballot. When one candidate said no to a debate, some newsrooms gave voters the hour anyway. Others called it off.</p>
+      <div class="cta"><a class="go" href="hold-the-podium/">Read Part 1: Hold the Podium &rarr;</a><a class="jump" href="#series-h">All parts &darr;</a><a class="jump" href="#dec-h">The tracker &darr;</a></div>
       <div class="byline" style="margin-bottom:6px">Updated Oct. 16, 2026 · General election Nov. 3 · Updated as debates happen</div>
       <div class="tipline">Reader-funded and independent. <a href="https://buy.stripe.com/00wcMZ3dX8Pa5cNekD4ko01">Leave a tip</a> or <a href="https://mn06watch.substack.com/subscribe">subscribe</a>. MN-06 Watch keeps going long after Nov. 3.</div>
       <div class="share" data-share><span class="sl">Share</span></div>

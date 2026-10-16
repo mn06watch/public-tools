@@ -200,6 +200,14 @@
   }
   .article-card:first-of-type { padding-top: 0; }
   .article-card:hover { background: var(--navy-bg); margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 6px; }
+  /* Card with a second link: the title link covers the card, the extra link sits above it */
+  .card-multi { position: relative; }
+  .section-label + .card-multi { padding-top: 0; }
+  .card-multi ~ a.article-card:first-of-type { padding-top: 24px; }
+  .card-main { color: inherit; text-decoration: none; }
+  .card-main::after { content: ""; position: absolute; inset: 0; }
+  .card-sublink { position: relative; z-index: 1; display: inline-block; margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--gold); text-decoration: none; }
+  .card-sublink:hover { text-decoration: underline; }
 
   .card-badge {
     display: inline-block;
@@ -320,12 +328,13 @@
 
   <div class="section-label">Voter Service</div>
 
-  <a href="/articles/who-showed-up/" class="article-card">
+  <div class="article-card card-multi">
     <span class="card-badge badge-voter">Voter Service</span>
-    <div class="card-title">Who Showed Up: The 2026 Debate Census</div>
+    <div class="card-title"><a href="/articles/who-showed-up/" class="card-main">Who Showed Up: The 2026 Debate Census</a></div>
     <div class="card-desc">Every House, Senate and governor race on the 2026 ballot, checked for debates. When one candidate said no, did the host give voters the hour anyway? A race-by-race tracker with links to watch the debates, plus a four-part series.</div>
     <div class="card-meta">October 17, 2026 &middot; Debate tracker &middot; Four-part series</div>
-  </a>
+    <a href="/articles/who-showed-up/hold-the-podium/" class="card-sublink">Start with Part 1: Hold the Podium &rarr;</a>
+  </div>
 
   <a href="/articles/on-the-road/" class="article-card">
     <span class="card-badge badge-voter">Voter Service</span>
