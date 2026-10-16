@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-16",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,194 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-16",
+   "district": "WI-07",
+   "place": "New Richmond, Wisconsin",
+   "candidate": "Michael Alfonso",
+   "party": "R",
+   "role": "Open seat (Rep. Tom Tiffany is running for governor)",
+   "opponent": "Fred Clark (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 3:58 p.m. Central on Oct. 16, thanking Alfonso \"for having us in New Richmond today,\" with two photos. New Richmond is in WI-07, about 24 miles in a straight line from the eastern edge of MN-06. It was his second stop posted that day.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 16",
+     "text": "Thanks to the next Congressman for Wisconsin’s Seventh Congressional District, @MikeAlfonsoWI, for having us in New Richmond today. In Congress, Michael will be a strong champion for American manufacturing and fight to bring more good-paying jobs to northern Wisconsin. #WI07, get out and vote for Michael Alfonso on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2111200049698947118"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it Solid R (R+11). It's open because Rep. Tom Tiffany is running for governor. Cook notes Alfonso, 26, is the son-in-law of Transportation Secretary Sean Duffy, who held this seat before Tiffany. <b>The money:</b> Emmer's campaign and leadership PAC gave Alfonso $7,000 on Feb. 2, six months before he won a five-way Republican primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485581"
+     },
+     {
+      "label": "Wausau Pilot & Review on the primary",
+      "url": "https://wausaupilotandreview.com/2026/08/11/michael-alfonso-wins-gop-primary-for-wisconsins-7th-congressional-district/"
+     },
+     {
+      "label": "Wisconsin Examiner on Clark",
+      "url": "https://wisconsinexaminer.com/2026/08/12/fred-clark-wins-the-democratic-nomination-in-the-7th-cd/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ALFONSO"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+11",
+    "checked": "Oct. 16, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485581"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ALFONSO"
+   },
+   "candidates": [
+    {
+     "name": "Michael Alfonso",
+     "party": "R",
+     "note": "Age 26, of Hayward. Son-in-law of Transportation Secretary Sean Duffy. Has not held office.",
+     "issues": {
+      "label": "Wausau Pilot & Review profile",
+      "url": "https://wausaupilotandreview.com/2026/08/11/michael-alfonso-wins-gop-primary-for-wisconsins-7th-congressional-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Fred Clark",
+     "party": "D",
+     "note": "Former state Assembly member from Baraboo (2009–14). Owns a forestry business in Bayfield County.",
+     "issues": {
+      "label": "Wisconsin Examiner profile",
+      "url": "https://wisconsinexaminer.com/2026/08/12/fred-clark-wins-the-democratic-nomination-in-the-7th-cd/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 45.69,
+   "lon": -90.66
+  },
+  {
+   "date": "2026-10-16",
+   "district": "WI-03",
+   "place": "La Crosse, Wisconsin",
+   "candidate": "Rep. Derrick Van Orden",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Rebecca Cooke (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 11:52 a.m. Central on Oct. 16 that he \"started the morning off in La Crosse\" supporting Van Orden, with two photos. La Crosse is in WI-03. The race is a rematch of 2024, when Van Orden beat Cooke by just under 3 points.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 16",
+     "text": "Started the morning off in La Crosse, Wisconsin supporting our friend and colleague, @derrickvanorden! Derrick is a patriot, champion for our veterans and farmers, and a dedicated public servant. #WI03, get out and vote for Derrick Van Orden on November 3rd 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2111138247682498710"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook rates it a Toss Up, moved from Lean R in April 2025. Van Orden won with 51.4% in 2024. <b>The money:</b> $309,612 from Emmer's committees this cycle, almost all of it in 13 JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485561"
+     },
+     {
+      "label": "WPR on the rematch",
+      "url": "https://wpr.org/news/derrick-van-orden-rebecca-cooke-2026-3rd-congressional-district"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=VAN+ORDEN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "April 29, 2025",
+    "pvi": "R+3",
+    "checked": "Oct. 16, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485561"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 302612.13,
+    "jfc_n": 13,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=VAN+ORDEN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Derrick Van Orden",
+     "party": "R",
+     "note": "Incumbent since 2023. Retired Navy SEAL.",
+     "issues": {
+      "label": "House website",
+      "url": "https://vanorden.house.gov/"
+     },
+     "photo": "photos/derrick-van-orden.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.377,
+        "n": "46th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.4,
+        "n": "46th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.379,
+      "dwUrl": "https://voteview.com/person/22370",
+      "gt": 0.711,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/derrick_van_orden/456950",
+      "ha": {
+       "life": 68,
+       "sess": {
+        "119": 73
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/V000135",
+      "pp": {
+       "life": 7.29,
+       "recent": 3.2,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Rebecca Cooke",
+     "party": "D",
+     "note": "From Eau Claire. Lost to Van Orden in 2024. Has not held office.",
+     "issues": {
+      "label": "WPR on her campaign",
+      "url": "https://wpr.org/news/derrick-van-orden-rebecca-cooke-2026-3rd-congressional-district"
+     },
+     "record": null
+    }
+   ],
+   "lat": 44.05,
+   "lon": -90.9
+  },
   {
    "date": "2026-10-15",
    "district": "IA-03",
@@ -27,7 +215,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 9, so Cook now rates the Democrat as the favorite. Nunn won by about 4 points in 2024 (51.8% to 47.9%) and by less than 1 point in 2022. <b>The money:</b> $308,152 from Emmer's committees this cycle, almost all of it in 15 JFC transfers. That's the second-largest total for any candidate on this log, after Ciscomani.",
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 9, so Cook now rates the Democrat as the favorite. Nunn won by about 4 points in 2024 (51.8% to 47.9%) and by less than 1 point in 2022. <b>The money:</b> $308,152 from Emmer's committees this cycle, almost all of it in 15 JFC transfers.",
     "sources": [
      {
       "label": "Cook race page",
@@ -48,7 +236,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -163,7 +351,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -244,7 +432,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -323,7 +511,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -438,7 +626,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -545,7 +733,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -618,7 +806,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -773,7 +961,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -863,7 +1051,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -912,7 +1100,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -960,7 +1148,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -1008,7 +1196,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -1056,7 +1244,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -1104,7 +1292,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -1152,7 +1340,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -1198,7 +1386,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 15, 2026",
+      "checked": "Oct. 16, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -1300,7 +1488,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -1414,7 +1602,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -1519,7 +1707,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -1625,7 +1813,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -1708,7 +1896,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -1854,7 +2042,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -1960,7 +2148,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -2066,7 +2254,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -2141,7 +2329,7 @@
     "prev": "Solid R",
     "rated": "June 18, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -2256,7 +2444,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 15, 2026",
+    "checked": "Oct. 16, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2410,7 +2598,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 15, 2026",
+  "checked": "Oct. 16, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3052,6 +3240,14 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 16",
+       "html": "<a href=\"#wi-07-2026-10-16\">WI-07</a>, Alfonso (New Richmond)"
+      },
+      {
+       "date": "Oct. 16",
+       "html": "<a href=\"#wi-03-2026-10-16\">WI-03</a>, Van Orden (La Crosse)"
+      },
+      {
        "date": "Oct. 15",
        "html": "<a href=\"#ia-03-2026-10-15\">IA-03</a>, Nunn (Des Moines)"
       },
@@ -3295,7 +3491,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 15, 2026",
+ "ratingsChecked": "Oct. 16, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
