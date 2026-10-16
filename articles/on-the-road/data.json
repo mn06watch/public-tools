@@ -10,6 +10,198 @@
  "stops": [
   {
    "date": "2026-10-15",
+   "district": "IA-03",
+   "place": "Des Moines, Iowa",
+   "candidate": "Rep. Zach Nunn",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Sarah Trone Garriott (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 8:02 p.m. Central on Oct. 15 about \"a night in Des Moines supporting\" Nunn, thanking Reps. Mike Bost and Darin LaHood (both Ill.), Russell Fry (S.C.) and Rudy Yakym (Ind.) and Sen. Chuck Grassley for joining. It was his third stop posted that day. Libertarian Marco Battaglia is also on the ballot.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 15",
+     "text": "What a night in Des Moines supporting @NunnForCongress. Zach is a father of six, husband, combat veteran, and lifelong Iowan fighting every day for the American people and our common sense values in Washington! Thanks to @BostForCongress, @RussellFrySC, @DarinLaHoodIL, @RudyYakym, and @ChuckGrassley for joining us. #IA03, get out and vote for Zach Nunn on November 3rd 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2110899247373574345"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 9, so Cook now rates the Democrat as the favorite. Nunn won by about 4 points in 2024 (51.8% to 47.9%) and by less than 1 point in 2022. <b>The money:</b> $308,152 from Emmer's committees this cycle, almost all of it in 15 JFC transfers. That's the second-largest total for any candidate on this log, after Ciscomani.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483096"
+     },
+     {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/07/23/nunn-trone-garriott-and-battaglia-are-running-in-iowas-3rd-district-decided-by-fewer-than-four-points-in-each-of-the-last-two-elections/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=NUNN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 9, 2026",
+    "pvi": "R+2",
+    "checked": "Oct. 15, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483096"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 301152.3,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=NUNN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Zach Nunn",
+     "party": "R",
+     "note": "Incumbent since 2023. Air Force Reserve officer; former state senator.",
+     "issues": {
+      "label": "House website",
+      "url": "https://nunn.house.gov/"
+     },
+     "photo": "photos/zach-nunn.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.291,
+        "n": "19th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.298,
+        "n": "19th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.292,
+      "dwUrl": "https://voteview.com/person/22356",
+      "gt": 0.628,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/zach_nunn/456898",
+      "ha": {
+       "life": 62,
+       "sess": {
+        "119": 66
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/N000193",
+      "pp": {
+       "life": 12.39,
+       "recent": 5.05,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Sarah Trone Garriott",
+     "party": "D",
+     "note": "State senator since 2023. Lutheran pastor and food bank executive. Has not served in Congress.",
+     "issues": {
+      "label": "Iowa Capital Dispatch on her launch",
+      "url": "https://iowacapitaldispatch.com/2025/05/05/state-sen-sarah-trone-garriott-launches-congressional-campaign-in-iowas-3rd-district/"
+     },
+     "record": null,
+     "photo": "photos/sarah-trone-garriott.jpg",
+     "photoCredit": "Official Iowa Legislature photo"
+    }
+   ],
+   "lat": 41.14,
+   "lon": -93.97
+  },
+  {
+   "date": "2026-10-15",
+   "district": "IA-02",
+   "place": "Dubuque, Iowa",
+   "candidate": "Joe Mitchell",
+   "party": "R",
+   "role": "Open seat (Rep. Ashley Hinson is running for Senate)",
+   "opponent": "Lindsay James (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 3:41 p.m. Central on Oct. 15 that \"we spent the afternoon in Dubuque\" supporting Mitchell, with a photo in front of a Mitchell campaign backdrop. The post doesn't name anyone else who was there. It was his second stop posted that day, after Spring, Texas. Dubuque is in IA-02 and is Lindsay James's hometown.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 15",
+     "text": "We spent the afternoon in Dubuque supporting the next Congressman for #IA02, @joemitchelliowa. Joe is an America First patriot who will fight for Iowans and bring commonsense, Midwestern values to Washington. Iowa, get out and vote for Joe Mitchell on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2110833367210131657"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up on Oct. 9, six days before this stop. The seat is open because Rep. Ashley Hinson is running for the Senate. Cook says Democrats are \"highly motivated to carry this now-open seat in northeast Iowa.\" <b>The primary:</b> Emmer endorsed Mitchell in November 2025, while Mitchell was in a three-way Republican primary with state Sen. Charlie McClintock and state Rep. Shannon Lundgren. <b>The money:</b> $35,416 from Emmer's committees this cycle: $7,000 from his campaign and leadership PAC in November 2025, $7,000 more in December, and two JFC transfers in June.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483091"
+     },
+     {
+      "label": "Iowa Capital Dispatch on the endorsement",
+      "url": "https://iowacapitaldispatch.com/2025/11/20/house-majority-whip-tom-emmer-endorses-iowa-gop-congressional-candidates/"
+     },
+     {
+      "label": "Iowa Capital Dispatch on the nominees",
+      "url": "https://iowacapitaldispatch.com/2026/06/02/state-rep-lindsay-james-wins-district-2-democratic-primary-ap-projects/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JOE+MITCHELL"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 9, 2026",
+    "pvi": "R+4",
+    "checked": "Oct. 15, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483091"
+   },
+   "money": {
+    "campaign": 4000,
+    "pac": 10000,
+    "jfc": 21415.62,
+    "jfc_n": 2,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JOE+MITCHELL"
+   },
+   "candidates": [
+    {
+     "name": "Joe Mitchell",
+     "party": "R",
+     "note": "Former state representative (2019–23), elected at 21. Home builder. Has not served in Congress.",
+     "issues": {
+      "label": "KCRG candidate profile",
+      "url": "https://www.kcrg.com/2026/10/13/joe-mitchell-republican-candidate-iowas-2nd-congressional-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Lindsay James",
+     "party": "D",
+     "note": "State representative from Dubuque since 2019. Chaplain. Has not served in Congress.",
+     "issues": {
+      "label": "Iowa Capital Dispatch on the primary",
+      "url": "https://iowacapitaldispatch.com/2026/06/02/state-rep-lindsay-james-wins-district-2-democratic-primary-ap-projects/"
+     },
+     "record": null,
+     "photo": "photos/lindsay-james.jpg",
+     "photoCredit": "Official Iowa Legislature photo"
+    }
+   ],
+   "lat": 42.68,
+   "lon": -92.18
+  },
+  {
+   "date": "2026-10-15",
    "district": "TX-02",
    "place": "Spring, Texas",
    "candidate": "Steve Toth",
@@ -2859,6 +3051,14 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 15",
+       "html": "<a href=\"#ia-03-2026-10-15\">IA-03</a>, Nunn (Des Moines)"
+      },
+      {
+       "date": "Oct. 15",
+       "html": "<a href=\"#ia-02-2026-10-15\">IA-02</a>, Mitchell (Dubuque)"
+      },
       {
        "date": "Oct. 15",
        "html": "<a href=\"#tx-02-2026-10-15\">TX-02</a>, Toth (event in Spring)"
