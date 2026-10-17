@@ -59,6 +59,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .stage .cta a.go:hover{background:#b07f22}
 .stage .cta a.go2{color:var(--gold-soft);font:700 15px/1.3 var(--sans);text-decoration:underline;text-underline-offset:3px}
 .stage .cta a.jump{color:#cfdbe8;font:14px/1.3 var(--sans)}
+h2[id],section[id]{scroll-margin-top:118px}
 .stage svg{display:block;width:100%;height:auto;max-width:560px;justify-self:end}
 .stats{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.08)}
 .stats-in{max-width:1120px;margin:0 auto;padding-block:18px;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
@@ -569,6 +570,7 @@ document.querySelectorAll("[data-share]").forEach(box=>{
     const done=()=>{btn.textContent="Copied"; setTimeout(()=>btn.textContent="Copy link",1800);};
     (navigator.clipboard?navigator.clipboard.writeText(SHARE_URL):Promise.reject()).then(done).catch(()=>{ window.prompt && 0; btn.textContent=SHARE_URL; }); });
 });
+if(location.hash){ const tgt=document.getElementById(location.hash.slice(1)); if(tgt) requestAnimationFrame(()=>tgt.scrollIntoView({block:"start"})); }
 document.querySelectorAll('a[href^="http"]').forEach(a=>{ if(!a.href.startsWith("https://mn06watch.com")){ a.target="_blank"; a.rel="noopener"; } });
 </script>
 </body>
