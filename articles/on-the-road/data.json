@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -2949,6 +2949,14 @@
        "html": "WCCO Election Guide: no 60-second pitch or questionnaire answers, per WCCO",
        "url": "https://www.cbsnews.com/minnesota/news/tom-emmer-us-house-6th-district-wcco-election-guide/",
        "label": "WCCO"
+      },
+      {
+       "date": "Oct. 16",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "WCCO Radio, \"Drivetime with DeRusha\": invited, no response, per the host",
+       "url": "https://player.amperwavepodcasting.com/?&feed-link=https%3A%2F%2Frss.amperwave.net%2Fv2%2Fepisode%2F8819539_2026-10-16-214739&withPlaylist=false&theme=blurred&playerDisplay-logoType=Audacy",
+       "label": "Drivetime with DeRusha"
       }
      ]
     },
@@ -3025,6 +3033,14 @@
        "html": "WCCO Election Guide: 60-second pitch and questionnaire",
        "url": "https://www.cbsnews.com/minnesota/news/doug-chapin-us-house-6th-district-wcco-election-guide/",
        "label": "WCCO"
+      },
+      {
+       "date": "Oct. 16",
+       "tag": "yes",
+       "tagText": "Interviewed",
+       "html": "WCCO Radio, \"Drivetime with DeRusha\" interview",
+       "url": "https://player.amperwavepodcasting.com/?&feed-link=https%3A%2F%2Frss.amperwave.net%2Fv2%2Fepisode%2F8819539_2026-10-16-214739&withPlaylist=false&theme=blurred&playerDisplay-logoType=Audacy",
+       "label": "Drivetime with DeRusha"
       }
      ]
     },
