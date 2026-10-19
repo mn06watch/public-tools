@@ -9,6 +9,110 @@
  "election": "2026-11-03",
  "stops": [
   {
+   "date": "2026-10-19",
+   "district": "MI-07",
+   "place": "Lansing, Michigan",
+   "candidate": "Rep. Tom Barrett",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "William Lawrence (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 12:31 p.m. Central on Oct. 19 about a \"great morning in Lansing chatting with Michiganders and getting out the vote\" for Barrett, with three photos, and thanked Reps. Celeste Maloy and Mike Kennedy (both Utah) and Dave Taylor (Ohio). Lansing is in MI-07.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 19",
+     "text": "Great morning in Lansing chatting with Michiganders and getting out the vote for our friend and colleague, Congressman @tombarrettmi7! 🇺🇸 Thanks to @CelesteMaloyUT, @davetaylorOH, and @KennedyForUtah for their continued support of the House Republican Team. #MI07, VOTE for Congressman Tom Barrett on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2112235140919541836"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook has rated it a Toss Up since February 2025, with an even PVI. Barrett won the open seat in 2024, 50.3% to 46.6%. Lawrence, a tenant organizer and Sunrise Movement co-founder, won a three-way Democratic primary on Aug. 4. <b>The money:</b> $301,845 from Emmer's committees this cycle, almost all of it in 15 JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483311"
+     },
+     {
+      "label": "Ballotpedia on the primary",
+      "url": "https://news.ballotpedia.org/2026/08/05/william-lawrence-d-defeated-bridget-brink-d-and-matt-maasdam-d-in-the-democratic-primary-for-michigans-7th-congressional-district-on-august-4-2026/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BARRETT"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "",
+    "rated": "Feb. 6, 2025",
+    "pvi": "EVEN",
+    "checked": "Oct. 19, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483311"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 294844.83,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BARRETT"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Tom Barrett",
+     "party": "R",
+     "note": "Incumbent since 2025. Former Michigan state senator.",
+     "issues": {
+      "label": "House website",
+      "url": "https://barrett.house.gov/"
+     },
+     "photo": "photos/tom-barrett.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.498,
+        "n": "89th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.498,
+      "dwUrl": "https://voteview.com/person/22501",
+      "gt": 0.563,
+      "gtLabel": "centrist Republican follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/tom_barrett/456994",
+      "ha": {
+       "life": 92,
+       "sess": {
+        "119": 92
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/B001321",
+      "pp": {
+       "life": 2.51,
+       "recent": 2.51,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "William Lawrence",
+     "party": "D",
+     "note": "Organizer; co-founded the Sunrise Movement and the Michigan Rent Is Too Damn High Coalition. Has not held office.",
+     "issues": {
+      "label": "Michigan Advance on the primary",
+      "url": "https://michiganadvance.com/2026/08/04/will-lawrence-emerges-as-victor-in-mi-7-democratic-primary/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 42.73,
+   "lon": -84.34
+  },
+  {
    "date": "2026-10-16",
    "district": "WI-07",
    "place": "New Richmond, Wisconsin",
@@ -3263,6 +3367,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 19",
+       "html": "<a href=\"#mi-07-2026-10-19\">MI-07</a>, Barrett (Lansing)"
+      },
       {
        "date": "Oct. 16",
        "html": "<a href=\"#wi-07-2026-10-16\">WI-07</a>, Alfonso (New Richmond)"
