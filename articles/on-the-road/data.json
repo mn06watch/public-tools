@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-20",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,295 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-20",
+   "district": "OH-09",
+   "place": "Cleveland, Ohio (outside the district)",
+   "candidate": "Derek Merrin",
+   "party": "R",
+   "role": "Challenger",
+   "opponent": "Rep. Marcy Kaptur (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "He posted at 12:59 p.m. Central on Oct. 20 that \"we had a great time in Cleveland supporting\" Merrin, with two photos. Cleveland is outside OH-09, which is based in Toledo; it's about 34 miles in a straight line from the district's eastern edge. The pin sits at the district's center, as on every stop.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 20",
+     "text": "We had a great time in Cleveland supporting @DerekMerrin! It is time for new leadership in #OH09. In 14 days, Ohioans can RETIRE Marcy Kapur and ELECT a commonsense public servant and patriot, Derek Merrin. VOTE for Derek Merrin on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2112604689598386428"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> A rematch. Kaptur beat Merrin by 2,382 votes in 2024, and Cook notes Republicans then redrew the district mid-decade. Cook moved it from Lean R to Toss Up in January. <b>The money:</b> $19,252 from Emmer's committees this cycle, all in two JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483821"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MERRIN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Jan. 15, 2026",
+    "pvi": "R+5",
+    "checked": "Oct. 20, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483821"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 19252.41,
+    "jfc_n": 2,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MERRIN"
+   },
+   "candidates": [
+    {
+     "name": "Derek Merrin",
+     "party": "R",
+     "note": "Former Ohio House member. Lost to Kaptur in 2024. Has not served in Congress.",
+     "issues": {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483821"
+     },
+     "record": null
+    },
+    {
+     "name": "Rep. Marcy Kaptur",
+     "party": "D",
+     "note": "Incumbent since 1983.",
+     "issues": {
+      "label": "House website",
+      "url": "https://kaptur.house.gov/"
+     },
+     "photo": "photos/marcy-kaptur.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": -0.292,
+        "n": "38th most moderate of 221 House Democrats"
+       },
+       {
+        "c": 119,
+        "v": -0.185,
+        "n": "6th most moderate of 224 House Democrats"
+       }
+      ],
+      "dw": -0.34,
+      "dwUrl": "https://voteview.com/person/15029",
+      "gt": 0.339,
+      "gtLabel": "rank-and-file Democrat",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/marcy_kaptur/400211",
+      "ha": {
+       "life": 6,
+       "sess": {
+        "119": 7
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/K000009",
+      "pp": {
+       "life": 88.62,
+       "recent": 84.32,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    }
+   ],
+   "lat": 41.43,
+   "lon": -83.78
+  },
+  {
+   "date": "2026-10-20",
+   "district": "MI-10",
+   "place": "Shelby Township, Michigan",
+   "candidate": "Michael Bouchard Jr.",
+   "party": "R",
+   "role": "Open seat (Rep. John James is running for governor)",
+   "opponent": "Christina Hines (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 9:11 a.m. Central on Oct. 20 about an \"incredible crowd and enthusiasm today in Shelby Township\" for Bouchard, with four photos. Shelby Township is in MI-10.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 20",
+     "text": "What a way to kick off TWO WEEKS until Election Day! Incredible crowd and enthusiasm today in Shelby Township for @BouchardforMI. #MI10, Mike Bouchard will bring strong, commonsense leadership to Congress. VOTE for Mike Bouchard on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2112547376409772043"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up on Aug. 25. The seat is open because Rep. John James is running for governor. Bouchard, an Army veteran, won a four-way Republican primary on Aug. 4 after President Trump endorsed him. Hines is an attorney and former prosecutor. <b>The money:</b> Emmer's leadership PAC gave Bouchard $5,000 on July 30, five days before the primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483326"
+     },
+     {
+      "label": "Michigan Advance on the primary",
+      "url": "https://michiganadvance.com/2026/08/04/bouchard-claims-nomination-in-10th-congressional-district-gop-primary-dem-race-too-close-to-call/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BOUCHARD"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Aug. 25, 2026",
+    "pvi": "R+3",
+    "checked": "Oct. 20, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483326"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BOUCHARD"
+   },
+   "candidates": [
+    {
+     "name": "Michael Bouchard Jr.",
+     "party": "R",
+     "note": "Army veteran who served in Iraq. Has not held office.",
+     "issues": {
+      "label": "Michigan Advance on the primary",
+      "url": "https://michiganadvance.com/2026/08/04/bouchard-claims-nomination-in-10th-congressional-district-gop-primary-dem-race-too-close-to-call/"
+     },
+     "record": null
+    },
+    {
+     "name": "Christina Hines",
+     "party": "D",
+     "note": "Attorney and former prosecutor from Macomb County. Has not held office.",
+     "issues": {
+      "label": "Michigan Advance on the primary",
+      "url": "https://michiganadvance.com/2026/08/04/bouchard-claims-nomination-in-10th-congressional-district-gop-primary-dem-race-too-close-to-call/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 42.59,
+   "lon": -83.0
+  },
+  {
+   "date": "2026-10-19",
+   "district": "MI-04",
+   "place": "Michigan (location not stated)",
+   "candidate": "Rep. Bill Huizenga",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Sean McCann (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 7:24 p.m. Central on Oct. 19 about an \"awesome night supporting\" Huizenga, with a photo in front of a Huizenga for Congress van. The post doesn't say where; the pin sits at the district's center, as on every stop. It was his second stop posted that day, after Lansing.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 19",
+     "text": "Awesome night supporting our friend and colleague, Congressman @billhuizenga. Election Day is just 15 days away - #MI04, get out and VOTE for a PATRIOT and FIGHTER for every Michigander, Congressman Bill Huizenga! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2112339152004079768"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up on Oct. 9, 10 days before this stop. Cook notes Huizenga won by 12 points in 2024 while Trump carried the district by six. McCann is a state senator from Kalamazoo. <b>The money:</b> $23,279 from Emmer's committees this cycle: $5,000 from his leadership PAC and two JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483296"
+     },
+     {
+      "label": "Hoodline on the primary",
+      "url": "https://hoodline.com/2026/08/kalamazoo-s-sean-mccann-cruises-in-michigan-4th-setting-up-lake-michigan-showdown-with-huizenga/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=HUIZENGA"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 9, 2026",
+    "pvi": "R+3",
+    "checked": "Oct. 20, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483296"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 18279.34,
+    "jfc_n": 2,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=HUIZENGA"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Bill Huizenga",
+     "party": "R",
+     "note": "Incumbent since 2011.",
+     "issues": {
+      "label": "House website",
+      "url": "https://huizenga.house.gov/"
+     },
+     "photo": "photos/bill-huizenga.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.457,
+        "n": "87th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.466,
+        "n": "74th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.53,
+      "dwUrl": "https://voteview.com/person/21142",
+      "gt": 0.683,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/bill_huizenga/412437",
+      "ha": {
+       "life": 80,
+       "sess": {
+        "119": 85
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/H001058",
+      "pp": {
+       "life": 3.14,
+       "recent": 2.08,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Sean McCann",
+     "party": "D",
+     "note": "State senator from Kalamazoo; former state representative. Has not served in Congress.",
+     "issues": {
+      "label": "Michigan Public on his launch",
+      "url": "https://www.michiganpublic.org/politics-government/2025-07-14/democratic-state-senator-sean-mccann-joins-race-for-u-s-house-in-2026-midterms"
+     },
+     "record": null
+    }
+   ],
+   "lat": 42.47,
+   "lon": -86.15
+  },
   {
    "date": "2026-10-19",
    "district": "MI-07",
@@ -48,7 +337,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -156,7 +445,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -231,7 +520,7 @@
     "prev": "Lean R",
     "rated": "April 29, 2025",
     "pvi": "R+3",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -340,7 +629,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -455,7 +744,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -536,7 +825,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -615,7 +904,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -730,7 +1019,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -837,7 +1126,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -910,7 +1199,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -1065,7 +1354,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -1155,7 +1444,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -1204,7 +1493,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -1252,7 +1541,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -1300,7 +1589,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -1348,7 +1637,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -1396,7 +1685,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -1444,7 +1733,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -1490,7 +1779,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 19, 2026",
+      "checked": "Oct. 20, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -1592,7 +1881,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -1706,7 +1995,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -1811,7 +2100,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -1917,7 +2206,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2000,7 +2289,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -2146,7 +2435,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -2252,7 +2541,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -2358,7 +2647,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -2433,7 +2722,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -2548,7 +2837,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 19, 2026",
+    "checked": "Oct. 20, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2702,7 +2991,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 19, 2026",
+  "checked": "Oct. 20, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3368,6 +3657,18 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 20",
+       "html": "<a href=\"#oh-09-2026-10-20\">OH-09</a>, Merrin (event in Cleveland)"
+      },
+      {
+       "date": "Oct. 20",
+       "html": "<a href=\"#mi-10-2026-10-20\">MI-10</a>, Bouchard (Shelby Township)"
+      },
+      {
+       "date": "Oct. 19",
+       "html": "<a href=\"#mi-04-2026-10-19\">MI-04</a>, Huizenga (location not stated)"
+      },
+      {
        "date": "Oct. 19",
        "html": "<a href=\"#mi-07-2026-10-19\">MI-07</a>, Barrett (Lansing)"
       },
@@ -3623,7 +3924,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 19, 2026",
+ "ratingsChecked": "Oct. 20, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
