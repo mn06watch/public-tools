@@ -232,7 +232,7 @@ footer .tag{font-style:italic;color:var(--navy)}
       <h1>Who Showed Up</h1>
       <p class="dek">We checked every House, Senate and governor race on the 2026 ballot. When one candidate said no to a debate, some newsrooms gave voters the hour anyway. Others called it off.</p>
       <div class="cta"><a class="go" href="hold-the-podium/">Read Part 1: Hold the Podium &rarr;</a><a class="go2" href="formats-that-work/">New: Part 3, Formats That Work &rarr;</a><a class="jump" href="#series-h">All parts &darr;</a><a class="jump" href="#dec-h">The tracker &darr;</a></div>
-      <div class="byline" style="margin-bottom:6px">Updated Oct. 16, 2026 · General election Nov. 3 · Updated as debates happen</div>
+      <div class="byline" style="margin-bottom:6px">Census as of Oct. 16 · Last updated Oct. 20, 2026 · General election Nov. 3 · <a href="corrections/" style="color:var(--gold-soft);font-weight:700">Corrections and updates</a></div>
       <div class="tipline">Reader-funded and independent. <a href="https://buy.stripe.com/00wcMZ3dX8Pa5cNekD4ko01">Leave a tip</a> or <a href="https://mn06watch.substack.com/subscribe">subscribe</a>. MN-06 Watch keeps going long after Nov. 3.</div>
       <div class="share" data-share><span class="sl">Share</span></div>
       <div style="height:26px"></div>
@@ -360,7 +360,7 @@ footer .tag{font-style:italic;color:var(--navy)}
     <li><b>Evidence.</b> Verified means a host, broadcaster or news outlet reported it. Claimed means only a campaign, party or partisan outlet did. Unconfirmed means we couldn't recheck the source. Counts at the top use verified events only.</li>
     <li><b>No record found</b> means we checked district debate listings, public broadcasters, League of Women Voters forums and statewide roundups, and found nothing either way. Each such row lists what we searched. Many House districts have no public debate listing at all, so this is not a finding that no debate exists.</li>
     <li><b>Ratings and polls</b> in the race details come from Sabato's Crystal Ball and nonpartisan public polls, as of the date a candidate declined.</li>
-    <li><b>Corrections.</b> This census may not be complete. If we missed a debate, an invitation or an empty podium, email <a class="email" href="mailto:mn06watch@gmail.com">mn06watch@gmail.com</a> and we'll add it with the date noted.</li>
+    <li><b>Corrections.</b> This census may not be complete. If we missed a debate, an invitation or an empty podium, email <a class="email" href="mailto:mn06watch@gmail.com">mn06watch@gmail.com</a> and we'll add it with the date noted. Every change is logged on our <a href="corrections/">corrections and updates page</a>.</li>
   </ul>
 </section>
 
@@ -387,6 +387,7 @@ footer .tag{font-style:italic;color:var(--navy)}
 
 <footer>
   <p>Sources for every event are linked in the ledger and race details. Ratings: Sabato's Crystal Ball. Polls: nonpartisan public polls as compiled on each race's Wikipedia page and 270toWin.</p>
+  <p><a href="corrections/">Corrections and updates</a> · <a href="mailto:mn06watch@gmail.com">Send a correction</a></p>
   <p>We document what your representative does. You decide what it means. <span class="tag">Receipts, not rage.</span></p>
 </footer>
 </main>
@@ -501,8 +502,8 @@ document.getElementById("mncards").innerHTML = mnRows.map(r=>{
   const isSix = r.office==="House" && String(r.district)==="6";
   return `<div class="mncard ${r.status} ${isSix?"focus":""}">
     <div class="top"><span class="rl">${esc(longLabel(r))}</span><span class="st ${r.status}">${ST[r.status]}</span></div>
-    <div class="cands">${esc([r.dem&&r.dem+" (DFL)",r.rep&&r.rep+" (R)"].filter(Boolean).join(" vs. "))}</div>
-    ${evs.length?`<ul>${evs.map(e=>`<li>${esc(fmtDate(e.date))}${upcoming(e)?" (upcoming)":""}: ${esc(typeWord[e.type]||e.type)}, ${esc((e.host||"").split(" (")[0])}${e.type==="solo_airtime"&&e.declined&&e.declined.length?`. Didn't appear: ${esc(e.declined.join(", "))}`:""}${e.video_url?` ${watch(e)}`:""}</li>`).join("")}</ul>`:`<ul><li>No general-election debate found.</li></ul>`}
+    <div class="cands">${esc([r.dem&&r.dem+" (DFL)",r.rep&&r.rep+" (R)",r.other_major].filter(Boolean).join(" vs. "))}</div>
+    ${evs.length?`<ul>${evs.map(e=>`<li>${esc(fmtDate(e.date))}${upcoming(e)?" (upcoming)":""}: ${esc(typeWord[e.type]||e.type)}, ${esc((e.host||"").split(" (")[0])}${e.type==="solo_airtime"&&e.attended&&e.attended.length?`. Appeared: ${esc(e.attended.join(", "))}`:""}${e.type==="solo_airtime"&&e.declined&&e.declined.length?`. Didn't appear: ${esc(e.declined.join(", "))}`:""}${!upcoming(e)&&e.evidence&&e.evidence!=="VERIFIED"?` <span class="ev ${esc(e.evidence)}">(${esc(e.evidence.toLowerCase())}, not yet verified)</span>`:""}${e.video_url?` ${watch(e)}`:""}</li>`).join("")}</ul>`:`<ul><li>No general-election debate found.</li></ul>`}
   </div>`;
 }).join("");
 
