@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,219 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-21",
+   "district": "PA-10",
+   "place": "Pennsylvania (location not stated)",
+   "candidate": "Rep. Scott Perry",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Janelle Stelson (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 10:16 a.m. Central on Oct. 21, \"Good morning from #PA10,\" saying he was on the campaign trail today with Perry and Reps. Blake Moore (Utah) and Clay Fuller (Ga.), with two photos. The post doesn't name a town; the pin sits at the district's center, as on every stop.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 21",
+     "text": "Good morning from #PA10 with our great friend and colleague, @ScottPerryPA. Less than two weeks to go, we need everyone to get out and VOTE for Congressman Scott Perry! 🇺🇸 We’ve got an all-star crew with us on the campaign trail today: @ElectBlakeMoore @Clay4MainStreet",
+     "url": "https://x.com/tomemmer/status/2112925897061716038"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> A rematch. Perry beat Stelson, a former WGAL news anchor, 50.5% to 49.3% in 2024. Cook moved it from Toss Up to Lean D on Oct. 9, so Cook now rates the Democrat as the favorite. <b>The money:</b> $267,997 from Emmer's committees this cycle, almost all of it in 14 JFC transfers. His campaign committee is \"Patriots for Perry.\"",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483956"
+     },
+     {
+      "label": "Ballotpedia on the rematch",
+      "url": "https://news.ballotpedia.org/2026/08/03/perry-r-and-stelson-d-set-for-pa-10-rematch-after-2024-race-decided-by-1-2-points/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=PATRIOTS+FOR+PERRY"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 9, 2026",
+    "pvi": "R+3",
+    "checked": "Oct. 21, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483956"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 260996.77,
+    "jfc_n": 14,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=PATRIOTS+FOR+PERRY"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Scott Perry",
+     "party": "R",
+     "note": "Incumbent since 2013. Retired Army National Guard brigadier general.",
+     "issues": {
+      "label": "House website",
+      "url": "https://perry.house.gov/"
+     },
+     "photo": "photos/scott-perry.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.781,
+        "n": "222nd most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.77,
+        "n": "209th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.685,
+      "dwUrl": "https://voteview.com/person/21356",
+      "gt": 0.757,
+      "gtLabel": "conservative Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/scott_perry/412569",
+      "ha": {
+       "life": 91,
+       "sess": {
+        "119": 96
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/P000605",
+      "pp": {
+       "life": 3.82,
+       "recent": 3.79,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Janelle Stelson",
+     "party": "D",
+     "note": "Former WGAL news anchor. 2024 Democratic nominee here. Has not held office.",
+     "issues": {
+      "label": "Ballotpedia on the rematch",
+      "url": "https://news.ballotpedia.org/2026/08/03/perry-r-and-stelson-d-set-for-pa-10-rematch-after-2024-race-decided-by-1-2-points/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 40.24,
+   "lon": -76.92
+  },
+  {
+   "date": "2026-10-20",
+   "district": "PA-08",
+   "place": "Pennsylvania (location not stated)",
+   "candidate": "Rep. Rob Bresnahan",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Paige Cognetti (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 7:13 p.m. Central on Oct. 20 about \"huge enthusiasm in #PA08\" for Bresnahan, saying he was \"proud to be here,\" with three photos in front of a Bresnahan campaign backdrop. The post doesn't say where; the pin sits at the district's center, as on every stop. It was his third stop posted that day.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 20",
+     "text": "Huge enthusiasm in #PA08 for Congressman @Rob4PA! Proud to be here supporting our friend and House Republican teammate. On November 3rd, VOTE for Congressman Rob Bresnahan! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2112698755757797478"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up in April. Bresnahan won the seat in 2024 with 50.8%. Cognetti is the mayor of Scranton. <b>The money:</b> $277,670 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Rob for PA.\"",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483946"
+     },
+     {
+      "label": "Roll Call on the race",
+      "url": "https://rollcall.com/2026/10/13/pennsylvania-battleground-election-paige-cognetti-bresnahan/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ROB+FOR+PA"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "April 7, 2026",
+    "pvi": "R+4",
+    "checked": "Oct. 21, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483946"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 270670.19,
+    "jfc_n": 13,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ROB+FOR+PA"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Rob Bresnahan",
+     "party": "R",
+     "note": "Incumbent since 2025.",
+     "issues": {
+      "label": "House website",
+      "url": "https://bresnahan.house.gov/"
+     },
+     "photo": "photos/rob-bresnahan.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.257,
+        "n": "12th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.257,
+      "dwUrl": "https://voteview.com/person/22506",
+      "gt": 0.536,
+      "gtLabel": "centrist Republican follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/rob_bresnahan/457018",
+      "ha": {
+       "life": 53,
+       "sess": {
+        "119": 53
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/B001327",
+      "pp": {
+       "life": 7.48,
+       "recent": 7.48,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Paige Cognetti",
+     "party": "D",
+     "note": "Mayor of Scranton. Has not served in Congress.",
+     "issues": {
+      "label": "Roll Call on the race",
+      "url": "https://rollcall.com/2026/10/13/pennsylvania-battleground-election-paige-cognetti-bresnahan/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 41.36,
+   "lon": -75.41
+  },
   {
    "date": "2026-10-20",
    "district": "OH-09",
@@ -44,7 +257,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -132,11 +345,15 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up on Aug. 25. The seat is open because Rep. John James is running for governor. Bouchard, an Army veteran, won a four-way Republican primary on Aug. 4 after President Trump endorsed him. Hines is an attorney and former prosecutor. <b>The money:</b> Emmer's leadership PAC gave Bouchard $5,000 on July 30, five days before the primary.",
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up on Aug. 25. The seat is open because Rep. John James is running for governor. Bouchard, an Army veteran, won a four-way Republican primary on Aug. 4 after President Trump endorsed him. Hines is an attorney and former prosecutor. <b>The money:</b> Emmer's leadership PAC gave Bouchard $5,000 on July 30, five days before the primary. <b>The venue:</b> Bouchard posted Oct. 21 that he brought \"elected leaders from around the country\" to La Femina Trucking, a woman-owned trucking company, with photos that show Emmer.",
     "sources": [
      {
       "label": "Cook race page",
       "url": "https://www.cookpolitical.com/house/race/483326"
+     },
+     {
+      "label": "Bouchard on X, Oct. 21",
+      "url": "https://x.com/BouchardforMI/status/2112937148131450881"
      },
      {
       "label": "Michigan Advance on the primary",
@@ -153,7 +370,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -228,7 +445,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -337,7 +554,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -445,7 +662,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -520,7 +737,7 @@
     "prev": "Lean R",
     "rated": "April 29, 2025",
     "pvi": "R+3",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -629,7 +846,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -744,7 +961,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -825,7 +1042,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -904,7 +1121,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1019,7 +1236,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1126,7 +1343,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1199,7 +1416,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -1302,6 +1519,12 @@
     },
     {
      "acct": "tomemmer",
+     "date": "Oct. 21",
+     "text": "I visited President @realDonaldTrump’s border and if I had to describe it in one word: serene. It’s completely closed, empty, and secure. Turns out all we needed was a new president!",
+     "url": "https://x.com/tomemmer/status/2112940573196013894"
+    },
+    {
+     "acct": "tomemmer",
      "date": "Oct. 6",
      "text": "#TX09, vote for @AlexMealerTX on November 3rd!",
      "url": "https://x.com/tomemmer/status/2107557011080491507"
@@ -1354,7 +1577,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -1444,7 +1667,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -1493,7 +1716,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -1541,7 +1764,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -1589,7 +1812,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -1637,7 +1860,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -1685,7 +1908,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -1733,7 +1956,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -1779,7 +2002,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 20, 2026",
+      "checked": "Oct. 21, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -1881,7 +2104,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -1995,7 +2218,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2100,7 +2323,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2206,7 +2429,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2289,7 +2512,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -2435,7 +2658,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -2541,7 +2764,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -2647,7 +2870,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -2722,7 +2945,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -2837,7 +3060,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 20, 2026",
+    "checked": "Oct. 21, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -2991,7 +3214,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 20, 2026",
+  "checked": "Oct. 21, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3657,6 +3880,14 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 21",
+       "html": "<a href=\"#pa-10-2026-10-21\">PA-10</a>, Perry (location not stated)"
+      },
+      {
+       "date": "Oct. 20",
+       "html": "<a href=\"#pa-08-2026-10-20\">PA-08</a>, Bresnahan (location not stated)"
+      },
+      {
        "date": "Oct. 20",
        "html": "<a href=\"#oh-09-2026-10-20\">OH-09</a>, Merrin (event in Cleveland)"
       },
@@ -3924,7 +4155,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 20, 2026",
+ "ratingsChecked": "Oct. 21, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
