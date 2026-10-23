@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-23",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,110 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-22",
+   "district": "PA-07",
+   "place": "Pennsylvania (location not stated)",
+   "candidate": "Rep. Ryan Mackenzie",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Bob Brooks (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 10:15 a.m. Central on Oct. 22 that \"we stopped in #PA07\" to support Mackenzie, with two photos. The post doesn't name a town or say which day; it's logged on the date he posted, and the pin sits at the district's center, as on every stop.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 22",
+     "text": "We stopped in #PA07 to support our good friend and colleague, Congressman @Ryan_Mackenzie. Ryan continues DELIVERING results for Pennsylvania workers and families! VOTE for Congressman Ryan Mackenzie on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2113288027200258306"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 9, so Cook now rates the Democrat as the favorite, and calls Mackenzie \"one of the most vulnerable House Republicans in the country.\" Mackenzie flipped the seat in 2024 with 50.5%. Brooks, a firefighters union president, won a four-way Democratic primary in May. <b>The money:</b> $270,138 from Emmer's committees this cycle, almost all of it in 15 JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483941"
+     },
+     {
+      "label": "Pennsylvania Capital-Star on the primary",
+      "url": "https://penncapital-star.com/campaigns-elections/firefighter-bob-brooks-wins-democratic-nomination-to-challenge-u-s-rep-ryan-mackenzie/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MACKENZIE"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 9, 2026",
+    "pvi": "R+1",
+    "checked": "Oct. 23, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483941"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 263137.72,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=MACKENZIE"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Ryan Mackenzie",
+     "party": "R",
+     "note": "Incumbent since 2025. Former state representative.",
+     "issues": {
+      "label": "House website",
+      "url": "https://mackenzie.house.gov/"
+     },
+     "photo": "photos/ryan-mackenzie.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.322,
+        "n": "24th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.322,
+      "dwUrl": "https://voteview.com/person/22533",
+      "gt": 0.528,
+      "gtLabel": "centrist Republican follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/ryan_mackenzie/457017",
+      "ha": {
+       "life": 72,
+       "sess": {
+        "119": 72
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/M001230",
+      "pp": {
+       "life": 6.26,
+       "recent": 6.26,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Bob Brooks",
+     "party": "D",
+     "note": "Firefighter and firefighters union president. Has not held office.",
+     "issues": {
+      "label": "Pennsylvania Capital-Star on the primary",
+      "url": "https://penncapital-star.com/campaigns-elections/firefighter-bob-brooks-wins-democratic-nomination-to-challenge-u-s-rep-ryan-mackenzie/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 40.77,
+   "lon": -75.53
+  },
   {
    "date": "2026-10-21",
    "district": "PA-10",
@@ -48,7 +152,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -157,7 +261,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -257,7 +361,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -370,7 +474,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -445,7 +549,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -554,7 +658,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -662,7 +766,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -737,7 +841,7 @@
     "prev": "Lean R",
     "rated": "April 29, 2025",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -846,7 +950,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -961,7 +1065,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -1042,7 +1146,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -1121,7 +1225,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1236,7 +1340,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+0",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1343,7 +1447,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1416,7 +1520,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -1577,7 +1681,7 @@
       "prev": "Toss Up",
       "rated": "Dec. 9, 2025",
       "pvi": "R+3",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -1667,7 +1771,7 @@
       "prev": "Likely R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -1716,7 +1820,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -1764,7 +1868,7 @@
       "prev": "Solid R",
       "rated": "March 12, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -1812,7 +1916,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -1860,7 +1964,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -1908,7 +2012,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -1956,7 +2060,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2002,7 +2106,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 21, 2026",
+      "checked": "Oct. 23, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -2104,7 +2208,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -2218,7 +2322,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2323,7 +2427,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2429,7 +2533,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2512,7 +2616,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -2658,7 +2762,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -2764,7 +2868,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -2870,7 +2974,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -2945,7 +3049,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -3060,7 +3164,7 @@
     "prev": "Lean D",
     "rated": "May 8, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 21, 2026",
+    "checked": "Oct. 23, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -3214,7 +3318,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 21, 2026",
+  "checked": "Oct. 23, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3382,6 +3486,15 @@
        "html": "Blaine town hall, open to the public; his 22nd. MN-06 Watch watched the full event.",
        "url": "https://x.com/ChapinForMN6/status/2109726162901430660",
        "label": "his post"
+      },
+      {
+       "date": "Oct. 20",
+       "tag": "listed",
+       "tagText": "Listed",
+       "html": "St. Michael City Hall, a DFL candidate town hall with Senate District 30 candidates, per his Oct. 15 schedule. We haven't found a report that it took place.",
+       "url": "https://www.facebook.com/ChapinforCongress",
+       "label": "his Facebook page",
+       "showAfter": "2026-10-20T19:45:00-05:00"
       }
      ],
      "none": "None found.",
@@ -3719,6 +3832,22 @@
        "html": "Minnesota DFL Farmer-Labor Picnic at the State Fairgrounds, a statewide party event. His campaign posted that it attended and talked with \"hundreds of DFLers.\" Not counted here, since it's outside the district.",
        "url": "https://www.threads.com/@dougchapinforcongress/post/Ddyj2B3Ea5L",
        "label": "campaign post"
+      },
+      {
+       "date": "Oct. 17",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Weekly Chaska rally and the kickoff of a health care door knock, per his Oct. 18 post",
+       "url": "https://www.facebook.com/share/p/17bgQLH6RR/",
+       "label": "his post"
+      },
+      {
+       "date": "Oct. 18",
+       "tag": "listed",
+       "tagText": "Listed",
+       "html": "Becker meet and greet, hosted by a local resident, per his Oct. 15 schedule",
+       "url": "https://www.facebook.com/ChapinforCongress",
+       "label": "his Facebook page"
       }
      ]
     }
@@ -3879,6 +4008,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 22",
+       "html": "<a href=\"#pa-07-2026-10-22\">PA-07</a>, Mackenzie (location not stated)"
+      },
       {
        "date": "Oct. 21",
        "html": "<a href=\"#pa-10-2026-10-21\">PA-10</a>, Perry (location not stated)"
@@ -4149,13 +4282,22 @@
       "html": "Blaine (his #22). MN-06 Watch watched it.",
       "url": "https://x.com/ChapinForMN6/status/2109726162901430660",
       "label": "his post"
+     },
+     {
+      "date": "Oct. 20, 2026",
+      "tag": "listed",
+      "tagText": "Listed",
+      "html": "St. Michael, joint DFL candidate town hall (announced; not yet confirmed)",
+      "url": "https://www.facebook.com/ChapinforCongress",
+      "label": "his Facebook page",
+      "showAfter": "2026-10-20T19:45:00-05:00"
      }
     ],
     "note": "He counts 19 town halls through Sept. 29. The ones above are those we can document individually; the rest aren't listed publicly. We found no town hall on Tuesday, Sept. 22: his count went from 17 (Sept. 8) to 18 (Sept. 19), and he called St. Michael, on Sept. 29, his 19th."
    }
   }
  },
- "ratingsChecked": "Oct. 21, 2026",
+ "ratingsChecked": "Oct. 23, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
