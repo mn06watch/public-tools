@@ -3765,6 +3765,14 @@
        "label": "Monticello Times"
       },
       {
+       "date": "Oct. 2",
+       "tag": "no",
+       "tagText": "No response",
+       "html": "Carver County Local News 2026 voter guide. The guide lists him as \"No response.\"",
+       "url": "https://cclocalnews.org/election-voter-guides-by-ccln/election-voter-guide-2026/us-house-2026/",
+       "label": "Carver County Local News"
+      },
+      {
        "date": "Oct. 3",
        "tag": "no",
        "tagText": "No response",
@@ -3847,6 +3855,14 @@
        "html": "Monticello Times candidate Q&A. The same Q&A also ran in ABC Newspapers, the Union-Times and Press &amp; News; counted once.",
        "url": "https://www.hometownsource.com/abc_newspapers/abc_newspapers/community/andover/q-a-chapin-shares-priorities-in-6th-district-congressional-race/article_6982c788-be31-4369-973a-11757eb004be.html",
        "label": "Monticello Times"
+      },
+      {
+       "date": "Oct. 2",
+       "tag": "yes",
+       "tagText": "Answered",
+       "html": "Carver County Local News 2026 voter guide",
+       "url": "https://cclocalnews.org/election-voter-guides-by-ccln/election-voter-guide-2026/us-house-2026/doug-chapin-2026/",
+       "label": "Carver County Local News"
       },
       {
        "date": "Oct. 9",
