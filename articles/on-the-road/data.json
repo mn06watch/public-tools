@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,224 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-26",
+   "district": "NY-17",
+   "place": "Elmsford, N.Y. (just outside the district)",
+   "candidate": "Rep. Mike Lawler",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Cait Conley (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 9:33 a.m. Central on Oct. 26 that \"in Elmsford, we had a FIRED UP crowd\" for Lawler, with three photos. The village of Elmsford is in NY-16, about 1.5 miles in a straight line from NY-17's edge; the post doesn't name the venue. The pin sits at NY-17's center, as on every stop. It was his second stop posted that day, after NJ-07.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 26",
+     "text": "In Elmsford, we had a FIRED UP crowd for Congressman @lawler4ny. Mike Lawler is a champion for New York workers, families, and job creators, and one of House Republicans’ best teammates in Congress. #NY17, get out and VOTE for Congressman Mike Lawler on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2114727126217699536"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up in January. The district leans Democratic (D+1) and narrowly voted for Harris in 2024; Lawler won with 52.2%. Conley, an Army veteran and West Point graduate, won the Democratic primary in June. <b>The money:</b> $326,460 from Emmer's committees this cycle, almost all of it in 13 JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483656"
+     },
+     {
+      "label": "City & State on the primary",
+      "url": "https://www.cityandstateny.com/politics/2026/06/cait-conley-wins-ny-17-primary-take-lawler/414372/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LAWLER"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Jan. 15, 2026",
+    "pvi": "D+1",
+    "checked": "Oct. 26, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483656"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 319459.83,
+    "jfc_n": 13,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LAWLER"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Mike Lawler",
+     "party": "R",
+     "note": "Incumbent since 2023. Former state assemblyman.",
+     "issues": {
+      "label": "House website",
+      "url": "https://lawler.house.gov/"
+     },
+     "photo": "photos/mike-lawler.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.188,
+        "n": "3rd most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.199,
+        "n": "4th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.19,
+      "dwUrl": "https://voteview.com/person/22340",
+      "gt": 0.727,
+      "gtLabel": "moderate Republican leader",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/mike_lawler/456924",
+      "ha": {
+       "life": 48,
+       "sess": {
+        "119": 39
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/L000599",
+      "pp": {
+       "life": 20.15,
+       "recent": 10.9,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Cait Conley",
+     "party": "D",
+     "note": "Army combat veteran and West Point graduate. Has not held office.",
+     "issues": {
+      "label": "City & State on the primary",
+      "url": "https://www.cityandstateny.com/politics/2026/06/cait-conley-wins-ny-17-primary-take-lawler/414372/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 41.31,
+   "lon": -73.8
+  },
+  {
+   "date": "2026-10-26",
+   "district": "NJ-07",
+   "place": "New Jersey (location not stated)",
+   "candidate": "Rep. Tom Kean Jr.",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Rebecca Bennett (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 8:16 a.m. Central on Oct. 26, \"8 days until Election Day,\" thanking Reps. Blake Moore (Utah), Nick LaLota (N.Y.) and Riley Moore (W.Va.) \"for joining us on the road\" to support Kean, with a photo. The post doesn't name a town or say which day; it's logged on the date he posted, and the pin sits at the district's center, as on every stop.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 26",
+     "text": "With just 8 days until Election Day, we need everyone in #NJ07 to get out and vote for Congressman @KeanForCongress! 🇺🇸 Thanks to @ElectBlakeMoore, @nicklalota, and @RileyMooreWV for joining us on the road to support our friend and colleague, Congressman Tom Kean Jr.",
+     "url": "https://x.com/tomemmer/status/2114707825800757677"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Sept. 25 and calls Kean \"the clear underdog.\" The district's PVI is even; Kean won with 51.8% in 2024. Bennett, a former Navy helicopter pilot and health-company executive, won an eight-way Democratic primary in June. <b>The money:</b> $302,482 from Emmer's committees this cycle, almost all of it in 15 JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483531"
+     },
+     {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/13/incumbent-thomas-kean-jr-r-and-rebecca-bennett-d-to-face-off-in-competitive-new-jerseys-7th-congressional-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=KEAN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Sept. 25, 2026",
+    "pvi": "EVEN",
+    "checked": "Oct. 26, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483531"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 295482.08,
+    "jfc_n": 15,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=KEAN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Tom Kean Jr.",
+     "party": "R",
+     "note": "Incumbent since 2023. Former New Jersey state legislator.",
+     "issues": {
+      "label": "House website",
+      "url": "https://kean.house.gov/"
+     },
+     "photo": "photos/tom-kean.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.194,
+        "n": "4th most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.24,
+        "n": "9th most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.202,
+      "dwUrl": "https://voteview.com/person/22334",
+      "gt": 0.617,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/tom_kean/456917",
+      "ha": {
+       "life": 58,
+       "sess": {
+        "119": 59
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/K000398",
+      "pp": {
+       "life": 18.35,
+       "recent": 6.26,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Rebecca Bennett",
+     "party": "D",
+     "note": "Former Navy helicopter pilot; health-company executive. Has not held office.",
+     "issues": {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/13/incumbent-thomas-kean-jr-r-and-rebecca-bennett-d-to-face-off-in-competitive-new-jerseys-7th-congressional-district/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 40.74,
+   "lon": -74.83
+  },
   {
    "date": "2026-10-25",
    "district": "PA-01",
@@ -48,7 +266,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -157,7 +375,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -261,7 +479,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -370,7 +588,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -470,7 +688,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -583,7 +801,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -658,7 +876,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -767,7 +985,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -875,7 +1093,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -950,7 +1168,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -1059,7 +1277,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -1174,7 +1392,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -1255,7 +1473,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -1334,7 +1552,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1449,7 +1667,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1556,7 +1774,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1629,7 +1847,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -1790,7 +2008,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -1880,7 +2098,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -1929,7 +2147,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -1977,7 +2195,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -2025,7 +2243,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -2073,7 +2291,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -2121,7 +2339,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -2169,7 +2387,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2215,7 +2433,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 25, 2026",
+      "checked": "Oct. 26, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -2317,7 +2535,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -2431,7 +2649,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2536,7 +2754,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2642,7 +2860,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2725,7 +2943,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -2871,7 +3089,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -2977,7 +3195,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -3083,7 +3301,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -3158,7 +3376,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -3273,7 +3491,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 25, 2026",
+    "checked": "Oct. 26, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -3427,7 +3645,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 25, 2026",
+  "checked": "Oct. 26, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -4134,6 +4352,14 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 26",
+       "html": "<a href=\"#ny-17-2026-10-26\">NY-17</a>, Lawler (event in Elmsford)"
+      },
+      {
+       "date": "Oct. 26",
+       "html": "<a href=\"#nj-07-2026-10-26\">NJ-07</a>, Kean (location not stated)"
+      },
+      {
        "date": "Oct. 25",
        "html": "<a href=\"#pa-01-2026-10-25\">PA-01</a>, Fitzpatrick (location not stated)"
       },
@@ -4426,7 +4652,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 25, 2026",
+ "ratingsChecked": "Oct. 26, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
