@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-25",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,115 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-25",
+   "district": "PA-01",
+   "place": "Pennsylvania (location not stated)",
+   "candidate": "Rep. Brian Fitzpatrick",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Bob Harvie (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 1:14 p.m. Central on Oct. 25 about a \"great night in #PA01\" supporting Fitzpatrick, with three photos. The post says \"9 days until Election Day,\" which matches the day he posted; \"great night\" suggests the event may have been the evening before. Logged on the date he posted. The post doesn't name a town; the pin sits at the district's center, as on every stop.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 25",
+     "text": "Great night in #PA01 supporting our friend and colleague, Congressman @BrianFitzUSA. Brian is a dedicated public servant and a fighter for Pennsylvanians. 9 days until Election Day - get out and VOTE for Congressman Brian Fitzpatrick on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2114420433156227407"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Cook moved it from Likely R to Lean R on Oct. 9. The district leans Democratic (D+1). Fitzpatrick won with 56.4% in 2024, running 13 points ahead of the president, Cook notes. Harvie is a Bucks County commissioner and former teacher. <b>The money:</b> $282,066 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Brian Fitzpatrick for All of Us.\"",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483911"
+     },
+     {
+      "label": "Pennsylvania Capital-Star on the primary",
+      "url": "https://penncapital-star.com/campaigns-elections/bucks-commissioner-bob-harvie-wins-primary-nod-to-challenge-fitzpatrick/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=FITZPATRICK"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean R",
+    "prev": "Likely R",
+    "rated": "Oct. 9, 2026",
+    "pvi": "D+1",
+    "checked": "Oct. 25, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483911"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 275066.45,
+    "jfc_n": 13,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=FITZPATRICK"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Brian Fitzpatrick",
+     "party": "R",
+     "note": "Incumbent since 2017.",
+     "issues": {
+      "label": "House website",
+      "url": "https://fitzpatrick.house.gov/"
+     },
+     "photo": "photos/brian-fitzpatrick.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.111,
+        "n": "Most moderate of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.165,
+        "n": "3rd most moderate of 227 House Republicans"
+       }
+      ],
+      "dw": 0.141,
+      "dwUrl": "https://voteview.com/person/21718",
+      "gt": 0.488,
+      "gtLabel": "centrist Republican leader",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/brian_fitzpatrick/412721",
+      "ha": {
+       "life": 32,
+       "sess": {
+        "119": 20
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/F000466",
+      "pp": {
+       "life": 33.33,
+       "recent": 22.34,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Bob Harvie",
+     "party": "D",
+     "note": "Bucks County commissioner; former social studies teacher and Falls Township supervisor. Has not served in Congress.",
+     "issues": {
+      "label": "Pennsylvania Capital-Star on the primary",
+      "url": "https://penncapital-star.com/campaigns-elections/bucks-commissioner-bob-harvie-wins-primary-nod-to-challenge-fitzpatrick/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 40.33,
+   "lon": -75.14
+  },
   {
    "date": "2026-10-22",
    "district": "PA-07",
@@ -48,7 +157,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -152,7 +261,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -261,7 +370,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -361,7 +470,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -474,7 +583,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -549,7 +658,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -658,7 +767,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -766,7 +875,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -820,7 +929,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook rates it a Toss Up, moved from Lean R in April 2025. Van Orden won with 51.4% in 2024. <b>The money:</b> $309,612 from Emmer's committees this cycle, almost all of it in 13 JFC transfers.",
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 23, a week after this stop; it had been a Toss Up since April 2025. Van Orden won with 51.4% in 2024. <b>The money:</b> $309,612 from Emmer's committees this cycle, almost all of it in 13 JFC transfers.",
     "sources": [
      {
       "label": "Cook race page",
@@ -837,11 +946,11 @@
     ]
    },
    "race": {
-    "rating": "Toss Up",
-    "prev": "Lean R",
-    "rated": "April 29, 2025",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -950,7 +1059,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -1065,7 +1174,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -1146,7 +1255,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -1204,7 +1313,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook rates it a Toss Up, moved from Lean R in January, and calls it \"on track to host one of the most competitive House races in the country.\" Gonzalez won with 51.3% in 2024. <b>The money:</b> $113,367 from Emmer's committees this cycle, most of it in three JFC transfers.",
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 23, 10 days after this stop. Before that, it called it \"on track to host one of the most competitive House races in the country.\" Gonzalez won with 51.3% in 2024. <b>The money:</b> $113,367 from Emmer's committees this cycle, most of it in three JFC transfers.",
     "sources": [
      {
       "label": "Cook race page",
@@ -1221,11 +1330,11 @@
     ]
    },
    "race": {
-    "rating": "Toss Up",
-    "prev": "Lean R",
-    "rated": "Jan. 15, 2026",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1319,7 +1428,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook rates it a Toss Up and calls it one of the most evenly divided districts in the country; Trump carried it by less than a point in 2024. Ciscomani and Mendoza debated Sept. 10 in a Citizens Clean Elections Commission debate. Libertarian, Green and write-in candidates are also running. <b>The money:</b> $315,653 from Emmer's committees this cycle, the most to any candidate on this page. Nearly all of it is 15 transfers from his joint fundraising committee.",
+    "html": "<b>The race:</b> Cook moved it from Toss Up to Lean D on Oct. 23. Cook calls it one of the most evenly divided districts in the country; Trump carried it by less than a point in 2024. Ciscomani and Mendoza debated Sept. 10 in a Citizens Clean Elections Commission debate. Libertarian, Green and write-in candidates are also running. <b>The money:</b> $315,653 from Emmer's committees this cycle, the most to any candidate on this page. Nearly all of it is 15 transfers from his joint fundraising committee.",
     "sources": [
      {
       "label": "Cook race page",
@@ -1336,11 +1445,11 @@
     ]
    },
    "race": {
-    "rating": "Toss Up",
-    "prev": "",
-    "rated": "Feb. 6, 2025",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1447,7 +1556,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1499,7 +1608,7 @@
    "typeNote": "Neither Emmer nor Crane has posted about this stop. We found it through a public Facebook post by an attendee, who wrote that Emmer spoke at a morning fundraiser for Crane in the Village of Oak Creek on Oct. 9 and shared a photo from the event. We've confirmed the location is in AZ-02. If any of this is wrong, tell us and we'll correct or remove it.",
    "posts": [],
    "context": {
-    "html": "<b>The race:</b> A rematch. Crane beat Jonathan Nez, the former Navajo Nation president, by about 9 points in 2024. Cook rates it Likely R and notes that Nez ran well ahead of Kamala Harris in the district. <b>The money:</b> $285,471 from Emmer's committees this cycle, nearly all of it in 12 transfers from his joint fundraising committee.",
+    "html": "<b>The race:</b> A rematch. Crane beat Jonathan Nez, the former Navajo Nation president, by about 9 points in 2024. Cook moved it from Likely R to Lean R on Oct. 23, and notes that Nez ran well ahead of Kamala Harris in the district. <b>The money:</b> $285,471 from Emmer's committees this cycle, nearly all of it in 12 transfers from his joint fundraising committee.",
     "sources": [
      {
       "label": "Cook race page",
@@ -1516,11 +1625,11 @@
     ]
    },
    "race": {
-    "rating": "Likely R",
-    "prev": "",
-    "rated": "Feb. 6, 2025",
+    "rating": "Lean R",
+    "prev": "Likely R",
+    "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -1675,13 +1784,13 @@
      "candidate": "Tano Tijerina",
      "role": "Challenger; Webb County judge",
      "opponent": "Rep. Henry Cuellar (D), incumbent",
-     "note": "The only one of the nine races with an incumbent on the ballot, and the only one Cook rates competitive for Democrats. Trump pardoned Cuellar in December 2025, before his bribery trial.",
+     "note": "The only one of the nine races with an incumbent on the ballot, and the only one Cook rates in Democrats' favor. Trump pardoned Cuellar in December 2025, before his bribery trial.",
      "race": {
-      "rating": "Lean D",
-      "prev": "Toss Up",
-      "rated": "Dec. 9, 2025",
+      "rating": "Likely D",
+      "prev": "Lean D",
+      "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -1767,11 +1876,11 @@
      "opponent": "Johnny Garcia (D)",
      "note": "Redrawn in 2025 to lean Republican.",
      "race": {
-      "rating": "Lean R",
-      "prev": "Likely R",
-      "rated": "Sept. 25, 2026",
+      "rating": "Toss Up",
+      "prev": "Lean R",
+      "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -1820,7 +1929,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -1864,11 +1973,11 @@
      "opponent": "Katy Padilla Stout (D)",
      "note": "Herrera became the nominee after Gonzales ended his campaign in March. Emmer's committees had given Gonzales $12,000 this cycle.",
      "race": {
-      "rating": "Likely R",
-      "prev": "Solid R",
-      "rated": "March 12, 2026",
+      "rating": "Lean R",
+      "prev": "Likely R",
+      "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -1916,7 +2025,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -1964,7 +2073,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -2012,7 +2121,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -2060,7 +2169,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2106,7 +2215,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 23, 2026",
+      "checked": "Oct. 25, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -2208,7 +2317,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -2322,7 +2431,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2427,7 +2536,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2533,7 +2642,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2616,7 +2725,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -2762,7 +2871,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -2868,7 +2977,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -2974,7 +3083,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -3049,7 +3158,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -3160,11 +3269,11 @@
     }
    ],
    "race": {
-    "rating": "Toss Up",
-    "prev": "Lean D",
-    "rated": "May 8, 2026",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 23, 2026",
+    "checked": "Oct. 25, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -3318,7 +3427,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 23, 2026",
+  "checked": "Oct. 25, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3651,7 +3760,7 @@
        "date": "Oct. 1",
        "tag": "no",
        "tagText": "No response",
-       "html": "Monticello Times candidate Q&A. The paper says he \"did not respond by the deadline, despite multiple requests.\"",
+       "html": "Monticello Times candidate Q&A. The paper says he \"did not respond by the deadline, despite multiple requests.\" The same Q&A also ran in ABC Newspapers, the Union-Times and Press &amp; News; counted once.",
        "url": "https://www.hometownsource.com/abc_newspapers/abc_newspapers/community/andover/q-a-chapin-shares-priorities-in-6th-district-congressional-race/article_6982c788-be31-4369-973a-11757eb004be.html",
        "label": "Monticello Times"
       },
@@ -3735,7 +3844,7 @@
        "date": "Oct. 1",
        "tag": "yes",
        "tagText": "Answered",
-       "html": "Monticello Times candidate Q&A",
+       "html": "Monticello Times candidate Q&A. The same Q&A also ran in ABC Newspapers, the Union-Times and Press &amp; News; counted once.",
        "url": "https://www.hometownsource.com/abc_newspapers/abc_newspapers/community/andover/q-a-chapin-shares-priorities-in-6th-district-congressional-race/article_6982c788-be31-4369-973a-11757eb004be.html",
        "label": "Monticello Times"
       },
@@ -4008,6 +4117,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 25",
+       "html": "<a href=\"#pa-01-2026-10-25\">PA-01</a>, Fitzpatrick (location not stated)"
+      },
       {
        "date": "Oct. 22",
        "html": "<a href=\"#pa-07-2026-10-22\">PA-07</a>, Mackenzie (location not stated)"
@@ -4297,7 +4410,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 23, 2026",
+ "ratingsChecked": "Oct. 25, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
