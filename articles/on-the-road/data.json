@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,115 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-26",
+   "district": "NY-03",
+   "place": "Long Island, N.Y. (location not stated)",
+   "candidate": "Mike LiPetri",
+   "party": "R",
+   "role": "Challenger",
+   "opponent": "Rep. Tom Suozzi (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "He posted at 1:44 p.m. Central on Oct. 26 that \"we had an awesome time on Long Island\" supporting LiPetri, thanking Reps. Nicole Malliotakis (N.Y.) and Riley Moore (W.Va.), with two photos. The post doesn't name a town or say which day; it's logged on the date he posted, and the pin sits at the district's center, as on every stop. It was his third stop posted that day.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 26",
+     "text": "We had an awesome time on Long Island supporting the next Congressman for #NY03, @TheMikeLiPetri. Thanks to friends @NMalliotakis and @RileyMooreWV for joining us. 8 days until Election Day - get out and VOTE for Mike LiPetri! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2114790238400979226"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> A rematch of 2024, when Suozzi won with 51.8%. Cook moved it from Lean D to Likely D on Oct. 9; the district's PVI is even. LiPetri, a former state Assembly member, won a contested Republican primary in June. <b>The money:</b> $120,767 from Emmer's committees this cycle: $14,000 from his campaign and leadership PAC on Feb. 18, before that primary, and four JFC transfers.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483586"
+     },
+     {
+      "label": "PoliticsNY on the primary",
+      "url": "https://politicsny.com/2026/06/23/suozzi-lipetri-win-congressional-primaries-set-up-rematch-in-november/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LIPETRI"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Likely D",
+    "prev": "Lean D",
+    "rated": "Oct. 9, 2026",
+    "pvi": "EVEN",
+    "checked": "Oct. 27, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483586"
+   },
+   "money": {
+    "campaign": 4000,
+    "pac": 10000,
+    "jfc": 106766.67,
+    "jfc_n": 4,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=LIPETRI"
+   },
+   "candidates": [
+    {
+     "name": "Mike LiPetri",
+     "party": "R",
+     "note": "Former New York state Assembly member. 2024 Republican nominee here. Has not served in Congress.",
+     "issues": {
+      "label": "PoliticsNY on the primary",
+      "url": "https://politicsny.com/2026/06/23/suozzi-lipetri-win-congressional-primaries-set-up-rematch-in-november/"
+     },
+     "record": null
+    },
+    {
+     "name": "Rep. Tom Suozzi",
+     "party": "D",
+     "note": "Incumbent since 2024; also served 2017–23.",
+     "issues": {
+      "label": "House website",
+      "url": "https://suozzi.house.gov/"
+     },
+     "photo": "photos/tom-suozzi.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": -0.253,
+        "n": "21st most moderate of 221 House Democrats"
+       },
+       {
+        "c": 119,
+        "v": -0.182,
+        "n": "5th most moderate of 224 House Democrats"
+       }
+      ],
+      "dw": -0.213,
+      "dwUrl": "https://voteview.com/person/21747",
+      "gt": 0.416,
+      "gtLabel": "centrist Democratic leader",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/thomas_suozzi/412717",
+      "ha": {
+       "life": 5,
+       "sess": {
+        "119": 7
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/S001201",
+      "pp": {
+       "life": 88.7,
+       "recent": 81.42,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    }
+   ],
+   "lat": 40.84,
+   "lon": -73.58
+  },
   {
    "date": "2026-10-26",
    "district": "NY-17",
@@ -48,7 +157,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483656"
    },
    "money": {
@@ -157,7 +266,7 @@
     "prev": "Toss Up",
     "rated": "Sept. 25, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483531"
    },
    "money": {
@@ -266,7 +375,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -375,7 +484,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -479,7 +588,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -588,7 +697,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -688,7 +797,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -801,7 +910,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -876,7 +985,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -985,7 +1094,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -1093,7 +1202,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -1168,7 +1277,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -1277,7 +1386,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -1392,7 +1501,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -1473,7 +1582,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -1552,7 +1661,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1667,7 +1776,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1774,7 +1883,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1847,7 +1956,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -2008,7 +2117,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -2098,7 +2207,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -2147,7 +2256,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -2195,7 +2304,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -2243,7 +2352,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -2291,7 +2400,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -2339,7 +2448,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -2387,7 +2496,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2433,7 +2542,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 26, 2026",
+      "checked": "Oct. 27, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -2535,7 +2644,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -2649,7 +2758,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2754,7 +2863,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2860,7 +2969,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -2943,7 +3052,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -3089,7 +3198,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -3195,7 +3304,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -3301,7 +3410,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -3376,7 +3485,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -3491,7 +3600,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 26, 2026",
+    "checked": "Oct. 27, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -3645,7 +3754,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 26, 2026",
+  "checked": "Oct. 27, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -4284,6 +4393,24 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 26 (posted)",
+       "html": "Fox News, on the Minnesota Senate race; he posted the clip",
+       "url": "https://x.com/tomemmer/status/2114752513643827209",
+       "label": "his post"
+      },
+      {
+       "date": "Oct. 19",
+       "html": "\"The Record with Greta Van Susteren\" (radio)",
+       "url": "https://youtu.be/GR0NkQSYdBg",
+       "label": "video"
+      },
+      {
+       "date": "Oct. 15",
+       "html": "WABC (New York) radio, \"Cats & Cosby\"",
+       "url": "https://youtu.be/bHkg5mfcG7w",
+       "label": "video"
+      },
+      {
        "date": "Oct. 14",
        "html": "\"Big Money in the Morning\" (radio)",
        "url": "https://youtu.be/Ka5ZtIvuuP0",
@@ -4351,6 +4478,10 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 26",
+       "html": "<a href=\"#ny-03-2026-10-26\">NY-03</a>, LiPetri (Long Island)"
+      },
       {
        "date": "Oct. 26",
        "html": "<a href=\"#ny-17-2026-10-26\">NY-17</a>, Lawler (event in Elmsford)"
@@ -4652,7 +4783,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 26, 2026",
+ "ratingsChecked": "Oct. 27, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
