@@ -216,6 +216,12 @@ footer .tagline2{font-family:'Playfair Display',serif;font-style:italic;color:va
   .support{grid-template-columns:1fr}
   .toolgrid{grid-template-columns:1fr}
 }
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.share .sl{font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-right:4px}
+.share a,.share button{font:700 12px/1 Arial,Helvetica,sans-serif;padding:7px 10px;border-radius:3px;border:1px solid var(--line);background:#fff;color:var(--navy);text-decoration:none;cursor:pointer}
+.share a:hover,.share button:hover{background:var(--navybg)}
+.share.end{margin:28px 0 8px}
+@media print{.share{display:none!important}}
 </style>
 </head>
 <body>
@@ -254,6 +260,7 @@ footer .tagline2{font-family:'Playfair Display',serif;font-style:italic;color:va
     <div class="pbtns"><button type="button" id="pall">Select all</button><button type="button" id="pnone">Clear</button><button type="button" class="pgo" id="pgo">Print selected</button></div>
   </div>
   <div class="byline support-nudge">Reader-funded and independent. <a href="#support">Help keep this work going</a></div>
+<div class="share" data-share><span class="sl">Share</span></div>
 </header>
 
 <!--
@@ -496,6 +503,8 @@ footer .tagline2{font-family:'Playfair Display',serif;font-style:italic;color:va
   </ul>
 </div>
 
+<div class="share end" data-share><span class="sl">Share this guide</span></div>
+
 <section class="support" id="support" aria-labelledby="support-h">
   <div>
     <h2 id="support-h">Keep this work going</h2>
@@ -582,6 +591,19 @@ footer .tagline2{font-family:'Playfair Display',serif;font-style:italic;color:va
   };
   function alertless(){var p=pnl.querySelector('p');p.innerHTML='<b>Pick at least one section.</b> Each section prints in full, with both candidates. The voting information and sources always print.';}
   window.addEventListener('afterprint',clear);
+})();
+</script>
+<script>
+(function(){
+const SHARE_URL=document.querySelector('link[rel=canonical]').href, SHARE_TEXT=document.querySelector('meta[property="og:title"]').content;
+document.querySelectorAll("[data-share]").forEach(box=>{
+  const u=encodeURIComponent(SHARE_URL), t=encodeURIComponent(SHARE_TEXT);
+  box.insertAdjacentHTML("beforeend",`<button type="button" data-copy>Copy link</button><a href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener">X</a><a href="https://bsky.app/intent/compose?text=${t}%20${u}" target="_blank" rel="noopener">Bluesky</a><a href="https://www.threads.net/intent/post?text=${t}%20${u}" target="_blank" rel="noopener">Threads</a><a href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener">Facebook</a><a href="mailto:?subject=${t}&body=${u}">Email</a>`);
+  if(navigator.share){ const b=document.createElement("button"); b.type="button"; b.textContent="Share\u2026"; b.addEventListener("click",()=>navigator.share({title:SHARE_TEXT,url:SHARE_URL}).catch(()=>{})); box.insertBefore(b, box.children[1]); }
+  box.querySelector("[data-copy]").addEventListener("click",ev=>{ const btn=ev.currentTarget;
+    const done=()=>{btn.textContent="Copied"; setTimeout(()=>btn.textContent="Copy link",1800);};
+    (navigator.clipboard?navigator.clipboard.writeText(SHARE_URL):Promise.reject()).then(done).catch(()=>{ btn.textContent=SHARE_URL; }); });
+});
 })();
 </script>
 </body>

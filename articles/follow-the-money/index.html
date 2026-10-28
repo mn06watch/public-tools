@@ -149,6 +149,12 @@ footer .tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--n
   .toolgrid{grid-template-columns:1fr}
   table.big .emp{display:none}
 }
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:14px}
+.share .sl{font:700 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);margin-right:4px}
+.share a,.share button{font:700 12px/1 Arial,Helvetica,sans-serif;padding:7px 10px;border-radius:3px;border:1px solid var(--line);background:#fff;color:var(--navy);text-decoration:none;cursor:pointer}
+.share a:hover,.share button:hover{background:var(--navybg)}
+.share.end{margin:28px 0 8px}
+@media print{.share{display:none!important}}
 </style>
 </head>
 <body>
@@ -170,6 +176,7 @@ footer .tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--n
   <p class="dek">Tom Emmer and Doug Chapin, by the same rules. Click anything to see what's behind it.</p>
   <div class="byline">FEC reports through Oct. 14, 2026 · Published Oct. 28, 2026</div>
   <div class="byline support-nudge">Reader-funded and independent. <a href="#support">Help keep this work going</a></div>
+<div class="share" data-share><span class="sl">Share</span></div>
 </header>
 
 <div class="toggle" role="group" aria-label="Choose a candidate">
@@ -251,6 +258,8 @@ footer .tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--n
 </div>
 
 <p class="sans" style="font-size:15px">The full story, with both campaigns' responses: <a href="https://mn06watch.substack.com/p/whos-paying-for-this-race" target="_blank" rel="noopener">Who's Paying for This Race</a>.</p>
+
+<div class="share end" data-share><span class="sl">Share this report</span></div>
 
 <section class="support" id="support" aria-labelledby="support-h">
   <div>
@@ -447,6 +456,19 @@ homeaway();flow();big();tl();ie();
 fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-albers-10m.json').then(function(r){return r.json()}).then(function(us){
   geo=topojson.feature(us,us.objects.states).features;render();
 }).catch(function(){render()});
+})();
+</script>
+<script>
+(function(){
+const SHARE_URL=document.querySelector('link[rel=canonical]').href, SHARE_TEXT=document.querySelector('meta[property="og:title"]').content;
+document.querySelectorAll("[data-share]").forEach(box=>{
+  const u=encodeURIComponent(SHARE_URL), t=encodeURIComponent(SHARE_TEXT);
+  box.insertAdjacentHTML("beforeend",`<button type="button" data-copy>Copy link</button><a href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener">X</a><a href="https://bsky.app/intent/compose?text=${t}%20${u}" target="_blank" rel="noopener">Bluesky</a><a href="https://www.threads.net/intent/post?text=${t}%20${u}" target="_blank" rel="noopener">Threads</a><a href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener">Facebook</a><a href="mailto:?subject=${t}&body=${u}">Email</a>`);
+  if(navigator.share){ const b=document.createElement("button"); b.type="button"; b.textContent="Share\u2026"; b.addEventListener("click",()=>navigator.share({title:SHARE_TEXT,url:SHARE_URL}).catch(()=>{})); box.insertBefore(b, box.children[1]); }
+  box.querySelector("[data-copy]").addEventListener("click",ev=>{ const btn=ev.currentTarget;
+    const done=()=>{btn.textContent="Copied"; setTimeout(()=>btn.textContent="Copy link",1800);};
+    (navigator.clipboard?navigator.clipboard.writeText(SHARE_URL):Promise.reject()).then(done).catch(()=>{ btn.textContent=SHARE_URL; }); });
+});
 })();
 </script>
 </body>
