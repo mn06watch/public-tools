@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,440 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-27",
+   "district": "TN-05",
+   "place": "Franklin, Tenn.",
+   "candidate": "Charlie Hatcher",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Chaz Molder (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 4:25 p.m. Central on Oct. 27, welcoming Hatcher \"to our House Republican Team,\" tagging Reps. Mark Alford (Mo.), Matt Van Epps (Tenn.) and Addison McDowell (N.C.). The Tennessean photographed him speaking the same day at a voter rally for Hatcher and Brent Taylor (TN-09) at Amruth Sports Bar in Franklin. Williamson County is split between the 5th and 9th districts.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 27",
+     "text": "Looking forward to welcoming a hardworking farmer and America First Patriot, @HatcherforTN, to our House Republican Team. #TN05, “Hire a Farmer” and VOTE for Charlie Hatcher on Tuesday, November 3rd! @markalfordkc @MattForTN @Addison_McD",
+     "url": "https://x.com/tomemmer/status/2115193121013416068"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Hatcher beat Rep. Andy Ogles in the Aug. 6 Republican primary, 53.2% to 46.8%. Trump had endorsed Ogles and switched to Hatcher after the primary. Tennessee's legislature redrew its congressional map in May, splitting Memphis. Cook rates it Solid R, moved from Likely R on May 8, with a PVI of R+10. Molder is the mayor of Columbia. <b>The money:</b> None to Hatcher in processed FEC records. Emmer's leadership PAC gave $5,000 to Ogles' campaign, dated Aug. 6, primary day.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485196"
+     },
+     {
+      "label": "The Tennessean, Oct. 27 rally",
+      "url": "https://www.yahoo.com/news/politics/articles/tennessee-republican-congressional-candidates-hold-040420738.html"
+     },
+     {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/07/after-ogles-primary-defeat-trump-flips-endorsement-to-hatcher-for-tennessees-5th-district/"
+     },
+     {
+      "label": "FEC records (Ogles)",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=OGLES"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "Likely R",
+    "rated": "May 8, 2026",
+    "pvi": "R+10",
+    "checked": "Oct. 28, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485196"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=HATCHER"
+   },
+   "candidates": [
+    {
+     "name": "Charlie Hatcher",
+     "party": "R",
+     "note": "Tennessee agriculture commissioner, 2019–25; veterinarian and dairy farmer. Has not served in Congress.",
+     "issues": {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/07/after-ogles-primary-defeat-trump-flips-endorsement-to-hatcher-for-tennessees-5th-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Chaz Molder",
+     "party": "D",
+     "note": "Mayor of Columbia, Tenn. Has not served in Congress.",
+     "issues": {
+      "label": "WSMV on the race",
+      "url": "https://www.wsmv.com/2026/09/18/tennessee-5th-congressional-district-race-tests-democratic-strength-charlie-hatcher-chaz-molder-matchup/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 35.925,
+   "lon": -86.869
+  },
+  {
+   "date": "2026-10-27",
+   "district": "TN-09",
+   "place": "Franklin, Tenn.",
+   "candidate": "Brent Taylor",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Justin Pearson (D)",
+   "type": "Campaign",
+   "typeNote": "Reported by The Tennessean, not posted by Emmer as of Oct. 28. Its photos show him speaking at an Oct. 27 voter rally for Taylor and Charlie Hatcher (TN-05) at Amruth Sports Bar in Franklin, and hugging Taylor. Williamson County is split between the 5th and 9th districts.",
+   "posts": [],
+   "context": {
+    "html": "<b>The race:</b> Rep. Steve Cohen (D) isn't running. Tennessee's legislature redrew its congressional map in May, splitting Memphis. The new 9th runs from part of Memphis to Nashville's suburbs, and Cook says Trump carried it by 21 points. Cook moved it from Solid D to Solid R on May 8; its PVI is R+9. Taylor, a state senator from Eads, won the Republican primary with Trump's endorsement. Pearson is a Memphis state representative. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on June 23, before the Aug. 6 primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485216"
+     },
+     {
+      "label": "The Tennessean, Oct. 27 rally",
+      "url": "https://www.yahoo.com/news/politics/articles/tennessee-republican-congressional-candidates-hold-040420738.html"
+     },
+     {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/06/tennessee-us-house-district-9-republican-taylor-and-democrat-pearson-set-for-general-election/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BRENT%20TAYLOR"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "Solid D",
+    "rated": "May 8, 2026",
+    "pvi": "R+9",
+    "checked": "Oct. 28, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485216"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BRENT%20TAYLOR"
+   },
+   "candidates": [
+    {
+     "name": "Brent Taylor",
+     "party": "R",
+     "note": "Tennessee state senator from the Memphis area; former funeral home director. Has not served in Congress.",
+     "issues": {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/06/tennessee-us-house-district-9-republican-taylor-and-democrat-pearson-set-for-general-election/"
+     },
+     "record": null
+    },
+    {
+     "name": "Justin Pearson",
+     "party": "D",
+     "note": "Tennessee state representative from Memphis, in his second term. Has not served in Congress.",
+     "issues": {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/06/tennessee-us-house-district-9-republican-taylor-and-democrat-pearson-set-for-general-election/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 35.955,
+   "lon": -86.84
+  },
+  {
+   "date": "2026-10-27",
+   "district": "TN-07",
+   "place": "Tennessee (location not stated)",
+   "candidate": "Rep. Matt Van Epps",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Darden Copeland (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 1:44 p.m. Central on Oct. 27, \"Great time with @MattForTN and @JohnnyGarrett in Tennessee this week,\" thanking Reps. Mark Alford (Mo.) and Addison McDowell (N.C.), with three photos. One post covers two districts, so it's logged here and at TN-06. It doesn't name a town or day; the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 27",
+     "text": "Great time with @MattForTN and @JohnnyGarrett in Tennessee this week! Thanks to our House Republican teammates @markalfordkc and @Addison_McD for joining. Election Day is ONE week away. Make sure you get out and VOTE for Congressman Matt Van Epps and soon-to-be Congressman Johnny Garrett on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2115152791358386571"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Van Epps won the December 2025 special election, 53.8% to 45.2%, and is seeking a first full term. Tennessee's legislature redrew its congressional map in May, splitting Memphis. Cook says the 7th's lean barely changed but nearly half of it is new to Van Epps, and Trump carried it by 22 points. Cook moved it from Likely R to Solid R on Dec. 3, 2025; its PVI is R+11. Copeland, a Nashville public affairs executive, won the Democratic primary in August. <b>The money:</b> $19,000 from Emmer's campaign and leadership PAC: $14,000 dated Oct. 20, 2025, during the special election, and $5,000 on Aug. 6.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485206"
+     },
+     {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/06/tn-us-house-district-7-copeland-defeats-dixie-in-dem-primary-setting-up-matchup-with-van-epp/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=VAN%20EPPS"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": "Likely R",
+    "rated": "Dec. 3, 2025",
+    "pvi": "R+11",
+    "checked": "Oct. 28, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485206"
+   },
+   "money": {
+    "campaign": 4000,
+    "pac": 15000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=VAN%20EPPS"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Matt Van Epps",
+     "party": "R",
+     "note": "Incumbent since December 2025. Former Army helicopter pilot and Tennessee general services commissioner.",
+     "issues": {
+      "label": "House website",
+      "url": "https://vanepps.house.gov/"
+     },
+     "photo": "photos/matt-van-epps.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.611,
+        "n": "72nd most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.611,
+      "dwUrl": "https://voteview.com/person/22566",
+      "gt": 0.509,
+      "gtLabel": "centrist Republican follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/matt_van_epps/457038",
+      "ha": {
+       "life": 100,
+       "sess": {
+        "119": 100
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/V000139",
+      "pp": {
+       "life": 0.74,
+       "recent": 0.74,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Darden Copeland",
+     "party": "D",
+     "note": "Founder and CEO of Calvert Street Group, a Nashville public affairs firm. Has not held office.",
+     "issues": {
+      "label": "Tennessee Lookout on the primary",
+      "url": "https://tennesseelookout.com/2026/08/06/tn-us-house-district-7-copeland-defeats-dixie-in-dem-primary-setting-up-matchup-with-van-epp/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 36.33,
+   "lon": -87.05
+  },
+  {
+   "date": "2026-10-27",
+   "district": "TN-06",
+   "place": "Tennessee (location not stated)",
+   "candidate": "Johnny Garrett",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Mike Croley (D)",
+   "type": "Campaign",
+   "typeNote": "Same Oct. 27 post as TN-07: \"Great time with @MattForTN and @JohnnyGarrett in Tennessee this week.\" It doesn't name a town or day; the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 27",
+     "text": "Great time with @MattForTN and @JohnnyGarrett in Tennessee this week! Thanks to our House Republican teammates @markalfordkc and @Addison_McD for joining. Election Day is ONE week away. Make sure you get out and VOTE for Congressman Matt Van Epps and soon-to-be Congressman Johnny Garrett on November 3rd!",
+     "url": "https://x.com/tomemmer/status/2115152791358386571"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat; Rep. John Rose (R) is running for governor. Tennessee's legislature redrew its congressional map in May, splitting Memphis. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+13, and says Garrett \"should easily win.\" Garrett, a state representative from Goodlettsville, beat former Rep. Van Hilleary in the August primary. Croley is a veteran from Crossville. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on June 23, before the Aug. 6 primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/485201"
+     },
+     {
+      "label": "WPLN on the primary",
+      "url": "https://wpln.org/post/in-the-6th-district-state-rep-johnny-garrett-grabs-republican-ticket/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JOHNNY%20GARRETT"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+13",
+    "checked": "Oct. 28, 2026",
+    "url": "https://www.cookpolitical.com/house/race/485201"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=JOHNNY%20GARRETT"
+   },
+   "candidates": [
+    {
+     "name": "Johnny Garrett",
+     "party": "R",
+     "note": "Tennessee state representative from Goodlettsville. Has not served in Congress.",
+     "issues": {
+      "label": "WPLN on the primary",
+      "url": "https://wpln.org/post/in-the-6th-district-state-rep-johnny-garrett-grabs-republican-ticket/"
+     },
+     "record": null
+    },
+    {
+     "name": "Mike Croley",
+     "party": "D",
+     "note": "Military veteran and efficiency engineer from Crossville. Has not held office.",
+     "issues": {
+      "label": "WPLN on the primary",
+      "url": "https://wpln.org/post/in-the-6th-district-state-rep-johnny-garrett-grabs-republican-ticket/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 36.15,
+   "lon": -85.95
+  },
+  {
+   "date": "2026-10-27",
+   "district": "NY-04",
+   "place": "Garden City, N.Y.",
+   "candidate": "Jeanine Driscoll",
+   "party": "R",
+   "role": "Challenger",
+   "opponent": "Rep. Laura Gillen (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "He posted at 12:04 p.m. Central on Oct. 27 that Reps. Nicole Malliotakis (N.Y.) and Riley Moore (W.Va.) \"and I had an awesome time in Garden City, New York\" with Driscoll. He thanked the same two colleagues in his Oct. 26 Long Island post for NY-03. The post doesn't say which day; it's logged on the date he posted.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 27",
+     "text": ".@NMalliotakis, @RileyMooreWV, and I had an awesome time in Garden City, New York with @driscoll4ny. Jeanine will be a GREAT Congresswoman for New York's Fourth Congressional District. #NY04: Get out and VOTE for a Tax Fighter for Nassau, Jeanine Driscoll!",
+     "url": "https://x.com/tomemmer/status/2115127562041188404"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Gillen unseated Republican Rep. Anthony D'Esposito in 2024, 51.1% to 48.8%. Cook moved the race from Lean D to Likely D on Oct. 9 and says the district narrowly voted for Harris; its PVI is D+2. Driscoll is Hempstead's receiver of taxes. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on June 18, before the June 23 primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483591"
+     },
+     {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/13/incumbent-gillen-d-and-driscoll-r-to-face-off-in-new-york-swing-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=DRISCOLL"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Likely D",
+    "prev": "Lean D",
+    "rated": "Oct. 9, 2026",
+    "pvi": "D+2",
+    "checked": "Oct. 28, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483591"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=DRISCOLL"
+   },
+   "candidates": [
+    {
+     "name": "Jeanine Driscoll",
+     "party": "R",
+     "note": "Hempstead receiver of taxes since 2020; attorney. Has not served in Congress.",
+     "issues": {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/13/incumbent-gillen-d-and-driscoll-r-to-face-off-in-new-york-swing-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Rep. Laura Gillen",
+     "party": "D",
+     "note": "Incumbent since 2025. Former Hempstead town supervisor.",
+     "issues": {
+      "label": "House website",
+      "url": "https://gillen.house.gov/"
+     },
+     "photo": "photos/laura-gillen.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": -0.166,
+        "n": "3rd most moderate of 224 House Democrats"
+       }
+      ],
+      "dw": -0.166,
+      "dwUrl": "https://voteview.com/person/22518",
+      "gt": 0.521,
+      "gtLabel": "centrist Democratic follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/laura_gillen/457010",
+      "ha": {
+       "life": 7,
+       "sess": {
+        "119": 7
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/G000602",
+      "pp": {
+       "life": 80.67,
+       "recent": 80.67,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    }
+   ],
+   "lat": 40.727,
+   "lon": -73.634
+  },
   {
    "date": "2026-10-26",
    "district": "NY-03",
@@ -48,7 +482,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483586"
    },
    "money": {
@@ -157,7 +591,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483656"
    },
    "money": {
@@ -266,7 +700,7 @@
     "prev": "Toss Up",
     "rated": "Sept. 25, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483531"
    },
    "money": {
@@ -375,7 +809,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -484,7 +918,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -588,7 +1022,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -697,7 +1131,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -797,7 +1231,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -910,7 +1344,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -985,7 +1419,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -1094,7 +1528,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -1202,7 +1636,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -1277,7 +1711,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -1386,7 +1820,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -1501,7 +1935,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -1582,7 +2016,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -1661,7 +2095,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -1776,7 +2210,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -1883,7 +2317,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -1956,7 +2390,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -2117,7 +2551,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -2207,7 +2641,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -2256,7 +2690,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -2304,7 +2738,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -2352,7 +2786,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -2400,7 +2834,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -2448,7 +2882,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -2496,7 +2930,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2542,7 +2976,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 27, 2026",
+      "checked": "Oct. 28, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -2644,7 +3078,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -2758,7 +3192,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -2863,7 +3297,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -2969,7 +3403,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -3052,7 +3486,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -3198,7 +3632,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -3304,7 +3738,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -3410,7 +3844,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -3485,7 +3919,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -3600,7 +4034,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 27, 2026",
+    "checked": "Oct. 28, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -3754,7 +4188,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 27, 2026",
+  "checked": "Oct. 28, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -3931,11 +4365,20 @@
        "url": "https://www.facebook.com/ChapinforCongress",
        "label": "his Facebook page",
        "showAfter": "2026-10-20T19:45:00-05:00"
+      },
+      {
+       "date": "Oct. 27",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "St. Cloud, Kalsan Event Center, with Attorney General Keith Ellison, 6 to 8 p.m. His post that day: \"One more week to Election Day. One more town hall.\"",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/De_zonqkcb0",
+       "label": "his post",
+       "showAfter": "2026-10-27T20:00:00-05:00"
       }
      ],
      "none": "None found.",
      "note": "Each town hall is added after it happens. Full history below.",
-     "suffix": "22 total through Oct. 12"
+     "suffix": "23 reported through Oct. 27"
     }
    },
    {
@@ -4479,6 +4922,26 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 27",
+       "html": "<a href=\"#tn-05-2026-10-27\">TN-05</a>, Hatcher (rally in Franklin)"
+      },
+      {
+       "date": "Oct. 27",
+       "html": "<a href=\"#tn-09-2026-10-27\">TN-09</a>, Taylor (same rally; reported by The Tennessean)"
+      },
+      {
+       "date": "Oct. 27",
+       "html": "<a href=\"#tn-07-2026-10-27\">TN-07</a>, Van Epps (location not stated)"
+      },
+      {
+       "date": "Oct. 27",
+       "html": "<a href=\"#tn-06-2026-10-27\">TN-06</a>, Garrett (location not stated)"
+      },
+      {
+       "date": "Oct. 27",
+       "html": "<a href=\"#ny-04-2026-10-27\">NY-04</a>, Driscoll (Garden City)"
+      },
+      {
        "date": "Oct. 26",
        "html": "<a href=\"#ny-03-2026-10-26\">NY-03</a>, LiPetri (Long Island)"
       },
@@ -4777,13 +5240,22 @@
       "url": "https://www.facebook.com/ChapinforCongress",
       "label": "his Facebook page",
       "showAfter": "2026-10-20T19:45:00-05:00"
+     },
+     {
+      "date": "Oct. 27, 2026",
+      "tag": "yes",
+      "tagText": "Reported",
+      "html": "St. Cloud, with Attorney General Keith Ellison",
+      "url": "https://www.threads.com/@dougchapinforcongress/post/De_zonqkcb0",
+      "label": "his post",
+      "showAfter": "2026-10-27T20:00:00-05:00"
      }
     ],
     "note": "He counts 19 town halls through Sept. 29. The ones above are those we can document individually; the rest aren't listed publicly. We found no town hall on Tuesday, Sept. 22: his count went from 17 (Sept. 8) to 18 (Sept. 19), and he called St. Michael, on Sept. 29, his 19th."
    }
   }
  },
- "ratingsChecked": "Oct. 27, 2026",
+ "ratingsChecked": "Oct. 28, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
