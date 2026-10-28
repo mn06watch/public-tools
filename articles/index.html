@@ -189,25 +189,30 @@
     border-bottom: 2px solid var(--line);
   }
 
-  /* Start here callout */
-  .start-here {
+  /* Featured card, pinned above the sections */
+  .featured-card {
     display: block;
-    margin-bottom: 28px;
-    padding: 12px 16px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 40px;
+    padding: 20px 22px;
     background: rgba(200,146,42,0.08);
     border: 1px solid rgba(200,146,42,0.35);
     border-left: 4px solid var(--gold);
     border-radius: 6px;
-    color: var(--navy);
-    font-size: 1rem;
-    line-height: 1.45;
-    text-decoration: none;
-    text-wrap: pretty;
     transition: background 0.15s;
   }
-  .start-here:hover { background: rgba(200,146,42,0.15); }
-  .start-here strong { font-weight: 700; }
-  .start-here-arrow { color: var(--gold); font-weight: 700; white-space: nowrap; }
+  .featured-card:hover { background: rgba(200,146,42,0.15); }
+  .featured-label {
+    display: block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
 
   /* Article cards */
   .article-card {
@@ -218,13 +223,11 @@
     border-bottom: 1px solid var(--line);
     transition: background 0.15s;
   }
-  .article-card:first-of-type { padding-top: 0; }
+  /* The first card under each section label sits right under the label's rule */
   .section-label + .article-card { padding-top: 0; }
   .article-card:hover { background: var(--navy-bg); margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 6px; }
   /* Card with a second link: the title link covers the card, the extra link sits above it */
   .card-multi { position: relative; }
-  .section-label + .card-multi { padding-top: 0; }
-  .card-multi ~ a.article-card:first-of-type { padding-top: 24px; }
   .card-main { color: inherit; text-decoration: none; }
   .card-main::after { content: ""; position: absolute; inset: 0; }
   .card-sublink { position: relative; z-index: 1; display: inline-block; margin-top: 10px; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--gold); text-decoration: none; }
@@ -347,15 +350,20 @@
 
 <div class="content">
 
-  <a href="/articles/mn06-guide/" class="start-here"><strong>Voting in the 6th District?</strong> Start with the race on one page.&nbsp;<span class="start-here-arrow">&rarr;</span></a>
-
-  <div class="section-label">Voter Service</div>
-
-  <a href="/articles/mn06-guide/" class="article-card">
-    <span class="card-badge badge-voter">Voter Service</span>
+  <a href="/articles/mn06-guide/" class="featured-card">
+    <span class="featured-label">Start here</span>
     <div class="card-title">The MN-06 Race on One Page</div>
     <div class="card-desc">Tom Emmer and Doug Chapin in one place: where they stand on 13 issues, Emmer's voting record over time, who funds each campaign, how their claims check out, who shows up for voters, and every interview, voter guide and letter on the race. Printable, with the full record one click away.</div>
     <div class="card-meta">October 28, 2026 &middot; Cheat sheet &middot; Start here</div>
+  </a>
+
+  <div class="section-label">Voter Service</div>
+
+  <a href="/articles/follow-the-money/" class="article-card">
+    <span class="card-badge badge-voter">Voter Service</span>
+    <div class="card-title">Where the Money Comes From</div>
+    <div class="card-desc">Who's funding Tom Emmer and Doug Chapin, by the same rules: a map of every itemized dollar, the PACs by industry, the biggest donors and what the record shows about them, and where the money raised in Emmer's name goes. FEC reports through Oct. 14, 2026.</div>
+    <div class="card-meta">October 28, 2026 &middot; Campaign finance &middot; Both campaigns, FEC reports through Oct. 14</div>
   </a>
 
   <div class="article-card card-multi">
@@ -366,25 +374,18 @@
     <a href="/articles/who-showed-up/hold-the-podium/" class="card-sublink">Start with Part 1: Hold the Podium &rarr;</a>
   </div>
 
-  <a href="/articles/on-the-road/" class="article-card">
-    <span class="card-badge badge-voter">Voter Service</span>
-    <div class="card-title">On the Road, and Back Home</div>
-    <div class="card-desc">Rep. Tom Emmer pledged 56 more districts before Election Day. A running log of every stop, next to what public access voters in his own district get, for both candidates, by the same rules.</div>
-    <div class="card-meta">September 29, 2026 &middot; Running log &middot; updated through Election Day</div>
-  </a>
-
-  <a href="/articles/follow-the-money/" class="article-card">
-    <span class="card-badge badge-voter">Voter Service</span>
-    <div class="card-title">Where the Money Comes From</div>
-    <div class="card-desc">Who's funding Tom Emmer and Doug Chapin, by the same rules: a map of every itemized dollar, the PACs by industry, the biggest donors and what the record shows about them, and where the money raised in Emmer's name goes. FEC reports through Oct. 14, 2026.</div>
-    <div class="card-meta">October 28, 2026 &middot; Campaign finance &middot; Both campaigns, FEC reports through Oct. 14</div>
-  </a>
-
   <a href="/articles/press-check/" class="article-card">
     <span class="card-badge badge-voter">Voter Service</span>
     <div class="card-title">Press Check</div>
     <div class="card-desc">What the MN-06 candidates tell reporters, checked against the public record by the same rules for both. Now with Carver County Local News' voter guide, where Rep. Emmer is listed as "No response." Updated as new coverage runs.</div>
     <div class="card-meta">September 30, 2026 &middot; Fact check &middot; Updated as new coverage runs</div>
+  </a>
+
+  <a href="/articles/on-the-road/" class="article-card">
+    <span class="card-badge badge-voter">Voter Service</span>
+    <div class="card-title">On the Road, and Back Home</div>
+    <div class="card-desc">Rep. Tom Emmer pledged 56 more districts before Election Day. A running log of every stop, next to what public access voters in his own district get, for both candidates, by the same rules.</div>
+    <div class="card-meta">September 29, 2026 &middot; Running log &middot; updated through Election Day</div>
   </a>
 
   <a href="/articles/where-they-stand/" class="article-card">
@@ -487,18 +488,18 @@
   <div class="section-gap"></div>
   <div class="section-label">Primary Source Documents</div>
 
-  <a href="/articles/ellison-transcript/" class="article-card">
-    <span class="card-badge badge-source">Primary Source</span>
-    <div class="card-title">Full Transcript: AG Ellison / MMBA Meeting</div>
-    <div class="card-desc">Complete verbatim transcript of the 54-minute recording from December 11, 2021. The tape Rep. Emmer has cited across 26+ media appearances — without linking to the full text.</div>
-    <div class="card-meta">December 2021 recording &middot; Transcribed February 2025 &middot; Published by MN-06 Watch</div>
-  </a>
-
   <a href="/articles/eisa-bill/" class="article-card">
     <span class="card-badge badge-legislation">Model Legislation</span>
     <div class="card-title">Election Integrity Standards Act — Full Bill Text</div>
     <div class="card-desc">Model legislation for evidence-based citizenship verification in federal elections. Amends HAVA and NVRA. Drafted for any Senator or Representative to introduce.</div>
     <div class="card-meta">March 2026 &middot; Discussion draft</div>
+  </a>
+
+  <a href="/articles/ellison-transcript/" class="article-card">
+    <span class="card-badge badge-source">Primary Source</span>
+    <div class="card-title">Full Transcript: AG Ellison / MMBA Meeting</div>
+    <div class="card-desc">Complete verbatim transcript of the 54-minute recording from December 11, 2021. The tape Rep. Emmer has cited across 26+ media appearances — without linking to the full text.</div>
+    <div class="card-meta">December 2021 recording &middot; Transcribed February 2025 &middot; Published by MN-06 Watch</div>
   </a>
 
   <div class="section-gap"></div>
