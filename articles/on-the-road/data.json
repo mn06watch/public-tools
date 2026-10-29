@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,246 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-28",
+   "district": "GA-11",
+   "place": "Georgia (location not stated)",
+   "candidate": "John Cowan",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Chris Harden (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 5:02 p.m. Central on Oct. 28, \"Great day in #GA11 supporting John,\" with Rep. Jason Smith (Mo.) and Johnny Garrett, the TN-06 nominee he campaigned with on Oct. 27, and three photos. It was his third stop posted that day. The post doesn't name a town; the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 28",
+     "text": "Georgia is FIRED UP to elect @DrJohnCowan! Great day in #GA11 supporting John with @JasonSmithMO and @JohnnyGarrett. Get out and VOTE for John Cowan on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2115564960973525331"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat in Atlanta's northwest suburbs and exurbs; Rep. Barry Loudermilk (R) announced in February he wouldn't run again. He won it with 67% in 2024. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+12, and says Cowan \"should easily win.\" Cowan, a neurosurgeon who lost the 2020 GA-14 runoff to Marjorie Taylor Greene, won the June runoff with 66%. Harden is a Woodstock estate-planning attorney. <b>The money:</b> None to Cowan in processed FEC records.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482916"
+     },
+     {
+      "label": "Atlanta News First on the runoff",
+      "url": "https://www.atlantanewsfirst.com/2026/06/16/john-cowan-wins-gop-11th-district-runoff-will-face-democrat-chris-harden-this-fall/"
+     },
+     {
+      "label": "AJC on the open seat",
+      "url": "https://feeds.ajc.com/politics/2026/04/us-house-district-11-surprise-retirement-sets-off-scramble-in-atlanta-suburbs/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=COWAN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+12",
+    "checked": "Oct. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482916"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=COWAN"
+   },
+   "candidates": [
+    {
+     "name": "John Cowan",
+     "party": "R",
+     "note": "Neurosurgeon and business owner. 2020 GA-14 candidate. Has not held office.",
+     "issues": {
+      "label": "AJC on the open seat",
+      "url": "https://feeds.ajc.com/politics/2026/04/us-house-district-11-surprise-retirement-sets-off-scramble-in-atlanta-suburbs/"
+     },
+     "record": null
+    },
+    {
+     "name": "Chris Harden",
+     "party": "D",
+     "note": "Estate-planning and probate attorney in Woodstock; court-appointed juvenile court attorney. Has not held office.",
+     "issues": {
+      "label": "AJC on the open seat",
+      "url": "https://feeds.ajc.com/politics/2026/04/us-house-district-11-surprise-retirement-sets-off-scramble-in-atlanta-suburbs/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 34.17,
+   "lon": -84.62
+  },
+  {
+   "date": "2026-10-28",
+   "district": "NC-11",
+   "place": "North Carolina (location not stated)",
+   "candidate": "Jennifer Balkcom",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Jamie Ager (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 1:10 p.m. Central on Oct. 28, \"A perfect fall afternoon in #NC11 supporting @JenBalkcom,\" with a photo. The post doesn't name a town; the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 28",
+     "text": "A perfect fall afternoon in #NC11 supporting @JenBalkcom! Jen will be a STRONG champion for North Carolina farmers, workers, and families in Congress. 6 days until Election Day. Get out and vote for Jen Balkcom on November 3rd! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2115506436234977582"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Rep. Chuck Edwards (R) dropped his reelection bid in August after a House Ethics Committee report recommended he be censured; district Republicans picked Balkcom, a state representative from Henderson County, to replace him on Aug. 10. Cook moved the race from Toss Up to Lean D on Oct. 23, saying she \"has struggled to consolidate Republican support\" and polls show Ager, a farmer, with \"a clear and consistent lead.\" The PVI is R+5. <b>The money:</b> None to Balkcom in processed FEC records. Emmer's campaign gave Edwards $2,000 on Feb. 3.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483756"
+     },
+     {
+      "label": "BPR on the replacement",
+      "url": "https://www.bpr.org/politics-government/2026-08-10/state-rep-jennifer-balkcom-to-replace-rep-chuck-edwards-on-nc-11-ballot"
+     },
+     {
+      "label": "FEC records (Edwards)",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=CHUCK%20EDWARDS"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 23, 2026",
+    "pvi": "R+5",
+    "checked": "Oct. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483756"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BALKCOM"
+   },
+   "candidates": [
+    {
+     "name": "Jennifer Balkcom",
+     "party": "R",
+     "note": "North Carolina state representative from Henderson County; mortgage loan officer. Replacement nominee, chosen Aug. 10. Has not served in Congress.",
+     "issues": {
+      "label": "BPR on the replacement",
+      "url": "https://www.bpr.org/politics-government/2026-08-10/state-rep-jennifer-balkcom-to-replace-rep-chuck-edwards-on-nc-11-ballot"
+     },
+     "record": null
+    },
+    {
+     "name": "Jamie Ager",
+     "party": "D",
+     "note": "Farmer. On the DCCC's Red to Blue list. Has not held office.",
+     "issues": {
+      "label": "WLOS on the race",
+      "url": "https://wlos.com/news/election/north-carolina-11th-congressional-district-2026-jamie-ager-chuck-edwards-republican-red-blue-program-democratic-congressional-campaign-committee"
+     },
+     "record": null
+    }
+   ],
+   "lat": 35.45,
+   "lon": -82.95
+  },
+  {
+   "date": "2026-10-28",
+   "district": "KY-06",
+   "place": "Nicholasville, Ky.",
+   "candidate": "Ralph Alvarado",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Zach Dembo (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 9:28 a.m. Central on Oct. 28 that he \"started the morning off in Jessamine County\" with Senate nominee Rep. Andy Barr and Johnny Garrett, the TN-06 nominee, with three photos. WHAS11 (Louisville) covered the get-out-the-vote rally at the Jessamine County Republican Party headquarters in Nicholasville that day.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 28",
+     "text": "Started the morning off in Jessamine County with @barrforsenate and @JohnnyGarrett to support the next Congressman for #KY06, @AlvaradoForKY! Just six days until Election Day. Get out and VOTE for Ralph Alvarado! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2115450683118027056"
+    }
+   ],
+   "said": [
+    {
+     "text": "\"I'm not going to say that you have the dumbest governor in the United States, but he better hope that Tim Walz doesn't die anytime soon.\"",
+     "src": "Rep. Emmer on Kentucky Gov. Andy Beshear, at the rally, as quoted by WHAS11, Oct. 28",
+     "url": "https://www.whas11.com/article/news/politics/house-gop-leader-compares-andy-beshear-to-dumbest-governor-beshear-advisor-fires-back/417-9728a674-1f08-4307-a1b7-e57a85ec39b9"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat centered on Lexington; Rep. Andy Barr (R) is running for the Senate. Cook moved it from Lean R to Toss Up on Oct. 23, saying polling shows \"a tied race, at best, for Republicans.\" The PVI is R+7. Alvarado, a physician, served in the Kentucky Senate and was Tennessee's health commissioner from 2023 to 2025. Dembo is a former federal prosecutor. <b>At the rally:</b> WHAS11 reported Emmer's remark about Gov. Andy Beshear, quoted above. Beshear's former campaign manager, Eric Hyers, answered in a statement: \"Is Rep. Emmer calling the 60+% of Kentuckians who think Governor Beshear is doing a good job, stupid?\" <b>The money:</b> $12,000 from Emmer's campaign and leadership PAC: $7,000 on May 18, the day before the primary, and $5,000 on Aug. 11.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/483151"
+     },
+     {
+      "label": "WHAS11 on the rally",
+      "url": "https://www.whas11.com/article/news/politics/house-gop-leader-compares-andy-beshear-to-dumbest-governor-beshear-advisor-fires-back/417-9728a674-1f08-4307-a1b7-e57a85ec39b9"
+     },
+     {
+      "label": "LEX18 on Dembo",
+      "url": "https://www.lex18.com/news/covering-kentucky/former-federal-prosecutor-enters-race-for-kentuckys-6th-congressional-district"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ALVARADO"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 23, 2026",
+    "pvi": "R+7",
+    "checked": "Oct. 29, 2026",
+    "url": "https://www.cookpolitical.com/house/race/483151"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 10000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=ALVARADO"
+   },
+   "candidates": [
+    {
+     "name": "Ralph Alvarado",
+     "party": "R",
+     "note": "Physician. Kentucky state senator, 2015–23; Tennessee health commissioner, 2023–25. Has not served in Congress.",
+     "issues": {
+      "label": "WHAS11 on the rally",
+      "url": "https://www.whas11.com/article/news/politics/house-gop-leader-compares-andy-beshear-to-dumbest-governor-beshear-advisor-fires-back/417-9728a674-1f08-4307-a1b7-e57a85ec39b9"
+     },
+     "record": null
+    },
+    {
+     "name": "Zach Dembo",
+     "party": "D",
+     "note": "Former federal prosecutor. On the DCCC's Red to Blue list. Has not held office.",
+     "issues": {
+      "label": "LEX18 on his entry",
+      "url": "https://www.lex18.com/news/covering-kentucky/former-federal-prosecutor-enters-race-for-kentuckys-6th-congressional-district"
+     },
+     "record": null
+    }
+   ],
+   "lat": 37.88,
+   "lon": -84.573
+  },
   {
    "date": "2026-10-27",
    "district": "TN-05",
@@ -52,7 +292,7 @@
     "prev": "Likely R",
     "rated": "May 8, 2026",
     "pvi": "R+10",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485196"
    },
    "money": {
@@ -124,7 +364,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+9",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485216"
    },
    "money": {
@@ -199,7 +439,7 @@
     "prev": "Likely R",
     "rated": "Dec. 3, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485206"
    },
    "money": {
@@ -303,7 +543,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+13",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485201"
    },
    "money": {
@@ -378,7 +618,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "D+2",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483591"
    },
    "money": {
@@ -482,7 +722,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483586"
    },
    "money": {
@@ -591,7 +831,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483656"
    },
    "money": {
@@ -700,7 +940,7 @@
     "prev": "Toss Up",
     "rated": "Sept. 25, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483531"
    },
    "money": {
@@ -809,7 +1049,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -918,7 +1158,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -1022,7 +1262,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -1131,7 +1371,7 @@
     "prev": "Lean R",
     "rated": "April 7, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -1231,7 +1471,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -1344,7 +1584,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -1419,7 +1659,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -1528,7 +1768,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -1636,7 +1876,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -1711,7 +1951,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -1820,7 +2060,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -1935,7 +2175,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -2016,7 +2256,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -2095,7 +2335,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -2210,7 +2450,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -2317,7 +2557,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -2390,7 +2630,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -2551,7 +2791,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -2641,7 +2881,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -2690,7 +2930,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -2738,7 +2978,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -2786,7 +3026,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -2834,7 +3074,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -2882,7 +3122,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -2930,7 +3170,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -2976,7 +3216,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 28, 2026",
+      "checked": "Oct. 29, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -3078,7 +3318,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -3192,7 +3432,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -3297,7 +3537,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -3403,7 +3643,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -3486,7 +3726,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -3632,7 +3872,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -3738,7 +3978,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -3844,7 +4084,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -3919,7 +4159,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -4034,7 +4274,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 28, 2026",
+    "checked": "Oct. 29, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -4188,7 +4428,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 28, 2026",
+  "checked": "Oct. 29, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -4370,15 +4610,15 @@
        "date": "Oct. 27",
        "tag": "yes",
        "tagText": "Reported",
-       "html": "St. Cloud, Kalsan Event Center, with Attorney General Keith Ellison, 6 to 8 p.m. His post that day: \"One more week to Election Day. One more town hall.\"",
-       "url": "https://www.threads.com/@dougchapinforcongress/post/De_zonqkcb0",
+       "html": "St. Cloud, Kalsan Event Center, a joint town hall with Attorney General Keith Ellison. His Oct. 28 post: a \"standing-room only crowd\" at \"my 23rd of the campaign!\" He wrote that former Vice President Kamala Harris joined by phone.",
+       "url": "https://x.com/ChapinForMN6/status/2115479273016578187",
        "label": "his post",
        "showAfter": "2026-10-27T20:00:00-05:00"
       }
      ],
      "none": "None found.",
      "note": "Each town hall is added after it happens. Full history below.",
-     "suffix": "23 reported through Oct. 27"
+     "suffix": "23 total through Oct. 27"
     }
    },
    {
@@ -4743,6 +4983,22 @@
        "html": "Becker meet and greet, hosted by a local resident, per his Oct. 15 schedule",
        "url": "https://www.facebook.com/ChapinforCongress",
        "label": "his Facebook page"
+      },
+      {
+       "date": "Oct. 27",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Knocked doors in St. Cloud with Attorney General Keith Ellison and volunteers, before the town hall",
+       "url": "https://x.com/ChapinForMN6/status/2115479273016578187",
+       "label": "his post"
+      },
+      {
+       "date": "Oct. 28",
+       "tag": "yes",
+       "tagText": "Reported",
+       "html": "Get-out-the-vote rally in a Monticello warehouse, listed for Oct. 28 on his Oct. 15 schedule. His post: \"200+ people,\" with a state senator, the DFL state party chair and a member of Congress on stage.",
+       "url": "https://www.threads.com/@dougchapinforcongress/post/DfE-vSjERQp",
+       "label": "his post"
       }
      ]
     }
@@ -4921,6 +5177,18 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 28",
+       "html": "<a href=\"#ga-11-2026-10-28\">GA-11</a>, Cowan (location not stated)"
+      },
+      {
+       "date": "Oct. 28",
+       "html": "<a href=\"#nc-11-2026-10-28\">NC-11</a>, Balkcom (location not stated)"
+      },
+      {
+       "date": "Oct. 28",
+       "html": "<a href=\"#ky-06-2026-10-28\">KY-06</a>, Alvarado (rally in Nicholasville)"
+      },
       {
        "date": "Oct. 27",
        "html": "<a href=\"#tn-05-2026-10-27\">TN-05</a>, Hatcher (rally in Franklin)"
@@ -5245,8 +5513,8 @@
       "date": "Oct. 27, 2026",
       "tag": "yes",
       "tagText": "Reported",
-      "html": "St. Cloud, with Attorney General Keith Ellison",
-      "url": "https://www.threads.com/@dougchapinforcongress/post/De_zonqkcb0",
+      "html": "St. Cloud, with Attorney General Keith Ellison (his #23)",
+      "url": "https://x.com/ChapinForMN6/status/2115479273016578187",
       "label": "his post",
       "showAfter": "2026-10-27T20:00:00-05:00"
      }
@@ -5255,7 +5523,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 28, 2026",
+ "ratingsChecked": "Oct. 29, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
