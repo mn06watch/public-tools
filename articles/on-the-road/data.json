@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-31",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,170 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-10-30",
+   "district": "GA-01",
+   "place": "Georgia (location not stated)",
+   "candidate": "Jim Kingston",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Amanda Hollowell (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 8:44 a.m. Central on Oct. 30 that Rep. Brian Jack (Ga.), Rep. Jason Smith (Mo.), Johnny Garrett (the TN-06 nominee) \"and I had a great time supporting\" Kingston, with a photo. The post doesn't name a town or say which day; it's logged on the date he posted, and the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 30",
+     "text": "A lot of energy in Georgia! @BrianTJack, @JasonSmithMO, @JohnnyGarrett and I had a great time supporting the next Congressman for #GA01, @JimKingstonGA. 4 days until Election Day. Get out and VOTE for Jim Kingston! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2116164313769562263"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat on the Georgia coast, around Savannah and Brunswick; Rep. Buddy Carter (R) ran for the Senate and lost the primary. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+8. Kingston, an insurance broker and the son of former Rep. Jack Kingston, won the May primary with 52.7% after Trump endorsed him. Hollowell won the Democratic runoff in June. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on Nov. 17, 2025, before the primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482866"
+     },
+     {
+      "label": "The Current on the primary",
+      "url": "https://thecurrentga.org/2026/05/20/victorious-jim-kingston-awaits-november-opponent/"
+     },
+     {
+      "label": "WTOC on the runoff",
+      "url": "https://www.wtoc.com/2026/06/16/griggs-hollowell-compete-georgias-1st-district-democratic-runoff/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=KINGSTON"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+8",
+    "checked": "Oct. 31, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482866"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=KINGSTON"
+   },
+   "candidates": [
+    {
+     "name": "Jim Kingston",
+     "party": "R",
+     "note": "Insurance broker; son of former Rep. Jack Kingston. Has not held office.",
+     "issues": {
+      "label": "WTOC on his priorities",
+      "url": "https://www.wtoc.com/2026/10/29/jim-kingston-outlines-priorities-georgias-1st-congressional-district-race-if-elected-nov-3/"
+     },
+     "record": null
+    },
+    {
+     "name": "Amanda Hollowell",
+     "party": "D",
+     "note": "Won the June 16 Democratic runoff. Has not held office.",
+     "issues": {
+      "label": "WTOC on the runoff",
+      "url": "https://www.wtoc.com/2026/06/16/griggs-hollowell-compete-georgias-1st-district-democratic-runoff/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 31.6,
+   "lon": -81.75
+  },
+  {
+   "date": "2026-10-29",
+   "district": "GA-10",
+   "place": "Monroe, Ga.",
+   "candidate": "Houston Gaines",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Pam DeLancy (D)",
+   "type": "Campaign",
+   "typeNote": "A morning rally in Monroe with Gov. Brian Kemp and governor nominee Rick Jackson. Emmer posted from it at 12:35 p.m. Central on Oct. 29, thanking Rep. Brian Jack and Gaines. That evening he quote-posted Gaines (\"Great day\"), who thanked him and others \"for coming to Monroe today to help us get out the vote.\" FOX 5 Atlanta reported Emmer gave a call to action at the rally.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 29",
+     "text": "FIRED UP crowd at a rally in Monroe, GA for a strong conservative leader and the next Governor of Georgia, @RickJacksonGA. Glad to have two all-star Georgians with us, @BrianTJack and @houstongaines! 5 days until Election Day. Get out and VOTE RED up and down the ballot 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2115860018931400741"
+    },
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 29",
+     "text": "Great day 🇺🇸 (quoting @houstongaines: \"Thanks to my friends @tomemmer, @BrianTJack, @JasonSmithMO, & @JohnnyGarrett for coming to Monroe today to help us get out the vote!\")",
+     "url": "https://x.com/tomemmer/status/2115969760987164904"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat in north central Georgia, including Athens; Rep. Mike Collins (R) is the party's Senate nominee. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+11, and says there was \"never any doubt\" Gaines would claim it. Gaines, a state representative from Athens since 2019, won the May primary with 66.9% after Trump endorsed him. DeLancy won the Democratic primary with 54.4%. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on Dec. 2, 2025, before the primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482911"
+     },
+     {
+      "label": "FOX 5 Atlanta on the rally",
+      "url": "https://www.fox5atlanta.com/news/kemp-rallies-rick-jackson-walton-county-ahead-election-day"
+     },
+     {
+      "label": "Covington News on the primary",
+      "url": "https://www.covnews.com/news/state/houston-gaines-pam-delancy-set-for-november-showdown/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=GAINES"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+11",
+    "checked": "Oct. 31, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482911"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=GAINES"
+   },
+   "candidates": [
+    {
+     "name": "Houston Gaines",
+     "party": "R",
+     "note": "Georgia state representative from Athens since 2019. Has not served in Congress.",
+     "issues": {
+      "label": "Covington News on the primary",
+      "url": "https://www.covnews.com/news/state/houston-gaines-pam-delancy-set-for-november-showdown/"
+     },
+     "record": null
+    },
+    {
+     "name": "Pam DeLancy",
+     "party": "D",
+     "note": "Won the May Democratic primary. Has not held office.",
+     "issues": {
+      "label": "Covington News on the primary",
+      "url": "https://www.covnews.com/news/state/houston-gaines-pam-delancy-set-for-november-showdown/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 33.795,
+   "lon": -83.713
+  },
   {
    "date": "2026-10-28",
    "district": "GA-11",
@@ -52,7 +216,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+12",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/482916"
    },
    "money": {
@@ -127,7 +291,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483756"
    },
    "money": {
@@ -213,7 +377,7 @@
     "prev": "Lean R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483151"
    },
    "money": {
@@ -292,7 +456,7 @@
     "prev": "Likely R",
     "rated": "May 8, 2026",
     "pvi": "R+10",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485196"
    },
    "money": {
@@ -364,7 +528,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+9",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485216"
    },
    "money": {
@@ -439,7 +603,7 @@
     "prev": "Likely R",
     "rated": "Dec. 3, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485206"
    },
    "money": {
@@ -543,7 +707,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+13",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485201"
    },
    "money": {
@@ -618,7 +782,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "D+2",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483591"
    },
    "money": {
@@ -722,7 +886,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483586"
    },
    "money": {
@@ -831,7 +995,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483656"
    },
    "money": {
@@ -940,7 +1104,7 @@
     "prev": "Toss Up",
     "rated": "Sept. 25, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483531"
    },
    "money": {
@@ -1028,7 +1192,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook moved it from Likely R to Lean R on Oct. 9. The district leans Democratic (D+1). Fitzpatrick won with 56.4% in 2024, running 13 points ahead of the president, Cook notes. Harvie is a Bucks County commissioner and former teacher. <b>The money:</b> $282,066 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Brian Fitzpatrick for All of Us.\"",
+    "html": "<b>The race:</b> Cook moved it from Likely R to Lean R on Oct. 9 and to Toss Up on Oct. 30, saying the race \"looks tighter than it was this summer.\" The district leans Democratic (D+1). Fitzpatrick won with 56.4% in 2024, running 13 points ahead of the president, Cook notes. Harvie is a Bucks County commissioner and former teacher. <b>The money:</b> $282,066 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Brian Fitzpatrick for All of Us.\"",
     "sources": [
      {
       "label": "Cook race page",
@@ -1045,11 +1209,11 @@
     ]
    },
    "race": {
-    "rating": "Lean R",
-    "prev": "Likely R",
-    "rated": "Oct. 9, 2026",
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 30, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -1158,7 +1322,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -1262,7 +1426,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -1350,7 +1514,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up in April. Bresnahan won the seat in 2024 with 50.8%. Cognetti is the mayor of Scranton. <b>The money:</b> $277,670 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Rob for PA.\"",
+    "html": "<b>The race:</b> Cook moved it from Lean R to Toss Up in April and to Lean D on Oct. 30. Its summary says his stock trades have given Democrats \"a potent line of attack.\" Bresnahan won the seat in 2024 with 50.8%. Cognetti is the mayor of Scranton. <b>The money:</b> $277,670 from Emmer's committees this cycle, almost all of it in 13 JFC transfers. His campaign committee is \"Rob for PA.\"",
     "sources": [
      {
       "label": "Cook race page",
@@ -1367,11 +1531,11 @@
     ]
    },
    "race": {
-    "rating": "Toss Up",
-    "prev": "Lean R",
-    "rated": "April 7, 2026",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 30, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -1454,7 +1618,7 @@
     }
    ],
    "context": {
-    "html": "<b>The race:</b> A rematch. Kaptur beat Merrin by 2,382 votes in 2024, and Cook notes Republicans then redrew the district mid-decade. Cook moved it from Lean R to Toss Up in January. <b>The money:</b> $19,252 from Emmer's committees this cycle, all in two JFC transfers.",
+    "html": "<b>The race:</b> A rematch. Kaptur beat Merrin by 2,382 votes in 2024, and Cook notes Republicans then redrew the district mid-decade. Cook moved it from Lean R to Toss Up in January and to Lean D on Oct. 30. <b>The money:</b> $19,252 from Emmer's committees this cycle, all in two JFC transfers.",
     "sources": [
      {
       "label": "Cook race page",
@@ -1467,11 +1631,11 @@
     ]
    },
    "race": {
-    "rating": "Toss Up",
-    "prev": "Lean R",
-    "rated": "Jan. 15, 2026",
+    "rating": "Lean D",
+    "prev": "Toss Up",
+    "rated": "Oct. 30, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -1584,7 +1748,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -1659,7 +1823,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -1768,7 +1932,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -1876,7 +2040,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -1951,7 +2115,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -2060,7 +2224,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -2175,7 +2339,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -2256,7 +2420,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -2335,7 +2499,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -2450,7 +2614,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -2557,7 +2721,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -2630,7 +2794,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -2791,7 +2955,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -2881,7 +3045,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -2930,7 +3094,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -2978,7 +3142,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -3026,7 +3190,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -3074,7 +3238,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -3122,7 +3286,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -3170,7 +3334,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -3216,7 +3380,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 29, 2026",
+      "checked": "Oct. 31, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -3318,7 +3482,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -3432,7 +3596,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -3537,7 +3701,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -3639,11 +3803,11 @@
     ]
    },
    "race": {
-    "rating": "Lean R",
-    "prev": "Likely R",
-    "rated": "Oct. 16, 2026",
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Oct. 30, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -3726,7 +3890,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -3872,7 +4036,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -3978,7 +4142,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -4084,7 +4248,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -4159,7 +4323,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -4274,7 +4438,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 29, 2026",
+    "checked": "Oct. 31, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -4428,7 +4592,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 29, 2026",
+  "checked": "Oct. 31, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -4924,6 +5088,15 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 30",
+       "count": false,
+       "tag": "no",
+       "tagText": "Not reported there",
+       "html": "White House \"war on fraud\" press conference at the St. Cloud Police Department, with Treasury Secretary Scott Bessent, FBI Director Kash Patel and CMS's Dr. Mehmet Oz. On Oct. 29 he <a href=\"https://x.com/GOPMajorityWhip/status/2115852210693435813\" target=\"_blank\" rel=\"noopener\">posted</a>, \"Looking forward to welcoming @VP JD Vance to the Sixth District\"; Vance canceled that day. On Oct. 30 he posted \"Tune in!\" with the livestream. St. Cloud LIVE, KNSI and CBS Minnesota don't list him among those present. That morning he had posted about a GA-01 stop.",
+       "url": "https://www.stcloudlive.com/news/local/fbi-director-patel-treasury-secretary-bessent-detail-war-on-fraud-in-st-cloud",
+       "label": "St. Cloud LIVE"
+      },
+      {
        "date": "Sept. 23",
        "html": "Monticello water treatment plant ribbon cutting. His release doesn't say whether it was open to the public.",
        "url": "https://emmer.house.gov/media-center/press-releases/emmer-attends-monticello-water-treatment-plant-ribbon-cutting",
@@ -5177,6 +5350,14 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 30",
+       "html": "<a href=\"#ga-01-2026-10-30\">GA-01</a>, Kingston (location not stated)"
+      },
+      {
+       "date": "Oct. 29",
+       "html": "<a href=\"#ga-10-2026-10-29\">GA-10</a>, Gaines (rally in Monroe)"
+      },
       {
        "date": "Oct. 28",
        "html": "<a href=\"#ga-11-2026-10-28\">GA-11</a>, Cowan (location not stated)"
@@ -5523,7 +5704,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 29, 2026",
+ "ratingsChecked": "Oct. 31, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
