@@ -10,6 +10,189 @@
  "stops": [
   {
    "date": "2026-10-30",
+   "district": "FL-06",
+   "place": "Daytona Beach, Fla.",
+   "candidate": "Rep. Randy Fine",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "Eric Yonce (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 10:12 a.m. Central on Oct. 31 about \"an incredible crowd and rally\" with President Trump, governor nominee Byron Donalds, Rep. Randy Fine and Joe Strada. One photo shows the Ocean Center scoreboard in Daytona Beach, where Trump held a rally on the evening of Oct. 30 (WFTV), so it's logged on Oct. 30. The same rally is logged at FL-11 for Strada.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 31",
+     "text": "What an incredible crowd and rally with President @realDonaldTrump, the next governor of Florida @ByronDonalds, and friends @VoteRandyFine and @VoteStrada. 3 days until Election Day. We need every PATRIOT to get out and VOTE RED!",
+     "url": "https://x.com/tomemmer/status/2116548851956117810"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Fine won the April 2025 special election to replace Rep. Mike Waltz by 14 points, Cook notes, and is seeking a first full term. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+14. Yonce, a business owner raised in Marion County, won the Democratic nomination. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on Jan. 15, 2025, during the special election.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482541"
+     },
+     {
+      "label": "WFTV on the rally",
+      "url": "https://www.wftv.com/news/local/live-updates-thousands-gather-president-donald-trumps-daytona-beach-rally/GSJRCQWM2BHQ7OCNRD6PKW5FRM/"
+     },
+     {
+      "label": "FOX 35 on the primary",
+      "url": "https://www.fox35orlando.com/news/florida-congressional-district-6-election-results"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=RANDY%20FINE"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+14",
+    "checked": "Oct. 31, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482541"
+   },
+   "money": {
+    "campaign": 2000,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=RANDY%20FINE"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Randy Fine",
+     "party": "R",
+     "note": "Incumbent since April 2025. Former Florida state senator.",
+     "issues": {
+      "label": "House website",
+      "url": "https://fine.house.gov/"
+     },
+     "photo": "photos/randy-fine.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 119,
+        "v": 0.618,
+        "n": "65th most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.633,
+      "dwUrl": "https://voteview.com/person/22562",
+      "gt": 0.581,
+      "gtLabel": "centrist Republican follower",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/randall_fine/457035",
+      "ha": {
+       "life": 98,
+       "sess": {
+        "119": 98
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/F000484",
+      "pp": {
+       "life": 2.87,
+       "recent": 2.87,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "Eric Yonce",
+     "party": "D",
+     "note": "Business owner from Citra, in Marion County. Has not held office.",
+     "issues": {
+      "label": "FOX 35 on the primary",
+      "url": "https://www.fox35orlando.com/news/florida-congressional-district-6-election-results"
+     },
+     "record": null
+    }
+   ],
+   "lat": 29.226,
+   "lon": -81.006
+  },
+  {
+   "date": "2026-10-30",
+   "district": "FL-11",
+   "place": "Daytona Beach, Fla. (outside the district)",
+   "candidate": "Joe Strada",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "James Pericola (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 10:12 a.m. Central on Oct. 31 about \"an incredible crowd and rally\" with President Trump, governor nominee Byron Donalds, Rep. Randy Fine and Joe Strada. One photo shows the Ocean Center scoreboard in Daytona Beach, where Trump held a rally on the evening of Oct. 30 (WFTV), so it's logged on Oct. 30. Daytona Beach is in FL-06, outside Strada's district, which centers on The Villages and Clermont. The pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Oct. 31",
+     "text": "What an incredible crowd and rally with President @realDonaldTrump, the next governor of Florida @ByronDonalds, and friends @VoteRandyFine and @VoteStrada. 3 days until Election Day. We need every PATRIOT to get out and VOTE RED!",
+     "url": "https://x.com/tomemmer/status/2116548851956117810"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat; Rep. Daniel Webster (R) is retiring. Strada, a businessman, beat former state Sen. Carey Baker by about 400 votes in the Aug. 18 primary, confirmed by a recount. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+7. Pericola is the Democratic nominee. <b>The money:</b> $5,000 from Emmer's leadership PAC on Aug. 17, the day before the primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482566"
+     },
+     {
+      "label": "Spectrum News on the recount",
+      "url": "https://mynews13.com/fl/orlando/news/2026/08/24/recount-confirms-strada-wins-the-republican-nomination-for-congressional-district-11"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=STRADA"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+7",
+    "checked": "Oct. 31, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482566"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=STRADA"
+   },
+   "candidates": [
+    {
+     "name": "Joe Strada",
+     "party": "R",
+     "note": "Businessman. Has not held office.",
+     "issues": {
+      "label": "Spectrum News on the recount",
+      "url": "https://mynews13.com/fl/orlando/news/2026/08/24/recount-confirms-strada-wins-the-republican-nomination-for-congressional-district-11"
+     },
+     "record": null
+    },
+    {
+     "name": "James Pericola",
+     "party": "D",
+     "note": "Democratic nominee. Has not held office.",
+     "issues": {
+      "label": "Spectrum News on the recount",
+      "url": "https://mynews13.com/fl/orlando/news/2026/08/24/recount-confirms-strada-wins-the-republican-nomination-for-congressional-district-11"
+     },
+     "record": null
+    }
+   ],
+   "lat": 28.75,
+   "lon": -81.9
+  },
+  {
+   "date": "2026-10-30",
    "district": "GA-01",
    "place": "Georgia (location not stated)",
    "candidate": "Jim Kingston",
@@ -5350,6 +5533,14 @@
     "def": "For other candidates, logged on this page",
     "emmer": {
      "items": [
+      {
+       "date": "Oct. 30",
+       "html": "<a href=\"#fl-06-2026-10-30\">FL-06</a>, Fine (Trump rally in Daytona Beach)"
+      },
+      {
+       "date": "Oct. 30",
+       "html": "<a href=\"#fl-11-2026-10-30\">FL-11</a>, Strada (same rally)"
+      },
       {
        "date": "Oct. 30",
        "html": "<a href=\"#ga-01-2026-10-30\">GA-01</a>, Kingston (location not stated)"
