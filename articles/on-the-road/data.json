@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-02",
  "pledge": {
   "date": "2026-09-27",
   "count": 56,
@@ -8,6 +8,311 @@
  },
  "election": "2026-11-03",
  "stops": [
+  {
+   "date": "2026-11-02",
+   "district": "FL-19",
+   "place": "Southwest Florida (town not stated)",
+   "candidate": "Jim Schwartzel",
+   "party": "R",
+   "role": "Open seat",
+   "opponent": "Victor Arias (D)",
+   "type": "Campaign",
+   "typeNote": "He posted at 10:42 a.m. Central on Nov. 2 that he \"started the morning off in Southwest Florida\" supporting Schwartzel and his wife, Carly, with a photo. The post doesn't name a town; the pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Nov. 2",
+     "text": "Started the morning off in Southwest Florida supporting an America First PATRIOT and the next Congressman for #FL19 @JimSchwartzel and his wife, Carly. Florida: Get out and VOTE for Jim Schwartzel TOMORROW! 🇺🇸",
+     "url": "https://x.com/tomemmer/status/2117296315663356214"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> An open seat around Fort Myers and Naples; Rep. Byron Donalds is running for governor. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+14. Schwartzel, who runs several Southwest Florida media companies, won the August primary with 29%, ahead of Trump-endorsed Catalina Lauf. Arias is a Cape Coral attorney. <b>The money:</b> None to Schwartzel in processed FEC records.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482606"
+     },
+     {
+      "label": "Fort Myers Beach Talk on the primaries",
+      "url": "https://www.fortmyersbeachtalk.com/news/community-news/2026/08/arias-schwartzel-win-party-primaries-to-advance-in-district-19-congressional-race/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=SCHWARTZEL"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+14",
+    "checked": "Nov. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482606"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=SCHWARTZEL"
+   },
+   "candidates": [
+    {
+     "name": "Jim Schwartzel",
+     "party": "R",
+     "note": "Owner of Southwest Florida radio, TV and print media companies. Has not held office.",
+     "issues": {
+      "label": "Fort Myers Beach Talk on the primaries",
+      "url": "https://www.fortmyersbeachtalk.com/news/community-news/2026/08/arias-schwartzel-win-party-primaries-to-advance-in-district-19-congressional-race/"
+     },
+     "record": null
+    },
+    {
+     "name": "Victor Arias",
+     "party": "D",
+     "note": "Cape Coral attorney with his own firm since 2003. Has not held office.",
+     "issues": {
+      "label": "Fort Myers Beach Talk on the primaries",
+      "url": "https://www.fortmyersbeachtalk.com/news/community-news/2026/08/arias-schwartzel-win-party-primaries-to-advance-in-district-19-congressional-race/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 26.45,
+   "lon": -81.8
+  },
+  {
+   "date": "2026-11-01",
+   "district": "FL-04",
+   "place": "Florida (location not stated)",
+   "candidate": "Rep. Aaron Bean",
+   "party": "R",
+   "role": "Incumbent",
+   "opponent": "LaShonda \"L.J.\" Holloway (D)",
+   "type": "Campaign",
+   "typeNote": "A \"Meet & Greet Rally and BBQ\" the Bean campaign advertised in advance for Sunday, Nov. 1, at 6 p.m., with Emmer as a featured guest and the location given on RSVP. Emmer posted at 9:04 a.m. Central on Nov. 2 about \"great energy and crowd\" for Bean \"last night,\" and Bean thanked him \"for joining us last night in FL-04.\" The pin sits at the district's center.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Nov. 2",
+     "text": "Great energy and crowd for our friend and Congressman @AaronPBean last night! Be sure you get out and VOTE for Congressman Aaron Bean TOMORROW 🇺🇸 #FL04",
+     "url": "https://x.com/tomemmer/status/2117271596033515900"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> A third straight matchup: Holloway was also the Democratic nominee in 2022 and 2024, and lost both times. Bean won by 15 points in 2024, Cook notes. The district covers Nassau and St. Johns counties and much of Duval County. Cook has rated it Solid R since Feb. 6, 2025, with a PVI of R+5. <b>The money:</b> $5,000 from Emmer's leadership PAC on Aug. 17, the day before the primary.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482531"
+     },
+     {
+      "label": "Duval GOP flyer",
+      "url": "https://x.com/DuvalGOP/status/2115519381291606125"
+     },
+     {
+      "label": "Bean's post",
+      "url": "https://x.com/AaronPBean/status/2117341368150261908"
+     },
+     {
+      "label": "Florida Trib on the primary",
+      "url": "https://floridatrib.org/2026/08/18/lashonda-holloway-wins-democratic-primary-for-floridas-4th-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BEAN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Solid R",
+    "prev": null,
+    "rated": "Feb. 6, 2025",
+    "pvi": "R+5",
+    "checked": "Nov. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482531"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 5000,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BEAN"
+   },
+   "candidates": [
+    {
+     "name": "Rep. Aaron Bean",
+     "party": "R",
+     "note": "Incumbent since 2023. Former Florida state senator.",
+     "issues": {
+      "label": "House website",
+      "url": "https://bean.house.gov/"
+     },
+     "photo": "photos/aaron-bean.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": 0.668,
+        "n": "38th most conservative of 230 House Republicans"
+       },
+       {
+        "c": 119,
+        "v": 0.731,
+        "n": "26th most conservative of 227 House Republicans"
+       }
+      ],
+      "dw": 0.695,
+      "dwUrl": "https://voteview.com/person/22302",
+      "gt": 0.688,
+      "gtLabel": "rank-and-file Republican",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/aaron_bean/456888",
+      "ha": {
+       "life": 95,
+       "sess": {
+        "119": 100
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/B001314",
+      "pp": {
+       "life": 1.82,
+       "recent": 1.04,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    },
+    {
+     "name": "LaShonda \"L.J.\" Holloway",
+     "party": "D",
+     "note": "Democratic nominee in 2022, 2024 and 2026. Has not held office.",
+     "issues": {
+      "label": "Florida Trib on the primary",
+      "url": "https://floridatrib.org/2026/08/18/lashonda-holloway-wins-democratic-primary-for-floridas-4th-district/"
+     },
+     "record": null
+    }
+   ],
+   "lat": 30.2,
+   "lon": -81.55
+  },
+  {
+   "date": "2026-11-01",
+   "district": "FL-14",
+   "place": "Florida (location not stated)",
+   "candidate": "Mike Beltran",
+   "party": "R",
+   "role": "Challenger",
+   "opponent": "Rep. Kathy Castor (D), incumbent",
+   "type": "Campaign",
+   "typeNote": "He posted at 4:49 p.m. Central on Nov. 1, \"Glad to support my friend, @MBeltranFL in Florida,\" with a photo holding a Beltran sign. The post doesn't name a town; the pin sits at the district's center. Beltran had posted at 12:40 p.m. Central the same day thanking Emmer and Reps. Laurel Lee and Beth Van Duyne for their support.",
+   "posts": [
+    {
+     "acct": "tomemmer",
+     "date": "Nov. 1",
+     "text": "Two days until Election Day! Glad to support my friend, @MBeltranFL in Florida 🇺🇸 VOTE RED!",
+     "url": "https://x.com/tomemmer/status/2117026248228552761"
+    }
+   ],
+   "context": {
+    "html": "<b>The race:</b> Florida redrew its congressional map before the 2026 elections. Castor's Tampa seat went from one Harris won by about 8 points to one Trump would have won by about 11, per Ballotpedia. Cook rated the new district Lean R, then moved it to Toss Up on Aug. 25, saying it is \"still quite winnable for Castor in this political environment.\" Cook doesn't list a PVI for the new lines. Beltran served in the Florida House from 2018 to 2024. <b>The money:</b> None to Beltran in processed FEC records.",
+    "sources": [
+     {
+      "label": "Cook race page",
+      "url": "https://www.cookpolitical.com/house/race/482581"
+     },
+     {
+      "label": "Beltran's post",
+      "url": "https://x.com/MBeltranFL/status/2116963708526092333"
+     },
+     {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/26/rep-kathy-castor-and-mike-beltran-are-running-in-the-general-election-for-the-redrawn-floridas-14th-congressional-district/"
+     },
+     {
+      "label": "FEC records",
+      "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BELTRAN"
+     }
+    ]
+   },
+   "race": {
+    "rating": "Toss Up",
+    "prev": "Lean R",
+    "rated": "Aug. 25, 2026",
+    "pvi": "Not listed (new map)",
+    "checked": "Nov. 2, 2026",
+    "url": "https://www.cookpolitical.com/house/race/482581"
+   },
+   "money": {
+    "campaign": 0,
+    "pac": 0,
+    "jfc": 0,
+    "jfc_n": 0,
+    "url": "https://www.fec.gov/data/disbursements/?data_type=processed&committee_id=C00545749&committee_id=C00592089&committee_id=C00859058&two_year_transaction_period=2026&recipient_name=BELTRAN"
+   },
+   "candidates": [
+    {
+     "name": "Mike Beltran",
+     "party": "R",
+     "note": "Florida state representative, 2018–24; litigation attorney. Has not served in Congress.",
+     "issues": {
+      "label": "Ballotpedia on the race",
+      "url": "https://news.ballotpedia.org/2026/08/26/rep-kathy-castor-and-mike-beltran-are-running-in-the-general-election-for-the-redrawn-floridas-14th-congressional-district/"
+     },
+     "record": null
+    },
+    {
+     "name": "Rep. Kathy Castor",
+     "party": "D",
+     "note": "Incumbent since 2007. Former Hillsborough County commissioner.",
+     "issues": {
+      "label": "House website",
+      "url": "https://castor.house.gov/"
+     },
+     "photo": "photos/kathy-castor.jpg",
+     "photoCredit": "Official congressional portrait",
+     "record": {
+      "np": [
+       {
+        "c": 118,
+        "v": -0.432,
+        "n": "85th most liberal of 221 House Democrats"
+       },
+       {
+        "c": 119,
+        "v": -0.572,
+        "n": "12th most liberal of 224 House Democrats"
+       }
+      ],
+      "dw": -0.434,
+      "dwUrl": "https://voteview.com/person/20708",
+      "gt": 0.271,
+      "gtLabel": "rank-and-file Democrat",
+      "gtNote": "2025–26",
+      "gtUrl": "https://www.govtrack.us/congress/members/kathy_castor/412195",
+      "ha": {
+       "life": 8,
+       "sess": {
+        "119": 14
+       }
+      },
+      "haUrl": "https://heritageaction.com/scorecard/members/C001066",
+      "pp": {
+       "life": 94.67,
+       "recent": 92.69,
+       "recentLabel": "2025–26",
+       "url": "https://progressivepunch.org/scores.htm?house=house"
+      }
+     }
+    }
+   ],
+   "lat": 27.98,
+   "lon": -82.45
+  },
   {
    "date": "2026-10-30",
    "district": "FL-06",
@@ -52,7 +357,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+14",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/482541"
    },
    "money": {
@@ -156,7 +461,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+7",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/482566"
    },
    "money": {
@@ -235,7 +540,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+8",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/482866"
    },
    "money": {
@@ -320,7 +625,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/482911"
    },
    "money": {
@@ -399,7 +704,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+12",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/482916"
    },
    "money": {
@@ -474,7 +779,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483756"
    },
    "money": {
@@ -560,7 +865,7 @@
     "prev": "Lean R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483151"
    },
    "money": {
@@ -639,7 +944,7 @@
     "prev": "Likely R",
     "rated": "May 8, 2026",
     "pvi": "R+10",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485196"
    },
    "money": {
@@ -683,7 +988,7 @@
    "role": "Open seat",
    "opponent": "Justin Pearson (D)",
    "type": "Campaign",
-   "typeNote": "Reported by The Tennessean, not posted by Emmer as of Oct. 28. Its photos show him speaking at an Oct. 27 voter rally for Taylor and Charlie Hatcher (TN-05) at Amruth Sports Bar in Franklin, and hugging Taylor. Williamson County is split between the 5th and 9th districts.",
+   "typeNote": "Reported by The Tennessean, not posted by Emmer as of Oct. 28. Its photos show him speaking at an Oct. 27 voter rally for Taylor and Charlie Hatcher (TN-05) at Amruth Sports Bar in Franklin, and hugging Taylor. Williamson County is split between the 5th and 9th districts. Taylor posted that night thanking \"House Majority Whip Tom Emmer\" for \"tonight's rally in Williamson County.\"",
    "posts": [],
    "context": {
     "html": "<b>The race:</b> Rep. Steve Cohen (D) isn't running. Tennessee's legislature redrew its congressional map in May, splitting Memphis. The new 9th runs from part of Memphis to Nashville's suburbs, and Cook says Trump carried it by 21 points. Cook moved it from Solid D to Solid R on May 8; its PVI is R+9. Taylor, a state senator from Eads, won the Republican primary with Trump's endorsement. Pearson is a Memphis state representative. <b>The money:</b> $7,000 from Emmer's campaign and leadership PAC on June 23, before the Aug. 6 primary.",
@@ -695,6 +1000,10 @@
      {
       "label": "The Tennessean, Oct. 27 rally",
       "url": "https://www.yahoo.com/news/politics/articles/tennessee-republican-congressional-candidates-hold-040420738.html"
+     },
+     {
+      "label": "Taylor's post",
+      "url": "https://x.com/BrentTaylorTN/status/2115264266647273684"
      },
      {
       "label": "Tennessee Lookout on the primary",
@@ -711,7 +1020,7 @@
     "prev": "Solid D",
     "rated": "May 8, 2026",
     "pvi": "R+9",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485216"
    },
    "money": {
@@ -749,19 +1058,25 @@
   {
    "date": "2026-10-27",
    "district": "TN-07",
-   "place": "Tennessee (location not stated)",
+   "place": "Nashville, Tenn. (Joslin & Son Signs)",
    "candidate": "Rep. Matt Van Epps",
    "party": "R",
    "role": "Incumbent",
    "opponent": "Darden Copeland (D)",
    "type": "Campaign",
-   "typeNote": "He posted at 1:44 p.m. Central on Oct. 27, \"Great time with @MattForTN and @JohnnyGarrett in Tennessee this week,\" thanking Reps. Mark Alford (Mo.) and Addison McDowell (N.C.), with three photos. One post covers two districts, so it's logged here and at TN-06. It doesn't name a town or day; the pin sits at the district's center.",
+   "typeNote": "Rep. Van Epps posted at 1:58 p.m. Central on Oct. 26, \"What a great visit to Joslin & Son signs with my friends @tomemmer & @JohnnyGarrett,\" with a photo matching one of Emmer's. Emmer's own post came Oct. 27 at 1:44 p.m. Central (\"in Tennessee this week\"), thanking Reps. Mark Alford (Mo.) and Addison McDowell (N.C.). It stays logged on Oct. 27, Emmer's posting date, because the visit can't be placed before his Long Island stops (NY-03, NY-04), which have no stated dates either. One visit covers two candidates, so it's logged here and at TN-06. The pin sits at the district's center.",
    "posts": [
     {
      "acct": "tomemmer",
      "date": "Oct. 27",
      "text": "Great time with @MattForTN and @JohnnyGarrett in Tennessee this week! Thanks to our House Republican teammates @markalfordkc and @Addison_McD for joining. Election Day is ONE week away. Make sure you get out and VOTE for Congressman Matt Van Epps and soon-to-be Congressman Johnny Garrett on November 3rd!",
      "url": "https://x.com/tomemmer/status/2115152791358386571"
+    },
+    {
+     "acct": "MattForTN",
+     "date": "Oct. 26",
+     "text": "What a great visit to Joslin & Son signs with my friends @tomemmer & @JohnnyGarrett! Tennessee, we need your vote. Don't wait! Early Voting ends THURSDAY!",
+     "url": "https://x.com/MattForTN/status/2114793739378192420"
     }
    ],
    "context": {
@@ -786,7 +1101,7 @@
     "prev": "Likely R",
     "rated": "Dec. 3, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485206"
    },
    "money": {
@@ -853,19 +1168,25 @@
   {
    "date": "2026-10-27",
    "district": "TN-06",
-   "place": "Tennessee (location not stated)",
+   "place": "Nashville, Tenn. (Joslin & Son Signs)",
    "candidate": "Johnny Garrett",
    "party": "R",
    "role": "Open seat",
    "opponent": "Mike Croley (D)",
    "type": "Campaign",
-   "typeNote": "Same Oct. 27 post as TN-07: \"Great time with @MattForTN and @JohnnyGarrett in Tennessee this week.\" It doesn't name a town or day; the pin sits at the district's center.",
+   "typeNote": "Same visit as TN-07: Rep. Van Epps posted Oct. 26 about a stop at Joslin & Son Signs in Nashville with Emmer and Garrett, and Emmer posted Oct. 27, \"Great time with @MattForTN and @JohnnyGarrett in Tennessee this week.\" Cook describes TN-06 as exurban Nashville and Cookeville; the post doesn't say whether the sign shop is in Garrett's district. The pin sits at the district's center.",
    "posts": [
     {
      "acct": "tomemmer",
      "date": "Oct. 27",
      "text": "Great time with @MattForTN and @JohnnyGarrett in Tennessee this week! Thanks to our House Republican teammates @markalfordkc and @Addison_McD for joining. Election Day is ONE week away. Make sure you get out and VOTE for Congressman Matt Van Epps and soon-to-be Congressman Johnny Garrett on November 3rd!",
      "url": "https://x.com/tomemmer/status/2115152791358386571"
+    },
+    {
+     "acct": "MattForTN",
+     "date": "Oct. 26",
+     "text": "What a great visit to Joslin & Son signs with my friends @tomemmer & @JohnnyGarrett! Tennessee, we need your vote. Don't wait! Early Voting ends THURSDAY!",
+     "url": "https://x.com/MattForTN/status/2114793739378192420"
     }
    ],
    "context": {
@@ -890,7 +1211,7 @@
     "prev": null,
     "rated": "Feb. 6, 2025",
     "pvi": "R+13",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485201"
    },
    "money": {
@@ -965,7 +1286,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "D+2",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483591"
    },
    "money": {
@@ -1069,7 +1390,7 @@
     "prev": "Lean D",
     "rated": "Oct. 9, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483586"
    },
    "money": {
@@ -1178,7 +1499,7 @@
     "prev": "Lean R",
     "rated": "Jan. 15, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483656"
    },
    "money": {
@@ -1287,7 +1608,7 @@
     "prev": "Toss Up",
     "rated": "Sept. 25, 2026",
     "pvi": "EVEN",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483531"
    },
    "money": {
@@ -1396,7 +1717,7 @@
     "prev": "Lean R",
     "rated": "Oct. 30, 2026",
     "pvi": "D+1",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483911"
    },
    "money": {
@@ -1466,15 +1787,15 @@
    "lon": -75.14
   },
   {
-   "date": "2026-10-22",
+   "date": "2026-10-21",
    "district": "PA-07",
-   "place": "Pennsylvania (location not stated)",
+   "place": "Allentown, Pa. (Stand With Crypto roundtable)",
    "candidate": "Rep. Ryan Mackenzie",
    "party": "R",
    "role": "Incumbent",
    "opponent": "Bob Brooks (D)",
    "type": "Campaign",
-   "typeNote": "He posted at 10:15 a.m. Central on Oct. 22 that \"we stopped in #PA07\" to support Mackenzie, with two photos. The post doesn't name a town or say which day; it's logged on the date he posted, and the pin sits at the district's center, as on every stop.",
+   "typeNote": "A Stand With Crypto roundtable in Allentown. Attendee Mason Lynaugh posted at 1:34 p.m. Central on Oct. 21 about \"visiting Allentown for a conversation between the crypto community and two crypto champions,\" Mackenzie and Emmer. Stand With Crypto posted Oct. 22 that six members of Congress joined, also naming Reps. Blake Moore, Bob Onder, Mark Harris and Clay Fuller. Emmer posted Oct. 22 that \"we stopped in #PA07\" to support Mackenzie. Logged on Oct. 21, the earliest date documented. The pin sits at the district's center.",
    "posts": [
     {
      "acct": "tomemmer",
@@ -1491,6 +1812,14 @@
       "url": "https://www.cookpolitical.com/house/race/483941"
      },
      {
+      "label": "Stand With Crypto's post",
+      "url": "https://x.com/standwithcrypto/status/2113276985493323798"
+     },
+     {
+      "label": "Lynaugh's post",
+      "url": "https://x.com/masonlynaugh/status/2112975846809944272"
+     },
+     {
       "label": "Pennsylvania Capital-Star on the primary",
       "url": "https://penncapital-star.com/campaigns-elections/firefighter-bob-brooks-wins-democratic-nomination-to-challenge-u-s-rep-ryan-mackenzie/"
      },
@@ -1505,7 +1834,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+1",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483941"
    },
    "money": {
@@ -1609,7 +1938,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483956"
    },
    "money": {
@@ -1718,7 +2047,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 30, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483946"
    },
    "money": {
@@ -1818,7 +2147,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 30, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483821"
    },
    "money": {
@@ -1931,7 +2260,7 @@
     "prev": "Lean R",
     "rated": "Aug. 25, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483326"
    },
    "money": {
@@ -2006,7 +2335,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483296"
    },
    "money": {
@@ -2115,7 +2444,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "EVEN",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483311"
    },
    "money": {
@@ -2223,7 +2552,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485581"
    },
    "money": {
@@ -2298,7 +2627,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485561"
    },
    "money": {
@@ -2407,7 +2736,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 9, 2026",
     "pvi": "R+2",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483096"
    },
    "money": {
@@ -2522,7 +2851,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483091"
    },
    "money": {
@@ -2603,7 +2932,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+11",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485226"
    },
    "money": {
@@ -2682,7 +3011,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485386"
    },
    "money": {
@@ -2797,7 +3126,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "R+0",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/481781"
    },
    "money": {
@@ -2904,7 +3233,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/481776"
    },
    "money": {
@@ -2977,7 +3306,7 @@
     "prev": "Likely R",
     "rated": "Oct. 23, 2026",
     "pvi": "R+7",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/481761"
    },
    "money": {
@@ -3138,7 +3467,7 @@
       "prev": "Lean D",
       "rated": "Oct. 23, 2026",
       "pvi": "R+3",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485356"
      },
      "money": {
@@ -3228,7 +3557,7 @@
       "prev": "Lean R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+4",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485391"
      },
      "money": {
@@ -3277,7 +3606,7 @@
       "prev": "Solid R",
       "rated": "Sept. 25, 2026",
       "pvi": "R+9",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485261"
      },
      "money": {
@@ -3325,7 +3654,7 @@
       "prev": "Likely R",
       "rated": "Oct. 23, 2026",
       "pvi": "R+7",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485331"
      },
      "money": {
@@ -3373,7 +3702,7 @@
       "prev": "Solid D",
       "rated": "Aug. 23, 2025",
       "pvi": "R+8",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485376"
      },
      "money": {
@@ -3421,7 +3750,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+11",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485226"
      },
      "money": {
@@ -3469,7 +3798,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485266"
      },
      "money": {
@@ -3517,7 +3846,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485321"
      },
      "money": {
@@ -3563,7 +3892,7 @@
       "prev": "",
       "rated": "Feb. 6, 2025",
       "pvi": "R+10",
-      "checked": "Oct. 31, 2026",
+      "checked": "Nov. 2, 2026",
       "url": "https://www.cookpolitical.com/house/race/485406"
      },
      "money": {
@@ -3665,7 +3994,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+5",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483706"
    },
    "money": {
@@ -3779,7 +4108,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483731"
    },
    "money": {
@@ -3884,7 +4213,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+9",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483751"
    },
    "money": {
@@ -3990,7 +4319,7 @@
     "prev": "Lean R",
     "rated": "Oct. 30, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485136"
    },
    "money": {
@@ -4032,13 +4361,13 @@
   {
    "date": "2026-10-01",
    "district": "VA-01",
-   "place": "Virginia",
+   "place": "King William County, Va.",
    "candidate": "Rep. Rob Wittman",
    "party": "R",
    "role": "Incumbent since 2007",
    "opponent": "Shannon Taylor (D), Henrico County prosecutor",
    "type": "Campaign",
-   "typeNote": "Joint appearance with Rep. Austin Scott (Ga.) and Ed Gallrein, the KY-04 nominee from the day before, per his post.",
+   "typeNote": "Joint appearance with Rep. Austin Scott (Ga.) and Ed Gallrein, the KY-04 nominee from the day before, per his post. David Botkins posted that evening thanking Emmer for \"making the trip to King William County, Virginia today\" for Wittman.",
    "posts": [
     {
      "acct": "tomemmer",
@@ -4065,6 +4394,10 @@
      {
       "label": "Cook, Oct. 9: 18 ratings move toward Democrats",
       "url": "https://www.cookpolitical.com/analysis/house/house-overview/eighteen-more-house-race-ratings-move-democrats-favor"
+     },
+     {
+      "label": "Botkins's post",
+      "url": "https://x.com/DavidBotkins/status/2105828539652100174"
      }
     ]
    },
@@ -4073,7 +4406,7 @@
     "prev": "Lean R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+3",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485436"
    },
    "money": {
@@ -4219,7 +4552,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+10",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483741"
    },
    "money": {
@@ -4325,7 +4658,7 @@
     "prev": "",
     "rated": "Feb. 6, 2025",
     "pvi": "R+18",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483141"
    },
    "money": {
@@ -4431,7 +4764,7 @@
     "prev": "Likely R",
     "rated": "Oct. 9, 2026",
     "pvi": "R+4",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483191"
    },
    "money": {
@@ -4492,7 +4825,7 @@
    "role": "Incumbent",
    "opponent": "Jake Johnson (D)",
    "type": "Joint appearance",
-   "typeNote": "Posted from his leadership account and described as a meeting with emergency services personnel, not a campaign event.",
+   "typeNote": "Posted from his leadership account and described as a meeting with emergency services personnel, not a campaign event. On Oct. 4 he posted a video from the same meeting (same room and clothes), with a Cannon Falls police officer visible.",
    "posts": [
     {
      "acct": "GOPMajorityWhip",
@@ -4506,7 +4839,7 @@
     "prev": "Likely R",
     "rated": "Oct. 16, 2026",
     "pvi": "R+6",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/483346"
    },
    "money": {
@@ -4621,7 +4954,7 @@
     "prev": "Toss Up",
     "rated": "Oct. 23, 2026",
     "pvi": "D+0",
-    "checked": "Oct. 31, 2026",
+    "checked": "Nov. 2, 2026",
     "url": "https://www.cookpolitical.com/house/race/485441"
    },
    "money": {
@@ -4775,7 +5108,7 @@
   "rating": "Solid R",
   "rated": "Feb. 6, 2025",
   "pvi": "R+10",
-  "checked": "Oct. 31, 2026",
+  "checked": "Nov. 2, 2026",
   "cookUrl": "https://www.cookpolitical.com/house/race/483371",
   "wtsUrl": "https://mn06watch.com/articles/where-they-stand/",
   "candidates": [
@@ -5271,6 +5604,15 @@
     "emmer": {
      "items": [
       {
+       "date": "Oct. 31",
+       "count": false,
+       "tag": "listed",
+       "tagText": "In the district",
+       "html": "Voted at Delano City Hall with his wife, Jacquie, per his post. Not a public event, so it isn't counted here.",
+       "url": "https://x.com/tomemmer/status/2116591831504802047",
+       "label": "his post"
+      },
+      {
        "date": "Oct. 30",
        "count": false,
        "tag": "no",
@@ -5365,9 +5707,9 @@
     "emmer": {
      "items": [
       {
-       "date": "Oct. 8",
-       "html": "Minnesota Farm Bureau and Minnesota Cattlemen's Association. His post doesn't say where or when the meeting took place.",
-       "url": "https://x.com/GOPMajorityWhip/status/2108241243901710497",
+       "date": "Sept. 24",
+       "html": "Minnesota Farm Bureau and Minnesota Cattlemen's Association, at Schiefelbein Farms, per a sign in his photos. His Sept. 25 post says the meeting was \"yesterday.\" He posted a video about meeting the same groups on Oct. 8 (<a href=\"https://x.com/GOPMajorityWhip/status/2108241243901710497\" target=\"_blank\" rel=\"noopener\">post</a>).",
+       "url": "https://x.com/GOPMajorityWhip/status/2103529858013818912",
        "label": "post"
       },
       {
@@ -5534,6 +5876,18 @@
     "emmer": {
      "items": [
       {
+       "date": "Nov. 2",
+       "html": "<a href=\"#fl-19-2026-11-02\">FL-19</a>, Schwartzel (Southwest Florida)"
+      },
+      {
+       "date": "Nov. 1",
+       "html": "<a href=\"#fl-04-2026-11-01\">FL-04</a>, Bean (advertised rally)"
+      },
+      {
+       "date": "Nov. 1",
+       "html": "<a href=\"#fl-14-2026-11-01\">FL-14</a>, Beltran (location not stated)"
+      },
+      {
        "date": "Oct. 30",
        "html": "<a href=\"#fl-06-2026-10-30\">FL-06</a>, Fine (Trump rally in Daytona Beach)"
       },
@@ -5571,11 +5925,11 @@
       },
       {
        "date": "Oct. 27",
-       "html": "<a href=\"#tn-07-2026-10-27\">TN-07</a>, Van Epps (location not stated)"
+       "html": "<a href=\"#tn-07-2026-10-27\">TN-07</a>, Van Epps (Joslin & Son Signs, Nashville)"
       },
       {
        "date": "Oct. 27",
-       "html": "<a href=\"#tn-06-2026-10-27\">TN-06</a>, Garrett (location not stated)"
+       "html": "<a href=\"#tn-06-2026-10-27\">TN-06</a>, Garrett (same visit)"
       },
       {
        "date": "Oct. 27",
@@ -5598,8 +5952,8 @@
        "html": "<a href=\"#pa-01-2026-10-25\">PA-01</a>, Fitzpatrick (location not stated)"
       },
       {
-       "date": "Oct. 22",
-       "html": "<a href=\"#pa-07-2026-10-22\">PA-07</a>, Mackenzie (location not stated)"
+       "date": "Oct. 21",
+       "html": "<a href=\"#pa-07-2026-10-21\">PA-07</a>, Mackenzie (Stand With Crypto roundtable, Allentown)"
       },
       {
        "date": "Oct. 21",
@@ -5683,11 +6037,11 @@
       },
       {
        "date": "Oct. 1",
-       "html": "<a href=\"#nc-08-2026-10-01\">NC-08</a>, Harris (fundraiser; found through Axios)"
+       "html": "<a href=\"#va-01-2026-10-01\">VA-01</a>, Wittman (King William County)"
       },
       {
        "date": "Oct. 1",
-       "html": "<a href=\"#va-01-2026-10-01\">VA-01</a>, Wittman"
+       "html": "<a href=\"#nc-08-2026-10-01\">NC-08</a>, Harris (fundraiser; found through Axios)"
       },
       {
        "date": "Sept. 30",
@@ -5895,7 +6249,7 @@
    }
   }
  },
- "ratingsChecked": "Oct. 31, 2026",
+ "ratingsChecked": "Nov. 2, 2026",
  "support": {
   "subscribeUrl": "https://mn06watch.substack.com/subscribe",
   "subscribeNote": "Daily coverage by email, on Substack",
