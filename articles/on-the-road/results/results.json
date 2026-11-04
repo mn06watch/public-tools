@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T20:58:45Z",
+ "updated": "2026-11-04T21:15:30Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -259,7 +259,7 @@
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
    "kalshi_r": 98,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -329,7 +329,7 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 91.8,
+   "pct_in": 84,
    "r_pct": 47.8,
    "d_pct": 52.1,
    "margin": -4.3,
@@ -489,7 +489,7 @@
    "cook": "Toss Up",
    "money": 23279,
    "visited": "2026-10-19",
-   "pct_in": 96.7,
+   "pct_in": 97.9,
    "r_pct": 48.3,
    "d_pct": 50.1,
    "margin": -1.8,
@@ -509,7 +509,7 @@
    "cook": "Toss Up",
    "money": 301845,
    "visited": "2026-10-19",
-   "pct_in": 97.3,
+   "pct_in": 98.5,
    "r_pct": 47.7,
    "d_pct": 51,
    "margin": -3.3,
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 93,
-   "kalshi_d": 6,
+   "kalshi_d": 7,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -1009,8 +1009,8 @@
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 99,
-   "kalshi_d": 2,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
