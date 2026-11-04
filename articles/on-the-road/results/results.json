@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:34:51Z",
+ "updated": "2026-11-04T19:51:36Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -136,8 +136,8 @@
    "r_pct": 53.6,
    "d_pct": 46.4,
    "margin": 7.2,
-   "r_votes": 174269,
-   "d_votes": 150900,
+   "r_votes": 174274,
+   "d_votes": 150901,
    "status": "Won",
    "r_name": "Houston Gaines",
    "d_name": "Pamela Delancy",
@@ -299,7 +299,7 @@
    "r_name": "Jeanine Driscoll",
    "d_name": "Laura Gillen",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSENY4-26"
   },
   {
@@ -329,7 +329,7 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 61.5,
+   "pct_in": 81.1,
    "r_pct": 47.7,
    "d_pct": 52.2,
    "margin": -4.5,
@@ -678,7 +678,7 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 95,
+   "kalshi_r": 94,
    "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 9,
-   "kalshi_d": 90,
+   "kalshi_r": 13,
+   "kalshi_d": 88,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -849,7 +849,7 @@
    "status": "Won",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 98,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -860,7 +860,7 @@
    "cook": "Toss Up",
    "money": 57909,
    "visited": "2026-10-02",
-   "pct_in": 98.8,
+   "pct_in": 98.9,
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
@@ -910,7 +910,7 @@
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
@@ -1000,17 +1000,17 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 88.2,
-   "r_pct": 50,
+   "pct_in": 88.7,
+   "r_pct": 50.1,
    "d_pct": 49.9,
-   "margin": 0.1,
-   "r_votes": 153997,
-   "d_votes": 153722,
+   "margin": 0.2,
+   "r_votes": 154923,
+   "d_votes": 154221,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 93,
-   "kalshi_d": 7,
+   "kalshi_r": 99,
+   "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 9,
+   "kalshi_r": 8,
    "kalshi_d": 91,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
@@ -1044,8 +1044,8 @@
    "r_pct": 44.6,
    "d_pct": 53.1,
    "margin": -8.5,
-   "r_votes": 150080,
-   "d_votes": 178696,
+   "r_votes": 150082,
+   "d_votes": 178697,
    "status": "Lost",
    "r_name": "Jen Kiggans",
    "d_name": "Elaine Luria",
