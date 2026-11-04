@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Election Night: Emmer's 56 — MN-06 Watch</title>
+<meta name="description" content="Live results for MN-06 and every race Rep. Tom Emmer campaigned in on the road, with NBC News race calls and Kalshi odds.">
+<meta property="og:title" content="Election Night: Emmer's 56">
+<meta property="og:description" content="Live results for MN-06 and every Republican Emmer campaigned for on the road: who won, who lost, and where his committees' money went.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mn06watch.com/articles/on-the-road/results/">
+<meta property="og:image" content="https://mn06watch.com/articles/on-the-road/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Election Night: Emmer's 56">
+<meta name="twitter:description" content="Live results for MN-06 and every Republican Emmer campaigned for on the road.">
+<meta name="twitter:image" content="https://mn06watch.com/articles/on-the-road/og-image.png">
+<link rel="canonical" href="https://mn06watch.com/articles/on-the-road/results/">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B3A5C;--gold:#C8922A;--red:#C0392B;--dark:#2C2C2C;--med:#555;--light:#888;--line:#E0DCD7;--bg:#FAF8F5;--navybg:#F0F4F8;--goldbg:#FFFAF0;--graybg:#F2F0EC;--dem:#2F5D8C;--rep:#B03A2E;--win:#1E7A4C;--lose:#B03A2E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--dark);font:17px/1.55 'Source Serif 4',Georgia,serif}
+.site-nav{background:#1a365d;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;font-weight:700;text-decoration:none}
+.tagline{color:#d69e2e;font-size:.8rem;font-style:italic}
+.nav-links a{color:rgba(255,255,255,.8);text-decoration:none;font-size:.85rem;margin-left:12px;font-family:'DM Mono',monospace}
+.nav-links a:hover{color:#d69e2e}
+.wrap{max-width:1100px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+.kicker{font:700 13px/1 Arial,"Liberation Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+h1{font:700 clamp(30px,5vw,44px)/1.1 'Playfair Display',Georgia,serif;color:var(--navy);margin:8px 0 10px;text-wrap:balance}
+.dek{font-size:19px;color:var(--med);font-style:italic;margin:0 0 8px;max-width:62ch}
+.byline{font:13px Arial,sans-serif;color:var(--light)}
+.live{display:inline-flex;align-items:center;gap:6px;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block}
+@media (prefers-reduced-motion:no-preference){.live i{animation:pulse 1.6s infinite}@keyframes pulse{50%{opacity:.25}}}
+h2{font:700 22px/1.2 'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 6px}
+.note{font:13px/1.45 Arial,sans-serif;color:var(--med);margin:0 0 14px}
+.card{background:#fff;border:1px solid var(--line);padding:20px 22px;margin-top:22px}
+.home{border-left:6px solid var(--gold);background:var(--goldbg)}
+.duel{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;margin-top:6px}
+.who{display:grid;gap:2px}
+.who .nm{font:700 15px Arial,sans-serif}
+.who .pc{font:700 44px/1 'DM Mono',monospace;font-variant-numeric:tabular-nums}
+.who .vt{font:13px Arial,sans-serif;color:var(--med)}
+.r .pc{color:var(--rep)} .d .pc{color:var(--dem)}
+.homemeta{font:14px Arial,sans-serif;color:var(--dark);margin-top:12px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.homemeta b{font-variant-numeric:tabular-nums}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:12px}
+.tile{border:1px solid var(--line);padding:12px 14px;background:var(--bg)}
+.tile span{display:block;font:12px Arial,sans-serif;color:var(--med);text-transform:uppercase;letter-spacing:.06em}
+.tile b{display:block;font:500 34px/1.1 'DM Mono',monospace;font-variant-numeric:tabular-nums;margin-top:4px}
+.won b{color:var(--win)} .lost b{color:var(--lose)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tools input,.tools select{font:14px Arial,sans-serif;padding:7px 10px;border:1px solid var(--line);background:#fff;color:var(--dark)}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font:14px Arial,sans-serif;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+th{font-size:12px;color:var(--med);text-transform:uppercase;letter-spacing:.05em;background:var(--graybg);position:sticky;top:0}
+td.num,th.num{text-align:right}
+td.cand,td.opp{white-space:normal;min-width:140px}
+td.cand small{display:block;color:var(--light)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font:700 12px Arial,sans-serif;border:1px solid currentColor}
+.s-Won{color:var(--win);background:#EAF5EF}.s-Lost{color:var(--lose);background:#FBECEA}
+.s-Leading{color:var(--win)}.s-Trailing{color:var(--lose)}.s-Tied,.s-wait{color:var(--light)}
+.bar{display:inline-block;width:70px;height:8px;background:var(--dem);vertical-align:middle;margin-right:6px;position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--rep)}
+.err{color:var(--red);font:13px Arial,sans-serif}
+.method{font:14px/1.5 Arial,sans-serif;color:var(--dark)}
+.method li{margin-bottom:6px}
+.tools-strip{margin-top:36px}
+.toolgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.toolgrid a{display:block;border:1px solid var(--line);background:#fff;padding:12px 14px;text-decoration:none;color:var(--dark)}
+.toolgrid a b{display:block;color:var(--navy);font:700 15px Arial,sans-serif}
+.toolgrid a span{font:13px Arial,sans-serif;color:var(--med)}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font:13px Arial,sans-serif;color:var(--light)}
+.disclaimer{margin-top:14px;background:var(--navybg);border:1px solid #C9D6E3;border-left:6px solid var(--navy);padding:12px 16px;font:14px/1.5 Arial,sans-serif;color:var(--dark);max-width:75ch}
+.disclaimer b{color:var(--navy)}
+a{color:var(--navy)}
+@media (max-width:640px){.hn{display:none}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div>
+    <a href="https://mn06watch.com" class="logo">MN06Watch</a>
+    <div class="tagline">Receipts, not rage.</div>
+  </div>
+  <div class="nav-links">
+    <a href="https://mn06watch.com/articles/">Articles</a>
+    <a href="https://mn06watch.substack.com">Substack</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<header>
+  <div class="kicker">MN-06 Watch · Election Night</div>
+  <h1>Emmer's 56: Election Night</h1>
+  <p class="dek">On Sept. 27, Rep. Tom Emmer pledged to campaign in 56 districts before Election Day. Here is how his own race and every Republican he campaigned for on the road are doing tonight.</p>
+  <div class="byline"><span class="live"><i></i>Live</span> · Results updated <span id="upd">—</span> · This page checks for new numbers every two minutes · <a href="https://mn06watch.com/articles/on-the-road/">The full On the Road log</a></div>
+  <p class="err" id="err" hidden></p>
+  <p class="disclaimer" id="disclaimer"><b>Automated page.</b> This page was built with AI (Claude) and updates itself automatically. No one at MN-06 Watch is checking these numbers as they come in tonight. Vote counts and race calls come from <a href="https://www.nbcnews.com/politics/2026-elections/house-results">NBC News</a> (calls by the NBC News Decision Desk). Odds come from <a href="https://kalshi.com/">Kalshi</a>'s public market data. Cook ratings and committee money come from MN-06 Watch's <a href="https://mn06watch.com/articles/on-the-road/">On the Road</a> log. For official results, check NBC News or your state's election office.</p>
+</header>
+
+<section class="card home" id="mn06">
+  <h2>MN-06: Emmer vs. Chapin</h2>
+  <div class="duel">
+    <div class="who r"><span class="nm">Tom Emmer (R), incumbent</span><span class="pc" id="h-r">—</span><span class="vt" id="h-rv">—</span></div>
+    <div class="who d"><span class="nm">Doug Chapin (DFL)</span><span class="pc" id="h-d">—</span><span class="vt" id="h-dv">—</span></div>
+  </div>
+  <div class="homemeta">
+    <span>Expected vote in: <b id="h-in">—</b></span>
+    <span>NBC News: <b id="h-st">—</b></span>
+    <span>Kalshi: Emmer <b id="h-kr">—</b>, Chapin <b id="h-kd">—</b></span>
+  </div>
+</section>
+
+<section class="card" id="tally">
+  <h2>The Republicans he campaigned for</h2>
+  <p class="note" id="tally-note">Every candidate on the On the Road log, Sept. 18 to Nov. 2. A race counts as won or lost only when NBC News calls it.</p>
+  <div class="tiles">
+    <div class="tile won"><span>Won</span><b id="k-won">—</b></div>
+    <div class="tile lost"><span>Lost</span><b id="k-lost">—</b></div>
+    <div class="tile"><span>Leading, not called</span><b id="k-lead">—</b></div>
+    <div class="tile"><span>Trailing, not called</span><b id="k-trail">—</b></div>
+    <div class="tile"><span>No votes yet</span><b id="k-wait">—</b></div>
+  </div>
+</section>
+
+<section class="card" id="money">
+  <h2>Where his committees' money went</h2>
+  <p class="note">From Emmer's campaign, leadership PAC and joint fundraising committee to these candidates, 2025–26 cycle, per FEC-processed filings. Most of it is joint fundraising transfers.</p>
+  <div class="tiles">
+    <div class="tile won"><span>To winners</span><b id="m-won">—</b></div>
+    <div class="tile lost"><span>To losers</span><b id="m-lost">—</b></div>
+    <div class="tile"><span>Still being counted</span><b id="m-open">—</b></div>
+  </div>
+</section>
+
+<section class="card" id="races">
+  <h2>Every race on the log</h2>
+  <p class="note">Margin is the Republican's share minus the Democrat's, in points. Kalshi is the market price for Emmer's candidate to win, in cents on the dollar. Cook rating as of Nov. 2.</p>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search district or name" aria-label="Search races">
+    <select id="f" aria-label="Show races">
+      <option value="">All races</option>
+      <option value="Won">Won</option>
+      <option value="Lost">Lost</option>
+      <option value="Leading">Leading</option>
+      <option value="Trailing">Trailing</option>
+      <option value="No votes yet">No votes yet</option>
+    </select>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>District</th><th>Status</th><th>Emmer's candidate</th><th class="hn">Opponent</th>
+        <th class="num">% in</th><th class="num">R</th><th class="num">D</th><th class="num">Margin</th>
+        <th class="num">Kalshi</th><th class="hn">Cook</th><th class="num hn">From Emmer</th><th class="hn">Visited</th>
+      </tr></thead>
+      <tbody id="rows"><tr><td colspan="12">Loading results…</td></tr></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="card method" id="how">
+  <h2>How this page works</h2>
+  <ul>
+    <li><b>Vote counts and calls:</b> NBC News results pages, including race calls by the NBC News Decision Desk. A race shows as won or lost only after NBC calls it. "Leading" and "Trailing" are uncalled races and can flip as more votes come in. Early and mail ballots often report first.</li>
+    <li><b>Kalshi:</b> the current price on Kalshi's market for the race, shown as the chance the market gives Emmer's candidate. It's a betting market, not a projection. Some races have no Kalshi market.</li>
+    <li><b>The races:</b> every Republican on the <a href="https://mn06watch.com/articles/on-the-road/">On the Road</a> log, plus MN-06. The money and Cook ratings come from that log.</li>
+    <li><b>Updates:</b> a script pulls new numbers from NBC News and Kalshi about every 15 minutes and publishes them here automatically. This page checks for them every two minutes. The script and this page were built with AI (Claude), and no one reviews each update before it posts.</li>
+  </ul>
+</section>
+
+<section class="tools-strip">
+  <h2>Keep going</h2>
+  <div class="toolgrid">
+    <a href="https://mn06watch.com/"><b>Vote Tracker</b><span>Every recorded House vote Rep. Emmer has cast.</span></a>
+    <a href="https://mn06watch.com/sponsorships/"><b>Bills</b><span>Every bill he has sponsored or cosponsored.</span></a>
+    <a href="https://mn06watch.com/transcripts/"><b>Transcripts</b><span>His TV, radio and podcast appearances, searchable.</span></a>
+    <a href="https://mn06watch.com/tweets/"><b>Tweets</b><span>What he posts, archived.</span></a>
+    <a href="https://mn06watch.com/articles/"><b>Articles</b><span>Explainers and special reports.</span></a>
+    <a href="https://mn06watch.substack.com/subscribe"><b>Daily Substack</b><span>The daily accountability summary, free.</span></a>
+  </div>
+</section>
+
+<footer>
+  <p><b>Sources.</b> NBC News 2026 House results and NBC News Decision Desk calls; Kalshi public market data; MN-06 Watch On the Road log (Cook Political Report ratings, FEC disbursement records for committees C00545749, C00592089 and C00859058).</p>
+  <p class="tag">Receipts, not rage.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  var data=null;
+  var $=function(id){return document.getElementById(id)};
+  var pct=function(v){return (v==null||isNaN(v))?'—':Number(v).toFixed(1)+'%'};
+  var num=function(v){return Number(v||0).toLocaleString('en-US')};
+  var usd=function(v){return '$'+Math.round(v||0).toLocaleString('en-US')};
+  var odds=function(v){return v==null?'—':v+'¢'};
+  var order={'Won':0,'Lost':1,'Leading':2,'Trailing':3,'Tied':3,'No votes yet':4};
+  function fmtTime(iso){var d=new Date(iso);return d.toLocaleString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'})+' Central'}
+  function set(id,t){var e=$(id);if(e)e.textContent=t}
+  function render(){
+    if(!data)return;
+    set('upd',fmtTime(data.updated));
+    var rs=data.races, h=rs.filter(function(r){return r.home})[0], o=rs.filter(function(r){return !r.home});
+    if(h){set('h-r',pct(h.r_pct));set('h-d',pct(h.d_pct));set('h-rv',num(h.r_votes)+' votes');set('h-dv',num(h.d_votes)+' votes');
+      set('h-in',pct(h.pct_in));set('h-st',h.status==='Won'?'Emmer projected to win':h.status==='Lost'?'Chapin projected to win':h.status==='No votes yet'?'No votes reported':'Not called; Emmer '+h.status.toLowerCase());
+      set('h-kr',odds(h.kalshi_r));set('h-kd',odds(h.kalshi_d));}
+    var c=function(s){return o.filter(function(r){return r.status===s}).length};
+    var m=function(f){return o.filter(f).reduce(function(a,r){return a+Number(r.money||0)},0)};
+    set('k-won',c('Won'));set('k-lost',c('Lost'));set('k-lead',c('Leading'));set('k-trail',c('Trailing')+c('Tied'));set('k-wait',c('No votes yet'));
+    set('m-won',usd(m(function(r){return r.status==='Won'})));set('m-lost',usd(m(function(r){return r.status==='Lost'})));
+    set('m-open',usd(m(function(r){return r.status!=='Won'&&r.status!=='Lost'})));
+    var q=($('q').value||'').toLowerCase(), f=$('f').value;
+    var rows=o.filter(function(r){return (!f||r.status===f)&&(!q||(r.district+' '+r.candidate+' '+r.opponent).toLowerCase().indexOf(q)>-1)})
+      .sort(function(a,b){return (order[a.status]-order[b.status])||(Math.abs(a.margin)-Math.abs(b.margin))});
+    var tb=$('rows');tb.replaceChildren();
+    rows.forEach(function(r){
+      var tr=document.createElement('tr');
+      var td=function(t,cls){var e=document.createElement('td');e.textContent=t;if(cls)e.className=cls;tr.appendChild(e);return e};
+      var a=document.createElement('td');var link=document.createElement('a');link.href='https://mn06watch.com/articles/on-the-road/#'+r.district.toLowerCase()+'-'+r.visited;link.textContent=r.district;a.appendChild(link);tr.appendChild(a);
+      var s=document.createElement('td');var p=document.createElement('span');p.className='pill s-'+(r.status==='No votes yet'?'wait':r.status);p.textContent=r.status;s.appendChild(p);tr.appendChild(s);
+      td(r.candidate,'cand');td(r.opponent,'opp hn');
+      td(pct(r.pct_in),'num');td(pct(r.r_pct),'num');td(pct(r.d_pct),'num');
+      td((r.margin>0?'+':'')+Number(r.margin||0).toFixed(1),'num');
+      td(odds(r.kalshi_r),'num');td(r.cook,'hn');td(usd(r.money),'num hn');
+      td(r.visited?new Date(r.visited+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):'','hn');
+      tb.appendChild(tr);
+    });
+    if(!rows.length){var tr=document.createElement('tr');var e=document.createElement('td');e.colSpan=12;e.textContent='No races match.';tr.appendChild(e);tb.appendChild(tr);}
+  }
+  function load(){
+    fetch('results.json?t='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+      .then(function(j){data=j;$('err').hidden=true;render()})
+      .catch(function(){var e=$('err');e.textContent='Couldn\'t load the latest results. The page will try again in two minutes.';e.hidden=false});
+  }
+  $('q').addEventListener('input',render);$('f').addEventListener('change',render);
+  load();setInterval(load,120000);
+})();
+</script>
+</body>
+</html>
