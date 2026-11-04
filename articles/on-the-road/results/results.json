@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:13:36Z",
+ "updated": "2026-11-04T16:30:20Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -498,7 +498,7 @@
    "status": "Trailing",
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 98,
    "kalshi_ticker": "HOUSEMI4-26"
   },
@@ -618,7 +618,7 @@
    "status": "Leading",
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
-   "kalshi_r": 96,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 98,
-   "kalshi_d": 3,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 13,
-   "kalshi_d": 86,
+   "kalshi_r": 16,
+   "kalshi_d": 84,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -849,7 +849,7 @@
    "status": "Leading",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 97,
+   "kalshi_r": 98,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 86.3,
+   "pct_in": 86.4,
    "r_pct": 49.9,
    "d_pct": 50.1,
    "margin": -0.2,
-   "r_votes": 150739,
-   "d_votes": 151467,
+   "r_votes": 150876,
+   "d_votes": 151545,
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 8,
+   "kalshi_r": 6,
    "kalshi_d": 93,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
@@ -1040,7 +1040,7 @@
    "cook": "Lean D",
    "money": 300815,
    "visited": "2026-09-18",
-   "pct_in": 96.8,
+   "pct_in": 97.7,
    "r_pct": 44.6,
    "d_pct": 53.1,
    "margin": -8.5,
