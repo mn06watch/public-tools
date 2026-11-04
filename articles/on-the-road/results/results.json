@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T15:40:05Z",
+ "updated": "2026-11-04T15:56:51Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 96,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -338,8 +338,8 @@
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
-   "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_r": 0,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -478,7 +478,7 @@
    "status": "Trailing",
    "r_name": "Michael Bouchard",
    "d_name": "Christina Hines",
-   "kalshi_r": 1,
+   "kalshi_r": 2,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI10-26"
   },
@@ -519,7 +519,7 @@
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
    "kalshi_r": 1,
-   "kalshi_d": 100,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI7-26"
   },
   {
@@ -618,7 +618,7 @@
    "status": "Leading",
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
-   "kalshi_r": 96,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
@@ -659,7 +659,7 @@
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
    "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSEAZ6-26"
   },
   {
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 96,
-   "kalshi_d": 3,
+   "kalshi_r": 95,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 24,
-   "kalshi_d": 76,
+   "kalshi_r": 9,
+   "kalshi_d": 92,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -910,7 +910,7 @@
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -944,7 +944,7 @@
    "r_pct": 48.7,
    "d_pct": 51,
    "margin": -2.3,
-   "r_votes": 198416,
+   "r_votes": 198417,
    "d_votes": 207827,
    "status": "Lost",
    "r_name": "Rob Wittman",
@@ -1009,7 +1009,7 @@
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 91,
+   "kalshi_r": 90,
    "kalshi_d": 10,
    "kalshi_ticker": "HOUSEME2-26"
   },
