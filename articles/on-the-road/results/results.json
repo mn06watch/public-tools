@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T15:23:20Z",
+ "updated": "2026-11-04T15:40:05Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -338,8 +338,8 @@
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
-   "kalshi_r": 0,
-   "kalshi_d": 100,
+   "kalshi_r": 1,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -499,7 +499,7 @@
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 98,
    "kalshi_ticker": "HOUSEMI4-26"
   },
   {
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 95,
-   "kalshi_d": 4,
+   "kalshi_r": 96,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 31,
-   "kalshi_d": 70,
+   "kalshi_r": 24,
+   "kalshi_d": 76,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -949,7 +949,7 @@
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEVA1-26"
   },
@@ -1010,7 +1010,7 @@
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
    "kalshi_r": 91,
-   "kalshi_d": 9,
+   "kalshi_d": 10,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 8,
-   "kalshi_d": 92,
+   "kalshi_r": 12,
+   "kalshi_d": 88,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
@@ -1066,7 +1066,7 @@
    "d_pct": 44.2,
    "margin": 11.5,
    "r_votes": 204707,
-   "d_votes": 162213,
+   "d_votes": 162214,
    "status": "Won",
    "r_name": "Tom Emmer",
    "d_name": "Doug Chapin",
