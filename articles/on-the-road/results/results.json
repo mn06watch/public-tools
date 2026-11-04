@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T21:32:16Z",
+ "updated": "2026-11-04T21:49:00Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -259,7 +259,7 @@
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -615,7 +615,7 @@
    "margin": 2,
    "r_votes": 144748,
    "d_votes": 139167,
-   "status": "Leading",
+   "status": "Won",
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 98,
@@ -678,7 +678,7 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 93,
+   "kalshi_r": 92,
    "kalshi_d": 7,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
@@ -689,17 +689,17 @@
    "cook": "Lean R",
    "money": 285471,
    "visited": "2026-10-09",
-   "pct_in": 83.5,
-   "r_pct": 49.1,
-   "d_pct": 49.2,
-   "margin": -0.1,
-   "r_votes": 136258,
-   "d_votes": 136344,
-   "status": "Trailing",
+   "pct_in": 84.6,
+   "r_pct": 49.3,
+   "d_pct": 49,
+   "margin": 0.3,
+   "r_votes": 138579,
+   "d_votes": 137588,
+   "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 56,
-   "kalshi_d": 43,
+   "kalshi_r": 79,
+   "kalshi_d": 22,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -789,7 +789,7 @@
    "margin": 3.0,
    "r_votes": 142834,
    "d_votes": 134781,
-   "status": "Leading",
+   "status": "Won",
    "r_name": "Jace Yarbrough",
    "d_name": "Dan Barrios"
   },
@@ -1000,17 +1000,17 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 91.6,
+   "pct_in": 91.7,
    "r_pct": 50.3,
    "d_pct": 49.7,
    "margin": 0.6,
-   "r_votes": 158561,
-   "d_votes": 156680,
+   "r_votes": 158597,
+   "d_votes": 156847,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 8,
-   "kalshi_d": 92,
+   "kalshi_d": 91,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
@@ -1044,8 +1044,8 @@
    "r_pct": 44.6,
    "d_pct": 53.1,
    "margin": -8.5,
-   "r_votes": 150082,
-   "d_votes": 178697,
+   "r_votes": 150095,
+   "d_votes": 178741,
    "status": "Lost",
    "r_name": "Jen Kiggans",
    "d_name": "Elaine Luria",
