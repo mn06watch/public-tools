@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T18:11:11Z",
+ "updated": "2026-11-04T18:27:54Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -289,7 +289,7 @@
    "cook": "Likely D",
    "money": 7000,
    "visited": "2026-10-27",
-   "pct_in": 90.2,
+   "pct_in": 97,
    "r_pct": 43.5,
    "d_pct": 56.1,
    "margin": -12.6,
@@ -309,7 +309,7 @@
    "cook": "Likely D",
    "money": 120767,
    "visited": "2026-10-26",
-   "pct_in": 90.2,
+   "pct_in": 97,
    "r_pct": 45,
    "d_pct": 54.8,
    "margin": -9.8,
@@ -489,17 +489,17 @@
    "cook": "Toss Up",
    "money": 23279,
    "visited": "2026-10-19",
-   "pct_in": 97.6,
+   "pct_in": 96.7,
    "r_pct": 48.3,
    "d_pct": 50.1,
    "margin": -1.8,
    "r_votes": 178741,
    "d_votes": 185440,
-   "status": "Trailing",
+   "status": "Lost",
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
-   "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_r": 0,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSEMI4-26"
   },
   {
@@ -619,7 +619,7 @@
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 97,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
   {
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 22,
-   "kalshi_d": 80,
+   "kalshi_d": 78,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 87.4,
+   "pct_in": 87.7,
    "r_pct": 50,
    "d_pct": 50,
    "margin": 0,
-   "r_votes": 152951,
-   "d_votes": 152889,
+   "r_votes": 153607,
+   "d_votes": 153470,
    "status": "Tied",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
@@ -1024,13 +1024,13 @@
    "r_pct": 49.9,
    "d_pct": 50,
    "margin": -0.1,
-   "r_votes": 162734,
-   "d_votes": 163057,
+   "r_votes": 162733,
+   "d_votes": 163056,
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 10,
-   "kalshi_d": 89,
+   "kalshi_r": 11,
+   "kalshi_d": 88,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
