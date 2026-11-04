@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:47:12Z",
+ "updated": "2026-11-04T17:04:02Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -238,7 +238,7 @@
    "status": "Leading",
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
-   "kalshi_r": 100,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 96,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -339,7 +339,7 @@
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -479,7 +479,7 @@
    "r_name": "Michael Bouchard",
    "d_name": "Christina Hines",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 98,
    "kalshi_ticker": "HOUSEMI10-26"
   },
   {
@@ -609,7 +609,7 @@
    "cook": "Solid R",
    "money": 0,
    "visited": "2026-10-15",
-   "pct_in": 97.8,
+   "pct_in": 96.4,
    "r_pct": 51,
    "d_pct": 49,
    "margin": 2,
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 97,
-   "kalshi_d": 3,
+   "kalshi_r": 98,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 17,
-   "kalshi_d": 84,
+   "kalshi_r": 18,
+   "kalshi_d": 82,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -746,7 +746,7 @@
    "cook": "Likely R",
    "money": 14000,
    "visited": "2026-10-05",
-   "pct_in": 83.8,
+   "pct_in": 99,
    "r_pct": 42.4,
    "d_pct": 57.6,
    "margin": -15.2,
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 6,
-   "kalshi_d": 94,
+   "kalshi_d": 93,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
