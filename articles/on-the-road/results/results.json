@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T10:55:25Z",
+ "updated": "2026-11-04T11:12:33Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -489,17 +489,17 @@
    "cook": "Toss Up",
    "money": 23279,
    "visited": "2026-10-19",
-   "pct_in": 86.9,
-   "r_pct": 49.7,
-   "d_pct": 48.9,
-   "margin": 0.8,
-   "r_votes": 163578,
-   "d_votes": 160931,
-   "status": "Leading",
+   "pct_in": 92.1,
+   "r_pct": 49.2,
+   "d_pct": 49.3,
+   "margin": -0.1,
+   "r_votes": 171797,
+   "d_votes": 172061,
+   "status": "Trailing",
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
-   "kalshi_r": 16,
-   "kalshi_d": 84,
+   "kalshi_r": 8,
+   "kalshi_d": 91,
    "kalshi_ticker": "HOUSEMI4-26"
   },
   {
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 84,
-   "kalshi_d": 15,
+   "kalshi_d": 16,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 31,
-   "kalshi_d": 72,
+   "kalshi_r": 30,
+   "kalshi_d": 69,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -733,8 +733,8 @@
    "r_pct": 44.6,
    "d_pct": 55.4,
    "margin": -10.8,
-   "r_votes": 112559,
-   "d_votes": 139968,
+   "r_votes": 112574,
+   "d_votes": 139984,
    "status": "Lost",
    "r_name": "Carlos De La Cruz",
    "d_name": "Johnny Garcia"
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 14,
+   "kalshi_r": 15,
    "kalshi_d": 84,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
