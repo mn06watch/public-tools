@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T22:56:04Z",
+ "updated": "2026-11-04T23:12:54Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -489,7 +489,7 @@
    "cook": "Toss Up",
    "money": 23279,
    "visited": "2026-10-19",
-   "pct_in": 96.8,
+   "pct_in": 96.9,
    "r_pct": 48.3,
    "d_pct": 50.1,
    "margin": -1.8,
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 94,
-   "kalshi_d": 6,
+   "kalshi_r": 96,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 74,
-   "kalshi_d": 26,
+   "kalshi_r": 73,
+   "kalshi_d": 27,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -949,7 +949,7 @@
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
-   "kalshi_r": 1,
+   "kalshi_r": 2,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEVA1-26"
   },
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 9,
-   "kalshi_d": 92,
+   "kalshi_d": 91,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
@@ -1065,8 +1065,8 @@
    "r_pct": 55.7,
    "d_pct": 44.2,
    "margin": 11.5,
-   "r_votes": 204707,
-   "d_votes": 162214,
+   "r_votes": 204706,
+   "d_votes": 162213,
    "status": "Won",
    "r_name": "Tom Emmer",
    "d_name": "Doug Chapin",
