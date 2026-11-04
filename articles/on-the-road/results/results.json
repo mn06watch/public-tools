@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T11:46:07Z",
+ "updated": "2026-11-04T12:02:47Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -338,7 +338,7 @@
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
@@ -499,7 +499,7 @@
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
    "kalshi_r": 2,
-   "kalshi_d": 98,
+   "kalshi_d": 97,
    "kalshi_ticker": "HOUSEMI4-26"
   },
   {
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 90,
-   "kalshi_d": 11,
+   "kalshi_r": 91,
+   "kalshi_d": 8,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 26,
-   "kalshi_d": 72,
+   "kalshi_r": 11,
+   "kalshi_d": 88,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -849,8 +849,8 @@
    "status": "Leading",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 97,
-   "kalshi_d": 4,
+   "kalshi_r": 96,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
   {
@@ -910,7 +910,7 @@
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
    "kalshi_r": 97,
-   "kalshi_d": 3,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
@@ -1009,7 +1009,7 @@
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 92,
+   "kalshi_r": 91,
    "kalshi_d": 8,
    "kalshi_ticker": "HOUSEME2-26"
   },
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 15,
-   "kalshi_d": 86,
+   "kalshi_r": 10,
+   "kalshi_d": 91,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
