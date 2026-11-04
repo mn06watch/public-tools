@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T14:49:50Z",
+ "updated": "2026-11-04T15:06:37Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 97,
+   "kalshi_r": 96,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -389,7 +389,7 @@
    "cook": "Lean D",
    "money": 270138,
    "visited": "2026-10-21",
-   "pct_in": 98.3,
+   "pct_in": 98,
    "r_pct": 43.9,
    "d_pct": 56.1,
    "margin": -12.2,
@@ -678,7 +678,7 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 95,
+   "kalshi_r": 96,
    "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
@@ -689,17 +689,17 @@
    "cook": "Lean R",
    "money": 285471,
    "visited": "2026-10-09",
-   "pct_in": 78.3,
-   "r_pct": 48.8,
-   "d_pct": 49.5,
-   "margin": -0.7,
-   "r_votes": 133070,
-   "d_votes": 135023,
+   "pct_in": 79.7,
+   "r_pct": 49.1,
+   "d_pct": 49.2,
+   "margin": -0.1,
+   "r_votes": 136258,
+   "d_votes": 136344,
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 32,
-   "kalshi_d": 70,
+   "kalshi_r": 28,
+   "kalshi_d": 72,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1009,8 +1009,8 @@
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 90,
-   "kalshi_d": 11,
+   "kalshi_r": 89,
+   "kalshi_d": 10,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 7,
-   "kalshi_d": 93,
+   "kalshi_d": 94,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
