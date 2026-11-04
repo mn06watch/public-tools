@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T14:16:19Z",
+ "updated": "2026-11-04T14:33:05Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 97,
+   "kalshi_r": 98,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -298,7 +298,7 @@
    "status": "Trailing",
    "r_name": "Jeanine Driscoll",
    "d_name": "Laura Gillen",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY4-26"
   },
@@ -389,12 +389,12 @@
    "cook": "Lean D",
    "money": 270138,
    "visited": "2026-10-21",
-   "pct_in": 98.1,
-   "r_pct": 44,
-   "d_pct": 56,
-   "margin": -12,
-   "r_votes": 128465,
-   "d_votes": 163823,
+   "pct_in": 98.3,
+   "r_pct": 43.9,
+   "d_pct": 56.1,
+   "margin": -12.2,
+   "r_votes": 128655,
+   "d_votes": 164370,
    "status": "Lost",
    "r_name": "Ryan Mackenzie",
    "d_name": "Bob Brooks",
@@ -498,7 +498,7 @@
    "status": "Trailing",
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI4-26"
   },
@@ -518,7 +518,7 @@
    "status": "Trailing",
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI7-26"
   },
@@ -618,7 +618,7 @@
    "status": "Leading",
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
-   "kalshi_r": 97,
+   "kalshi_r": 96,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 22,
-   "kalshi_d": 78,
+   "kalshi_r": 32,
+   "kalshi_d": 66,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -849,7 +849,7 @@
    "status": "Leading",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 98,
+   "kalshi_r": 96,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -909,7 +909,7 @@
    "status": "Won",
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
-   "kalshi_r": 98,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
@@ -949,7 +949,7 @@
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEVA1-26"
   },
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 10,
-   "kalshi_d": 90,
+   "kalshi_d": 91,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
