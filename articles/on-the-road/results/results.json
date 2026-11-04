@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T20:25:11Z",
+ "updated": "2026-11-04T20:42:00Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -259,7 +259,7 @@
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
    "kalshi_r": 98,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -329,7 +329,7 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 96.7,
+   "pct_in": 97,
    "r_pct": 47.8,
    "d_pct": 52.1,
    "margin": -4.3,
@@ -619,7 +619,7 @@
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 97,
-   "kalshi_d": 2,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
   {
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 94,
-   "kalshi_d": 6,
+   "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 12,
-   "kalshi_d": 88,
+   "kalshi_d": 89,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -849,7 +849,7 @@
    "status": "Won",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 98,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 89.9,
-   "r_pct": 50.1,
-   "d_pct": 49.8,
-   "margin": 0.3,
-   "r_votes": 155636,
-   "d_votes": 154646,
+   "pct_in": 90.2,
+   "r_pct": 50.2,
+   "d_pct": 49.7,
+   "margin": 0.5,
+   "r_votes": 156419,
+   "d_votes": 155021,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 6,
-   "kalshi_d": 94,
+   "kalshi_r": 8,
+   "kalshi_d": 92,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
