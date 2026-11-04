@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T16:30:20Z",
+ "updated": "2026-11-04T16:47:12Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 97,
+   "kalshi_r": 96,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -295,7 +295,7 @@
    "margin": -12.8,
    "r_votes": 116912,
    "d_votes": 151336,
-   "status": "Trailing",
+   "status": "Lost",
    "r_name": "Jeanine Driscoll",
    "d_name": "Laura Gillen",
    "kalshi_r": 0,
@@ -339,7 +339,7 @@
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 100,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -475,10 +475,10 @@
    "margin": -7.1,
    "r_votes": 162347,
    "d_votes": 188078,
-   "status": "Trailing",
+   "status": "Lost",
    "r_name": "Michael Bouchard",
    "d_name": "Christina Hines",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI10-26"
   },
@@ -518,7 +518,7 @@
    "status": "Trailing",
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSEMI7-26"
   },
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,7 +698,7 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 16,
+   "kalshi_r": 17,
    "kalshi_d": 84,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
@@ -752,7 +752,7 @@
    "margin": -15.2,
    "r_votes": 72340,
    "d_votes": 98079,
-   "status": "Trailing",
+   "status": "Lost",
    "r_name": "Alex Mealer",
    "d_name": "Leticia Gutierrez"
   },
@@ -846,11 +846,11 @@
    "margin": 4.2,
    "r_votes": 157261,
    "d_votes": 144397,
-   "status": "Leading",
+   "status": "Won",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_r": 99,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
   {
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -940,12 +940,12 @@
    "cook": "Toss Up",
    "money": 5000,
    "visited": "2026-10-01",
-   "pct_in": 98.4,
+   "pct_in": 98.5,
    "r_pct": 48.7,
    "d_pct": 51,
    "margin": -2.3,
    "r_votes": 198417,
-   "d_votes": 207827,
+   "d_votes": 207877,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 86.4,
+   "pct_in": 87,
    "r_pct": 49.9,
-   "d_pct": 50.1,
-   "margin": -0.2,
-   "r_votes": 150876,
-   "d_votes": 151545,
+   "d_pct": 50,
+   "margin": -0.1,
+   "r_votes": 152098,
+   "d_votes": 152367,
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 6,
-   "kalshi_d": 93,
+   "kalshi_d": 94,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
