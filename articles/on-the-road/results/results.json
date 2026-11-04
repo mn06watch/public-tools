@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:01:22Z",
+ "updated": "2026-11-04T19:18:07Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -259,7 +259,7 @@
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
    "kalshi_r": 98,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -515,7 +515,7 @@
    "margin": -3.3,
    "r_votes": 189482,
    "d_votes": 202657,
-   "status": "Trailing",
+   "status": "Lost",
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
    "kalshi_r": 0,
@@ -678,7 +678,7 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 94,
+   "kalshi_r": 95,
    "kalshi_d": 6,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 12,
-   "kalshi_d": 90,
+   "kalshi_d": 89,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -709,7 +709,7 @@
    "cook": "Likely D",
    "money": 122371,
    "visited": "2026-10-05",
-   "pct_in": 93.6,
+   "pct_in": 99,
    "r_pct": 29.6,
    "d_pct": 65.8,
    "margin": -36.2,
@@ -849,7 +849,7 @@
    "status": "Won",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 99,
+   "kalshi_r": 98,
    "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -969,7 +969,7 @@
    "status": "Won",
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
-   "kalshi_r": 97,
+   "kalshi_r": 98,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 87.8,
+   "pct_in": 87.9,
    "r_pct": 50,
    "d_pct": 49.9,
    "margin": 0.1,
-   "r_votes": 153832,
-   "d_votes": 153605,
+   "r_votes": 153997,
+   "d_votes": 153722,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
