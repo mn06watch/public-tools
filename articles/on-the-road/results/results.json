@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T13:09:32Z",
+ "updated": "2026-11-04T13:26:14Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -238,8 +238,8 @@
    "status": "Leading",
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
-   "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_r": 100,
+   "kalshi_d": 0,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
   {
@@ -619,7 +619,7 @@
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 96,
-   "kalshi_d": 5,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 25,
-   "kalshi_d": 76,
+   "kalshi_r": 22,
+   "kalshi_d": 78,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -850,7 +850,7 @@
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
    "kalshi_r": 95,
-   "kalshi_d": 3,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
   {
@@ -864,8 +864,8 @@
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
-   "r_votes": 146279,
-   "d_votes": 156565,
+   "r_votes": 146259,
+   "d_votes": 156564,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
@@ -890,7 +890,7 @@
    "r_name": "Addison McDowell",
    "d_name": "Cyril Jefferson",
    "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-NC06-26"
   },
   {
@@ -1009,8 +1009,8 @@
    "status": "Trailing",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 89,
-   "kalshi_d": 11,
+   "kalshi_r": 90,
+   "kalshi_d": 8,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 8,
-   "kalshi_d": 92,
+   "kalshi_r": 9,
+   "kalshi_d": 90,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
