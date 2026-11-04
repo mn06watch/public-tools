@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T12:19:27Z",
+ "updated": "2026-11-04T12:36:08Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -499,7 +499,7 @@
    "r_name": "Bill Huizenga",
    "d_name": "Sean McCann",
    "kalshi_r": 2,
-   "kalshi_d": 97,
+   "kalshi_d": 98,
    "kalshi_ticker": "HOUSEMI4-26"
   },
   {
@@ -609,12 +609,12 @@
    "cook": "Solid R",
    "money": 0,
    "visited": "2026-10-15",
-   "pct_in": 92.6,
-   "r_pct": 51.4,
-   "d_pct": 48.6,
-   "margin": 2.8,
-   "r_votes": 137997,
-   "d_votes": 130648,
+   "pct_in": 97.7,
+   "r_pct": 51,
+   "d_pct": 49,
+   "margin": 2,
+   "r_votes": 144543,
+   "d_votes": 138871,
    "status": "Leading",
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 93,
-   "kalshi_d": 6,
+   "kalshi_r": 95,
+   "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 6,
-   "kalshi_d": 92,
+   "kalshi_r": 26,
+   "kalshi_d": 76,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -746,12 +746,12 @@
    "cook": "Likely R",
    "money": 14000,
    "visited": "2026-10-05",
-   "pct_in": 71.2,
-   "r_pct": 43,
-   "d_pct": 57,
-   "margin": -14,
-   "r_votes": 62280,
-   "d_votes": 82569,
+   "pct_in": 83.7,
+   "r_pct": 42.5,
+   "d_pct": 57.5,
+   "margin": -15.0,
+   "r_votes": 72227,
+   "d_votes": 97888,
    "status": "Trailing",
    "r_name": "Alex Mealer",
    "d_name": "Leticia Gutierrez"
@@ -840,16 +840,16 @@
    "cook": "Solid R",
    "money": 14000,
    "visited": "2026-10-05",
-   "pct_in": 90.7,
-   "r_pct": 51.4,
-   "d_pct": 47.7,
-   "margin": 3.7,
-   "r_votes": 132995,
-   "d_votes": 123418,
+   "pct_in": 99,
+   "r_pct": 51.6,
+   "d_pct": 47.3,
+   "margin": 4.3,
+   "r_votes": 156834,
+   "d_votes": 143784,
    "status": "Leading",
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
-   "kalshi_r": 97,
+   "kalshi_r": 94,
    "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
@@ -950,7 +950,7 @@
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
    "kalshi_r": 1,
-   "kalshi_d": 98,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSEVA1-26"
   },
   {
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 10,
+   "kalshi_r": 8,
    "kalshi_d": 92,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
