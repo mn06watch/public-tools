@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:54:22Z",
+ "updated": "2026-11-04T18:11:11Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -239,7 +239,7 @@
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 0,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
   {
@@ -289,12 +289,12 @@
    "cook": "Likely D",
    "money": 7000,
    "visited": "2026-10-27",
-   "pct_in": 85,
-   "r_pct": 43.4,
-   "d_pct": 56.2,
-   "margin": -12.8,
-   "r_votes": 116912,
-   "d_votes": 151336,
+   "pct_in": 90.2,
+   "r_pct": 43.5,
+   "d_pct": 56.1,
+   "margin": -12.6,
+   "r_votes": 124259,
+   "d_votes": 160234,
    "status": "Lost",
    "r_name": "Jeanine Driscoll",
    "d_name": "Laura Gillen",
@@ -309,12 +309,12 @@
    "cook": "Likely D",
    "money": 120767,
    "visited": "2026-10-26",
-   "pct_in": 87.3,
-   "r_pct": 44.7,
-   "d_pct": 55.1,
-   "margin": -10.4,
-   "r_votes": 117001,
-   "d_votes": 144174,
+   "pct_in": 90.2,
+   "r_pct": 45,
+   "d_pct": 54.8,
+   "margin": -9.8,
+   "r_votes": 121623,
+   "d_votes": 148216,
    "status": "Lost",
    "r_name": "Michael LiPetri Jr.",
    "d_name": "Thomas Suozzi",
@@ -509,7 +509,7 @@
    "cook": "Toss Up",
    "money": 301845,
    "visited": "2026-10-19",
-   "pct_in": 96.2,
+   "pct_in": 97,
    "r_pct": 47.8,
    "d_pct": 51,
    "margin": -3.2,
@@ -519,7 +519,7 @@
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSEMI7-26"
   },
   {
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 95,
-   "kalshi_d": 4,
+   "kalshi_r": 92,
+   "kalshi_d": 8,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 14,
-   "kalshi_d": 86,
+   "kalshi_r": 22,
+   "kalshi_d": 80,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -860,7 +860,7 @@
    "cook": "Toss Up",
    "money": 57909,
    "visited": "2026-10-02",
-   "pct_in": 99,
+   "pct_in": 98.8,
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
@@ -1020,7 +1020,7 @@
    "cook": "Lean R",
    "money": 38415,
    "visited": "2026-09-23",
-   "pct_in": 98.7,
+   "pct_in": 98.8,
    "r_pct": 49.9,
    "d_pct": 50,
    "margin": -0.1,
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 11,
-   "kalshi_d": 88,
+   "kalshi_r": 10,
+   "kalshi_d": 89,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
