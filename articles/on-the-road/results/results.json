@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T22:22:31Z",
+ "updated": "2026-11-04T22:39:18Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -258,8 +258,8 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 98,
-   "kalshi_d": 1,
+   "kalshi_r": 97,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -619,7 +619,7 @@
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
   {
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 93,
-   "kalshi_d": 7,
+   "kalshi_d": 6,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 78,
-   "kalshi_d": 22,
+   "kalshi_r": 75,
+   "kalshi_d": 27,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -729,7 +729,7 @@
    "cook": "Toss Up",
    "money": 20459,
    "visited": "2026-10-05",
-   "pct_in": 97.2,
+   "pct_in": 99,
    "r_pct": 44.6,
    "d_pct": 55.4,
    "margin": -10.8,
@@ -850,7 +850,7 @@
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 0,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
   {
@@ -860,7 +860,7 @@
    "cook": "Toss Up",
    "money": 57909,
    "visited": "2026-10-02",
-   "pct_in": 99,
+   "pct_in": 98.7,
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
+   "kalshi_r": 2,
    "kalshi_d": 99,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 9,
-   "kalshi_d": 91,
+   "kalshi_r": 8,
+   "kalshi_d": 92,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
