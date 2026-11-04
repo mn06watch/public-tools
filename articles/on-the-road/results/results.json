@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T12:52:51Z",
+ "updated": "2026-11-04T13:09:32Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -338,7 +338,7 @@
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
-   "kalshi_r": 0,
+   "kalshi_r": 1,
    "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
@@ -619,7 +619,7 @@
    "r_name": "Steve Toth",
    "d_name": "Shaun Finnie",
    "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-TX02-26"
   },
   {
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 95,
-   "kalshi_d": 4,
+   "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Trailing",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 26,
-   "kalshi_d": 73,
+   "kalshi_r": 25,
+   "kalshi_d": 76,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -850,7 +850,7 @@
    "r_name": "Jon Bonck",
    "d_name": "Melissa McDonough",
    "kalshi_r": 95,
-   "kalshi_d": 4,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-TX38-26"
   },
   {
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 6,
-   "kalshi_d": 94,
+   "kalshi_r": 8,
+   "kalshi_d": 92,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
