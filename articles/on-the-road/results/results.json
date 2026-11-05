@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T18:01:34Z",
+ "updated": "2026-11-05T18:18:15Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -669,12 +669,12 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 86.1,
+   "pct_in": 87.4,
    "r_pct": 51.2,
    "d_pct": 48.8,
    "margin": 2.4,
-   "r_votes": 141352,
-   "d_votes": 134940,
+   "r_votes": 143661,
+   "d_votes": 136922,
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
@@ -970,7 +970,7 @@
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
    "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
@@ -1001,16 +1001,16 @@
    "money": 177815,
    "visited": "2026-09-29",
    "pct_in": 94.2,
-   "r_pct": 50.1,
-   "d_pct": 49.4,
+   "r_pct": 50,
+   "d_pct": 49.3,
    "margin": 0.7,
-   "r_votes": 162603,
-   "d_votes": 160176,
+   "r_votes": 162884,
+   "d_votes": 160455,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_r": 99,
+   "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
