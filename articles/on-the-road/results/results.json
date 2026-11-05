@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T20:34:48Z",
+ "updated": "2026-11-05T20:51:34Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -970,7 +970,7 @@
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
    "kalshi_r": 98,
-   "kalshi_d": 3,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
