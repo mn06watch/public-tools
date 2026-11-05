@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T18:54:16Z",
+ "updated": "2026-11-05T19:11:00Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -329,17 +329,17 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 85.7,
-   "r_pct": 47.8,
+   "pct_in": 87.6,
+   "r_pct": 47.7,
    "d_pct": 52.1,
-   "margin": -4.3,
-   "r_votes": 125617,
-   "d_votes": 137005,
+   "margin": -4.4,
+   "r_votes": 128285,
+   "d_votes": 140109,
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -969,8 +969,8 @@
    "status": "Won",
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
-   "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
@@ -1002,15 +1002,15 @@
    "visited": "2026-09-29",
    "pct_in": 95.2,
    "r_pct": 50,
-   "d_pct": 49.1,
-   "margin": 0.9,
-   "r_votes": 164559,
-   "d_votes": 161529,
+   "d_pct": 49,
+   "margin": 1,
+   "r_votes": 165089,
+   "d_votes": 161720,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 100,
-   "kalshi_d": 0,
+   "kalshi_r": 99,
+   "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
