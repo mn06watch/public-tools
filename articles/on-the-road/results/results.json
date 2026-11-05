@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T05:22:39Z",
+ "updated": "2026-11-05T05:39:27Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -339,7 +339,7 @@
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 100,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 90,
-   "kalshi_d": 9,
+   "kalshi_d": 10,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,7 +698,7 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 72,
+   "kalshi_r": 74,
    "kalshi_d": 28,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
@@ -1010,7 +1010,7 @@
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
    "kalshi_r": 99,
-   "kalshi_d": 0,
+   "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 4,
-   "kalshi_d": 95,
+   "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
