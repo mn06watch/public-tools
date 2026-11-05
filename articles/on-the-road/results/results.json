@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T01:43:55Z",
+ "updated": "2026-11-05T02:00:39Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -239,7 +239,7 @@
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
    "kalshi_r": 99,
-   "kalshi_d": 0,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
   {
@@ -653,8 +653,8 @@
    "r_pct": 44.9,
    "d_pct": 53,
    "margin": -8.1,
-   "r_votes": 138220,
-   "d_votes": 163196,
+   "r_votes": 138235,
+   "d_votes": 163197,
    "status": "Trailing",
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
@@ -669,7 +669,7 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 86,
+   "pct_in": 86.1,
    "r_pct": 51.2,
    "d_pct": 48.8,
    "margin": 2.4,
