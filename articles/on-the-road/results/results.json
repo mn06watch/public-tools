@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:58:39Z",
+ "updated": "2026-11-05T22:15:25Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 80,
-   "kalshi_d": 20,
+   "kalshi_r": 92,
+   "kalshi_d": 8,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -969,7 +969,7 @@
    "status": "Won",
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
-   "kalshi_r": 99,
+   "kalshi_r": 98,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
@@ -1010,7 +1010,7 @@
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
    "kalshi_r": 100,
-   "kalshi_d": 0,
+   "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
