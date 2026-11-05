@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T15:13:54Z",
+ "updated": "2026-11-05T15:30:34Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -156,7 +156,7 @@
    "r_pct": 55.4,
    "d_pct": 44.6,
    "margin": 10.8,
-   "r_votes": 182159,
+   "r_votes": 182160,
    "d_votes": 146861,
    "status": "Won",
    "r_name": "John Cowan",
@@ -258,7 +258,7 @@
    "status": "Won",
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
-   "kalshi_r": 98,
+   "kalshi_r": 97,
    "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 82,
-   "kalshi_d": 18,
+   "kalshi_d": 20,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1024,7 +1024,7 @@
    "r_pct": 49.9,
    "d_pct": 50,
    "margin": -0.1,
-   "r_votes": 162733,
+   "r_votes": 162734,
    "d_votes": 163056,
    "status": "Trailing",
    "r_name": "Brad Finstad",
