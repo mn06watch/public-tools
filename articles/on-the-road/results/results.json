@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T16:37:41Z",
+ "updated": "2026-11-05T16:54:28Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -238,7 +238,7 @@
    "status": "Leading",
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
-   "kalshi_r": 99,
+   "kalshi_r": 100,
    "kalshi_d": 0,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
@@ -259,7 +259,7 @@
    "r_name": "Matt Van Epps",
    "d_name": "Darden Copeland",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TN07-26"
   },
   {
@@ -570,11 +570,11 @@
    "money": 308152,
    "visited": "2026-10-15",
    "pct_in": 98.8,
-   "r_pct": 46.3,
-   "d_pct": 53.7,
-   "margin": -7.4,
-   "r_votes": 163441,
-   "d_votes": 189217,
+   "r_pct": 46.4,
+   "d_pct": 53.6,
+   "margin": -7.2,
+   "r_votes": 163631,
+   "d_votes": 189349,
    "status": "Lost",
    "r_name": "Zach Nunn",
    "d_name": "Sarah Trone Garriott",
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 76,
-   "kalshi_d": 23,
+   "kalshi_d": 24,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1000,17 +1000,17 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 93.6,
+   "pct_in": 94.1,
    "r_pct": 50.4,
    "d_pct": 49.6,
    "margin": 0.8,
-   "r_votes": 162350,
-   "d_votes": 159697,
+   "r_votes": 162598,
+   "d_votes": 160173,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_r": 98,
+   "kalshi_d": 2,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
