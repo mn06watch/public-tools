@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T16:04:11Z",
+ "updated": "2026-11-05T16:20:53Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -529,12 +529,12 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-16",
-   "pct_in": 96.3,
-   "r_pct": 56.1,
-   "d_pct": 43.9,
-   "margin": 12.2,
-   "r_votes": 186035,
-   "d_votes": 145695,
+   "pct_in": 98.7,
+   "r_pct": 56.4,
+   "d_pct": 43.6,
+   "margin": 12.8,
+   "r_votes": 191822,
+   "d_votes": 148172,
    "status": "Won",
    "r_name": "Michael Alfonso",
    "d_name": "Fred Clark",
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 82,
-   "kalshi_d": 18,
+   "kalshi_r": 78,
+   "kalshi_d": 20,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1041,8 +1041,8 @@
    "money": 300815,
    "visited": "2026-09-18",
    "pct_in": 97.7,
-   "r_pct": 44.6,
-   "d_pct": 53.1,
+   "r_pct": 44.5,
+   "d_pct": 53,
    "margin": -8.5,
    "r_votes": 150095,
    "d_votes": 178741,
