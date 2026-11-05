@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T20:18:04Z",
+ "updated": "2026-11-05T20:34:48Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -433,8 +433,8 @@
    "r_pct": 45.6,
    "d_pct": 54.4,
    "margin": -8.8,
-   "r_votes": 128081,
-   "d_votes": 152583,
+   "r_votes": 128135,
+   "d_votes": 152616,
    "status": "Lost",
    "r_name": "Rob Bresnahan Jr.",
    "d_name": "Paige Cognetti",
@@ -970,7 +970,7 @@
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
    "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
@@ -1000,12 +1000,12 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 97.5,
+   "pct_in": 97.8,
    "r_pct": 49.9,
-   "d_pct": 48.4,
-   "margin": 1.5,
-   "r_votes": 169815,
-   "d_votes": 164842,
+   "d_pct": 48.3,
+   "margin": 1.6,
+   "r_votes": 170329,
+   "d_votes": 164852,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
