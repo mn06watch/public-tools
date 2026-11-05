@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T11:19:26Z",
+ "updated": "2026-11-05T11:36:07Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -950,7 +950,7 @@
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
    "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_d": 98,
    "kalshi_ticker": "HOUSEVA1-26"
   },
   {
