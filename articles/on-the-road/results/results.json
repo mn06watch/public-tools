@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T02:34:13Z",
+ "updated": "2026-11-05T02:50:59Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -910,7 +910,7 @@
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
    "kalshi_r": 98,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
