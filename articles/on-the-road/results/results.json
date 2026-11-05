@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T23:39:33Z",
+ "updated": "2026-11-05T23:56:24Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -653,8 +653,8 @@
    "r_pct": 44.9,
    "d_pct": 53,
    "margin": -8.1,
-   "r_votes": 138235,
-   "d_votes": 163197,
+   "r_votes": 138289,
+   "d_votes": 163211,
    "status": "Lost",
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
@@ -693,13 +693,13 @@
    "r_pct": 50.1,
    "d_pct": 48.1,
    "margin": 2.0,
-   "r_votes": 150662,
-   "d_votes": 144768,
+   "r_votes": 150665,
+   "d_votes": 144794,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 95,
-   "kalshi_d": 6,
+   "kalshi_d": 5,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
