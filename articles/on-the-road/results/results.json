@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T10:46:01Z",
+ "updated": "2026-11-05T11:02:45Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 94,
-   "kalshi_d": 6,
+   "kalshi_r": 95,
+   "kalshi_d": 5,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
