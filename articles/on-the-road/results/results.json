@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T22:49:05Z",
+ "updated": "2026-11-05T23:05:53Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -76,8 +76,8 @@
    "r_pct": 58.9,
    "d_pct": 39.9,
    "margin": 19.0,
-   "r_votes": 195252,
-   "d_votes": 132264,
+   "r_votes": 195263,
+   "d_votes": 132278,
    "status": "Won",
    "r_name": "Randy Fine",
    "d_name": "Eric Yonce",
@@ -331,10 +331,10 @@
    "visited": "2026-10-26",
    "pct_in": 87.6,
    "r_pct": 47.7,
-   "d_pct": 52.1,
-   "margin": -4.4,
-   "r_votes": 128285,
-   "d_votes": 140109,
+   "d_pct": 52.2,
+   "margin": -4.5,
+   "r_votes": 128292,
+   "d_votes": 140165,
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
@@ -698,7 +698,7 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 92,
+   "kalshi_r": 93,
    "kalshi_d": 8,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
