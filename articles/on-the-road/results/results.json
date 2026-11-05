@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T22:32:12Z",
+ "updated": "2026-11-05T22:49:05Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 93,
-   "kalshi_d": 7,
+   "kalshi_r": 92,
+   "kalshi_d": 8,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -909,8 +909,8 @@
    "status": "Won",
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
-   "kalshi_r": 98,
-   "kalshi_d": 2,
+   "kalshi_r": 99,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
@@ -1009,7 +1009,7 @@
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 100,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "HOUSEME2-26"
   },
@@ -1024,8 +1024,8 @@
    "r_pct": 49.9,
    "d_pct": 50,
    "margin": -0.1,
-   "r_votes": 162734,
-   "d_votes": 163057,
+   "r_votes": 162733,
+   "d_votes": 163054,
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
