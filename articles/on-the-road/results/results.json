@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T04:32:07Z",
+ "updated": "2026-11-05T04:48:59Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 76,
-   "kalshi_d": 25,
+   "kalshi_r": 75,
+   "kalshi_d": 26,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 5,
+   "kalshi_r": 6,
    "kalshi_d": 94,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
