@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T03:07:53Z",
+ "updated": "2026-11-05T03:24:45Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -329,12 +329,12 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 84.1,
+   "pct_in": 85.7,
    "r_pct": 47.8,
    "d_pct": 52.1,
    "margin": -4.3,
-   "r_votes": 123289,
-   "d_votes": 134454,
+   "r_votes": 125617,
+   "d_votes": 137005,
    "status": "Trailing",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
@@ -698,7 +698,7 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 75,
+   "kalshi_r": 74,
    "kalshi_d": 26,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
