@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T18:18:15Z",
+ "updated": "2026-11-05T18:37:30Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -339,7 +339,7 @@
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 100,
+   "kalshi_d": 99,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -669,7 +669,7 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 87.4,
+   "pct_in": 87.2,
    "r_pct": 51.2,
    "d_pct": 48.8,
    "margin": 2.4,
@@ -679,7 +679,7 @@
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
    "kalshi_r": 95,
-   "kalshi_d": 5,
+   "kalshi_d": 6,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -929,7 +929,7 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
+   "kalshi_r": 0,
    "kalshi_d": 99,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
@@ -970,7 +970,7 @@
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
    "kalshi_r": 96,
-   "kalshi_d": 3,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
@@ -1000,17 +1000,17 @@
    "cook": "Lean R",
    "money": 177815,
    "visited": "2026-09-29",
-   "pct_in": 94.2,
+   "pct_in": 94.9,
    "r_pct": 50,
-   "d_pct": 49.3,
-   "margin": 0.7,
-   "r_votes": 162884,
-   "d_votes": 160455,
+   "d_pct": 49.2,
+   "margin": 0.8,
+   "r_votes": 164022,
+   "d_votes": 161318,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
-   "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_r": 100,
+   "kalshi_d": 0,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
