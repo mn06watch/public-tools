@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T05:39:27Z",
+ "updated": "2026-11-05T05:56:17Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -239,7 +239,7 @@
    "r_name": "Brent Taylor",
    "d_name": "Justin Pearson",
    "kalshi_r": 99,
-   "kalshi_d": 0,
+   "kalshi_d": 1,
    "kalshi_ticker": "KXHOUSERACE-TN09-26"
   },
   {
@@ -339,7 +339,7 @@
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
    "kalshi_r": 0,
-   "kalshi_d": 99,
+   "kalshi_d": 100,
    "kalshi_ticker": "HOUSENY17-26"
   },
   {
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 74,
-   "kalshi_d": 28,
+   "kalshi_d": 26,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1010,7 +1010,7 @@
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 0,
    "kalshi_ticker": "HOUSEME2-26"
   },
   {
