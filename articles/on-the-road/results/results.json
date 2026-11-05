@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:08:24Z",
+ "updated": "2026-11-05T21:25:07Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -1004,8 +1004,8 @@
    "r_pct": 49.9,
    "d_pct": 48.3,
    "margin": 1.6,
-   "r_votes": 170271,
-   "d_votes": 164855,
+   "r_votes": 170265,
+   "d_votes": 164845,
    "status": "Leading",
    "r_name": "Paul LePage",
    "d_name": "Matthew Dunlap",
