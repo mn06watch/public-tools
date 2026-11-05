@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T23:46:30Z",
+ "updated": "2026-11-05T00:03:13Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 94,
-   "kalshi_d": 6,
+   "kalshi_r": 96,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 78,
-   "kalshi_d": 23,
+   "kalshi_r": 74,
+   "kalshi_d": 27,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -929,8 +929,8 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 2,
-   "kalshi_d": 99,
+   "kalshi_r": 1,
+   "kalshi_d": 98,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
   {
@@ -969,8 +969,8 @@
    "status": "Won",
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
-   "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_r": 96,
+   "kalshi_d": 4,
    "kalshi_ticker": "KXHOUSERACE-NC08-26"
   },
   {
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 9,
-   "kalshi_d": 91,
+   "kalshi_r": 7,
+   "kalshi_d": 93,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
