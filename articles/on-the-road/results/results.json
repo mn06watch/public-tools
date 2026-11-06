@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T15:20:44Z",
+ "updated": "2026-11-06T15:37:27Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -16,8 +16,8 @@
    "r_pct": 61.1,
    "d_pct": 37.6,
    "margin": 23.5,
-   "r_votes": 198668,
-   "d_votes": 122351,
+   "r_votes": 198692,
+   "d_votes": 122366,
    "status": "Won",
    "r_name": "Jim Schwartzel",
    "d_name": "Victor Arias",
