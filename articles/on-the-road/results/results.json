@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T23:42:48Z",
+ "updated": "2026-11-06T23:59:35Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -649,12 +649,12 @@
    "cook": "Lean D",
    "money": 315653,
    "visited": "2026-10-09",
-   "pct_in": 89.1,
-   "r_pct": 45.2,
-   "d_pct": 52.7,
-   "margin": -7.5,
-   "r_votes": 146334,
-   "d_votes": 170823,
+   "pct_in": 94.3,
+   "r_pct": 44.7,
+   "d_pct": 53.1,
+   "margin": -8.4,
+   "r_votes": 152546,
+   "d_votes": 181117,
    "status": "Lost",
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -929,8 +929,8 @@
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
-   "kalshi_r": 1,
-   "kalshi_d": 99,
+   "kalshi_r": 0,
+   "kalshi_d": 100,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
   {
