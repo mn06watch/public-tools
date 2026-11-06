@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T19:30:46Z",
+ "updated": "2026-11-06T19:47:34Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -924,8 +924,8 @@
    "r_pct": 48.6,
    "d_pct": 49.7,
    "margin": -1.1,
-   "r_votes": 158646,
-   "d_votes": 161957,
+   "r_votes": 158660,
+   "d_votes": 161968,
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
@@ -944,8 +944,8 @@
    "r_pct": 48.7,
    "d_pct": 51.1,
    "margin": -2.4,
-   "r_votes": 198503,
-   "d_votes": 208231,
+   "r_votes": 198509,
+   "d_votes": 208251,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
