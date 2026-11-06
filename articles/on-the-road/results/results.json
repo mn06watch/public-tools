@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T01:20:38Z",
+ "updated": "2026-11-06T01:37:29Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -649,7 +649,7 @@
    "cook": "Lean D",
    "money": 315653,
    "visited": "2026-10-09",
-   "pct_in": 88.5,
+   "pct_in": 88.6,
    "r_pct": 45,
    "d_pct": 52.8,
    "margin": -7.8,
@@ -678,8 +678,8 @@
    "status": "Leading",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
-   "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
@@ -689,17 +689,17 @@
    "cook": "Lean R",
    "money": 285471,
    "visited": "2026-10-09",
-   "pct_in": 93.1,
-   "r_pct": 49.7,
-   "d_pct": 48.5,
-   "margin": 1.2,
-   "r_votes": 154125,
-   "d_votes": 150290,
+   "pct_in": 94.3,
+   "r_pct": 49.6,
+   "d_pct": 48.6,
+   "margin": 1.0,
+   "r_votes": 154850,
+   "d_votes": 151804,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 96,
-   "kalshi_d": 4,
+   "kalshi_r": 97,
+   "kalshi_d": 3,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
