@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T14:30:20Z",
+ "updated": "2026-11-06T14:47:11Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -116,8 +116,8 @@
    "r_pct": 51.4,
    "d_pct": 48.6,
    "margin": 2.8,
-   "r_votes": 140216,
-   "d_votes": 132465,
+   "r_votes": 140221,
+   "d_votes": 132496,
    "status": "Won",
    "r_name": "Jim Kingston",
    "d_name": "Amanda Hollowell",
