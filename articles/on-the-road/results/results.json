@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T13:56:44Z",
+ "updated": "2026-11-06T14:13:29Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -36,8 +36,8 @@
    "r_pct": 50.2,
    "d_pct": 48.1,
    "margin": 2.1,
-   "r_votes": 151114,
-   "d_votes": 144795,
+   "r_votes": 151182,
+   "d_votes": 144839,
    "status": "Won",
    "r_name": "Aaron Bean",
    "d_name": "LaShonda Holloway",
