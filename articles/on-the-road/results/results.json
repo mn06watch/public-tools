@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T21:28:28Z",
+ "updated": "2026-11-06T21:45:12Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -925,7 +925,7 @@
    "d_pct": 49.7,
    "margin": -1.1,
    "r_votes": 158751,
-   "d_votes": 162100,
+   "d_votes": 162103,
    "status": "Trailing",
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
@@ -940,12 +940,12 @@
    "cook": "Toss Up",
    "money": 5000,
    "visited": "2026-10-01",
-   "pct_in": 98.7,
+   "pct_in": 98.8,
    "r_pct": 48.6,
    "d_pct": 51.1,
    "margin": -2.5,
-   "r_votes": 198719,
-   "d_votes": 208765,
+   "r_votes": 198766,
+   "d_votes": 208885,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 3,
+   "kalshi_r": 4,
    "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
