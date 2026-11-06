@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T18:57:09Z",
+ "updated": "2026-11-06T19:13:56Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -76,8 +76,8 @@
    "r_pct": 58.9,
    "d_pct": 39.9,
    "margin": 19.0,
-   "r_votes": 195357,
-   "d_votes": 132357,
+   "r_votes": 195375,
+   "d_votes": 132366,
    "status": "Won",
    "r_name": "Randy Fine",
    "d_name": "Eric Yonce",
@@ -698,8 +698,8 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 95,
-   "kalshi_d": 5,
+   "kalshi_r": 96,
+   "kalshi_d": 4,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -930,7 +930,7 @@
    "r_name": "Jenny Costa Honeycutt",
    "d_name": "Nancy Lacore",
    "kalshi_r": 1,
-   "kalshi_d": 100,
+   "kalshi_d": 99,
    "kalshi_ticker": "KXHOUSERACE-SC01-26"
   },
   {
@@ -944,8 +944,8 @@
    "r_pct": 48.7,
    "d_pct": 51.1,
    "margin": -2.4,
-   "r_votes": 198499,
-   "d_votes": 208228,
+   "r_votes": 198503,
+   "d_votes": 208231,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
