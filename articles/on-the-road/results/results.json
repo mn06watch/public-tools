@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T15:37:27Z",
+ "updated": "2026-11-06T15:54:07Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -573,8 +573,8 @@
    "r_pct": 46.4,
    "d_pct": 53.6,
    "margin": -7.2,
-   "r_votes": 163631,
-   "d_votes": 189349,
+   "r_votes": 163633,
+   "d_votes": 189350,
    "status": "Lost",
    "r_name": "Zach Nunn",
    "d_name": "Sarah Trone Garriott",
@@ -1041,10 +1041,10 @@
    "money": 300815,
    "visited": "2026-09-18",
    "pct_in": 97.7,
-   "r_pct": 44.5,
+   "r_pct": 44.6,
    "d_pct": 53,
-   "margin": -8.5,
-   "r_votes": 150095,
+   "margin": -8.4,
+   "r_votes": 150299,
    "d_votes": 178741,
    "status": "Lost",
    "r_name": "Jen Kiggans",
