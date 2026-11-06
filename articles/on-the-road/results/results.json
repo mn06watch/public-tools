@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T19:13:56Z",
+ "updated": "2026-11-06T19:30:46Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -393,8 +393,8 @@
    "r_pct": 43.9,
    "d_pct": 56.1,
    "margin": -12.2,
-   "r_votes": 128725,
-   "d_votes": 164520,
+   "r_votes": 128738,
+   "d_votes": 164543,
    "status": "Lost",
    "r_name": "Ryan Mackenzie",
    "d_name": "Bob Brooks",
@@ -429,12 +429,12 @@
    "cook": "Lean D",
    "money": 277670,
    "visited": "2026-10-20",
-   "pct_in": 98.2,
+   "pct_in": 98.4,
    "r_pct": 45.6,
    "d_pct": 54.4,
    "margin": -8.8,
-   "r_votes": 128135,
-   "d_votes": 152616,
+   "r_votes": 128275,
+   "d_votes": 153055,
    "status": "Lost",
    "r_name": "Rob Bresnahan Jr.",
    "d_name": "Paige Cognetti",
