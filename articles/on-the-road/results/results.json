@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T22:52:23Z",
+ "updated": "2026-11-06T23:09:10Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -16,8 +16,8 @@
    "r_pct": 61.1,
    "d_pct": 37.6,
    "margin": 23.5,
-   "r_votes": 198692,
-   "d_votes": 122366,
+   "r_votes": 198765,
+   "d_votes": 122425,
    "status": "Won",
    "r_name": "Jim Schwartzel",
    "d_name": "Victor Arias",
@@ -699,7 +699,7 @@
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
