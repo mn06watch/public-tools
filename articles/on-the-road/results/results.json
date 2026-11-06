@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T22:01:56Z",
+ "updated": "2026-11-06T22:18:47Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -349,7 +349,7 @@
    "cook": "Lean D",
    "money": 302482,
    "visited": "2026-10-26",
-   "pct_in": 95.2,
+   "pct_in": 96.1,
    "r_pct": 41.3,
    "d_pct": 57.2,
    "margin": -15.9,
