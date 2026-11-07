@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T01:07:09Z",
+ "updated": "2026-11-07T01:23:57Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -649,12 +649,12 @@
    "cook": "Lean D",
    "money": 315653,
    "visited": "2026-10-09",
-   "pct_in": 93.8,
-   "r_pct": 44.7,
+   "pct_in": 94,
+   "r_pct": 44.8,
    "d_pct": 53.1,
-   "margin": -8.4,
-   "r_votes": 152546,
-   "d_votes": 181117,
+   "margin": -8.3,
+   "r_votes": 153083,
+   "d_votes": 181361,
    "status": "Lost",
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 3,
-   "kalshi_d": 97,
+   "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
