@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T00:33:22Z",
+ "updated": "2026-11-07T00:50:13Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -693,8 +693,8 @@
    "r_pct": 49.6,
    "d_pct": 48.6,
    "margin": 1.0,
-   "r_votes": 159705,
-   "d_votes": 156467,
+   "r_votes": 159711,
+   "d_votes": 156471,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
