@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T03:55:58Z",
+ "updated": "2026-11-07T04:12:46Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -669,12 +669,12 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 96.3,
+   "pct_in": 98.6,
    "r_pct": 51.7,
    "d_pct": 48.3,
    "margin": 3.4,
-   "r_votes": 162975,
-   "d_votes": 152017,
+   "r_votes": 166930,
+   "d_votes": 155814,
    "status": "Won",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
@@ -693,8 +693,8 @@
    "r_pct": 49.7,
    "d_pct": 48.5,
    "margin": 1.2,
-   "r_votes": 162735,
-   "d_votes": 158819,
+   "r_votes": 162741,
+   "d_votes": 158856,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
