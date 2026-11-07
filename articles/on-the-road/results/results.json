@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T21:24:34Z",
+ "updated": "2026-11-07T21:41:29Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -669,7 +669,7 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 98.7,
+   "pct_in": 98.8,
    "r_pct": 51.7,
    "d_pct": 48.3,
    "margin": 3.4,
