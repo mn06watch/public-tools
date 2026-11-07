@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T22:15:17Z",
+ "updated": "2026-11-07T22:32:07Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -329,12 +329,12 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 94.9,
+   "pct_in": 95.1,
    "r_pct": 46.9,
    "d_pct": 53,
    "margin": -6.1,
-   "r_votes": 145546,
-   "d_votes": 164256,
+   "r_votes": 145632,
+   "d_votes": 164679,
    "status": "Lost",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
