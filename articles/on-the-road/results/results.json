@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T17:00:31Z",
+ "updated": "2026-11-07T18:52:41Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -220,7 +220,8 @@
    "d_name": "Chaz Molder",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TN05-26"
+   "kalshi_ticker": "KXHOUSERACE-TN05-26",
+   "stale": true
   },
   {
    "district": "TN-09",
@@ -240,7 +241,8 @@
    "d_name": "Justin Pearson",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TN09-26"
+   "kalshi_ticker": "KXHOUSERACE-TN09-26",
+   "stale": true
   },
   {
    "district": "TN-07",
@@ -260,7 +262,8 @@
    "d_name": "Darden Copeland",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TN07-26"
+   "kalshi_ticker": "KXHOUSERACE-TN07-26",
+   "stale": true
   },
   {
    "district": "TN-06",
@@ -280,7 +283,8 @@
    "d_name": "Mike Croley",
    "kalshi_r": 100,
    "kalshi_d": 3,
-   "kalshi_ticker": "KXHOUSERACE-TN06-26"
+   "kalshi_ticker": "KXHOUSERACE-TN06-26",
+   "stale": true
   },
   {
    "district": "NY-04",
@@ -300,7 +304,8 @@
    "d_name": "Laura Gillen",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSENY4-26"
+   "kalshi_ticker": "HOUSENY4-26",
+   "stale": true
   },
   {
    "district": "NY-03",
@@ -320,7 +325,8 @@
    "d_name": "Thomas Suozzi",
    "kalshi_r": 1,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSENY3-26"
+   "kalshi_ticker": "HOUSENY3-26",
+   "stale": true
   },
   {
    "district": "NY-17",
@@ -340,7 +346,8 @@
    "d_name": "Cait Conley",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSENY17-26"
+   "kalshi_ticker": "HOUSENY17-26",
+   "stale": true
   },
   {
    "district": "NJ-07",
@@ -380,7 +387,8 @@
    "d_name": "Bob Harvie",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSEPA1-26"
+   "kalshi_ticker": "HOUSEPA1-26",
+   "stale": true
   },
   {
    "district": "PA-07",
@@ -400,7 +408,8 @@
    "d_name": "Bob Brooks",
    "kalshi_r": 0,
    "kalshi_d": 98,
-   "kalshi_ticker": "HOUSEPA7-26"
+   "kalshi_ticker": "HOUSEPA7-26",
+   "stale": true
   },
   {
    "district": "PA-10",
@@ -420,7 +429,8 @@
    "d_name": "Janelle Stelson",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSEPA10-26"
+   "kalshi_ticker": "HOUSEPA10-26",
+   "stale": true
   },
   {
    "district": "PA-08",
@@ -440,7 +450,8 @@
    "d_name": "Paige Cognetti",
    "kalshi_r": 2,
    "kalshi_d": 99,
-   "kalshi_ticker": "HOUSEPA8-26"
+   "kalshi_ticker": "HOUSEPA8-26",
+   "stale": true
   },
   {
    "district": "OH-09",
@@ -460,7 +471,8 @@
    "d_name": "Marcy Kaptur",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSEOH9-26"
+   "kalshi_ticker": "HOUSEOH9-26",
+   "stale": true
   },
   {
    "district": "MI-10",
@@ -540,7 +552,8 @@
    "d_name": "Fred Clark",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-WI07-26"
+   "kalshi_ticker": "KXHOUSERACE-WI07-26",
+   "stale": true
   },
   {
    "district": "WI-03",
@@ -560,7 +573,8 @@
    "d_name": "Rebecca Cooke",
    "kalshi_r": 0,
    "kalshi_d": 98,
-   "kalshi_ticker": "HOUSEWI3-26"
+   "kalshi_ticker": "HOUSEWI3-26",
+   "stale": true
   },
   {
    "district": "IA-03",
@@ -620,7 +634,8 @@
    "d_name": "Shaun Finnie",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TX02-26"
+   "kalshi_ticker": "KXHOUSERACE-TX02-26",
+   "stale": true
   },
   {
    "district": "TX-34",
@@ -640,7 +655,8 @@
    "d_name": "Vicente Gonzalez",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSETX34-26"
+   "kalshi_ticker": "HOUSETX34-26",
+   "stale": true
   },
   {
    "district": "AZ-06",
@@ -720,7 +736,8 @@
    "d_name": "Henry Cuellar",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "HOUSETX28-26"
+   "kalshi_ticker": "HOUSETX28-26",
+   "stale": true
   },
   {
    "district": "TX-35",
@@ -737,7 +754,8 @@
    "d_votes": 139984,
    "status": "Lost",
    "r_name": "Carlos De La Cruz",
-   "d_name": "Johnny Garcia"
+   "d_name": "Johnny Garcia",
+   "stale": true
   },
   {
    "district": "TX-09",
@@ -754,7 +772,8 @@
    "d_votes": 98079,
    "status": "Lost",
    "r_name": "Alex Mealer",
-   "d_name": "Leticia Gutierrez"
+   "d_name": "Leticia Gutierrez",
+   "stale": true
   },
   {
    "district": "TX-23",
@@ -774,7 +793,8 @@
    "d_name": "Katy Padilla Stout",
    "kalshi_r": 1,
    "kalshi_d": 99,
-   "kalshi_ticker": "KXHOUSERACE-TX23-26"
+   "kalshi_ticker": "KXHOUSERACE-TX23-26",
+   "stale": true
   },
   {
    "district": "TX-32",
@@ -791,7 +811,8 @@
    "d_votes": 134781,
    "status": "Won",
    "r_name": "Jace Yarbrough",
-   "d_name": "Dan Barrios"
+   "d_name": "Dan Barrios",
+   "stale": true
   },
   {
    "district": "TX-10",
@@ -811,7 +832,8 @@
    "d_name": "Caitlin Rourk",
    "kalshi_r": 99,
    "kalshi_d": 3,
-   "kalshi_ticker": "KXHOUSERACE-TX10-26"
+   "kalshi_ticker": "KXHOUSERACE-TX10-26",
+   "stale": true
   },
   {
    "district": "TX-21",
@@ -831,7 +853,8 @@
    "d_name": "Kristin Hook",
    "kalshi_r": 96,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TX21-26"
+   "kalshi_ticker": "KXHOUSERACE-TX21-26",
+   "stale": true
   },
   {
    "district": "TX-38",
@@ -851,7 +874,8 @@
    "d_name": "Melissa McDonough",
    "kalshi_r": 99,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-TX38-26"
+   "kalshi_ticker": "KXHOUSERACE-TX38-26",
+   "stale": true
   },
   {
    "district": "NC-01",
@@ -931,7 +955,8 @@
    "d_name": "Nancy Lacore",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "KXHOUSERACE-SC01-26"
+   "kalshi_ticker": "KXHOUSERACE-SC01-26",
+   "stale": true
   },
   {
    "district": "VA-01",
@@ -951,7 +976,8 @@
    "d_name": "Shannon Taylor",
    "kalshi_r": 1,
    "kalshi_d": 99,
-   "kalshi_ticker": "HOUSEVA1-26"
+   "kalshi_ticker": "HOUSEVA1-26",
+   "stale": true
   },
   {
    "district": "NC-08",
@@ -1051,7 +1077,8 @@
    "d_name": "Elaine Luria",
    "kalshi_r": 0,
    "kalshi_d": 98,
-   "kalshi_ticker": "HOUSEVA2-26"
+   "kalshi_ticker": "HOUSEVA2-26",
+   "stale": true
   },
   {
    "district": "MN-06",
