@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T20:34:02Z",
+ "updated": "2026-11-07T20:50:54Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -669,12 +669,12 @@
    "cook": "Solid R",
    "money": 7000,
    "visited": "2026-10-09",
-   "pct_in": 98.6,
+   "pct_in": 98.7,
    "r_pct": 51.7,
    "d_pct": 48.3,
    "margin": 3.4,
-   "r_votes": 166930,
-   "d_votes": 155814,
+   "r_votes": 167059,
+   "d_votes": 155946,
    "status": "Won",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
@@ -694,7 +694,7 @@
    "d_pct": 48.5,
    "margin": 1.2,
    "r_votes": 162741,
-   "d_votes": 158856,
+   "d_votes": 158857,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 2,
+   "kalshi_r": 3,
    "kalshi_d": 97,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
