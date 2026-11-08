@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T19:51:17Z",
+ "updated": "2026-11-08T20:28:14Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -23,8 +23,7 @@
    "d_name": "Victor Arias",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-FL19-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-FL19-26"
   },
   {
    "district": "FL-04",
@@ -44,8 +43,7 @@
    "d_name": "LaShonda Holloway",
    "kalshi_r": 99,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-FL04-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-FL04-26"
   },
   {
    "district": "FL-14",
@@ -65,8 +63,7 @@
    "d_name": "Kathy Castor",
    "kalshi_r": 2,
    "kalshi_d": 99,
-   "kalshi_ticker": "KXHOUSERACE-FL14-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-FL14-26"
   },
   {
    "district": "FL-06",
@@ -86,8 +83,7 @@
    "d_name": "Eric Yonce",
    "kalshi_r": 100,
    "kalshi_d": 4,
-   "kalshi_ticker": "KXHOUSERACE-FL06-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-FL06-26"
   },
   {
    "district": "FL-11",
@@ -107,8 +103,7 @@
    "d_name": "James Pericola",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-FL11-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-FL11-26"
   },
   {
    "district": "GA-01",
@@ -128,8 +123,7 @@
    "d_name": "Amanda Hollowell",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-GA01-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-GA01-26"
   },
   {
    "district": "GA-10",
@@ -149,8 +143,7 @@
    "d_name": "Pamela Delancy",
    "kalshi_r": 99,
    "kalshi_d": 5,
-   "kalshi_ticker": "KXHOUSERACE-GA10-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-GA10-26"
   },
   {
    "district": "GA-11",
@@ -170,8 +163,7 @@
    "d_name": "Chris Harden",
    "kalshi_r": 99,
    "kalshi_d": 1,
-   "kalshi_ticker": "KXHOUSERACE-GA11-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-GA11-26"
   },
   {
    "district": "NC-11",
@@ -208,8 +200,7 @@
    "d_name": "Zach Dembo",
    "kalshi_r": 2,
    "kalshi_d": 99,
-   "kalshi_ticker": "KXHOUSERACE-KY06-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-KY06-26"
   },
   {
    "district": "TN-05",
@@ -589,8 +580,7 @@
    "d_name": "Sarah Trone Garriott",
    "kalshi_r": 0,
    "kalshi_d": 99,
-   "kalshi_ticker": "HOUSEIA3-26",
-   "stale": true
+   "kalshi_ticker": "HOUSEIA3-26"
   },
   {
    "district": "IA-02",
@@ -610,8 +600,7 @@
    "d_name": "Lindsay James",
    "kalshi_r": 0,
    "kalshi_d": 100,
-   "kalshi_ticker": "KXHOUSERACE-IA02-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-IA02-26"
   },
   {
    "district": "TX-02",
@@ -671,8 +660,7 @@
    "d_name": "JoAnna Mendoza",
    "kalshi_r": 1,
    "kalshi_d": 99,
-   "kalshi_ticker": "HOUSEAZ6-26",
-   "stale": true
+   "kalshi_ticker": "HOUSEAZ6-26"
   },
   {
    "district": "AZ-05",
@@ -692,8 +680,7 @@
    "d_name": "Elizabeth Lee",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-AZ05-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-AZ05-26"
   },
   {
    "district": "AZ-02",
@@ -711,10 +698,9 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 98,
+   "kalshi_r": 99,
    "kalshi_d": 1,
-   "kalshi_ticker": "HOUSEAZ2-26",
-   "stale": true
+   "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
    "district": "TX-28",
@@ -1005,8 +991,7 @@
    "d_name": "Melissa Strange",
    "kalshi_r": 100,
    "kalshi_d": 0,
-   "kalshi_ticker": "KXHOUSERACE-KY04-26",
-   "stale": true
+   "kalshi_ticker": "KXHOUSERACE-KY04-26"
   },
   {
    "district": "ME-02",
