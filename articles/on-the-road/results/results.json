@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T15:44:49Z",
+ "updated": "2026-11-08T16:01:43Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -333,8 +333,8 @@
    "r_pct": 46.9,
    "d_pct": 53,
    "margin": -6.1,
-   "r_votes": 145632,
-   "d_votes": 164679,
+   "r_votes": 145640,
+   "d_votes": 164700,
    "status": "Lost",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
