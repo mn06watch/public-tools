@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T16:47:24Z",
+ "updated": "2026-11-09T17:04:15Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -429,12 +429,12 @@
    "cook": "Lean D",
    "money": 277670,
    "visited": "2026-10-20",
-   "pct_in": 98.8,
+   "pct_in": 98.9,
    "r_pct": 45.5,
    "d_pct": 54.5,
    "margin": -9.0,
-   "r_votes": 128589,
-   "d_votes": 153764,
+   "r_votes": 128714,
+   "d_votes": 154018,
    "status": "Lost",
    "r_name": "Rob Bresnahan Jr.",
    "d_name": "Paige Cognetti",
@@ -693,13 +693,13 @@
    "r_pct": 49.7,
    "d_pct": 48.5,
    "margin": 1.2,
-   "r_votes": 162741,
-   "d_votes": 158857,
+   "r_votes": 162753,
+   "d_votes": 158919,
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
   {
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 4,
+   "kalshi_r": 3,
    "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
