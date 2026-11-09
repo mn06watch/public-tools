@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T19:01:52Z",
+ "updated": "2026-11-09T19:18:49Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -593,8 +593,8 @@
    "r_pct": 45.6,
    "d_pct": 49.5,
    "margin": -3.9,
-   "r_votes": 157727,
-   "d_votes": 171519,
+   "r_votes": 157728,
+   "d_votes": 171522,
    "status": "Lost",
    "r_name": "Joe Mitchell",
    "d_name": "Lindsay James",
