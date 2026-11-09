@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T13:39:38Z",
+ "updated": "2026-11-09T13:56:30Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -349,12 +349,12 @@
    "cook": "Lean D",
    "money": 302482,
    "visited": "2026-10-26",
-   "pct_in": 96.1,
-   "r_pct": 41.3,
-   "d_pct": 57.2,
-   "margin": -15.9,
-   "r_votes": 135951,
-   "d_votes": 188546,
+   "pct_in": 96.6,
+   "r_pct": 41.1,
+   "d_pct": 57.3,
+   "margin": -16.2,
+   "r_votes": 136388,
+   "d_votes": 189977,
    "status": "Lost",
    "r_name": "Thomas Kean Jr.",
    "d_name": "Rebecca Bennett",
@@ -698,7 +698,7 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 98,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
