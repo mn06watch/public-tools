@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T17:04:15Z",
+ "updated": "2026-11-09T17:21:02Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -176,8 +176,8 @@
    "r_pct": 41.3,
    "d_pct": 57.1,
    "margin": -15.8,
-   "r_votes": 141423,
-   "d_votes": 195629,
+   "r_votes": 141422,
+   "d_votes": 195627,
    "status": "Lost",
    "r_name": "Jennifer Balkcom",
    "d_name": "Jamie Ager"
@@ -369,7 +369,7 @@
    "cook": "Toss Up",
    "money": 282066,
    "visited": "2026-10-25",
-   "pct_in": 98.5,
+   "pct_in": 99,
    "r_pct": 47.3,
    "d_pct": 52.7,
    "margin": -5.4,
@@ -389,7 +389,7 @@
    "cook": "Lean D",
    "money": 270138,
    "visited": "2026-10-21",
-   "pct_in": 98.9,
+   "pct_in": 99,
    "r_pct": 43.9,
    "d_pct": 56.1,
    "margin": -12.2,
@@ -409,7 +409,7 @@
    "cook": "Lean D",
    "money": 267997,
    "visited": "2026-10-21",
-   "pct_in": 98.8,
+   "pct_in": 99,
    "r_pct": 44.9,
    "d_pct": 55.1,
    "margin": -10.2,
@@ -429,7 +429,7 @@
    "cook": "Lean D",
    "money": 277670,
    "visited": "2026-10-20",
-   "pct_in": 98.9,
+   "pct_in": 99,
    "r_pct": 45.5,
    "d_pct": 54.5,
    "margin": -9.0,
