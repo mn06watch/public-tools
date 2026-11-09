@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T23:51:56Z",
+ "updated": "2026-11-09T02:48:15Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 3,
-   "kalshi_d": 97,
+   "kalshi_r": 4,
+   "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
