@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T18:45:00Z",
+ "updated": "2026-11-09T19:01:52Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -649,12 +649,12 @@
    "cook": "Lean D",
    "money": 315653,
    "visited": "2026-10-09",
-   "pct_in": 98.4,
+   "pct_in": 98.5,
    "r_pct": 44.9,
    "d_pct": 52.9,
    "margin": -8.0,
-   "r_votes": 159603,
-   "d_votes": 188137,
+   "r_votes": 159701,
+   "d_votes": 188194,
    "status": "Lost",
    "r_name": "Juan Ciscomani",
    "d_name": "JoAnna Mendoza",
