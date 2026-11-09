@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T15:20:46Z",
+ "updated": "2026-11-09T15:37:44Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -593,8 +593,8 @@
    "r_pct": 45.6,
    "d_pct": 49.5,
    "margin": -3.9,
-   "r_votes": 157724,
-   "d_votes": 171514,
+   "r_votes": 157727,
+   "d_votes": 171519,
    "status": "Lost",
    "r_name": "Joe Mitchell",
    "d_name": "Lindsay James",
@@ -698,7 +698,7 @@
    "status": "Leading",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
-   "kalshi_r": 98,
+   "kalshi_r": 99,
    "kalshi_d": 1,
    "kalshi_ticker": "HOUSEAZ2-26"
   },
