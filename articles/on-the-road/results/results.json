@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T16:13:40Z",
+ "updated": "2026-11-09T16:30:31Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -1040,12 +1040,12 @@
    "cook": "Lean D",
    "money": 300815,
    "visited": "2026-09-18",
-   "pct_in": 97.8,
-   "r_pct": 44.5,
-   "d_pct": 53,
-   "margin": -8.5,
-   "r_votes": 150456,
-   "d_votes": 179126,
+   "pct_in": 76.1,
+   "r_pct": 46.5,
+   "d_pct": 50.8,
+   "margin": -4.3,
+   "r_votes": 122209,
+   "d_votes": 133370,
    "status": "Lost",
    "r_name": "Jen Kiggans",
    "d_name": "Elaine Luria",
