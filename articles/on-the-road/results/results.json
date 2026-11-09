@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T22:11:56Z",
+ "updated": "2026-11-09T22:28:54Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -116,8 +116,8 @@
    "r_pct": 51.4,
    "d_pct": 48.6,
    "margin": 2.8,
-   "r_votes": 140262,
-   "d_votes": 132604,
+   "r_votes": 140266,
+   "d_votes": 132609,
    "status": "Won",
    "r_name": "Jim Kingston",
    "d_name": "Amanda Hollowell",
@@ -594,7 +594,7 @@
    "d_pct": 49.5,
    "margin": -3.9,
    "r_votes": 157748,
-   "d_votes": 171580,
+   "d_votes": 171584,
    "status": "Lost",
    "r_name": "Joe Mitchell",
    "d_name": "Lindsay James",
@@ -693,8 +693,8 @@
    "r_pct": 49.7,
    "d_pct": 48.5,
    "margin": 1.2,
-   "r_votes": 162756,
-   "d_votes": 158921,
+   "r_votes": 162885,
+   "d_votes": 159145,
    "status": "Won",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 5,
+   "kalshi_r": 4,
    "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
