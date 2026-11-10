@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T01:38:46Z",
+ "updated": "2026-11-10T01:55:38Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -329,12 +329,12 @@
    "cook": "Toss Up",
    "money": 326460,
    "visited": "2026-10-26",
-   "pct_in": 95.1,
-   "r_pct": 46.9,
-   "d_pct": 53,
-   "margin": -6.1,
-   "r_votes": 145646,
-   "d_votes": 164714,
+   "pct_in": 95.4,
+   "r_pct": 46.8,
+   "d_pct": 53.1,
+   "margin": -6.3,
+   "r_votes": 145890,
+   "d_votes": 165399,
    "status": "Lost",
    "r_name": "Mike Lawler",
    "d_name": "Cait Conley",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 5,
+   "kalshi_r": 4,
    "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
