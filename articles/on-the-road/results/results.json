@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T19:07:04Z",
+ "updated": "2026-11-10T19:24:02Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -864,8 +864,8 @@
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
-   "r_votes": 146398,
-   "d_votes": 156683,
+   "r_votes": 146439,
+   "d_votes": 156708,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
@@ -910,7 +910,7 @@
    "r_name": "Pat Harrigan",
    "d_name": "Ashley Bell",
    "kalshi_r": 99,
-   "kalshi_d": 1,
+   "kalshi_d": 2,
    "kalshi_ticker": "KXHOUSERACE-NC10-26"
   },
   {
@@ -944,8 +944,8 @@
    "r_pct": 48.6,
    "d_pct": 51.2,
    "margin": -2.6,
-   "r_votes": 199080,
-   "d_votes": 209560,
+   "r_votes": 199084,
+   "d_votes": 209562,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 5,
+   "kalshi_r": 6,
    "kalshi_d": 95,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
