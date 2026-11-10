@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T15:09:33Z",
+ "updated": "2026-11-10T15:26:24Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -573,7 +573,7 @@
    "r_pct": 46.4,
    "d_pct": 53.6,
    "margin": -7.2,
-   "r_votes": 163679,
+   "r_votes": 163681,
    "d_votes": 189431,
    "status": "Lost",
    "r_name": "Zach Nunn",
