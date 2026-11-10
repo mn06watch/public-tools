@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T18:16:26Z",
+ "updated": "2026-11-10T18:33:22Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -176,8 +176,8 @@
    "r_pct": 41.3,
    "d_pct": 57.1,
    "margin": -15.8,
-   "r_votes": 141467,
-   "d_votes": 195655,
+   "r_votes": 141475,
+   "d_votes": 195662,
    "status": "Lost",
    "r_name": "Jennifer Balkcom",
    "d_name": "Jamie Ager"
@@ -573,8 +573,8 @@
    "r_pct": 46.4,
    "d_pct": 53.6,
    "margin": -7.2,
-   "r_votes": 163682,
-   "d_votes": 189433,
+   "r_votes": 163687,
+   "d_votes": 189435,
    "status": "Lost",
    "r_name": "Zach Nunn",
    "d_name": "Sarah Trone Garriott",
@@ -944,8 +944,8 @@
    "r_pct": 48.6,
    "d_pct": 51.2,
    "margin": -2.6,
-   "r_votes": 199030,
-   "d_votes": 209504,
+   "r_votes": 199057,
+   "d_votes": 209527,
    "status": "Lost",
    "r_name": "Rob Wittman",
    "d_name": "Shannon Taylor",
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 4,
-   "kalshi_d": 96,
+   "kalshi_d": 95,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
