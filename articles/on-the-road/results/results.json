@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T16:01:13Z",
+ "updated": "2026-11-10T16:18:05Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -514,7 +514,7 @@
    "d_pct": 51,
    "margin": -3.3,
    "r_votes": 189482,
-   "d_votes": 202657,
+   "d_votes": 202662,
    "status": "Lost",
    "r_name": "Tom Barrett",
    "d_name": "William Lawrence",
@@ -864,8 +864,8 @@
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
-   "r_votes": 146295,
-   "d_votes": 156590,
+   "r_votes": 146299,
+   "d_votes": 156594,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
