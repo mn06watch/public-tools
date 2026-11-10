@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T18:50:14Z",
+ "updated": "2026-11-10T19:07:04Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -864,8 +864,8 @@
    "r_pct": 46.8,
    "d_pct": 50.1,
    "margin": -3.3,
-   "r_votes": 146319,
-   "d_votes": 156651,
+   "r_votes": 146398,
+   "d_votes": 156683,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 4,
+   "kalshi_r": 5,
    "kalshi_d": 95,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
