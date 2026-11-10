@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T16:34:59Z",
+ "updated": "2026-11-10T16:51:52Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -289,7 +289,7 @@
    "cook": "Likely D",
    "money": 7000,
    "visited": "2026-10-27",
-   "pct_in": 98,
+   "pct_in": 96.5,
    "r_pct": 43.5,
    "d_pct": 56.2,
    "margin": -12.7,
@@ -309,7 +309,7 @@
    "cook": "Likely D",
    "money": 120767,
    "visited": "2026-10-26",
-   "pct_in": 96.9,
+   "pct_in": 95,
    "r_pct": 44.9,
    "d_pct": 54.8,
    "margin": -9.9,
@@ -593,8 +593,8 @@
    "r_pct": 45.6,
    "d_pct": 49.5,
    "margin": -3.9,
-   "r_votes": 157766,
-   "d_votes": 171592,
+   "r_votes": 157768,
+   "d_votes": 171593,
    "status": "Lost",
    "r_name": "Joe Mitchell",
    "d_name": "Lindsay James",
