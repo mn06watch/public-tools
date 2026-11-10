@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T17:59:35Z",
+ "updated": "2026-11-10T18:16:26Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -176,8 +176,8 @@
    "r_pct": 41.3,
    "d_pct": 57.1,
    "margin": -15.8,
-   "r_votes": 141438,
-   "d_votes": 195633,
+   "r_votes": 141467,
+   "d_votes": 195655,
    "status": "Lost",
    "r_name": "Jennifer Balkcom",
    "d_name": "Jamie Ager"
@@ -865,7 +865,7 @@
    "d_pct": 50.1,
    "margin": -3.3,
    "r_votes": 146319,
-   "d_votes": 156650,
+   "d_votes": 156651,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
