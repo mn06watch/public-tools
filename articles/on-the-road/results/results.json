@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T15:45:31Z",
+ "updated": "2026-11-11T16:02:23Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -349,12 +349,12 @@
    "cook": "Lean D",
    "money": 302482,
    "visited": "2026-10-26",
-   "pct_in": 97,
-   "r_pct": 41.1,
+   "pct_in": 97.1,
+   "r_pct": 41,
    "d_pct": 57.4,
-   "margin": -16.3,
-   "r_votes": 136681,
-   "d_votes": 191058,
+   "margin": -16.4,
+   "r_votes": 136780,
+   "d_votes": 191316,
    "status": "Lost",
    "r_name": "Thomas Kean Jr.",
    "d_name": "Rebecca Bennett",
@@ -1029,7 +1029,7 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 4,
+   "kalshi_r": 5,
    "kalshi_d": 95,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
