@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T01:16:58Z",
+ "updated": "2026-11-11T01:38:00Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -884,8 +884,8 @@
    "r_pct": 48.8,
    "d_pct": 51.2,
    "margin": -2.4,
-   "r_votes": 134071,
-   "d_votes": 140598,
+   "r_votes": 134108,
+   "d_votes": 140727,
    "status": "Lost",
    "r_name": "Addison McDowell",
    "d_name": "Cyril Jefferson",
@@ -964,8 +964,8 @@
    "r_pct": 50.4,
    "d_pct": 48.6,
    "margin": 1.8,
-   "r_votes": 147616,
-   "d_votes": 142539,
+   "r_votes": 147687,
+   "d_votes": 142672,
    "status": "Won",
    "r_name": "Mark Harris",
    "d_name": "Colby Watson",
@@ -1029,8 +1029,8 @@
    "status": "Trailing",
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
-   "kalshi_r": 5,
-   "kalshi_d": 95,
+   "kalshi_r": 4,
+   "kalshi_d": 96,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
