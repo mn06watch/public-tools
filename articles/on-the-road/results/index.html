@@ -32,6 +32,7 @@ h1{font:700 clamp(30px,5vw,44px)/1.1 'Playfair Display',Georgia,serif;color:var(
 .byline{font:13px Arial,sans-serif;color:var(--light)}
 .live{display:inline-flex;align-items:center;gap:6px;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
 .live i{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block}
+.final{font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy)}
 @media (prefers-reduced-motion:no-preference){.live i{animation:pulse 1.6s infinite}@keyframes pulse{50%{opacity:.25}}}
 h2{font:700 22px/1.2 'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 6px}
 .note{font:13px/1.45 Arial,sans-serif;color:var(--med);margin:0 0 14px}
@@ -95,10 +96,10 @@ a{color:var(--navy)}
 <header>
   <div class="kicker">MN-06 Watch · Election Night</div>
   <h1>Emmer's 56: Election Night</h1>
-  <p class="dek">On Sept. 27, Rep. Tom Emmer pledged to campaign in 56 districts before Election Day. Here is how his own race and every Republican he campaigned for on the road are doing tonight.</p>
-  <div class="byline"><span class="live"><i></i>Live</span> · Results updated <span id="upd">—</span> · This page checks for new numbers every two minutes · <a href="https://mn06watch.com/articles/on-the-road/">The full On the Road log</a></div>
+  <p class="dek">On Sept. 27, Rep. Tom Emmer pledged to campaign in 56 districts before Election Day. Here is how his own race and every Republican he campaigned for on the road turned out.</p>
+  <div class="byline"><span class="final">Final</span> · Results as of <span id="upd">—</span> · Updates ended Nov. 11, 2026 · <a href="https://mn06watch.com/articles/on-the-road/">The full On the Road log</a></div>
   <p class="err" id="err" hidden></p>
-  <p class="disclaimer" id="disclaimer"><b>Automated page.</b> This page was built with AI (Claude) and updates itself automatically. No one at MN-06 Watch is checking these numbers as they come in tonight. Vote counts and race calls come from <a href="https://www.nbcnews.com/politics/2026-elections/house-results">NBC News</a> (calls by the NBC News Decision Desk). Odds come from <a href="https://kalshi.com/">Kalshi</a>'s public market data. Cook ratings and committee money come from MN-06 Watch's <a href="https://mn06watch.com/articles/on-the-road/">On the Road</a> log. For official results, check NBC News or your state's election office.</p>
+  <p class="disclaimer" id="disclaimer"><b>Automated page.</b> This page was built with AI (Claude) and updated itself automatically from election night through Nov. 11, 2026. It no longer updates. No one at MN-06 Watch checked these numbers as they came in. Vote counts and race calls come from <a href="https://www.nbcnews.com/politics/2026-elections/house-results">NBC News</a> (calls by the NBC News Decision Desk). Odds come from <a href="https://kalshi.com/">Kalshi</a>'s public market data. Cook ratings and committee money come from MN-06 Watch's <a href="https://mn06watch.com/articles/on-the-road/">On the Road</a> log. For official results, check NBC News or your state's election office.</p>
 </header>
 
 <section class="card home" id="mn06">
@@ -168,7 +169,7 @@ a{color:var(--navy)}
     <li><b>Vote counts and calls:</b> NBC News results pages, including race calls by the NBC News Decision Desk. A race shows as won or lost only after NBC calls it. "Leading" and "Trailing" are uncalled races and can flip as more votes come in. Early and mail ballots often report first.</li>
     <li><b>Kalshi:</b> the current price on Kalshi's market for the race, shown as the chance the market gives Emmer's candidate. It's a betting market, not a projection. Some races have no Kalshi market.</li>
     <li><b>The races:</b> every Republican on the <a href="https://mn06watch.com/articles/on-the-road/">On the Road</a> log, plus MN-06. The money and Cook ratings come from that log.</li>
-    <li><b>Updates:</b> a script pulls new numbers from NBC News and Kalshi about every 15 minutes and publishes them here automatically. This page checks for them every two minutes. The script and this page were built with AI (Claude), and no one reviews each update before it posts.</li>
+    <li><b>Updates:</b> a script pulled new numbers from NBC News and Kalshi about every 15 minutes from election night through Nov. 11, 2026, and published them here automatically. Updates have ended; the numbers shown are from the last pull. The script and this page were built with AI (Claude), and no one reviewed each update before it posted.</li>
   </ul>
 </section>
 
@@ -199,7 +200,7 @@ a{color:var(--navy)}
   var usd=function(v){return '$'+Math.round(v||0).toLocaleString('en-US')};
   var odds=function(v){return v==null?'—':v+'¢'};
   var order={'Won':0,'Lost':1,'Leading':2,'Trailing':3,'Tied':3,'No votes yet':4};
-  function fmtTime(iso){var d=new Date(iso);return d.toLocaleString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'})+' Central'}
+  function fmtTime(iso){var d=new Date(iso);return d.toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/Chicago'})+' Central'}
   function set(id,t){var e=$(id);if(e)e.textContent=t}
   function render(){
     if(!data)return;
@@ -237,7 +238,7 @@ a{color:var(--navy)}
       .catch(function(){var e=$('err');e.textContent='Couldn\'t load the latest results. The page will try again in two minutes.';e.hidden=false});
   }
   $('q').addEventListener('input',render);$('f').addEventListener('change',render);
-  load();setInterval(load,120000);
+  load();
 })();
 </script>
 </body>
