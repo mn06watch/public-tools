@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T07:02:12Z",
+ "updated": "2026-11-11T07:19:02Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -864,8 +864,8 @@
    "r_pct": 46.7,
    "d_pct": 50.1,
    "margin": -3.4,
-   "r_votes": 146700,
-   "d_votes": 157489,
+   "r_votes": 146706,
+   "d_votes": 157506,
    "status": "Lost",
    "r_name": "Laurie Buckhout",
    "d_name": "Don Davis",
