@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T01:55:14Z",
+ "updated": "2026-11-11T03:06:12Z",
  "source": {
   "results": "NBC News (vote counts and NBC News Decision Desk race calls)",
   "odds": "Kalshi public market prices"
@@ -673,8 +673,8 @@
    "r_pct": 51.7,
    "d_pct": 48.3,
    "margin": 3.4,
-   "r_votes": 167471,
-   "d_votes": 156440,
+   "r_votes": 167959,
+   "d_votes": 157007,
    "status": "Won",
    "r_name": "Mark Lamb",
    "d_name": "Elizabeth Lee",
@@ -694,7 +694,7 @@
    "d_pct": 48.6,
    "margin": 1.0,
    "r_votes": 163530,
-   "d_votes": 160080,
+   "d_votes": 160084,
    "status": "Won",
    "r_name": "Eli Crane",
    "d_name": "Jonathan Nez",
@@ -1030,7 +1030,7 @@
    "r_name": "Brad Finstad",
    "d_name": "Jake Johnson",
    "kalshi_r": 3,
-   "kalshi_d": 96,
+   "kalshi_d": 97,
    "kalshi_ticker": "KXHOUSERACE-MN01-26"
   },
   {
